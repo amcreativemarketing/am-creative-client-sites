@@ -29,10 +29,161 @@
 
 ## Colors & Typography
 
-- Primary: [TBD]
-- Secondary: [TBD]
-- Headlines: [TBD]
-- Body: [TBD]
+### Color Palette
+| Usage | Hex | Description |
+|-------|-----|-------------|
+| Primary | `#1a1a1a` | Near black - headers, buttons, text |
+| Secondary | `#666666` | Medium gray - body text |
+| Body Text Alt | `#555555` | Darker gray - some body text |
+| Background | `#f8f8f8` | Light gray - section backgrounds |
+| White | `#ffffff` | Clean backgrounds, button text |
+| Header Bar | `#b8b8ae` | Stone gray - blog/project headers |
+
+### Typography
+| Element | Specs |
+|---------|-------|
+| Font Family | Messina Modern Light |
+| Headlines | Font-weight: 300 (light), negative letter-spacing (-1px on large) |
+| Body | Font-size: 16-18px, line-height: 1.6-1.8 |
+| Body Color | `#555` or `#666` |
+| H2 Override | `font-family: 'Messina Modern Light', sans-serif !important; font-weight: 400;` |
+
+### Button Styles
+| Type | Specs |
+|------|-------|
+| Primary | Black background (`#1a1a1a`), white text, 2px border |
+| Outline | Transparent background, black border, black text |
+| White | White background, dark text (for dark backgrounds) |
+| Hover | Inverse colors (swap fill/border) |
+| Padding | 20px 50px (large CTAs), 15px 30px (standard) |
+
+---
+
+## Service Page Standards (SOP)
+
+### Core Messaging Principles
+
+**Positioning:**
+- BLB is a **coordinator and guide**, not claiming to "do everything ourselves"
+- Emphasize **project management** and **coordination of trusted trades**
+- One team managing the entire process (design through construction)
+- Never promise direct manufacturing or installation unless BLB specifically does it
+
+**Language Standards:**
+- Remove all "stress-free" language (unrealistic promise)
+- Avoid "we make" or "we install" - use "we coordinate," "we guide," "we help select"
+- Don't encourage living in home during major remodels
+- Use bullet points (•) not checkmarks (✓) for lists
+
+### Page Structure Template
+
+**Section 1: Hero (handled by Divi)**
+- H1 headline with H2 subheading
+- CTA button
+- Trust signals optional
+
+**Section 2: Problem-Solution**
+- Left column: Emotional hook headline + benefits paragraph + value prop list + CTA
+- Right column: High-quality project image
+- Bullet list format: Simple bullets (•) not checkmarks
+- Include 4 key differentiators
+
+**Section 3: Services Grid**
+- Header: "Everything Coordinated" or similar
+- 8 service cards in 4x2 grid
+- Frame services as coordination/guidance
+- Example: "Cabinet Coordination" not "Custom Cabinetry"
+
+**Section 4: Process Timeline**
+- 5-step visual timeline
+- No promises about living arrangements during reno
+- Focus on transparency and communication
+- Single CTA button
+
+**Section 5: Portfolio Gallery**
+- 6 images in 3x2 grid
+- NO location names in overlays (just descriptive titles)
+- Hover overlays with project descriptions
+- Dual CTA buttons below
+
+**Section 6: Testimonials**
+- 3 testimonials in grid format
+- 5-star ratings
+- Real client quotes only (verified)
+- Location identifiers okay here (e.g., "Newburyport Family")
+
+**Section 7: FAQs**
+- Accordion style with expand/collapse
+- Add "Schedule a consultation" links for vague answers
+- Remove FAQs about living in home during renovation
+- 5-6 relevant questions max
+- Don't mention specific timelines or prices
+
+**Section 8: Meet the Team**
+- Two-column layout
+- Mention "Pro NE recognition" (not PROEN or NARI)
+- Focus on "Beyond the Build" philosophy
+- Team photo
+
+**Section 9: Final CTA**
+- Light gray background (`#f8f8f8`) - NOT black (avoid bleed with footer)
+- Centered content with flexbox
+- Strong headline + subhead + button
+- Trust signals in footer text
+
+### Content Guidelines
+
+**CTAs:**
+- Vary the language (not always "Contact Us")
+- Examples: "Tell Us About Your Project," "Schedule Your Discovery Call," "Start the Conversation"
+- All CTAs link to: https://blbdesignbuild.com/contact-us/
+- Link to contact page for vague FAQ answers
+
+**Images:**
+- Use actual BLB project photos only
+- Match descriptions to real projects (no fake locations or fabricated details)
+- Remove any award badges from galleries
+- No placeholders - only verified URLs
+
+**Trust Signals:**
+- "Since 2012"
+- "Five-Star Rated"
+- "Award-Winning Design-Build"
+- "Pro NE Member"
+
+### Quality Checklist
+
+Before publishing any service page:
+
+- [ ] All "we install/make" language changed to coordination
+- [ ] No "stress-free" promises
+- [ ] No encouragement to live in home during major renos
+- [ ] Portfolio images have no location names
+- [ ] Vague FAQs link to consultation page
+- [ ] Bullets not checkmarks in lists
+- [ ] Pro NE (not NARI) mentioned
+- [ ] CTAs vary throughout page
+- [ ] Mobile responsive design verified
+- [ ] All links verified (no placeholders)
+- [ ] All testimonials/reviews verified as real
+
+### Technical Implementation
+
+**Page Context:**
+- Most service page HTML sits below existing Divi hero (H1/H2 already handled)
+- Content goes above footer
+- Start HTML sections with H2 (not H1)
+
+**SEO Structure:**
+- Only one H1 per page (in Divi hero)
+- H2s for major sections
+- H3s for subsections within
+- H4s for accordion/expandable items
+
+**CSS Notes:**
+- Divi theme overrides require `!important` for font-family
+- Font-weight can be controlled in builder without `!important`
+- Font-size controlled in Divi Text module settings
 
 ---
 
