@@ -115,10 +115,10 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 
 ### Core Messaging Pillars
 
-1. **"We Call You Back" (Reliability)**
-   - Responsive, reliable choice in a market of "ghosts"
-   - Under 5-minute response for new inquiries
-   - Clear communication throughout project
+1. **"Responsive & Reliable" (Reliability)**
+   - Clear communication throughout your project
+   - Prompt response to inquiries
+   - Professional follow-through from quote to completion
 
 2. **"Built for New England" (Quality & Workmanship)**
    - Wood-on-steel system for durability
