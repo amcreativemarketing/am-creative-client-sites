@@ -1,0 +1,360 @@
+<!-- =====================================================
+     HERO COPY OPTIONS (For your Elementor hero)
+     
+     OPTION A - Direct:
+     H1: Residential Electrical Services
+     H2: Licensed electricians serving North Shore MA homeowners. From panel upgrades to whole-home rewiring, we keep your family safe and your lights on.
+     
+     OPTION B - Safety Focus:
+     H1: Safe, Reliable Home Electrical
+     H2: Your home's electrical system shouldn't keep you up at night. Our licensed team handles everything from outlets to full rewires.
+     
+     OPTION C - Local Trust:
+     H1: Your Local Residential Electrician
+     H2: North Shore families trust Stag Electric for honest pricing, quality work, and electricians who show up on time.
+     
+     CTAs: 
+     - "Get a Free Quote" → /contact/
+     - "Our Services" → /services/
+     
+     NOTE: All HTML below starts at H2 level.
+     ===================================================== -->
+
+<style>
+/* =====================================================
+   STAG ELECTRIC - RESIDENTIAL PAGE STYLES
+   Namespace: .stag-res-
+   ===================================================== */
+
+/* Color Variables (PLACEHOLDER - update with actual brand) */
+:root {
+  --stag-primary: #1e3a5f;      /* Deep blue */
+  --stag-accent: #f5a623;        /* Electric yellow */
+  --stag-accent-dark: #d4910e;
+  --stag-light-bg: #f8f9fa;
+  --stag-body-text: #4a5568;
+  --stag-white: #ffffff;
+}
+
+/* Section Base */
+.stag-res-section {
+  padding: 80px 0;
+}
+
+.stag-res-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Typography */
+.stag-res-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--stag-accent);
+  margin-bottom: 16px;
+}
+
+.stag-res-headline {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--stag-primary);
+}
+
+.stag-res-subhead {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--stag-body-text);
+  max-width: 700px;
+}
+
+/* Intro Section */
+.stag-res-intro {
+  background: var(--stag-white);
+}
+
+.stag-res-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.stag-res-intro-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--stag-body-text);
+  margin-bottom: 16px;
+}
+
+/* Services Grid */
+.stag-res-services {
+  background: var(--stag-light-bg);
+}
+
+.stag-res-services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.stag-res-services-header .stag-res-subhead {
+  margin: 0 auto;
+}
+
+.stag-res-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.stag-res-service-card {
+  background: var(--stag-white);
+  border-radius: 12px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stag-res-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stag-res-service-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.15) 0%, rgba(245, 166, 35, 0.08) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.stag-res-service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--stag-primary);
+  margin-bottom: 12px;
+}
+
+.stag-res-service-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--stag-body-text);
+}
+
+/* Why Choose Section */
+.stag-res-why {
+  background: var(--stag-primary);
+  color: var(--stag-white);
+}
+
+.stag-res-why .stag-res-headline {
+  color: var(--stag-white);
+}
+
+.stag-res-why .stag-res-subhead {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.stag-res-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.stag-res-why-item {
+  text-align: center;
+}
+
+.stag-res-why-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--stag-accent);
+  margin-bottom: 16px;
+}
+
+.stag-res-why-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stag-res-why-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* CTA Section */
+.stag-res-cta {
+  background: linear-gradient(135deg, var(--stag-primary) 0%, #152a45 100%);
+  text-align: center;
+  color: var(--stag-white);
+}
+
+.stag-res-cta .stag-res-headline {
+  color: var(--stag-white);
+}
+
+.stag-res-cta .stag-res-subhead {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto 30px;
+}
+
+.stag-res-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--stag-accent) 0%, var(--stag-accent-dark) 100%);
+  color: var(--stag-white);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(245, 166, 35, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stag-res-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(245, 166, 35, 0.45);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stag-res-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stag-res-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stag-res-section {
+    padding: 60px 0;
+  }
+  .stag-res-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .stag-res-services-grid {
+    grid-template-columns: 1fr;
+  }
+  .stag-res-why-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+</style>
+
+<!-- INTRO SECTION -->
+<section class="stag-res-section stag-res-intro">
+  <div class="stag-res-container">
+    <div class="stag-res-intro-grid">
+      <div class="stag-res-intro-text">
+        <span class="stag-res-eyebrow">Residential Services</span>
+        <h2 class="stag-res-headline">Electrical Work You Can Trust</h2>
+        <p>Your home's electrical system is the backbone of daily life. When something goes wrong—or when you're ready to upgrade—you need an electrician who shows up on time, explains the work clearly, and stands behind every job.</p>
+        <p>Stag Electric has served North Shore homeowners for over 15 years. We're fully licensed, insured, and focused on doing the job right the first time.</p>
+      </div>
+      <div class="stag-res-intro-image">
+        <!-- Add image here -->
+        <img src="/placeholder-electrician.jpg" alt="Stag Electric technician working on residential panel" style="width: 100%; border-radius: 12px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="stag-res-section stag-res-services">
+  <div class="stag-res-container">
+    <div class="stag-res-services-header">
+      <span class="stag-res-eyebrow">What We Do</span>
+      <h2 class="stag-res-headline">Residential Electrical Services</h2>
+      <p class="stag-res-subhead">From quick repairs to whole-home projects, we handle it all.</p>
+    </div>
+    <div class="stag-res-services-grid">
+      <div class="stag-res-service-card">
+        <div class="stag-res-service-icon">⚡</div>
+        <h3>Panel Upgrades</h3>
+        <p>Upgrade your 100-amp panel to 200 amps. Essential for modern homes with higher power demands.</p>
+      </div>
+      <div class="stag-res-service-card">
+        <div class="stag-res-service-icon">🔌</div>
+        <h3>Outlet & Switch Repair</h3>
+        <p>Dead outlets, flickering switches, GFCI installations. Fast diagnosis and permanent fixes.</p>
+      </div>
+      <div class="stag-res-service-card">
+        <div class="stag-res-service-icon">💡</div>
+        <h3>Lighting Installation</h3>
+        <p>Recessed lighting, ceiling fans, under-cabinet lights, and outdoor fixtures installed right.</p>
+      </div>
+      <div class="stag-res-service-card">
+        <div class="stag-res-service-icon">🏠</div>
+        <h3>Whole-Home Rewiring</h3>
+        <p>Older home with outdated wiring? We bring your electrical up to code safely.</p>
+      </div>
+      <div class="stag-res-service-card">
+        <div class="stag-res-service-icon">🔋</div>
+        <h3>EV Charger Installation</h3>
+        <p>Level 2 home charging stations. We handle permits and install to manufacturer specs.</p>
+      </div>
+      <div class="stag-res-service-card">
+        <div class="stag-res-service-icon">🛡️</div>
+        <h3>Safety Inspections</h3>
+        <p>Buying a home or just want peace of mind? Comprehensive electrical safety checks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="stag-res-section stag-res-why">
+  <div class="stag-res-container">
+    <div style="text-align: center;">
+      <span class="stag-res-eyebrow">Why Stag Electric</span>
+      <h2 class="stag-res-headline">The Stag Difference</h2>
+      <p class="stag-res-subhead" style="margin: 0 auto;">We're not the cheapest. We're the ones you call when you want it done right.</p>
+    </div>
+    <div class="stag-res-why-grid">
+      <div class="stag-res-why-item">
+        <div class="stag-res-why-number">15+</div>
+        <h3>Years Experience</h3>
+        <p>Serving North Shore families since 2009</p>
+      </div>
+      <div class="stag-res-why-item">
+        <div class="stag-res-why-number">100%</div>
+        <h3>Licensed & Insured</h3>
+        <p>Full coverage on every job we do</p>
+      </div>
+      <div class="stag-res-why-item">
+        <div class="stag-res-why-number">24/7</div>
+        <h3>Emergency Service</h3>
+        <p>Electrical emergencies don't wait—neither do we</p>
+      </div>
+      <div class="stag-res-why-item">
+        <div class="stag-res-why-number">5★</div>
+        <h3>Top Rated</h3>
+        <p>Hundreds of happy homeowners</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="stag-res-section stag-res-cta">
+  <div class="stag-res-container">
+    <span class="stag-res-eyebrow">Ready to Get Started?</span>
+    <h2 class="stag-res-headline">Get Your Free Estimate</h2>
+    <p class="stag-res-subhead">Tell us about your project. We'll get back to you within 24 hours with honest pricing—no surprises.</p>
+    <a href="/contact/" class="stag-res-btn">Request a Quote</a>
+  </div>
+</section>
