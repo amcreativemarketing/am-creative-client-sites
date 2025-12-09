@@ -1,0 +1,1721 @@
+<!-- 
+  Olympic Fence - Coring Service Page
+  Place this code between your existing header and footer
+  Includes FAQ, Service, Breadcrumb, and Review Schema Markup for SEO
+  
+  Brand Update: December 2024
+  - Colors: Purple brand palette (#272262, #4a4494)
+  - Namespace: .ofc-coring- prefix
+  - Cross-links: All 5 live location pages linked
+-->
+
+<style>
+  /* ===== CSS Variables - Olympic Fence Brand Colors ===== */
+  :root {
+    --ofc-purple-dark: #272262;
+    --ofc-purple: #4a4494;
+    --ofc-purple-light: #6b68a8;
+    --ofc-accent: #2d8a7b;
+    --ofc-light-purple: #f0eff8;
+    --ofc-light-accent: #e6f5f2;
+    --ofc-white: #ffffff;
+    --ofc-gray-100: #f8f9fa;
+    --ofc-gray-200: #e9ecef;
+    --ofc-gray-600: #6c757d;
+    --ofc-gray-800: #343a40;
+    --ofc-shadow: 0 4px 20px rgba(39, 34, 98, 0.1);
+    --ofc-shadow-lg: 0 8px 40px rgba(39, 34, 98, 0.15);
+    --ofc-radius: 8px;
+    --ofc-radius-lg: 16px;
+    --ofc-transition: all 0.3s ease;
+  }
+
+  /* ===== Global Page Styles ===== */
+  .ofc-coring-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--ofc-gray-800);
+    line-height: 1.7;
+  }
+
+  .ofc-coring-page * {
+    box-sizing: border-box;
+  }
+
+  .ofc-coring-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ofc-coring-section {
+    padding: 80px 0;
+  }
+
+  .ofc-coring-section-alt {
+    background-color: var(--ofc-gray-100);
+  }
+
+  .ofc-coring-section-purple {
+    background-color: var(--ofc-purple-dark);
+    color: var(--ofc-white);
+  }
+
+  .ofc-coring-section-accent {
+    background: linear-gradient(135deg, var(--ofc-accent) 0%, #1e6b5f 100%);
+    color: var(--ofc-white);
+  }
+
+  .ofc-coring-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .ofc-coring-header h2 {
+    font-size: 2.5rem;
+    color: var(--ofc-purple-dark);
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  .ofc-coring-section-purple .ofc-coring-header h2,
+  .ofc-coring-section-accent .ofc-coring-header h2 {
+    color: var(--ofc-white);
+  }
+
+  .ofc-coring-header p {
+    font-size: 1.15rem;
+    color: var(--ofc-gray-600);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .ofc-coring-section-purple .ofc-coring-header p,
+  .ofc-coring-section-accent .ofc-coring-header p {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* ===== Trust Bar ===== */
+  .ofc-coring-trust-bar {
+    background: var(--ofc-purple-dark);
+    padding: 15px 0;
+  }
+
+  .ofc-coring-trust-bar-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .ofc-coring-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ofc-white);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .ofc-coring-trust-item svg {
+    width: 18px;
+    height: 18px;
+    color: var(--ofc-accent);
+  }
+
+  @media (max-width: 768px) {
+    .ofc-coring-trust-bar-inner {
+      gap: 15px 25px;
+    }
+
+    .ofc-coring-trust-item {
+      font-size: 0.85rem;
+    }
+  }
+
+  .ofc-coring-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--ofc-radius);
+    transition: var(--ofc-transition);
+    cursor: pointer;
+    border: none;
+  }
+
+  .ofc-coring-btn-primary {
+    background: var(--ofc-purple);
+    color: var(--ofc-white) !important;
+  }
+
+  .ofc-coring-btn-primary:hover {
+    background: var(--ofc-purple-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 68, 148, 0.4);
+  }
+
+  .ofc-coring-btn-secondary {
+    background: transparent;
+    color: var(--ofc-white) !important;
+    border: 2px solid var(--ofc-white);
+    margin-left: 15px;
+  }
+
+  .ofc-coring-btn-secondary:hover {
+    background: var(--ofc-white);
+    color: var(--ofc-purple-dark) !important;
+  }
+
+  /* ===== What is Coring Section ===== */
+  .ofc-coring-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .ofc-coring-content h2 {
+    font-size: 2.2rem;
+    color: var(--ofc-purple-dark);
+    margin-bottom: 20px;
+  }
+
+  .ofc-coring-content p {
+    margin-bottom: 20px;
+    color: var(--ofc-gray-800);
+  }
+
+  .ofc-coring-highlight-box {
+    background: var(--ofc-light-purple);
+    border-left: 4px solid var(--ofc-purple);
+    padding: 20px 25px;
+    margin: 25px 0;
+    border-radius: 0 var(--ofc-radius) var(--ofc-radius) 0;
+  }
+
+  .ofc-coring-highlight-box h4 {
+    color: var(--ofc-purple);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+
+  .ofc-coring-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .ofc-coring-image-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--ofc-radius);
+    box-shadow: var(--ofc-shadow);
+  }
+
+  .ofc-coring-image-grid img:first-child {
+    grid-column: span 2;
+    height: 250px;
+  }
+
+  .ofc-coring-materials-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .ofc-coring-materials-list span {
+    background: var(--ofc-light-purple);
+    color: var(--ofc-purple-dark);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .ofc-coring-content .ofc-coring-materials-list {
+    justify-content: flex-start;
+  }
+
+  /* Full Width Surfaces Section */
+  .ofc-coring-surfaces-full {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid var(--ofc-gray-200);
+  }
+
+  .ofc-coring-surfaces-full p {
+    font-size: 1.1rem;
+    color: var(--ofc-purple-dark);
+    margin-bottom: 15px;
+  }
+
+  .ofc-coring-surfaces-full .ofc-coring-materials-list {
+    justify-content: center;
+  }
+
+  /* ===== Benefits Section ===== */
+  .ofc-coring-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .ofc-coring-benefit-card {
+    background: var(--ofc-white);
+    padding: 35px 30px;
+    border-radius: var(--ofc-radius-lg);
+    box-shadow: var(--ofc-shadow);
+    transition: var(--ofc-transition);
+    text-align: center;
+  }
+
+  .ofc-coring-benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ofc-shadow-lg);
+  }
+
+  .ofc-coring-benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--ofc-light-purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  .ofc-coring-benefit-icon svg {
+    width: 35px;
+    height: 35px;
+    color: var(--ofc-purple);
+  }
+
+  .ofc-coring-benefit-card h3 {
+    font-size: 1.25rem;
+    color: var(--ofc-purple-dark);
+    margin-bottom: 12px;
+  }
+
+  .ofc-coring-benefit-card p {
+    color: var(--ofc-gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* ===== Applications Grid ===== */
+  .ofc-coring-apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  .ofc-coring-app-card {
+    background: var(--ofc-white);
+    border-radius: var(--ofc-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--ofc-shadow);
+    transition: var(--ofc-transition);
+    border-top: 4px solid var(--ofc-purple);
+  }
+
+  .ofc-coring-app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ofc-shadow-lg);
+  }
+
+  .ofc-coring-app-content {
+    padding: 30px 25px;
+  }
+
+  .ofc-coring-app-content h3 {
+    font-size: 1.2rem;
+    color: var(--ofc-purple-dark);
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  .ofc-coring-app-content p {
+    color: var(--ofc-gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* ===== Process Timeline ===== */
+  .ofc-coring-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .ofc-coring-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--ofc-purple-light);
+  }
+
+  .ofc-coring-step {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .ofc-coring-step:last-child {
+    margin-bottom: 0;
+  }
+
+  .ofc-coring-step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--ofc-purple);
+    color: var(--ofc-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .ofc-coring-step-content {
+    background: var(--ofc-white);
+    padding: 25px 30px;
+    border-radius: var(--ofc-radius);
+    box-shadow: var(--ofc-shadow);
+    flex-grow: 1;
+  }
+
+  .ofc-coring-step-content h3 {
+    color: var(--ofc-purple-dark);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .ofc-coring-step-content .ofc-coring-step-timing {
+    color: var(--ofc-purple);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .ofc-coring-step-content ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--ofc-gray-600);
+  }
+
+  .ofc-coring-step-content li {
+    margin-bottom: 5px;
+  }
+
+  .ofc-coring-timeline-summary {
+    background: var(--ofc-light-purple);
+    padding: 20px 30px;
+    border-radius: var(--ofc-radius);
+    text-align: center;
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ofc-coring-timeline-summary strong {
+    color: var(--ofc-purple);
+    font-size: 1.1rem;
+  }
+
+  /* ===== Materials Section ===== */
+  .ofc-coring-materials-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .ofc-coring-materials-column {
+    background: var(--ofc-white);
+    padding: 35px;
+    border-radius: var(--ofc-radius-lg);
+    box-shadow: var(--ofc-shadow);
+  }
+
+  .ofc-coring-materials-column h3 {
+    color: var(--ofc-purple-dark);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--ofc-light-purple);
+  }
+
+  .ofc-coring-materials-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ofc-coring-materials-column li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--ofc-gray-200);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ofc-coring-materials-column li:last-child {
+    border-bottom: none;
+  }
+
+  .ofc-coring-materials-column li svg {
+    width: 20px;
+    height: 20px;
+    color: var(--ofc-purple);
+    flex-shrink: 0;
+  }
+
+  /* ===== Winter Section ===== */
+  .ofc-coring-winter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .ofc-coring-winter-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .ofc-coring-winter-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0.95;
+  }
+
+  .ofc-coring-winter-image {
+    position: relative;
+  }
+
+  .ofc-coring-winter-image img {
+    width: 100%;
+    border-radius: var(--ofc-radius-lg);
+    box-shadow: var(--ofc-shadow-lg);
+  }
+
+  .ofc-coring-winter-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--ofc-purple);
+    color: var(--ofc-white);
+    padding: 12px 20px;
+    border-radius: var(--ofc-radius);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  /* ===== FAQ Section ===== */
+  .ofc-coring-faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .ofc-coring-faq-item {
+    background: var(--ofc-white);
+    border-radius: var(--ofc-radius);
+    margin-bottom: 15px;
+    box-shadow: var(--ofc-shadow);
+    overflow: hidden;
+  }
+
+  .ofc-coring-faq-question {
+    padding: 22px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--ofc-purple-dark);
+    font-size: 1.05rem;
+    transition: var(--ofc-transition);
+  }
+
+  .ofc-coring-faq-question:hover {
+    background: var(--ofc-gray-100);
+  }
+
+  .ofc-coring-faq-question svg {
+    width: 24px;
+    height: 24px;
+    transition: var(--ofc-transition);
+    color: var(--ofc-purple);
+  }
+
+  .ofc-coring-faq-item.active .ofc-coring-faq-question svg {
+    transform: rotate(180deg);
+  }
+
+  .ofc-coring-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .ofc-coring-faq-item.active .ofc-coring-faq-answer {
+    max-height: 300px;
+  }
+
+  .ofc-coring-faq-answer-content {
+    padding: 0 25px 22px;
+    color: var(--ofc-gray-600);
+    line-height: 1.7;
+  }
+
+  /* ===== Trust Section ===== */
+  .ofc-coring-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .ofc-coring-trust-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--ofc-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .ofc-coring-trust-card svg {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 15px;
+    color: var(--ofc-accent);
+  }
+
+  .ofc-coring-section-purple .ofc-coring-trust-card svg {
+    color: #4ecdc4;
+  }
+
+  .ofc-coring-trust-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  .ofc-coring-trust-card p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+
+  .ofc-coring-section-purple .ofc-coring-trust-card h4,
+  .ofc-coring-section-purple .ofc-coring-trust-card p {
+    color: var(--ofc-white);
+  }
+
+  .ofc-coring-testimonial {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 35px;
+    border-radius: var(--ofc-radius-lg);
+    border-left: 4px solid var(--ofc-accent);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ofc-coring-testimonial blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: var(--ofc-white);
+  }
+
+  .ofc-coring-testimonial cite {
+    font-style: normal;
+    opacity: 0.8;
+    color: var(--ofc-white);
+  }
+
+  /* ===== CTA Section ===== */
+  .ofc-coring-cta {
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  .ofc-coring-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .ofc-coring-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    opacity: 0.95;
+  }
+
+  .ofc-coring-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+
+  .ofc-coring-cta-phone {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  .ofc-coring-cta-phone a {
+    color: var(--ofc-white);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .ofc-coring-cta-phone a:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== Service Area ===== */
+  .ofc-coring-service-area {
+    background: var(--ofc-gray-100);
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .ofc-coring-service-area p {
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--ofc-gray-600);
+    line-height: 1.7;
+  }
+
+  .ofc-coring-service-area strong {
+    color: var(--ofc-purple-dark);
+  }
+
+  .ofc-coring-service-area a {
+    color: var(--ofc-purple);
+    text-decoration: none;
+  }
+
+  .ofc-coring-service-area a:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== Image Gallery Section ===== */
+  .ofc-coring-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .ofc-coring-gallery-bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .ofc-coring-gallery-bottom .ofc-coring-gallery-item {
+    flex: 0 1 calc(33.333% - 10px);
+    max-width: calc(33.333% - 10px);
+  }
+
+  .ofc-coring-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--ofc-radius);
+    aspect-ratio: 4/3;
+  }
+
+  .ofc-coring-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--ofc-transition);
+  }
+
+  .ofc-coring-gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .ofc-coring-gallery-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(39, 34, 98, 0.9));
+    padding: 40px 15px 15px;
+    color: var(--ofc-white);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  /* ===== Responsive Styles ===== */
+  @media (max-width: 992px) {
+    .ofc-coring-intro,
+    .ofc-coring-winter,
+    .ofc-coring-materials-section {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .ofc-coring-benefits-grid,
+    .ofc-coring-apps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ofc-coring-trust-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ofc-coring-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ofc-coring-gallery-bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ofc-coring-gallery-bottom .ofc-coring-gallery-item {
+      flex: 0 1 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ofc-coring-section {
+      padding: 60px 0;
+    }
+
+    .ofc-coring-header h2 {
+      font-size: 2rem;
+    }
+
+    .ofc-coring-benefits-grid,
+    .ofc-coring-apps-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ofc-coring-gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .ofc-coring-btn-secondary {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    .ofc-coring-timeline::before {
+      left: 20px;
+    }
+
+    .ofc-coring-step-number {
+      width: 45px;
+      height: 45px;
+      font-size: 1.2rem;
+    }
+
+    .ofc-coring-trust-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .ofc-coring-cta h2 {
+      font-size: 1.8rem;
+    }
+
+    .ofc-coring-cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ofc-coring-btn {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+</style>
+
+<!-- ===== CORING SERVICE PAGE CONTENT ===== -->
+<div class="ofc-coring-page">
+
+  <!-- Trust Bar -->
+  <section class="ofc-coring-trust-bar">
+    <div class="ofc-coring-container">
+      <div class="ofc-coring-trust-bar-inner">
+        <div class="ofc-coring-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          40+ Years Experience
+        </div>
+        <div class="ofc-coring-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          Lifetime Workmanship Warranty
+        </div>
+        <div class="ofc-coring-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
+          </svg>
+          Year-Round Installation
+        </div>
+        <div class="ofc-coring-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Licensed & Insured
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Coring Section -->
+  <section class="ofc-coring-section">
+    <div class="ofc-coring-container">
+      <div class="ofc-coring-intro">
+        <div class="ofc-coring-content">
+          <h2>What is Coring?</h2>
+          <p>Coring (also called core drilling) is a specialized technique that creates precise, cylindrical holes through hard surfaces like concrete, stone, asphalt, or retaining walls to install fence posts securely.</p>
+          
+          <p>Unlike surface-mounted brackets that bolt onto concrete (and can loosen over time), coring embeds your fence posts directly INTO the concrete - creating a bond that lasts decades, not years.</p>
+
+          <div class="ofc-coring-highlight-box">
+            <h4>Why Coring is Stronger Than Surface Mounting</h4>
+            <p>Surface-mounted fence posts rely on 4 small bolts that can work loose from wind pressure and daily use. Cored posts are embedded in solid concrete and secured with high-strength hydraulic cement that actually bonds stronger than the original concrete. It's the same technique used in bridge construction.</p>
+          </div>
+        </div>
+        
+        <div class="ofc-coring-image-grid">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Residential-Coring_Concrete-Fencing.jpg" alt="Residential coring for fence installation on concrete patio" loading="lazy">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Residential-Coring_Concrete-Fencing-2.jpg" alt="Fence posts installed through cored concrete" loading="lazy">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Commercial-Coring_B2B.jpg" alt="Commercial coring process for fence installation" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Surfaces Section - Full Width Centered -->
+      <div class="ofc-coring-surfaces-full">
+        <p><strong>Surfaces we can core through:</strong></p>
+        <div class="ofc-coring-materials-list">
+          <span>Concrete</span>
+          <span>Asphalt</span>
+          <span>Stone</span>
+          <span>Brick</span>
+          <span>Block</span>
+          <span>Pavers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="ofc-coring-section ofc-coring-section-alt">
+    <div class="ofc-coring-container">
+      <div class="ofc-coring-header">
+        <h2>Why Choose Coring?</h2>
+        <p>Professional fence installation on any hard surface - without demolition, mess, or compromise.</p>
+      </div>
+
+      <div class="ofc-coring-benefits-grid">
+        <div class="ofc-coring-benefit-card">
+          <div class="ofc-coring-benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3>Preserve Your Hardscape</h3>
+          <p>No demolition, no mess, no expensive concrete replacement. We drill precise holes and leave your patio, driveway, or pool deck intact.</p>
+        </div>
+
+        <div class="ofc-coring-benefit-card">
+          <div class="ofc-coring-benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3>Superior Strength</h3>
+          <p>Posts embedded in concrete and secured with hydraulic cement last decades, not years. Far stronger than surface-mounted brackets.</p>
+        </div>
+
+        <div class="ofc-coring-benefit-card">
+          <div class="ofc-coring-benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
+            </svg>
+          </div>
+          <h3>Year-Round Installation</h3>
+          <p>Frozen ground? No problem. We drill through concrete, not soil. Your fence project doesn't have to wait until spring.</p>
+        </div>
+
+        <div class="ofc-coring-benefit-card">
+          <div class="ofc-coring-benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <h3>Clean & Professional</h3>
+          <p>Water-cooled drilling minimizes dust. Clean removal of concrete cores. Your property looks better after we leave than before.</p>
+        </div>
+
+        <div class="ofc-coring-benefit-card">
+          <div class="ofc-coring-benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+          </div>
+          <h3>Versatile Applications</h3>
+          <p>Patios, pool decks, driveways, retaining walls, parking lots - if it's a hard surface, we can install your fence on it.</p>
+        </div>
+
+        <div class="ofc-coring-benefit-card">
+          <div class="ofc-coring-benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3>Backed by Our Warranty</h3>
+          <p>Same lifetime workmanship guarantee on all coring installations. We stand behind every fence we build - regardless of installation method.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications Section -->
+  <section class="ofc-coring-section">
+    <div class="ofc-coring-container">
+      <div class="ofc-coring-header">
+        <h2>Common Coring Applications</h2>
+        <p>Professional fence installation on virtually any hard surface for residential and commercial properties.</p>
+      </div>
+
+      <div class="ofc-coring-apps-grid">
+        <div class="ofc-coring-app-card">
+          <div class="ofc-coring-app-content">
+            <h3>Pool Deck Fencing</h3>
+            <p>Meet Massachusetts safety codes and add privacy without removing your expensive pool deck. Secure fencing that protects your family.</p>
+          </div>
+        </div>
+
+        <div class="ofc-coring-app-card">
+          <div class="ofc-coring-app-content">
+            <h3>Patio Privacy Fences</h3>
+            <p>Extend your outdoor living space with a secure, private boundary. Transform your concrete patio into a peaceful retreat.</p>
+          </div>
+        </div>
+
+        <div class="ofc-coring-app-card">
+          <div class="ofc-coring-app-content">
+            <h3>Driveway Gates</h3>
+            <p>Secure entry points on existing concrete or asphalt driveways. Cored gate posts provide the extra stability gates require.</p>
+          </div>
+        </div>
+
+        <div class="ofc-coring-app-card">
+          <div class="ofc-coring-app-content">
+            <h3>Retaining Wall Fencing</h3>
+            <p>Add height and security to existing retaining walls. Perfect for properties with elevation changes that need additional privacy.</p>
+          </div>
+        </div>
+
+        <div class="ofc-coring-app-card">
+          <div class="ofc-coring-app-content">
+            <h3>Commercial Properties</h3>
+            <p>Parking lots, loading docks, storage yards, and industrial perimeters. Professional security fencing on any commercial surface.</p>
+          </div>
+        </div>
+
+        <div class="ofc-coring-app-card">
+          <div class="ofc-coring-app-content">
+            <h3>Winter Installations</h3>
+            <p>When the ground is frozen, we drill through concrete instead. Don't wait until spring - get your fence installed now.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Timeline Section -->
+  <section class="ofc-coring-section ofc-coring-section-alt">
+    <div class="ofc-coring-container">
+      <div class="ofc-coring-header">
+        <h2>Our Coring Process</h2>
+        <p>From consultation to completion - here's what to expect when you choose Olympic Fence for your coring installation.</p>
+      </div>
+
+      <div class="ofc-coring-timeline">
+        <div class="ofc-coring-step">
+          <div class="ofc-coring-step-number">1</div>
+          <div class="ofc-coring-step-content">
+            <h3>Free Consultation & Estimate</h3>
+            <p class="ofc-coring-step-timing">Day 1</p>
+            <ul>
+              <li>We visit your property and assess the concrete/surface</li>
+              <li>Discuss fence style, height, and material options</li>
+              <li>Provide transparent pricing with no hidden fees</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ofc-coring-step">
+          <div class="ofc-coring-step-number">2</div>
+          <div class="ofc-coring-step-content">
+            <h3>Utility Location & Planning</h3>
+            <p class="ofc-coring-step-timing">Before Installation</p>
+            <ul>
+              <li>Verify no underground utilities in coring path</li>
+              <li>Mark post locations for your approval</li>
+              <li>Schedule your installation date</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ofc-coring-step">
+          <div class="ofc-coring-step-number">3</div>
+          <div class="ofc-coring-step-content">
+            <h3>Core Drilling</h3>
+            <p class="ofc-coring-step-timing">Installation Day</p>
+            <ul>
+              <li>Diamond bit creates precise holes through your surface</li>
+              <li>Water-cooled process minimizes dust and mess</li>
+              <li>Clean removal of concrete cores</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ofc-coring-step">
+          <div class="ofc-coring-step-number">4</div>
+          <div class="ofc-coring-step-content">
+            <h3>Post Setting & Cement</h3>
+            <p class="ofc-coring-step-timing">Same Day</p>
+            <ul>
+              <li>Posts inserted to proper depth</li>
+              <li>Secured with high-strength hydraulic cement</li>
+              <li>Cures to full strength within 24-48 hours</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ofc-coring-step">
+          <div class="ofc-coring-step-number">5</div>
+          <div class="ofc-coring-step-content">
+            <h3>Fence Installation & Cleanup</h3>
+            <p class="ofc-coring-step-timing">Same Day or Next Day</p>
+            <ul>
+              <li>Rails, panels, and hardware installed</li>
+              <li>Final alignment and adjustments</li>
+              <li>Complete site cleanup - we leave your property cleaner than we found it</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="ofc-coring-timeline-summary">
+        <strong>Typical Timeline:</strong> Most residential coring projects complete in 1-2 days from start to finish.
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="ofc-coring-section">
+    <div class="ofc-coring-container">
+      <div class="ofc-coring-header">
+        <h2>Materials We Work With</h2>
+        <p>Professional coring for all <a href="https://olympicfencema.com/products/" style="color: var(--ofc-purple);">fence types</a> on virtually any hard surface.</p>
+      </div>
+
+      <div class="ofc-coring-materials-section">
+        <div class="ofc-coring-materials-column">
+          <h3>Fencing Materials</h3>
+          <ul>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Vinyl/PVC</strong> - Best for low maintenance, weather-resistant</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Cedar & Wood</strong> - Natural look, pairs with wood-on-steel posts</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Chain Link</strong> - Commercial and residential security</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Aluminum/Ornamental Iron</strong> - Decorative and security</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="ofc-coring-materials-column">
+          <h3>Surfaces We Core Through</h3>
+          <ul>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Poured concrete patios and pool decks</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Concrete driveways and walkways</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Asphalt surfaces</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Brick and stone pavers</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Block and retaining walls</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Garage floors (indoor/outdoor transitions)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="ofc-coring-section ofc-coring-section-alt">
+    <div class="ofc-coring-container">
+      <div class="ofc-coring-header">
+        <h2>Our Coring Work</h2>
+        <p>Professional fence installations on concrete, asphalt, and other hard surfaces throughout North Shore Massachusetts.</p>
+      </div>
+
+      <div class="ofc-coring-gallery">
+        <div class="ofc-coring-gallery-item">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Residential-Coring_Concrete-Fencing.jpg" alt="Residential fence installed on concrete patio using coring method" loading="lazy">
+          <div class="ofc-coring-gallery-label">Residential Patio Installation</div>
+        </div>
+        <div class="ofc-coring-gallery-item">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Residential-Coring_Concrete-Fencing-2.jpg" alt="Fence posts cored into concrete surface" loading="lazy">
+          <div class="ofc-coring-gallery-label">Cored Post Detail</div>
+        </div>
+        <div class="ofc-coring-gallery-item">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Commercial_Coring_B2B.jpg" alt="Commercial fence installation using core drilling" loading="lazy">
+          <div class="ofc-coring-gallery-label">Commercial Installation</div>
+        </div>
+        <div class="ofc-coring-gallery-bottom">
+          <div class="ofc-coring-gallery-item">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Commercial_Coring_B2B-2.jpg" alt="Commercial property fence on concrete surface" loading="lazy">
+            <div class="ofc-coring-gallery-label">Commercial Property</div>
+          </div>
+          <div class="ofc-coring-gallery-item">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Commercial-Coring_B2B.jpg" alt="Core drilling process for fence post installation" loading="lazy">
+            <div class="ofc-coring-gallery-label">Coring Process</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Winter Installation Section -->
+  <section class="ofc-coring-section ofc-coring-section-accent">
+    <div class="ofc-coring-container">
+      <div class="ofc-coring-winter">
+        <div class="ofc-coring-winter-content">
+          <h2>Yes, We Install Fences in Winter</h2>
+          <p>Most fence contractors shut down when Massachusetts winters hit. Frozen ground makes traditional post-hole digging nearly impossible. But coring changes everything.</p>
+          <p>When we core through your concrete patio, driveway, or pool deck, the frozen ground underneath doesn't matter. We're drilling through the surface, not digging through soil. That means your fence project doesn't have to wait until April.</p>
+          <p><strong>Planning your spring?</strong> Get ahead of the rush. Schedule your coring installation now and enjoy your new fence the moment warm weather returns.</p>
+          <a href="https://olympicfencema.com/contact-us/" class="ofc-coring-btn ofc-coring-btn-secondary" style="margin-top: 15px;">Schedule Your Winter Installation</a>
+        </div>
+        <div class="ofc-coring-winter-image">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Commercial-Coring_B2B.jpg" alt="Fence installation during winter months using coring method" loading="lazy">
+          <div class="ofc-coring-winter-badge">Year-Round Service</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="ofc-coring-section">
+    <div class="ofc-coring-container">
+      <div class="ofc-coring-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions about our coring and fence installation services.</p>
+      </div>
+
+      <div class="ofc-coring-faq-list">
+        <div class="ofc-coring-faq-item">
+          <div class="ofc-coring-faq-question">
+            <span>How long does coring take?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="ofc-coring-faq-answer">
+            <div class="ofc-coring-faq-answer-content">
+              Most residential coring jobs take just a few hours. We can typically core, set posts, and complete your fence installation in 1-2 days depending on the project size.
+            </div>
+          </div>
+        </div>
+
+        <div class="ofc-coring-faq-item">
+          <div class="ofc-coring-faq-question">
+            <span>Will coring crack my concrete patio?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="ofc-coring-faq-answer">
+            <div class="ofc-coring-faq-answer-content">
+              No. Our diamond core drill creates clean, precise holes without cracking or damaging the surrounding concrete. We use water-cooled equipment that minimizes stress on the material.
+            </div>
+          </div>
+        </div>
+
+        <div class="ofc-coring-faq-item">
+          <div class="ofc-coring-faq-question">
+            <span>Is coring more expensive than regular fence installation?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="ofc-coring-faq-answer">
+            <div class="ofc-coring-faq-answer-content">
+              Coring involves specialized equipment and expertise, so there is an additional cost compared to standard soil installation. However, it's typically far less expensive than removing and replacing your patio to install fence posts the traditional way.
+            </div>
+          </div>
+        </div>
+
+        <div class="ofc-coring-faq-item">
+          <div class="ofc-coring-faq-question">
+            <span>Can you core through asphalt driveways?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="ofc-coring-faq-answer">
+            <div class="ofc-coring-faq-answer-content">
+              Yes. We can core through concrete, asphalt, brick, stone, and block surfaces.
+            </div>
+          </div>
+        </div>
+
+        <div class="ofc-coring-faq-item">
+          <div class="ofc-coring-faq-question">
+            <span>Do I need a permit for fence installation on my patio?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="ofc-coring-faq-answer">
+            <div class="ofc-coring-faq-answer-content">
+              In most Massachusetts towns, fences under 6 feet don't require a permit regardless of installation method. We'll help you verify local requirements during your consultation.
+            </div>
+          </div>
+        </div>
+
+        <div class="ofc-coring-faq-item">
+          <div class="ofc-coring-faq-question">
+            <span>Can any fence type be installed using coring?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="ofc-coring-faq-answer">
+            <div class="ofc-coring-faq-answer-content">
+              Yes. We can install vinyl, wood, chain link, aluminum, and ornamental iron fences using the coring method. We'll recommend the best material based on your needs and budget.
+            </div>
+          </div>
+        </div>
+
+        <div class="ofc-coring-faq-item">
+          <div class="ofc-coring-faq-question">
+            <span>How does the hydraulic cement hold up in New England weather?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="ofc-coring-faq-answer">
+            <div class="ofc-coring-faq-answer-content">
+              Excellent. Non-shrink hydraulic cement is designed for freeze-thaw cycles and actually bonds stronger than regular concrete. It's the same material used in bridge construction.
+            </div>
+          </div>
+        </div>
+
+        <div class="ofc-coring-faq-item">
+          <div class="ofc-coring-faq-question">
+            <span>Can you install gates using the coring method?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="ofc-coring-faq-answer">
+            <div class="ofc-coring-faq-answer-content">
+              Absolutely. In fact, gate posts benefit most from coring because they need extra stability to handle the daily stress of opening and closing.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section class="ofc-coring-section ofc-coring-section-purple">
+    <div class="ofc-coring-container">
+      <div class="ofc-coring-header">
+        <h2>Why Choose Olympic Fence?</h2>
+        <p>Two generations of fence installation expertise serving North Shore Massachusetts since 1985.</p>
+      </div>
+
+      <div class="ofc-coring-trust-grid">
+        <div class="ofc-coring-trust-card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h4>40+ Years Experience</h4>
+          <p>Two generations of fence expertise</p>
+        </div>
+
+        <div class="ofc-coring-trust-card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <h4>Lifetime Warranty</h4>
+          <p>Workmanship guarantee on all installs</p>
+        </div>
+
+        <div class="ofc-coring-trust-card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <h4>Licensed & Insured</h4>
+          <p>Fully licensed Massachusetts contractor</p>
+        </div>
+
+        <div class="ofc-coring-trust-card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+          </svg>
+          <h4>5-Star Reviews</h4>
+          <p>Consistently rated by customers</p>
+        </div>
+      </div>
+
+      <div class="ofc-coring-testimonial">
+        <blockquote>"Olympic fence did a fantastic job installing the fence in back yard. The crew was very professional and did the job much quicker than expected. I would recommend them to any one looking to get a fence installed."</blockquote>
+        <cite>- Tim F., Google Review</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="ofc-coring-section ofc-coring-section-accent ofc-coring-cta">
+    <div class="ofc-coring-container">
+      <h2>Ready to Install Your Fence - Even Through Concrete?</h2>
+      <p>Get a free estimate on professional coring and fence installation. Year-round service throughout the North Shore.</p>
+      
+      <div class="ofc-coring-cta-buttons">
+        <a href="https://olympicfencema.com/contact-us/" class="ofc-coring-btn ofc-coring-btn-secondary">Get Your Free Estimate</a>
+        <a href="https://olympicfencema.com/services/" class="ofc-coring-btn ofc-coring-btn-secondary">View All Services</a>
+      </div>
+      
+      <p class="ofc-coring-cta-phone">Or call us directly: <a href="tel:978-997-2302">978-997-2302</a></p>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="ofc-coring-service-area">
+    <div class="ofc-coring-container">
+      <p><strong><a href="https://olympicfencema.com/">Olympic Fence</a></strong> provides professional coring and fence installation services throughout <strong>North Shore Massachusetts</strong>, including <a href="https://olympicfencema.com/newburyport-fence-company/">Newburyport</a>, <a href="https://olympicfencema.com/amesbury-fence-company/">Amesbury</a>, <a href="https://olympicfencema.com/salisbury-fence-company/">Salisbury</a>, <a href="https://olympicfencema.com/haverhill-fence-company/">Haverhill</a>, <a href="https://olympicfencema.com/fence-installation-north-andover-ma/">North Andover</a>, Methuen, Andover, Georgetown, Groveland, West Newbury, Merrimac, and surrounding communities.</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- FAQ Accordion Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.ofc-coring-faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.ofc-coring-faq-question');
+    
+    question.addEventListener('click', () => {
+      // Close other open items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+        }
+      });
+      
+      // Toggle current item
+      item.classList.toggle('active');
+    });
+  });
+});
+</script>
+
+<!-- Breadcrumb Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://olympicfencema.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://olympicfencema.com/services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Coring - Fence Installation on Concrete",
+      "item": "https://olympicfencema.com/coring/"
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Schema Markup for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does coring take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most residential coring jobs take just a few hours. We can typically core, set posts, and complete your fence installation in 1-2 days depending on the project size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will coring crack my concrete patio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Our diamond core drill creates clean, precise holes without cracking or damaging the surrounding concrete. We use water-cooled equipment that minimizes stress on the material."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is coring more expensive than regular fence installation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coring involves specialized equipment and expertise, so there is an additional cost compared to standard soil installation. However, it's typically far less expensive than removing and replacing your patio to install fence posts the traditional way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you core through asphalt driveways?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We can core through concrete, asphalt, brick, stone, and block surfaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a permit for fence installation on my patio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most Massachusetts towns, fences under 6 feet don't require a permit regardless of installation method. We'll help you verify local requirements during your consultation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can any fence type be installed using coring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We can install vinyl, wood, chain link, aluminum, and ornamental iron fences using the coring method. We'll recommend the best material based on your needs and budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the hydraulic cement hold up in New England weather?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Excellent. Non-shrink hydraulic cement is designed for freeze-thaw cycles and actually bonds stronger than regular concrete. It's the same material used in bridge construction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you install gates using the coring method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. In fact, gate posts benefit most from coring because they need extra stability to handle the daily stress of opening and closing."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Service Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Fence Post Core Drilling",
+  "name": "Coring - Fence Installation on Concrete",
+  "description": "Professional core drilling service for installing fence posts through concrete, asphalt, stone, and other hard surfaces. Year-round installation available throughout North Shore Massachusetts.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Olympic Fence Company",
+    "telephone": "978-997-2302",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "81 Garden St",
+      "addressLocality": "West Newbury",
+      "addressRegion": "MA",
+      "postalCode": "01985"
+    }
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "42.8015",
+      "longitude": "-70.9615"
+    },
+    "geoRadius": "30 mi"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Coring Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Residential Coring"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Commercial Coring"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Winter Fence Installation"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Review Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Olympic Fence Company",
+  "image": "https://olympicfencema.com/wp-content/uploads/2025/12/Residential-Coring_Concrete-Fencing.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "81 Garden St",
+    "addressLocality": "West Newbury",
+    "addressRegion": "MA",
+    "postalCode": "01985"
+  },
+  "telephone": "978-997-2302",
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Tim F."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Olympic fence did a fantastic job installing the fence in back yard. The crew was very professional and did the job much quicker than expected. I would recommend them to any one looking to get a fence installed."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sarah M."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "James and his crew were professional, efficient and did outstanding work. They worked within my budget and were much more reasonable than two other quotes I received."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Mike D."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Communication, installation and attention to detail were outstanding. His team could not have been more respectful of our property and left our yard in pristine condition."
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "15"
+  }
+}
+</script>
