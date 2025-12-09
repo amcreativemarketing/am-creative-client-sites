@@ -268,6 +268,46 @@ Examples:
 
 ---
 
+## Location Page Design Principles
+
+### Variety Within Brand Consistency
+
+**Location pages should NOT be carbon copies.** Each page should have the same brand feel (colors, typography, voice) but unique layouts and content structures that reflect the character of each community.
+
+**Required consistency (non-negotiable):**
+- Brand colors (purple #272262, #4a4494)
+- Typography and font stack
+- CSS namespace prefix (.ofc-[city]-)
+- Trust bar with same messaging
+- Schema markup structure
+- Cross-linking to other live location pages
+- CTA buttons and phone numbers
+
+**Encouraged variety:**
+- Section order and arrangement
+- Hero/intro layout (text-only, text+image, image-first, etc.)
+- Number of gallery images
+- Local imagery and neighborhood sections
+- FAQ questions tailored to each town
+- Process sections vs. feature grids
+- Testimonial display (cards, quotes, carousel)
+
+**Layout options to mix between pages:**
+1. **Hero with side image** - Two-column intro with image (e.g., Amesbury)
+2. **Welcome sign feature** - Local landmark image in service area section (e.g., Haverhill)
+3. **Coastal/waterfront focus** - Environmental imagery for beach towns (e.g., Newburyport, Salisbury)
+4. **Neighborhood grid** - Detailed area breakdowns for larger cities
+5. **Process timeline** - Step-by-step installation focus
+6. **Gallery-forward** - Lead with project photos
+
+**Why this matters:**
+- Avoids duplicate content penalties from Google
+- Creates authentic local relevance
+- Each page feels tailored to that community
+- Better user experience for visitors
+
+---
+
 ## Page Components
 
 ### Trust Bar (required on all location pages)
@@ -504,4 +544,5 @@ Managing Olympic Fence digital presence and local SEO
 ---
 
 *This brand kit is a living document. Update as the website evolves or new pages are created.*
+
 
