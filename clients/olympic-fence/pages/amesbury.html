@@ -348,8 +348,22 @@
   background: white;
 }
 
-.ofc-am-intro-section h2 {
+.ofc-am-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.ofc-am-intro-text h2 {
   text-align: left;
+  margin-bottom: 20px;
+}
+
+.ofc-am-hero-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
 .ofc-am-highlight-stat {
@@ -762,6 +776,15 @@
     padding: 40px 15px;
   }
   
+  .ofc-am-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .ofc-am-intro-text h2 {
+    text-align: center;
+  }
+  
   .ofc-am-services-grid {
     grid-template-columns: 1fr;
   }
@@ -820,13 +843,22 @@
   </div>
 </section>
 
-<!-- Intro Section -->
+<!-- Intro Section with Image -->
 <section class="ofc-am-intro-section">
   <div class="ofc-am-container">
-    <h2>Your Trusted Amesbury Fence Contractor</h2>
-    <p>When Amesbury homeowners from Lake Gardner to Alliance Park need professional fence installation, they choose Olympic Fence. For over 40 years, we've been the North Shore's most trusted fence company, known for quality craftsmanship and reliable communication.</p>
-    
-    <p>Whether you're securing your property near the Powow River Conservation Area, creating privacy in the Point Shore neighborhood, or need a custom solution for those challenging hillside properties near Powow Hill (the highest point in Amesbury at 332 feet!), our crew delivers exceptional fence installation results that last.</p>
+    <div class="ofc-am-intro-grid">
+      <div class="ofc-am-intro-text">
+        <h2>Your Trusted Amesbury Fence Contractor</h2>
+        <p>When Amesbury homeowners from Lake Gardner to Alliance Park need professional fence installation, they choose Olympic Fence. For over 40 years, we've been the North Shore's most trusted fence company, known for quality craftsmanship and reliable communication.</p>
+        
+        <p>Whether you're securing your property near the Powow River Conservation Area, creating privacy in the Point Shore neighborhood, or need a custom solution for those challenging hillside properties near Powow Hill (the highest point in Amesbury at 332 feet!), our crew delivers exceptional fence installation results that last.</p>
+        
+        <a href="https://olympicfencema.com/contact-us/" class="ofc-am-btn ofc-am-btn-primary" style="color: #fff !important; margin-top: 15px;">Get Your Free Amesbury Quote →</a>
+      </div>
+      <div class="ofc-am-intro-image">
+        <img src="https://olympicfencema.com/wp-content/uploads/2025/11/contractor-installing-wood-and-vinyl-fences-highlighting-labor-differences-4053f342-bb04-42ba-b436-657f79550c95.jpg" alt="Olympic Fence crew installing wood privacy fence in Amesbury MA" class="ofc-am-hero-img">
+      </div>
+    </div>
   </div>
 </section>
 
