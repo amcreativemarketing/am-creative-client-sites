@@ -10,6 +10,15 @@ Bradford Construction Management (BCM) is a design-build contractor serving Have
 
 ---
 
+## WordPress Integration
+
+See [shared/wordpress-patterns.md](../../../shared/wordpress-patterns.md) for common CSS patterns including:
+- Full-width override for theme containers
+- High specificity techniques for theme conflicts
+- Font loading fallbacks
+
+---
+
 ## Color Palette
 
 ### Primary Colors
@@ -171,4 +180,5 @@ Maintain clear space around the logo equal to the height of the "B" in Bradford.
 
 ---
 
-*Brand Kit v1.1 | November 2025*
+*Brand Kit v1.2 | December 2025*
+
