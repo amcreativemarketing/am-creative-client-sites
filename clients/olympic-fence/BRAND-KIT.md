@@ -164,7 +164,7 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 | Solution-oriented | Problem-focused negativity |
 | Emphasize our strengths positively | Put competitors down or imply others fail |
 
-**Note on Reliability Messaging:** Emphasize responsiveness and communication as Olympic strengths ("We Call You Back," "Response within minutes") without implying other companies ghost customers or fail to respond. Keep the focus on what Olympic does well, not what others do poorly.
+**Note on Reliability Messaging:** Emphasize responsiveness and communication as Olympic strengths ("We Call You Back," "Prompt responses") without implying other companies ghost customers or fail to respond. Keep the focus on what Olympic does well, not what others do poorly. Avoid specific time promises that may not always be achievable.
 
 ---
 
@@ -185,8 +185,8 @@ Exceeds all local competitors:
 - **Olympic Fence: LIFETIME**
 
 ### Response Time
-- Industry standard: 24-48 hours
-- Olympic Fence: Under 5 minutes for new inquiries
+- Emphasize prompt, reliable responses
+- Avoid specific time promises (e.g., "within minutes") that may not always be achievable
 
 ---
 
