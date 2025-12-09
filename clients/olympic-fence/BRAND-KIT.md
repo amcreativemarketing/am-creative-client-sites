@@ -394,6 +394,8 @@ Standard 4-card grid:
 
 ## Internal Linking Strategy
 
+**Rule: No placeholder links.** Only link to pages that exist and are live. Never use `#` or empty href attributes. If a location page doesn't exist yet, don't include it in the service areas grid.
+
 ### From Location Pages, Link To:
 
 1. **Service pages** (in service cards):
@@ -402,10 +404,11 @@ Standard 4-card grid:
    - Chain-Link → `/chain-link/`
    - Commercial → `/commercial-projects/`
 
-2. **Other location pages** (only if they exist):
+2. **Other location pages** (only link to verified live pages):
    - Newburyport → `/newburyport-fence-company/`
    - Haverhill → `/haverhill-fence-company/`
    - Amesbury → `/amesbury-fence-company/`
+   - North Andover → `/fence-installation-north-andover-ma/`
 
 3. **Contact page** (all CTAs):
    - `/contact-us/`
