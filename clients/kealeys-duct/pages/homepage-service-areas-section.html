@@ -1,27 +1,17 @@
 <!-- SERVICE AREAS SECTION - Add to bottom of homepage, before footer -->
 <!-- Kealey's Duct & Dryer Cleaning - Service Areas Section -->
+<!-- Matches existing site brand: Poppins font, teal buttons, Portal bullet icons -->
 
 <style>
-/* Service Areas Section Styles */
+/* Kealey's Service Areas Section - Brand Matched */
 .kealeys-service-areas {
-    background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    background-color: #f7f7f7;
     padding: 80px 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.kealeys-service-areas::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #0d4f6e 0%, #1a7fa8 50%, #0d4f6e 100%);
+    font-family: "Poppins", sans-serif;
 }
 
 .kealeys-service-areas-container {
-    max-width: 1200px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -31,15 +21,16 @@
 }
 
 .kealeys-service-areas-header h2 {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    color: #1a365d;
+    font-size: 32px;
+    font-weight: 600;
+    color: #232323;
     margin-bottom: 16px;
-    font-weight: 700;
+    line-height: 1.3;
 }
 
 .kealeys-service-areas-header p {
-    font-size: 1.125rem;
-    color: #4a5568;
+    font-size: 16px;
+    color: #6b6b6b;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.7;
@@ -48,135 +39,114 @@
 .kealeys-service-areas-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 30px;
+    margin-bottom: 50px;
 }
 
 @media (max-width: 768px) {
     .kealeys-service-areas-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+    }
+    
+    .kealeys-service-areas-header h2 {
+        font-size: 26px;
     }
 }
 
 .kealeys-state-card {
     background: #ffffff;
-    border-radius: 16px;
-    padding: 32px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e2e8f0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.kealeys-state-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .kealeys-state-header {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid #e2e8f0;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .kealeys-state-icon {
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(135deg, #0d4f6e 0%, #1a7fa8 100%);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 50px;
+    height: 50px;
     flex-shrink: 0;
 }
 
-.kealeys-state-icon svg {
-    width: 24px;
-    height: 24px;
-    fill: #ffffff;
+.kealeys-state-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .kealeys-state-name {
-    font-size: 1.375rem;
-    font-weight: 700;
-    color: #1a365d;
+    font-size: 22px;
+    font-weight: 600;
+    color: #232323;
     margin: 0;
-}
-
-.kealeys-towns-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-@media (max-width: 480px) {
-    .kealeys-towns-list {
-        grid-template-columns: 1fr;
-    }
-}
-
-.kealeys-towns-list li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 1rem;
-    color: #2d3748;
-}
-
-.kealeys-towns-list li::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background: #1a7fa8;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.kealeys-towns-list li a {
-    color: #2d3748;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.kealeys-towns-list li a:hover {
-    color: #1a7fa8;
 }
 
 .kealeys-county-label {
-    font-size: 0.875rem;
-    color: #718096;
+    font-size: 13px;
+    color: #6b6b6b;
     font-weight: 500;
-    margin-top: 20px;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
+.kealeys-towns-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 480px) {
+    .kealeys-towns-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.kealeys-town-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kealeys-town-item img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.kealeys-town-item a {
+    font-size: 15px;
+    color: #232323;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.kealeys-town-item a:hover {
+    color: #0891b2;
+}
+
 .kealeys-service-areas-cta {
     text-align: center;
-    margin-top: 50px;
     padding-top: 40px;
-    border-top: 1px solid #cbd5e0;
+    border-top: 1px solid #e5e5e5;
 }
 
 .kealeys-service-areas-cta p {
-    font-size: 1.125rem;
-    color: #4a5568;
-    margin-bottom: 20px;
-}
-
-.kealeys-service-areas-cta strong {
-    color: #1a365d;
+    font-size: 18px;
+    color: #232323;
+    margin-bottom: 25px;
 }
 
 .kealeys-cta-buttons {
     display: flex;
-    gap: 16px;
+    gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -184,42 +154,36 @@
 .kealeys-cta-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
     text-decoration: none;
     transition: all 0.3s ease;
+    min-width: 200px;
 }
 
 .kealeys-cta-btn-primary {
-    background: linear-gradient(135deg, #0d4f6e 0%, #1a7fa8 100%);
+    background-color: #0891b2;
     color: #ffffff;
-    box-shadow: 0 4px 14px rgba(13, 79, 110, 0.3);
 }
 
 .kealeys-cta-btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(13, 79, 110, 0.4);
+    background-color: #0e7490;
     color: #ffffff;
 }
 
 .kealeys-cta-btn-secondary {
-    background: #ffffff;
-    color: #0d4f6e;
-    border: 2px solid #0d4f6e;
+    background-color: #ffffff;
+    color: #0891b2;
+    border: 2px solid #0891b2;
 }
 
 .kealeys-cta-btn-secondary:hover {
-    background: #0d4f6e;
+    background-color: #0891b2;
     color: #ffffff;
-}
-
-.kealeys-cta-btn svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
 }
 </style>
 
@@ -227,7 +191,7 @@
     <div class="kealeys-service-areas-container">
         
         <div class="kealeys-service-areas-header">
-            <h2>Serving the North Shore and Seacoast Communities</h2>
+            <h2>Serving the North Shore & Seacoast Communities</h2>
             <p>Family-owned since 1993, we provide professional dryer vent and air duct cleaning throughout Massachusetts and New Hampshire. Same-day quotes, transparent pricing, and photo-verified results.</p>
         </div>
         
@@ -237,52 +201,108 @@
             <div class="kealeys-state-card">
                 <div class="kealeys-state-header">
                     <div class="kealeys-state-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/icons8-user-100.webp" alt="Massachusetts service areas">
                     </div>
                     <h3 class="kealeys-state-name">Massachusetts</h3>
                 </div>
                 
                 <div class="kealeys-county-label">Essex County</div>
-                <ul class="kealeys-towns-list">
-                    <li><a href="/salisbury-ma/">Salisbury</a></li>
-                    <li><a href="/amesbury-ma/">Amesbury</a></li>
-                    <li><a href="/newburyport-ma/">Newburyport</a></li>
-                    <li><a href="/essex-county-ma/">Newbury</a></li>
-                    <li><a href="/essex-county-ma/">West Newbury</a></li>
-                    <li><a href="/essex-county-ma/">Merrimac</a></li>
-                    <li><a href="/essex-county-ma/">Haverhill</a></li>
-                    <li><a href="/essex-county-ma/">Georgetown</a></li>
-                    <li><a href="/essex-county-ma/">Rowley</a></li>
-                    <li><a href="/essex-county-ma/">Ipswich</a></li>
-                </ul>
+                <div class="kealeys-towns-grid">
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/salisbury-ma/">Salisbury</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/amesbury-ma/">Amesbury</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/newburyport-ma/">Newburyport</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/essex-county-ma/">Newbury</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/essex-county-ma/">West Newbury</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/essex-county-ma/">Merrimac</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/essex-county-ma/">Haverhill</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/essex-county-ma/">Georgetown</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/essex-county-ma/">Rowley</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/essex-county-ma/">Ipswich</a>
+                    </div>
+                </div>
             </div>
             
             <!-- New Hampshire Card -->
             <div class="kealeys-state-card">
                 <div class="kealeys-state-header">
                     <div class="kealeys-state-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/icons8-user-100.webp" alt="New Hampshire service areas">
                     </div>
                     <h3 class="kealeys-state-name">New Hampshire</h3>
                 </div>
                 
                 <div class="kealeys-county-label">Rockingham County & Seacoast</div>
-                <ul class="kealeys-towns-list">
-                    <li><a href="/portsmouth-nh/">Portsmouth</a></li>
-                    <li><a href="/exeter-nh/">Exeter</a></li>
-                    <li><a href="/hampton-nh/">Hampton</a></li>
-                    <li><a href="/stratham-nh/">Stratham</a></li>
-                    <li><a href="/rockingham-county-nh/">Seabrook</a></li>
-                    <li><a href="/rockingham-county-nh/">Hampton Falls</a></li>
-                    <li><a href="/rockingham-county-nh/">Rye</a></li>
-                    <li><a href="/rockingham-county-nh/">North Hampton</a></li>
-                    <li><a href="/rockingham-county-nh/">Greenland</a></li>
-                    <li><a href="/rockingham-county-nh/">Newmarket</a></li>
-                </ul>
+                <div class="kealeys-towns-grid">
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/portsmouth-nh/">Portsmouth</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/exeter-nh/">Exeter</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/hampton-nh/">Hampton</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/stratham-nh/">Stratham</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/rockingham-county-nh/">Seabrook</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/rockingham-county-nh/">Hampton Falls</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/rockingham-county-nh/">Rye</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/rockingham-county-nh/">North Hampton</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/rockingham-county-nh/">Greenland</a>
+                    </div>
+                    <div class="kealeys-town-item">
+                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
+                        <a href="/rockingham-county-nh/">Newmarket</a>
+                    </div>
+                </div>
             </div>
             
         </div>
@@ -290,18 +310,8 @@
         <div class="kealeys-service-areas-cta">
             <p><strong>Don't see your town?</strong> We likely serve your area. Give us a call for a quick quote.</p>
             <div class="kealeys-cta-buttons">
-                <a href="/contact/" class="kealeys-cta-btn kealeys-cta-btn-primary">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                    Get a Free Quote
-                </a>
-                <a href="tel:+19789614513" class="kealeys-cta-btn kealeys-cta-btn-secondary">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
-                    (978) 961-4513
-                </a>
+                <a href="/contact/" class="kealeys-cta-btn kealeys-cta-btn-primary">Get a Free Quote</a>
+                <a href="tel:+19789614513" class="kealeys-cta-btn kealeys-cta-btn-secondary">(978) 961-4513</a>
             </div>
         </div>
         
