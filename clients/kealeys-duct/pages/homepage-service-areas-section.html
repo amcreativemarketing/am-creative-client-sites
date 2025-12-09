@@ -61,24 +61,9 @@
 }
 
 .kealeys-state-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
     margin-bottom: 25px;
     padding-bottom: 20px;
     border-bottom: 1px solid #e5e5e5;
-}
-
-.kealeys-state-icon {
-    width: 50px;
-    height: 50px;
-    flex-shrink: 0;
-}
-
-.kealeys-state-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
 .kealeys-state-name {
@@ -115,9 +100,11 @@
     gap: 10px;
 }
 
-.kealeys-town-item img {
-    width: 20px;
-    height: 20px;
+.kealeys-town-item::before {
+    content: '•';
+    color: #0891b2;
+    font-size: 18px;
+    line-height: 1;
     flex-shrink: 0;
 }
 
@@ -200,52 +187,39 @@
             <!-- Massachusetts Card -->
             <div class="kealeys-state-card">
                 <div class="kealeys-state-header">
-                    <div class="kealeys-state-icon">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/icons8-user-100.webp" alt="Massachusetts service areas">
-                    </div>
                     <h3 class="kealeys-state-name">Massachusetts</h3>
                 </div>
                 
                 <div class="kealeys-county-label">Essex County</div>
                 <div class="kealeys-towns-grid">
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
-                        <a href="/salisbury-ma/">Salisbury</a>
+                        <a href="https://bkductdryercleaning.com/salisbury-ma/">Salisbury</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
-                        <a href="/amesbury-ma/">Amesbury</a>
+                        <a href="https://bkductdryercleaning.com/amesbury-ma/">Amesbury</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
-                        <a href="/newburyport-ma/">Newburyport</a>
+                        <a href="https://bkductdryercleaning.com/newburyport-ma/">Newburyport</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/essex-county-ma/">Newbury</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/essex-county-ma/">West Newbury</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/essex-county-ma/">Merrimac</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/essex-county-ma/">Haverhill</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/essex-county-ma/">Georgetown</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/essex-county-ma/">Rowley</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/essex-county-ma/">Ipswich</a>
                     </div>
                 </div>
@@ -254,52 +228,39 @@
             <!-- New Hampshire Card -->
             <div class="kealeys-state-card">
                 <div class="kealeys-state-header">
-                    <div class="kealeys-state-icon">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/icons8-user-100.webp" alt="New Hampshire service areas">
-                    </div>
                     <h3 class="kealeys-state-name">New Hampshire</h3>
                 </div>
                 
                 <div class="kealeys-county-label">Rockingham County & Seacoast</div>
                 <div class="kealeys-towns-grid">
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
-                        <a href="/portsmouth-nh/">Portsmouth</a>
+                        <a href="https://bkductdryercleaning.com/portsmouth-nh/">Portsmouth</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
-                        <a href="/exeter-nh/">Exeter</a>
+                        <a href="https://bkductdryercleaning.com/exeter-nh/">Exeter</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
-                        <a href="/hampton-nh/">Hampton</a>
+                        <a href="https://bkductdryercleaning.com/hampton-nh/">Hampton</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
-                        <a href="/stratham-nh/">Stratham</a>
+                        <a href="https://bkductdryercleaning.com/stratham-nh/">Stratham</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/rockingham-county-nh/">Seabrook</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/rockingham-county-nh/">Hampton Falls</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/rockingham-county-nh/">Rye</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/rockingham-county-nh/">North Hampton</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/rockingham-county-nh/">Greenland</a>
                     </div>
                     <div class="kealeys-town-item">
-                        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/09/Portal.webp" alt="">
                         <a href="/rockingham-county-nh/">Newmarket</a>
                     </div>
                 </div>
