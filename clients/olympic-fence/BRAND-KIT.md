@@ -249,7 +249,8 @@ Examples:
 | Newburyport | `/newburyport-fence-company/` |
 | Haverhill | `/haverhill-fence-company/` |
 | Amesbury | `/amesbury-fence-company/` |
-| North Andover | `/fence-installation-north-andover-ma/` *(new format)* |
+| North Andover | `/fence-installation-north-andover-ma/` |
+| Salisbury | `/salisbury-fence-company/` |
 
 ### Service Pages
 
@@ -409,6 +410,7 @@ Standard 4-card grid:
    - Haverhill → `/haverhill-fence-company/`
    - Amesbury → `/amesbury-fence-company/`
    - North Andover → `/fence-installation-north-andover-ma/`
+   - Salisbury → `/salisbury-fence-company/`
 
 3. **Contact page** (all CTAs):
    - `/contact-us/`
