@@ -780,18 +780,25 @@
   margin: 0 2rem;
 }
 
+.bcm-cta h2,
 .bcm-cta__title {
   font-family: var(--font-heading);
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
-  color: var(--bcm-white);
+  color: #FFFFFF !important;
   margin-bottom: 1rem;
 }
 
+.bcm-cta p,
 .bcm-cta__text {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9) !important;
   margin-bottom: 2rem;
   font-size: 1.05rem;
+}
+
+.bcm-cta a,
+.bcm-cta .bcm-btn--outline {
+  color: #FFFFFF !important;
 }
 
 .bcm-cta__buttons {
@@ -1079,51 +1086,94 @@
         <button class="bcm-gallery-tab" data-gallery="kitchen">Kitchen</button>
         <button class="bcm-gallery-tab" data-gallery="dining">Dining</button>
         <button class="bcm-gallery-tab" data-gallery="stairs">Staircase</button>
+        <button class="bcm-gallery-tab" data-gallery="bath">Bath</button>
       </div>
       
       <div class="bcm-gallery-grid">
         <!-- Kitchen Gallery -->
         <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="kitchen">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-35-1.webp" alt="Wide view of completed kitchen with tin ceiling and open concept to dining room">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-33-1.webp" alt="Feature photo of kitchen with island and sink window centered">
         </div>
         <div class="bcm-gallery-item" data-category="kitchen">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-48-1.webp" alt="Kitchen island with sink and premium countertops">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-35-1.webp" alt="Wide view of kitchen with tin ceiling and open concept to dining">
         </div>
         <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="kitchen">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-10-1.webp" alt="Tin ceiling detail in renovated Beverly kitchen">
         </div>
         <div class="bcm-gallery-item" data-category="kitchen">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-43-1.webp" alt="Kitchen appliances including Viking cooktop and workspace">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-65-1.webp" alt="Looking down kitchen aisle at stove, sink, and island">
         </div>
         <div class="bcm-gallery-item" data-category="kitchen">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-5-1.webp" alt="Primary sink with premium fixtures">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-57-1.webp" alt="View over island to open layout dining room">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-56-1.webp" alt="View from dining looking at kitchen island">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-50-1.webp" alt="Lower view of kitchen island">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-48-1.webp" alt="Wide view of kitchen island with counters and sink">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-43-1.webp" alt="Kitchen workspace with Viking cooktop, fridge, and sinks">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-41-1.webp" alt="Close up of Calcutta Vermont quartz countertops">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-38-1.webp" alt="Kitchen aisle towards laundry room">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-31-1.jpg" alt="View from entry looking at kitchen and dining open concept">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-30-1.webp" alt="Ceiling detail where tin and wood plank ceilings meet">
+        </div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-29-1.webp" alt="Vertical view of tin ceiling and wood ceiling transition">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-5-1.webp" alt="Close up of primary sink with premium fixtures">
         </div>
         
         <!-- Dining Gallery -->
-        <div class="bcm-gallery-item" data-category="dining">
+        <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="dining">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-34-1.webp" alt="Dining room with reclaimed glass chandelier">
         </div>
         <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="dining">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-45-1.webp" alt="View from dining room into open kitchen">
         </div>
         <div class="bcm-gallery-item" data-category="dining">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-46-1.webp" alt="Reclaimed glass chandelier detail">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-46-1.webp" alt="Reclaimed glass chandelier close up">
         </div>
         
         <!-- Staircase Gallery -->
         <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="stairs">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-16-1.webp" alt="Full view of opened staircase with natural light from skylight">
         </div>
-        <div class="bcm-gallery-item" data-category="stairs">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-12-1.webp" alt="Staircase angle showing ceiling height and railings">
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="stairs">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-17-1.webp" alt="Primary view of staircase from right side">
         </div>
         <div class="bcm-gallery-item" data-category="stairs">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-14-1.webp" alt="Staircase windows and natural light">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-20-1.webp" alt="Looking up staircase with lower rail in foreground">
+        </div>
+        <div class="bcm-gallery-item" data-category="stairs">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-19-1.webp" alt="Wide angle looking up staircase">
+        </div>
+        <div class="bcm-gallery-item" data-category="stairs">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-14-1.webp" alt="Staircase windows at mid landing">
+        </div>
+        <div class="bcm-gallery-item" data-category="stairs">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-12-1.webp" alt="Wide view of stairs and open living room ceiling">
         </div>
         
-        <!-- Bathroom -->
+        <!-- Bathroom Gallery -->
         <div class="bcm-gallery-item" data-category="bath">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-51-1.webp" alt="Renovated bathroom with new glass shower">
+        </div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="bath">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-54-1.webp" alt="New hallway cabinets matching kitchen">
         </div>
       </div>
     </div>
