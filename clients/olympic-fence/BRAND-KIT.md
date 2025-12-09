@@ -162,6 +162,9 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 | Specific and factual | Vague or exaggerated claims |
 | Local and personal | Generic or corporate |
 | Solution-oriented | Problem-focused negativity |
+| Emphasize our strengths positively | Put competitors down or imply others fail |
+
+**Note on Reliability Messaging:** Emphasize responsiveness and communication as Olympic strengths ("We Call You Back," "Response within minutes") without implying other companies ghost customers or fail to respond. Keep the focus on what Olympic does well, not what others do poorly.
 
 ---
 
@@ -496,3 +499,4 @@ Managing Olympic Fence digital presence and local SEO
 ---
 
 *This brand kit is a living document. Update as the website evolves or new pages are created.*
+
