@@ -1,0 +1,1587 @@
+<!--
+  BCM Project Page: Exeter Custom Home Build
+  URL: /projects/exeter-custom-home-build/
+  
+  NOTE: This template has NO hero section - it sits below the WordPress page hero.
+  The site hero should have:
+  - H1: "From Empty Lot to Dream Home"
+  - H2: "Exeter, NH Custom Home Build | Designed for the Land"
+  
+  This template starts with a project info bar showing Featured Project badge + details.
+  
+  CTAs: "Start Your Project" → /contact/
+-->
+
+<style>
+/* ============================================
+   BCM PROJECT PAGE STYLES
+   Namespace: .bcm-project-*
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+
+:root {
+  /* BCM Brand Colors */
+  --bcm-navy: #030058;
+  --bcm-gold: #FFCD57;
+  --bcm-gold-hover: #E5B84E;
+  --bcm-dark-slate: #1E293B;
+  --bcm-medium-gray: #67768E;
+  --bcm-light-gray: #F2F5F7;
+  --bcm-off-white: #F9FAFB;
+  --bcm-white: #FFFFFF;
+  
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --section-padding: clamp(4rem, 8vw, 7rem);
+  --container-max: 1200px;
+  --container-narrow: 800px;
+}
+
+/* Reset for this component */
+.bcm-project-page * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bcm-project-page {
+  font-family: var(--font-body);
+  color: var(--bcm-dark-slate);
+  line-height: 1.6;
+  font-size: 16px;
+  background: var(--bcm-white);
+  overflow-x: hidden;
+  /* WordPress full-width override */
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+}
+
+.bcm-project-page img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   PROJECT INFO BAR (below site hero)
+   ============================================ */
+
+.bcm-project-info-bar {
+  background: var(--bcm-navy);
+  padding: 1rem 2rem;
+}
+
+.bcm-project-info-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.bcm-project-info-bar__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--bcm-white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bcm-project-info-bar__badge svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--bcm-gold);
+}
+
+.bcm-project-info-bar__details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bcm-project-info-bar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.bcm-project-info-bar__item svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+}
+
+.bcm-project-info-bar__divider {
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .bcm-project-info-bar__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .bcm-project-info-bar__details {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .bcm-project-info-bar__divider {
+    display: none;
+  }
+}
+
+/* ============================================
+   SECTION BASE STYLES
+   ============================================ */
+
+.bcm-project-section {
+  padding: var(--section-padding) 2rem;
+}
+
+.bcm-project-section--alt {
+  background: var(--bcm-off-white);
+}
+
+.bcm-project-section--navy {
+  background: var(--bcm-navy);
+  color: var(--bcm-white);
+}
+
+.bcm-project-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.bcm-project-container--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* ============================================
+   SECTION HEADERS
+   ============================================ */
+
+.bcm-project-section__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bcm-project-section__eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bcm-navy);
+  margin-bottom: 0.75rem;
+}
+
+.bcm-project-section--navy .bcm-project-section__eyebrow {
+  color: var(--bcm-gold);
+}
+
+.bcm-project-section__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-project-section--navy .bcm-project-section__title {
+  color: var(--bcm-white);
+}
+
+.bcm-project-section__subtitle {
+  font-size: 1.1rem;
+  color: var(--bcm-medium-gray);
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+/* ============================================
+   VIDEO WALKTHROUGH SECTION
+   ============================================ */
+
+.bcm-video-walkthrough {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.bcm-video-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  background: var(--bcm-dark-slate);
+}
+
+.bcm-video-wrapper--vertical {
+  aspect-ratio: 9/16;
+  max-height: 700px;
+}
+
+.bcm-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bcm-video-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--bcm-medium-gray);
+  margin-top: 1.25rem;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 500px) {
+  .bcm-video-walkthrough {
+    max-width: 100%;
+  }
+  
+  .bcm-video-wrapper--vertical {
+    max-height: 600px;
+  }
+}
+
+/* ============================================
+   THE STORY SECTION
+   ============================================ */
+
+.bcm-story-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .bcm-story-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.bcm-story-content p {
+  color: var(--bcm-medium-gray);
+  margin-bottom: 1.25rem;
+}
+
+.bcm-story-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.bcm-story-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.bcm-story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   THE VISION (DESIGN) SECTION
+   ============================================ */
+
+.bcm-vision-layout {
+  display: block;
+}
+
+.bcm-vision-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bcm-vision-story {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.bcm-vision-story p {
+  color: var(--bcm-medium-gray);
+  margin-bottom: 1.5rem;
+}
+
+.bcm-vision-text {
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 769px) {
+  .bcm-vision-text {
+    max-width: 65%;
+  }
+}
+
+.bcm-vision-text h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-vision-text p {
+  color: var(--bcm-medium-gray);
+  margin-bottom: 1rem;
+}
+
+.bcm-vision-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--bcm-white);
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  border: 1px solid var(--bcm-light-gray);
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bcm-vision-highlight__icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--bcm-navy);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bcm-vision-highlight__icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--bcm-gold);
+}
+
+.bcm-vision-highlight__text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.bcm-vision-highlight__text span {
+  font-size: 0.875rem;
+  color: var(--bcm-medium-gray);
+}
+
+/* ============================================
+   FEATURES GRID
+   ============================================ */
+
+.bcm-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+  .bcm-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .bcm-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bcm-feature {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: var(--bcm-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.bcm-feature__icon {
+  width: 50px;
+  height: 50px;
+  background: var(--bcm-navy);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.bcm-feature__icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--bcm-gold);
+  fill: none;
+}
+
+.bcm-feature__title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-feature__text {
+  font-size: 0.875rem;
+  color: var(--bcm-medium-gray);
+}
+
+/* ============================================
+   ROOM SHOWCASE SECTIONS
+   ============================================ */
+
+.bcm-room-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.bcm-room-layout--reverse {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+@media (max-width: 768px) {
+  .bcm-room-layout,
+  .bcm-room-layout--reverse {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bcm-room-main-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bcm-room-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 350px;
+}
+
+.bcm-room-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bcm-room-side-image {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.bcm-room-side-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 160px;
+}
+
+.bcm-room-description {
+  background: var(--bcm-white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--bcm-gold);
+}
+
+.bcm-room-description p {
+  color: var(--bcm-medium-gray);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   GALLERY SECTION
+   ============================================ */
+
+.bcm-gallery-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.bcm-gallery-tab {
+  padding: 0.6rem 1.25rem;
+  border: 2px solid var(--bcm-light-gray);
+  border-radius: 100px;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--bcm-medium-gray);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bcm-gallery-tab:hover {
+  border-color: var(--bcm-navy);
+  color: var(--bcm-navy);
+}
+
+.bcm-gallery-tab.active {
+  background: var(--bcm-navy);
+  border-color: var(--bcm-navy);
+  color: var(--bcm-white);
+}
+
+.bcm-gallery-grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bcm-gallery-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.bcm-gallery-grid::-webkit-scrollbar-track {
+  background: var(--bcm-light-gray);
+  border-radius: 4px;
+}
+
+.bcm-gallery-grid::-webkit-scrollbar-thumb {
+  background: var(--bcm-medium-gray);
+  border-radius: 4px;
+}
+
+.bcm-gallery-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--bcm-navy);
+}
+
+.bcm-gallery-item {
+  flex: 0 0 auto;
+  width: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.bcm-gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.bcm-gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.bcm-gallery-item--tall {
+  width: 280px;
+}
+
+.bcm-gallery-item--tall img {
+  height: 350px;
+}
+
+.bcm-gallery-item--wide {
+  width: 500px;
+}
+
+.bcm-gallery-item--wide img {
+  height: 280px;
+}
+
+/* ============================================
+   SIGNATURE DETAILS SECTION
+   ============================================ */
+
+.bcm-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .bcm-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.bcm-detail-card {
+  background: var(--bcm-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.bcm-detail-card:hover {
+  transform: translateY(-4px);
+}
+
+.bcm-detail-card__image {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.bcm-detail-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.bcm-detail-card:hover .bcm-detail-card__image img {
+  transform: scale(1.05);
+}
+
+.bcm-detail-card__content {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.bcm-detail-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-detail-card__text {
+  font-size: 0.9rem;
+  color: var(--bcm-medium-gray);
+  line-height: 1.5;
+}
+
+.bcm-detail-card__quote {
+  font-style: italic;
+  color: var(--bcm-navy);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--bcm-light-gray);
+  font-size: 0.875rem;
+}
+
+/* Subtle internal links */
+.bcm-project-page a.bcm-subtle-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--bcm-light-gray);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.bcm-project-page a.bcm-subtle-link:hover {
+  color: var(--bcm-navy);
+  border-bottom-color: var(--bcm-navy);
+}
+
+.bcm-vision-highlight a.bcm-subtle-link {
+  color: var(--bcm-navy);
+  border-bottom-color: rgba(3, 0, 88, 0.3);
+}
+
+.bcm-vision-highlight a.bcm-subtle-link:hover {
+  border-bottom-color: var(--bcm-navy);
+}
+
+/* ============================================
+   TESTIMONIAL SECTION
+   ============================================ */
+
+.bcm-testimonial {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bcm-testimonial__icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 2rem;
+  opacity: 0.3;
+}
+
+.bcm-testimonial__quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--bcm-white);
+  margin-bottom: 2rem;
+}
+
+.bcm-testimonial__secondary {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.bcm-testimonial__attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.bcm-testimonial__divider {
+  width: 40px;
+  height: 2px;
+  background: var(--bcm-gold);
+}
+
+.bcm-testimonial__name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.bcm-testimonial__detail {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* ============================================
+   PROJECT SPECS
+   ============================================ */
+
+.bcm-specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--bcm-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.bcm-spec {
+  text-align: center;
+  padding: 1rem;
+}
+
+.bcm-spec__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bcm-medium-gray);
+  margin-bottom: 0.5rem;
+}
+
+.bcm-spec__value {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--bcm-dark-slate);
+}
+
+/* ============================================
+   BHS SUPPORT CALLOUT
+   ============================================ */
+
+.bcm-bhs-callout {
+  background: linear-gradient(135deg, var(--bcm-off-white) 0%, #fff 100%);
+  border: 2px solid var(--bcm-gold);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .bcm-bhs-callout {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.bcm-bhs-callout__icon {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background: var(--bcm-navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bcm-bhs-callout__icon svg {
+  width: 35px;
+  height: 35px;
+  stroke: var(--bcm-gold);
+  fill: none;
+}
+
+.bcm-bhs-callout__content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 0.5rem;
+}
+
+.bcm-bhs-callout__content p {
+  color: var(--bcm-medium-gray);
+  margin: 0;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.bcm-cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--bcm-navy) 0%, #050080 100%);
+  border-radius: 16px;
+  margin: 0 2rem;
+}
+
+.bcm-cta h2,
+.bcm-cta__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: #FFFFFF !important;
+  margin-bottom: 1rem;
+}
+
+.bcm-cta p,
+.bcm-cta__text {
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.bcm-cta a,
+.bcm-cta .bcm-btn--outline {
+  color: #FFFFFF !important;
+}
+
+.bcm-cta__buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bcm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.bcm-btn--primary {
+  background: var(--bcm-gold);
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-btn--primary:hover {
+  background: var(--bcm-gold-hover);
+  transform: translateY(-2px);
+}
+
+.bcm-btn--outline {
+  background: transparent;
+  color: var(--bcm-white);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.bcm-btn--outline:hover {
+  border-color: var(--bcm-white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  .bcm-project-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .bcm-cta {
+    margin: 0 1rem;
+    padding: 3rem 1.5rem;
+  }
+  
+  .bcm-gallery-item {
+    width: 280px;
+  }
+  
+  .bcm-gallery-item--wide {
+    width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bcm-gallery-item {
+    width: 260px;
+  }
+  
+  .bcm-gallery-item--wide {
+    width: 300px;
+  }
+}
+</style>
+
+<div class="bcm-project-page">
+  
+  <!-- ============================================
+       PROJECT INFO BAR (sits below site hero)
+       ============================================ -->
+  <section class="bcm-project-info-bar">
+    <div class="bcm-project-container">
+      <div class="bcm-project-info-bar__inner">
+        <div class="bcm-project-info-bar__badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Featured Project
+        </div>
+        <div class="bcm-project-info-bar__details">
+          <span class="bcm-project-info-bar__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Exeter, NH
+          </span>
+          <span class="bcm-project-info-bar__divider"></span>
+          <span class="bcm-project-info-bar__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Custom Home Build
+          </span>
+          <span class="bcm-project-info-bar__divider"></span>
+          <span class="bcm-project-info-bar__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            New Construction
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       THE STORY SECTION
+       ============================================ -->
+  <section class="bcm-project-section">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">The Story</p>
+        <h2 class="bcm-project-section__title">From Empty Lot to Dream Home</h2>
+        <p class="bcm-project-section__subtitle">When a pre-fab design wouldn't work, we built something even better.</p>
+      </div>
+      
+      <div class="bcm-story-layout">
+        <div class="bcm-story-content">
+          <p>The homeowners came to us with a beautiful piece of property in Exeter and an internet-bought design from a pre-manufactured company. One problem: that design wouldn't fit the specific lot or meet New Hampshire building codes.</p>
+          <p>Instead of starting over from scratch, we worked with them to stay within their original budget while building something even better: a fully custom home designed specifically for their land, their lifestyle, and their vision.</p>
+          <p>The result? A wide-open concept home with farmland views that became the star of the show, an oversized kitchen island built for entertaining, and rooms that flow seamlessly from one to the next.</p>
+        </div>
+        <div class="bcm-story-image">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-31-1.webp" alt="Exterior view of custom home build in Exeter NH with farmland views">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VIDEO WALKTHROUGH SECTION
+       ============================================ -->
+  <section class="bcm-project-section">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">Watch the Walkthrough</p>
+        <h2 class="bcm-project-section__title">Rick Explains the Layout</h2>
+        <p class="bcm-project-section__subtitle">A quick tour of how the open concept design comes together.</p>
+      </div>
+      
+      <div class="bcm-video-walkthrough">
+        <div class="bcm-video-wrapper bcm-video-wrapper--vertical">
+          <video 
+            controls 
+            playsinline
+            preload="metadata"
+            poster="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-1-1.webp"
+          >
+            <source src="https://bradfordcm.com/wp-content/uploads/2025/12/Rick-on-camera-kitchen-explanation-.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="bcm-video-caption">Rick walks through the kitchen, dining, and living areas, explaining how the open concept design maximizes the farmland views.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       THE VISION (DESIGN) SECTION
+       ============================================ -->
+  <section class="bcm-project-section bcm-project-section--alt">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">The Vision</p>
+        <h2 class="bcm-project-section__title">Designed for How They Live</h2>
+        <p class="bcm-project-section__subtitle">Open concept living that puts the property's natural beauty front and center.</p>
+      </div>
+      
+      <div class="bcm-vision-content">
+        <div class="bcm-vision-story">
+          <p>The large farmland surrounding the property was always going to be the focal point. Every design decision centered on capturing those views through oversized windows in the living room while creating interior spaces that flow effortlessly from kitchen to dining to living areas.</p>
+          <p>A semi drop beam runs across the entire main living space, eliminating walls that would have broken up the open feel. The result is a home that feels expansive and connected, whether you're cooking at the island, hosting in the dining room, or relaxing by the windows.</p>
+          
+          <div class="bcm-vision-highlight">
+            <div class="bcm-vision-highlight__icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="bcm-vision-highlight__text">
+              <a href="https://bradfordcm.com/custom-homes/" class="bcm-subtle-link"><strong>Custom Home Advantage</strong></a>
+              <span>When pre-fab designs don't fit, custom means getting exactly what you want, built specifically for your lot and your lifestyle.</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bcm-features-grid">
+          <div class="bcm-feature">
+            <div class="bcm-feature__icon">
+              <svg viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <h3 class="bcm-feature__title">Open Concept</h3>
+            <p class="bcm-feature__text">Seamless flow between kitchen, dining, and living</p>
+          </div>
+          <div class="bcm-feature">
+            <div class="bcm-feature__icon">
+              <svg viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3 class="bcm-feature__title">Farmland Views</h3>
+            <p class="bcm-feature__text">Oversized windows framing the property</p>
+          </div>
+          <div class="bcm-feature">
+            <div class="bcm-feature__icon">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="bcm-feature__title">Entertainment Ready</h3>
+            <p class="bcm-feature__text">Oversized island for hosting and gathering</p>
+          </div>
+          <div class="bcm-feature">
+            <div class="bcm-feature__icon">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3 class="bcm-feature__title">Wet Bar</h3>
+            <p class="bcm-feature__text">Additional prep space with wine cooler</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       KITCHEN SHOWCASE
+       ============================================ -->
+  <section class="bcm-project-section">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">The Kitchen</p>
+        <h2 class="bcm-project-section__title">Built for Cooking & Entertaining</h2>
+      </div>
+      
+      <div class="bcm-room-layout">
+        <div class="bcm-room-main-image">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-1-1.webp" alt="Exeter kitchen with oversized island and pendant lighting">
+        </div>
+        <div class="bcm-room-side">
+          <div class="bcm-room-side-image">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-9-1.webp" alt="Kitchen island detail showing cabinet work and countertops">
+          </div>
+          <div class="bcm-room-description">
+            <p>The oversized island anchors the entire kitchen, with plenty of room for cooking, seating, and entertaining. A double oven and cooktop mean multiple dishes can be prepared at once, perfect for hosting family and friends.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bcm-room-layout bcm-room-layout--reverse">
+        <div class="bcm-room-side">
+          <div class="bcm-room-side-image">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-3-1.webp" alt="Close up of kitchen countertop detail">
+          </div>
+          <div class="bcm-room-side-image">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-4-1.webp" alt="White lower cabinet detail in Exeter kitchen">
+          </div>
+        </div>
+        <div class="bcm-room-main-image">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-5-1.webp" alt="Kitchen aisle view showing island and cabinet contrast">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       DINING & LIVING SHOWCASE
+       ============================================ -->
+  <section class="bcm-project-section bcm-project-section--alt">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">Dining & Living</p>
+        <h2 class="bcm-project-section__title">Where Entertaining Happens</h2>
+      </div>
+      
+      <div class="bcm-room-layout">
+        <div class="bcm-room-main-image">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-16-1.webp" alt="Open concept dining room and kitchen in Exeter custom home">
+        </div>
+        <div class="bcm-room-side">
+          <div class="bcm-room-side-image">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-10-1.webp" alt="Bar hutch with wine storage in dining area">
+          </div>
+          <div class="bcm-room-description">
+            <p>The wet bar was added during the project when the homeowners realized how much they'd be entertaining. With an additional sink, wine cooler, and storage, it creates a perfect secondary prep station that keeps the flow going during gatherings.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bcm-room-layout bcm-room-layout--reverse">
+        <div class="bcm-room-side">
+          <div class="bcm-room-side-image">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-15-1.webp" alt="View through windows to Exeter farmland">
+          </div>
+          <div class="bcm-room-description">
+            <p>The living room's oversized windows frame the property's farmland views, which will eventually include gardens and outdoor living spaces. No matter which room you're in, you're connected to the views and to each other.</p>
+          </div>
+        </div>
+        <div class="bcm-room-main-image">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-12-1.webp" alt="Living room with windows overlooking Exeter farmland">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FINISHED GALLERY
+       ============================================ -->
+  <section class="bcm-project-section">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">The Details</p>
+        <h2 class="bcm-project-section__title">Every Room, Every Finish</h2>
+      </div>
+      
+      <div class="bcm-gallery-tabs">
+        <button class="bcm-gallery-tab active" data-gallery="all">All Photos</button>
+        <button class="bcm-gallery-tab" data-gallery="kitchen">Kitchen</button>
+        <button class="bcm-gallery-tab" data-gallery="living">Living & Dining</button>
+        <button class="bcm-gallery-tab" data-gallery="bath">Bathrooms</button>
+        <button class="bcm-gallery-tab" data-gallery="exterior">Exterior</button>
+      </div>
+      
+      <div class="bcm-gallery-grid">
+        <!-- Kitchen Gallery -->
+        <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-1-1.webp" alt="Kitchen feature shot with island and pendant lighting">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-3-1.webp" alt="Close up of kitchen countertop">
+        </div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-6-1.webp" alt="Vertical closeup of island lower cabinets">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-5-1.webp" alt="Kitchen aisle with island and cabinet detail">
+        </div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-7-1.webp" alt="Vertical feature shot of cabinets">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-8-1.webp" alt="Cabinet and stove detail angle">
+        </div>
+        <div class="bcm-gallery-item" data-category="kitchen">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-4-1.webp" alt="White lower cabinet detail">
+        </div>
+        
+        <!-- Living & Dining Gallery -->
+        <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="living">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-16-1.webp" alt="Open concept dining room and kitchen">
+        </div>
+        <div class="bcm-gallery-item" data-category="living">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-11-1.webp" alt="Dining room area">
+        </div>
+        <div class="bcm-gallery-item" data-category="living">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-10-1.webp" alt="Bar hutch with wine storage">
+        </div>
+        <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="living">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-17-1.webp" alt="Open concept living space">
+        </div>
+        <div class="bcm-gallery-item" data-category="living">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-12-1.webp" alt="Living room looking towards windows">
+        </div>
+        <div class="bcm-gallery-item" data-category="living">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-13-1.webp" alt="Living room seating area">
+        </div>
+        <div class="bcm-gallery-item" data-category="living">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-14-1.webp" alt="Living room entertainment area">
+        </div>
+        <div class="bcm-gallery-item" data-category="living">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-15-1.webp" alt="View through windows to farmland">
+        </div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="living">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-22-1.webp" alt="Stair railings and light fixture detail">
+        </div>
+        
+        <!-- Bathroom Gallery -->
+        <div class="bcm-gallery-item" data-category="bath">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-18-1.webp" alt="Hallway bathroom overview">
+        </div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="bath">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-19-1.webp" alt="Bathroom wallpaper and sink detail">
+        </div>
+        <div class="bcm-gallery-item" data-category="bath">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-20-1.webp" alt="Hallway bathroom detail">
+        </div>
+        <div class="bcm-gallery-item" data-category="bath">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-21-1.webp" alt="Low angle of vanity in hallway bath">
+        </div>
+        <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="bath">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-24-1.webp" alt="Upstairs bathroom overview">
+        </div>
+        <div class="bcm-gallery-item" data-category="bath">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-25-1.webp" alt="Upstairs bathroom sink area">
+        </div>
+        <div class="bcm-gallery-item" data-category="bath">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-26-1.webp" alt="Upstairs bathroom detail">
+        </div>
+        
+        <!-- Exterior Gallery -->
+        <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="exterior">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-31-1.webp" alt="Exterior whole home view Exeter custom build">
+        </div>
+        <div class="bcm-gallery-item" data-category="exterior">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-28-1.webp" alt="Looking at house from deck">
+        </div>
+        <div class="bcm-gallery-item" data-category="exterior">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-27-1.webp" alt="View off porch to property">
+        </div>
+        <div class="bcm-gallery-item" data-category="exterior">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-30-1.webp" alt="Porch view of Exeter farmland">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SIGNATURE DETAILS
+       ============================================ -->
+  <section class="bcm-project-section bcm-project-section--alt">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">Craftsmanship</p>
+        <h2 class="bcm-project-section__title">Signature Details</h2>
+        <p class="bcm-project-section__subtitle">Thoughtful design choices that make this home truly special.</p>
+      </div>
+      
+      <div class="bcm-details-grid">
+        <div class="bcm-detail-card">
+          <div class="bcm-detail-card__image">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-9-1.webp" alt="Oversized kitchen island for entertaining">
+          </div>
+          <div class="bcm-detail-card__content">
+            <h3 class="bcm-detail-card__title">Oversized Island</h3>
+            <p class="bcm-detail-card__text">Designed for serious entertaining with ample seating, prep space, and storage. Large enough that multiple people can cook and gather without getting in each other's way.</p>
+          </div>
+        </div>
+        
+        <div class="bcm-detail-card">
+          <div class="bcm-detail-card__image">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-10-1.webp" alt="Wet bar with wine cooler">
+          </div>
+          <div class="bcm-detail-card__content">
+            <h3 class="bcm-detail-card__title">Wet Bar Station</h3>
+            <p class="bcm-detail-card__text">Added during the project when the vision expanded. Features an additional sink, wine cooler, and storage that keeps the entertaining flowing without crowding the main kitchen.</p>
+          </div>
+        </div>
+        
+        <div class="bcm-detail-card">
+          <div class="bcm-detail-card__image">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-19-1.webp" alt="Statement wallpaper in bathroom">
+          </div>
+          <div class="bcm-detail-card__content">
+            <h3 class="bcm-detail-card__title">Statement Wallpaper</h3>
+            <p class="bcm-detail-card__text">The hallway bathroom features bold wallpaper that adds personality and character to a space often overlooked, proof that every room deserves attention.</p>
+          </div>
+        </div>
+        
+        <div class="bcm-detail-card">
+          <div class="bcm-detail-card__image">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-22-1.webp" alt="Staircase detail with light fixture">
+          </div>
+          <div class="bcm-detail-card__content">
+            <h3 class="bcm-detail-card__title">Staircase Details</h3>
+            <p class="bcm-detail-card__text">Custom railings and thoughtful lighting transform a functional space into an architectural feature, connecting the floors with style.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIAL SECTION
+       ============================================ -->
+  <section class="bcm-project-section bcm-project-section--navy">
+    <div class="bcm-project-container bcm-project-container--narrow">
+      <div class="bcm-testimonial">
+        <svg class="bcm-testimonial__icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+        </svg>
+        <blockquote class="bcm-testimonial__quote">
+          "We were able to work with them, stay within the budget they had, and build them basically the home of their dreams."
+        </blockquote>
+        <p class="bcm-testimonial__secondary">
+          "They have been nothing but awesome clients ever since and super happy and enjoying their home."
+        </p>
+        <div class="bcm-testimonial__attribution">
+          <span class="bcm-testimonial__divider"></span>
+          <div>
+            <p class="bcm-testimonial__name">Rick White</p>
+            <p class="bcm-testimonial__detail">Owner, Bradford Construction Management</p>
+          </div>
+          <span class="bcm-testimonial__divider"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BHS SUPPORT CALLOUT
+       ============================================ -->
+  <section class="bcm-project-section">
+    <div class="bcm-project-container">
+      <div class="bcm-bhs-callout">
+        <div class="bcm-bhs-callout__icon">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+        </div>
+        <div class="bcm-bhs-callout__content">
+          <h3>The Only Builder Who Never Leaves</h3>
+          <p>Like every new build, we're back every six months to go through the walls, trim, and floors, checking for any imperfections, gaps, or settling issues. We fill them, paint them, touch them up, and keep this home in tip-top shape through our Bradford Home Services partnership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROJECT SPECS
+       ============================================ -->
+  <section class="bcm-project-section bcm-project-section--alt">
+    <div class="bcm-project-container bcm-project-container--narrow">
+      <div class="bcm-specs">
+        <div class="bcm-spec">
+          <p class="bcm-spec__label">Location</p>
+          <p class="bcm-spec__value">Exeter, NH</p>
+        </div>
+        <div class="bcm-spec">
+          <p class="bcm-spec__label">Project Type</p>
+          <p class="bcm-spec__value"><a href="https://bradfordcm.com/custom-homes/" class="bcm-subtle-link">Custom Home Build</a></p>
+        </div>
+        <div class="bcm-spec">
+          <p class="bcm-spec__label">Scope</p>
+          <p class="bcm-spec__value">New Construction</p>
+        </div>
+        <div class="bcm-spec">
+          <p class="bcm-spec__label">Design</p>
+          <p class="bcm-spec__value">In-House by BCM</p>
+        </div>
+        <div class="bcm-spec">
+          <p class="bcm-spec__label">Key Features</p>
+          <p class="bcm-spec__value">Open Concept, Farmland Views, Wet Bar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA SECTION
+       ============================================ -->
+  <section class="bcm-project-section">
+    <div class="bcm-project-container bcm-project-container--narrow">
+      <div class="bcm-cta">
+        <h2 class="bcm-cta__title">Ready to Build Your Dream Home?</h2>
+        <p class="bcm-cta__text">Free consultation • Custom design • No high-pressure sales</p>
+        <div class="bcm-cta__buttons">
+          <a href="https://bradfordcm.com/contact/" class="bcm-btn bcm-btn--primary">
+            Start Your Project
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="https://bradfordcm.com/projects/" class="bcm-btn bcm-btn--outline">
+            See More Projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============================================
+     GALLERY TAB FUNCTIONALITY
+     ============================================ -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.bcm-gallery-tab');
+  const items = document.querySelectorAll('.bcm-gallery-item');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      const filter = this.dataset.gallery;
+      
+      // Update active tab
+      tabs.forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Filter gallery items
+      items.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+
+<!-- ============================================
+     SCHEMA MARKUP
+     ============================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Custom Home Construction",
+  "name": "Custom Home Build - Exeter, NH",
+  "description": "Complete custom home build in Exeter, NH featuring open concept living, oversized kitchen island, wet bar, and farmland views. Designed and built entirely in-house by Bradford Construction Management.",
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Bradford Construction Management",
+    "telephone": "978-945-9771",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "145 South Main Street",
+      "addressLocality": "Haverhill",
+      "addressRegion": "MA",
+      "postalCode": "01835"
+    },
+    "url": "https://bradfordcm.com",
+    "areaServed": ["Exeter", "New Hampshire", "North Shore Massachusetts", "Merrimack Valley"]
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Exeter",
+    "containedInPlace": {
+      "@type": "State",
+      "name": "New Hampshire"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Bradford Construction Management",
+  "image": "https://bradfordcm.com/wp-content/uploads/2025/08/asdas-1.png",
+  "telephone": "978-945-9771",
+  "email": "info@bradfordcm.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "145 South Main Street",
+    "addressLocality": "Haverhill",
+    "addressRegion": "MA",
+    "postalCode": "01835",
+    "addressCountry": "US"
+  },
+  "url": "https://bradfordcm.com",
+  "priceRange": "$$$"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Exeter Custom Home Build Project Gallery",
+  "description": "Photos of a custom home build in Exeter, NH including kitchen, dining, living room, bathrooms, and exterior views.",
+  "numberOfItems": 30,
+  "about": {
+    "@type": "Thing",
+    "name": "Custom Home Construction"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Exeter Custom Home Walkthrough - Kitchen & Living Areas",
+  "description": "Rick White walks through the kitchen, dining, and living areas of a custom home build in Exeter, NH, explaining the open concept design and how it maximizes the farmland views.",
+  "thumbnailUrl": "https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-1-1.webp",
+  "contentUrl": "https://bradfordcm.com/wp-content/uploads/2025/12/Rick-on-camera-kitchen-explanation-.webm",
+  "uploadDate": "2025-12-11",
+  "duration": "PT1M",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bradford Construction Management",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bradfordcm.com/wp-content/uploads/2025/08/asdas-1.png"
+    }
+  }
+}
+</script>
