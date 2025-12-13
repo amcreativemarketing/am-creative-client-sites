@@ -1,0 +1,1402 @@
+<!-- Olympic Fence - Residential Fencing Page Content -->
+<!-- This content goes BELOW the H1/H2 hero header and ABOVE the footer -->
+
+<style>
+  :root {
+    --navy: #0d2942;
+    --teal: #2d8a7b;
+    --blue: #357abd;
+    --light-bg: #f8fafb;
+    --border-light: #e2e8f0;
+    --text-dark: #1a202c;
+    --text-muted: #64748b;
+    --white: #ffffff;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .of-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .of-section-alt {
+    background-color: var(--light-bg);
+  }
+
+  .of-section-navy {
+    background-color: var(--navy);
+    color: var(--white);
+  }
+
+  .of-section-full {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .of-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .of-section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .of-section-header h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .of-section-navy .of-section-header h2 {
+    color: var(--white);
+  }
+
+  .of-section-header p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .of-section-navy .of-section-header p {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  /* Trust Bar */
+  .of-trust-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 32px 20px;
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
+  }
+
+  .of-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--white);
+  }
+
+  .of-trust-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .of-trust-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--teal);
+  }
+
+  .of-trust-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Intro Section */
+  .of-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .of-intro-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  .of-intro-content p {
+    font-size: 1.0625rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .of-intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Services Grid */
+  .of-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .of-service-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .of-service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .of-service-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+  }
+
+  .of-service-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--white);
+  }
+
+  .of-service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+    flex-shrink: 0;
+  }
+
+  .of-service-card p {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+
+  .of-service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--teal);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+    margin-top: auto;
+    flex-shrink: 0;
+  }
+
+  .of-service-link:hover {
+    gap: 12px;
+  }
+
+  .of-service-link svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  /* Before/After Gallery */
+  .of-ba-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+
+  .of-ba-item {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  .of-ba-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .of-ba-image {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .of-ba-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .of-ba-item:hover .of-ba-image img {
+    transform: scale(1.05);
+  }
+
+  .of-ba-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+  }
+
+  .of-ba-label-before {
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+  }
+
+  .of-ba-label-after {
+    background: var(--teal);
+    color: var(--white);
+  }
+
+  .of-ba-content {
+    padding: 24px;
+  }
+
+  .of-ba-content h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .of-ba-content p {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Comparison Table */
+  .of-comparison-wrapper {
+    overflow-x: auto;
+  }
+
+  .of-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .of-comparison-table th,
+  .of-comparison-table td {
+    padding: 20px 24px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .of-comparison-table th {
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.9375rem;
+  }
+
+  .of-comparison-table th:first-child {
+    border-radius: 12px 0 0 0;
+  }
+
+  .of-comparison-table th:last-child {
+    border-radius: 0 12px 0 0;
+  }
+
+  .of-comparison-table td {
+    font-size: 0.9375rem;
+    color: var(--text-dark);
+  }
+
+  .of-comparison-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .of-comparison-table tr:hover td {
+    background: var(--light-bg);
+  }
+
+  .of-highlight {
+    color: var(--teal);
+    font-weight: 600;
+  }
+
+  /* Process Steps */
+  .of-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .of-process-step {
+    text-align: center;
+    padding: 32px 20px;
+    background: var(--white);
+    border-radius: 12px;
+    position: relative;
+  }
+
+  .of-process-number {
+    width: 48px;
+    height: 48px;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+  }
+
+  .of-process-step h4 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .of-process-step p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Testimonials */
+  .of-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .of-testimonial-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid var(--teal);
+  }
+
+  .of-testimonial-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  .of-testimonial-stars svg {
+    width: 20px;
+    height: 20px;
+    fill: #fbbf24;
+  }
+
+  .of-testimonial-text {
+    font-size: 1rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .of-testimonial-author {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .of-testimonial-source {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* Service Area Map */
+  .of-map-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .of-map-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+
+  .of-map-content p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .of-location-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .of-location-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    background: var(--light-bg);
+    border-radius: 8px;
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .of-location-link:hover {
+    background: var(--teal);
+    color: var(--white);
+    transform: translateX(4px);
+  }
+
+  .of-location-link svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+
+  .of-map-embed {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .of-map-embed iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+  }
+
+  /* FAQ Section */
+  .of-faq-grid {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .of-faq-item {
+    background: var(--white);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+  }
+
+  .of-faq-question {
+    width: 100%;
+    padding: 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+  }
+
+  .of-faq-question:hover {
+    background: var(--light-bg);
+  }
+
+  .of-faq-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .of-faq-item.active .of-faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .of-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .of-faq-item.active .of-faq-answer {
+    max-height: 500px;
+  }
+
+  .of-faq-answer-content {
+    padding: 0 24px 24px;
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* CTA Section */
+  .of-cta {
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .of-cta h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .of-cta p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .of-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .of-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  .of-btn-primary {
+    background: var(--teal);
+    color: var(--white);
+  }
+
+  .of-btn-primary:hover {
+    background: #248a76;
+    transform: translateY(-2px);
+  }
+
+  .of-btn-secondary {
+    background: var(--white);
+    color: var(--navy);
+  }
+
+  .of-btn-secondary:hover {
+    background: var(--light-bg);
+    transform: translateY(-2px);
+  }
+
+  .of-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  /* Contact Form */
+  .of-form-wrapper {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .of-form-wrapper h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .of-form-wrapper p {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  /* Internal Links Section */
+  .of-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .of-link-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-light);
+  }
+
+  .of-link-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--teal);
+  }
+
+  .of-link-card h4 {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .of-link-card p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .of-intro,
+    .of-map-section {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .of-intro-image {
+      order: -1;
+    }
+
+    .of-services-grid,
+    .of-testimonials-grid,
+    .of-links-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .of-process-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .of-ba-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .of-section {
+      padding: 48px 16px;
+    }
+
+    .of-section-header h2 {
+      font-size: 1.75rem;
+    }
+
+    .of-trust-bar {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .of-services-grid,
+    .of-testimonials-grid,
+    .of-process-grid,
+    .of-links-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .of-location-links {
+      grid-template-columns: 1fr;
+    }
+
+    .of-cta h2 {
+      font-size: 1.75rem;
+    }
+
+    .of-cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .of-btn {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .of-form-wrapper {
+      padding: 24px;
+    }
+
+    .of-ba-images {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<!-- Trust Bar -->
+<div class="of-trust-bar">
+  <div class="of-trust-item">
+    <div class="of-trust-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+    </div>
+    <span class="of-trust-text">Lifetime Workmanship Warranty</span>
+  </div>
+  <div class="of-trust-item">
+    <div class="of-trust-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+    </div>
+    <span class="of-trust-text">Licensed & Fully Insured</span>
+  </div>
+  <div class="of-trust-item">
+    <div class="of-trust-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+    </div>
+    <span class="of-trust-text">40+ Years Family Experience</span>
+  </div>
+  <div class="of-trust-item">
+    <div class="of-trust-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    </div>
+    <span class="of-trust-text">Fast Response Guaranteed</span>
+  </div>
+</div>
+
+<!-- Introduction Section -->
+<section class="of-section">
+  <div class="of-intro">
+    <div class="of-intro-content">
+      <h2>Professional Residential Fence Installation for North Shore Homeowners</h2>
+      <p>For over 40 years, Olympic Fence has helped Massachusetts homeowners transform their properties with beautiful, durable fencing. Whether you need privacy from neighbors, a safe space for kids and pets, or simply want to boost your curb appeal, we have the expertise to deliver exactly what you need.</p>
+      <p>As a second-generation family business based in West Newbury, we understand what works in New England weather. Our proprietary wood-on-steel installation system outlasts traditional methods, and every fence we build is backed by our lifetime workmanship warranty.</p>
+      <a href="https://olympicfencema.com/contact-us/" class="of-btn of-btn-primary" style="margin-top: 16px;">
+        Get Your Free Estimate
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </a>
+    </div>
+    <div class="of-intro-image">
+      <img src="https://olympicfencema.com/wp-content/uploads/2025/11/contractor-installing-wood-and-vinyl-fences-highlighting-labor-differences-4053f342-bb04-42ba-b436-657f79550c95.webp" alt="Olympic Fence contractor installing residential wood and vinyl fencing in Massachusetts" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- Residential Fencing Services -->
+<section class="of-section of-section-alt">
+  <div class="of-section-header">
+    <h2>Residential Fencing Solutions for Every Need</h2>
+    <p>From classic cedar privacy fences to low-maintenance vinyl and durable chain-link, we install fencing that fits your lifestyle and budget.</p>
+  </div>
+  <div class="of-services-grid">
+    <div class="of-service-card">
+      <div class="of-service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6zM18 20H6V10h12v10z"/></svg>
+      </div>
+      <h3>Privacy Fencing</h3>
+      <p>Block out neighbors, street noise, and prying eyes with our custom privacy fence installations. Available in cedar, vinyl, and our exclusive wood-on-steel system.</p>
+      <a href="https://olympicfencema.com/privacy-fencing/" class="of-service-link">
+        Explore Privacy Options
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </a>
+    </div>
+    <div class="of-service-card">
+      <div class="of-service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+      </div>
+      <h3>Cedar Wood Fencing</h3>
+      <p>The classic New England choice. Our Western Red Cedar fences offer natural beauty, durability, and 15-30+ year lifespans with proper care.</p>
+      <a href="https://olympicfencema.com/residential-cedar-fence-newburyport/" class="of-service-link">
+        View Cedar Options
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </a>
+    </div>
+    <div class="of-service-card">
+      <div class="of-service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/></svg>
+      </div>
+      <h3>Vinyl Fencing</h3>
+      <p>Zero maintenance, 35+ year lifespan, and won't rot, warp, or fade. Perfect for busy families who want lasting beauty without the upkeep.</p>
+      <a href="https://olympicfencema.com/vinyl/" class="of-service-link">
+        Explore Vinyl Styles
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </a>
+    </div>
+    <div class="of-service-card">
+      <div class="of-service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
+      </div>
+      <h3>Chain-Link Fencing</h3>
+      <p>Affordable, durable security fencing ideal for pet enclosures, pool areas, and property boundaries. 25+ year lifespan with minimal maintenance.</p>
+      <a href="https://olympicfencema.com/chain-link/" class="of-service-link">
+        View Chain-Link Options
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </a>
+    </div>
+    <div class="of-service-card">
+      <div class="of-service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
+      </div>
+      <h3>Fence Repairs</h3>
+      <p>Storm damage? Aging fence sections? We repair fences we didn't originally install. Fast response and quality workmanship on every repair job.</p>
+      <a href="https://olympicfencema.com/fence-repairs/" class="of-service-link">
+        Request Repair Service
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </a>
+    </div>
+    <div class="of-service-card">
+      <div class="of-service-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <h3>All Fencing Products</h3>
+      <p>Browse our complete selection of fencing materials, styles, and custom options. We help you find the perfect match for your property and budget.</p>
+      <a href="https://olympicfencema.com/products/" class="of-service-link">
+        View All Products
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Before/After Gallery -->
+<section class="of-section">
+  <div class="of-section-header">
+    <h2>See the Difference a New Fence Makes</h2>
+    <p>Professional fence installation transforms your property, adding privacy, security, and curb appeal.</p>
+  </div>
+  <div class="of-ba-grid">
+    <div class="of-ba-item">
+      <div class="of-ba-images">
+        <div class="of-ba-image">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/BEFORE-FENCING.jpg" alt="Residential property before Olympic Fence wood fencing installation" loading="lazy">
+          <span class="of-ba-label of-ba-label-before">Before</span>
+        </div>
+        <div class="of-ba-image">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/AFTER-FENCING.jpg" alt="Beautiful new wood fence installation by Olympic Fence" loading="lazy">
+          <span class="of-ba-label of-ba-label-after">After</span>
+        </div>
+      </div>
+      <div class="of-ba-content">
+        <h4>Wood Fence Installation</h4>
+        <p>A complete property transformation with custom cedar fencing. Our wood-on-steel system ensures this fence will stand strong for decades.</p>
+      </div>
+    </div>
+    <div class="of-ba-item">
+      <div class="of-ba-images">
+        <div class="of-ba-image">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/BEFORE-AGING-CHAIN-LINK-FENCE.jpg" alt="Aging chain link fence before replacement by Olympic Fence" loading="lazy">
+          <span class="of-ba-label of-ba-label-before">Before</span>
+        </div>
+        <div class="of-ba-image">
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/12/AFTER-NEW-WOOD-PRIVACY-FENCE.jpg" alt="New wood privacy fence installed by Olympic Fence Company" loading="lazy">
+          <span class="of-ba-label of-ba-label-after">After</span>
+        </div>
+      </div>
+      <div class="of-ba-content">
+        <h4>Chain-Link to Privacy Fence Upgrade</h4>
+        <p>Replaced an aging chain-link fence with a beautiful new wood privacy fence. Instant transformation that adds value and curb appeal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Table -->
+<section class="of-section of-section-alt">
+  <div class="of-section-header">
+    <h2>Why North Shore Homeowners Choose Olympic Fence</h2>
+    <p>Not all fence contractors are created equal. Here's how we compare to industry standards.</p>
+  </div>
+  <div class="of-comparison-wrapper">
+    <table class="of-comparison-table">
+      <thead>
+        <tr>
+          <th>What to Look For</th>
+          <th>Industry Standard</th>
+          <th>Olympic Fence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>New Inquiry Response Time</td>
+          <td>24-48 hours typical</td>
+          <td><span class="of-highlight">Same day</span></td>
+        </tr>
+        <tr>
+          <td>Workmanship Warranty</td>
+          <td>1-2 years common</td>
+          <td><span class="of-highlight">Lifetime warranty</span></td>
+        </tr>
+        <tr>
+          <td>Local Experience</td>
+          <td>Varies widely</td>
+          <td><span class="of-highlight">40+ years (since 1985)</span></td>
+        </tr>
+        <tr>
+          <td>License & Insurance</td>
+          <td>Ask for proof</td>
+          <td><span class="of-highlight">Licensed, insured, verifiable</span></td>
+        </tr>
+        <tr>
+          <td>Permit Handling</td>
+          <td>Homeowner responsibility</td>
+          <td><span class="of-highlight">We handle all permits</span></td>
+        </tr>
+        <tr>
+          <td>Project Timeline</td>
+          <td>Often unclear upfront</td>
+          <td><span class="of-highlight">Clear timeline in estimate</span></td>
+        </tr>
+        <tr>
+          <td>Post-Installation Support</td>
+          <td>Limited or slow response</td>
+          <td><span class="of-highlight">Prompt repair service</span></td>
+        </tr>
+        <tr>
+          <td>Pricing Transparency</td>
+          <td>Quote required for all details</td>
+          <td><span class="of-highlight">Detailed breakdown provided</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Process Steps -->
+<section class="of-section">
+  <div class="of-section-header">
+    <h2>Our Simple 4-Step Process</h2>
+    <p>From first call to finished fence, we make the entire experience smooth and stress-free.</p>
+  </div>
+  <div class="of-process-grid">
+    <div class="of-process-step">
+      <div class="of-process-number">1</div>
+      <h4>Free On-Site Consultation</h4>
+      <p>We visit your property, discuss your needs, take measurements, and explain your options. No pressure, just honest advice.</p>
+    </div>
+    <div class="of-process-step">
+      <div class="of-process-number">2</div>
+      <h4>Clear Written Estimate</h4>
+      <p>You receive a detailed quote showing exactly what's included. We offer options to fit different budgets without sacrificing quality.</p>
+    </div>
+    <div class="of-process-step">
+      <div class="of-process-number">3</div>
+      <h4>Scheduling & Permits</h4>
+      <p>We handle any necessary permits and schedule your installation. Current lead time: 3-4 weeks for most projects.</p>
+    </div>
+    <div class="of-process-step">
+      <div class="of-process-number">4</div>
+      <h4>Professional Installation</h4>
+      <p>Our experienced crew builds your fence efficiently, respects your property, and leaves your yard cleaner than we found it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="of-section of-section-alt">
+  <div class="of-section-header">
+    <h2>What Our Customers Say</h2>
+    <p>Don't just take our word for it. Here's what North Shore homeowners have to say about working with Olympic Fence.</p>
+  </div>
+  <div class="of-testimonials-grid">
+    <div class="of-testimonial-card">
+      <div class="of-testimonial-stars">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      </div>
+      <p class="of-testimonial-text">"We had a wonderful experience with Olympic Fence Company. James and his crew were professional, efficient and did outstanding work. Highly recommend to anyone in the area!"</p>
+      <p class="of-testimonial-author">Kelsey L.</p>
+      <p class="of-testimonial-source">Google Review</p>
+    </div>
+    <div class="of-testimonial-card">
+      <div class="of-testimonial-stars">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      </div>
+      <p class="of-testimonial-text">"I had a fence put in by another company quite a few years ago, but it has needed ongoing maintenance for several years. James and his company have been fantastic! Even though they didn't put in the original fence, they have responded promptly and effectively whenever I have called in need of repair. Very nice to deal with also."</p>
+      <p class="of-testimonial-author">Mel N.</p>
+      <p class="of-testimonial-source">Google Review</p>
+    </div>
+    <div class="of-testimonial-card">
+      <div class="of-testimonial-stars">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      </div>
+      <p class="of-testimonial-text">"Highly recommend Olympic Fence Co!! Had a chain link fence installed at my child care center and I couldn't be happier. From start to finish I was pleased with everything. Will definitely be calling Olympic Fence for my next project!! Thank you again!!"</p>
+      <p class="of-testimonial-author">Colleen M.</p>
+      <p class="of-testimonial-source">Google Review</p>
+    </div>
+  </div>
+</section>
+
+<!-- Service Area Map -->
+<section class="of-section">
+  <div class="of-map-section">
+    <div class="of-map-content">
+      <h3>Serving the North Shore & Beyond</h3>
+      <p>We provide residential fence installation within a 30-mile radius of West Newbury, MA. Our team knows the local permit requirements, soil conditions, and weather challenges specific to each community we serve.</p>
+      <div class="of-location-links">
+        <a href="https://olympicfencema.com/haverhill-fence-company" class="of-location-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Haverhill
+        </a>
+        <a href="https://olympicfencema.com/amesbury-fence-company/" class="of-location-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Amesbury
+        </a>
+        <a href="https://olympicfencema.com/newburyport-fence-company/" class="of-location-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Newburyport
+        </a>
+        <a href="https://olympicfencema.com/fence-installation-north-andover-ma/" class="of-location-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          North Andover
+        </a>
+      </div>
+    </div>
+    <div class="of-map-embed">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d188683.26825736787!2d-71.12991055!3d42.7854309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2fb7bf95f6a79%3A0xe9b76d4e9e6e7d7d!2sWest%20Newbury%2C%20MA%2001985!5e0!3m2!1sen!2sus!4v1702400000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Olympic Fence Service Area Map - North Shore Massachusetts"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="of-section of-section-alt">
+  <div class="of-section-header">
+    <h2>Frequently Asked Questions</h2>
+    <p>Get answers to the most common questions about residential fence installation in Massachusetts.</p>
+  </div>
+  <div class="of-faq-grid">
+    <div class="of-faq-item">
+      <button class="of-faq-question" aria-expanded="false">
+        How much does residential fence installation cost in Massachusetts?
+        <svg class="of-faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      </button>
+      <div class="of-faq-answer">
+        <div class="of-faq-answer-content">
+          <p>Residential fence costs vary based on material, height, length, and site conditions. Cedar fencing typically offers the best entry price point, vinyl provides excellent long-term value with zero maintenance, and our exclusive wood-on-steel system delivers premium durability. Massachusetts installation costs generally run 15-25% higher than national averages due to our soil conditions and weather requirements. We provide detailed, transparent quotes with options to fit different budgets.</p>
+        </div>
+      </div>
+    </div>
+    <div class="of-faq-item">
+      <button class="of-faq-question" aria-expanded="false">
+        Do I need a permit for a fence in Massachusetts?
+        <svg class="of-faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      </button>
+      <div class="of-faq-answer">
+        <div class="of-faq-answer-content">
+          <p>In most North Shore towns, fences 6 feet or under don't require permits for backyard installation. Front yards are typically limited to 3-4 feet, and corner lots may have sight-line restrictions. Pool fences must meet specific safety requirements. Don't worry about the details—we handle all permit applications and know the specific requirements for each town we serve.</p>
+        </div>
+      </div>
+    </div>
+    <div class="of-faq-item">
+      <button class="of-faq-question" aria-expanded="false">
+        How long does fence installation take?
+        <svg class="of-faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      </button>
+      <div class="of-faq-answer">
+        <div class="of-faq-answer-content">
+          <p>Most residential fence installations take 2-4 days, depending on length and site conditions. A typical 150-200 linear foot fence is usually completed in 3 days. We provide a clear timeline upfront and stick to it. Current scheduling is typically 3-4 weeks out during our busy season (late summer through fall).</p>
+        </div>
+      </div>
+    </div>
+    <div class="of-faq-item">
+      <button class="of-faq-question" aria-expanded="false">
+        What's the difference between your wood-on-steel system and traditional installation?
+        <svg class="of-faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      </button>
+      <div class="of-faq-answer">
+        <div class="of-faq-answer-content">
+          <p>Traditional wood posts set in concrete will eventually rot at ground level—it's the number one cause of fence failure. Our wood-on-steel system uses galvanized steel posts with cedar panels attached above ground, eliminating ground-level rot entirely. This gives you the natural beauty of cedar with dramatically improved longevity (30+ years vs. 15-20 for traditional). You won't find this system offered by other contractors on the North Shore.</p>
+        </div>
+      </div>
+    </div>
+    <div class="of-faq-item">
+      <button class="of-faq-question" aria-expanded="false">
+        Which fence material lasts longest?
+        <svg class="of-faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      </button>
+      <div class="of-faq-answer">
+        <div class="of-faq-answer-content">
+          <p>Vinyl privacy fences last 35+ years with zero maintenance. Our wood-on-steel system lasts 30+ years by preventing ground-level rot. Traditional cedar lasts 15-30 years with periodic staining. Chain-link and aluminum fences can last 25+ years. We'll help you choose based on your priorities: aesthetics, maintenance preferences, and budget.</p>
+        </div>
+      </div>
+    </div>
+    <div class="of-faq-item">
+      <button class="of-faq-question" aria-expanded="false">
+        Can you install fences on slopes or uneven ground?
+        <svg class="of-faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      </button>
+      <div class="of-faq-answer">
+        <div class="of-faq-answer-content">
+          <p>Yes, we specialize in challenging installations. Whether your property has slopes, ledges, rocky soil, or uneven terrain, we have solutions. We can step the fence, follow the contour, or combine techniques for the best appearance and function. Many competitors won't tackle difficult properties—we see them as opportunities to showcase our 40+ years of expertise.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="of-section">
+  <div class="of-form-wrapper">
+    <h3>Get Your Free Estimate</h3>
+    <p>Fill out the form below and we'll respond the same day during business hours.</p>
+    <iframe src="https://api.leadconnectorhq.com/widget/form/Lh0WUa7cUxyEY1XXIJk6" style="width:100%;height:500px;border:none;border-radius:8px;" id="inline-Lh0WUa7cUxyEY1XXIJk6" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Olympic Fence - Contact Form" data-height="500" data-layout-iframe-id="inline-Lh0WUa7cUxyEY1XXIJk6" data-form-id="Lh0WUa7cUxyEY1XXIJk6" title="Olympic Fence - Contact Form"></iframe>
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+  </div>
+</section>
+
+<!-- Explore More Links -->
+<section class="of-section of-section-alt">
+  <div class="of-section-header">
+    <h2>Explore More</h2>
+    <p>Learn more about our services, products, and the Olympic Fence difference.</p>
+  </div>
+  <div class="of-links-grid">
+    <a href="https://olympicfencema.com/" class="of-link-card">
+      <h4>Home</h4>
+      <p>Return to our homepage</p>
+    </a>
+    <a href="https://olympicfencema.com/products/" class="of-link-card">
+      <h4>Fencing Products</h4>
+      <p>Browse all materials and styles</p>
+    </a>
+    <a href="https://olympicfencema.com/services/" class="of-link-card">
+      <h4>Our Services</h4>
+      <p>Residential, commercial, repairs</p>
+    </a>
+    <a href="https://olympicfencema.com/chain-link/" class="of-link-card">
+      <h4>Chain-Link Fencing</h4>
+      <p>Affordable security solutions</p>
+    </a>
+    <a href="https://olympicfencema.com/fence-repairs/" class="of-link-card">
+      <h4>Fence Repairs</h4>
+      <p>Fast, professional repair service</p>
+    </a>
+    <a href="https://olympicfencema.com/about-us/" class="of-link-card">
+      <h4>About Us</h4>
+      <p>Our story and commitment</p>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does residential fence installation cost in Massachusetts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Residential fence costs vary based on material, height, length, and site conditions. Cedar fencing typically offers the best entry price point, vinyl provides excellent long-term value with zero maintenance, and our exclusive wood-on-steel system delivers premium durability. Massachusetts installation costs generally run 15-25% higher than national averages due to our soil conditions and weather requirements. We provide detailed, transparent quotes with options to fit different budgets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a permit for a fence in Massachusetts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most North Shore towns, fences 6 feet or under don't require permits for backyard installation. Front yards are typically limited to 3-4 feet, and corner lots may have sight-line restrictions. Pool fences must meet specific safety requirements. Olympic Fence handles all permit applications and knows the specific requirements for each town we serve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does fence installation take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most residential fence installations take 2-4 days, depending on length and site conditions. A typical 150-200 linear foot fence is usually completed in 3 days. Current scheduling is typically 3-4 weeks out during busy season."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between your wood-on-steel system and traditional installation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional wood posts set in concrete will eventually rot at ground level—it's the number one cause of fence failure. Our wood-on-steel system uses galvanized steel posts with cedar panels attached above ground, eliminating ground-level rot entirely. This gives you the natural beauty of cedar with dramatically improved longevity (30+ years vs. 15-20 for traditional)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which fence material lasts longest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vinyl privacy fences last 35+ years with zero maintenance. Our wood-on-steel system lasts 30+ years by preventing ground-level rot. Traditional cedar lasts 15-30 years with periodic staining. Chain-link and aluminum fences can last 25+ years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you install fences on slopes or uneven ground?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Olympic Fence specializes in challenging installations including slopes, ledges, rocky soil, and uneven terrain. We can step the fence, follow the contour, or combine techniques for the best appearance and function."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Olympic Fence Company",
+  "image": "https://olympicfencema.com/wp-content/uploads/2025/09/Olympic-new-square-logo-white.png",
+  "@id": "https://olympicfencema.com",
+  "url": "https://olympicfencema.com",
+  "telephone": "978-997-2302",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "81 Garden St",
+    "addressLocality": "West Newbury",
+    "addressRegion": "MA",
+    "postalCode": "01985",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.8006,
+    "longitude": -70.9617
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "07:00",
+    "closes": "17:00"
+  },
+  "sameAs": [],
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.8006,
+      "longitude": -70.9617
+    },
+    "geoRadius": "48280"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Residential Fencing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Privacy Fence Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cedar Fence Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vinyl Fence Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Chain-Link Fence Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Fence Repair Services"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- JavaScript for FAQ Accordion -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.of-faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.of-faq-question');
+    
+    question.addEventListener('click', function() {
+      const isActive = item.classList.contains('active');
+      
+      // Close all other items
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.of-faq-question').setAttribute('aria-expanded', 'false');
+      });
+      
+      // Toggle current item
+      if (!isActive) {
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+});
+</script>
