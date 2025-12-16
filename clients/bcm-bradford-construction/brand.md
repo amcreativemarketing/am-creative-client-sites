@@ -6,7 +6,26 @@
 
 ## Brand Overview
 
-Bradford Construction Management (BCM) is a design-build contractor serving Haverhill and the greater North Shore/Merrimack Valley. We deliver additions, whole-home renovations, ADUs, and custom homes with commercial-grade project management. Our brand reflects professionalism, transparency, and lifetime commitment through our partnership with Bradford Home Services.
+Bradford Construction Management (BCM) is a design-build contractor serving Eastern Massachusetts and Southern New Hampshire. We deliver additions, whole-home renovations, ADUs, and custom homes with commercial-grade project management. Our brand reflects professionalism, transparency, and lifetime commitment through our partnership with Bradford Home Services.
+
+---
+
+## Service Areas
+
+BCM serves homeowners across **Eastern Massachusetts** and **Southern New Hampshire**.
+
+### Massachusetts
+- **North Shore:** Newburyport, Amesbury, Newbury, Ipswich, Beverly, Boxford
+- **Merrimack Valley:** Haverhill (HQ), Andover, North Andover, Georgetown, Groveland, West Newbury, Merrimac
+
+### New Hampshire
+- **Southern NH:** Exeter, Salem, Plaistow, and surrounding communities
+
+### Service Area Notes
+- Haverhill, MA is our headquarters and primary market
+- We evaluate projects throughout Eastern MA and Southern NH on a case-by-case basis
+- For location-specific SEO content, target the appropriate region (e.g., "North Shore MA" for Beverly pages, "Southern NH" for Exeter pages)
+- Contact us to confirm service availability for locations not listed
 
 ---
 
@@ -218,5 +237,6 @@ We hold Massachusetts Home Improvement Contractor registration #201908 and carry
 
 ---
 
-*Brand Kit v1.3 | December 2025*
+*Brand Kit v1.4 | December 2025*
+
 
