@@ -237,6 +237,31 @@ We hold Massachusetts Home Improvement Contractor registration #201908 and carry
 
 ---
 
+## AM Connect Form Embed
+
+**BCM Website Consultation Form**
+
+Use this embed code for consultation/contact forms on BCM pages:
+
+```html
+<iframe 
+  src="https://link.bradfordhs.com/widget/form/gjd0vNkXvXFZ1gi5Q51p" 
+  style="width:100%;height:1434px;border:none;border-radius:4px" 
+  id="inline-gjd0vNkXvXFZ1gi5Q51p" 
+  data-form-name="*BCM Website form" 
+  title="*BCM Website form">
+</iframe>
+<script src="https://link.bradfordhs.com/js/form_embed.js"></script>
+```
+
+| Field | Value |
+| --- | --- |
+| **Form ID** | gjd0vNkXvXFZ1gi5Q51p |
+| **Form Name** | *BCM Website form |
+| **Recommended Height** | 1434px (adjust based on container) |
+
+---
+
 *Brand Kit v1.4 | December 2025*
 
 
