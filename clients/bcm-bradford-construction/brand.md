@@ -180,5 +180,43 @@ Maintain clear space around the logo equal to the height of the "B" in Bradford.
 
 ---
 
-*Brand Kit v1.2 | December 2025*
+## Licensing & Business Information
+
+### Massachusetts Home Improvement Contractor
+
+| Field | Value |
+| --- | --- |
+| **HIC Registration Number** | 201908 |
+| **Business Name** | Bradford Construction Management, LLC |
+| **Status** | Active |
+| **Lookup URL** | https://services.oca.state.ma.us/hic/licenseelist.aspx |
+
+### Business Contact
+
+| Field | Value |
+| --- | --- |
+| **Phone** | 978-945-9771 |
+| **Address** | 145 S Main St, Haverhill, MA 01835 |
+| **Website** | https://bradfordcm.com |
+
+### Standard Copy for Credentials
+
+**Short (footer/badges):**
+```
+Licensed & Insured · MA HIC #201908
+```
+
+**Medium (trust bars):**
+```
+Licensed & Insured · MA HIC #201908 · 10+ Years Experience · 100+ Successful Projects
+```
+
+**Full (FAQ/legal):**
+```
+We hold Massachusetts Home Improvement Contractor registration #201908 and carry comprehensive general liability and workers' compensation insurance.
+```
+
+---
+
+*Brand Kit v1.3 | December 2025*
 
