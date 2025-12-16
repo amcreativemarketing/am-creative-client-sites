@@ -1,0 +1,1269 @@
+<!--
+  BCM Location Page: Haverhill, MA
+  URL: /service-areas/haverhill-ma/ (or /haverhill-ma/)
+  
+  NOTE: This template sits below the WordPress page hero.
+  The site hero should have:
+  - H1: "Design-Build Contractor in Haverhill, MA"
+  - H2: "Home Additions, ADUs & Custom Builds with Lifetime Support"
+  
+  CTAs: "Schedule Your Free Consultation" → /contact/
+-->
+
+<style>
+/* ============================================
+   BCM LOCATION PAGE STYLES
+   Namespace: .bcm-location-*
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+
+:root {
+  /* BCM Brand Colors */
+  --bcm-navy: #060097;
+  --bcm-gold: #FFCD57;
+  --bcm-gold-hover: #E5B84E;
+  --bcm-dark-slate: #1E293B;
+  --bcm-medium-gray: #67768E;
+  --bcm-light-gray: #F2F5F7;
+  --bcm-off-white: #F9FAFB;
+  --bcm-white: #FFFFFF;
+  
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --section-padding: clamp(3.5rem, 7vw, 5rem);
+  --container-max: 1200px;
+  --container-narrow: 900px;
+}
+
+/* Reset for this component */
+.bcm-location-page * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bcm-location-page {
+  font-family: var(--font-body);
+  color: var(--bcm-dark-slate);
+  line-height: 1.6;
+  font-size: 16px;
+  background: var(--bcm-white);
+  overflow-x: hidden;
+  /* WordPress full-width override */
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+}
+
+.bcm-location-page img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bcm-location-page a {
+  color: var(--bcm-navy);
+  text-decoration: none;
+}
+
+.bcm-location-page a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   SECTION BASE STYLES
+   ============================================ */
+
+.bcm-location-section {
+  padding: var(--section-padding) 2rem;
+}
+
+.bcm-location-section--alt {
+  background: var(--bcm-off-white);
+}
+
+.bcm-location-section--navy {
+  background: var(--bcm-navy);
+  color: var(--bcm-white);
+}
+
+.bcm-location-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.bcm-location-container--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+.bcm-location-page h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 1rem;
+}
+
+.bcm-location-page h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 0.75rem;
+}
+
+.bcm-location-page h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 0.5rem;
+}
+
+.bcm-location-section--navy h2,
+.bcm-location-section--navy h3,
+.bcm-location-section--navy h4 {
+  color: var(--bcm-white);
+}
+
+.bcm-location-section__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.bcm-location-section__eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bcm-navy);
+  margin-bottom: 0.5rem;
+}
+
+.bcm-location-section--navy .bcm-location-section__eyebrow {
+  color: var(--bcm-gold);
+}
+
+.bcm-location-section__subtitle {
+  font-size: 1.05rem;
+  color: var(--bcm-medium-gray);
+  max-width: 700px;
+  margin: 0.75rem auto 0;
+}
+
+.bcm-location-section--navy .bcm-location-section__subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.bcm-location-btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.bcm-location-btn--primary {
+  background: var(--bcm-gold);
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-location-btn--primary:hover {
+  background: var(--bcm-gold-hover);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 205, 87, 0.4);
+}
+
+.bcm-location-btn--outline {
+  background: transparent;
+  color: var(--bcm-navy);
+  border: 2px solid var(--bcm-navy);
+}
+
+.bcm-location-btn--outline:hover {
+  background: var(--bcm-navy);
+  color: var(--bcm-white);
+  text-decoration: none;
+}
+
+.bcm-location-section--navy .bcm-location-btn--outline {
+  color: var(--bcm-white);
+  border-color: var(--bcm-white);
+}
+
+.bcm-location-section--navy .bcm-location-btn--outline:hover {
+  background: var(--bcm-white);
+  color: var(--bcm-navy);
+}
+
+.bcm-location-btn-wrap {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* ============================================
+   INTRO SECTION
+   ============================================ */
+
+.bcm-location-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bcm-location-intro p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-location-intro p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   TRUST BAR
+   ============================================ */
+
+.bcm-location-trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+  background: var(--bcm-off-white);
+  border-top: 3px solid var(--bcm-gold);
+}
+
+.bcm-location-trust-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.bcm-location-trust-item__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  background: var(--bcm-navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bcm-location-trust-item__icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--bcm-gold);
+}
+
+.bcm-location-trust-item h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.bcm-location-trust-item p {
+  font-size: 0.9rem;
+  color: var(--bcm-medium-gray);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .bcm-location-trust-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .bcm-location-trust-bar {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   SERVICES GRID
+   ============================================ */
+
+.bcm-location-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bcm-location-service-card {
+  background: var(--bcm-white);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--bcm-light-gray);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.bcm-location-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.bcm-location-service-card h4 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.bcm-location-service-card p {
+  font-size: 0.95rem;
+  color: var(--bcm-medium-gray);
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.bcm-location-service-card .bcm-location-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  .bcm-location-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   PROJECT GALLERY
+   ============================================ */
+
+.bcm-location-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.bcm-location-gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.bcm-location-gallery-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.bcm-location-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.bcm-location-gallery-item__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 2rem 1rem 1rem;
+  color: var(--bcm-white);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .bcm-location-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .bcm-location-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   COMPARISON TABLE
+   ============================================ */
+
+.bcm-location-comparison {
+  overflow-x: auto;
+}
+
+.bcm-location-comparison table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: var(--bcm-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bcm-location-comparison th {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 1.25rem 1rem;
+  text-align: left;
+  background: var(--bcm-navy);
+  color: var(--bcm-white);
+  font-size: 0.95rem;
+}
+
+.bcm-location-comparison th.bcm-highlight {
+  background: var(--bcm-gold);
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-location-comparison td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--bcm-light-gray);
+  font-size: 0.95rem;
+}
+
+.bcm-location-comparison tr:last-child td {
+  border-bottom: none;
+}
+
+.bcm-location-comparison td.bcm-highlight {
+  background: rgba(255, 205, 87, 0.1);
+  font-weight: 500;
+}
+
+.bcm-location-comparison .check {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.bcm-location-comparison .x {
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .bcm-location-comparison th,
+  .bcm-location-comparison td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ============================================
+   FAQ ACCORDION
+   ============================================ */
+
+.bcm-location-faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bcm-location-faq-item {
+  border: 1px solid var(--bcm-light-gray);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  background: var(--bcm-white);
+}
+
+.bcm-location-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  gap: 1rem;
+}
+
+.bcm-location-faq-question:hover {
+  background: var(--bcm-off-white);
+}
+
+.bcm-location-faq-question h4 {
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+  flex: 1;
+}
+
+.bcm-location-faq-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bcm-navy);
+  color: var(--bcm-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.bcm-location-faq-item.active .bcm-location-faq-toggle {
+  transform: rotate(45deg);
+  background: var(--bcm-gold);
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-location-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.bcm-location-faq-item.active .bcm-location-faq-answer {
+  max-height: 500px;
+}
+
+.bcm-location-faq-answer-content {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--bcm-medium-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ============================================
+   SERVICE AREAS
+   ============================================ */
+
+.bcm-location-areas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.bcm-location-areas h3 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.bcm-location-neighborhoods {
+  columns: 2;
+  column-gap: 2rem;
+  list-style: none;
+}
+
+.bcm-location-neighborhoods li {
+  padding: 0.4rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  break-inside: avoid;
+  font-size: 0.95rem;
+}
+
+.bcm-location-neighborhoods li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 6px;
+  height: 6px;
+  background: var(--bcm-gold);
+  border-radius: 50%;
+}
+
+.bcm-location-nearby p {
+  color: var(--bcm-medium-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .bcm-location-areas {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .bcm-location-neighborhoods {
+    columns: 1;
+  }
+}
+
+/* ============================================
+   MAP SECTION
+   ============================================ */
+
+.bcm-location-map-wrap {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bcm-location-map-wrap p {
+  margin-bottom: 1.5rem;
+  color: var(--bcm-medium-gray);
+}
+
+.bcm-location-map-wrap iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   FINAL CTA SECTION
+   ============================================ */
+
+.bcm-location-final-cta {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bcm-location-final-cta p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.bcm-location-section--navy .bcm-location-final-cta p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.bcm-location-credentials {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+</style>
+
+<!-- Main Page Content -->
+<div class="bcm-location-page">
+
+  <!-- Trust Bar -->
+  <div class="bcm-location-trust-bar">
+    <div class="bcm-location-trust-item">
+      <div class="bcm-location-trust-item__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <h4>Daily Documentation</h4>
+      <p>Photo updates every single day of your project</p>
+    </div>
+    <div class="bcm-location-trust-item">
+      <div class="bcm-location-trust-item__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+      </div>
+      <h4>Transparent Pricing</h4>
+      <p>Fixed-price contracts with clear change orders</p>
+    </div>
+    <div class="bcm-location-trust-item">
+      <div class="bcm-location-trust-item__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+      </div>
+      <h4>Project Management</h4>
+      <p>Commercial-grade systems for residential peace of mind</p>
+    </div>
+    <div class="bcm-location-trust-item">
+      <div class="bcm-location-trust-item__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      </div>
+      <h4>Lifetime Support</h4>
+      <p>Bradford Home Services maintains what we build</p>
+    </div>
+  </div>
+
+  <!-- Introduction Section -->
+  <section class="bcm-location-section">
+    <div class="bcm-location-container">
+      <div class="bcm-location-intro">
+        <div class="bcm-location-section__header">
+          <p class="bcm-location-section__eyebrow">Professional Construction in Haverhill</p>
+          <h2>Your Local Design-Build Team</h2>
+        </div>
+        <p>Bradford Construction Management serves homeowners throughout Haverhill and the greater Merrimack Valley with commercial-grade project management and lifetime support. Whether you're planning a home addition near downtown, building an ADU in Bradford, or renovating in Ward Hill, we deliver professional results with daily photo documentation.</p>
+        <p>Our design-build approach means one accountable team guides your project from feasibility and design through permitting and construction, reducing surprises and keeping decisions simple. Through our partnership with Bradford Home Services, we provide ongoing maintenance and warranty support long after project completion.</p>
+        <p>We proudly serve Haverhill's historic downtown district, Bradford, Ward Hill, Riverside, and all surrounding neighborhoods including Groveland, West Newbury, Merrimac, Georgetown, Boxford, and North Andover.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="bcm-location-section bcm-location-section--alt">
+    <div class="bcm-location-container">
+      <div class="bcm-location-section__header">
+        <p class="bcm-location-section__eyebrow">Our Services</p>
+        <h2>Home Addition, ADU & Custom Home Services in Haverhill</h2>
+      </div>
+
+      <div class="bcm-location-services-grid">
+        <div class="bcm-location-service-card">
+          <h4>Accessory Dwelling Units (ADUs)</h4>
+          <p>Create rental income or multi-generational housing with professionally designed ADUs that meet Haverhill zoning requirements and building codes.</p>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/" class="bcm-location-btn bcm-location-btn--outline">Explore ADU Services</a>
+        </div>
+        
+        <div class="bcm-location-service-card">
+          <h4>Home Additions</h4>
+          <p>Expand your living space with seamless additions that match your home's character while adding value to your property.</p>
+          <a href="https://bradfordcm.com/home-additions/" class="bcm-location-btn bcm-location-btn--outline">Learn About Additions</a>
+        </div>
+        
+        <div class="bcm-location-service-card">
+          <h4>Home Renovations</h4>
+          <p>Transform existing spaces with complete kitchen and bathroom renovations featuring modern finishes and functional layouts.</p>
+          <a href="https://bradfordcm.com/home-renovations/" class="bcm-location-btn bcm-location-btn--outline">See Renovations</a>
+        </div>
+        
+        <div class="bcm-location-service-card">
+          <h4>Custom Homes</h4>
+          <p>Build your dream home from the ground up with professional project management and transparent pricing throughout.</p>
+          <a href="https://bradfordcm.com/custom-homes/" class="bcm-location-btn bcm-location-btn--outline">Explore Custom Homes</a>
+        </div>
+      </div>
+
+      <div class="bcm-location-btn-wrap">
+        <a href="https://bradfordcm.com/contact/" class="bcm-location-btn bcm-location-btn--primary">Discuss Your Haverhill Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Projects Gallery -->
+  <section class="bcm-location-section">
+    <div class="bcm-location-container">
+      <div class="bcm-location-section__header">
+        <p class="bcm-location-section__eyebrow">Our Work</p>
+        <h2>Recent Projects Near Haverhill</h2>
+        <p class="bcm-location-section__subtitle">Quality craftsmanship and attention to detail that sets Bradford Construction Management apart.</p>
+      </div>
+
+      <div class="bcm-location-gallery">
+        <div class="bcm-location-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-16.jpg" alt="Custom staircase with modern railings in Haverhill MA home renovation">
+          <div class="bcm-location-gallery-item__caption">Custom Staircase Installation</div>
+        </div>
+        
+        <div class="bcm-location-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-24-1.jpg" alt="Modern bathroom renovation with quality finishes in North Shore MA">
+          <div class="bcm-location-gallery-item__caption">Finished Bathroom Renovation</div>
+        </div>
+        
+        <div class="bcm-location-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-22.jpg" alt="Elegant dining room with quality craftsmanship">
+          <div class="bcm-location-gallery-item__caption">Elegant Dining Room</div>
+        </div>
+        
+        <div class="bcm-location-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-32.jpg" alt="Complete kitchen renovation with tin ceiling and custom cabinets">
+          <div class="bcm-location-gallery-item__caption">Complete Kitchen Transformation</div>
+        </div>
+        
+        <div class="bcm-location-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/10/36-Colgate-Beverly-8.jpg" alt="Open concept kitchen and living room in Beverly MA home">
+          <div class="bcm-location-gallery-item__caption">Open Concept Kitchen & Living</div>
+        </div>
+        
+        <div class="bcm-location-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-17-1.jpg" alt="Modern open floor plan with large kitchen island">
+          <div class="bcm-location-gallery-item__caption">Modern Open Floor Plan</div>
+        </div>
+      </div>
+
+      <div class="bcm-location-btn-wrap">
+        <a href="https://bradfordcm.com/contact/" class="bcm-location-btn bcm-location-btn--primary">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="bcm-location-section bcm-location-section--alt">
+    <div class="bcm-location-container">
+      <div class="bcm-location-section__header">
+        <p class="bcm-location-section__eyebrow">The Bradford Difference</p>
+        <h2>Why Choose Bradford Construction Management?</h2>
+        <p class="bcm-location-section__subtitle">See how our commercial-grade approach and lifetime support partnership sets us apart from typical contractors.</p>
+      </div>
+
+      <div class="bcm-location-comparison">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th class="bcm-highlight">Bradford Construction</th>
+              <th>Industry Standard</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Daily Photo Documentation</strong></td>
+              <td class="bcm-highlight"><span class="check">✓</span> Every project, every day</td>
+              <td>Varies by contractor</td>
+            </tr>
+            <tr>
+              <td><strong>Project Management</strong></td>
+              <td class="bcm-highlight"><span class="check">✓</span> Commercial-grade systems</td>
+              <td>Varies by contractor</td>
+            </tr>
+            <tr>
+              <td><strong>Pricing Transparency</strong></td>
+              <td class="bcm-highlight"><span class="check">✓</span> Clear scope with documented change orders</td>
+              <td>Varies by contractor</td>
+            </tr>
+            <tr>
+              <td><strong>Post-Completion Support</strong></td>
+              <td class="bcm-highlight"><span class="check">✓</span> Lifetime maintenance through Bradford Home Services</td>
+              <td>Limited warranty period</td>
+            </tr>
+            <tr>
+              <td><strong>Design-Build Integration</strong></td>
+              <td class="bcm-highlight"><span class="check">✓</span> One team, start to finish</td>
+              <td>Often separate designers and builders</td>
+            </tr>
+            <tr>
+              <td><strong>Communication</strong></td>
+              <td class="bcm-highlight"><span class="check">✓</span> Daily updates and project portal</td>
+              <td>Varies by contractor</td>
+            </tr>
+            <tr>
+              <td><strong>Ongoing Maintenance</strong></td>
+              <td class="bcm-highlight"><span class="check">✓</span> Bradford Home Services available for life</td>
+              <td>Find a new contractor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bcm-location-btn-wrap">
+        <a href="https://bradfordcm.com/contact/" class="bcm-location-btn bcm-location-btn--primary">Experience the Bradford Difference</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="bcm-location-section">
+    <div class="bcm-location-container">
+      <div class="bcm-location-section__header">
+        <p class="bcm-location-section__eyebrow">Common Questions</p>
+        <h2>Frequently Asked Questions About Construction in Haverhill</h2>
+      </div>
+
+      <div class="bcm-location-faq-list">
+        <div class="bcm-location-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="bcm-location-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <h4 itemprop="name">How long does a typical home addition take in Haverhill?</h4>
+            <span class="bcm-location-faq-toggle">+</span>
+          </div>
+          <div class="bcm-location-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="bcm-location-faq-answer-content" itemprop="text">
+              Project timelines vary based on size, complexity, and scope. During your consultation, we'll provide a realistic timeline specific to your project. This includes time for permitting through the Haverhill Building Department, which typically takes 2-4 weeks. We provide detailed schedules during the planning phase and update you daily throughout construction with our photo documentation system.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-location-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="bcm-location-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <h4 itemprop="name">What permits are required for construction projects in Haverhill?</h4>
+            <span class="bcm-location-faq-toggle">+</span>
+          </div>
+          <div class="bcm-location-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="bcm-location-faq-answer-content" itemprop="text">
+              Most construction projects in Haverhill require a building permit from the Haverhill Building Department. Depending on your project scope, you may also need electrical, plumbing, and gas permits. Projects near wetlands or in historic districts may require additional review. We handle all permit applications and coordinate inspections as part of our comprehensive project management service.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-location-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="bcm-location-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <h4 itemprop="name">Can I build an ADU on my Haverhill property?</h4>
+            <span class="bcm-location-faq-toggle">+</span>
+          </div>
+          <div class="bcm-location-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="bcm-location-faq-answer-content" itemprop="text">
+              Many Haverhill properties can accommodate ADUs, but requirements vary based on lot size, zoning district, and existing structures. Haverhill's zoning regulations govern setbacks, parking, and utility connections. We start every ADU project with a feasibility assessment to determine if your property qualifies and what design options work within local requirements.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-location-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="bcm-location-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <h4 itemprop="name">What makes Bradford Construction Management different from other Haverhill contractors?</h4>
+            <span class="bcm-location-faq-toggle">+</span>
+          </div>
+          <div class="bcm-location-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="bcm-location-faq-answer-content" itemprop="text">
+              We're the only contractor who provides lifetime support through our partnership with Bradford Home Services. Beyond that, we document every project daily with photos, use commercial-grade project management systems, and offer fixed-price contracts with transparent change order processes. Our design-build approach means one accountable team from start to finish, eliminating coordination headaches between separate designers and builders.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-location-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="bcm-location-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <h4 itemprop="name">Do you handle design as well as construction?</h4>
+            <span class="bcm-location-faq-toggle">+</span>
+          </div>
+          <div class="bcm-location-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="bcm-location-faq-answer-content" itemprop="text">
+              Yes. Our design-build approach means we handle everything from initial design concepts through final construction. This streamlined process reduces miscommunication, keeps projects on schedule, and ensures your vision translates accurately from plans to reality. You work with one team throughout the entire process instead of coordinating between separate architects and builders.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-location-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="bcm-location-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <h4 itemprop="name">What areas around Haverhill do you serve?</h4>
+            <span class="bcm-location-faq-toggle">+</span>
+          </div>
+          <div class="bcm-location-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="bcm-location-faq-answer-content" itemprop="text">
+              We serve all of Haverhill and regularly complete projects throughout the Merrimack Valley and North Shore. This includes Groveland, West Newbury, Merrimac, Georgetown, Boxford, North Andover, Andover, Methuen, Lawrence, Amesbury, Newburyport, and surrounding communities. Our Haverhill base means quick response times and familiarity with local building departments and regulations.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-location-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="bcm-location-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <h4 itemprop="name">How does your daily photo documentation work?</h4>
+            <span class="bcm-location-faq-toggle">+</span>
+          </div>
+          <div class="bcm-location-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="bcm-location-faq-answer-content" itemprop="text">
+              Every day work occurs on your project, we take photos documenting progress and upload them to your secure project portal. Each photo includes timestamps and descriptions of the work completed. This transparency lets you see exactly what's happening, even if you can't visit the site daily. It also creates a complete record of your project from start to finish.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-location-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="bcm-location-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <h4 itemprop="name">What happens after my project is complete?</h4>
+            <span class="bcm-location-faq-toggle">+</span>
+          </div>
+          <div class="bcm-location-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="bcm-location-faq-answer-content" itemprop="text">
+              Unlike contractors who move on after the final payment, we maintain a relationship with every client. Through our partnership with Bradford Home Services, you have a dedicated maintenance and repair team who already knows your home. Whether you need warranty service, seasonal maintenance, or decide on a future renovation years down the road, you'll always have someone to call who understands your property.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-location-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="bcm-location-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <h4 itemprop="name">Are you licensed and insured in Massachusetts?</h4>
+            <span class="bcm-location-faq-toggle">+</span>
+          </div>
+          <div class="bcm-location-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="bcm-location-faq-answer-content" itemprop="text">
+              Yes. We hold Massachusetts Home Improvement Contractor license #201908 and carry comprehensive general liability and workers' compensation insurance. We provide proof of insurance and licensing upon request and ensure all permits and inspections are properly completed for every project.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-location-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="bcm-location-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            <h4 itemprop="name">How do I get started with my Haverhill construction project?</h4>
+            <span class="bcm-location-faq-toggle">+</span>
+          </div>
+          <div class="bcm-location-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="bcm-location-faq-answer-content" itemprop="text">
+              Start with a free consultation where we discuss your goals, timeline, and budget. We'll visit your property, answer questions, and provide guidance on feasibility and next steps. From there, we develop a detailed proposal with transparent pricing and a clear scope of work. There's no pressure and no obligation during the consultation phase.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bcm-location-btn-wrap">
+        <a href="https://bradfordcm.com/contact/" class="bcm-location-btn bcm-location-btn--primary">Schedule Your Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Section -->
+  <section class="bcm-location-section bcm-location-section--alt">
+    <div class="bcm-location-container">
+      <div class="bcm-location-section__header">
+        <p class="bcm-location-section__eyebrow">Service Area</p>
+        <h2>Serving All of Haverhill & Surrounding Communities</h2>
+      </div>
+
+      <div class="bcm-location-areas">
+        <div class="bcm-location-neighborhoods-wrap">
+          <h3>Haverhill Neighborhoods We Serve</h3>
+          <ul class="bcm-location-neighborhoods">
+            <li>Downtown Historic District</li>
+            <li>Bradford</li>
+            <li>Ward Hill</li>
+            <li>Riverside</li>
+            <li>Rocks Village</li>
+            <li>Chadwick</li>
+            <li>Cedarcrest</li>
+            <li>Silver Hill</li>
+            <li>Crystal Springs</li>
+            <li>Hilldale</li>
+          </ul>
+        </div>
+
+        <div class="bcm-location-nearby">
+          <h3>Nearby Communities</h3>
+          <p>Our Haverhill-based team regularly completes projects throughout the Merrimack Valley and North Shore. We serve Groveland, West Newbury, Merrimac, Georgetown, Boxford, North Andover, Andover, Methuen, Lawrence, Amesbury, Newburyport, and surrounding communities. Our central location means quick response times and deep familiarity with local building departments and regulations across the region.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="bcm-location-section">
+    <div class="bcm-location-container">
+      <div class="bcm-location-section__header">
+        <p class="bcm-location-section__eyebrow">Our Location</p>
+        <h2>Find Us in Haverhill, MA</h2>
+      </div>
+
+      <div class="bcm-location-map-wrap">
+        <p>Located at 145 South Main Street in Haverhill, we're centrally positioned to serve all neighborhoods throughout the city and surrounding communities.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.8936147428787!2d-71.08419492346191!3d42.77195147115853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3022cbba67eef%3A0xb3350b93f7fb0d23!2s145%20S%20Main%20St%2C%20Haverhill%2C%20MA%2001835!5e0!3m2!1sen!2sus!4v1702400000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="bcm-location-section bcm-location-section--navy">
+    <div class="bcm-location-container">
+      <div class="bcm-location-final-cta">
+        <p class="bcm-location-section__eyebrow">Get Started</p>
+        <h2>Start Your Haverhill Home Transformation Today</h2>
+        <p>Join the growing list of Haverhill homeowners who've discovered the Bradford difference: professional project management, daily documentation, and lifetime support through our Bradford Home Services partnership.</p>
+        
+        <div class="bcm-location-btn-wrap" style="margin-top: 1.5rem;">
+          <a href="https://bradfordcm.com/contact/" class="bcm-location-btn bcm-location-btn--primary">Schedule Your Free Consultation</a>
+        </div>
+        
+        <div class="bcm-location-credentials">
+          <strong>Licensed & Insured</strong> · MA HIC #201908 · 10+ Years Experience · 100+ Successful Projects
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- LocalBusiness Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Bradford Construction Management",
+  "image": "https://bradfordcm.com/wp-content/uploads/2024/bcm-logo.png",
+  "url": "https://bradfordcm.com/",
+  "telephone": "+1-978-945-9771",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "145 S Main St",
+    "addressLocality": "Haverhill",
+    "addressRegion": "MA",
+    "postalCode": "01835",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.7719514,
+    "longitude": -71.0841949
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Haverhill",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Groveland"
+    },
+    {
+      "@type": "City",
+      "name": "West Newbury"
+    },
+    {
+      "@type": "City",
+      "name": "Merrimac"
+    },
+    {
+      "@type": "City",
+      "name": "Georgetown"
+    },
+    {
+      "@type": "City",
+      "name": "Boxford"
+    },
+    {
+      "@type": "City",
+      "name": "North Andover"
+    }
+  ],
+  "priceRange": "$$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/bradfordcm",
+    "https://www.instagram.com/bradfordcm"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Construction Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Home Additions",
+          "description": "Custom home additions designed and built by one accountable team"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Accessory Dwelling Units (ADUs)",
+          "description": "Professional ADU design and construction meeting local zoning requirements"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Home Renovations",
+          "description": "Complete kitchen and bathroom renovations with modern finishes"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Homes",
+          "description": "Ground-up custom home construction with commercial-grade project management"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a typical home addition take in Haverhill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Project timelines vary based on size, complexity, and scope. During your consultation, we'll provide a realistic timeline specific to your project. This includes time for permitting through the Haverhill Building Department, which typically takes 2-4 weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What permits are required for construction projects in Haverhill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most construction projects in Haverhill require a building permit from the Haverhill Building Department. Depending on your project scope, you may also need electrical, plumbing, and gas permits. Projects near wetlands or in historic districts may require additional review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I build an ADU on my Haverhill property?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many Haverhill properties can accommodate ADUs, but requirements vary based on lot size, zoning district, and existing structures. Haverhill's zoning regulations govern setbacks, parking, and utility connections. We start every ADU project with a feasibility assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Bradford Construction Management different from other Haverhill contractors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We're the only contractor who provides lifetime support through our partnership with Bradford Home Services. We also document every project daily with photos, use commercial-grade project management systems, and offer fixed-price contracts with transparent change order processes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle design as well as construction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our design-build approach means we handle everything from initial design concepts through final construction. You work with one team throughout the entire process instead of coordinating between separate architects and builders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas around Haverhill do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Haverhill and complete projects throughout the Merrimack Valley and North Shore, including Groveland, West Newbury, Merrimac, Georgetown, Boxford, North Andover, Andover, Methuen, Lawrence, Amesbury, and Newburyport."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does your daily photo documentation work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every day work occurs on your project, we take photos documenting progress and upload them to your secure project portal. Each photo includes timestamps and descriptions of the work completed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after my project is complete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike contractors who move on after the final payment, we maintain a relationship with every client. Through our partnership with Bradford Home Services, you have a dedicated maintenance and repair team who already knows your home. Whether you need warranty service, seasonal maintenance, or decide on a future renovation, you'll always have someone to call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you licensed and insured in Massachusetts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We hold Massachusetts Home Improvement Contractor license #201908 and carry comprehensive general liability and workers' compensation insurance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started with my Haverhill construction project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with a free consultation where we discuss your goals, timeline, and budget. We'll visit your property, answer questions, and provide guidance on feasibility and next steps. There's no pressure and no obligation."
+      }
+    }
+  ]
+}
+</script>
