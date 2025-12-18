@@ -1,0 +1,1428 @@
+<!-- 
+  =====================================================
+  AM CREATIVE - REAL ESTATE MARKETING PAGE
+  =====================================================
+  
+  Separate service for MA/NH real estate agents
+  Goes below hero, above footer
+-->
+
+<style>
+  /* ===== INTRO SECTION ===== */
+  .amc-re-intro {
+    background: #ffffff !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-re-intro-container {
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .amc-re-intro-text {
+    color: #555 !important;
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+    margin: 0 0 32px 0 !important;
+  }
+
+  .amc-re-intro-ctas {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .amc-re-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 16px 32px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    border: none !important;
+    font-family: inherit !important;
+  }
+
+  .amc-re-btn-primary {
+    background: #1a2b4a !important;
+    color: #ffffff !important;
+  }
+
+  .amc-re-btn-primary:hover {
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+    transform: translateY(-2px) !important;
+  }
+
+  .amc-re-btn-secondary {
+    background: transparent !important;
+    color: #1a2b4a !important;
+    border: 2px solid #1a2b4a !important;
+  }
+
+  .amc-re-btn-secondary:hover {
+    background: #1a2b4a !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+  }
+
+  .amc-re-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  /* ===== GALLERY SECTION ===== */
+  .amc-re-gallery {
+    background: #f8f9fa !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-re-gallery-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-re-section-header {
+    text-align: center !important;
+    margin-bottom: 48px !important;
+  }
+
+  .amc-re-eyebrow {
+    color: #b8976a !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .amc-re-headline {
+    color: #1a2b4a !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+
+  .amc-re-gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    grid-template-rows: auto auto auto !important;
+    gap: 16px !important;
+  }
+
+  .amc-re-gallery-item {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .amc-re-gallery-item img,
+  .amc-re-gallery-item video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* Video - Large left */
+  .amc-re-gallery-item:nth-child(1) {
+    grid-column: span 7 !important;
+    grid-row: span 2 !important;
+    min-height: 450px !important;
+  }
+
+  /* Top right */
+  .amc-re-gallery-item:nth-child(2) {
+    grid-column: span 5 !important;
+    min-height: 217px !important;
+  }
+
+  /* Second right */
+  .amc-re-gallery-item:nth-child(3) {
+    grid-column: span 5 !important;
+    min-height: 217px !important;
+  }
+
+  /* Bottom row - 4 images */
+  .amc-re-gallery-item:nth-child(4),
+  .amc-re-gallery-item:nth-child(5),
+  .amc-re-gallery-item:nth-child(6),
+  .amc-re-gallery-item:nth-child(7) {
+    grid-column: span 3 !important;
+    min-height: 200px !important;
+  }
+
+  .amc-re-gallery-video {
+    position: relative !important;
+  }
+
+  .amc-re-gallery-video video {
+    cursor: pointer !important;
+  }
+
+  .amc-re-video-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: rgba(26, 43, 74, 0.3) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    transition: opacity 0.3s ease !important;
+    pointer-events: none !important;
+  }
+
+  .amc-re-video-overlay.hidden {
+    opacity: 0 !important;
+  }
+
+  .amc-re-play-btn {
+    width: 80px !important;
+    height: 80px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .amc-re-play-btn svg {
+    width: 32px !important;
+    height: 32px !important;
+    color: #1a2b4a !important;
+    margin-left: 4px !important;
+  }
+
+  .amc-re-gallery-badge {
+    position: absolute !important;
+    top: 16px !important;
+    left: 16px !important;
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+  }
+
+  /* ===== PRICING SECTIONS ===== */
+  .amc-re-pricing {
+    background: #ffffff !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-re-pricing-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-re-pricing-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    margin-bottom: 60px !important;
+  }
+
+  .amc-re-pricing-card {
+    background: #f8f9fa !important;
+    border-radius: 16px !important;
+    padding: 32px !important;
+    text-align: center !important;
+    border: 1px solid #e5e7eb !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .amc-re-pricing-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .amc-re-pricing-card.featured {
+    background: linear-gradient(135deg, #1a2b4a 0%, #0f1a2e 100%) !important;
+    border: 2px solid #b8976a !important;
+  }
+
+  .amc-re-pricing-card.featured .amc-re-pricing-title,
+  .amc-re-pricing-card.featured .amc-re-pricing-desc {
+    color: #ffffff !important;
+  }
+
+  .amc-re-pricing-card.featured .amc-re-pricing-desc {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  .amc-re-pricing-card.featured .amc-re-pricing-amount {
+    color: #b8976a !important;
+  }
+
+  .amc-re-pricing-title {
+    color: #1a2b4a !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  .amc-re-pricing-desc {
+    color: #666 !important;
+    font-size: 14px !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .amc-re-pricing-amount {
+    color: #1a2b4a !important;
+    font-size: 42px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+  }
+
+  .amc-re-pricing-note {
+    font-size: 14px !important;
+    color: #888 !important;
+    margin-top: 8px !important;
+  }
+
+  /* ===== VIDEO SECTION ===== */
+  .amc-re-video-section {
+    background: #f8f9fa !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-re-video-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-re-video-intro {
+    text-align: center !important;
+    max-width: 700px !important;
+    margin: 0 auto 48px auto !important;
+  }
+
+  .amc-re-video-intro p {
+    color: #555 !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    margin: 16px 0 0 0 !important;
+  }
+
+  .amc-re-video-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    margin-bottom: 60px !important;
+  }
+
+  .amc-re-video-card {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 32px !important;
+    border: 1px solid #e5e7eb !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .amc-re-video-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .amc-re-video-card-badge {
+    display: inline-block !important;
+    background: rgba(184, 151, 106, 0.15) !important;
+    color: #b8976a !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .amc-re-video-card h4 {
+    color: #1a2b4a !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  .amc-re-video-card p {
+    color: #666 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .amc-re-video-card-price {
+    color: #1a2b4a !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+  }
+
+  /* Full Video Tours */
+  .amc-re-tours-header {
+    text-align: center !important;
+    margin-bottom: 32px !important;
+  }
+
+  .amc-re-tours-subhead {
+    color: #555 !important;
+    font-size: 16px !important;
+    margin: 16px 0 0 0 !important;
+  }
+
+  .amc-re-tours-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .amc-re-tours-card {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 28px !important;
+    text-align: center !important;
+    border: 1px solid #e5e7eb !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .amc-re-tours-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .amc-re-tours-card h4 {
+    color: #1a2b4a !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin: 0 0 16px 0 !important;
+  }
+
+  .amc-re-tours-card-price {
+    color: #1a2b4a !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+  }
+
+  .amc-re-tours-card-includes {
+    color: #888 !important;
+    font-size: 13px !important;
+    margin: 12px 0 0 0 !important;
+  }
+
+  /* Photo Add-Ons (under Photography section) */
+  .amc-re-photo-addons {
+    margin-top: 48px !important;
+    padding-top: 32px !important;
+    border-top: 1px solid #e5e7eb !important;
+  }
+
+  .amc-re-photo-addons-title {
+    color: #1a2b4a !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin: 0 0 24px 0 !important;
+  }
+
+  .amc-re-photo-addons-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .amc-re-photo-addon-item {
+    background: #f8f9fa !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 4px !important;
+  }
+
+  .amc-re-photo-addon-name {
+    color: #1a2b4a !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
+
+  .amc-re-photo-addon-note {
+    color: #888 !important;
+    font-size: 13px !important;
+  }
+
+  .amc-re-photo-addon-price {
+    color: #b8976a !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-top: 4px !important;
+  }
+
+  /* Social Media Video Add-Ons (under Video section) */
+  .amc-re-social-video-section {
+    margin-top: 48px !important;
+    padding-top: 48px !important;
+    border-top: 1px solid #e5e7eb !important;
+  }
+
+  .amc-re-social-video-title {
+    color: #1a2b4a !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  .amc-re-social-video-desc {
+    color: #555 !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    margin: 0 0 32px 0 !important;
+  }
+
+  .amc-re-social-video-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .amc-re-social-video-card {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 16px !important;
+    padding: 28px !important;
+  }
+
+  .amc-re-social-video-header {
+    margin-bottom: 12px !important;
+  }
+
+  .amc-re-social-video-badge {
+    display: inline-block !important;
+    background: rgba(184, 151, 106, 0.15) !important;
+    color: #b8976a !important;
+    padding: 4px 12px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .amc-re-social-video-card h4 {
+    color: #1a2b4a !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+  }
+
+  .amc-re-social-video-card p {
+    color: #666 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .amc-re-social-video-price {
+    color: #1a2b4a !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+  }
+
+  /* Custom Marketing Section */
+  .amc-re-custom {
+    background: #ffffff !important;
+    padding: 60px 20px !important;
+  }
+
+  .amc-re-custom-container {
+    max-width: 900px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-re-custom-box {
+    background: linear-gradient(135deg, #1a2b4a 0%, #0f1a2e 100%) !important;
+    border-radius: 20px !important;
+    padding: 40px 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 32px !important;
+  }
+
+  .amc-re-custom-icon {
+    width: 64px !important;
+    height: 64px !important;
+    background: rgba(184, 151, 106, 0.2) !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  .amc-re-custom-icon svg {
+    width: 28px !important;
+    height: 28px !important;
+    color: #b8976a !important;
+  }
+
+  .amc-re-custom-content {
+    flex: 1 !important;
+  }
+
+  .amc-re-custom-content h3 {
+    color: #ffffff !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  .amc-re-custom-content p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 15px !important;
+    margin: 0 !important;
+  }
+
+  .amc-re-custom-box .amc-re-btn-primary {
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+    flex-shrink: 0 !important;
+  }
+
+  .amc-re-custom-box .amc-re-btn-primary:hover {
+    background: #ffffff !important;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .amc-re-testimonials {
+    background: linear-gradient(135deg, #1a2b4a 0%, #0f1a2e 100%) !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-re-testimonials-container {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-re-testimonials-header {
+    text-align: center !important;
+    margin-bottom: 48px !important;
+  }
+
+  .amc-re-testimonials-header .amc-re-eyebrow {
+    color: #b8976a !important;
+  }
+
+  .amc-re-testimonials-header .amc-re-headline {
+    color: #ffffff !important;
+  }
+
+  .amc-re-testimonials-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .amc-re-testimonial-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    padding: 32px !important;
+  }
+
+  .amc-re-testimonial-quote {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    margin: 0 0 20px 0 !important;
+    font-style: italic !important;
+  }
+
+  .amc-re-testimonial-author {
+    color: #b8976a !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+  }
+
+  .amc-re-testimonial-featured {
+    grid-column: span 2 !important;
+    background: rgba(184, 151, 106, 0.1) !important;
+    border: 1px solid rgba(184, 151, 106, 0.3) !important;
+  }
+
+  .amc-re-testimonial-featured .amc-re-testimonial-quote {
+    font-size: 17px !important;
+  }
+
+  /* ===== SIGNUP OFFER ===== */
+  .amc-re-signup {
+    background: #f8f9fa !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-re-signup-container {
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-re-signup-box {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 48px !important;
+    text-align: center !important;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .amc-re-signup-badge {
+    display: inline-block !important;
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    padding: 8px 20px !important;
+    border-radius: 50px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .amc-re-signup-headline {
+    color: #1a2b4a !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    margin: 0 0 12px 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  .amc-re-signup-text {
+    color: #666 !important;
+    font-size: 15px !important;
+    margin: 0 0 28px 0 !important;
+  }
+
+  .amc-re-signup-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .amc-re-signup-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  .amc-re-signup-input {
+    padding: 14px 18px !important;
+    border: 1px solid rgba(26, 43, 74, 0.2) !important;
+    border-radius: 8px !important;
+    font-size: 15px !important;
+    font-family: inherit !important;
+    transition: border-color 0.3s ease !important;
+    background: #ffffff !important;
+    color: #1a2b4a !important;
+  }
+
+  .amc-re-signup-input::placeholder {
+    color: #666 !important;
+  }
+
+  .amc-re-signup-input:focus {
+    outline: none !important;
+    border-color: #1a2b4a !important;
+  }
+
+  .amc-re-signup-submit {
+    background: #1a2b4a !important;
+    color: #ffffff !important;
+    padding: 16px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-family: inherit !important;
+  }
+
+  .amc-re-signup-submit:hover {
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+  }
+
+  .amc-re-signup-disclaimer {
+    color: #999 !important;
+    font-size: 12px !important;
+    margin-top: 12px !important;
+  }
+
+  /* ===== CTA SECTION ===== */
+  .amc-re-cta {
+    background: #ffffff !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-re-cta-container {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-re-cta-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .amc-re-cta-card {
+    border-radius: 20px !important;
+    padding: 48px !important;
+    text-align: center !important;
+  }
+
+  .amc-re-cta-card.existing {
+    background: #f8f9fa !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .amc-re-cta-card.new {
+    background: linear-gradient(135deg, #1a2b4a 0%, #0f1a2e 100%) !important;
+  }
+
+  .amc-re-cta-icon {
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 20px auto !important;
+  }
+
+  .amc-re-cta-card.existing .amc-re-cta-icon {
+    background: rgba(26, 43, 74, 0.1) !important;
+  }
+
+  .amc-re-cta-card.new .amc-re-cta-icon {
+    background: rgba(184, 151, 106, 0.2) !important;
+  }
+
+  .amc-re-cta-icon svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .amc-re-cta-card.existing .amc-re-cta-icon svg {
+    color: #1a2b4a !important;
+  }
+
+  .amc-re-cta-card.new .amc-re-cta-icon svg {
+    color: #b8976a !important;
+  }
+
+  .amc-re-cta-card h3 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  .amc-re-cta-card.existing h3 {
+    color: #1a2b4a !important;
+  }
+
+  .amc-re-cta-card.new h3 {
+    color: #ffffff !important;
+  }
+
+  .amc-re-cta-card p {
+    font-size: 15px !important;
+    margin: 0 0 24px 0 !important;
+  }
+
+  .amc-re-cta-card.existing p {
+    color: #666 !important;
+  }
+
+  .amc-re-cta-card.new p {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  .amc-re-cta-card.existing .amc-re-btn-primary {
+    background: #1a2b4a !important;
+  }
+
+  .amc-re-cta-card.new .amc-re-btn-primary {
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+  }
+
+  .amc-re-cta-card.new .amc-re-btn-primary:hover {
+    background: #ffffff !important;
+  }
+
+  /* ===== FAQ SECTION ===== */
+  .amc-re-faq {
+    background: #f8f9fa !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-re-faq-container {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-re-faq-header {
+    text-align: center !important;
+    margin-bottom: 48px !important;
+  }
+
+  .amc-re-faq-item {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    margin-bottom: 12px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .amc-re-faq-item:hover {
+    border-color: #d1d5db !important;
+  }
+
+  .amc-re-faq-question {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 20px 24px !important;
+    background: #ffffff !important;
+    border: none !important;
+    cursor: pointer !important;
+    text-align: left !important;
+    font-family: inherit !important;
+    transition: background 0.3s ease !important;
+  }
+
+  .amc-re-faq-question:hover {
+    background: #f9fafb !important;
+  }
+
+  .amc-re-faq-question-text {
+    color: #1a2b4a !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    padding-right: 16px !important;
+  }
+
+  .amc-re-faq-icon {
+    width: 24px !important;
+    height: 24px !important;
+    color: #b8976a !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  .amc-re-faq-item.active .amc-re-faq-icon {
+    transform: rotate(45deg) !important;
+  }
+
+  .amc-re-faq-answer {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease !important;
+  }
+
+  .amc-re-faq-item.active .amc-re-faq-answer {
+    max-height: 300px !important;
+  }
+
+  .amc-re-faq-answer-inner {
+    padding: 0 24px 24px 24px !important;
+    color: #555 !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .amc-re-gallery-grid {
+      grid-template-columns: repeat(6, 1fr) !important;
+    }
+
+    .amc-re-gallery-item:nth-child(1) {
+      grid-column: span 6 !important;
+      grid-row: span 1 !important;
+      min-height: 350px !important;
+    }
+
+    .amc-re-gallery-item:nth-child(2),
+    .amc-re-gallery-item:nth-child(3) {
+      grid-column: span 3 !important;
+    }
+
+    .amc-re-gallery-item:nth-child(4),
+    .amc-re-gallery-item:nth-child(5),
+    .amc-re-gallery-item:nth-child(6),
+    .amc-re-gallery-item:nth-child(7) {
+      grid-column: span 3 !important;
+    }
+
+    .amc-re-custom-box {
+      flex-direction: column !important;
+      text-align: center !important;
+      padding: 32px !important;
+    }
+
+    .amc-re-custom-content {
+      text-align: center !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .amc-re-intro,
+    .amc-re-gallery,
+    .amc-re-pricing,
+    .amc-re-video-section,
+    .amc-re-testimonials,
+    .amc-re-signup,
+    .amc-re-cta,
+    .amc-re-faq,
+    .amc-re-custom {
+      padding: 60px 20px !important;
+    }
+
+    .amc-re-headline {
+      font-size: 28px !important;
+    }
+
+    .amc-re-pricing-grid,
+    .amc-re-tours-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .amc-re-video-grid,
+    .amc-re-social-video-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .amc-re-photo-addons-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .amc-re-gallery-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .amc-re-gallery-item:nth-child(1),
+    .amc-re-gallery-item:nth-child(2),
+    .amc-re-gallery-item:nth-child(3),
+    .amc-re-gallery-item:nth-child(4),
+    .amc-re-gallery-item:nth-child(5),
+    .amc-re-gallery-item:nth-child(6),
+    .amc-re-gallery-item:nth-child(7) {
+      grid-column: span 1 !important;
+      min-height: 250px !important;
+    }
+
+    .amc-re-testimonials-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .amc-re-testimonial-featured {
+      grid-column: span 1 !important;
+    }
+
+    .amc-re-cta-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .amc-re-signup-row {
+      grid-template-columns: 1fr !important;
+    }
+
+    .amc-re-signup-box {
+      padding: 32px 24px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .amc-re-intro-ctas {
+      flex-direction: column !important;
+    }
+
+    .amc-re-btn {
+      width: 100% !important;
+      justify-content: center !important;
+    }
+  }
+</style>
+
+<!-- ===== INTRO SECTION ===== -->
+<section class="amc-re-intro">
+  <div class="amc-re-intro-container">
+    <p class="amc-re-intro-text">Since 2016, we've been the trusted partner for real estate agents across Massachusetts and New Hampshire. Our professional photography, engaging video tours, and aerial imagery help you secure more listings, sell properties faster, and build your reputation as the go-to agent in your market.</p>
+    <div class="amc-re-intro-ctas">
+      <a href="https://property.listingmedia.io/" class="amc-re-btn amc-re-btn-primary" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        Agent Login
+      </a>
+      <a href="mailto:info@amcreativemktg.com?subject=Real%20Estate%20Photo%20Shoot%20Request" class="amc-re-btn amc-re-btn-secondary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m3 8 9 6 9-6"/></svg>
+        Request a Shoot
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY SECTION ===== -->
+<section class="amc-re-gallery">
+  <div class="amc-re-gallery-container">
+    <div class="amc-re-section-header">
+      <p class="amc-re-eyebrow">Our Work</p>
+      <h2 class="amc-re-headline">Professional Imagery That Sells</h2>
+    </div>
+    <div class="amc-re-gallery-grid">
+      <!-- Video -->
+      <div class="amc-re-gallery-item amc-re-gallery-video">
+        <video id="reGalleryVideo" muted loop playsinline>
+          <source src="https://amcreativemktg.com/wp-content/uploads/2025/11/54-Hay-St-Wide.mp4" type="video/mp4">
+        </video>
+        <div class="amc-re-video-overlay" id="reVideoOverlay">
+          <div class="amc-re-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+        <span class="amc-re-gallery-badge">Video Tour</span>
+      </div>
+      <!-- Image 2 - Aerial -->
+      <div class="amc-re-gallery-item">
+        <img src="https://amcreativemktg.com/wp-content/uploads/2025/11/1-jefferson-48.webp" alt="Aerial real estate photography" loading="lazy">
+        <span class="amc-re-gallery-badge">Aerial</span>
+      </div>
+      <!-- Image 3 -->
+      <div class="amc-re-gallery-item">
+        <img src="https://amcreativemktg.com/wp-content/uploads/2025/11/19-Warren-St-36-scaled-1.jpg" alt="Professional interior photography" loading="lazy">
+      </div>
+      <!-- Image 4 -->
+      <div class="amc-re-gallery-item">
+        <img src="https://amcreativemktg.com/wp-content/uploads/2025/11/Copy-of-DSC02983-scaled-1.jpg" alt="Real estate interior" loading="lazy">
+      </div>
+      <!-- Image 5 -->
+      <div class="amc-re-gallery-item">
+        <img src="https://amcreativemktg.com/wp-content/uploads/2025/11/Copy-of-DSC02971-scaled-1.jpg" alt="Kitchen photography" loading="lazy">
+      </div>
+      <!-- Image 6 -->
+      <div class="amc-re-gallery-item">
+        <img src="https://amcreativemktg.com/wp-content/uploads/2025/11/Copy-of-DSC02816-scaled-1.jpg" alt="Living space photography" loading="lazy">
+      </div>
+      <!-- Image 7 -->
+      <div class="amc-re-gallery-item">
+        <img src="https://amcreativemktg.com/wp-content/uploads/2025/11/Copy-of-DSC02809-scaled-1.jpg" alt="Bedroom photography" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHOTOGRAPHY PRICING ===== -->
+<section class="amc-re-pricing">
+  <div class="amc-re-pricing-container">
+    <div class="amc-re-section-header">
+      <p class="amc-re-eyebrow">Photography</p>
+      <h2 class="amc-re-headline">Professional Listing Photos</h2>
+    </div>
+    <div class="amc-re-pricing-grid">
+      <div class="amc-re-pricing-card">
+        <h4 class="amc-re-pricing-title">0-2,000 Sq Ft</h4>
+        <p class="amc-re-pricing-desc">Premium photos inside and out</p>
+        <div class="amc-re-pricing-amount">$285</div>
+      </div>
+      <div class="amc-re-pricing-card featured">
+        <h4 class="amc-re-pricing-title">2,000-3,000 Sq Ft</h4>
+        <p class="amc-re-pricing-desc">Professional, stunning photos</p>
+        <div class="amc-re-pricing-amount">$325</div>
+      </div>
+      <div class="amc-re-pricing-card">
+        <h4 class="amc-re-pricing-title">3,000-5,000 Sq Ft</h4>
+        <p class="amc-re-pricing-desc">Expertly crafted imagery</p>
+        <div class="amc-re-pricing-amount">$425</div>
+      </div>
+    </div>
+
+    <!-- Photography Add-Ons -->
+    <div class="amc-re-photo-addons">
+      <h3 class="amc-re-photo-addons-title">Photography Add-Ons</h3>
+      <div class="amc-re-photo-addons-grid">
+        <div class="amc-re-photo-addon-item">
+          <span class="amc-re-photo-addon-name">Floor Plans</span>
+          <span class="amc-re-photo-addon-note">Up to 4,000 sq ft</span>
+          <span class="amc-re-photo-addon-price">+$120</span>
+        </div>
+        <div class="amc-re-photo-addon-item">
+          <span class="amc-re-photo-addon-name">Aerial Photos</span>
+          <span class="amc-re-photo-addon-note">Drone photography</span>
+          <span class="amc-re-photo-addon-price">+$85</span>
+        </div>
+        <div class="amc-re-photo-addon-item">
+          <span class="amc-re-photo-addon-name">Twilight Photos</span>
+          <span class="amc-re-photo-addon-note">Golden hour magic</span>
+          <span class="amc-re-photo-addon-price">+$30</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEO PACKAGES ===== -->
+<section class="amc-re-video-section">
+  <div class="amc-re-video-container">
+    <div class="amc-re-video-intro">
+      <p class="amc-re-eyebrow">Video Packages</p>
+      <h2 class="amc-re-headline">Full Production Video Tours</h2>
+      <p>High-quality video for stunning property tours and maximum seller impact. Video packages include photos, floor plans, and aerial shots. Both wide and vertical formats showcasing the entire property and the agent.</p>
+    </div>
+    <div class="amc-re-tours-grid">
+      <div class="amc-re-tours-card">
+        <h4>0-2,000 Sq Ft</h4>
+        <div class="amc-re-tours-card-price">$1,050</div>
+        <p class="amc-re-tours-card-includes">Includes photos, floor plan, aerial</p>
+      </div>
+      <div class="amc-re-tours-card">
+        <h4>2,000-4,000 Sq Ft</h4>
+        <div class="amc-re-tours-card-price">$1,150</div>
+        <p class="amc-re-tours-card-includes">Includes photos, floor plan, aerial</p>
+      </div>
+      <div class="amc-re-tours-card">
+        <h4>4,000-6,000 Sq Ft</h4>
+        <div class="amc-re-tours-card-price">$1,350</div>
+        <p class="amc-re-tours-card-includes">Includes photos, floor plan, aerial</p>
+      </div>
+    </div>
+
+    <!-- Social Media Video Add-Ons -->
+    <div class="amc-re-social-video-section">
+      <h3 class="amc-re-social-video-title">Social Media Video Add-Ons</h3>
+      <p class="amc-re-social-video-desc">Add vertical video content to any photo shoot. Perfect for Instagram, TikTok, and Facebook.</p>
+      <div class="amc-re-social-video-grid">
+        <div class="amc-re-social-video-card">
+          <div class="amc-re-social-video-header">
+            <span class="amc-re-social-video-badge">Build Your Library</span>
+            <h4>Raw Video Clips</h4>
+          </div>
+          <p>Professionally colored and stabilized video clips, ready to edit into your social posts, Canva templates, and future marketing materials.</p>
+          <div class="amc-re-social-video-price">+$200</div>
+        </div>
+        <div class="amc-re-social-video-card">
+          <div class="amc-re-social-video-header">
+            <span class="amc-re-social-video-badge">Ready to Post</span>
+            <h4>Social Media Video Tour</h4>
+          </div>
+          <p>Approximately 60-second edited vertical video, fully optimized for social platforms. Just post and watch the engagement roll in.</p>
+          <div class="amc-re-social-video-price">+$300</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CUSTOM MARKETING ===== -->
+<section class="amc-re-custom">
+  <div class="amc-re-custom-container">
+    <div class="amc-re-custom-box">
+      <div class="amc-re-custom-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </div>
+      <div class="amc-re-custom-content">
+        <h3>Need Something Custom?</h3>
+        <p>Paid ads, virtual staging, agent branding videos, and more. Let's talk about your marketing needs.</p>
+      </div>
+      <a href="mailto:info@amcreativemktg.com?subject=Custom%20Real%20Estate%20Marketing%20Inquiry" class="amc-re-btn amc-re-btn-primary">
+        Inquire
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="amc-re-testimonials">
+  <div class="amc-re-testimonials-container">
+    <div class="amc-re-testimonials-header">
+      <p class="amc-re-eyebrow">Testimonials</p>
+      <h2 class="amc-re-headline">What Agents Are Saying</h2>
+    </div>
+    <div class="amc-re-testimonials-grid">
+      <div class="amc-re-testimonial-card amc-re-testimonial-featured">
+        <p class="amc-re-testimonial-quote">"Jon and his team have been so integral to the success of my business! I cannot imagine listing a property without him! He has helped me create a brand and connect with my clients on a super personal level with the use of video. His photography, drone work and property videos are beautiful, are always my most engaged with content on social media, and help me market my clients' homes at the highest level. I have earned listings and clients because of the quality of work he produces."</p>
+        <p class="amc-re-testimonial-author">MA & NH Real Estate Agent</p>
+      </div>
+      <div class="amc-re-testimonial-card">
+        <p class="amc-re-testimonial-quote">"We have been working with Jon for a few years now and couldn't ask for a better partner. As a photographer myself, I am so impressed with the work that Jon does. His video editing, creativity, and customer service skills are outstanding. He always goes above and beyond to accommodate our requests."</p>
+        <p class="amc-re-testimonial-author">Newburyport Agents</p>
+      </div>
+      <div class="amc-re-testimonial-card">
+        <p class="amc-re-testimonial-quote">"Jon at AM Creative is great! I have used him many times for listing photos, videos, aerials and floor plans. He does amazing work, is always on time, and is fun to work with! I highly recommend him for your marketing needs."</p>
+        <p class="amc-re-testimonial-author">Cheryl Grant, MA & NH Agent</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10% SIGNUP ===== -->
+<section class="amc-re-signup">
+  <div class="amc-re-signup-container">
+    <div class="amc-re-signup-box">
+      <span class="amc-re-signup-badge">Save 10%</span>
+      <h3 class="amc-re-signup-headline">Join Our Email List & Save</h3>
+      <p class="amc-re-signup-text">Sign up for our newsletter and receive 10% off any listing media package.</p>
+      <form class="amc-re-signup-form" action="#" method="post">
+        <div class="amc-re-signup-row">
+          <input type="text" name="first_name" placeholder="First Name" class="amc-re-signup-input" required>
+          <input type="email" name="email" placeholder="Email" class="amc-re-signup-input" required>
+        </div>
+        <button type="submit" class="amc-re-signup-submit">Get My 10% Discount</button>
+      </form>
+      <p class="amc-re-signup-disclaimer">Your information is never shared. Opt out at any time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA SECTION ===== -->
+<section class="amc-re-cta">
+  <div class="amc-re-cta-container">
+    <div class="amc-re-cta-grid">
+      <div class="amc-re-cta-card existing">
+        <div class="amc-re-cta-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        </div>
+        <h3>Existing Client?</h3>
+        <p>Access your photos, videos, and downloads in our client portal.</p>
+        <a href="https://property.listingmedia.io/" class="amc-re-btn amc-re-btn-primary" target="_blank">
+          Agent Login
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="amc-re-cta-card new">
+        <div class="amc-re-cta-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m3 8 9 6 9-6"/></svg>
+        </div>
+        <h3>Ready to Book?</h3>
+        <p>Send us an email with your property details and we'll get you scheduled.</p>
+        <a href="mailto:info@amcreativemktg.com?subject=Real%20Estate%20Photo%20Shoot%20Request" class="amc-re-btn amc-re-btn-primary">
+          Request a Shoot
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="amc-re-faq">
+  <div class="amc-re-faq-container">
+    <div class="amc-re-faq-header">
+      <p class="amc-re-eyebrow">Questions</p>
+      <h2 class="amc-re-headline">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="amc-re-faq-item">
+      <button class="amc-re-faq-question" aria-expanded="false">
+        <span class="amc-re-faq-question-text">What areas do you serve?</span>
+        <svg class="amc-re-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <div class="amc-re-faq-answer">
+        <div class="amc-re-faq-answer-inner">
+          We serve real estate agents within about 20 miles of Newburyport, MA, including the North Shore, Merrimack Valley, and Southern NH Seacoast areas.
+        </div>
+      </div>
+    </div>
+
+    <div class="amc-re-faq-item">
+      <button class="amc-re-faq-question" aria-expanded="false">
+        <span class="amc-re-faq-question-text">How quickly can I get my photos?</span>
+        <svg class="amc-re-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <div class="amc-re-faq-answer">
+        <div class="amc-re-faq-answer-inner">
+          Standard turnaround for photography is 24-48 hours. Video tours typically take 3-5 business days depending on complexity. Rush delivery is available upon request.
+        </div>
+      </div>
+    </div>
+
+    <div class="amc-re-faq-item">
+      <button class="amc-re-faq-question" aria-expanded="false">
+        <span class="amc-re-faq-question-text">What's included in the video tours?</span>
+        <svg class="amc-re-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <div class="amc-re-faq-answer">
+        <div class="amc-re-faq-answer-inner">
+          Our full video tour packages include professional photography, floor plans, aerial shots, and both wide (horizontal) and vertical video formats. You'll get content optimized for MLS, social media, and your website.
+        </div>
+      </div>
+    </div>
+
+    <div class="amc-re-faq-item">
+      <button class="amc-re-faq-question" aria-expanded="false">
+        <span class="amc-re-faq-question-text">How do I access my photos after the shoot?</span>
+        <svg class="amc-re-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <div class="amc-re-faq-answer">
+        <div class="amc-re-faq-answer-inner">
+          All your photos and videos are delivered through our secure client portal. You'll receive login credentials and can access, download, and share your media anytime.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Video Play/Pause Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Video play/pause functionality
+  const video = document.getElementById('reGalleryVideo');
+  const overlay = document.getElementById('reVideoOverlay');
+  
+  if (video && overlay) {
+    video.addEventListener('click', function() {
+      if (video.paused) {
+        video.play();
+        overlay.classList.add('hidden');
+      } else {
+        video.pause();
+        overlay.classList.remove('hidden');
+      }
+    });
+  }
+
+  // FAQ accordion functionality
+  const faqItems = document.querySelectorAll('.amc-re-faq-item');
+  faqItems.forEach(function(item) {
+    const question = item.querySelector('.amc-re-faq-question');
+    question.addEventListener('click', function() {
+      const isActive = item.classList.contains('active');
+      // Close all items
+      faqItems.forEach(function(i) {
+        i.classList.remove('active');
+        i.querySelector('.amc-re-faq-question').setAttribute('aria-expanded', 'false');
+      });
+      // Open clicked item if it wasn't active
+      if (!isActive) {
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+});
+</script>
