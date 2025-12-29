@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Fence & Site Services | Olympic Fence MA</title>
+    <meta name="description" content="Professional commercial fence services including ground coring, bollard installation, concrete anchoring, parking lot signs, and warehouse safety systems. Serving North Shore Massachusetts businesses and municipalities since 1985.">
+    
+    <link rel="canonical" href="https://olympicfencema.com/commercial-services/">
+    
+    <meta property="og:title" content="Commercial Fence & Site Services | Olympic Fence MA">
+    <meta property="og:description" content="Professional coring, bollards, concrete anchoring, parking lot signs, and indoor safety installations for North Shore Massachusetts businesses and municipalities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://olympicfencema.com/commercial-services/">
+    
+    <style>
+        /* ============================================
+           Olympic Fence Commercial Services Page v3
+           CSS Namespace: .ofc-comm-
+           Brand Colors: #272262 (primary), #4a4494 (accent)
+           ============================================ */
+        
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --ofc-primary: #272262;
+            --ofc-primary-hover: #4a4494;
+            --ofc-text-dark: #333333;
+            --ofc-text-light: #666666;
+            --ofc-bg-light: #f8f9fa;
+            --ofc-border: #e9ecef;
+            --ofc-white: #ffffff;
+            --ofc-star: #ffc107;
+            --ofc-success: #28a745;
+        }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--ofc-text-dark);
+            background: var(--ofc-white);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--ofc-primary);
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        
+        h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2rem); margin-bottom: 1rem; }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); margin-bottom: 0.75rem; }
+        h4 { font-size: 1.125rem; margin-bottom: 0.5rem; font-weight: 600; }
+        
+        p { margin-bottom: 1rem; }
+        
+        a {
+            color: var(--ofc-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover { color: var(--ofc-primary-hover); }
+        
+        .ofc-comm-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Breadcrumbs */
+        .ofc-comm-breadcrumbs {
+            background: var(--ofc-bg-light);
+            padding: 12px 0;
+            font-size: 0.875rem;
+        }
+        
+        .ofc-comm-breadcrumbs a { color: var(--ofc-text-light); }
+        .ofc-comm-breadcrumbs a:hover { color: var(--ofc-primary); }
+        .ofc-comm-breadcrumbs span { color: var(--ofc-text-light); margin: 0 8px; }
+        .ofc-comm-breadcrumbs .current { color: var(--ofc-primary); font-weight: 500; }
+        
+        /* Hero/Trust Bar */
+        .ofc-comm-hero {
+            background: linear-gradient(135deg, var(--ofc-primary) 0%, #1a1847 100%);
+            color: var(--ofc-white);
+            padding: 40px 0;
+        }
+        
+        .ofc-comm-trust-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .ofc-comm-trust-item { text-align: center; }
+        
+        .ofc-comm-trust-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--ofc-white);
+            display: block;
+        }
+        
+        .ofc-comm-trust-sublabel {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        @media (max-width: 768px) {
+            .ofc-comm-trust-bar { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        /* Buttons */
+        .ofc-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--ofc-primary);
+            color: var(--ofc-white);
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+        }
+        
+        .ofc-btn-primary:hover {
+            background: var(--ofc-primary-hover);
+            color: var(--ofc-white);
+        }
+        
+        a.ofc-btn-secondary,
+        .ofc-btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: var(--ofc-white);
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            border: 2px solid var(--ofc-white);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        a.ofc-btn-secondary:hover,
+        .ofc-btn-secondary:hover {
+            background: var(--ofc-white);
+            color: var(--ofc-primary);
+        }
+        
+        .ofc-btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: var(--ofc-primary);
+            padding: 12px 24px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 5px;
+            border: 2px solid var(--ofc-primary);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .ofc-btn-outline:hover {
+            background: var(--ofc-primary);
+            color: var(--ofc-white);
+        }
+        
+        /* Section Header */
+        .ofc-comm-section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+        
+        .ofc-comm-section-header p {
+            color: var(--ofc-text-light);
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+        
+        /* Intro Section */
+        .ofc-comm-intro {
+            padding: 60px 0;
+            background: var(--ofc-white);
+        }
+        
+        .ofc-comm-intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .ofc-comm-intro-content a {
+            font-weight: 500;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        
+        /* Who We Serve */
+        .ofc-comm-audience {
+            padding: 60px 0;
+            background: var(--ofc-bg-light);
+        }
+        
+        .ofc-comm-audience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+        
+        .ofc-comm-audience-card {
+            background: var(--ofc-white);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--ofc-border);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .ofc-comm-audience-card:hover {
+            box-shadow: 0 4px 12px rgba(39, 34, 98, 0.1);
+        }
+        
+        .ofc-comm-audience-card h4 {
+            color: var(--ofc-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .ofc-comm-audience-card p {
+            font-size: 0.9rem;
+            color: var(--ofc-text-light);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 900px) {
+            .ofc-comm-audience-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 600px) {
+            .ofc-comm-audience-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* ==========================================
+           SERVICES OVERVIEW GRID - NEW LAYOUT
+           ========================================== */
+        .ofc-comm-services-overview {
+            padding: 70px 0;
+            background: var(--ofc-white);
+        }
+        
+        .ofc-comm-services-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.25rem;
+        }
+        
+        .ofc-comm-service-card {
+            background: var(--ofc-white);
+            border: 2px solid var(--ofc-border);
+            border-radius: 10px;
+            padding: 1.5rem 1.25rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .ofc-comm-service-card:hover {
+            border-color: var(--ofc-primary);
+            box-shadow: 0 8px 24px rgba(39, 34, 98, 0.12);
+            transform: translateY(-4px);
+        }
+        
+        .ofc-comm-service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--ofc-bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.75rem;
+        }
+        
+        .ofc-comm-service-card:hover .ofc-comm-service-icon {
+            background: var(--ofc-primary);
+        }
+        
+        .ofc-comm-service-card:hover .ofc-comm-service-icon span {
+            filter: brightness(0) invert(1);
+        }
+        
+        .ofc-comm-service-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--ofc-primary);
+        }
+        
+        .ofc-comm-service-card p {
+            font-size: 0.85rem;
+            color: var(--ofc-text-light);
+            margin-bottom: 0;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        
+        .ofc-comm-service-card .ofc-comm-card-link {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--ofc-primary);
+        }
+        
+        .ofc-comm-service-card:hover .ofc-comm-card-link {
+            color: var(--ofc-primary-hover);
+        }
+        
+        @media (max-width: 1100px) {
+            .ofc-comm-services-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        @media (max-width: 700px) {
+            .ofc-comm-services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 480px) {
+            .ofc-comm-services-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* ==========================================
+           SERVICE DETAIL SECTIONS - SIMPLIFIED
+           ========================================== */
+        .ofc-comm-details {
+            padding: 80px 0;
+            background: var(--ofc-bg-light);
+        }
+        
+        .ofc-comm-detail-block {
+            background: var(--ofc-white);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .ofc-comm-detail-block:last-child {
+            margin-bottom: 0;
+        }
+        
+        .ofc-comm-detail-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        
+        .ofc-comm-detail-image-placeholder {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #e9ecef 0%, #d1d5db 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ofc-text-light);
+            font-size: 1rem;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .ofc-comm-detail-content {
+            padding: 2rem;
+        }
+        
+        .ofc-comm-detail-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .ofc-comm-detail-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+        
+        .ofc-comm-detail-tag {
+            display: inline-block;
+            background: var(--ofc-primary);
+            color: var(--ofc-white);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .ofc-comm-detail-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .ofc-comm-what-box {
+            background: var(--ofc-bg-light);
+            border-left: 4px solid var(--ofc-primary);
+            padding: 1.25rem;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .ofc-comm-what-box h4 {
+            color: var(--ofc-primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .ofc-comm-what-box p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+        
+        .ofc-comm-process-box h4 {
+            color: var(--ofc-primary);
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .ofc-comm-process-list {
+            list-style: none;
+        }
+        
+        .ofc-comm-process-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .ofc-comm-process-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 8px;
+            height: 8px;
+            background: var(--ofc-primary);
+            border-radius: 50%;
+        }
+        
+        .ofc-comm-detail-footer {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--ofc-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .ofc-comm-detail-highlight {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--ofc-text-dark);
+        }
+        
+        .ofc-comm-detail-highlight .icon {
+            color: var(--ofc-success);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 800px) {
+            .ofc-comm-detail-body {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .ofc-comm-detail-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        /* Capabilities Mini-Grid */
+        .ofc-comm-capabilities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .ofc-comm-capability {
+            background: var(--ofc-bg-light);
+            padding: 0.6rem 0.8rem;
+            border-radius: 5px;
+            font-size: 0.85rem;
+        }
+        
+        .ofc-comm-capability strong {
+            color: var(--ofc-primary);
+            display: block;
+            font-size: 0.8rem;
+            margin-bottom: 2px;
+        }
+        
+        @media (max-width: 500px) {
+            .ofc-comm-capabilities { grid-template-columns: 1fr; }
+        }
+        
+        /* Why Choose Section */
+        .ofc-comm-why-section {
+            background: linear-gradient(135deg, var(--ofc-primary) 0%, #1a1847 100%);
+            color: var(--ofc-white);
+            padding: 70px 0;
+        }
+        
+        .ofc-comm-why-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .ofc-comm-why-header h2 { color: var(--ofc-white); }
+        
+        .ofc-comm-why-header p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.05rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .ofc-comm-why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+        
+        .ofc-comm-why-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        
+        .ofc-comm-why-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-3px);
+        }
+        
+        .ofc-comm-why-card h4 {
+            color: var(--ofc-white);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .ofc-comm-why-card h4 .check {
+            color: var(--ofc-star);
+        }
+        
+        .ofc-comm-why-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+        
+        .ofc-comm-service-badge {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+        
+        .ofc-comm-service-badge span {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .ofc-comm-service-badge strong { color: var(--ofc-white); }
+        
+        @media (max-width: 900px) {
+            .ofc-comm-why-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 600px) {
+            .ofc-comm-why-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* FAQ Section */
+        .ofc-comm-faq {
+            padding: 70px 0;
+            background: var(--ofc-white);
+        }
+        
+        .ofc-comm-faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        
+        .ofc-comm-faq-item {
+            background: var(--ofc-bg-light);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        
+        .ofc-comm-faq-q {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 1.25rem;
+            background: var(--ofc-bg-light);
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-weight: 600;
+            color: var(--ofc-primary);
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: background 0.3s ease;
+        }
+        
+        .ofc-comm-faq-q:hover { background: #eef0f2; }
+        
+        .ofc-comm-faq-q::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--ofc-primary);
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+        
+        .ofc-comm-faq-item.active .ofc-comm-faq-q::after { content: '−'; }
+        
+        .ofc-comm-faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .ofc-comm-faq-a-inner {
+            padding: 0 1.25rem 1.1rem;
+            color: var(--ofc-text-light);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        
+        .ofc-comm-faq-item.active .ofc-comm-faq-a { max-height: 300px; }
+        
+        /* CTA Section */
+        .ofc-comm-cta {
+            background: var(--ofc-primary);
+            color: var(--ofc-white);
+            padding: 70px 0;
+            text-align: center;
+        }
+        
+        .ofc-comm-cta-inner {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        
+        .ofc-comm-cta h2 {
+            color: var(--ofc-white);
+            margin-bottom: 1rem;
+        }
+        
+        .ofc-comm-cta p {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.75rem;
+        }
+        
+        .ofc-comm-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .ofc-comm-cta-buttons .ofc-btn-primary {
+            background: var(--ofc-white);
+            color: var(--ofc-primary);
+        }
+        
+        .ofc-comm-cta-buttons .ofc-btn-primary:hover { background: var(--ofc-bg-light); }
+        
+        .ofc-comm-cta-note {
+            margin-top: 1.25rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.75);
+        }
+        
+        /* Footer Links */
+        .ofc-comm-footer-links {
+            background: var(--ofc-bg-light);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid var(--ofc-border);
+        }
+        
+        .ofc-comm-footer-links p {
+            color: var(--ofc-text-light);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        .ofc-comm-footer-links a { font-weight: 500; }
+    </style>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Commercial Fence Services",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Olympic Fence Company",
+            "image": "https://olympicfencema.com/wp-content/uploads/2025/09/Olympic-new-square-logo-white.png",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "81 Garden Street",
+                "addressLocality": "West Newbury",
+                "addressRegion": "MA",
+                "postalCode": "01985",
+                "addressCountry": "US"
+            },
+            "telephone": "978-997-2302",
+            "email": "jlapierre@olympicfencema.com",
+            "url": "https://olympicfencema.com",
+            "priceRange": "$$",
+            "foundingDate": "1985"
+        },
+        "areaServed": "North Shore Massachusetts",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Commercial Fence Services",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ground Coring Services"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bollard Installation & Repair"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Anchoring & Fastening"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Parking Lot Sign Installation"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Indoor Guardrails & Safety Systems"}}
+            ]
+        }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can you work around our business hours?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we schedule commercial installations during nights, weekends, or off-peak hours to minimize disruption to your operations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you handle municipal bidding processes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We're experienced with government procurement requirements and can provide necessary documentation, insurance certificates, and references for your bid process."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's your typical lead time for commercial projects?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Commercial project timelines vary based on scope. We can often accommodate urgent safety repairs within days. Planned projects typically begin within 2-4 weeks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you provide installation documentation for inspections?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we provide detailed installation records, materials specifications, and as-built documentation for insurance or regulatory inspections."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are your installations covered by warranty?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "All commercial installations include our lifetime workmanship warranty. Material warranties vary by manufacturer (typically 15-30 years for steel components)."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://olympicfencema.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://olympicfencema.com/services/"},
+            {"@type": "ListItem", "position": 3, "name": "Commercial Services", "item": "https://olympicfencema.com/commercial-services/"}
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Breadcrumbs -->
+    <nav class="ofc-comm-breadcrumbs" aria-label="Breadcrumb">
+        <div class="ofc-comm-container">
+            <a href="/">Home</a>
+            <span>›</span>
+            <a href="/services/">Services</a>
+            <span>›</span>
+            <span class="current">Commercial Services</span>
+        </div>
+    </nav>
+
+    <!-- Hero/Trust Bar -->
+    <section class="ofc-comm-hero">
+        <div class="ofc-comm-container">
+            <div class="ofc-comm-trust-bar">
+                <div class="ofc-comm-trust-item">
+                    <span class="ofc-comm-trust-label">⭐ 5.0 Google Rating</span>
+                    <span class="ofc-comm-trust-sublabel">15+ Reviews</span>
+                </div>
+                <div class="ofc-comm-trust-item">
+                    <span class="ofc-comm-trust-label">🛡️ Lifetime Warranty</span>
+                    <span class="ofc-comm-trust-sublabel">Workmanship Guaranteed</span>
+                </div>
+                <div class="ofc-comm-trust-item">
+                    <span class="ofc-comm-trust-label">✓ Licensed & Insured</span>
+                    <span class="ofc-comm-trust-sublabel">Full Coverage</span>
+                </div>
+                <div class="ofc-comm-trust-item">
+                    <span class="ofc-comm-trust-label">🏠 Family-Owned Since 1985</span>
+                    <span class="ofc-comm-trust-sublabel">40 Years</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="ofc-comm-intro">
+        <div class="ofc-comm-container">
+            <div class="ofc-comm-intro-content">
+                <p>Olympic Fence provides specialized commercial services beyond traditional fence installation across North Shore Massachusetts. Since 1985, our family-owned company has served businesses, municipalities, and property managers with professional coring, bollard installation, concrete anchoring, parking lot signage, and warehouse safety systems.</p>
+                <p>When your project demands expertise beyond standard <a href="/residential-projects/">residential services</a>, our commercial team delivers the technical knowledge and equipment for installations that meet regulatory standards and withstand commercial use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Serve -->
+    <section class="ofc-comm-audience">
+        <div class="ofc-comm-container">
+            <div class="ofc-comm-section-header">
+                <h2>Who We Serve</h2>
+                <p>Commercial clients across North Shore Massachusetts trust Olympic Fence for specialized installations</p>
+            </div>
+            
+            <div class="ofc-comm-audience-grid">
+                <div class="ofc-comm-audience-card">
+                    <h4>General Contractors</h4>
+                    <p>Subcontract your coring, anchoring, and bollard work to a reliable specialty partner.</p>
+                </div>
+                <div class="ofc-comm-audience-card">
+                    <h4>Plumbing Contractors</h4>
+                    <p>We drill the holes, you run the pipe. Professional coring through concrete and frozen ground.</p>
+                </div>
+                <div class="ofc-comm-audience-card">
+                    <h4>Retail Facilities</h4>
+                    <p>Big box stores, regional chains, shopping centers. Bollards, signage, and safety installations.</p>
+                </div>
+                <div class="ofc-comm-audience-card">
+                    <h4>Property Managers</h4>
+                    <p>Multi-site capabilities with consistent standards. Centralized billing and priority scheduling.</p>
+                </div>
+                <div class="ofc-comm-audience-card">
+                    <h4>Municipalities</h4>
+                    <p>Schools, parks, public facilities. Experience with bidding, prevailing wage, and compliance.</p>
+                </div>
+                <div class="ofc-comm-audience-card">
+                    <h4>Industrial & Warehouse</h4>
+                    <p>OSHA-compliant guardrails, racking protection, and safety barriers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES OVERVIEW GRID
+         ========================================== -->
+    <section class="ofc-comm-services-overview">
+        <div class="ofc-comm-container">
+            <div class="ofc-comm-section-header">
+                <h2>Our Commercial Services</h2>
+                <p>Click any service to learn more about our process and capabilities</p>
+            </div>
+            
+            <div class="ofc-comm-services-grid">
+                <a href="#coring" class="ofc-comm-service-card">
+                    <div class="ofc-comm-service-icon"><span>🔩</span></div>
+                    <h3>Ground Coring</h3>
+                    <p>Precise holes in frozen, rocky, or difficult ground for posts and foundations</p>
+                    <span class="ofc-comm-card-link">Learn More →</span>
+                </a>
+                
+                <a href="#bollards" class="ofc-comm-service-card">
+                    <div class="ofc-comm-service-icon"><span>🛡️</span></div>
+                    <h3>Bollards</h3>
+                    <p>Vehicle impact protection for storefronts, loading docks, and equipment</p>
+                    <span class="ofc-comm-card-link">Learn More →</span>
+                </a>
+                
+                <a href="#anchoring" class="ofc-comm-service-card">
+                    <div class="ofc-comm-service-icon"><span>⚓</span></div>
+                    <h3>Concrete Anchoring</h3>
+                    <p>Secure posts, rails, and equipment to existing concrete floors and slabs</p>
+                    <span class="ofc-comm-card-link">Learn More →</span>
+                </a>
+                
+                <a href="#signage" class="ofc-comm-service-card">
+                    <div class="ofc-comm-service-icon"><span>🅿️</span></div>
+                    <h3>Parking Lot Signs</h3>
+                    <p>ADA-compliant signage installation for handicapped, fire lanes, and more</p>
+                    <span class="ofc-comm-card-link">Learn More →</span>
+                </a>
+                
+                <a href="#safety" class="ofc-comm-service-card">
+                    <div class="ofc-comm-service-icon"><span>🏭</span></div>
+                    <h3>Indoor Safety</h3>
+                    <p>Warehouse guardrails, gates, and racking protection systems</p>
+                    <span class="ofc-comm-card-link">Learn More →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICE DETAIL SECTIONS
+         ========================================== -->
+    <section class="ofc-comm-details">
+        <div class="ofc-comm-container">
+            
+            <!-- Ground Coring -->
+            <div class="ofc-comm-detail-block" id="coring">
+                <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Coring.jpg" 
+                     alt="Ground coring service for fence installation in frozen or rocky ground - Olympic Fence MA" 
+                     class="ofc-comm-detail-image" loading="lazy">
+                <div class="ofc-comm-detail-content">
+                    <div class="ofc-comm-detail-header">
+                        <h3>Ground Coring Services</h3>
+                        <span class="ofc-comm-detail-tag">Specialized Service</span>
+                    </div>
+                    <div class="ofc-comm-detail-body">
+                        <div class="ofc-comm-what-box">
+                            <h4>What It Is</h4>
+                            <p>Ground coring creates precise holes in frozen, rocky, or difficult ground conditions to install fence posts, bollards, and structural supports. This specialized technique uses industrial drilling equipment to bore through concrete, ledge, frozen soil, and other challenging substrates that traditional post hole digging cannot handle.</p>
+                        </div>
+                        <div class="ofc-comm-process-box">
+                            <h4>Our Process</h4>
+                            <ul class="ofc-comm-process-list">
+                                <li>Site assessment for soil conditions and utilities</li>
+                                <li>Equipment selection (6"-24" diameter capabilities)</li>
+                                <li>Precision drilling to specified depths (36"-48" typical)</li>
+                                <li>Post installation with proper concrete fill</li>
+                                <li>Site restoration and debris removal</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ofc-comm-detail-footer">
+                        <div class="ofc-comm-detail-highlight">
+                            <span class="icon">✓</span> In-house equipment eliminates subcontractor delays
+                        </div>
+                        <a href="/contact-us/" class="ofc-btn-outline">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bollards -->
+            <div class="ofc-comm-detail-block" id="bollards">
+                <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Bollard-Installation.webp" 
+                     alt="Commercial bollard installation for property protection - Olympic Fence MA" 
+                     class="ofc-comm-detail-image" loading="lazy">
+                <div class="ofc-comm-detail-content">
+                    <div class="ofc-comm-detail-header">
+                        <h3>Bollard Installation & Repair</h3>
+                        <span class="ofc-comm-detail-tag">Safety & Protection</span>
+                    </div>
+                    <div class="ofc-comm-detail-body">
+                        <div class="ofc-comm-what-box">
+                            <h4>What It Is</h4>
+                            <p>Bollards are sturdy vertical posts designed to protect buildings, equipment, pedestrians, and property from vehicle impact. Essential for storefronts, loading docks, utility equipment, and high-traffic areas. We install new bollards and repair damaged existing installations.</p>
+                        </div>
+                        <div class="ofc-comm-process-box">
+                            <h4>Our Process</h4>
+                            <ul class="ofc-comm-process-list">
+                                <li>Protection planning and placement recommendations</li>
+                                <li>Foundation preparation (36"-42" deep)</li>
+                                <li>Steel pipe bollards (4"-12" diameter), concrete-filled</li>
+                                <li>Safety paint and reflective tape as needed</li>
+                                <li>Repair services: straightening, re-setting, replacement</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ofc-comm-detail-footer">
+                        <div class="ofc-comm-detail-highlight">
+                            <span class="icon">✓</span> Proper embedment depths rated for vehicle impacts
+                        </div>
+                        <a href="/contact-us/" class="ofc-btn-outline">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Concrete Anchoring -->
+            <div class="ofc-comm-detail-block" id="anchoring">
+                <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Screenshot-2025-12-29-at-4.17.59-PM-scaled.webp" 
+                     alt="Concrete anchor installation for guardrails and equipment mounting - Olympic Fence MA" 
+                     class="ofc-comm-detail-image" loading="lazy">
+                <div class="ofc-comm-detail-content">
+                    <div class="ofc-comm-detail-header">
+                        <h3>Concrete Anchoring & Fastening</h3>
+                        <span class="ofc-comm-detail-tag">Structural Installation</span>
+                    </div>
+                    <div class="ofc-comm-detail-body">
+                        <div class="ofc-comm-what-box">
+                            <h4>What It Is</h4>
+                            <p>Concrete anchoring secures posts, equipment mounts, safety rails, and structural elements to existing concrete slabs, floors, and foundations. This includes expansion anchors, epoxy anchoring systems, and through-bolt installations for warehouse guardrails, equipment bases, and retrofit work.</p>
+                        </div>
+                        <div class="ofc-comm-process-box">
+                            <h4>Anchor Types</h4>
+                            <div class="ofc-comm-capabilities">
+                                <div class="ofc-comm-capability">
+                                    <strong>Expansion Anchors</strong>
+                                    Standard applications, quick install
+                                </div>
+                                <div class="ofc-comm-capability">
+                                    <strong>Epoxy Anchoring</strong>
+                                    High-load, cracked concrete
+                                </div>
+                                <div class="ofc-comm-capability">
+                                    <strong>Wedge Anchors</strong>
+                                    Heavy-duty, permanent
+                                </div>
+                                <div class="ofc-comm-capability">
+                                    <strong>Through-Bolts</strong>
+                                    Equipment, removable
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ofc-comm-detail-footer">
+                        <div class="ofc-comm-detail-highlight">
+                            <span class="icon">✓</span> Documentation for OSHA and insurance inspections
+                        </div>
+                        <a href="/contact-us/" class="ofc-btn-outline">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Parking Lot Signs -->
+            <div class="ofc-comm-detail-block" id="signage">
+                <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Parking-Lot-Signage-Image-1.jpg" 
+                     alt="ADA-compliant parking lot sign installation - Olympic Fence MA" 
+                     class="ofc-comm-detail-image" loading="lazy">
+                <div class="ofc-comm-detail-content">
+                    <div class="ofc-comm-detail-header">
+                        <h3>Parking Lot Sign Installation</h3>
+                        <span class="ofc-comm-detail-tag">Compliance & Safety</span>
+                    </div>
+                    <div class="ofc-comm-detail-body">
+                        <div class="ofc-comm-what-box">
+                            <h4>What It Is</h4>
+                            <p>Parking lot signage includes regulatory signs (handicapped parking, fire lanes, no parking zones), directional signs, tenant parking assignments, and safety warnings. Professional installation ensures signs remain secure through New England weather while meeting ADA and local code requirements.</p>
+                        </div>
+                        <div class="ofc-comm-process-box">
+                            <h4>Our Process</h4>
+                            <ul class="ofc-comm-process-list">
+                                <li>Site survey and ADA compliance review</li>
+                                <li>Foundation installation (minimum 30" deep)</li>
+                                <li>Code-compliant mounting (60"-80" height)</li>
+                                <li>Coordinate with striping contractors</li>
+                                <li>Repairs: storm damage, faded panels, rust</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ofc-comm-detail-footer">
+                        <div class="ofc-comm-detail-highlight">
+                            <span class="icon">✓</span> Posts set to withstand frost heave and nor'easters
+                        </div>
+                        <a href="/contact-us/" class="ofc-btn-outline">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Indoor Safety -->
+            <div class="ofc-comm-detail-block" id="safety">
+                <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Screenshot-2025-12-29-at-4.31.56-PM-scaled.png" 
+                     alt="Industrial warehouse guardrails and safety systems protecting racking and mezzanine - Olympic Fence MA" 
+                     class="ofc-comm-detail-image" loading="lazy">
+                <div class="ofc-comm-detail-content">
+                    <div class="ofc-comm-detail-header">
+                        <h3>Indoor Guardrails, Gates & Racking Protection</h3>
+                        <span class="ofc-comm-detail-tag">Warehouse & Facility</span>
+                    </div>
+                    <div class="ofc-comm-detail-body">
+                        <div class="ofc-comm-what-box">
+                            <h4>What It Is</h4>
+                            <p>Indoor safety installations protect warehouse workers, equipment, and inventory from forklift traffic, vehicle impacts, and restricted area access. This includes warehouse guardrails, safety barriers around machinery, security gates for restricted areas, and protective barriers around storage racking.</p>
+                        </div>
+                        <div class="ofc-comm-process-box">
+                            <h4>Capabilities</h4>
+                            <div class="ofc-comm-capabilities">
+                                <div class="ofc-comm-capability">
+                                    <strong>Warehouse Guardrails</strong>
+                                    Heavy-duty steel along docks and mezzanines
+                                </div>
+                                <div class="ofc-comm-capability">
+                                    <strong>Racking Protection</strong>
+                                    Bollards and corner guards at rack ends
+                                </div>
+                                <div class="ofc-comm-capability">
+                                    <strong>Security Gates</strong>
+                                    Locking gates for restricted areas
+                                </div>
+                                <div class="ofc-comm-capability">
+                                    <strong>Machinery Guards</strong>
+                                    Barriers around equipment and panels
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ofc-comm-detail-footer">
+                        <div class="ofc-comm-detail-highlight">
+                            <span class="icon">✓</span> OSHA-compliant 42" height, 200lb load rating
+                        </div>
+                        <a href="/contact-us/" class="ofc-btn-outline">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="ofc-comm-why-section">
+        <div class="ofc-comm-container">
+            <div class="ofc-comm-why-header">
+                <h2>Why Olympic Fence for Commercial Services</h2>
+                <p>40 years of commercial and municipal experience across North Shore Massachusetts</p>
+            </div>
+            
+            <div class="ofc-comm-why-grid">
+                <div class="ofc-comm-why-card">
+                    <h4><span class="check">✓</span> Lifetime Workmanship Warranty</h4>
+                    <p>Exceeds industry standard 2-3 year warranties</p>
+                </div>
+                <div class="ofc-comm-why-card">
+                    <h4><span class="check">✓</span> Licensed & Fully Insured</h4>
+                    <p>Certificates provided for your files</p>
+                </div>
+                <div class="ofc-comm-why-card">
+                    <h4><span class="check">✓</span> Municipal Experience</h4>
+                    <p>Familiar with bidding and prevailing wage</p>
+                </div>
+                <div class="ofc-comm-why-card">
+                    <h4><span class="check">✓</span> Flexible Scheduling</h4>
+                    <p>Nights, weekends, off-hour installations</p>
+                </div>
+                <div class="ofc-comm-why-card">
+                    <h4><span class="check">✓</span> Safety Documentation</h4>
+                    <p>OSHA-compliant with inspection records</p>
+                </div>
+                <div class="ofc-comm-why-card">
+                    <h4><span class="check">✓</span> Professional Equipment</h4>
+                    <p>Industrial-grade coring and welding</p>
+                </div>
+                <div class="ofc-comm-why-card">
+                    <h4><span class="check">✓</span> Multi-Site Support</h4>
+                    <p>Property managers: centralized billing</p>
+                </div>
+                <div class="ofc-comm-why-card">
+                    <h4><span class="check">✓</span> AFA Member</h4>
+                    <p>American Fence Association 2025</p>
+                </div>
+                <div class="ofc-comm-why-card">
+                    <h4><span class="check">✓</span> Full Service</h4>
+                    <p><a href="/privacy-fencing/">Fencing</a> to specialized commercial</p>
+                </div>
+            </div>
+            
+            <div class="ofc-comm-service-badge">
+                <span><strong>Service Area:</strong> 70-mile radius for commercial | 30-mile for residential</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="ofc-comm-faq">
+        <div class="ofc-comm-container">
+            <div class="ofc-comm-section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="ofc-comm-faq-list">
+                <div class="ofc-comm-faq-item">
+                    <button class="ofc-comm-faq-q">Can you work around our business hours?</button>
+                    <div class="ofc-comm-faq-a">
+                        <div class="ofc-comm-faq-a-inner">Yes, we schedule commercial installations during nights, weekends, or off-peak hours to minimize disruption to your operations.</div>
+                    </div>
+                </div>
+                <div class="ofc-comm-faq-item">
+                    <button class="ofc-comm-faq-q">Do you handle municipal bidding processes?</button>
+                    <div class="ofc-comm-faq-a">
+                        <div class="ofc-comm-faq-a-inner">We're experienced with government procurement and can provide documentation, insurance certificates, and references for your bid process.</div>
+                    </div>
+                </div>
+                <div class="ofc-comm-faq-item">
+                    <button class="ofc-comm-faq-q">What's your typical lead time?</button>
+                    <div class="ofc-comm-faq-a">
+                        <div class="ofc-comm-faq-a-inner">Timelines vary by scope. Urgent safety repairs can often be accommodated within days. Planned projects typically begin within 2-4 weeks.</div>
+                    </div>
+                </div>
+                <div class="ofc-comm-faq-item">
+                    <button class="ofc-comm-faq-q">Do you provide documentation for inspections?</button>
+                    <div class="ofc-comm-faq-a">
+                        <div class="ofc-comm-faq-a-inner">Yes, we provide detailed installation records, materials specs, and as-built documentation for insurance or regulatory inspections.</div>
+                    </div>
+                </div>
+                <div class="ofc-comm-faq-item">
+                    <button class="ofc-comm-faq-q">Are installations covered by warranty?</button>
+                    <div class="ofc-comm-faq-a">
+                        <div class="ofc-comm-faq-a-inner">All commercial installations include our lifetime workmanship warranty. Material warranties vary by manufacturer (typically 15-30 years for steel).</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Script -->
+    <script>
+        document.querySelectorAll('.ofc-comm-faq-q').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.ofc-comm-faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+    </script>
+
+    <!-- CTA Section -->
+    <section class="ofc-comm-cta">
+        <div class="ofc-comm-container">
+            <div class="ofc-comm-cta-inner">
+                <h2>Ready to Discuss Your Commercial Project?</h2>
+                <p>Whether you need ground coring, bollard protection, concrete anchoring, parking lot signage, or warehouse safety systems, our experienced team delivers quality installations that meet code requirements.</p>
+                <div class="ofc-comm-cta-buttons">
+                    <a href="/contact-us/" class="ofc-btn-primary">Request Commercial Quote</a>
+                    <a href="tel:978-997-2302" class="ofc-btn-secondary">📞 Call 978-997-2302</a>
+                </div>
+                <p class="ofc-comm-cta-note">Free site visits available. We respond promptly to urgent safety requests.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Links -->
+    <section class="ofc-comm-footer-links">
+        <div class="ofc-comm-container">
+            <p>Explore our <a href="/commercial-projects/">commercial fencing projects</a> or browse <a href="/services/">all services</a>.</p>
+        </div>
+    </section>
+
+</body>
+</html>
