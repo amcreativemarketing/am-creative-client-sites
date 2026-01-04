@@ -1,0 +1,264 @@
+<style>
+.se-services-section {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-services-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.se-services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-services-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-services-header p {
+  font-size: 18px;
+  color: #555555;
+  margin: 0;
+}
+
+.se-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.se-service-card {
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  padding: 35px 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.se-service-card:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.se-service-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #C61C1C;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.se-service-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #FFFFFF;
+}
+
+.se-service-card h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.se-service-card p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0 0 18px 0;
+}
+
+.se-service-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #C61C1C;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.se-service-link svg {
+  width: 16px;
+  height: 16px;
+  fill: #C61C1C;
+  transition: transform 0.2s ease;
+}
+
+.se-service-card:hover .se-service-link svg {
+  transform: translateX(4px);
+}
+
+/* NEW: More Links Row */
+.se-services-more-links {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #E5E5E5;
+}
+
+.se-services-more-links p {
+  font-size: 16px;
+  color: #555555;
+  margin: 0;
+}
+
+.se-services-more-links a {
+  color: #C61C1C;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.se-services-more-links a:hover {
+  color: #191919;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .se-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .se-services-header h2 {
+    font-size: 36px;
+  }
+  .se-service-card {
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-services-section {
+    padding: 50px 20px;
+  }
+  .se-services-header {
+    margin-bottom: 35px;
+  }
+  .se-services-header h2 {
+    font-size: 30px;
+  }
+  .se-services-header p {
+    font-size: 16px;
+  }
+  .se-services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .se-service-card {
+    padding: 28px 24px;
+  }
+  .se-service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+  }
+  .se-service-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  .se-service-card h3 {
+    font-size: 20px;
+  }
+  .se-services-more-links {
+    margin-top: 30px;
+    padding-top: 25px;
+  }
+  .se-services-more-links p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+</style>
+
+<section class="se-services-section">
+  <div class="se-services-container">
+    
+    <div class="se-services-header">
+      <h2>What Can We Build for You?</h2>
+      <p>From your fleet to your storefront - we handle it all in-house.</p>
+    </div>
+    
+    <div class="se-services-grid">
+      
+      <!-- Card 1: Vehicle & Fleet -->
+      <a href="/vehicle-graphics/" class="se-service-card">
+        <div class="se-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+        </div>
+        <h3>Vehicle & Fleet Graphics</h3>
+        <p>Trucks, vans, trailers - get your brand on the road. Fleet programs available for businesses of any size.</p>
+        <span class="se-service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></span>
+      </a>
+      
+      <!-- Card 2: Storefront & Business -->
+      <a href="/dimensional-and-channel-lettering/" class="se-service-card">
+        <div class="se-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg>
+        </div>
+        <h3>Storefront & Business Signs</h3>
+        <p>Channel letters, window graphics, ADA-compliant signs - make your entrance impossible to miss.</p>
+        <span class="se-service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></span>
+      </a>
+      
+      <!-- Card 3: Sign Repair & LED -->
+      <a href="/sign-repair/" class="se-service-card">
+        <div class="se-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+        </div>
+        <h3>Sign Repair & LED Upgrades</h3>
+        <p>Broken sign? Flickering neon? We fix it fast - and can upgrade you to energy-saving LED.</p>
+        <span class="se-service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></span>
+      </a>
+      
+      <!-- Card 4: Outdoor & Property -->
+      <a href="/monument-signs/" class="se-service-card">
+        <div class="se-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+        </div>
+        <h3>Outdoor & Property Signs</h3>
+        <p>Monument signs, pylons, construction site signs - built to last through New England weather.</p>
+        <span class="se-service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></span>
+      </a>
+      
+      <!-- Card 5: Boat & Marine -->
+      <a href="/boat-graphics-wraps/" class="se-service-card">
+        <div class="se-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.5L20 10.62V6c0-1.1-.9-2-2-2h-3V1H9v3H6c-1.1 0-2 .9-2 2v4.62l-1.29.42c-.26.08-.48.26-.6.5s-.15.52-.06.78L3.95 19zM6 6h12v3.97L12 8 6 9.97V6z"/></svg>
+        </div>
+        <h3>Boat & Marine Graphics</h3>
+        <p>Registration numbers, boat names, custom graphics - marine-grade vinyl that handles the salt.</p>
+        <span class="se-service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></span>
+      </a>
+      
+      <!-- Card 6: More Services -->
+      <a href="/sign-services/" class="se-service-card">
+        <div class="se-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
+        </div>
+        <h3>+ More Services</h3>
+        <p>Banners, window tinting, wall murals, floor graphics, flagpoles, and more. If it needs a sign, we can help.</p>
+        <span class="se-service-link">View All Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></span>
+      </a>
+      
+    </div>
+    
+    <div class="se-services-more-links">
+      <p>Looking for something specific? <a href="/neon-signs/">Neon Signs</a> · <a href="/illuminated-signs/">Illuminated Sign Cabinets</a> · <a href="/flagpoles/">Flagpole Services</a> · <a href="/window-tinting/">Window Tinting</a></p>
+    </div>
+    
+  </div>
+</section>
