@@ -1,0 +1,909 @@
+<!-- ============================================================
+     SIGNS EAST - ABOUT PAGE SECTIONS
+     Created: January 2026
+     
+     H1: About Signs East
+     H2: Owner-operated sign shop in Kingston, NH - since 2012.
+     
+     Place this code BELOW the hero and ABOVE the footer.
+     ============================================================ -->
+
+
+<!-- ============================================================
+     SECTION 1: TOR'S STORY
+     Background: White | Image: Tor in shop (if available)
+     ============================================================ -->
+
+<style>
+.se-about-story {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-about-story-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+.se-about-story-content {
+  flex: 1 1 500px;
+}
+
+.se-about-story-image {
+  flex: 1 1 400px;
+}
+
+.se-about-story-content h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+}
+
+.se-about-story-content p {
+  font-size: 17px;
+  color: #333333;
+  line-height: 1.7;
+  margin: 0 0 18px 0;
+}
+
+.se-about-story-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.se-about-story-highlight {
+  font-size: 20px;
+  font-style: italic;
+  color: #C61C1C;
+  border-left: 4px solid #C61C1C;
+  padding-left: 20px;
+  margin: 25px 0;
+}
+
+.se-about-story-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 900px) {
+  .se-about-story {
+    padding: 50px 20px;
+  }
+  .se-about-story-container {
+    gap: 35px;
+  }
+  .se-about-story-content h2 {
+    font-size: 30px;
+  }
+  .se-about-story-content p {
+    font-size: 16px;
+  }
+  .se-about-story-highlight {
+    font-size: 18px;
+  }
+}
+</style>
+
+<section class="se-about-story">
+  <div class="se-about-story-container">
+    
+    <div class="se-about-story-content">
+      <h2>Built One Customer at a Time</h2>
+      <p>Signs East started in 2012 with $20 and a simple idea: do good work, answer the phone, and treat people right. Tor Larson built this company the old-fashioned way - one sign, one satisfied customer at a time.</p>
+      <p>Thirteen years later, that approach hasn't changed. When you call Signs East, you're not talking to a call center or getting shuffled between departments. You're talking to the people who actually design, build, and install your signs.</p>
+      <p class="se-about-story-highlight">"When failure is not an option, we are the team to call."</p>
+      <p>We've heard the stories - sign companies that take months to return calls, jobs that drag on forever, work that falls apart. That's not how we operate. We show up, we deliver what we promise, and we stand behind our work.</p>
+    </div>
+    
+    <div class="se-about-story-image">
+      <img src="https://signseast.com/wp-content/uploads/2026/01/Tor-wiping-down-sign-in-shop.jpg" alt="Tor Larson working on a sign in the Signs East shop" loading="lazy">
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 2: WHAT WE DO
+     Background: Light gray | Icon grid
+     ============================================================ -->
+
+<style>
+.se-about-services {
+  background-color: #F5F5F5;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-about-services-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.se-about-services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-about-services-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-about-services-header p {
+  font-size: 18px;
+  color: #555555;
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.se-about-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.se-about-service-card {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 35px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.se-about-service-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.se-about-service-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #C61C1C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.se-about-service-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: #FFFFFF;
+}
+
+.se-about-service-card h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 12px 0;
+}
+
+.se-about-service-card p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .se-about-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .se-about-services {
+    padding: 50px 20px;
+  }
+  .se-about-services-header h2 {
+    font-size: 30px;
+  }
+  .se-about-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<section class="se-about-services">
+  <div class="se-about-services-container">
+    
+    <div class="se-about-services-header">
+      <h2>What We Do</h2>
+      <p>Full-service sign design, fabrication, and installation - from small vinyl lettering to large illuminated displays.</p>
+    </div>
+    
+    <div class="se-about-services-grid">
+      
+      <!-- Card 1: Custom Fabrication -->
+      <div class="se-about-service-card">
+        <div class="se-about-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+        </div>
+        <h3>Custom Fabrication</h3>
+        <p>Channel letters, monument signs, dimensional logos, and more - designed and built in-house to your specifications.</p>
+      </div>
+      
+      <!-- Card 2: Electrical Signs -->
+      <div class="se-about-service-card">
+        <div class="se-about-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+        </div>
+        <h3>Electrical Signs</h3>
+        <p>LED and neon illuminated signs, channel letters, light boxes, and halo-lit displays that make your business visible day and night.</p>
+      </div>
+      
+      <!-- Card 3: Vehicle Graphics -->
+      <div class="se-about-service-card">
+        <div class="se-about-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+        </div>
+        <h3>Vehicle Graphics</h3>
+        <p>Full wraps, partial wraps, and vinyl lettering for trucks, vans, trailers, and fleets. Premium materials that last.</p>
+      </div>
+      
+      <!-- Card 4: Sign Repair -->
+      <div class="se-about-service-card">
+        <div class="se-about-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+        </div>
+        <h3>Sign Repair</h3>
+        <p>Electrical repairs, LED retrofits, neon restoration, and maintenance for all sign types. We work on signs up to 80 feet high.</p>
+      </div>
+      
+      <!-- Card 5: Installation -->
+      <div class="se-about-service-card">
+        <div class="se-about-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 18v-6h5l-6-8v6H7l6 8zm3-14H8v2h8V4z"/></svg>
+        </div>
+        <h3>Installation</h3>
+        <p>Professional installation with the right equipment for the job. From storefront signs to tall pylons, we handle the full process.</p>
+      </div>
+      
+      <!-- Card 6: Design -->
+      <div class="se-about-service-card">
+        <div class="se-about-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+        </div>
+        <h3>Design Services</h3>
+        <p>Logo design, branding, and free photo renditions showing exactly how your sign will look on your building before we build it.</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 3: WHY SIGNS EAST
+     Background: Dark (#191919)
+     ============================================================ -->
+
+<style>
+.se-about-why {
+  background-color: #191919;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-about-why-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.se-about-why-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-about-why-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0 0 15px 0;
+}
+
+.se-about-why-header p {
+  font-size: 18px;
+  color: #AAAAAA;
+  margin: 0;
+}
+
+.se-about-why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.se-about-why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.se-about-why-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background-color: #C61C1C;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.se-about-why-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #FFFFFF;
+}
+
+.se-about-why-text h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0 0 8px 0;
+}
+
+.se-about-why-text p {
+  font-size: 15px;
+  color: #AAAAAA;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .se-about-why {
+    padding: 50px 20px;
+  }
+  .se-about-why-header h2 {
+    font-size: 30px;
+  }
+  .se-about-why-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+</style>
+
+<section class="se-about-why">
+  <div class="se-about-why-container">
+    
+    <div class="se-about-why-header">
+      <h2>Why Work With Us</h2>
+      <p>What our customers say they value most.</p>
+    </div>
+    
+    <div class="se-about-why-grid">
+      
+      <div class="se-about-why-item">
+        <div class="se-about-why-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div class="se-about-why-text">
+          <h3>We Actually Answer the Phone</h3>
+          <p>Call us and you'll talk to a real person - usually Tor. No phone trees, no waiting days for a callback.</p>
+        </div>
+      </div>
+      
+      <div class="se-about-why-item">
+        <div class="se-about-why-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <div class="se-about-why-text">
+          <h3>Fast Turnaround</h3>
+          <p>While other shops are booked out for months, we get jobs done. Your business can't wait - we understand that.</p>
+        </div>
+      </div>
+      
+      <div class="se-about-why-item">
+        <div class="se-about-why-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        </div>
+        <div class="se-about-why-text">
+          <h3>Owner-Operated</h3>
+          <p>Tor is involved in every project. You're working with the person who built this company and stakes his reputation on every job.</p>
+        </div>
+      </div>
+      
+      <div class="se-about-why-item">
+        <div class="se-about-why-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/></svg>
+        </div>
+        <div class="se-about-why-text">
+          <h3>We Stand Behind Our Work</h3>
+          <p>Quality materials, proper installation, and we're here if anything needs attention down the road.</p>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 4: SERVICE AREA
+     Background: White | Two-column with image
+     ============================================================ -->
+
+<style>
+.se-about-area {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-about-area-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+.se-about-area-content {
+  flex: 1 1 500px;
+}
+
+.se-about-area-image {
+  flex: 1 1 400px;
+}
+
+.se-about-area-content h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 20px 0;
+}
+
+.se-about-area-content > p {
+  font-size: 18px;
+  color: #555555;
+  margin: 0 0 30px 0;
+  line-height: 1.6;
+}
+
+.se-about-area-regions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.se-about-area-tag {
+  background-color: #F5F5F5;
+  color: #333333;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.se-about-area-note {
+  font-size: 16px;
+  color: #777777;
+  font-style: italic;
+  margin: 0;
+}
+
+.se-about-area-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 900px) {
+  .se-about-area {
+    padding: 50px 20px;
+  }
+  .se-about-area-container {
+    gap: 35px;
+  }
+  .se-about-area-content h2 {
+    font-size: 30px;
+  }
+  .se-about-area-tag {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+</style>
+
+<section class="se-about-area">
+  <div class="se-about-area-container">
+    
+    <div class="se-about-area-content">
+      <h2>Where We Work</h2>
+      <p>Based in Kingston, NH, we serve businesses throughout New England and beyond.</p>
+      
+      <div class="se-about-area-regions">
+        <span class="se-about-area-tag">Southern NH</span>
+        <span class="se-about-area-tag">Seacoast NH</span>
+        <span class="se-about-area-tag">North Shore MA</span>
+        <span class="se-about-area-tag">Boston Metro</span>
+        <span class="se-about-area-tag">Maine</span>
+        <span class="se-about-area-tag">All of New England</span>
+      </div>
+      
+      <p class="se-about-area-note">We've done jobs as far as Key West, Florida - if you have a project, give us a call.</p>
+    </div>
+    
+    <div class="se-about-area-image">
+      <img src="https://signseast.com/wp-content/uploads/2025/11/imgi_6_peabody-signs_sylvan-street-grille2-1.jpg" alt="Sylvan Street Grille illuminated sign by Signs East" loading="lazy">
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 5: FAQ ACCORDION
+     Background: Light gray | Red cards
+     ============================================================ -->
+
+<style>
+.se-about-faq {
+  background-color: #F5F5F5;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-about-faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.se-about-faq-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.se-about-faq-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0;
+}
+
+.se-about-faq-item {
+  background-color: #C61C1C;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.se-about-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 25px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.se-about-faq-question h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.se-about-faq-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.se-about-faq-icon::before,
+.se-about-faq-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #FFFFFF;
+  transition: transform 0.3s ease;
+}
+
+.se-about-faq-icon::before {
+  width: 16px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-about-faq-icon::after {
+  width: 2px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-about-faq-item.active .se-about-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-about-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-about-faq-answer-inner {
+  padding: 0 25px 22px 25px;
+}
+
+.se-about-faq-answer p {
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.se-about-faq-item.active .se-about-faq-answer {
+  max-height: 300px;
+}
+
+@media (max-width: 767px) {
+  .se-about-faq {
+    padding: 50px 20px;
+  }
+  .se-about-faq-header h2 {
+    font-size: 30px;
+  }
+  .se-about-faq-question {
+    padding: 18px 20px;
+  }
+  .se-about-faq-question h3 {
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+  .se-about-faq-answer-inner {
+    padding: 0 20px 18px 20px;
+  }
+  .se-about-faq-answer p {
+    font-size: 15px;
+    color: #FFFFFF;
+  }
+}
+</style>
+
+<section class="se-about-faq">
+  <div class="se-about-faq-container">
+    
+    <div class="se-about-faq-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="se-about-faq-item">
+      <button class="se-about-faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <h3>Do LED signs really save on electricity?</h3>
+        <span class="se-about-faq-icon"></span>
+      </button>
+      <div class="se-about-faq-answer">
+        <div class="se-about-faq-answer-inner">
+          <p>Yes. LED retrofits can reduce your sign's electricity cost by up to 75% compared to older fluorescent or neon lighting, with the added benefit of lasting much longer between service calls.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="se-about-faq-item">
+      <button class="se-about-faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <h3>Do you repair outdoor signs?</h3>
+        <span class="se-about-faq-icon"></span>
+      </button>
+      <div class="se-about-faq-answer">
+        <div class="se-about-faq-answer-inner">
+          <p>Yes, we repair all types and sizes of outdoor signs. We also refurbish older and antique signs to give them new life while preserving their character.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="se-about-faq-item">
+      <button class="se-about-faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <h3>Can you do truck lettering on-site?</h3>
+        <span class="se-about-faq-icon"></span>
+      </button>
+      <div class="se-about-faq-answer">
+        <div class="se-about-faq-answer-inner">
+          <p>Yes, we travel to your location for lettering and vehicle decals. Full vehicle wraps are done in our shop where we can control the environment for the best results.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="se-about-faq-item">
+      <button class="se-about-faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <h3>Can you design our logo?</h3>
+        <span class="se-about-faq-icon"></span>
+      </button>
+      <div class="se-about-faq-answer">
+        <div class="se-about-faq-answer-inner">
+          <p>Yes, we have designers who handle branding and logo creation. We can also provide free photo renditions showing how your sign will look on your building before production begins.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="se-about-faq-item">
+      <button class="se-about-faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <h3>Our sign is tall - can you reach it?</h3>
+        <span class="se-about-faq-icon"></span>
+      </button>
+      <div class="se-about-faq-answer">
+        <div class="se-about-faq-answer-inner">
+          <p>Yes, we work on signs up to 80 feet in the air with the proper equipment. Height is not an issue.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="se-about-faq-item">
+      <button class="se-about-faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <h3>Do you make dimensional or carved signs?</h3>
+        <span class="se-about-faq-icon"></span>
+      </button>
+      <div class="se-about-faq-answer">
+        <div class="se-about-faq-answer-inner">
+          <p>Yes. Dimensional signs add depth and visual interest that flat signs can't match - they're a great way to stand out and catch attention.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="se-about-faq-item">
+      <button class="se-about-faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <h3>Should I consider a digital message center?</h3>
+        <span class="se-about-faq-icon"></span>
+      </button>
+      <div class="se-about-faq-answer">
+        <div class="se-about-faq-answer-inner">
+          <p>Digital reader boards are excellent for advertising specials, holiday greetings, and upcoming events. We use only quality brands that last - there are plenty of cheap options on the market that don't hold up.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 6: FINAL CTA
+     Background: White with red accents
+     ============================================================ -->
+
+<style>
+.se-about-cta {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+  text-align: center;
+  border-top: 1px solid #E5E5E5;
+}
+
+.se-about-cta-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.se-about-cta-container h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+}
+
+.se-about-cta-container p {
+  font-size: 18px;
+  color: #555555;
+  margin: 0 0 35px 0;
+  line-height: 1.6;
+}
+
+.se-about-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.se-about-cta-primary {
+  display: inline-block;
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.se-about-cta-primary:hover {
+  background-color: #191919;
+  color: #FFFFFF;
+}
+
+.se-about-cta-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #191919;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: 2px solid #191919;
+  transition: all 0.3s ease;
+}
+
+.se-about-cta-secondary:hover {
+  background-color: #191919;
+  color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+  .se-about-cta {
+    padding: 60px 20px;
+  }
+  .se-about-cta-container h2 {
+    font-size: 30px;
+  }
+  .se-about-cta-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .se-about-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .se-about-cta-primary,
+  .se-about-cta-secondary {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+</style>
+
+<section class="se-about-cta">
+  <div class="se-about-cta-container">
+    <h2>Ready to Talk About Your Project?</h2>
+    <p>Give us a call or send us the details - we typically respond the same day.</p>
+    <div class="se-about-cta-buttons">
+      <a href="/contact-us/" class="se-about-cta-primary">Request a Quote</a>
+      <a href="tel:978-273-2992" class="se-about-cta-secondary">Call 978-273-2992</a>
+    </div>
+  </div>
+</section>
