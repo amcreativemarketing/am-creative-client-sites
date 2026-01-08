@@ -58,37 +58,6 @@
         }
         
         /* =============================================
-           VALUE PROP SECTION (below Elementor hero)
-           ============================================= */
-        .value-prop-section {
-            padding: 30px 20px;
-            background: var(--warm-beige);
-        }
-        
-        .value-prop-banner {
-            background: var(--coastal-blue);
-            color: var(--pure-white);
-            padding: 20px 30px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            max-width: 700px;
-            margin: 0 auto;
-            box-shadow: 0 5px 20px rgba(125, 153, 173, 0.3);
-        }
-        
-        .value-prop-banner svg {
-            flex-shrink: 0;
-        }
-        
-        .value-prop-banner span {
-            font-weight: 600;
-            font-size: 18px;
-        }
-        
-        /* =============================================
            BUTTON STYLES
            ============================================= */
         .btn-primary {
@@ -279,135 +248,94 @@
         }
         
         /* =============================================
-           PRICING SECTION
+           DESIGN FEES SECTION
            ============================================= */
-        .pricing-section {
+        .fees-section {
             padding: 80px 20px;
             background: var(--pure-white);
         }
         
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
+        .fees-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .pricing-card {
+        .fee-explanation {
+            margin-bottom: 40px;
+        }
+        
+        .fee-item {
             background: var(--light-gray);
-            border-radius: 15px;
-            padding: 40px 30px;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s;
-            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--coastal-blue);
         }
         
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        .fee-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         
-        .pricing-card.featured {
-            background: var(--pure-white);
-            border-color: var(--warm-gold);
-            transform: scale(1.05);
-        }
-        
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-5px);
-        }
-        
-        .pricing-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--warm-gold);
-            color: var(--pure-white);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .pricing-card h3 {
-            font-size: 22px;
+        .fee-header h3 {
+            font-size: 20px;
             color: var(--deep-charcoal);
-            margin-bottom: 10px;
-            margin-top: 10px;
+            margin: 0;
         }
         
-        .pricing-amount {
+        .fee-amount {
             font-family: 'Montserrat', sans-serif;
-            font-size: 42px;
+            font-size: 20px;
             font-weight: 700;
             color: var(--coastal-blue);
-            margin-bottom: 5px;
-        }
-        
-        .pricing-amount span {
-            font-size: 16px;
-            font-weight: 400;
-            color: var(--medium-gray);
-        }
-        
-        .pricing-credit {
-            background: rgba(92, 184, 92, 0.1);
-            color: var(--success-green);
-            padding: 8px 15px;
+            background: var(--pure-white);
+            padding: 8px 16px;
             border-radius: 5px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 25px;
-            display: inline-block;
         }
         
-        .pricing-features {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 25px;
-        }
-        
-        .pricing-features li {
+        .fee-item p {
             color: var(--medium-gray);
-            padding: 10px 0;
-            padding-left: 28px;
-            position: relative;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            line-height: 1.7;
+            margin-bottom: 10px;
         }
         
-        .pricing-features li:last-child {
-            border-bottom: none;
+        .fee-item p:last-child {
+            margin-bottom: 0;
         }
         
-        .pricing-features li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--success-green);
-            font-weight: bold;
+        .fee-item p a {
+            color: var(--coastal-blue);
+            font-weight: 600;
         }
         
-        .pricing-note {
+        .fee-credit-note {
+            color: var(--success-green) !important;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 15px !important;
+        }
+        
+        .fees-summary {
             background: var(--warm-beige);
             padding: 30px;
             border-radius: 10px;
-            margin-top: 50px;
             text-align: center;
         }
         
-        .pricing-note h4 {
-            font-size: 18px;
+        .fees-summary h4 {
+            font-size: 20px;
             color: var(--deep-charcoal);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         
-        .pricing-note p {
+        .fees-summary p {
             color: var(--medium-gray);
-            max-width: 700px;
+            line-height: 1.7;
+            max-width: 600px;
             margin: 0 auto;
         }
         
@@ -735,15 +663,6 @@
         }
         
         @media (max-width: 768px) {
-            .value-prop-banner {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .value-prop-banner span {
-                font-size: 16px;
-            }
-            
             .why-us-grid {
                 grid-template-columns: 1fr;
             }
@@ -763,16 +682,9 @@
                 font-size: 22px;
             }
             
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .pricing-card.featured {
-                transform: none;
-            }
-            
-            .pricing-card.featured:hover {
-                transform: translateY(-5px);
+            .fee-header {
+                flex-direction: column;
+                align-items: flex-start;
             }
             
             .gallery-grid {
@@ -815,20 +727,6 @@
 </head>
 <body>
     <!-- =============================================
-         VALUE PROP BANNER (sits below Elementor hero)
-         ============================================= -->
-    <section class="value-prop-section">
-        <div class="container">
-            <div class="value-prop-banner">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                </svg>
-                <span>All design fees are credited toward your cabinet purchase</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- =============================================
          WHY WORK WITH US SECTION
          ============================================= -->
     <section class="why-us-section">
@@ -863,11 +761,12 @@
                 <div class="why-us-card">
                     <div class="why-us-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
                         </svg>
                     </div>
-                    <h3>Design Fees Credited Back</h3>
-                    <p>Every dollar you invest in design is credited toward your purchase. When you choose Seacoast, the design is essentially free.</p>
+                    <h3>No Pressure, Just Guidance</h3>
+                    <p>We're here to help you make the right decisions for your home—not push you into a sale. Take your time, ask questions, and move forward when you're ready.</p>
                 </div>
             </div>
         </div>
@@ -931,63 +830,57 @@
     </section>
 
     <!-- =============================================
-         PRICING SECTION
+         DESIGN FEES SECTION
          ============================================= -->
-    <section class="pricing-section">
+    <section class="fees-section">
         <div class="container">
             <div class="section-header">
-                <h2>Transparent Design Pricing</h2>
-                <p>No hidden fees. No surprises. And every design dollar credited back when you purchase.</p>
+                <h2>How Our Design Fees Work</h2>
+                <p>We've structured our fees to make professional design accessible—and to reward you when you move forward with your project.</p>
             </div>
             
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Initial Consultation</h3>
-                    <div class="pricing-amount">Free</div>
-                    <div class="pricing-credit">No obligation</div>
-                    <ul class="pricing-features">
-                        <li>Up to 1 hour</li>
-                        <li>Showroom or in-home visit</li>
-                        <li>Space measurements</li>
-                        <li>Vision & budget discussion</li>
-                        <li>Browse cabinet samples</li>
-                    </ul>
-                    <a href="https://seacoastcabinetne.com/contact/" class="btn-primary" style="width: 100%;">Book Consultation</a>
+            <div class="fees-content">
+                <div class="fee-explanation">
+                    <div class="fee-item">
+                        <div class="fee-header">
+                            <h3>Initial Consultation</h3>
+                            <span class="fee-amount">Free</span>
+                        </div>
+                        <p>Your first meeting with us is always complimentary. We'll spend up to an hour together—either at our Rowley showroom or in your home—taking measurements, discussing your vision, and exploring <a href="https://seacoastcabinetne.com/cabinets/">cabinet styles</a> and <a href="https://seacoastcabinetne.com/countertops/">countertop options</a>. There's no obligation, and you'll leave with a clear understanding of what's possible for your space.</p>
+                    </div>
+                    
+                    <div class="fee-item">
+                        <div class="fee-header">
+                            <h3>Professional Design & 3D Renderings</h3>
+                            <span class="fee-amount">$295</span>
+                        </div>
+                        <p>Once you're ready to move forward, this fee covers your custom design package: professional 3D renderings of your space, a detailed project estimate, and a dedicated 2-hour showroom appointment with your designer. You'll see exactly what your new kitchen will look like before making any commitments.</p>
+                        <p class="fee-credit-note">This fee is fully credited toward your cabinet purchase when you choose Seacoast Cabinet.</p>
+                    </div>
+                    
+                    <div class="fee-item">
+                        <div class="fee-header">
+                            <h3>Design Revisions</h3>
+                            <span class="fee-amount">$95/hour</span>
+                        </div>
+                        <p>Need to make changes after seeing your initial design? No problem. Additional revision time is billed hourly, and we recommend combining revision requests for efficiency. Whether you want to explore different layouts, finishes, or configurations, we'll refine until you're completely satisfied.</p>
+                        <p class="fee-credit-note">All revision fees are also credited toward your purchase.</p>
+                    </div>
+                    
+                    <div class="fee-item">
+                        <div class="fee-header">
+                            <h3>Detailed Construction Plans</h3>
+                            <span class="fee-amount">20% Retainer</span>
+                        </div>
+                        <p>For projects requiring detailed construction plans and specifications, we collect a 20% retainer based on your estimated cabinetry cost. This covers the additional documentation your contractor needs for installation.</p>
+                        <p class="fee-credit-note">Like all our design fees, this retainer is fully credited to your purchase when you move forward with Seacoast Cabinet.</p>
+                    </div>
                 </div>
                 
-                <div class="pricing-card featured">
-                    <span class="pricing-badge">Most Popular</span>
-                    <h3>Design Package</h3>
-                    <div class="pricing-amount">$295</div>
-                    <div class="pricing-credit">✓ Credited to purchase</div>
-                    <ul class="pricing-features">
-                        <li>Custom 3D renderings</li>
-                        <li>Detailed project estimate</li>
-                        <li>2-hour showroom appointment</li>
-                        <li>Expert selection guidance</li>
-                        <li>Complete specifications</li>
-                    </ul>
-                    <a href="https://seacoastcabinetne.com/contact/" class="btn-primary" style="width: 100%;">Get Started</a>
+                <div class="fees-summary">
+                    <h4>The Bottom Line</h4>
+                    <p>Every dollar you invest in design services comes back to you when you purchase your cabinets through Seacoast Cabinet. We've structured it this way because we want you to have access to professional design help without feeling like you're paying twice.</p>
                 </div>
-                
-                <div class="pricing-card">
-                    <h3>Design Revisions</h3>
-                    <div class="pricing-amount">$95<span>/hour</span></div>
-                    <div class="pricing-credit">✓ Credited to purchase</div>
-                    <ul class="pricing-features">
-                        <li>Layout adjustments</li>
-                        <li>Updated 3D renderings</li>
-                        <li>New finish selections</li>
-                        <li>Modified specifications</li>
-                        <li>Additional consultations</li>
-                    </ul>
-                    <a href="https://seacoastcabinetne.com/contact/" class="btn-secondary" style="width: 100%;">Request Revision</a>
-                </div>
-            </div>
-            
-            <div class="pricing-note">
-                <h4>For Detailed Construction Plans</h4>
-                <p>Projects requiring detailed construction plans include a 20% retainer based on estimated cabinetry cost. Like all design fees, this retainer is fully credited to your purchase when you move forward with Seacoast Cabinet.</p>
             </div>
         </div>
     </section>
