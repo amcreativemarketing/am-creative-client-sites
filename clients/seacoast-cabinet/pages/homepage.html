@@ -347,6 +347,85 @@
         }
         
         /* =============================================
+           FEATURED KITCHENS IMAGE STRIP
+           ============================================= */
+        .featured-kitchens {
+            padding: 0;
+            background: var(--deep-charcoal);
+            overflow: hidden;
+        }
+        
+        .featured-kitchens-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+        
+        .featured-kitchen-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+        
+        .featured-kitchen-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease, filter 0.3s ease;
+        }
+        
+        .featured-kitchen-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .featured-kitchen-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .featured-kitchen-item:hover::after {
+            opacity: 1;
+        }
+        
+        .featured-kitchens-cta {
+            text-align: center;
+            padding: 25px 20px;
+            background: var(--deep-charcoal);
+        }
+        
+        .featured-kitchens-cta a {
+            color: var(--pure-white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .featured-kitchens-cta a:hover {
+            color: var(--warm-gold);
+        }
+        
+        .featured-kitchens-cta a svg {
+            transition: transform 0.3s ease;
+        }
+        
+        .featured-kitchens-cta a:hover svg {
+            transform: translateX(5px);
+        }
+        
+        /* =============================================
            CABINET BRANDS SECTION
            ============================================= */
         .brands-section {
@@ -456,7 +535,7 @@
         }
         
         .portfolio-image {
-            height: 250px;
+            height: 280px;
             overflow: hidden;
         }
         
@@ -784,6 +863,10 @@
             .trust-text {
                 justify-content: center;
             }
+            
+            .featured-kitchens-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (max-width: 768px) {
@@ -820,6 +903,14 @@
             
             .process-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .featured-kitchens-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-kitchen-item {
+                aspect-ratio: 16/9;
             }
             
             .brands-grid {
@@ -989,6 +1080,34 @@
     </section>
 
     <!-- =============================================
+         FEATURED KITCHENS IMAGE STRIP
+         ============================================= -->
+    <section class="featured-kitchens">
+        <div class="featured-kitchens-grid">
+            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="featured-kitchen-item">
+                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-72.jpg" alt="Modern white kitchen with large island and pendant lighting by Seacoast Cabinet" loading="lazy">
+            </a>
+            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="featured-kitchen-item">
+                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-70.jpg" alt="Transitional kitchen design with custom cabinetry and quartz countertops" loading="lazy">
+            </a>
+            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="featured-kitchen-item">
+                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-48.jpg" alt="Classic New England kitchen with shaker cabinets and subway tile backsplash" loading="lazy">
+            </a>
+            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="featured-kitchen-item">
+                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-40.jpg" alt="Contemporary kitchen renovation featuring custom storage solutions" loading="lazy">
+            </a>
+        </div>
+        <div class="featured-kitchens-cta">
+            <a href="https://seacoastcabinetne.com/inspiration-gallery/">
+                View All Projects
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- =============================================
          CABINET BRANDS SECTION
          ============================================= -->
     <section class="brands-section">
@@ -1051,31 +1170,31 @@
             <div class="portfolio-grid">
                 <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/08/Seacoast-Cabinet.jpg" alt="Rustic farmhouse kitchen with white Omega cabinets">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-84.jpg" alt="Bright modern kitchen with white cabinets and marble countertops" loading="lazy">
                     </div>
                     <div class="portfolio-info">
-                        <h3>Rustic Farmhouse Renovation</h3>
-                        <p>Omega cabinetry in Pearl finish preserves original wood beams, featuring Calacatta Volegno Quartz countertops.</p>
+                        <h3>Bright & Modern Kitchen</h3>
+                        <p>Clean lines and timeless finishes create an inviting space for cooking and entertaining.</p>
                     </div>
                 </a>
                 
                 <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-44.jpg" alt="Elegant master bathroom with custom vanity cabinets">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/22-Hancock-16.jpg" alt="Newburyport kitchen renovation with custom Omega cabinetry" loading="lazy">
                     </div>
                     <div class="portfolio-info">
-                        <h3>Elegant Master Bath</h3>
-                        <p>Omega inset Benson door in Elemental White with attached makeup counter and Satuario Azul Quartz.</p>
+                        <h3>Newburyport Classic</h3>
+                        <p>Custom Omega cabinetry brings warmth and functionality to this Newburyport home.</p>
                     </div>
                 </a>
                 
                 <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Dutton-Street-Mill-Condo-1440x960-1.jpg.webp" alt="Modern kitchen in historic mill building with dark cabinets">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-83.jpg" alt="Traditional kitchen with custom cabinetry and granite counters" loading="lazy">
                     </div>
                     <div class="portfolio-info">
-                        <h3>Historic Mill Building</h3>
-                        <p>Homecrest Waldron in Onyx finish brings modern elegance to this renovated Lowell mill condo.</p>
+                        <h3>Traditional Elegance</h3>
+                        <p>Thoughtful details and quality craftsmanship define this stunning transformation.</p>
                     </div>
                 </a>
             </div>
