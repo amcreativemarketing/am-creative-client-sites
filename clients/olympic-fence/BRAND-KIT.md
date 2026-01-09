@@ -13,7 +13,7 @@
 |---------|-------|---------|
 | **Colors** | Navy `#0d2942`, Teal `#2d8a7b`, Blue `#357abd` | Purple `#272262`, `#4a4494` |
 | **CSS prefix** | `.of-`, `.olympic-`, `.fence-` | `.ofc-[city]-` (e.g., `.ofc-bv-`) |
-| **Missing H1** | No H1 in hero section | Always include H1 with target keyword |
+| **Page structure** | Including H1 in page content | Hero provides H1/H2 - content starts at H2 level |
 | **Dead links** | Linking to pages that don't exist | Only link to verified live pages (see list below) |
 | **Review count** | Making up numbers | Use "15+ reviews" or verify current count |
 | **Phone format** | `+1-978-997-2302` | `978-997-2302` |
@@ -25,7 +25,8 @@ Before starting ANY Olympic Fence page:
 - [ ] Using purple `#272262` as primary (NOT navy, teal, or blue)
 - [ ] CSS variables use `--ofc-` prefix
 - [ ] CSS classes use `.ofc-[city]-` namespace
-- [ ] H1 tag present in hero with primary keyword
+- [ ] NOT including H1 (hero provides it) - content starts at H2
+- [ ] Hero copy options provided in HTML comments for Elementor setup
 - [ ] All internal links go to verified live pages only
 - [ ] Phone number is `978-997-2302` everywhere
 - [ ] Schema uses business HQ coordinates (42.8034, -70.9617)
@@ -109,7 +110,7 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 
 | Element | Size | Weight | Line Height | Usage |
 |---------|------|--------|-------------|-------|
-| H1 | 2.5rem (40px) | 700 | 1.2 | Page titles (hero sections) - REQUIRED |
+| H1 | 2.5rem (40px) | 700 | 1.2 | Page titles - SET IN ELEMENTOR HERO (not in page content) |
 | H2 | 2rem (32px) | 700 | 1.3 | Section headings |
 | H3 | 1.5rem (24px) | 600 | 1.4 | Subsection headings, card titles |
 | H4 | 1.25rem (20px) | 600 | 1.4 | Minor headings |
@@ -364,7 +365,7 @@ All custom styles for location pages MUST use the `.ofc-[city]-` prefix to preve
 - Schema markup structure
 - Cross-linking to other live location pages ONLY
 - CTA buttons and phone numbers
-- H1 tag with target keyword
+- Hero copy options (H1/H2) in HTML comments for Elementor
 
 **Encouraged variety:**
 - Section order and arrangement
@@ -393,19 +394,23 @@ All custom styles for location pages MUST use the `.ofc-[city]-` prefix to preve
 
 ## Page Components
 
-### Hero Section (REQUIRED elements)
+### Hero Section
+
+The hero (H1, H2, CTA button) is provided by Elementor's standard template. Page content files should include hero copy options as HTML comments at the top:
 
 ```html
-<section class="ofc-[city]-hero">
-    <div class="ofc-[city]-container">
-        <h1>[City] Fence Installation</h1>
-        <h2>Subheading with value proposition</h2>
-        <!-- Content -->
-    </div>
-</section>
+<!-- ================================================
+     HERO COPY OPTIONS (set in Elementor):
+     
+     H1: [City] Fence Installation
+     H2: Professional Fencing for [City]'s Homes Since 1985
+     CTA: Get Your Free Estimate → /contact-us/
+     ================================================ -->
+     
+<!-- Page content starts below the hero at H2 level -->
 ```
 
-**H1 Tag is REQUIRED** - Every location page must have an H1 in the hero section containing the primary keyword (e.g., "Beverly Fence Installation").
+**Page Structure Note:** Olympic Fence uses Elementor with a standard hero template that provides the H1 and H2. Page content files should NOT include an H1 - they start at H2 level. Include hero copy options (H1, H2, CTA text) in HTML comments at the top of the file so they can be set in Elementor.
 
 ### Trust Bar (required on all location pages)
 
@@ -596,7 +601,7 @@ When publishing a new location page:
 - [ ] Page slug matches URL pattern
 - [ ] Meta title set in Yoast/RankMath (60 chars max)
 - [ ] Meta description set (155 chars max)
-- [ ] H1 tag present in hero with target keyword
+- [ ] Hero H1/H2 set in Elementor (page content starts at H2)
 - [ ] Schema scripts added to page header
 - [ ] Custom CSS uses `.ofc-[city]-` namespace
 - [ ] All colors are brand purple (#272262, #4a4494)
