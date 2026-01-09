@@ -1,695 +1,697 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beverly Fence Installation | Olympic Fence Co. - Lifetime Warranty</title>
-    <meta name="description" content="Professional fence installation in Beverly, MA since 1985. Lifetime warranty, wood-on-steel systems, coastal experience. Serving Beverly Cove, Beverly Farms & downtown. Free estimates.">
+<!-- ================================================
+     OLYMPIC FENCE - BEVERLY LOCATION PAGE
+     For use BELOW Elementor hero (H1/H2 provided by theme)
+     
+     HERO COPY OPTIONS (set in Elementor):
+     
+     Option A:
+       H1: Beverly Fence Installation
+       H2: Professional Fencing for Beverly's Coastal Properties Since 1985
+       CTA: Get Your Free Estimate → /contact-us/
+     
+     Option B:
+       H1: Fence Installation in Beverly, MA
+       H2: Lifetime Warranty • Wood-on-Steel Systems • 40 Years Local Experience
+       CTA: Request Free Estimate → /contact-us/
+     
+     Option C:
+       H1: Your Beverly Fence Experts
+       H2: Family-Owned Since 1985. Built for New England. Backed for Life.
+       CTA: Get a Free Quote → /contact-us/
+     
+     ================================================ -->
+
+<style>
+    /* ================================================
+       OLYMPIC FENCE - BEVERLY LOCATION PAGE
+       Brand Colors: Primary Purple #272262 | Accent Purple #4a4494
+       CSS Namespace: .ofc-bv- (Beverly)
+       ================================================ */
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://olympicfencema.com/beverly-fence-company/">
+    :root {
+        --ofc-primary: #272262;
+        --ofc-primary-hover: #4a4494;
+        --ofc-text-dark: #333333;
+        --ofc-text-light: #666666;
+        --ofc-bg-light: #f8f9fa;
+        --ofc-border: #e9ecef;
+        --ofc-white: #ffffff;
+        --ofc-star: #ffc107;
+        --ofc-success: #28a745;
+    }
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Beverly Fence Installation | Olympic Fence Co. - Lifetime Warranty">
-    <meta property="og:description" content="Professional fence installation in Beverly, MA since 1985. Lifetime warranty, wood-on-steel systems, coastal experience. Serving Beverly Cove, Beverly Farms & downtown. Free estimates.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://olympicfencema.com/beverly-fence-company/">
-    <meta property="og:image" content="https://olympicfencema.com/wp-content/uploads/2025/12/AFTER-NEW-WOOD-PRIVACY-FENCE.webp">
+    .ofc-bv-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
     
-    <style>
-        /* ================================================
-           OLYMPIC FENCE - BEVERLY LOCATION PAGE
-           Brand Colors: Primary Purple #272262 | Accent Purple #4a4494
-           CSS Namespace: .ofc-bv- (Beverly)
-           ================================================ */
-        
-        :root {
-            --ofc-primary: #272262;
-            --ofc-primary-hover: #4a4494;
-            --ofc-text-dark: #333333;
-            --ofc-text-light: #666666;
-            --ofc-bg-light: #f8f9fa;
-            --ofc-border: #e9ecef;
-            --ofc-white: #ffffff;
-            --ofc-star: #ffc107;
-            --ofc-success: #28a745;
+    /* ================================================
+       INTRO / TRUST BAR
+       ================================================ */
+    .ofc-bv-intro {
+        padding: 50px 0;
+        background: var(--ofc-bg-light);
+    }
+    
+    .ofc-bv-intro-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .ofc-bv-intro-text p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--ofc-text-dark);
+        margin-bottom: 20px;
+    }
+    
+    .ofc-bv-intro-highlight {
+        background: var(--ofc-white);
+        border-left: 4px solid var(--ofc-primary);
+        padding: 15px 20px;
+        margin: 20px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    
+    .ofc-bv-intro-highlight strong {
+        color: var(--ofc-primary);
+    }
+    
+    .ofc-bv-intro-image {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    .ofc-bv-intro-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    /* Trust Bar */
+    .ofc-bv-trust-bar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .ofc-bv-trust-badge {
+        background: var(--ofc-white);
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--ofc-primary);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    
+    .ofc-bv-trust-badge-icon {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+    
+    /* CTA Buttons */
+    .ofc-bv-cta-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+    
+    .ofc-bv-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+    }
+    
+    /* Ensure link colors don't override button colors */
+    a.ofc-bv-btn {
+        text-decoration: none;
+    }
+    
+    a.ofc-bv-btn:visited {
+        color: inherit;
+    }
+    
+    .ofc-bv-btn-primary {
+        background: var(--ofc-primary);
+        color: #ffffff !important;
+    }
+    
+    .ofc-bv-btn-primary:hover {
+        background: var(--ofc-primary-hover);
+        color: #ffffff !important;
+        transform: translateY(-2px);
+    }
+    
+    .ofc-bv-btn-secondary {
+        background: transparent;
+        color: var(--ofc-primary);
+        border: 2px solid var(--ofc-primary);
+    }
+    
+    .ofc-bv-btn-secondary:hover {
+        background: var(--ofc-primary);
+        color: #ffffff !important;
+    }
+    
+    /* ================================================
+       SECTIONS - GENERAL
+       ================================================ */
+    .ofc-bv-section {
+        padding: 70px 0;
+    }
+    
+    .ofc-bv-section-alt {
+        background: var(--ofc-bg-light);
+    }
+    
+    .ofc-bv-section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .ofc-bv-section-header h2 {
+        font-size: 2rem;
+        color: var(--ofc-primary);
+        margin-bottom: 15px;
+    }
+    
+    .ofc-bv-section-header p {
+        font-size: 1.1rem;
+        color: var(--ofc-text-light);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    /* ================================================
+       NEIGHBORHOODS SECTION
+       ================================================ */
+    .ofc-bv-neighborhoods {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .ofc-bv-neighborhood-card {
+        background: var(--ofc-white);
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        border: 1px solid var(--ofc-border);
+    }
+    
+    .ofc-bv-neighborhood-card h3 {
+        color: var(--ofc-primary);
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .ofc-bv-neighborhood-card h3::before {
+        content: "📍";
+        font-size: 1.1rem;
+    }
+    
+    .ofc-bv-neighborhood-card p {
+        color: var(--ofc-text-light);
+        line-height: 1.7;
+    }
+    
+    /* ================================================
+       SERVICES GRID
+       ================================================ */
+    .ofc-bv-services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .ofc-bv-service-card {
+        background: var(--ofc-white);
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        border: 1px solid var(--ofc-border);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .ofc-bv-service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    
+    .ofc-bv-service-card h3 {
+        color: var(--ofc-primary);
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .ofc-bv-service-card p {
+        color: var(--ofc-text-light);
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    .ofc-bv-service-link {
+        color: var(--ofc-primary);
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .ofc-bv-service-link:hover {
+        color: var(--ofc-primary-hover);
+    }
+    
+    /* ================================================
+       WHY CHOOSE US - ICON GRID
+       ================================================ */
+    .ofc-bv-features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .ofc-bv-feature-card {
+        display: flex;
+        gap: 20px;
+        padding: 25px;
+        background: var(--ofc-white);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    
+    .ofc-bv-feature-icon {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .ofc-bv-feature-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .ofc-bv-feature-content h3 {
+        color: var(--ofc-primary);
+        font-size: 1.15rem;
+        margin-bottom: 8px;
+    }
+    
+    .ofc-bv-feature-content p {
+        color: var(--ofc-text-light);
+        font-size: 0.95rem;
+    }
+    
+    /* ================================================
+       COMPARISON TABLE
+       ================================================ */
+    .ofc-bv-comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--ofc-white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    
+    .ofc-bv-comparison-table th,
+    .ofc-bv-comparison-table td {
+        padding: 18px 20px;
+        text-align: left;
+        border-bottom: 1px solid var(--ofc-border);
+    }
+    
+    .ofc-bv-comparison-table thead {
+        background: var(--ofc-primary);
+        color: var(--ofc-white);
+    }
+    
+    .ofc-bv-comparison-table th {
+        font-weight: 600;
+    }
+    
+    .ofc-bv-comparison-table tbody tr:hover {
+        background: rgba(39, 34, 98, 0.05);
+    }
+    
+    .ofc-bv-comparison-table .ofc-bv-check {
+        color: var(--ofc-success);
+        font-weight: 700;
+    }
+    
+    .ofc-bv-comparison-table .ofc-bv-highlight {
+        background: rgba(39, 34, 98, 0.08);
+    }
+    
+    /* ================================================
+       PROJECT GALLERY
+       ================================================ */
+    .ofc-bv-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .ofc-bv-gallery-item {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .ofc-bv-gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .ofc-bv-gallery-caption {
+        background: var(--ofc-primary);
+        color: var(--ofc-white);
+        padding: 15px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    /* ================================================
+       TESTIMONIALS
+       ================================================ */
+    .ofc-bv-testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .ofc-bv-testimonial-card {
+        background: var(--ofc-white);
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        border-left: 4px solid var(--ofc-primary);
+    }
+    
+    .ofc-bv-testimonial-stars {
+        color: var(--ofc-star);
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .ofc-bv-testimonial-text {
+        font-style: italic;
+        color: var(--ofc-text-dark);
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+    
+    .ofc-bv-testimonial-author {
+        color: var(--ofc-primary);
+        font-weight: 600;
+    }
+    
+    /* ================================================
+       FAQ ACCORDION
+       ================================================ */
+    .ofc-bv-faq-list {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .ofc-bv-faq-item {
+        background: var(--ofc-white);
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        overflow: hidden;
+    }
+    
+    .ofc-bv-faq-question {
+        width: 100%;
+        padding: 20px 25px;
+        background: none;
+        border: none;
+        text-align: left;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--ofc-primary);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .ofc-bv-faq-question:hover {
+        background: rgba(39, 34, 98, 0.05);
+    }
+    
+    .ofc-bv-faq-question::after {
+        content: "+";
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--ofc-primary);
+        transition: transform 0.3s ease;
+    }
+    
+    .ofc-bv-faq-item.active .ofc-bv-faq-question::after {
+        content: "−";
+    }
+    
+    .ofc-bv-faq-answer {
+        padding: 0 25px 20px;
+        color: var(--ofc-text-light);
+        line-height: 1.7;
+        display: none;
+    }
+    
+    .ofc-bv-faq-item.active .ofc-bv-faq-answer {
+        display: block;
+    }
+    
+    /* ================================================
+       MAP SECTION
+       ================================================ */
+    .ofc-bv-map-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .ofc-bv-map-content h3 {
+        color: var(--ofc-primary);
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .ofc-bv-map-content p {
+        color: var(--ofc-text-light);
+        margin-bottom: 20px;
+    }
+    
+    .ofc-bv-map-embed iframe {
+        width: 100%;
+        height: 350px;
+        border-radius: 12px;
+        border: none;
+    }
+    
+    /* ================================================
+       FINAL CTA
+       ================================================ */
+    .ofc-bv-final-cta {
+        background: linear-gradient(135deg, var(--ofc-primary) 0%, #3a3485 100%);
+        color: #ffffff !important;
+        padding: 70px 0;
+        text-align: center;
+    }
+    
+    .ofc-bv-final-cta h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #ffffff !important;
+    }
+    
+    .ofc-bv-final-cta p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #ffffff !important;
+    }
+    
+    .ofc-bv-final-cta .ofc-bv-btn-primary {
+        background: var(--ofc-primary-hover);
+        color: #ffffff !important;
+    }
+    
+    .ofc-bv-final-cta .ofc-bv-btn-primary:hover {
+        background: #5a54a4;
+        color: #ffffff !important;
+    }
+    
+    .ofc-bv-final-cta .ofc-bv-btn-secondary {
+        border-color: var(--ofc-white);
+        color: #ffffff !important;
+    }
+    
+    .ofc-bv-final-cta .ofc-bv-btn-secondary:hover {
+        background: var(--ofc-white);
+        color: var(--ofc-primary) !important;
+    }
+    
+    /* ================================================
+       NEARBY COMMUNITIES
+       ================================================ */
+    .ofc-bv-nearby-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .ofc-bv-nearby-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        background: var(--ofc-white);
+        border-radius: 8px;
+        color: var(--ofc-primary);
+        text-decoration: none;
+        font-weight: 500;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+    }
+    
+    .ofc-bv-nearby-link:hover {
+        background: var(--ofc-primary);
+        color: var(--ofc-white);
+        transform: translateY(-2px);
+    }
+    
+    .ofc-bv-nearby-link svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+    }
+    
+    /* ================================================
+       RESPONSIVE DESIGN
+       ================================================ */
+    @media (max-width: 1024px) {
+        .ofc-bv-intro-content {
+            grid-template-columns: 1fr;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .ofc-bv-intro-image {
+            order: -1;
+            max-width: 600px;
+            margin: 0 auto 30px;
         }
         
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: var(--ofc-text-dark);
-        }
-        
-        .ofc-bv-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* ================================================
-           HERO SECTION
-           ================================================ */
-        .ofc-bv-hero {
-            background: linear-gradient(135deg, var(--ofc-primary) 0%, #3a3485 100%);
-            color: var(--ofc-white);
-            padding: 60px 0 80px;
-            position: relative;
-        }
-        
-        .ofc-bv-hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .ofc-bv-hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-        
-        .ofc-bv-hero h2 {
-            font-size: 1.25rem;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-bottom: 25px;
-        }
-        
-        .ofc-bv-hero-text {
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
-            opacity: 0.95;
-        }
-        
-        .ofc-bv-hero-highlight {
-            background: rgba(74, 68, 148, 0.3);
-            border-left: 4px solid var(--ofc-primary-hover);
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .ofc-bv-hero-image {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-        
-        .ofc-bv-hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Trust Bar */
         .ofc-bv-trust-bar {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 30px;
+            grid-template-columns: repeat(2, 1fr);
         }
         
-        .ofc-bv-trust-badge {
-            background: rgba(255,255,255,0.1);
-            padding: 12px 15px;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 0.85rem;
-            border: 1px solid rgba(255,255,255,0.15);
+        .ofc-bv-neighborhoods {
+            grid-template-columns: 1fr;
         }
         
-        .ofc-bv-trust-badge-icon {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
+        .ofc-bv-services-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
         
-        /* CTA Buttons */
+        .ofc-bv-features-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .ofc-bv-gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .ofc-bv-testimonials-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .ofc-bv-map-section {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .ofc-bv-trust-bar {
+            grid-template-columns: 1fr;
+        }
+        
+        .ofc-bv-services-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .ofc-bv-gallery-grid {
+            grid-template-columns: 1fr;
+        }
+        
         .ofc-bv-cta-group {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-            flex-wrap: wrap;
+            flex-direction: column;
         }
         
         .ofc-bv-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 14px 28px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-        
-        .ofc-bv-btn-primary {
-            background: var(--ofc-primary-hover);
-            color: var(--ofc-white);
-        }
-        
-        .ofc-bv-btn-primary:hover {
-            background: #5a54a4;
-            transform: translateY(-2px);
-        }
-        
-        .ofc-bv-btn-secondary {
-            background: transparent;
-            color: var(--ofc-white);
-            border: 2px solid var(--ofc-white);
-        }
-        
-        .ofc-bv-btn-secondary:hover {
-            background: var(--ofc-white);
-            color: var(--ofc-primary);
-        }
-        
-        /* ================================================
-           SECTIONS - GENERAL
-           ================================================ */
-        .ofc-bv-section {
-            padding: 70px 0;
-        }
-        
-        .ofc-bv-section-alt {
-            background: var(--ofc-bg-light);
-        }
-        
-        .ofc-bv-section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .ofc-bv-section-header h2 {
-            font-size: 2rem;
-            color: var(--ofc-primary);
-            margin-bottom: 15px;
-        }
-        
-        .ofc-bv-section-header p {
-            font-size: 1.1rem;
-            color: var(--ofc-text-light);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* ================================================
-           NEIGHBORHOODS SECTION
-           ================================================ */
-        .ofc-bv-neighborhoods {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-        
-        .ofc-bv-neighborhood-card {
-            background: var(--ofc-white);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border: 1px solid var(--ofc-border);
-        }
-        
-        .ofc-bv-neighborhood-card h3 {
-            color: var(--ofc-primary);
-            font-size: 1.25rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .ofc-bv-neighborhood-card h3::before {
-            content: "📍";
-            font-size: 1.1rem;
-        }
-        
-        .ofc-bv-neighborhood-card p {
-            color: var(--ofc-text-light);
-            line-height: 1.7;
-        }
-        
-        /* ================================================
-           SERVICES GRID
-           ================================================ */
-        .ofc-bv-services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-        
-        .ofc-bv-service-card {
-            background: var(--ofc-white);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border: 1px solid var(--ofc-border);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .ofc-bv-service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-        
-        .ofc-bv-service-card h3 {
-            color: var(--ofc-primary);
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-        
-        .ofc-bv-service-card p {
-            color: var(--ofc-text-light);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-        
-        .ofc-bv-service-link {
-            color: var(--ofc-primary);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .ofc-bv-service-link:hover {
-            color: var(--ofc-primary-hover);
-        }
-        
-        /* ================================================
-           WHY CHOOSE US - ICON GRID
-           ================================================ */
-        .ofc-bv-features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-        
-        .ofc-bv-feature-card {
-            display: flex;
-            gap: 20px;
-            padding: 25px;
-            background: var(--ofc-white);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
-        
-        .ofc-bv-feature-icon {
-            flex-shrink: 0;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
             justify-content: center;
         }
         
-        .ofc-bv-feature-icon svg {
-            width: 40px;
-            height: 40px;
-        }
-        
-        .ofc-bv-feature-content h3 {
-            color: var(--ofc-primary);
-            font-size: 1.15rem;
-            margin-bottom: 8px;
-        }
-        
-        .ofc-bv-feature-content p {
-            color: var(--ofc-text-light);
-            font-size: 0.95rem;
-        }
-        
-        /* ================================================
-           COMPARISON TABLE
-           ================================================ */
         .ofc-bv-comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--ofc-white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            font-size: 0.85rem;
         }
         
         .ofc-bv-comparison-table th,
         .ofc-bv-comparison-table td {
-            padding: 18px 20px;
-            text-align: left;
-            border-bottom: 1px solid var(--ofc-border);
+            padding: 12px 10px;
         }
         
-        .ofc-bv-comparison-table thead {
-            background: var(--ofc-primary);
-            color: var(--ofc-white);
+        .ofc-bv-section-header h2 {
+            font-size: 1.6rem;
         }
-        
-        .ofc-bv-comparison-table th {
-            font-weight: 600;
-        }
-        
-        .ofc-bv-comparison-table tbody tr:hover {
-            background: rgba(39, 34, 98, 0.05);
-        }
-        
-        .ofc-bv-comparison-table .ofc-bv-check {
-            color: var(--ofc-success);
-            font-weight: 700;
-        }
-        
-        .ofc-bv-comparison-table .ofc-bv-highlight {
-            background: rgba(39, 34, 98, 0.08);
-        }
-        
-        /* ================================================
-           PROJECT GALLERY
-           ================================================ */
-        .ofc-bv-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-        
-        .ofc-bv-gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .ofc-bv-gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .ofc-bv-gallery-caption {
-            background: var(--ofc-primary);
-            color: var(--ofc-white);
-            padding: 15px;
-            font-size: 0.9rem;
-            text-align: center;
-        }
-        
-        /* ================================================
-           TESTIMONIALS
-           ================================================ */
-        .ofc-bv-testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-        
-        .ofc-bv-testimonial-card {
-            background: var(--ofc-white);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--ofc-primary);
-        }
-        
-        .ofc-bv-testimonial-stars {
-            color: var(--ofc-star);
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-        
-        .ofc-bv-testimonial-text {
-            font-style: italic;
-            color: var(--ofc-text-dark);
-            line-height: 1.7;
-            margin-bottom: 15px;
-        }
-        
-        .ofc-bv-testimonial-author {
-            color: var(--ofc-primary);
-            font-weight: 600;
-        }
-        
-        /* ================================================
-           FAQ ACCORDION
-           ================================================ */
-        .ofc-bv-faq-list {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .ofc-bv-faq-item {
-            background: var(--ofc-white);
-            border-radius: 10px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-            overflow: hidden;
-        }
-        
-        .ofc-bv-faq-question {
-            width: 100%;
-            padding: 20px 25px;
-            background: none;
-            border: none;
-            text-align: left;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--ofc-primary);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .ofc-bv-faq-question:hover {
-            background: rgba(39, 34, 98, 0.05);
-        }
-        
-        .ofc-bv-faq-question::after {
-            content: "+";
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: var(--ofc-primary);
-            transition: transform 0.3s ease;
-        }
-        
-        .ofc-bv-faq-item.active .ofc-bv-faq-question::after {
-            content: "−";
-        }
-        
-        .ofc-bv-faq-answer {
-            padding: 0 25px 20px;
-            color: var(--ofc-text-light);
-            line-height: 1.7;
-            display: none;
-        }
-        
-        .ofc-bv-faq-item.active .ofc-bv-faq-answer {
-            display: block;
-        }
-        
-        /* ================================================
-           MAP SECTION
-           ================================================ */
-        .ofc-bv-map-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .ofc-bv-map-content h3 {
-            color: var(--ofc-primary);
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-        
-        .ofc-bv-map-content p {
-            color: var(--ofc-text-light);
-            margin-bottom: 20px;
-        }
-        
-        .ofc-bv-map-embed iframe {
-            width: 100%;
-            height: 350px;
-            border-radius: 12px;
-            border: none;
-        }
-        
-        /* ================================================
-           FINAL CTA
-           ================================================ */
-        .ofc-bv-final-cta {
-            background: linear-gradient(135deg, var(--ofc-primary) 0%, #3a3485 100%);
-            color: var(--ofc-white);
-            padding: 70px 0;
-            text-align: center;
-        }
-        
-        .ofc-bv-final-cta h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-        
-        .ofc-bv-final-cta p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* ================================================
-           NEARBY COMMUNITIES
-           ================================================ */
-        .ofc-bv-nearby-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .ofc-bv-nearby-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 20px;
-            background: var(--ofc-white);
-            border-radius: 8px;
-            color: var(--ofc-primary);
-            text-decoration: none;
-            font-weight: 500;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-        }
-        
-        .ofc-bv-nearby-link:hover {
-            background: var(--ofc-primary);
-            color: var(--ofc-white);
-            transform: translateY(-2px);
-        }
-        
-        .ofc-bv-nearby-link svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-        }
-        
-        /* ================================================
-           RESPONSIVE DESIGN
-           ================================================ */
-        @media (max-width: 1024px) {
-            .ofc-bv-hero-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .ofc-bv-hero-image {
-                order: -1;
-                max-width: 600px;
-                margin: 0 auto 30px;
-            }
-            
-            .ofc-bv-trust-bar {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .ofc-bv-neighborhoods {
-                grid-template-columns: 1fr;
-            }
-            
-            .ofc-bv-services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .ofc-bv-features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .ofc-bv-gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .ofc-bv-testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .ofc-bv-map-section {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .ofc-bv-hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .ofc-bv-hero h2 {
-                font-size: 1.1rem;
-            }
-            
-            .ofc-bv-trust-bar {
-                grid-template-columns: 1fr;
-            }
-            
-            .ofc-bv-services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .ofc-bv-gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .ofc-bv-cta-group {
-                flex-direction: column;
-            }
-            
-            .ofc-bv-btn {
-                justify-content: center;
-            }
-            
-            .ofc-bv-comparison-table {
-                font-size: 0.85rem;
-            }
-            
-            .ofc-bv-comparison-table th,
-            .ofc-bv-comparison-table td {
-                padding: 12px 10px;
-            }
-            
-            .ofc-bv-section-header h2 {
-                font-size: 1.6rem;
-            }
-        }
-    </style>
-</head>
-<body>
+    }
+</style>
 
 <!-- ================================================
-     HERO SECTION
+     INTRO SECTION (below Elementor hero)
      ================================================ -->
-<section class="ofc-bv-hero">
+<section class="ofc-bv-intro">
     <div class="ofc-bv-container">
-        <div class="ofc-bv-hero-content">
-            <div class="ofc-bv-hero-text-wrapper">
-                <h1>Beverly Fence Installation</h1>
-                <h2>Professional Fencing for Beverly's Coastal Properties Since 1985</h2>
-                
-                <p class="ofc-bv-hero-text">
+        <div class="ofc-bv-intro-content">
+            <div class="ofc-bv-intro-text">
+                <p>
                     Olympic Fence Company has been serving Beverly and the North Shore for over 40 years. From the historic homes along Cabot Street to waterfront properties near Lynch Park and Beverly Cove, we understand the unique fencing needs of this coastal community.
                 </p>
                 
-                <p class="ofc-bv-hero-text">
+                <p>
                     Our wood-on-steel installation system is built specifically for New England conditions. Steel posts won't rot at the ground line like traditional wood posts, giving you decades of trouble-free performance through harsh winters, coastal humidity, and salt air exposure.
                 </p>
                 
-                <div class="ofc-bv-hero-highlight">
+                <div class="ofc-bv-intro-highlight">
                     <strong>Why Beverly homeowners choose us:</strong> We're one of the few contractors offering lifetime workmanship warranties. Most competitors cap their coverage at 2-3 years. We stand behind our work for life.
                 </div>
                 
@@ -718,7 +720,7 @@
                 </div>
             </div>
             
-            <div class="ofc-bv-hero-image">
+            <div class="ofc-bv-intro-image">
                 <img src="https://olympicfencema.com/wp-content/uploads/2025/12/AFTER-NEW-WOOD-PRIVACY-FENCE.webp" alt="Professional cedar privacy fence installation by Olympic Fence in Beverly, MA" width="600" height="400">
             </div>
         </div>
@@ -1087,7 +1089,7 @@
                 <p>Based in West Newbury, we provide residential fence installation within a 30-mile radius and commercial projects up to 70 miles.</p>
                 <div class="ofc-bv-cta-group" style="margin-top: 20px;">
                     <a href="https://olympicfencema.com/contact-us/" class="ofc-bv-btn ofc-bv-btn-primary">Get Free Estimate</a>
-                    <a href="tel:978-997-2302" class="ofc-bv-btn ofc-bv-btn-secondary" style="border-color: var(--ofc-primary); color: var(--ofc-primary);">Call (978) 997-2302</a>
+                    <a href="tel:978-997-2302" class="ofc-bv-btn ofc-bv-btn-secondary">Call (978) 997-2302</a>
                 </div>
             </div>
             
@@ -1180,7 +1182,7 @@
 </script>
 
 <!-- ================================================
-     SCHEMA MARKUP
+     SCHEMA MARKUP (add to page header or footer)
      ================================================ -->
 <script type="application/ld+json">
 {
@@ -1358,6 +1360,3 @@
     ]
 }
 </script>
-
-</body>
-</html>
