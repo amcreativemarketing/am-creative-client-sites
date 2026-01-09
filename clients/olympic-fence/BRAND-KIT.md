@@ -1,7 +1,34 @@
 # Olympic Fence Company - Brand Kit & Style Guide
 
-**Last Updated:** December 8, 2025  
+**Last Updated:** January 9, 2026  
 **Maintained by:** AM Creative Marketing
+
+---
+
+## ⚠️ CRITICAL - READ BEFORE BUILDING ANY PAGE
+
+### Common Mistakes to Avoid
+
+| Mistake | Wrong | Correct |
+|---------|-------|---------|
+| **Colors** | Navy `#0d2942`, Teal `#2d8a7b`, Blue `#357abd` | Purple `#272262`, `#4a4494` |
+| **CSS prefix** | `.of-`, `.olympic-`, `.fence-` | `.ofc-[city]-` (e.g., `.ofc-bv-`) |
+| **Missing H1** | No H1 in hero section | Always include H1 with target keyword |
+| **Dead links** | Linking to pages that don't exist | Only link to verified live pages (see list below) |
+| **Review count** | Making up numbers | Use "15+ reviews" or verify current count |
+| **Phone format** | `+1-978-997-2302` | `978-997-2302` |
+
+### Pre-Build Checklist
+
+Before starting ANY Olympic Fence page:
+
+- [ ] Using purple `#272262` as primary (NOT navy, teal, or blue)
+- [ ] CSS variables use `--ofc-` prefix
+- [ ] CSS classes use `.ofc-[city]-` namespace
+- [ ] H1 tag present in hero with primary keyword
+- [ ] All internal links go to verified live pages only
+- [ ] Phone number is `978-997-2302` everywhere
+- [ ] Schema uses business HQ coordinates (42.8034, -70.9617)
 
 ---
 
@@ -23,7 +50,7 @@
 
 ## Brand Colors
 
-### Primary Palette
+### ✅ CORRECT - Use These Colors
 
 | Color | Hex | RGB | Usage |
 |-------|-----|-----|-------|
@@ -32,6 +59,15 @@
 | **Dark Text** | `#333333` | rgb(51, 51, 51) | Body text, paragraphs |
 | **Light Text** | `#666666` | rgb(102, 102, 102) | Secondary text, captions, meta info |
 
+### ❌ WRONG - Never Use These Colors
+
+| Color | Hex | Why Wrong |
+|-------|-----|-----------|
+| Navy | `#0d2942` | Not our brand - this is a common mistake |
+| Teal | `#2d8a7b` | Not our brand |
+| Blue | `#357abd` | Not our brand |
+| Any green | Various | Not in our palette |
+
 ### Supporting Colors
 
 | Color | Hex | Usage |
@@ -39,10 +75,10 @@
 | **White** | `#ffffff` | Backgrounds, text on dark backgrounds |
 | **Light Gray** | `#f8f9fa` | Alternate section backgrounds |
 | **Medium Gray** | `#e9ecef` | Borders, dividers, table backgrounds |
-| **Success Green** | `#28a745` | Checkmarks, positive indicators |
-| **Star Gold** | `#ffc107` | Star ratings |
+| **Success Green** | `#28a745` | Checkmarks, positive indicators ONLY |
+| **Star Gold** | `#ffc107` | Star ratings ONLY |
 
-### CSS Variables (for location pages)
+### CSS Variables (REQUIRED for all location pages)
 
 ```css
 :root {
@@ -67,16 +103,13 @@
 ```css
 /* Primary font stack - system fonts for performance */
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-/* Heading font stack */
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 ```
 
 ### Type Scale
 
 | Element | Size | Weight | Line Height | Usage |
 |---------|------|--------|-------------|-------|
-| H1 | 2.5rem (40px) | 700 | 1.2 | Page titles (hero sections) |
+| H1 | 2.5rem (40px) | 700 | 1.2 | Page titles (hero sections) - REQUIRED |
 | H2 | 2rem (32px) | 700 | 1.3 | Section headings |
 | H3 | 1.5rem (24px) | 600 | 1.4 | Subsection headings, card titles |
 | H4 | 1.25rem (20px) | 600 | 1.4 | Minor headings |
@@ -231,28 +264,35 @@ Sunday: Closed
 
 ---
 
-## URL Structure
+## URL Structure & Live Pages
 
-### Location Pages
+### ⚠️ CRITICAL: Only Link to Verified Live Pages
 
-Pattern: `/fence-installation-[city]-ma/`
+**Rule: Never link to pages that don't exist.** Before adding any internal link, verify the page is in this list or check the live site.
 
-Examples:
-- `/fence-installation-north-andover-ma/`
-- `/fence-installation-andover-ma/`
-- `/fence-installation-methuen-ma/`
+### Live Location Pages (verified)
 
-### Existing Location Pages
+| City | URL | Status |
+|------|-----|--------|
+| Newburyport | `/newburyport-fence-company/` | ✅ Live |
+| Haverhill | `/haverhill-fence-company/` | ✅ Live |
+| Amesbury | `/amesbury-fence-company/` | ✅ Live |
+| North Andover | `/north-andover-fence-company/` | ✅ Live |
+| Salisbury | `/salisbury-fence-company/` | ✅ Live |
+| Groveland | `/groveland-fence-company/` | ✅ Live |
+| Beverly | `/beverly-fence-company/` | ✅ Live |
 
-| City | URL |
-|------|-----|
-| Newburyport | `/newburyport-fence-company/` |
-| Haverhill | `/haverhill-fence-company/` |
-| Amesbury | `/amesbury-fence-company/` |
-| North Andover | `/fence-installation-north-andover-ma/` |
-| Salisbury | `/salisbury-fence-company/` |
+### Pages NOT Live (do not link)
 
-### Service Pages
+| City | Status |
+|------|--------|
+| Salem | ❌ Not built |
+| Danvers | ❌ Not built |
+| Peabody | ❌ Not built |
+| Andover | ❌ Not built |
+| Methuen | ❌ Not built |
+
+### Live Service Pages
 
 | Service | URL |
 |---------|-----|
@@ -268,6 +308,48 @@ Examples:
 
 ---
 
+## CSS Namespace Requirements
+
+### ⚠️ REQUIRED: Use City-Specific Prefixes
+
+All custom styles for location pages MUST use the `.ofc-[city]-` prefix to prevent conflicts with the WordPress theme.
+
+**Format:** `.ofc-[2-letter-city-code]-[element]`
+
+| City | Prefix | Example |
+|------|--------|---------|
+| Beverly | `.ofc-bv-` | `.ofc-bv-hero`, `.ofc-bv-btn-primary` |
+| North Andover | `.ofc-na-` | `.ofc-na-hero`, `.ofc-na-btn-primary` |
+| Haverhill | `.ofc-hv-` | `.ofc-hv-hero`, `.ofc-hv-btn-primary` |
+| Amesbury | `.ofc-am-` | `.ofc-am-hero`, `.ofc-am-btn-primary` |
+| Newburyport | `.ofc-nb-` | `.ofc-nb-hero`, `.ofc-nb-btn-primary` |
+| Salisbury | `.ofc-sb-` | `.ofc-sb-hero`, `.ofc-sb-btn-primary` |
+| Groveland | `.ofc-gv-` | `.ofc-gv-hero`, `.ofc-gv-btn-primary` |
+
+### ❌ Wrong Prefixes (Never Use)
+
+- `.of-` (too generic, conflicts possible)
+- `.olympic-` (too long, not namespaced)
+- `.fence-` (too generic)
+- No prefix at all
+
+### Standard Class Names
+
+```css
+.ofc-[city]-hero { }           /* Hero section wrapper */
+.ofc-[city]-container { }      /* Content container */
+.ofc-[city]-trust-bar { }      /* Trust signals bar */
+.ofc-[city]-service-card { }   /* Service grid cards */
+.ofc-[city]-btn-primary { }    /* Primary buttons */
+.ofc-[city]-btn-secondary { }  /* Secondary buttons */
+.ofc-[city]-section { }        /* Content sections */
+.ofc-[city]-section-alt { }    /* Alternate background sections */
+.ofc-[city]-faq-item { }       /* FAQ accordions */
+.ofc-[city]-testimonial-card { } /* Customer reviews */
+```
+
+---
+
 ## Location Page Design Principles
 
 ### Variety Within Brand Consistency
@@ -280,8 +362,9 @@ Examples:
 - CSS namespace prefix (.ofc-[city]-)
 - Trust bar with same messaging
 - Schema markup structure
-- Cross-linking to other live location pages
+- Cross-linking to other live location pages ONLY
 - CTA buttons and phone numbers
+- H1 tag with target keyword
 
 **Encouraged variety:**
 - Section order and arrangement
@@ -295,7 +378,7 @@ Examples:
 **Layout options to mix between pages:**
 1. **Hero with side image** - Two-column intro with image (e.g., Amesbury)
 2. **Welcome sign feature** - Local landmark image in service area section (e.g., Haverhill)
-3. **Coastal/waterfront focus** - Environmental imagery for beach towns (e.g., Newburyport, Salisbury)
+3. **Coastal/waterfront focus** - Environmental imagery for beach towns (e.g., Newburyport, Salisbury, Beverly)
 4. **Neighborhood grid** - Detailed area breakdowns for larger cities
 5. **Process timeline** - Step-by-step installation focus
 6. **Gallery-forward** - Lead with project photos
@@ -310,25 +393,39 @@ Examples:
 
 ## Page Components
 
+### Hero Section (REQUIRED elements)
+
+```html
+<section class="ofc-[city]-hero">
+    <div class="ofc-[city]-container">
+        <h1>[City] Fence Installation</h1>
+        <h2>Subheading with value proposition</h2>
+        <!-- Content -->
+    </div>
+</section>
+```
+
+**H1 Tag is REQUIRED** - Every location page must have an H1 in the hero section containing the primary keyword (e.g., "Beverly Fence Installation").
+
 ### Trust Bar (required on all location pages)
 
 ```html
-<div class="ofc-trust-bar">
-  <div class="ofc-trust-item">⭐ 5.0 Google Rating</div>
-  <div class="ofc-trust-item">🛡️ Lifetime Warranty</div>
-  <div class="ofc-trust-item">✓ Licensed & Insured</div>
-  <div class="ofc-trust-item">🏠 Family-Owned Since 1985</div>
+<div class="ofc-[city]-trust-bar">
+  <div class="ofc-[city]-trust-item">⭐ 5.0 Google Rating</div>
+  <div class="ofc-[city]-trust-item">🛡️ Lifetime Warranty</div>
+  <div class="ofc-[city]-trust-item">✓ Licensed & Insured</div>
+  <div class="ofc-[city]-trust-item">🏠 Family-Owned Since 1985</div>
 </div>
 ```
 
 ### Primary CTA Button
 
 ```html
-<a href="/contact-us/" class="ofc-btn-primary">Get Your Free Estimate</a>
+<a href="/contact-us/" class="ofc-[city]-btn-primary">Get Your Free Estimate</a>
 ```
 
 ```css
-.ofc-btn-primary {
+.ofc-[city]-btn-primary {
   background: #272262;
   color: #ffffff;
   padding: 15px 30px;
@@ -338,7 +435,7 @@ Examples:
   display: inline-block;
   transition: background 0.3s ease;
 }
-.ofc-btn-primary:hover {
+.ofc-[city]-btn-primary:hover {
   background: #4a4494;
 }
 ```
@@ -346,7 +443,7 @@ Examples:
 ### Secondary CTA (Phone)
 
 ```html
-<a href="tel:978-997-2302" class="ofc-btn-secondary">📞 Call 978-997-2302</a>
+<a href="tel:978-997-2302" class="ofc-[city]-btn-secondary">📞 Call 978-997-2302</a>
 ```
 
 ### Service Cards
@@ -362,6 +459,8 @@ Standard 4-card grid:
 ## Schema Markup Templates
 
 ### LocalBusiness Schema
+
+**Note:** Always use business HQ coordinates (West Newbury), not the service city coordinates.
 
 ```json
 {
@@ -382,19 +481,20 @@ Standard 4-card grid:
   "url": "https://olympicfencema.com",
   "priceRange": "$$",
   "openingHours": ["Mo-Fr 07:00-17:00"],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.8034,
+    "longitude": -70.9617
+  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
     "reviewCount": "15"
   },
   "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 42.8034,
-      "longitude": -70.9617
-    },
-    "geoRadius": "48280"
+    "@type": "City",
+    "name": "[CITY NAME]",
+    "addressRegion": "MA"
   }
 }
 ```
@@ -435,7 +535,7 @@ Standard 4-card grid:
 
 ## Internal Linking Strategy
 
-**Rule: No placeholder links.** Only link to pages that exist and are live. Never use `#` or empty href attributes. If a location page doesn't exist yet, don't include it in the service areas grid.
+**Rule: No placeholder links.** Only link to pages that exist and are live. Never use `#` or empty href attributes. If a location page doesn't exist yet, don't include it in the nearby communities section.
 
 ### From Location Pages, Link To:
 
@@ -445,12 +545,7 @@ Standard 4-card grid:
    - Chain-Link → `/chain-link/`
    - Commercial → `/commercial-projects/`
 
-2. **Other location pages** (only link to verified live pages):
-   - Newburyport → `/newburyport-fence-company/`
-   - Haverhill → `/haverhill-fence-company/`
-   - Amesbury → `/amesbury-fence-company/`
-   - North Andover → `/fence-installation-north-andover-ma/`
-   - Salisbury → `/salisbury-fence-company/`
+2. **Other location pages** (only link to verified live pages - see list above)
 
 3. **Contact page** (all CTAs):
    - `/contact-us/`
@@ -480,7 +575,7 @@ Examples:
 ### Image Dimensions
 
 | Usage | Recommended Size |
-|-------|-----------------|
+|-------|--------------------|
 | Hero background | 1920x1080px |
 | Service cards | 800x600px |
 | Gallery thumbnails | 600x450px |
@@ -494,44 +589,24 @@ Example: `ofc-cedar-privacy-fence-north-andover-01.jpg`
 
 ---
 
-## CSS Namespace
-
-All custom styles for location pages use the `ofc-` prefix to prevent conflicts:
-
-```css
-.ofc-na-page { }        /* Page wrapper (na = North Andover) */
-.ofc-trust-bar { }      /* Trust signals bar */
-.ofc-service-card { }   /* Service grid cards */
-.ofc-btn-primary { }    /* Primary buttons */
-.ofc-btn-secondary { }  /* Secondary buttons */
-.ofc-why-item { }       /* Why choose us columns */
-.ofc-faq-item { }       /* FAQ accordions */
-.ofc-review-card { }    /* Customer reviews */
-.ofc-highlight-grid { } /* Feature highlights */
-```
-
-For new location pages, use city abbreviation:
-- North Andover: `.ofc-na-page`
-- Andover: `.ofc-an-page`
-- Methuen: `.ofc-me-page`
-
----
-
 ## WordPress Implementation Checklist
 
 When publishing a new location page:
 
-- [ ] Page slug matches URL pattern (`fence-installation-[city]-ma`)
+- [ ] Page slug matches URL pattern
 - [ ] Meta title set in Yoast/RankMath (60 chars max)
 - [ ] Meta description set (155 chars max)
+- [ ] H1 tag present in hero with target keyword
 - [ ] Schema scripts added to page header
-- [ ] Custom CSS added (page-specific or theme)
-- [ ] All phone numbers verified as 978-997-2302
+- [ ] Custom CSS uses `.ofc-[city]-` namespace
+- [ ] All colors are brand purple (#272262, #4a4494)
+- [ ] All phone numbers are 978-997-2302
 - [ ] All internal links point to existing pages only
 - [ ] External links have `rel="noopener noreferrer"`
 - [ ] Images have descriptive alt text
 - [ ] Page added to Service Areas dropdown menu
 - [ ] Mobile responsiveness tested
+- [ ] Update this brand kit with new page URL
 
 ---
 
@@ -544,5 +619,3 @@ Managing Olympic Fence digital presence and local SEO
 ---
 
 *This brand kit is a living document. Update as the website evolves or new pages are created.*
-
-
