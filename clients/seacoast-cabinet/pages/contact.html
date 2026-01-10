@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Seacoast Cabinet | Kitchen Design Showroom in Rowley, MA</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --coastal-blue: #7d99ad;
+            --warm-gold: #b8905f;
+            --deep-charcoal: #2c3e50;
+            --pure-white: #ffffff;
+            --light-gray: #f8f8f8;
+            --medium-gray: #666666;
+            --warm-beige: #f5f2ed;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--deep-charcoal);
+            background-color: var(--light-gray);
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.2;
+        }
+
+        .page-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        .contact-hero {
+            background: linear-gradient(135deg, var(--deep-charcoal) 0%, #34495e 100%);
+            color: var(--pure-white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--pure-white);
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--pure-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-info-bar {
+            background: var(--pure-white);
+            padding: 30px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--coastal-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: var(--pure-white);
+            font-size: 24px;
+        }
+
+        .info-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--deep-charcoal);
+        }
+
+        .info-item p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        .info-item a {
+            color: var(--coastal-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .info-item a:hover {
+            color: var(--warm-gold);
+        }
+
+        .forms-section {
+            padding: 40px 20px 60px;
+        }
+
+        .forms-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .form-column {
+            background: var(--pure-white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+        }
+
+        .form-column h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--deep-charcoal);
+        }
+
+        .form-column p {
+            color: var(--medium-gray);
+            margin-bottom: 25px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .trust-badges {
+            background: var(--pure-white);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .trust-badges h3 {
+            font-size: 1.3rem;
+            color: var(--deep-charcoal);
+            margin-bottom: 20px;
+        }
+
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 20px auto 0;
+        }
+
+        .badge-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--warm-beige);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-charcoal);
+            font-size: 20px;
+        }
+
+        .badge-text {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            font-weight: 600;
+        }
+
+        .cta-strip {
+            background: var(--coastal-blue);
+            color: var(--pure-white);
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-strip h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--pure-white);
+        }
+
+        .cta-strip p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            color: var(--pure-white);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .badges-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .contact-hero p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+
+            .forms-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .form-column {
+                padding: 25px 20px;
+            }
+
+            .form-column h2 {
+                font-size: 1.5rem;
+            }
+
+            .info-item {
+                padding: 15px;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .info-item:last-child {
+                border-bottom: none;
+            }
+
+            .badges-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 0 20px;
+            }
+
+            .cta-strip h3 {
+                font-size: 1.3rem;
+            }
+
+            .cta-strip p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-hero {
+                padding: 40px 15px;
+            }
+
+            .contact-hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .contact-hero p {
+                font-size: 0.95rem;
+            }
+
+            .badges-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .badge-item {
+                padding: 10px;
+            }
+
+            .badge-text {
+                font-size: 0.85rem;
+            }
+
+            .forms-section {
+                padding: 30px 15px 40px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .page-wrapper {
+                border-radius: 8px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <h1>Let's Transform Your Space Together</h1>
+            <p>Visit our Rowley showroom or schedule a free design consultation to bring your vision to life</p>
+        </section>
+
+        <!-- Contact Information Bar -->
+        <section class="contact-info-bar">
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <h3>Visit Our Showroom</h3>
+                    <p>300 Newburyport Turnpike<br>Unit 3, Rowley, MA 01969</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <h3>Call Us Direct</h3>
+                    <p><a href="tel:978-350-1040">(978) 350-1040</a><br>Mon-Fri: 9AM-5PM<br>Sat: by appointment</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:inquiry@seacoastcabinetne.com">inquiry@seacoastcabinetne.com</a><br>We respond as soon as possible</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms Section -->
+        <section class="forms-section">
+            <div class="forms-grid">
+                <!-- Contact Form Column -->
+                <div class="form-column">
+                    <h2>Get Your Free Design Consultation</h2>
+                    <p>Have a quick question or ready to start your project? Fill out this form and we'll get back to you within one business day.</p>
+                    
+                    <!-- Contact Form Embed -->
+                    <iframe src="https://link.amconnect.io/widget/form/7bWHjTTdNK9S2MJly2kV" 
+                            style="width:100%;height:600px;border:none;border-radius:4px" 
+                            id="inline-7bWHjTTdNK9S2MJly2kV" 
+                            data-layout="{'id':'INLINE'}" 
+                            data-trigger-type="alwaysShow" 
+                            data-trigger-value="" 
+                            data-activation-type="alwaysActivated" 
+                            data-activation-value="" 
+                            data-deactivation-type="neverDeactivate" 
+                            data-deactivation-value="" 
+                            data-form-name="Website form (active)" 
+                            data-height="1354" 
+                            data-layout-iframe-id="inline-7bWHjTTdNK9S2MJly2kV" 
+                            data-form-id="7bWHjTTdNK9S2MJly2kV" 
+                            title="Website form (active)"></iframe>
+                </div>
+
+                <!-- Scheduler Column -->
+                <div class="form-column">
+                    <h2>Schedule Your Showroom Visit</h2>
+                    <p>Meet with our local design team for personalized assistance. Book your consultation below and our experts will help you explore options perfectly suited to your space and style.</p>
+                    
+                    <!-- Showroom Scheduler Embed -->
+                    <iframe src="https://link.amconnect.io/widget/booking/n0edlrY8YUgTsrzEsRVQ" 
+                            style="width:100%;height:600px;border:none;overflow:hidden;" 
+                            scrolling="no" 
+                            id="n2SzLf5E3KdGbzKYzaQk_1755281931462" 
+                            title="Showroom Visit Scheduler"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Badges Section -->
+        <section class="trust-badges">
+            <h3>What to Expect When You Contact Us</h3>
+            <div class="badges-grid">
+                <div class="badge-item">
+                    <div class="badge-icon">⚡</div>
+                    <span class="badge-text">Same-Day Response</span>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">👥</div>
+                    <span class="badge-text">Local Design Team</span>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">📐</div>
+                    <span class="badge-text">On-Site Measurements</span>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">🇺🇸</div>
+                    <span class="badge-text">American-Made Quality</span>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">💰</div>
+                    <span class="badge-text">Transparent Pricing</span>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">🎨</div>
+                    <span class="badge-text">Personalized Design</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Strip -->
+        <section class="cta-strip">
+            <h3>Ready to Transform Your Kitchen?</h3>
+            <p>Join hundreds of satisfied homeowners who've trusted us with their dream kitchens</p>
+        </section>
+    </div>
+
+    <!-- Load Form Scripts -->
+    <script src="https://link.amconnect.io/js/form_embed.js"></script>
+</body>
+</html>
