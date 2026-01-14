@@ -1,0 +1,813 @@
+<!-- 
+  BLB Design/Build - Areas We Serve Hub Page
+  URL: /areas-we-serve/
+  Type: Location Directory (Parent Hub)
+  
+  HERO OPTIONS (for Divi):
+  
+  Option A - Geographic Scope:
+  H1: Areas We Serve
+  H2: Design-build remodeling for homeowners across the North Shore MA and Southern New Hampshire
+  
+  Option B - Community Focus:
+  H1: Serving Communities Across the North Shore & Southern NH
+  H2: Kitchen remodels, bathroom renovations, home additions, and whole-home transformations - all coordinated by one trusted team
+  
+  Option C - Local Expertise:
+  H1: Your Local Design-Build Partner
+  H2: From Newburyport to Portsmouth, we help homeowners create spaces they love
+  
+  CTA: Start Your Project → /contact-us/
+-->
+
+<style>
+/* =============================================
+   BLB Areas We Serve Page Styles
+   Namespace: .blb-aws-
+   ============================================= */
+
+:root {
+  --blb-primary: #1a1a1a;
+  --blb-secondary: #666666;
+  --blb-body: #555555;
+  --blb-bg-light: #f8f8f8;
+  --blb-white: #ffffff;
+  --blb-header-bar: #b8b8ae;
+}
+
+/* Base Section Styling */
+.blb-aws-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blb-aws-section-gray {
+  background-color: var(--blb-bg-light);
+  padding: 80px 20px;
+}
+
+.blb-aws-section-gray .blb-aws-section {
+  padding: 0;
+}
+
+/* Ensure dark text in gray sections */
+.blb-aws-section-gray h2,
+.blb-aws-section-gray h3 {
+  color: var(--blb-primary) !important;
+}
+
+.blb-aws-section-gray p {
+  color: var(--blb-body) !important;
+}
+
+/* Typography */
+.blb-aws-section h2 {
+  font-family: 'Messina Modern Light', sans-serif !important;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: var(--blb-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.blb-aws-section h3 {
+  font-family: 'Messina Modern Light', sans-serif !important;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--blb-primary);
+  margin-bottom: 0.75rem;
+}
+
+.blb-aws-section p {
+  font-family: 'Messina Modern Light', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--blb-body);
+  margin-bottom: 1.25rem;
+}
+
+.blb-aws-section-intro {
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.blb-aws-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  font-family: 'Messina Modern Light', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid var(--blb-primary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.blb-aws-btn-primary {
+  background-color: var(--blb-primary);
+  color: var(--blb-white);
+}
+
+.blb-aws-btn-primary:hover {
+  background-color: var(--blb-white);
+  color: var(--blb-primary);
+}
+
+.blb-aws-btn-outline {
+  background-color: transparent;
+  color: var(--blb-primary);
+}
+
+.blb-aws-btn-outline:hover {
+  background-color: var(--blb-primary);
+  color: var(--blb-white);
+}
+
+/* Inline text links */
+.blb-aws-text-link {
+  color: var(--blb-primary) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.blb-aws-text-link:hover {
+  opacity: 0.7;
+}
+
+/* Button container - side by side with wrap */
+.blb-aws-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* =============================================
+   Section 1: Intro
+   ============================================= */
+.blb-aws-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.blb-aws-intro-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem;
+}
+
+.blb-aws-intro-content ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--blb-body) !important;
+}
+
+.blb-aws-intro-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--blb-primary);
+  font-weight: bold;
+}
+
+.blb-aws-intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =============================================
+   Section 2 & 3: Town Grids
+   ============================================= */
+.blb-aws-state-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--blb-primary);
+}
+
+.blb-aws-state-header h2 {
+  margin-bottom: 0;
+}
+
+.blb-aws-towns-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.blb-aws-town-card {
+  background: var(--blb-white);
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.blb-aws-town-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  color: var(--blb-primary) !important;
+}
+
+.blb-aws-town-card:hover {
+  border-color: var(--blb-primary);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* =============================================
+   Section 5: Services Grid
+   ============================================= */
+.blb-aws-services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.blb-aws-services-header p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blb-aws-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.blb-aws-service-item {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--blb-white);
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.blb-aws-service-item:hover {
+  border-color: var(--blb-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.blb-aws-service-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blb-aws-service-item h3 {
+  margin-bottom: 0.5rem;
+  color: var(--blb-primary) !important;
+}
+
+.blb-aws-service-item p {
+  font-size: 0.95rem;
+  color: var(--blb-secondary) !important;
+  margin-bottom: 0;
+}
+
+/* =============================================
+   Section 6: Final CTA
+   ============================================= */
+.blb-aws-cta-section {
+  background: var(--blb-bg-light);
+  padding: 80px 20px;
+}
+
+.blb-aws-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blb-aws-cta-content h2 {
+  margin-bottom: 1rem;
+  color: var(--blb-primary) !important;
+}
+
+.blb-aws-cta-content p {
+  margin-bottom: 2rem;
+  color: var(--blb-body) !important;
+}
+
+.blb-aws-trust-footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--blb-secondary) !important;
+}
+
+/* =============================================
+   Distance Table
+   ============================================= */
+.blb-aws-distance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-family: 'Messina Modern Light', sans-serif;
+}
+
+.blb-aws-distance-table th {
+  background: var(--blb-primary);
+  color: var(--blb-white) !important;
+  padding: 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.blb-aws-distance-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: var(--blb-body) !important;
+  background: var(--blb-white);
+  font-size: 0.95rem;
+}
+
+.blb-aws-distance-table tr:nth-child(even) td {
+  background: var(--blb-bg-light);
+}
+
+.blb-aws-distance-table tr:hover td {
+  background: #f0f0f0;
+}
+
+/* =============================================
+   Responsive Styles
+   ============================================= */
+@media (max-width: 1024px) {
+  .blb-aws-intro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .blb-aws-intro-image {
+    order: -1;
+  }
+  
+  .blb-aws-towns-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .blb-aws-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .blb-aws-section {
+    padding: 60px 20px;
+  }
+  
+  .blb-aws-section h2 {
+    font-size: 2rem;
+  }
+  
+  .blb-aws-towns-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .blb-aws-services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .blb-aws-btn-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .blb-aws-btn-group .blb-aws-btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+  
+  .blb-aws-distance-table {
+    font-size: 0.85rem;
+  }
+  
+  .blb-aws-distance-table th,
+  .blb-aws-distance-table td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blb-aws-towns-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<!-- =============================================
+     Section 1: Introduction
+     ============================================= -->
+<section class="blb-aws-section">
+  <div class="blb-aws-intro">
+    <div class="blb-aws-intro-content">
+      <h2>Local Expertise, Lasting Results</h2>
+      <p>Based in Amesbury, BLB Design/Build serves homeowners across the <a href="https://blbdesignbuild.com/north-shore-remodeling/" class="blb-aws-text-link">North Shore of Massachusetts</a> and Southern New Hampshire. Our team brings design-build expertise to communities within roughly 30 miles of our office - from historic coastal towns to inland neighborhoods.</p>
+      <p>Each project reflects the unique character of its location. Whether you're updating a historic Newburyport colonial or adding space to a contemporary home in Stratham, we coordinate every detail from initial design through final inspection.</p>
+      <ul>
+        <li>Serving 40+ communities across MA and NH</li>
+        <li>Single point of contact throughout your project</li>
+        <li>Design, permitting, and construction under one roof</li>
+        <li>Local knowledge of building codes and regulations</li>
+      </ul>
+      <a href="https://blbdesignbuild.com/contact-us/" class="blb-aws-btn blb-aws-btn-primary">Start Your Project</a>
+    </div>
+    <div class="blb-aws-intro-image">
+      <img src="https://blbdesignbuild.com/wp-content/uploads/2024/12/December2024_BLB-11.jpg" alt="BLB Design/Build team outside their Amesbury office">
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     Section 2: Massachusetts Towns
+     ============================================= -->
+<section class="blb-aws-section">
+  <div class="blb-aws-state-header">
+    <h2>Massachusetts</h2>
+  </div>
+  
+  <div class="blb-aws-towns-grid">
+    <div class="blb-aws-town-card">
+      <h3>Amesbury</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Andover</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Beverly</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Boxford</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Byfield</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Danvers</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Essex</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Georgetown</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Gloucester</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Groveland</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Hamilton</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Haverhill</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Ipswich</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Manchester-by-the-Sea</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Merrimac</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Middleton</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Newbury</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Newburyport</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>North Andover</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Rockport</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Rowley</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Salisbury</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>Topsfield</h3>
+    </div>
+    <div class="blb-aws-town-card">
+      <h3>West Newbury</h3>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     Section 4: New Hampshire Towns
+     ============================================= -->
+<div class="blb-aws-section-gray">
+  <section class="blb-aws-section">
+    <div class="blb-aws-state-header">
+      <h2>New Hampshire</h2>
+    </div>
+    
+    <div class="blb-aws-towns-grid">
+      <div class="blb-aws-town-card">
+        <h3>Brentwood</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>East Kingston</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Exeter</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Greenland</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Hampton</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Hampton Falls</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Kensington</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Kingston</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Newfields</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Newton</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>North Hampton</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Portsmouth</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Rye</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Seabrook</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>South Hampton</h3>
+      </div>
+      <div class="blb-aws-town-card">
+        <h3>Stratham</h3>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =============================================
+     Section 5: Distance Reference Table
+     ============================================= -->
+<section class="blb-aws-section">
+  <h2>Distance from Amesbury Office</h2>
+  <p>Our team travels throughout the region daily. Here are approximate distances from our Amesbury headquarters to select communities:</p>
+  
+  <table class="blb-aws-distance-table">
+    <thead>
+      <tr>
+        <th>Community</th>
+        <th>Distance</th>
+        <th>Typical Drive Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Newburyport, MA</td>
+        <td>3 miles</td>
+        <td>8 minutes</td>
+      </tr>
+      <tr>
+        <td>Salisbury, MA</td>
+        <td>5 miles</td>
+        <td>10 minutes</td>
+      </tr>
+      <tr>
+        <td>West Newbury, MA</td>
+        <td>6 miles</td>
+        <td>12 minutes</td>
+      </tr>
+      <tr>
+        <td>Seabrook, NH</td>
+        <td>7 miles</td>
+        <td>12 minutes</td>
+      </tr>
+      <tr>
+        <td>Hampton, NH</td>
+        <td>10 miles</td>
+        <td>15 minutes</td>
+      </tr>
+      <tr>
+        <td>Ipswich, MA</td>
+        <td>12 miles</td>
+        <td>20 minutes</td>
+      </tr>
+      <tr>
+        <td>Exeter, NH</td>
+        <td>14 miles</td>
+        <td>22 minutes</td>
+      </tr>
+      <tr>
+        <td>Portsmouth, NH</td>
+        <td>18 miles</td>
+        <td>25 minutes</td>
+      </tr>
+      <tr>
+        <td>Beverly, MA</td>
+        <td>22 miles</td>
+        <td>30 minutes</td>
+      </tr>
+      <tr>
+        <td>Andover, MA</td>
+        <td>25 miles</td>
+        <td>35 minutes</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =============================================
+     Section 6: Services Available
+     ============================================= -->
+<div class="blb-aws-section-gray">
+  <section class="blb-aws-section">
+    <div class="blb-aws-services-header">
+      <h2>Services Available Throughout Our Area</h2>
+      <p>Every service we offer is available to homeowners across our entire service region. Click below to learn more about each.</p>
+    </div>
+    
+    <div class="blb-aws-services-grid">
+      <div class="blb-aws-service-item">
+        <a href="https://blbdesignbuild.com/kitchen-remodeling/">
+          <h3>Kitchen Remodeling</h3>
+          <p>Complete kitchen transformations from concept to completion</p>
+        </a>
+      </div>
+      <div class="blb-aws-service-item">
+        <a href="https://blbdesignbuild.com/bathroom-remodeling/">
+          <h3>Bathroom Remodeling</h3>
+          <p>Primary baths, powder rooms, and spa-like retreats</p>
+        </a>
+      </div>
+      <div class="blb-aws-service-item">
+        <a href="https://blbdesignbuild.com/home-additions/">
+          <h3>Home Additions</h3>
+          <p>Second stories, in-law suites, and room additions</p>
+        </a>
+      </div>
+      <div class="blb-aws-service-item">
+        <a href="https://blbdesignbuild.com/whole-home-remodeling/">
+          <h3>Whole Home Remodeling</h3>
+          <p>Comprehensive renovations that transform your entire space</p>
+        </a>
+      </div>
+      <div class="blb-aws-service-item">
+        <a href="https://blbdesignbuild.com/unique-builds/">
+          <h3>Unique Builds</h3>
+          <p>Custom projects that don't fit a single category</p>
+        </a>
+      </div>
+      <div class="blb-aws-service-item">
+        <a href="https://blbdesignbuild.com/design-build-process/">
+          <h3>Our Process</h3>
+          <p>Learn how design-build simplifies your project</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =============================================
+     Section 7: Final CTA
+     ============================================= -->
+<section class="blb-aws-cta-section">
+  <div class="blb-aws-cta-content">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Whether you're in downtown Newburyport or the seacoast of New Hampshire, our team is ready to help you plan your renovation. Tell us about your project and we'll schedule a time to discuss your goals.</p>
+    
+    <div class="blb-aws-btn-group">
+      <a href="https://blbdesignbuild.com/contact-us/" class="blb-aws-btn blb-aws-btn-primary">Tell Us About Your Project</a>
+      <a href="https://blbdesignbuild.com/work/" class="blb-aws-btn blb-aws-btn-outline">View Our Work</a>
+    </div>
+    
+    <p class="blb-aws-trust-footer">Five-Star Rated • Since 2012 • Award-Winning Design-Build</p>
+  </div>
+</section>
+
+<!-- =============================================
+     Schema Markup
+     ============================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://blbdesignbuild.com/#organization",
+  "name": "BLB Design/Build",
+  "description": "Full-service design-build firm specializing in kitchen remodeling, bathroom renovations, home additions, and whole-home transformations across the North Shore MA and Southern New Hampshire.",
+  "url": "https://blbdesignbuild.com",
+  "telephone": "(978) 792-2880",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6 Chestnut Street, Suite 200",
+    "addressLocality": "Amesbury",
+    "addressRegion": "MA",
+    "postalCode": "01913",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "42.8584",
+    "longitude": "-70.9300"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Amesbury", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Andover", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Beverly", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Boxford", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Byfield", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Danvers", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Essex", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Georgetown", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Gloucester", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Groveland", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Hamilton", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Haverhill", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Ipswich", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Manchester-by-the-Sea", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Merrimac", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Middleton", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Newbury", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Newburyport", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "North Andover", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Rockport", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Rowley", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Salisbury", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Topsfield", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "West Newbury", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+    {"@type": "City", "name": "Brentwood", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "East Kingston", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Exeter", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Greenland", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Hampton", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Hampton Falls", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Kensington", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Kingston", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Newfields", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Newton", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "North Hampton", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Portsmouth", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Rye", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Seabrook", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "South Hampton", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+    {"@type": "City", "name": "Stratham", "containedInPlace": {"@type": "State", "name": "New Hampshire"}}
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "priceRange": "$$$",
+  "sameAs": [
+    "https://www.facebook.com/blbdesignbuild",
+    "https://www.instagram.com/blbdesignbuild",
+    "https://www.houzz.com/professionals/design-build-firms/blb-design-build-pfvwus-pf~1955339837"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://blbdesignbuild.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Areas We Serve",
+      "item": "https://blbdesignbuild.com/areas-we-serve/"
+    }
+  ]
+}
+</script>
