@@ -36,6 +36,7 @@
 | Secondary | `#666666` | Medium gray - body text |
 | Body Text Alt | `#555555` | Darker gray - some body text |
 | Background | `#f8f8f8` | Light gray - section backgrounds |
+| Button Gray | `#f1f1f1` | Light gray - portfolio/review CTAs |
 | White | `#ffffff` | Clean backgrounds, button text |
 | Header Bar | `#b8b8ae` | Stone gray - blog/project headers |
 
@@ -54,8 +55,11 @@
 | Primary | Black background (`#1a1a1a`), white text, 2px border |
 | Outline | Transparent background, black border, black text |
 | White | White background, dark text (for dark backgrounds) |
+| Light Gray | Gray background (`#f1f1f1`), white text, Messina Sans font - Used for portfolio/review CTAs |
 | Hover | Inverse colors (swap fill/border) |
 | Padding | 20px 50px (large CTAs), 15px 30px (standard) |
+
+**Font Family Override:** Buttons use `'Messina Sans', 'Messina Modern Light', sans-serif` as fallback chain
 
 ---
 
