@@ -1,4 +1,4 @@
-# BLB Design/Build - Brand Reference
+# BLB Design / Build - Brand Reference
 
 ## Business Information
 
@@ -395,4 +395,4 @@ Location-service combo pages (e.g., "Kitchen Remodeling Newburyport") make sense
 
 ---
 
-*Last updated: December 8, 2025*
+*Last updated: January 15, 2026*
