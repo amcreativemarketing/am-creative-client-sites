@@ -56,10 +56,13 @@
 | Outline | Transparent background, black border, black text |
 | White | White background, dark text (for dark backgrounds) |
 | Light Gray | Gray background (`#f1f1f1`), white text, Messina Sans font - Used for portfolio/review CTAs |
-| Hover | Inverse colors (swap fill/border) |
-| Padding | 20px 50px (large CTAs), 15px 30px (standard) |
+| CTA (Trust Signals) | Taupe background (`#b8b8ae`), light gray text (`#f1f1f1`), **Messina Sans Bold**, 15px, UPPERCASE - Used for homepage trust signals |
+| Hover | Inverse colors (swap fill/border) or transition to black |
+| Padding | 20px 50px (large CTAs), 15px 40px (standard), 15px 30px (small) |
 
-**Font Family Override:** Buttons use `'Messina Sans', 'Messina Modern Light', sans-serif` as fallback chain
+**Font Family Override:** 
+- Standard buttons: `'Messina Sans', 'Messina Modern Light', sans-serif`
+- CTA buttons: `'Messina Sans Bold', 'Messina Sans', sans-serif` with `font-weight: 700` and `text-transform: uppercase`
 
 ---
 
