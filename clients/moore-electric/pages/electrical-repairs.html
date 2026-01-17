@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Troubleshooting & Repair Services in NH, MA & ME | Moore Electric Inc.</title>
+    <meta name="description" content="Fast, reliable electrical repairs by a licensed Master Electrician. Diagnose flickering lights, tripping breakers, warm outlets & more. 25+ years experience. Serving NH, MA & ME.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Electrical Repair",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Moore Electric Inc.",
+            "telephone": "+1-603-836-9513",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "21 Wentworth Ave",
+                "addressLocality": "Plaistow",
+                "addressRegion": "NH",
+                "postalCode": "03865"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "9"
+            }
+        },
+        "areaServed": [
+            {"@type": "State", "name": "New Hampshire"},
+            {"@type": "State", "name": "Massachusetts"},
+            {"@type": "State", "name": "Maine"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How quickly can you come out for an electrical problem?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For most electrical issues, we can schedule a service call within 1-2 business days. If you're experiencing a dangerous situation like sparking, burning smell, or no power, let us know and we'll do our best to prioritize your call."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does an electrical service call cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Service call fees vary based on the diagnosis and repair needed. We provide upfront pricing before any work begins, so you'll know exactly what to expect. No hidden fees or surprise charges."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I turn off my breaker if I smell burning?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. If you smell burning or see smoke near an outlet, switch, or your electrical panel, turn off the breaker to that area immediately. If you can't identify which breaker, turn off the main breaker. Then call an electrician right away - don't try to diagnose it yourself."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "When should I call an electrician vs. try to fix it myself?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If it involves anything beyond changing a light bulb or resetting a tripped breaker, call a licensed electrician. DIY electrical work can void your homeowner's insurance, create fire hazards, and violate building codes. It's not worth the risk."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer emergency electrical services?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We prioritize urgent electrical issues that pose safety risks. If you have sparking outlets, burning smells, or complete loss of power, call us and we'll work to get you scheduled as quickly as possible."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can you give me a quote over the phone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We can provide general pricing ranges over the phone, but electrical problems often require hands-on diagnosis to give an accurate quote. We'll assess the issue on-site and provide clear pricing before starting any repair work."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --moore-teal: #0B4B4B;
+            --moore-teal-dark: #093C3C;
+            --moore-gold: #C9A227;
+            --moore-gold-dark: #A8891F;
+            --moore-gold-light: #E8D48A;
+            --moore-cream: #F2F0EA;
+            --moore-gray: #C7D0D0;
+            --moore-gray-dark: #9BABAB;
+            --moore-text: #0C2424;
+            --moore-text-light: #FFFFFF;
+            --moore-text-muted: #4A5F5F;
+            --section-padding: clamp(60px, 8vw, 100px);
+            --container-max: 1200px;
+            --shadow-sm: 0 2px 8px rgba(12,36,36,0.06);
+            --shadow-md: 0 4px 20px rgba(12,36,36,0.08);
+            --shadow-lg: 0 8px 40px rgba(12,36,36,0.12);
+            --transition-fast: 0.2s ease;
+            --transition-med: 0.3s ease;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--moore-text);
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--moore-teal); text-decoration: none; transition: color var(--transition-fast); }
+        a:hover { color: var(--moore-gold); }
+        h1, h2, h3, h4 { font-family: 'Raleway', sans-serif; font-weight: 700; line-height: 1.2; color: var(--moore-text); }
+        h1 { font-size: clamp(2.25rem, 5vw, 3.25rem); letter-spacing: -0.02em; }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); font-weight: 600; }
+        p { margin-bottom: 1.25rem; }
+        p:last-child { margin-bottom: 0; }
+        .lead { font-size: 1.25rem; color: var(--moore-text-muted); line-height: 1.6; }
+        .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+        section { padding: var(--section-padding) 0; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-med);
+            text-decoration: none;
+        }
+        .btn--primary { background: var(--moore-teal); color: var(--moore-text-light); border-color: var(--moore-teal); }
+        .btn--primary:hover { background: var(--moore-teal-dark); border-color: var(--moore-teal-dark); color: var(--moore-text-light); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn--gold { background: var(--moore-gold); color: var(--moore-text); border-color: var(--moore-gold); }
+        .btn--gold:hover { background: var(--moore-gold-dark); border-color: var(--moore-gold-dark); transform: translateY(-2px); }
+        .btn--white { background: var(--moore-text-light); color: var(--moore-teal); border-color: var(--moore-text-light); }
+        .btn--white:hover { background: var(--moore-cream); color: var(--moore-teal-dark); }
+        .btn--outline-white { background: transparent; color: var(--moore-text-light); border-color: var(--moore-text-light); }
+        .btn--outline-white:hover { background: var(--moore-text-light); color: var(--moore-teal); }
+        .btn svg { width: 18px; height: 18px; }
+
+        /* Trust Bar */
+        .trust-bar { background: var(--moore-cream); border-bottom: 1px solid rgba(12,36,36,0.08); padding: 16px 0; }
+        .trust-bar__inner { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 32px; }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--moore-text);
+            letter-spacing: 0.5px;
+        }
+        .trust-item svg { width: 16px; height: 16px; color: var(--moore-gold); flex-shrink: 0; }
+        .trust-item--highlight { background: var(--moore-gold); color: var(--moore-text); padding: 6px 14px; border-radius: 4px; }
+        .trust-item--highlight svg { color: var(--moore-text); }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%);
+            color: var(--moore-text-light);
+            padding: clamp(80px, 12vw, 140px) 0;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        @media (min-width: 900px) { .hero__grid { grid-template-columns: 1.1fr 0.9fr; gap: 64px; } }
+        .hero__content { animation: fadeInUp 0.8s ease-out; }
+        .hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201,162,39,0.15);
+            border: 1px solid rgba(201,162,39,0.3);
+            color: #C9A227 !important;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+        }
+        .hero__title { color: #FFFFFF !important; margin-bottom: 20px; }
+        .hero__subtitle {
+            font-size: clamp(1.125rem, 2.5vw, 1.35rem);
+            color: rgba(255,255,255,0.85) !important;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            max-width: 540px;
+        }
+        .hero__content h1, .hero__content p { color: #FFFFFF !important; }
+        .hero__content .hero__subtitle { color: rgba(255,255,255,0.85) !important; }
+        .hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+        .hero__image { position: relative; animation: fadeIn 1s ease-out 0.3s both; }
+        .hero__image img { border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .hero__image-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -10px;
+            background: var(--moore-gold);
+            color: var(--moore-text);
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+        .hero__image-badge-number { font-family: 'Raleway', sans-serif; font-size: 2rem; font-weight: 700; line-height: 1; }
+        .hero__image-badge-text { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        @media (max-width: 899px) {
+            .hero__image { max-width: 500px; margin: 0 auto; }
+            .hero__image-badge { bottom: -16px; right: 10px; padding: 12px 18px; }
+            .hero__image-badge-number { font-size: 1.5rem; }
+        }
+
+        /* Warning Signs Section */
+        .warning { background: #fff; }
+        .warning__header { text-align: center; max-width: 700px; margin: 0 auto 56px; }
+        .warning__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .warning__intro { color: var(--moore-text-muted); font-size: 1.125rem; }
+        .warning__intro a { font-weight: 600; }
+        .warning-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        @media (min-width: 900px) { .warning-grid { grid-template-columns: repeat(3, 1fr); } }
+        .warning-card {
+            background: var(--moore-cream);
+            border-radius: 8px;
+            padding: 32px;
+            transition: all var(--transition-med);
+            border: 1px solid transparent;
+        }
+        .warning-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(201,162,39,0.2);
+        }
+        .warning-card__icon {
+            width: 48px;
+            height: 48px;
+            background: var(--moore-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .warning-card__icon svg { width: 24px; height: 24px; color: var(--moore-text-light); }
+        .warning-card__title { font-size: 1.125rem; margin-bottom: 12px; color: var(--moore-text); }
+        .warning-card__text { font-size: 16px; color: var(--moore-text-muted); line-height: 1.6; }
+        .warning-card__text a { font-weight: 600; }
+
+        /* Mid CTA */
+        .mid-cta {
+            background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%);
+            color: var(--moore-text-light);
+            text-align: center;
+            padding: clamp(48px, 8vw, 80px) 0;
+        }
+        .mid-cta h2 { color: var(--moore-text-light); margin-bottom: 16px; }
+        .mid-cta p { color: rgba(255,255,255,0.85); font-size: 1.125rem; max-width: 600px; margin: 0 auto 28px; }
+        .mid-cta .btn { margin-top: 8px; }
+
+        /* Services Section */
+        .services { background: var(--moore-cream); }
+        .services__header { text-align: center; max-width: 700px; margin: 0 auto 56px; }
+        .services__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        @media (min-width: 900px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+        .service-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-med);
+            border: 1px solid transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(201,162,39,0.2);
+        }
+        .service-card__icon {
+            width: 48px;
+            height: 48px;
+            background: var(--moore-gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .service-card__icon svg { width: 24px; height: 24px; color: var(--moore-text); }
+        .service-card__title { font-size: 1.125rem; margin-bottom: 12px; color: var(--moore-text); }
+        .service-card__text { font-size: 16px; color: var(--moore-text-muted); line-height: 1.6; }
+        .service-card__text a { font-weight: 600; }
+
+        /* Why Choose Us */
+        .why-us { background: #fff; }
+        .why-us__header { text-align: center; max-width: 700px; margin: 0 auto 56px; }
+        .why-us__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .why-us-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+        @media (min-width: 768px) { .why-us-grid { grid-template-columns: repeat(3, 1fr); } }
+        .why-card { text-align: center; padding: 24px; }
+        .why-card__icon {
+            width: 64px;
+            height: 64px;
+            background: var(--moore-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        .why-card__icon svg { width: 28px; height: 28px; color: var(--moore-teal); }
+        .why-card__title { margin-bottom: 12px; }
+        .why-card__text { color: var(--moore-text-muted); }
+        .why-card__text a { font-weight: 600; }
+
+        /* Process Section */
+        .process { background: var(--moore-cream); }
+        .process__header { text-align: center; max-width: 700px; margin: 0 auto 56px; }
+        .process__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .process-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media (min-width: 768px) { .process-grid { grid-template-columns: repeat(4, 1fr); } }
+        .process-step { text-align: center; position: relative; padding: 24px 16px; }
+        .process-step__number {
+            width: 56px;
+            height: 56px;
+            background: var(--moore-teal);
+            color: var(--moore-text-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        .process-step__title { margin-bottom: 12px; font-size: 1.125rem; }
+        .process-step__text { font-size: 16px; color: var(--moore-text-muted); }
+        @media (min-width: 768px) {
+            .process-step:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                top: 52px;
+                right: -12px;
+                width: 24px;
+                height: 2px;
+                background: var(--moore-gold);
+            }
+        }
+
+        /* FAQ Section */
+        .faq { background: #fff; }
+        .faq__header { text-align: center; max-width: 700px; margin: 0 auto 48px; }
+        .faq__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            border-bottom: 1px solid rgba(12,36,36,0.1);
+            padding: 24px 0;
+        }
+        .faq-item:first-child { border-top: 1px solid rgba(12,36,36,0.1); }
+        .faq-item__question {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--moore-text);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .faq-item__question svg { width: 20px; height: 20px; color: var(--moore-gold); flex-shrink: 0; margin-top: 4px; }
+        .faq-item__answer { color: var(--moore-text-muted); padding-left: 32px; }
+        .faq-item__answer a { font-weight: 600; }
+
+        /* Service Area */
+        .service-area { background: var(--moore-cream); }
+        .service-area__header { text-align: center; max-width: 700px; margin: 0 auto 40px; }
+        .service-area__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .service-area__towns {
+            text-align: center;
+            color: var(--moore-text-muted);
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 32px;
+        }
+        .service-area__licenses {
+            text-align: center;
+            background: #fff;
+            padding: 24px 32px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 0 auto;
+            box-shadow: var(--shadow-sm);
+        }
+        .service-area__licenses-title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--moore-text);
+            margin-bottom: 8px;
+        }
+        .service-area__licenses-list {
+            font-size: 15px;
+            color: var(--moore-text-muted);
+        }
+        .service-area__center { text-align: center; }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%);
+            color: var(--moore-text-light);
+            padding: clamp(60px, 10vw, 100px) 0;
+        }
+        .final-cta__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        @media (min-width: 768px) { .final-cta__grid { grid-template-columns: 1fr 1fr; } }
+        .final-cta h2 { color: var(--moore-text-light); margin-bottom: 16px; }
+        .final-cta p { color: rgba(255,255,255,0.85); font-size: 1.125rem; margin-bottom: 24px; }
+        .final-cta__contact { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 32px; }
+        .final-cta__contact-item { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+        .final-cta__contact-item:last-child { margin-bottom: 0; }
+        .final-cta__contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--moore-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .final-cta__contact-icon svg { width: 22px; height: 22px; color: var(--moore-text); }
+        .final-cta__contact-label { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+        .final-cta__contact-value { font-family: 'Raleway', sans-serif; font-size: 1.125rem; font-weight: 600; color: var(--moore-text-light); }
+        .final-cta__contact-value a { color: var(--moore-text-light); }
+        .final-cta__contact-value a:hover { color: var(--moore-gold); }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .warning-grid, .services-grid { grid-template-columns: 1fr; }
+            .trust-bar__inner { gap: 8px 16px; }
+            .trust-item { font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-bar__inner">
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    Master Electrician
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    25+ Years Experience
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Licensed in MA, NH & ME
+                </div>
+                <div class="trust-item trust-item--highlight">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    5.0 Google Rating
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__grid">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        Fast, Reliable Repairs
+                    </div>
+                    <h1 class="hero__title">Electrical Troubleshooting & Repair Services in NH, MA & ME</h1>
+                    <p class="hero__subtitle">Flickering lights? Tripping breakers? Warm outlets? We diagnose and fix electrical problems quickly and safely. Licensed Master Electrician with 25+ years of experience.</p>
+                    <div class="hero__ctas">
+                        <a href="/contact" class="btn btn--gold">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            Get an Estimate
+                        </a>
+                        <a href="tel:603-836-9513" class="btn btn--outline-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            (603) 836-9513
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="https://apz71fid6y.wpdns.site/wp-content/uploads/2026/01/Photo-Jan-15-2026-10-34-11-AM-11.jpg" alt="Kitchen with professional pendant lighting installation by Moore Electric" width="600" height="450">
+                    <div class="hero__image-badge">
+                        <div class="hero__image-badge-number">5.0</div>
+                        <div class="hero__image-badge-text">Google Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warning Signs Section -->
+    <section class="warning">
+        <div class="container">
+            <div class="warning__header">
+                <div class="warning__eyebrow">Don't Ignore These Signs</div>
+                <h2>Common Electrical Problems We Fix</h2>
+                <p class="warning__intro">These symptoms often indicate underlying electrical issues that need professional attention. Some are minor fixes, others may require a <a href="/electrical-panel-upgrades">panel upgrade</a> or <a href="/electrical-rewiring">rewiring</a>.</p>
+            </div>
+            <div class="warning-grid">
+                <div class="warning-card">
+                    <div class="warning-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    </div>
+                    <h3 class="warning-card__title">Flickering or Dimming Lights</h3>
+                    <p class="warning-card__text">Could indicate loose connections, overloaded circuits, or failing wiring. If it happens in multiple rooms, it may point to a panel issue.</p>
+                </div>
+                <div class="warning-card">
+                    <div class="warning-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+                    </div>
+                    <h3 class="warning-card__title">Frequently Tripping Breakers</h3>
+                    <p class="warning-card__text">A sign of circuit overload, short circuit, or a faulty breaker. If <a href="/electrical-panel-upgrades">breakers trip often</a>, your panel may need attention.</p>
+                </div>
+                <div class="warning-card">
+                    <div class="warning-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+                    </div>
+                    <h3 class="warning-card__title">Warm or Discolored Outlets</h3>
+                    <p class="warning-card__text">This is a fire hazard. Warmth or discoloration indicates overheating from poor connections, damaged wiring, or overloaded circuits.</p>
+                </div>
+                <div class="warning-card">
+                    <div class="warning-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h3 class="warning-card__title">Burning Smell or Sparks</h3>
+                    <p class="warning-card__text">Stop using the outlet or switch immediately. This indicates a potential electrical fire risk and requires urgent professional attention.</p>
+                </div>
+                <div class="warning-card">
+                    <div class="warning-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                    </div>
+                    <h3 class="warning-card__title">Dead Outlets or Switches</h3>
+                    <p class="warning-card__text">May be a tripped GFCI, loose wiring, or a circuit issue. Often a quick fix, but sometimes indicates a larger wiring problem.</p>
+                </div>
+                <div class="warning-card">
+                    <div class="warning-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3M6 6v11M10 3v18M14 8v7M18 5v13M22 10v3"/></svg>
+                    </div>
+                    <h3 class="warning-card__title">Buzzing or Humming Sounds</h3>
+                    <p class="warning-card__text">Electrical components shouldn't make noise. Buzzing often points to loose connections, overloaded circuits, or failing devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="mid-cta">
+        <div class="container">
+            <h2>Don't Wait Until a Small Problem Becomes a Big One</h2>
+            <p>Electrical issues rarely fix themselves. What starts as a flickering light can become a serious safety hazard. We diagnose the root cause and fix it right the first time.</p>
+            <a href="/contact" class="btn btn--gold">Schedule a Service Call</a>
+        </div>
+    </section>
+
+    <!-- What We Diagnose & Fix -->
+    <section class="services">
+        <div class="container">
+            <div class="services__header">
+                <div class="services__eyebrow">What We Fix</div>
+                <h2>Electrical Repair Services</h2>
+                <p class="lead">From simple outlet replacements to complex troubleshooting, we handle all types of residential and commercial electrical repairs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Outlet & Switch Repairs</h3>
+                    <p class="service-card__text">Replacement of damaged, loose, or outdated outlets and switches. GFCI and AFCI installation for <a href="/kitchen-bath-electrical">kitchens and bathrooms</a>.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Circuit Breaker Issues</h3>
+                    <p class="service-card__text">Diagnosis of tripping breakers, breaker replacement, and load balancing. May indicate need for <a href="/electrical-panel-upgrades">panel upgrade</a>.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Lighting Problems</h3>
+                    <p class="service-card__text">Flickering lights, fixture repairs, dimmer issues, and light switch troubleshooting. We find the cause and fix it.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="service-card__title">GFCI/AFCI Troubleshooting</h3>
+                    <p class="service-card__text">Testing and repair of ground fault and arc fault protection devices. Required by code in kitchens, bathrooms, and bedrooms.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Wiring Repairs</h3>
+                    <p class="service-card__text">Repair of damaged, burnt, or deteriorating wiring. For extensive wiring issues, see our <a href="/electrical-rewiring">rewiring services</a>.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Electrical Panel Issues</h3>
+                    <p class="service-card__text">Diagnosis of panel problems, loose connections, and corrosion. We determine if repair or <a href="/electrical-panel-upgrades">full panel upgrade</a> is needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us__header">
+                <div class="why-us__eyebrow">Why Moore Electric</div>
+                <h2>Repairs Done Right the First Time</h2>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <div class="why-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <h3 class="why-card__title">Owner on Every Job</h3>
+                    <p class="why-card__text"><a href="/about">Brenden Moore</a> personally diagnoses your electrical issues. You get a Master Electrician, not an apprentice.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3 class="why-card__title">Clear Communication</h3>
+                    <p class="why-card__text">We explain what's wrong in plain English, give you options, and provide upfront pricing before any work begins.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h3 class="why-card__title">Work You Can Trust</h3>
+                    <p class="why-card__text">25+ years of experience. We fix the root cause, not just the symptom. All work is 100% code-compliant and guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="process__header">
+                <div class="process__eyebrow">How It Works</div>
+                <h2>Our Repair Process</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-step__number">1</div>
+                    <h3 class="process-step__title">Call Us</h3>
+                    <p class="process-step__text">Describe the issue and we'll schedule a service call, usually within 1-2 business days.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">2</div>
+                    <h3 class="process-step__title">Diagnose</h3>
+                    <p class="process-step__text">We inspect your electrical system, identify the root cause, and explain what needs to be done.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">3</div>
+                    <h3 class="process-step__title">Repair</h3>
+                    <p class="process-step__text">With your approval, we complete the repair using quality materials and proper techniques.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">4</div>
+                    <h3 class="process-step__title">Test & Verify</h3>
+                    <p class="process-step__text">We test everything to ensure it works safely and correctly. Then we clean up after ourselves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="faq__header">
+                <div class="faq__eyebrow">Questions</div>
+                <h2>Electrical Repair FAQs</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-item__question">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        How quickly can you come out for an electrical problem?
+                    </div>
+                    <p class="faq-item__answer">For most electrical issues, we can schedule a service call within 1-2 business days. If you're experiencing a dangerous situation like sparking, burning smell, or no power, let us know and we'll do our best to prioritize your call.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item__question">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        How much does an electrical service call cost?
+                    </div>
+                    <p class="faq-item__answer">Service call fees vary based on the diagnosis and repair needed. We provide upfront pricing before any work begins, so you'll know exactly what to expect. No hidden fees or surprise charges.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item__question">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        Should I turn off my breaker if I smell burning?
+                    </div>
+                    <p class="faq-item__answer">Yes. If you smell burning or see smoke near an outlet, switch, or your <a href="/electrical-panel-upgrades">electrical panel</a>, turn off the breaker to that area immediately. If you can't identify which breaker, turn off the main breaker. Then call an electrician right away - don't try to diagnose it yourself.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item__question">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        When should I call an electrician vs. try to fix it myself?
+                    </div>
+                    <p class="faq-item__answer">If it involves anything beyond changing a light bulb or resetting a tripped breaker, call a licensed electrician. DIY electrical work can void your homeowner's insurance, create fire hazards, and violate building codes. It's not worth the risk.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item__question">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        Do you offer emergency electrical services?
+                    </div>
+                    <p class="faq-item__answer">We prioritize urgent electrical issues that pose safety risks. If you have sparking outlets, burning smells, or complete loss of power, call us and we'll work to get you scheduled as quickly as possible.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item__question">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        Can you give me a quote over the phone?
+                    </div>
+                    <p class="faq-item__answer">We can provide general pricing ranges over the phone, but electrical problems often require hands-on diagnosis to give an accurate quote. We'll assess the issue on-site and provide clear pricing before starting any repair work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="service-area">
+        <div class="container">
+            <div class="service-area__header">
+                <div class="service-area__eyebrow">Service Area</div>
+                <h2>Electrical Repairs Throughout NH, MA & ME</h2>
+            </div>
+            <p class="service-area__towns">
+                <strong>New Hampshire:</strong> Plaistow, Exeter, Stratham, Hampton, Hampton Falls, Seabrook, Kingston, Newton, East Kingston, Kensington, Salem, Atkinson, Danville, Sandown, Hampstead, Derry, Londonderry, Windham<br><br>
+                <strong>Massachusetts:</strong> Newburyport, Newbury, Salisbury, Amesbury, Merrimac, West Newbury, Haverhill, Groveland, Georgetown, Boxford, Rowley, Ipswich, Topsfield, Methuen, Andover, North Andover<br><br>
+                <strong>Southern Maine:</strong> York, Kittery, Eliot, South Berwick, Ogunquit, Wells
+            </p>
+            <div class="service-area__center">
+                <div class="service-area__licenses">
+                    <div class="service-area__licenses-title">Licensed & Insured</div>
+                    <div class="service-area__licenses-list">MA Lic #22825 &nbsp;|&nbsp; NH Lic #14511 &nbsp;|&nbsp; ME Lic #MS60023064</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta__grid">
+                <div>
+                    <h2>Electrical Problem? Let's Fix It.</h2>
+                    <p>Don't let a small issue become a big problem. Contact us today for fast, reliable electrical repairs by a licensed Master Electrician.</p>
+                    <a href="/contact" class="btn btn--gold">Get an Estimate</a>
+                </div>
+                <div class="final-cta__contact">
+                    <div class="final-cta__contact-item">
+                        <div class="final-cta__contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <div class="final-cta__contact-label">Call Us</div>
+                            <div class="final-cta__contact-value"><a href="tel:603-836-9513">(603) 836-9513</a></div>
+                        </div>
+                    </div>
+                    <div class="final-cta__contact-item">
+                        <div class="final-cta__contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <div class="final-cta__contact-label">Email</div>
+                            <div class="final-cta__contact-value"><a href="mailto:info@mooreelectricinc.net">info@mooreelectricinc.net</a></div>
+                        </div>
+                    </div>
+                    <div class="final-cta__contact-item">
+                        <div class="final-cta__contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <div class="final-cta__contact-label">Location</div>
+                            <div class="final-cta__contact-value">Plaistow, NH</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
