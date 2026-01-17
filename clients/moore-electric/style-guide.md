@@ -323,6 +323,37 @@ section {
 
 ---
 
+## Elementor Full-Width Override (Required)
+
+**Add this to every page to ensure sections span full viewport width:**
+
+```css
+/* Elementor Full-Width Overrides */
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 100% !important;
+}
+.elementor-section {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+}
+.elementor-section-wrap, .elementor-section-wrap > .elementor-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.elementor-widget-wrap, .elementor-element {
+    max-width: 100% !important;
+}
+body.elementor-page, .elementor, .elementor-inner, .elementor-section-wrap {
+    overflow-x: hidden;
+}
+```
+
+---
+
 ## Elementor Override Block
 
 **Add this to any page with dark sections to prevent Elementor from overriding colors:**
