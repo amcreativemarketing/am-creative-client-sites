@@ -1,6 +1,7 @@
 # Moore Electric Inc. - Brand Identity Guide
 
 **Master Electrician | Est. 2000**
+**Last Updated:** January 2026
 
 ---
 
@@ -8,7 +9,7 @@
 
 ### Brand Promise
 
-> **"We do it right. Every time."**
+> "We do it right. Every time."
 >
 > No surprises. No shortcuts. Just honest work from a Master Electrician who treats your home like his own.
 
@@ -18,55 +19,88 @@ While competitors scale with crews and subcontractors, Moore Electric stays inte
 
 ---
 
+## Brand Overview
+
+| Field | Value |
+|-------|-------|
+| **Business Name (NAP)** | Moore Electric Inc. |
+| **Legal Entity** | Brenden Moore Electric Inc. (Corporation) |
+| **Owner / Lead Electrician** | Brenden Moore, Master Electrician |
+| **Office Manager** | Asia Moore |
+| **Experience** | 25+ years in residential & commercial electrical |
+| **Licensed In** | Massachusetts, New Hampshire, Maine |
+| **Headquarters** | Plaistow, NH (serving southern NH, northern MA, southern ME) |
+| **Phone** | 603-836-9513 (primary) / 774-212-3587 (forwarding) |
+| **Website** | mooreelectricinc.net |
+| **Email** | office@mooreelectricinc.net |
+
+---
+
 ## Color Palette
 
-The Moore Electric palette is built on **deep teal and warm neutrals** - colors that convey trust, expertise, and professionalism. The gold accent from the logo adds warmth and premium feel for key moments.
+The Moore Electric palette is built on **deep teal and gold** - colors that convey expertise, trust, and craftsmanship. The teal provides a sophisticated, professional foundation while gold accents add warmth and premium positioning.
 
 ### Primary Colors
 
-| Color | Name | Hex | RGB | Usage |
-|-------|------|-----|-----|-------|
-| ![#0B4B4B](https://via.placeholder.com/20/0B4B4B/0B4B4B.png) | **Moore Teal** | `#0B4B4B` | 11, 75, 75 | Primary brand color - buttons, links, key UI elements |
-| ![#093C3C](https://via.placeholder.com/20/093C3C/093C3C.png) | **Moore Teal Dark** | `#093C3C` | 9, 60, 60 | Hero sections, dark backgrounds, footer |
-| ![#C9A227](https://via.placeholder.com/20/C9A227/C9A227.png) | **Moore Gold** | `#C9A227` | 201, 162, 39 | Logo accent, premium highlights, awards, CTAs on dark |
+| Color Name | Hex | RGB | CSS Variable | Usage |
+|------------|-----|-----|--------------|-------|
+| **Moore Teal** | `#0B4B4B` | 11, 75, 75 | `--moore-teal` | Primary brand color, buttons, links, section backgrounds |
+| **Moore Teal Dark** | `#093C3C` | 9, 60, 60 | `--moore-teal-dark` | Hero sections, dark backgrounds, hover states |
+| **Moore Gold** | `#C9A227` | 201, 162, 39 | `--moore-gold` | Accent color, CTAs, highlights, icons, logo |
 
 ### Secondary Colors
 
-| Color | Name | Hex | RGB | Usage |
-|-------|------|-----|-----|-------|
-| ![#C7D0D0](https://via.placeholder.com/20/C7D0D0/C7D0D0.png) | **Mist** | `#C7D0D0` | 199, 208, 208 | Secondary backgrounds, borders, subtle accents |
-| ![#9BABAB](https://via.placeholder.com/20/9BABAB/9BABAB.png) | **Slate** | `#9BABAB` | 155, 171, 171 | Header/nav backgrounds, muted elements |
-| ![#F2F0EA](https://via.placeholder.com/20/F2F0EA/F2F0EA.png) | **Cream** | `#F2F0EA` | 242, 240, 234 | Page backgrounds, light sections, cards |
+| Color Name | Hex | RGB | CSS Variable | Usage |
+|------------|-----|-----|--------------|-------|
+| **Moore Cream** | `#F2F0EA` | 242, 240, 234 | `--moore-cream` | Light section backgrounds, cards, accent areas |
+| **Moore Gray** | `#C7D0D0` | 199, 208, 208 | `--moore-gray` | Secondary elements, borders, subtle backgrounds |
+| **Moore Gray Dark** | `#9BABAB` | 155, 171, 171 | `--moore-gray-dark` | Header/footer backgrounds, muted elements |
 
 ### Text Colors
 
-| Color | Name | Hex | RGB | Usage |
-|-------|------|-----|-----|-------|
-| ![#0C2424](https://via.placeholder.com/20/0C2424/0C2424.png) | **Ink** | `#0C2424` | 12, 36, 36 | Primary body text, headings |
-| ![#FFFFFF](https://via.placeholder.com/20/FFFFFF/FFFFFF.png) | **White** | `#FFFFFF` | 255, 255, 255 | Text on dark backgrounds |
+| Color Name | Hex | RGB | CSS Variable | Usage |
+|------------|-----|-----|--------------|-------|
+| **Text Primary** | `#0C2424` | 12, 36, 36 | `--moore-text` | Body text, headings on light backgrounds |
+| **Text Light** | `#FFFFFF` | 255, 255, 255 | `--moore-text-light` | Text on dark/teal backgrounds |
+| **Text Muted** | `#4A5F5F` | 74, 95, 95 | `--moore-text-muted` | Secondary text, captions, meta info |
+
+### CSS Custom Properties
+
+```css
+:root {
+  /* Primary */
+  --moore-teal: #0B4B4B;
+  --moore-teal-dark: #093C3C;
+  --moore-gold: #C9A227;
+  --moore-gold-dark: #A8891F;
+  --moore-gold-light: #E8D48A;
+  
+  /* Secondary */
+  --moore-cream: #F2F0EA;
+  --moore-gray: #C7D0D0;
+  --moore-gray-dark: #9BABAB;
+  
+  /* Text */
+  --moore-text: #0C2424;
+  --moore-text-light: #FFFFFF;
+  --moore-text-muted: #4A5F5F;
+}
+```
 
 ### Color Usage Guidelines
 
-**Dark sections (hero, testimonials, CTAs):**
-- Background: Moore Teal Dark (`#093C3C`)
-- Text: White (`#FFFFFF`)
-- Accents/highlights: Moore Gold (`#C9A227`)
-
-**Light sections (content, features, FAQ):**
-- Background: Cream (`#F2F0EA`) or White
-- Text: Ink (`#0C2424`)
-- Buttons/links: Moore Teal (`#0B4B4B`)
-
-**Cards and callouts:**
-- Background: White or Cream
-- Border accent: Moore Teal or Moore Gold
-- Text: Ink
-
-**Buttons:**
-- Primary: Moore Teal (`#0B4B4B`) background, White text
-- Primary hover: Moore Teal Dark (`#093C3C`)
-- Secondary: Transparent with Moore Teal border
-- On dark backgrounds: Moore Gold (`#C9A227`) or White outline
+| Element | Color | Notes |
+|---------|-------|-------|
+| **Page backgrounds** | White or `--moore-cream` | Alternate for visual rhythm |
+| **Hero sections** | `--moore-teal-dark` | With white/gold text |
+| **Section backgrounds (dark)** | `--moore-teal` | With white text |
+| **Primary buttons** | `--moore-teal` | White text, gold on hover optional |
+| **Secondary buttons** | `--moore-gold` | Dark text |
+| **Links** | `--moore-teal` | Gold on hover |
+| **Icons/accents** | `--moore-gold` | Adds warmth to teal base |
+| **Trust badges** | `--moore-gold` background | Dark text |
+| **Cards** | White or `--moore-cream` | With subtle shadow |
+| **Footer** | `--moore-gray-dark` or `--moore-teal-dark` | Light text |
 
 ---
 
@@ -74,23 +108,28 @@ The Moore Electric palette is built on **deep teal and warm neutrals** - colors 
 
 Font pairing selected for **readability, professionalism, and strong web performance.**
 
-### Type Scale
+### Font Stack
 
-| Usage | Font | Specifications |
-|-------|------|----------------|
-| **H1 Headlines** | Raleway Bold | 48-56px / Ink or White / Uppercase optional |
-| **H2 Section Titles** | Raleway SemiBold | 32-40px / Ink or White |
-| **H3/H4 Subheads** | Raleway Medium | 24-28px / Ink |
-| **Body Text** | Source Sans Pro Regular | 16-18px / Ink / 1.6-1.7 line height |
-| **Buttons / CTAs** | Raleway Bold | 14-16px / Uppercase / Letter-spacing 1px |
-| **Captions / Small** | Source Sans Pro Regular | 12-14px / Slate |
+| Usage | Font | Weight | Specifications |
+|-------|------|--------|----------------|
+| **H1 Headlines** | Raleway | Bold (700) | 48-56px / `--moore-text` / Uppercase optional |
+| **H2 Section Titles** | Raleway | SemiBold (600) | 32-40px / `--moore-text` or `--moore-teal` |
+| **H3/H4 Subheads** | Raleway | Medium (500) | 24-28px / `--moore-text` |
+| **Body Text** | Source Sans Pro | Regular (400) | 16-18px / `--moore-text` / 1.7 line height |
+| **Buttons / CTAs** | Raleway | Bold (700) | 14-16px / Uppercase / Letter-spacing 1px |
+| **Captions / Small** | Source Sans Pro | Regular (400) | 12-14px / `--moore-text-muted` |
 
-### Font Loading
+### Google Fonts Import
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+```
+
+```css
+font-family: 'Raleway', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
 ```
 
 ---
@@ -122,16 +161,16 @@ Font pairing selected for **readability, professionalism, and strong web perform
 
 ### Primary Tagline
 
-> **"Done Right. Every Time."**
+> "Done Right. Every Time."
 
 ### Supporting Taglines
 
 | Context | Tagline |
 |---------|---------|
-| Service focus | "Your Local Master Electrician" |
-| Trust focus | "25 Years of Getting It Right" |
-| Personal touch | "Family-Owned. Personally Delivered." |
-| Lighting specialty | "Let Us Light Up Your Life" |
+| **Service focus** | "Your Local Master Electrician" |
+| **Trust focus** | "25 Years of Getting It Right" |
+| **Personal touch** | "Family-Owned. Personally Delivered." |
+| **Lighting specialty** | "Let Us Light Up Your Life" |
 
 ### Trust Signals (Use Prominently)
 
@@ -139,27 +178,12 @@ Font pairing selected for **readability, professionalism, and strong web perform
 - ⚡ 25+ Years Experience
 - ⚡ Licensed in MA, NH & ME
 - ⚡ Family-Owned, Not a Franchise
+- ⚡ 100% Code-Compliant Work
+- ⚡ Upfront, Transparent Pricing
 - ⚡ Best Electrician Newburyport 2024 & 2025
 - ⚡ 5.0 ★ Google Rating
 
----
-
-## Business Information
-
-| Field | Value |
-|-------|-------|
-| **Business Name (NAP)** | Moore Electric Inc. |
-| **Legal Entity** | Brenden Moore Electric Inc. |
-| **Owner** | Brenden Moore, Master Electrician |
-| **Office Manager** | Asia Moore |
-| **Phone (AM Connect)** | 603-836-9513 |
-| **Phone (Forwarding)** | 774-212-3587 |
-| **Address** | 21 Wentworth Ave, Plaistow, NH 03865 |
-| **Website** | mooreelectricinc.net |
-| **Email** | office@mooreelectricinc.net |
-| **Hours** | Monday - Friday, 8am - 5pm |
-
-### Licenses
+### License Numbers
 
 | State | License Number |
 |-------|----------------|
@@ -167,50 +191,129 @@ Font pairing selected for **readability, professionalism, and strong web perform
 | New Hampshire | #14511 |
 | Maine | #MS60023064 |
 
-### Social & Listings
+---
 
-- **Facebook:** facebook.com/BrendenMooreElectric
-- **Instagram:** instagram.com/b1mooreelectric
-- **Google Business:** [Moore Electric Inc.](https://maps.app.goo.gl/VvBKFgqNyBRT9jfXA)
+## Logo
+
+The Moore Electric logo features the company name with a gold/yellow electrical-themed graphic element. The gold in the logo should be preserved; it pairs with the teal palette as the primary accent color.
+
+**Logo files location:** WordPress Media Library / Brand Assets folder
+
+**Clear space:** Maintain padding equal to the height of the "M" in Moore on all sides
+
+**Minimum size:** 120px wide for web use
 
 ---
 
-## CSS Variables (For Development)
+## Button Styles
+
+### Primary Button
 
 ```css
-:root {
-  /* Primary */
-  --moore-teal: #0B4B4B;
-  --moore-teal-dark: #093C3C;
-  --moore-gold: #C9A227;
-  
-  /* Secondary */
-  --moore-mist: #C7D0D0;
-  --moore-slate: #9BABAB;
-  --moore-cream: #F2F0EA;
-  
-  /* Text */
-  --moore-ink: #0C2424;
-  --moore-white: #FFFFFF;
-  
-  /* Typography */
-  --font-heading: 'Raleway', sans-serif;
-  --font-body: 'Source Sans Pro', sans-serif;
+.btn-primary {
+  background-color: var(--moore-teal);
+  color: var(--moore-text-light);
+  padding: 15px 35px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--moore-teal-dark);
+}
+```
+
+### Secondary Button
+
+```css
+.btn-secondary {
+  background-color: transparent;
+  color: var(--moore-teal);
+  border: 2px solid var(--moore-teal);
+  padding: 13px 33px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--moore-teal);
+  color: var(--moore-text-light);
+}
+```
+
+### Gold Accent Button (for dark backgrounds)
+
+```css
+.btn-gold {
+  background-color: var(--moore-gold);
+  color: var(--moore-text);
+  padding: 15px 35px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: var(--moore-gold-dark);
 }
 ```
 
 ---
 
-## Logo
+## Contact Information
 
-The Moore Electric logo features the company name with a gold/yellow electrical worker icon. The logo should always appear on backgrounds that provide sufficient contrast.
+| Field | Value |
+|-------|-------|
+| **Phone (Primary)** | 603-836-9513 |
+| **Phone (Forwarding)** | 774-212-3587 |
+| **Address** | 21 Wentworth Ave, Plaistow, NH 03865 |
+| **Website** | mooreelectricinc.net |
+| **Email (Primary)** | office@mooreelectricinc.net |
+| **Email (Brenden)** | b1mooreelectric@gmail.com |
+| **Email (Asia)** | b1mooreacct@gmail.com |
+| **Hours** | Monday - Friday, 8am - 5pm |
 
-**Logo files:** Available in WordPress media library
+### Social & Listings
 
-**Clear space:** Maintain padding equal to the height of the "M" in Moore on all sides
-
-**Minimum size:** 120px wide for digital, 1" for print
+| Platform | URL |
+|----------|-----|
+| **Facebook** | facebook.com/BrendenMooreElectric |
+| **Instagram** | instagram.com/b1mooreelectric |
+| **Google Business** | [Google Maps Link](https://maps.app.goo.gl/VvBKFgqNyBRT9jfXA) |
 
 ---
 
-*Brand Identity Guide | Moore Electric Inc. | Updated January 2026*
+## Service Areas
+
+**Primary Target:** 20-30 mile radius from Plaistow, NH
+
+**High-Priority Markets:**
+- Newburyport, MA (award-winning market)
+- Exeter, NH
+- Stratham, NH
+- Amesbury, MA
+- Hampton, NH
+- York, ME
+
+**Full Service Area:** Southern NH, Northern MA, Southern ME
+
+---
+
+*Brand Identity Guide - Moore Electric Inc.*
+*Prepared by AM Creative | January 2026*
