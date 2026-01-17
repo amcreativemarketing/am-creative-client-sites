@@ -97,7 +97,7 @@
         @media(max-width:899px){.included__award{width:90px;height:90px;top:-15px;right:-10px}}
         .pricing{background:#fff}
         .pricing__header{text-align:center;max-width:700px;margin:0 auto 48px}
-        .pricing__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:40px}
+        .pricing__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:32px}
         .pricing-card{background:#fff;border:2px solid var(--moore-gray);border-radius:12px;padding:36px 32px;text-align:center;transition:all var(--transition-med);position:relative}
         .pricing-card:hover{border-color:var(--moore-teal);transform:translateY(-4px);box-shadow:var(--shadow-lg)}
         .pricing-card--featured{border-color:var(--moore-teal);background:linear-gradient(180deg,rgba(11,75,75,0.02) 0%,#fff 100%)}
@@ -105,6 +105,7 @@
         .pricing-card__title{font-size:1.125rem;margin-bottom:8px}
         .pricing-card__price{font-family:'Raleway',sans-serif;font-size:2rem;font-weight:700;color:var(--moore-teal);margin-bottom:16px}
         .pricing-card__description{color:var(--moore-text-muted);font-size:0.95rem;margin:0}
+        .pricing__disclaimer{text-align:center;color:var(--moore-text-muted);font-size:0.9rem;font-style:italic;margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
         .pricing__note{background:linear-gradient(135deg,var(--moore-gold-light) 0%,rgba(201,162,39,0.2) 100%);border-radius:8px;padding:24px 32px;display:flex;align-items:center;gap:20px;max-width:800px;margin:0 auto}
         .pricing__note-icon{width:48px;height:48px;background:var(--moore-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
         .pricing__note-icon svg{width:24px;height:24px;color:var(--moore-text)}
@@ -116,6 +117,7 @@
         .why-moore__header{text-align:center;max-width:600px;margin:0 auto 56px;position:relative;z-index:1}
         .why-moore__header h2{color:var(--moore-text-light)}
         .why-moore__header p{color:rgba(255,255,255,0.75)}
+        .why-moore__eyebrow{font-family:'Raleway',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--moore-gold);margin-bottom:16px}
         .why-moore__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;position:relative;z-index:1}
         .why-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:32px;transition:all var(--transition-med)}
         .why-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(201,162,39,0.3);transform:translateY(-4px)}
@@ -123,6 +125,8 @@
         .why-card__icon svg{width:24px;height:24px;color:var(--moore-text)}
         .why-card__title{color:var(--moore-text-light);margin-bottom:12px}
         .why-card__text{color:rgba(255,255,255,0.75);font-size:1rem;margin:0}
+        .why-card__text a{color:var(--moore-gold)}
+        .why-card__text a:hover{color:var(--moore-gold-light)}
         .process{background:#fff}
         .process__header{text-align:center;max-width:600px;margin:0 auto 56px}
         .process__steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px;position:relative}
@@ -178,6 +182,38 @@
         .animate-on-scroll{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
         .animate-on-scroll.visible{opacity:1;transform:translateY(0)}
         @media(max-width:600px){.btn{width:100%}.hero__ctas,.mid-cta__buttons,.final-cta__buttons{flex-direction:column}.trust-bar__inner{justify-content:flex-start}}
+
+        /* Elementor Overrides for Dark Sections */
+        .hero,.hero *,.hero h1,.hero h2,.hero h3,.hero p,.hero span,.hero a:not(.btn),
+        .hero .elementor-widget-container,.hero .elementor-heading-title,.hero .elementor-widget-text-editor,
+        .hero .elementor-text-editor,.hero .elementor-text-editor p{color:var(--moore-text-light)!important}
+        .hero__subtitle,.hero__subtitle *{color:rgba(255,255,255,0.85)!important}
+        .hero__badge,.hero__badge *{color:var(--moore-gold)!important}
+        
+        .mid-cta,.mid-cta *,.mid-cta h1,.mid-cta h2,.mid-cta h3,.mid-cta p,.mid-cta span,
+        .mid-cta .elementor-widget-container,.mid-cta .elementor-heading-title,.mid-cta .elementor-widget-text-editor,
+        .mid-cta .elementor-text-editor,.mid-cta .elementor-text-editor p{color:var(--moore-text-light)!important}
+        .mid-cta p:not(h2){color:rgba(255,255,255,0.85)!important}
+        
+        .why-moore,.why-moore *,.why-moore h1,.why-moore h2,.why-moore h3,.why-moore p,.why-moore span,
+        .why-moore .elementor-widget-container,.why-moore .elementor-heading-title,.why-moore .elementor-widget-text-editor,
+        .why-moore .elementor-text-editor,.why-moore .elementor-text-editor p{color:var(--moore-text-light)!important}
+        .why-moore__header p,.why-card__text{color:rgba(255,255,255,0.75)!important}
+        .why-moore__eyebrow{color:var(--moore-gold)!important}
+        .why-card__text a{color:var(--moore-gold)!important}
+        
+        .final-cta,.final-cta *,.final-cta h1,.final-cta h2,.final-cta h3,.final-cta p,.final-cta span,
+        .final-cta .elementor-widget-container,.final-cta .elementor-heading-title,.final-cta .elementor-widget-text-editor,
+        .final-cta .elementor-text-editor,.final-cta .elementor-text-editor p{color:var(--moore-text-light)!important}
+        .final-cta p:not(h2){color:rgba(255,255,255,0.85)!important}
+        .final-cta__contact,.final-cta__contact span{color:rgba(255,255,255,0.75)!important}
+        .final-cta__contact a{color:var(--moore-gold)!important}
+        
+        /* Button text overrides */
+        .btn--gold,.btn--gold *,.btn--gold span{color:var(--moore-text)!important}
+        .btn--white,.btn--white *,.btn--white span{color:var(--moore-teal)!important}
+        .btn--outline-white,.btn--outline-white *,.btn--outline-white span{color:var(--moore-text-light)!important}
+        .btn--outline-white:hover,.btn--outline-white:hover *{color:var(--moore-teal)!important}
     </style>
 </head>
 <body>
@@ -245,22 +281,23 @@
     </div></div></section>
 
     <section class="pricing"><div class="container">
-        <div class="pricing__header animate-on-scroll"><div class="problem__eyebrow">Transparent Pricing</div><h2>Panel Upgrade Investment</h2><p class="lead">Every home is different. Here's what typical projects cost.</p></div>
+        <div class="pricing__header animate-on-scroll"><div class="problem__eyebrow">Transparent Pricing</div><h2>Panel Upgrade Investment</h2><p class="lead">Every home is different. Here's what typical projects cost in our area.</p></div>
         <div class="pricing__grid">
-            <div class="pricing-card animate-on-scroll"><h3 class="pricing-card__title">Panel Replacement</h3><div class="pricing-card__price">$1,800 - $2,500</div><p class="pricing-card__description">Same-size panel swap while keeping current amperage.</p></div>
-            <div class="pricing-card pricing-card--featured animate-on-scroll"><h3 class="pricing-card__title">200-Amp Upgrade</h3><div class="pricing-card__price">$2,500 - $4,500</div><p class="pricing-card__description">Upgrade from 100-amp to 200-amp service. Most common.</p></div>
-            <div class="pricing-card animate-on-scroll"><h3 class="pricing-card__title">Heavy-Up Service</h3><div class="pricing-card__price">$4,500 - $8,000+</div><p class="pricing-card__description">Complete service upgrade with utility coordination.</p></div>
+            <div class="pricing-card animate-on-scroll"><h3 class="pricing-card__title">Panel Replacement</h3><div class="pricing-card__price">$1,800+</div><p class="pricing-card__description">Same-size panel swap while keeping your current amperage.</p></div>
+            <div class="pricing-card pricing-card--featured animate-on-scroll"><h3 class="pricing-card__title">200-Amp Upgrade</h3><div class="pricing-card__price">$2,500+</div><p class="pricing-card__description">Upgrade from 100-amp to 200-amp service. Our most common project.</p></div>
+            <div class="pricing-card animate-on-scroll"><h3 class="pricing-card__title">Heavy-Up Service</h3><div class="pricing-card__price">$4,500+</div><p class="pricing-card__description">Complete service upgrade with new meter base and utility coordination.</p></div>
         </div>
+        <p class="pricing__disclaimer">Prices shown are typical starting points. Every home is unique - we'll provide a detailed written quote after assessing your specific situation. No work begins until you approve the price.</p>
         <div class="pricing__note animate-on-scroll"><div class="pricing__note-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="pricing__note-content"><h4>Federal Tax Credit Available</h4><p>30% back (up to $600) on qualifying panel upgrades that support EV chargers or heat pumps.</p></div></div>
     </div></section>
 
     <section class="why-moore"><div class="container">
-        <div class="why-moore__header animate-on-scroll"><div class="problem__eyebrow" style="color:var(--moore-gold)">The Moore Difference</div><h2>Why Homeowners Choose Us</h2><p>We're not the cheapest. We're the electrician you'll recommend to your friends.</p></div>
+        <div class="why-moore__header animate-on-scroll"><div class="why-moore__eyebrow">The Moore Difference</div><h2>Why Homeowners Choose Us</h2><p>We're not the cheapest. We're the electrician you'll recommend to your friends.</p></div>
         <div class="why-moore__grid">
             <div class="why-card animate-on-scroll"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div><h3 class="why-card__title">Owner on Every Job</h3><p class="why-card__text">Brenden Moore personally oversees every panel upgrade.</p></div>
             <div class="why-card animate-on-scroll"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="why-card__title">Work Warranty</h3><p class="why-card__text">We stand behind our work. Many competitors don't offer warranties.</p></div>
             <div class="why-card animate-on-scroll"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3 class="why-card__title">Clear Communication</h3><p class="why-card__text">"He explained everything so I could make an informed decision."</p></div>
-            <div class="why-card animate-on-scroll"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3 class="why-card__title">25+ Years Experience</h3><p class="why-card__text"><a href="/about" style="color:var(--moore-gold)">Brenden has seen every situation</a> in over two decades.</p></div>
+            <div class="why-card animate-on-scroll"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3 class="why-card__title">25+ Years Experience</h3><p class="why-card__text">Brenden has seen every situation in over two decades. <a href="/about">Learn more about us.</a></p></div>
             <div class="why-card animate-on-scroll"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3 class="why-card__title">Best of Newburyport</h3><p class="why-card__text">Voted Best Electrician in Newburyport 2024 and 2025.</p></div>
             <div class="why-card animate-on-scroll"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3 class="why-card__title">Upfront Pricing</h3><p class="why-card__text">No hidden fees. The price we quote is the price you pay.</p></div>
         </div>
@@ -288,7 +325,7 @@
     <section class="faq"><div class="container">
         <div class="faq__header animate-on-scroll"><div class="problem__eyebrow">Common Questions</div><h2>Panel Upgrade FAQs</h2></div>
         <div class="faq__list">
-            <div class="faq-item animate-on-scroll"><button class="faq-item__question">How much does an electrical panel upgrade cost?<svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__answer"><p>Panel upgrade costs range from $1,800 to $8,000 depending on scope. Basic replacement: $1,800-$2,500. 200-amp upgrade: $2,500-$4,500. Heavy-up service: $4,500-$8,000+.</p></div></div>
+            <div class="faq-item animate-on-scroll"><button class="faq-item__question">How much does an electrical panel upgrade cost?<svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__answer"><p>Panel upgrades typically start around $1,800 for basic replacements and $2,500+ for 200-amp upgrades. Complex installations with utility coordination can run higher. We provide a detailed written quote after assessing your specific situation.</p></div></div>
             <div class="faq-item animate-on-scroll"><button class="faq-item__question">Do I need a panel upgrade for an EV charger?<svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__answer"><p>Many 100-amp panels need an upgrade for Level 2 EV chargers. We assess your capacity during a free consultation. Learn more about <a href="/ev-charger-installation">EV charger installation</a>.</p></div></div>
             <div class="faq-item animate-on-scroll"><button class="faq-item__question">How long does a panel upgrade take?<svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__answer"><p>Most panel upgrades are completed in one day. Complex installations may take 2-3 days.</p></div></div>
             <div class="faq-item animate-on-scroll"><button class="faq-item__question">Are there tax credits for panel upgrades?<svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__answer"><p>Yes. The federal Energy Efficient Home Improvement Credit offers 30% back (up to $600) on qualifying panel upgrades that support EV chargers or heat pumps.</p></div></div>
