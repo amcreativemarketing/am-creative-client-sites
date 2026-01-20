@@ -295,77 +295,6 @@
 }
 
 /* ========================================
-   FOOD SERVICE CALLOUT
-   ======================================== */
-.moore-commercial-foodservice {
-  padding: 60px 0;
-  background: white;
-}
-
-.moore-commercial-foodservice-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-  background: linear-gradient(135deg, var(--moore-teal) 0%, var(--moore-teal-dark) 100%);
-  border-radius: 12px;
-  padding: 50px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-}
-
-.moore-commercial-foodservice-content h2 {
-  font-size: 32px;
-  font-weight: 600;
-  color: var(--moore-text-light);
-  margin-bottom: 1rem;
-}
-
-.moore-commercial-foodservice-content h2 span {
-  color: var(--moore-gold);
-}
-
-.moore-commercial-foodservice-content p {
-  font-size: 17px;
-  color: var(--moore-gray);
-  margin-bottom: 1.5rem;
-}
-
-.moore-commercial-foodservice-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.moore-commercial-foodservice-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 15px;
-  color: var(--moore-text-light);
-}
-
-.moore-commercial-foodservice-list li svg {
-  flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  fill: var(--moore-gold);
-}
-
-.moore-commercial-foodservice-image {
-  position: relative;
-}
-
-.moore-commercial-foodservice-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* ========================================
    SERVICES SECTION - Two Column
    ======================================== */
 .moore-commercial-services {
@@ -733,14 +662,6 @@
   .moore-commercial-area-grid {
     gap: 40px;
   }
-  
-  .moore-commercial-foodservice-inner {
-    padding: 40px;
-  }
-  
-  .moore-commercial-foodservice-list {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
@@ -833,19 +754,6 @@
   .moore-commercial-area-map {
     margin-top: 30px;
   }
-  
-  .moore-commercial-foodservice-inner {
-    grid-template-columns: 1fr;
-    padding: 30px;
-  }
-  
-  .moore-commercial-foodservice-content h2 {
-    font-size: 26px;
-  }
-  
-  .moore-commercial-foodservice-image {
-    order: -1;
-  }
 }
 
 @media (max-width: 480px) {
@@ -928,8 +836,8 @@
           <div class="moore-commercial-type-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
           </div>
-          <h3>Restaurants & Cafes</h3>
-          <p>Kitchen equipment circuits, hood ventilation wiring, espresso machine hookups, and ambient dining lighting.</p>
+          <h3>Restaurants & Coffee Shops</h3>
+          <p>Kitchen equipment circuits, espresso machine hookups, hood ventilation wiring, and code-compliant installations.</p>
         </div>
         <div class="moore-commercial-type-card">
           <div class="moore-commercial-type-icon">
@@ -944,31 +852,6 @@
           </div>
           <h3>Small Commercial</h3>
           <p>Multi-tenant buildings, professional suites, and small business facilities with dedicated service needs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-       FOOD SERVICE EXPERIENCE CALLOUT
-       ======================================== -->
-  <section class="moore-commercial-foodservice">
-    <div class="moore-commercial-container">
-      <div class="moore-commercial-foodservice-inner">
-        <div class="moore-commercial-foodservice-content">
-          <h2>Restaurant & <span>Coffee Shop Specialists</span></h2>
-          <p>We've wired coffee shops, restaurants, and food service locations throughout the region. From espresso machine circuits to kitchen hood ventilation, we understand the specific electrical demands of food service businesses.</p>
-          <ul class="moore-commercial-foodservice-list">
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> High-amp espresso machine circuits</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Commercial kitchen equipment</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Hood ventilation wiring</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Walk-in cooler/freezer circuits</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> POS and display lighting</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Health code compliance</li>
-          </ul>
-        </div>
-        <div class="moore-commercial-foodservice-image">
-          <img src="https://apz71fid6y.wpdns.site/wp-content/uploads/2026/01/IMG_4551-scaled.jpg" alt="Commercial food service electrical work by Moore Electric" width="500" height="375">
         </div>
       </div>
     </div>
@@ -990,7 +873,7 @@
             </div>
             <div>
               <h4>Commercial New Construction</h4>
-              <p>Complete electrical rough-in and finish work for new retail, office, and commercial builds.</p>
+              <p>Complete electrical rough-in and finish work for new retail, restaurants, coffee shops, and commercial builds.</p>
             </div>
           </div>
           
@@ -1046,7 +929,7 @@
         </div>
         
         <div class="moore-commercial-services-image">
-          <img src="https://apz71fid6y.wpdns.site/wp-content/uploads/2026/01/Photo-Jan-15-2026-10-34-11-AM-10.jpg" alt="Commercial office electrical installation by Moore Electric" width="540" height="400">
+          <img src="https://apz71fid6y.wpdns.site/wp-content/uploads/2026/01/IMG_4555-scaled.jpg" alt="Commercial electrical installation by Moore Electric" width="540" height="400">
           <div class="moore-commercial-services-badge">
             <span class="number">25+</span>
             <span class="label">Years Experience</span>
