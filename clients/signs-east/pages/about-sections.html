@@ -1,6 +1,7 @@
 <!-- ============================================================
      SIGNS EAST - ABOUT PAGE SECTIONS
      Created: January 2026
+     Updated: January 2026 - Added 3M certification badges
      
      H1: About Signs East
      H2: Owner-operated sign shop in Kingston, NH - since 2012.
@@ -256,7 +257,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
         </div>
         <h3>Vehicle Graphics</h3>
-        <p>Full wraps, partial wraps, and vinyl lettering for trucks, vans, trailers, and fleets. Premium materials that last.</p>
+        <p>Full wraps, partial wraps, and vinyl lettering for trucks, vans, trailers, and fleets. 3M certified installation.</p>
       </div>
       
       <!-- Card 4: Sign Repair -->
@@ -443,13 +444,190 @@
 
 
 <!-- ============================================================
+     SECTION 3B: CERTIFICATIONS
+     Background: White | Trust signal section
+     Added: January 2026
+     ============================================================ -->
+
+<style>
+.se-about-certs {
+  background-color: #FFFFFF;
+  padding: 70px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-about-certs-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.se-about-certs-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.se-about-certs-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 12px 0;
+}
+
+.se-about-certs-header p {
+  font-size: 17px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.se-about-certs-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.se-about-certs-badges {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.se-about-cert-badge {
+  max-width: 200px;
+}
+
+.se-about-cert-badge img {
+  width: 100%;
+  height: auto;
+}
+
+.se-about-certs-text {
+  flex: 1 1 400px;
+}
+
+.se-about-certs-text h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-about-certs-text p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.7;
+  margin: 0 0 15px 0;
+}
+
+.se-about-certs-text p:last-child {
+  margin-bottom: 0;
+}
+
+.se-about-certs-list {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.se-about-certs-list li {
+  font-size: 15px;
+  color: #333333;
+  padding: 6px 0 6px 28px;
+  position: relative;
+}
+
+.se-about-certs-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: #C61C1C;
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 800px) {
+  .se-about-certs {
+    padding: 50px 20px;
+  }
+  .se-about-certs-header h2 {
+    font-size: 26px;
+  }
+  .se-about-certs-content {
+    flex-direction: column;
+    gap: 35px;
+  }
+  .se-about-certs-badges {
+    gap: 25px;
+  }
+  .se-about-cert-badge {
+    max-width: 160px;
+  }
+  .se-about-certs-text h3 {
+    font-size: 22px;
+  }
+}
+</style>
+
+<section class="se-about-certs">
+  <div class="se-about-certs-container">
+    
+    <div class="se-about-certs-header">
+      <h2>Certified by the Industry Leaders</h2>
+      <p>Factory-trained, tested, and approved - not just using quality materials, but certified to install them correctly.</p>
+    </div>
+    
+    <div class="se-about-certs-content">
+      
+      <div class="se-about-certs-badges">
+        <div class="se-about-cert-badge">
+          <img src="https://signseast.com/wp-content/uploads/2026/01/3m-Certified-graphic.webp" alt="3M Certified Graphics Installation Company" loading="lazy">
+        </div>
+        <div class="se-about-cert-badge">
+          <img src="https://signseast.com/wp-content/uploads/2026/01/3M-Preferred-installer-graphic.webp" alt="3M Preferred Installer - Fleet Graphics and Windows, Walls and Floors" loading="lazy">
+        </div>
+      </div>
+      
+      <div class="se-about-certs-text">
+        <h3>3M Certified &amp; Preferred Installer</h3>
+        <p>3M certification isn't automatic - it requires hands-on training, testing, and demonstrated expertise. When you see these credentials, you know the installer meets 3M's standards for surface preparation, application technique, and quality control.</p>
+        <p>Our 3M Preferred Installer certification covers:</p>
+        <ul class="se-about-certs-list">
+          <li>Fleet graphics and vehicle wraps</li>
+          <li>Architectural films for windows, walls, and floors</li>
+          <li>Premium vinyl installation and finishing</li>
+        </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
      SECTION 4: SERVICE AREA
-     Background: White | Two-column with image
+     Background: Light gray | Two-column with image
      ============================================================ -->
 
 <style>
 .se-about-area {
-  background-color: #FFFFFF;
+  background-color: #F5F5F5;
   padding: 80px 20px;
   font-family: 'Assistant', sans-serif;
 }
@@ -494,7 +672,7 @@
 }
 
 .se-about-area-tag {
-  background-color: #F5F5F5;
+  background-color: #FFFFFF;
   color: #333333;
   font-size: 15px;
   padding: 10px 20px;
@@ -562,12 +740,12 @@
 
 <!-- ============================================================
      SECTION 5: FAQ ACCORDION
-     Background: Light gray | Red cards
+     Background: White | Red cards
      ============================================================ -->
 
 <style>
 .se-about-faq {
-  background-color: #F5F5F5;
+  background-color: #FFFFFF;
   padding: 80px 20px;
   font-family: 'Assistant', sans-serif;
 }
@@ -796,16 +974,15 @@
 
 <!-- ============================================================
      SECTION 6: FINAL CTA
-     Background: White with red accents
+     Background: Light gray with red accents
      ============================================================ -->
 
 <style>
 .se-about-cta {
-  background-color: #FFFFFF;
+  background-color: #F5F5F5;
   padding: 80px 20px;
   font-family: 'Assistant', sans-serif;
   text-align: center;
-  border-top: 1px solid #E5E5E5;
 }
 
 .se-about-cta-container {
