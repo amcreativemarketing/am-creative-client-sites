@@ -1,0 +1,1208 @@
+<!--
+  Signs East - ADA Signage Page
+  Built: January 2026
+  
+  IMPLEMENTATION NOTES:
+  - These sections go BELOW the existing Elementor hero (H1/H2)
+  - Keep existing footer
+  - H1 in Elementor: "ADA Compliant Signs"
+  - H2 in Elementor: "Braille Signage & Accessibility Solutions for NH & MA Businesses"
+  
+  SECTION ORDER:
+  1. Intro (white bg) - what ADA signs are, why compliance matters
+  2. Types of ADA Signs (gray bg) - room ID, restroom, wayfinding, exit
+  3. ADA Requirements (white bg) - the actual specs
+  4. Our Process (gray bg) - how we help
+  5. FAQ (white bg) - real compliance questions
+  6. Final CTA (dark bg)
+-->
+
+<!-- ============================================================
+     SECTION 1: INTRO
+     Background: White | Purpose: Explain ADA requirements, establish expertise
+     ============================================================ -->
+
+<style>
+.se-ada-intro {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-ada-intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.se-ada-intro-container h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  line-height: 1.2;
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+.se-ada-intro-container p {
+  font-size: 17px;
+  color: #333333;
+  line-height: 1.7;
+  margin: 0 0 20px 0;
+}
+
+.se-ada-intro-container p:last-of-type {
+  margin-bottom: 30px;
+}
+
+.se-ada-intro-container a.inline-link {
+  color: #C61C1C;
+  text-decoration: none;
+  border-bottom: 1px solid #C61C1C;
+}
+
+.se-ada-intro-container a.inline-link:hover {
+  color: #a51717;
+  border-color: #a51717;
+}
+
+.se-ada-intro-cta {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.se-ada-intro-cta:hover {
+  background-color: #a51717;
+  color: #FFFFFF;
+}
+
+/* Warning callout */
+.se-ada-warning {
+  background-color: #FFF8E1;
+  border-left: 4px solid #F9A825;
+  padding: 20px 25px;
+  margin: 30px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.se-ada-warning p {
+  margin: 0;
+  font-size: 16px;
+  color: #5D4037;
+}
+
+.se-ada-warning strong {
+  color: #E65100;
+}
+
+@media (max-width: 1024px) {
+  .se-ada-intro-container h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-ada-intro {
+    padding: 50px 20px;
+  }
+  .se-ada-intro-container h2 {
+    font-size: 28px;
+  }
+  .se-ada-intro-container p {
+    font-size: 16px;
+  }
+  .se-ada-warning {
+    padding: 15px 20px;
+  }
+  .se-ada-warning p {
+    font-size: 15px;
+  }
+}
+</style>
+
+<section class="se-ada-intro">
+  <div class="se-ada-intro-container">
+    <h2>Accessible Signage That Keeps You Compliant</h2>
+    <p>The Americans with Disabilities Act (ADA) requires specific signage in all public areas of buildings - restrooms, room numbers, exits, stairwells, and more. These signs must include tactile characters, Grade 2 Braille, proper contrast, and correct mounting heights.</p>
+    <p>Getting it wrong means more than just failed inspections. Non-compliant signage can result in lawsuits, fines, and costly retrofits. We've seen businesses forced to replace entire sign packages because someone ordered the wrong specs online.</p>
+    
+    <div class="se-ada-warning">
+      <p><strong>Important:</strong> ADA requirements are specific and non-negotiable. Character height, Braille placement, mounting height, and contrast ratios all have exact specifications. Generic "ADA style" signs from online vendors often don't meet actual compliance standards.</p>
+    </div>
+    
+    <p>We design and fabricate ADA-compliant signage that meets federal requirements and passes inspection. Every sign includes proper tactile lettering, Grade 2 Braille, and documentation of compliance specs. We can also survey your facility and identify what signage you need.</p>
+    <a href="/contact-us/" class="se-ada-intro-cta">Get an ADA Signage Quote</a>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 2: TYPES OF ADA SIGNS
+     Background: Gray | Features: 4 cards for sign types
+     ============================================================ -->
+
+<style>
+.se-ada-types {
+  background-color: #F5F5F5;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-ada-types-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.se-ada-types-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-ada-types-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-ada-types-header p {
+  font-size: 17px;
+  color: #555555;
+  margin: 0;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.se-ada-types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.se-ada-type-card {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 35px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.se-ada-type-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #C61C1C;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.se-ada-type-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #FFFFFF;
+}
+
+.se-ada-type-card h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 12px 0;
+}
+
+.se-ada-type-card p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .se-ada-types-header h2 {
+    font-size: 32px;
+  }
+  .se-ada-type-card {
+    padding: 30px 25px;
+  }
+  .se-ada-type-card h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-ada-types {
+    padding: 50px 20px;
+  }
+  .se-ada-types-header {
+    margin-bottom: 35px;
+  }
+  .se-ada-types-header h2 {
+    font-size: 28px;
+  }
+  .se-ada-types-header p {
+    font-size: 16px;
+  }
+  .se-ada-types-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .se-ada-type-card {
+    padding: 28px 24px;
+  }
+  .se-ada-type-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+  }
+  .se-ada-type-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  .se-ada-type-card h3 {
+    font-size: 20px;
+  }
+}
+</style>
+
+<section class="se-ada-types">
+  <div class="se-ada-types-container">
+    
+    <div class="se-ada-types-header">
+      <h2>Types of ADA Signs We Produce</h2>
+      <p>All fabricated to federal ADA standards with tactile characters, Grade 2 Braille, and proper contrast ratios.</p>
+    </div>
+    
+    <div class="se-ada-types-grid">
+      
+      <!-- Card 1: Room Identification -->
+      <div class="se-ada-type-card">
+        <div class="se-ada-type-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19V5c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v14H3v2h18v-2h-2zm-6 0h-2v-2h2v2zm3-4H8V5h8v10z"/></svg>
+        </div>
+        <h3>Room Identification Signs</h3>
+        <p>Room numbers, office names, and suite identifiers. Required for all permanent rooms and spaces. Includes raised tactile characters and Grade 2 Braille. Mounted at ADA-specified height on latch side of door.</p>
+      </div>
+      
+      <!-- Card 2: Restroom Signs -->
+      <div class="se-ada-type-card">
+        <div class="se-ada-type-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.5 22v-7.5H4V9c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v5.5H9.5V22h-4zM18 22v-6h3l-2.54-7.63C18.18 7.55 17.42 7 16.56 7h-.12c-.86 0-1.63.55-1.9 1.37L12 16h3v6h3zM7.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm9 0c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2z"/></svg>
+        </div>
+        <h3>Restroom Signs</h3>
+        <p>Men, Women, All-Gender, and Family restrooms. Includes required pictograms, tactile text, Braille, and International Symbol of Accessibility where applicable. Designed to meet both ADA and local code requirements.</p>
+      </div>
+      
+      <!-- Card 3: Wayfinding & Directional -->
+      <div class="se-ada-type-card">
+        <div class="se-ada-type-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.71 11.29l-9-9c-.39-.39-1.02-.39-1.41 0l-9 9c-.39.39-.39 1.02 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9c.39-.38.39-1.01 0-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></svg>
+        </div>
+        <h3>Wayfinding & Directional Signs</h3>
+        <p>Directories, directional arrows, and navigation signs. While not all wayfinding signs require tactile elements, overhead and projecting signs have specific requirements. We ensure your wayfinding system is compliant throughout.</p>
+      </div>
+      
+      <!-- Card 4: Exit & Safety -->
+      <div class="se-ada-type-card">
+        <div class="se-ada-type-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+        </div>
+        <h3>Exit & Safety Signs</h3>
+        <p>Exit signs, stairwell identification, areas of rescue assistance, and emergency evacuation signage. These signs have specific requirements for tactile elements, photoluminescence, and mounting locations.</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 3: ADA REQUIREMENTS
+     Background: White | Features: Key specs explained
+     ============================================================ -->
+
+<style>
+.se-ada-specs {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-ada-specs-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.se-ada-specs-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-ada-specs-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-ada-specs-header p {
+  font-size: 17px;
+  color: #555555;
+  margin: 0;
+}
+
+.se-ada-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.se-ada-spec-item {
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.se-ada-spec-item h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.se-ada-spec-item h3::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #C61C1C;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.se-ada-spec-item p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.65;
+  margin: 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 1024px) {
+  .se-ada-specs-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-ada-specs {
+    padding: 50px 20px;
+  }
+  .se-ada-specs-header {
+    margin-bottom: 35px;
+  }
+  .se-ada-specs-header h2 {
+    font-size: 28px;
+  }
+  .se-ada-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .se-ada-spec-item {
+    padding: 20px;
+  }
+  .se-ada-spec-item h3 {
+    font-size: 18px;
+  }
+  .se-ada-spec-item p {
+    font-size: 14px;
+  }
+}
+</style>
+
+<section class="se-ada-specs">
+  <div class="se-ada-specs-container">
+    
+    <div class="se-ada-specs-header">
+      <h2>Key ADA Sign Requirements</h2>
+      <p>These aren't suggestions - they're federal requirements with specific measurements.</p>
+    </div>
+    
+    <div class="se-ada-specs-grid">
+      
+      <div class="se-ada-spec-item">
+        <h3>Tactile Characters</h3>
+        <p>Raised characters between 1/32" minimum. Sans-serif or simple serif fonts. Character height 5/8" to 2" for room signs. Must be uppercase for tactile elements.</p>
+      </div>
+      
+      <div class="se-ada-spec-item">
+        <h3>Grade 2 Braille</h3>
+        <p>Contracted Braille (not Grade 1) positioned below tactile text. Specific dot height, spacing, and placement requirements. Must be domed, not flat.</p>
+      </div>
+      
+      <div class="se-ada-spec-item">
+        <h3>Mounting Height</h3>
+        <p>48" to 60" from floor to baseline of lowest tactile character. Signs must be on latch side of door, not on the door itself. Specific clearance requirements.</p>
+      </div>
+      
+      <div class="se-ada-spec-item">
+        <h3>Contrast</h3>
+        <p>70% minimum contrast between characters and background. Light on dark or dark on light - both are acceptable if contrast ratio is met.</p>
+      </div>
+      
+      <div class="se-ada-spec-item">
+        <h3>Non-Glare Finish</h3>
+        <p>Sign surface must have non-glare finish. Glossy surfaces fail inspection. Matte or satin finishes required for both background and characters.</p>
+      </div>
+      
+      <div class="se-ada-spec-item">
+        <h3>Pictograms</h3>
+        <p>When pictograms are used, they must be in a 6" minimum height field. Text descriptor must be placed directly below the pictogram field.</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 4: OUR PROCESS
+     Background: Gray | Features: How we help
+     ============================================================ -->
+
+<style>
+.se-ada-process {
+  background-color: #F5F5F5;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-ada-process-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.se-ada-process-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-ada-process-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-ada-process-header p {
+  font-size: 17px;
+  color: #555555;
+  margin: 0;
+}
+
+.se-ada-process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.se-ada-process-step {
+  display: flex;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.se-ada-process-step:last-child {
+  border-bottom: none;
+}
+
+.se-ada-process-number {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Baskervville', serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.se-ada-process-content h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 10px 0;
+}
+
+.se-ada-process-content p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .se-ada-process-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-ada-process {
+    padding: 50px 20px;
+  }
+  .se-ada-process-header {
+    margin-bottom: 35px;
+  }
+  .se-ada-process-header h2 {
+    font-size: 28px;
+  }
+  .se-ada-process-step {
+    gap: 20px;
+    padding: 25px 0;
+  }
+  .se-ada-process-number {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 18px;
+  }
+  .se-ada-process-content h3 {
+    font-size: 19px;
+  }
+  .se-ada-process-content p {
+    font-size: 15px;
+  }
+}
+</style>
+
+<section class="se-ada-process">
+  <div class="se-ada-process-container">
+    
+    <div class="se-ada-process-header">
+      <h2>How We Help</h2>
+      <p>From assessment to installation - we handle everything.</p>
+    </div>
+    
+    <div class="se-ada-process-steps">
+      
+      <div class="se-ada-process-step">
+        <div class="se-ada-process-number">1</div>
+        <div class="se-ada-process-content">
+          <h3>Facility Assessment</h3>
+          <p>We can survey your building to identify every location requiring ADA signage - rooms, restrooms, exits, stairwells, and more. You get a complete list of what's needed, not just what you thought to ask about.</p>
+        </div>
+      </div>
+      
+      <div class="se-ada-process-step">
+        <div class="se-ada-process-number">2</div>
+        <div class="se-ada-process-content">
+          <h3>Design & Specification</h3>
+          <p>We design signs that meet ADA requirements while matching your interior design. Color options, materials, and mounting hardware are all selected to complement your space. You approve proofs before production.</p>
+        </div>
+      </div>
+      
+      <div class="se-ada-process-step">
+        <div class="se-ada-process-number">3</div>
+        <div class="se-ada-process-content">
+          <h3>Fabrication</h3>
+          <p>Signs are produced with proper tactile characters, Grade 2 Braille, correct contrast ratios, and non-glare finishes. Every sign is inspected before it leaves our shop.</p>
+        </div>
+      </div>
+      
+      <div class="se-ada-process-step">
+        <div class="se-ada-process-number">4</div>
+        <div class="se-ada-process-content">
+          <h3>Installation</h3>
+          <p>We install signs at the correct heights and locations. Proper mounting is part of compliance - even a correctly made sign fails if it's mounted wrong. You get documentation of placement specs for your records.</p>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 5: FAQ
+     Background: White | Features: ADA compliance questions
+     ============================================================ -->
+
+<style>
+.se-ada-faq {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-ada-faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.se-ada-faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-ada-faq-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-ada-faq-header p {
+  font-size: 17px;
+  color: #555555;
+  margin: 0;
+}
+
+.se-ada-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.se-ada-faq-item {
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.se-ada-faq-question {
+  width: 100%;
+  padding: 22px 25px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #191919;
+  transition: color 0.2s ease;
+}
+
+.se-ada-faq-question:hover {
+  color: #C61C1C;
+}
+
+.se-ada-faq-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.se-ada-faq-icon::before,
+.se-ada-faq-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #C61C1C;
+  transition: transform 0.3s ease;
+}
+
+.se-ada-faq-icon::before {
+  width: 14px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-ada-faq-icon::after {
+  width: 2px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-ada-faq-item.active .se-ada-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-ada-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-ada-faq-answer-inner {
+  padding: 0 25px 22px 25px;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.7;
+}
+
+.se-ada-faq-answer-inner a {
+  color: #C61C1C;
+  text-decoration: none;
+  border-bottom: 1px solid #C61C1C;
+}
+
+.se-ada-faq-answer-inner a:hover {
+  color: #a51717;
+  border-color: #a51717;
+}
+
+.se-ada-faq-item.active .se-ada-faq-answer {
+  max-height: 350px;
+}
+
+@media (max-width: 1024px) {
+  .se-ada-faq-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-ada-faq {
+    padding: 50px 20px;
+  }
+  .se-ada-faq-header {
+    margin-bottom: 35px;
+  }
+  .se-ada-faq-header h2 {
+    font-size: 28px;
+  }
+  .se-ada-faq-header p {
+    font-size: 16px;
+  }
+  .se-ada-faq-question {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
+  .se-ada-faq-answer-inner {
+    padding: 0 20px 18px 20px;
+    font-size: 15px;
+  }
+}
+</style>
+
+<section class="se-ada-faq">
+  <div class="se-ada-faq-container">
+    
+    <div class="se-ada-faq-header">
+      <h2>ADA Signage Questions</h2>
+      <p>Common questions about compliance and requirements.</p>
+    </div>
+    
+    <div class="se-ada-faq-list">
+      
+      <div class="se-ada-faq-item">
+        <button class="se-ada-faq-question" aria-expanded="false">
+          Does my business need ADA signs?
+          <span class="se-ada-faq-icon"></span>
+        </button>
+        <div class="se-ada-faq-answer">
+          <div class="se-ada-faq-answer-inner">
+            If your building is open to the public or has employees, yes. The ADA applies to places of public accommodation (stores, restaurants, offices, medical facilities, etc.) and commercial facilities. Both new construction and renovations trigger compliance requirements.
+          </div>
+        </div>
+      </div>
+      
+      <div class="se-ada-faq-item">
+        <button class="se-ada-faq-question" aria-expanded="false">
+          What's the penalty for non-compliant signs?
+          <span class="se-ada-faq-icon"></span>
+        </button>
+        <div class="se-ada-faq-answer">
+          <div class="se-ada-faq-answer-inner">
+            ADA violations can result in civil penalties up to $75,000 for first violations and $150,000 for subsequent violations. More commonly, businesses face lawsuits from individuals or advocacy groups, which often result in settlements plus required remediation. It's far cheaper to get it right the first time.
+          </div>
+        </div>
+      </div>
+      
+      <div class="se-ada-faq-item">
+        <button class="se-ada-faq-question" aria-expanded="false">
+          Can I buy ADA signs online?
+          <span class="se-ada-faq-icon"></span>
+        </button>
+        <div class="se-ada-faq-answer">
+          <div class="se-ada-faq-answer-inner">
+            You can, but be careful. Many online vendors sell signs labeled "ADA compliant" that don't actually meet all requirements - wrong Braille grade, incorrect character heights, improper contrast, or glossy finishes. We've replaced a lot of online orders that failed inspection. Working with a sign company that understands the specs protects you from costly mistakes.
+          </div>
+        </div>
+      </div>
+      
+      <div class="se-ada-faq-item">
+        <button class="se-ada-faq-question" aria-expanded="false">
+          Do all my signs need Braille?
+          <span class="se-ada-faq-icon"></span>
+        </button>
+        <div class="se-ada-faq-answer">
+          <div class="se-ada-faq-answer-inner">
+            Not all signs - specifically signs that identify permanent rooms and spaces. Room numbers, restroom signs, exit signs, and stairwell identifiers require tactile characters and Braille. Temporary signs, informational signs, and directional signs typically don't require tactile elements (though there are exceptions). We help you determine what's required for each location.
+          </div>
+        </div>
+      </div>
+      
+      <div class="se-ada-faq-item">
+        <button class="se-ada-faq-question" aria-expanded="false">
+          How much do ADA signs cost?
+          <span class="se-ada-faq-icon"></span>
+        </button>
+        <div class="se-ada-faq-answer">
+          <div class="se-ada-faq-answer-inner">
+            Individual ADA room signs typically run $30-75 each depending on size, materials, and complexity. Restroom signs with pictograms run higher. For a full facility package with survey, design, fabrication, and installation, we provide a complete quote after understanding your space and needs.
+          </div>
+        </div>
+      </div>
+      
+      <div class="se-ada-faq-item">
+        <button class="se-ada-faq-question" aria-expanded="false">
+          Can ADA signs match my interior design?
+          <span class="se-ada-faq-icon"></span>
+        </button>
+        <div class="se-ada-faq-answer">
+          <div class="se-ada-faq-answer-inner">
+            Yes - ADA requirements specify minimum standards for accessibility, not aesthetics. You have flexibility in colors (as long as contrast requirements are met), materials, shapes, and overall design. We can create signs that are both compliant and consistent with your interior design scheme.
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.se-ada-faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    const isActive = item.classList.contains('active');
+    
+    // Close all items
+    document.querySelectorAll('.se-ada-faq-item').forEach(i => {
+      i.classList.remove('active');
+      i.querySelector('.se-ada-faq-question').setAttribute('aria-expanded', 'false');
+    });
+    
+    // Open clicked item if it wasn't already open
+    if (!isActive) {
+      item.classList.add('active');
+      button.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+
+
+<!-- ============================================================
+     SECTION 6: FINAL CTA
+     Background: Dark solid | Features: Dual CTAs
+     ============================================================ -->
+
+<style>
+.se-ada-cta {
+  background-color: #191919;
+  padding: 100px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-ada-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.se-ada-cta-container h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+}
+
+.se-ada-cta-container .lead-text {
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 35px 0;
+  line-height: 1.5;
+}
+
+.se-ada-cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.se-ada-cta-primary {
+  display: inline-block;
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.se-ada-cta-primary:hover {
+  background-color: #a51717;
+  color: #FFFFFF;
+}
+
+.se-ada-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 30px;
+  border: 2px solid #FFFFFF;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.se-ada-cta-secondary:hover {
+  background-color: #FFFFFF;
+  color: #191919;
+}
+
+.se-ada-cta-secondary svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.se-ada-cta-link {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.se-ada-cta-link:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .se-ada-cta-container h2 {
+    font-size: 36px;
+  }
+  .se-ada-cta-container .lead-text {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-ada-cta {
+    padding: 70px 20px;
+  }
+  .se-ada-cta-container h2 {
+    font-size: 30px;
+  }
+  .se-ada-cta-container .lead-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .se-ada-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .se-ada-cta-primary,
+  .se-ada-cta-secondary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 14px 30px;
+  }
+}
+</style>
+
+<section class="se-ada-cta">
+  <div class="se-ada-cta-container">
+    
+    <h2>Need ADA-Compliant Signage?</h2>
+    <p class="lead-text">Tell us about your facility. We'll help you identify what's required and provide a complete quote.</p>
+    
+    <div class="se-ada-cta-buttons">
+      <a href="/contact-us/" class="se-ada-cta-primary">Get Your Free Quote</a>
+      <a href="tel:+19782732992" class="se-ada-cta-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        (978) 273-2992
+      </a>
+    </div>
+    
+    <a href="/sign-services/" class="se-ada-cta-link">View All Sign Services →</a>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SERVICE SCHEMA MARKUP
+     For search engine rich results
+     ============================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "ADA Compliant Signage",
+  "name": "ADA Signs & Accessible Signage",
+  "description": "ADA-compliant signage design, fabrication, and installation for businesses in Southern NH, Seacoast NH, and North Shore MA. Tactile characters, Grade 2 Braille, room identification, restroom signs, and wayfinding solutions.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Signs East LLC",
+    "image": "https://signseast.com/wp-content/uploads/2025/10/signseast-logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "34 NH-125",
+      "addressLocality": "Kingston",
+      "addressRegion": "NH",
+      "postalCode": "03848",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-978-273-2992",
+    "url": "https://signseast.com",
+    "priceRange": "$$"
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "New Hampshire"
+    },
+    {
+      "@type": "State", 
+      "name": "Massachusetts"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "ADA Signage Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Room Identification Signs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Restroom Signs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Wayfinding & Directional Signs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Exit & Safety Signs"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does my business need ADA signs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your building is open to the public or has employees, yes. The ADA applies to places of public accommodation (stores, restaurants, offices, medical facilities, etc.) and commercial facilities. Both new construction and renovations trigger compliance requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the penalty for non-compliant ADA signs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ADA violations can result in civil penalties up to $75,000 for first violations and $150,000 for subsequent violations. More commonly, businesses face lawsuits from individuals or advocacy groups, which often result in settlements plus required remediation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I buy ADA signs online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can, but be careful. Many online vendors sell signs labeled 'ADA compliant' that don't actually meet all requirements - wrong Braille grade, incorrect character heights, improper contrast, or glossy finishes. Working with a sign company that understands the specs protects you from costly mistakes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do all my signs need Braille?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not all signs - specifically signs that identify permanent rooms and spaces. Room numbers, restroom signs, exit signs, and stairwell identifiers require tactile characters and Braille. Temporary signs, informational signs, and directional signs typically don't require tactile elements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do ADA signs cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Individual ADA room signs typically run $30-75 each depending on size, materials, and complexity. Restroom signs with pictograms run higher. For a full facility package with survey, design, fabrication, and installation, we provide a complete quote after understanding your space and needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can ADA signs match my interior design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes - ADA requirements specify minimum standards for accessibility, not aesthetics. You have flexibility in colors (as long as contrast requirements are met), materials, shapes, and overall design. We can create signs that are both compliant and consistent with your interior design scheme."
+      }
+    }
+  ]
+}
+</script>
