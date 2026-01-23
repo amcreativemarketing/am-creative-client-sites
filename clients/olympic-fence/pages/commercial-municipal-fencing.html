@@ -1,0 +1,1343 @@
+<!-- 
+COMMERCIAL & MUNICIPAL FENCING PAGE CONTENT
+Olympic Fence Company
+Optimized for: Commercial fence installation North Shore MA
+Content sits below hero/H1 and above footer
+Updated: January 2026 - Brand colors corrected to purple (#272262)
+-->
+
+<style>
+/* Olympic Fence Commercial Page Styles - CORRECT BRAND COLORS */
+:root {
+  --ofc-primary: #272262;
+  --ofc-primary-hover: #4a4494;
+  --ofc-text-dark: #333333;
+  --ofc-text-light: #666666;
+  --ofc-bg-light: #f8f9fa;
+  --ofc-border: #e9ecef;
+  --ofc-white: #ffffff;
+  --ofc-star: #ffc107;
+  --ofc-success: #28a745;
+}
+
+.ofc-commercial-intro {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.ofc-commercial-intro p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--ofc-text-dark);
+  margin-bottom: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Trust Bar - Dark purple background with white text */
+.ofc-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--ofc-primary);
+  border-radius: 8px;
+  margin: 3rem 0;
+}
+
+.ofc-trust-item {
+  text-align: center;
+  flex: 1 1 200px;
+  color: var(--ofc-white);
+}
+
+.ofc-trust-item strong {
+  display: block;
+  color: var(--ofc-white);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.ofc-trust-item span {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+/* Commercial Services Grid - With background for better UX */
+.ofc-services-section {
+  background: var(--ofc-bg-light);
+  padding: 4rem 0;
+  margin: 3rem 0;
+}
+
+.ofc-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+.ofc-service-card {
+  background: var(--ofc-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--ofc-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ofc-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(39, 34, 98, 0.15);
+}
+
+.ofc-service-card h3 {
+  color: var(--ofc-primary);
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-service-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ofc-text-dark);
+}
+
+.ofc-service-card ul li {
+  font-size: 0.9rem;
+  color: var(--ofc-text-dark);
+}
+
+.ofc-service-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.ofc-service-card ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.ofc-service-card ul li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--ofc-success);
+  font-weight: bold;
+}
+
+.ofc-service-card a {
+  color: var(--ofc-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.ofc-service-card a:hover {
+  color: var(--ofc-primary-hover);
+}
+
+/* Materials Section - 2x2 Grid with larger H3s */
+.ofc-materials-section {
+  background: var(--ofc-white);
+  padding: 4rem 1.5rem;
+  margin: 4rem 0;
+}
+
+.ofc-materials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+}
+
+.ofc-material-card {
+  background: var(--ofc-bg-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--ofc-border);
+}
+
+.ofc-material-card h3 {
+  color: var(--ofc-primary);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-material-card p {
+  color: var(--ofc-text-dark);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.ofc-material-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.ofc-material-card ul li {
+  padding: 0.4rem 0;
+  color: var(--ofc-text-dark);
+  font-size: 0.95rem;
+}
+
+.ofc-material-card a {
+  color: var(--ofc-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.ofc-material-card a:hover {
+  color: var(--ofc-primary-hover);
+}
+
+/* Why Choose Section */
+.ofc-why-choose {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.ofc-comparison-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background: var(--ofc-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ofc-comparison-table th {
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.ofc-comparison-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--ofc-border);
+  color: var(--ofc-text-dark);
+}
+
+.ofc-comparison-table tr:nth-child(even) {
+  background: var(--ofc-bg-light);
+}
+
+.ofc-comparison-table .highlight {
+  background: #f0f0ff;
+  font-weight: 600;
+  color: var(--ofc-primary);
+}
+
+/* Process Steps */
+.ofc-process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.ofc-process-step {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--ofc-white);
+  border-radius: 8px;
+  border: 2px solid var(--ofc-bg-light);
+}
+
+.ofc-step-number {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.ofc-process-step h4 {
+  color: var(--ofc-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ofc-process-step p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ofc-text-dark);
+}
+
+/* Gallery Section */
+.ofc-gallery-section {
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
+  padding: 4rem 1.5rem;
+  margin: 4rem 0;
+}
+
+.ofc-gallery-section h2 {
+  color: var(--ofc-white);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.ofc-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ofc-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.ofc-gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.ofc-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.ofc-gallery-caption {
+  padding: 1rem;
+  background: rgba(39, 34, 98, 0.95);
+  text-align: center;
+}
+
+.ofc-gallery-caption strong {
+  color: var(--ofc-white);
+}
+
+.ofc-gallery-caption p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+
+/* Industries Section */
+.ofc-industries-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.ofc-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.ofc-industry-item {
+  padding: 1rem;
+  background: var(--ofc-bg-light);
+  border-radius: 4px;
+  border-left: 4px solid var(--ofc-primary);
+  color: var(--ofc-text-dark);
+  font-weight: 500;
+}
+
+/* Service Area */
+.ofc-service-area {
+  background: var(--ofc-bg-light);
+  padding: 4rem 1.5rem;
+  margin: 4rem 0;
+}
+
+.ofc-area-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.ofc-area-link {
+  display: block;
+  padding: 1.5rem;
+  background: var(--ofc-white);
+  text-align: center;
+  text-decoration: none;
+  color: var(--ofc-primary);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.ofc-area-link:hover {
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
+  border-color: var(--ofc-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* FAQ Section */
+.ofc-faq-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.ofc-faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid var(--ofc-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ofc-faq-question {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: var(--ofc-white);
+  border: none;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ofc-primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-faq-question:hover {
+  background: var(--ofc-bg-light);
+}
+
+.ofc-faq-question::after {
+  content: "+";
+  font-size: 1.5rem;
+  color: var(--ofc-primary);
+  transition: transform 0.3s ease;
+}
+
+.ofc-faq-question.active::after {
+  transform: rotate(45deg);
+}
+
+.ofc-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: var(--ofc-bg-light);
+}
+
+.ofc-faq-answer-content {
+  padding: 1.5rem;
+  line-height: 1.8;
+  color: var(--ofc-text-dark);
+}
+
+/* CTA Section - Solid dark brand color */
+.ofc-cta-section {
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
+  padding: 4rem 1.5rem;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.ofc-cta-section h2 {
+  color: var(--ofc-white);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.ofc-cta-section p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.ofc-cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ofc-btn-primary,
+.ofc-btn-secondary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--ofc-white);
+  color: var(--ofc-primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 2px solid var(--ofc-white);
+  transition: all 0.3s ease;
+}
+
+.ofc-btn-primary:hover,
+.ofc-btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: var(--ofc-bg-light);
+  border-color: var(--ofc-bg-light);
+}
+
+/* Reviews Grid */
+.ofc-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.ofc-review-card {
+  background: var(--ofc-white);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--ofc-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ofc-review-stars {
+  color: var(--ofc-star);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ofc-review-card p {
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--ofc-text-dark);
+}
+
+.ofc-review-author {
+  font-weight: 600;
+  color: var(--ofc-primary);
+  margin: 0;
+}
+
+/* Section Headings */
+.ofc-section-heading {
+  text-align: center;
+  color: var(--ofc-primary);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-section-subheading {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.125rem;
+  color: var(--ofc-text-light);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .ofc-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .ofc-process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .ofc-reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ofc-services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ofc-materials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ofc-process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .ofc-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ofc-comparison-table {
+    font-size: 0.9rem;
+  }
+  
+  .ofc-comparison-table th,
+  .ofc-comparison-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .ofc-trust-bar {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .ofc-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ofc-cta-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .ofc-cta-section p {
+    font-size: 1rem;
+  }
+}
+</style>
+
+<!-- Opening Content Section -->
+<div class="ofc-commercial-intro">
+  <p>Olympic Fence delivers secure, durable commercial fencing solutions for businesses, municipalities, and industrial properties across North Shore Massachusetts and Southern New Hampshire. Since 1985, we've helped commercial clients protect their properties with expert fence installation, backed by our lifetime workmanship warranty and responsive service that sets us apart from competitors offering only 2-3 year coverage.</p>
+  
+  <!-- Trust Bar - Dark purple background with white text -->
+  <div class="ofc-trust-bar">
+    <div class="ofc-trust-item">
+      <strong>40+ Years</strong>
+      <span>Family Experience</span>
+    </div>
+    <div class="ofc-trust-item">
+      <strong>Lifetime Warranty</strong>
+      <span>Workmanship Guarantee</span>
+    </div>
+    <div class="ofc-trust-item">
+      <strong>70-Mile</strong>
+      <span>Service Radius</span>
+    </div>
+    <div class="ofc-trust-item">
+      <strong>Licensed & Insured</strong>
+      <span>Fully Compliant</span>
+    </div>
+  </div>
+</div>
+
+<!-- Commercial Fencing Services Section - With background -->
+<section class="ofc-services-section">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+    <h2 class="ofc-section-heading">Commercial Fencing Services We Provide</h2>
+  </div>
+  
+  <div class="ofc-services-grid">
+    <div class="ofc-service-card">
+      <h3>Industrial Security Fencing</h3>
+      <p>Heavy-duty perimeter protection designed for warehouses, manufacturing facilities, and distribution centers across Massachusetts.</p>
+      <ul>
+        <li>Chain link and ornamental steel options</li>
+        <li>Access control integration ready</li>
+        <li>High-security gates and barriers</li>
+        <li>Anti-climb features available</li>
+      </ul>
+    </div>
+    
+    <div class="ofc-service-card">
+      <h3>Municipal & Government Property Fencing</h3>
+      <p>Compliant installations for parks, schools, and public facilities throughout North Shore MA.</p>
+      <ul>
+        <li>Sports field and park fencing</li>
+        <li>Public works enclosures</li>
+        <li>Utility site protection</li>
+        <li>Playground safety barriers</li>
+      </ul>
+    </div>
+    
+    <div class="ofc-service-card">
+      <h3>Business Property Fencing</h3>
+      <p>Professional perimeter solutions for office complexes, retail properties, and commercial facilities.</p>
+      <ul>
+        <li>Office complex perimeters</li>
+        <li>Warehouse facility security</li>
+        <li>Parking lot enclosures</li>
+        <li>Dumpster and utility enclosures</li>
+      </ul>
+    </div>
+    
+    <div class="ofc-service-card">
+      <h3>Commercial Fence Repair & Maintenance</h3>
+      <p>Fast response repair services to keep your commercial property secure and compliant.</p>
+      <ul>
+        <li>Emergency repair services</li>
+        <li>Gate repair and replacement</li>
+        <li>Post stabilization</li>
+        <li>Security system upgrades</li>
+      </ul>
+      <a href="https://olympicfencema.com/commercial-services/">View All Commercial Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Commercial Fence Materials Section - 2x2 Grid with larger H3s -->
+<section class="ofc-materials-section">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <h2 class="ofc-section-heading">Commercial Fence Material Options</h2>
+    <p class="ofc-section-subheading">Choose the right fencing material for your commercial property's security needs, budget, and aesthetic requirements.</p>
+    
+    <div class="ofc-materials-grid">
+      <div class="ofc-material-card">
+        <h3>Chain Link Fencing</h3>
+        <p>Cost-effective security solution perfect for industrial facilities, warehouses, and municipal properties.</p>
+        <ul>
+          <li>✓ Galvanized and vinyl-coated options</li>
+          <li>✓ Heights from 4' to 12'</li>
+          <li>✓ Optional barbed wire or privacy slats</li>
+          <li>✓ 25+ year lifespan</li>
+        </ul>
+        <a href="https://olympicfencema.com/chain-link/">Learn More →</a>
+      </div>
+      
+      <div class="ofc-material-card">
+        <h3>Ornamental Steel & Aluminum</h3>
+        <p>Professional aesthetic appeal with high security, ideal for office complexes and retail properties.</p>
+        <ul>
+          <li>✓ Elegant design with strength</li>
+          <li>✓ Powder-coated for durability</li>
+          <li>✓ Custom colors available</li>
+          <li>✓ Low maintenance requirements</li>
+        </ul>
+      </div>
+      
+      <div class="ofc-material-card">
+        <h3>Vinyl Privacy Fencing</h3>
+        <p>Professional appearance with zero maintenance, perfect for business complexes requiring privacy.</p>
+        <ul>
+          <li>✓ 35+ year lifespan</li>
+          <li>✓ Never needs painting</li>
+          <li>✓ Custom designs available</li>
+          <li>✓ Won't rot, warp, or fade</li>
+        </ul>
+        <a href="https://olympicfencema.com/vinyl/">Explore Vinyl →</a>
+      </div>
+      
+      <div class="ofc-material-card">
+        <h3>Specialty Security Fencing</h3>
+        <p>Advanced security solutions for high-risk facilities and critical infrastructure.</p>
+        <ul>
+          <li>✓ Anti-climb features</li>
+          <li>✓ Welded wire panels</li>
+          <li>✓ Crash-rated barriers</li>
+          <li>✓ Integrated access control</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="ofc-gallery-section">
+  <h2 style="text-align: center; color: white; margin-bottom: 1rem; font-size: 2rem; font-weight: 700;">Commercial Fencing Solutions</h2>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; opacity: 0.9; font-size: 1.125rem;">Professional fence installation transforms commercial and municipal properties across North Shore Massachusetts.</p>
+  
+  <div class="ofc-gallery-grid">
+    <div class="ofc-gallery-item">
+      <img src="https://olympicfencema.com/wp-content/uploads/2026/01/School-Athletic-Field-Transformation-Before-and-After_Olympic-Fence.jpg" alt="School athletic field fencing with professional-grade chain link perimeter and backstop in Massachusetts" loading="lazy">
+      <div class="ofc-gallery-caption">
+        <strong>Athletic Field Fencing</strong>
+        <p>Complete backstop and perimeter solutions for schools and sports complexes</p>
+      </div>
+    </div>
+    
+    <div class="ofc-gallery-item">
+      <img src="https://olympicfencema.com/wp-content/uploads/2026/01/Municipal-Park-Installation-in-Progress_Olympic-Fence.jpg" alt="Municipal playground fence installation with professional crews in North Shore Massachusetts" loading="lazy">
+      <div class="ofc-gallery-caption">
+        <strong>Municipal Park Fencing</strong>
+        <p>Playground and park perimeter fencing for Massachusetts communities</p>
+      </div>
+    </div>
+    
+    <div class="ofc-gallery-item">
+      <img src="https://olympicfencema.com/wp-content/uploads/2026/01/Commercial-Property-Security-Upgrade_Olympic-Fence.jpg" alt="Commercial property security fence with chain-link and security gates for Massachusetts industrial facility" loading="lazy">
+      <div class="ofc-gallery-caption">
+        <strong>Industrial Security Fencing</strong>
+        <p>Commercial-grade chain-link with security gates for industrial properties</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Customer Reviews Section -->
+<section style="max-width: 1200px; margin: 4rem auto; padding: 0 1.5rem;">
+  <h2 class="ofc-section-heading">What Our Commercial Clients Say</h2>
+  <p class="ofc-section-subheading">Don't just take our word for it - hear from businesses and organizations we've served.</p>
+  
+  <div class="ofc-reviews-grid">
+    <div class="ofc-review-card">
+      <div class="ofc-review-stars">★★★★★</div>
+      <p>"James was a true professional. He was always on time, transparent in time line and pricing. He was easy to work with and if you are looking for a fence you should look no further. The work was done really well and his crew kept the site clean as possible."</p>
+      <p class="ofc-review-author">— Eric T.</p>
+    </div>
+    
+    <div class="ofc-review-card">
+      <div class="ofc-review-stars">★★★★★</div>
+      <p>"Highly recommend Olympic Fence Co!! Had a chain link fence installed at my child care center and I couldn't be happier. From start to finish I was pleased with everything. Will definitely be calling Olympic Fence for my next project!! Thank you again!!"</p>
+      <p class="ofc-review-author">— Colleen M.</p>
+    </div>
+    
+    <div class="ofc-review-card">
+      <div class="ofc-review-stars">★★★★★</div>
+      <p>"We can't say enough about this companies professionalism, quality of work and materials. James answered all our questions and concerns and offered some very good solutions in a budget we could work with. His team could not have been more respectful of our property and left our yard in pristine condition."</p>
+      <p class="ofc-review-author">— Angela O.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Section -->
+<section class="ofc-why-choose">
+  <h2 class="ofc-section-heading">Why Businesses Choose Olympic Fence</h2>
+  <p class="ofc-section-subheading">Not all commercial fence contractors are created equal. See how we compare to industry standards.</p>
+  
+  <table class="ofc-comparison-table">
+    <thead>
+      <tr>
+        <th>What to Look For</th>
+        <th>Industry Standard</th>
+        <th>Olympic Fence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Commercial Experience</td>
+        <td>Varies widely</td>
+        <td class="highlight">40+ years (since 1985)</td>
+      </tr>
+      <tr>
+        <td>Workmanship Warranty</td>
+        <td>1-3 years typical</td>
+        <td class="highlight">Lifetime warranty</td>
+      </tr>
+      <tr>
+        <td>Service Area</td>
+        <td>Local only</td>
+        <td class="highlight">70-mile radius</td>
+      </tr>
+      <tr>
+        <td>Permit Handling</td>
+        <td>Client responsibility</td>
+        <td class="highlight">We handle all permits</td>
+      </tr>
+      <tr>
+        <td>Project Timeline</td>
+        <td>Often unclear upfront</td>
+        <td class="highlight">Clear timeline in proposal</td>
+      </tr>
+      <tr>
+        <td>Business Disruption</td>
+        <td>Work during standard hours</td>
+        <td class="highlight">Flexible scheduling options</td>
+      </tr>
+      <tr>
+        <td>License & Insurance</td>
+        <td>Ask for proof</td>
+        <td class="highlight">Licensed, insured, verifiable</td>
+      </tr>
+      <tr>
+        <td>Response Time</td>
+        <td>24-48 hours typical</td>
+        <td class="highlight">Same-day response</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div style="margin-top: 3rem; padding: 2rem; background: var(--ofc-bg-light); border-radius: 8px;">
+    <h3 style="color: var(--ofc-primary); margin-bottom: 1rem; text-align: center; font-weight: 700;">Our Commitment to Commercial Clients</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+      <div>
+        <strong style="color: var(--ofc-primary); display: block; margin-bottom: 0.5rem;">Budget-Conscious Solutions</strong>
+        <p style="color: var(--ofc-text-dark);">Transparent pricing with options to fit different budgets without sacrificing quality or compliance.</p>
+      </div>
+      <div>
+        <strong style="color: var(--ofc-primary); display: block; margin-bottom: 0.5rem;">Minimal Disruption</strong>
+        <p style="color: var(--ofc-text-dark);">Professional crews work efficiently, respecting business hours and coordinating around your operations.</p>
+      </div>
+      <div>
+        <strong style="color: var(--ofc-primary); display: block; margin-bottom: 0.5rem;">Family Values</strong>
+        <p style="color: var(--ofc-text-dark);">As a second-generation business, we treat your property and budget with the same respect we'd want for our own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additional Gallery - Specialty Installations -->
+<section style="background: var(--ofc-bg-light); padding: 4rem 1.5rem; margin: 4rem 0;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <h2 class="ofc-section-heading">Specialty Commercial Installations</h2>
+    <p class="ofc-section-subheading">From recreational facilities to utility enclosures, we deliver tailored solutions for every commercial need.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto;">
+      <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="https://olympicfencema.com/wp-content/uploads/2026/01/School-Tennis-Court-Enclosure_Olympic-Fence.jpg" alt="Tennis court fence enclosure with 10-foot vinyl-coated chain-link at Massachusetts school" loading="lazy" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+        <div style="padding: 1.25rem; background: white; text-align: center;">
+          <strong style="color: var(--ofc-primary); font-size: 1.1rem;">Tennis Court Enclosures</strong>
+          <p style="margin: 0.5rem 0 0; color: var(--ofc-text-light); font-size: 0.95rem;">10-foot vinyl-coated chain-link with optional privacy slats</p>
+        </div>
+      </div>
+      
+      <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="https://olympicfencema.com/wp-content/uploads/2026/01/Commercial-Dumpster-Enclosure-Detail_Olympic-Fence.jpg" alt="Commercial dumpster enclosure fence with lockable gate for North Shore business property" loading="lazy" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+        <div style="padding: 1.25rem; background: white; text-align: center;">
+          <strong style="color: var(--ofc-primary); font-size: 1.1rem;">Commercial Enclosures</strong>
+          <p style="margin: 0.5rem 0 0; color: var(--ofc-text-light); font-size: 0.95rem;">Professional-grade dumpster and utility enclosures with lockable gates</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section style="max-width: 1200px; margin: 4rem auto; padding: 0 1.5rem;">
+  <h2 class="ofc-section-heading">Our Commercial Fence Installation Process</h2>
+  <p class="ofc-section-subheading">From initial bid to final inspection, we make the process straightforward and transparent.</p>
+  
+  <div class="ofc-process-steps">
+    <div class="ofc-process-step">
+      <div class="ofc-step-number">1</div>
+      <h4>Free On-Site Consultation & Estimate</h4>
+      <p>We assess your property, evaluate security needs, recommend materials, and provide a detailed written quote with clear pricing.</p>
+    </div>
+    
+    <div class="ofc-process-step">
+      <div class="ofc-step-number">2</div>
+      <h4>Permit Navigation & Planning</h4>
+      <p>We handle all local permits and approvals, coordinate with property managers, and schedule around your business operations.</p>
+    </div>
+    
+    <div class="ofc-process-step">
+      <div class="ofc-step-number">3</div>
+      <h4>Professional Installation</h4>
+      <p>Our experienced commercial crews use quality materials and proven techniques while maintaining clean, organized job sites.</p>
+    </div>
+    
+    <div class="ofc-process-step">
+      <div class="ofc-step-number">4</div>
+      <h4>Final Inspection & Warranty</h4>
+      <p>Thorough quality check ensures everything meets specifications, plus lifetime workmanship warranty documentation and maintenance recommendations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Industries We Serve -->
+<section class="ofc-industries-section">
+  <h2 class="ofc-section-heading">Industries We Serve Across North Shore MA</h2>
+  <p class="ofc-section-subheading">Olympic Fence provides commercial fencing solutions for a wide range of industries and applications.</p>
+  
+  <div class="ofc-industries-grid">
+    <div class="ofc-industry-item">Manufacturing Facilities</div>
+    <div class="ofc-industry-item">Warehouses & Distribution Centers</div>
+    <div class="ofc-industry-item">Retail Properties & Shopping Centers</div>
+    <div class="ofc-industry-item">Office Parks & Complexes</div>
+    <div class="ofc-industry-item">Schools & Municipal Buildings</div>
+    <div class="ofc-industry-item">Parks & Recreational Facilities</div>
+    <div class="ofc-industry-item">Utility Sites & Substations</div>
+    <div class="ofc-industry-item">Construction Sites</div>
+    <div class="ofc-industry-item">Automotive Dealerships</div>
+    <div class="ofc-industry-item">Healthcare Facilities</div>
+    <div class="ofc-industry-item">Athletic Fields & Sports Complexes</div>
+    <div class="ofc-industry-item">Self-Storage Facilities</div>
+  </div>
+</section>
+
+<!-- Service Area Section -->
+<section class="ofc-service-area">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <h2 class="ofc-section-heading">Service Area for Commercial Fencing</h2>
+    <p class="ofc-section-subheading">Olympic Fence provides commercial and municipal fence installation throughout a 70-mile radius of West Newbury, MA, covering all of North Shore Massachusetts and Southern New Hampshire.</p>
+    
+    <div class="ofc-area-grid">
+      <a href="https://olympicfencema.com/haverhill-fence-company" class="ofc-area-link">Haverhill</a>
+      <a href="https://olympicfencema.com/amesbury-fence-company/" class="ofc-area-link">Amesbury</a>
+      <a href="https://olympicfencema.com/newburyport-fence-company/" class="ofc-area-link">Newburyport</a>
+      <a href="https://olympicfencema.com/salisbury-fence-company/" class="ofc-area-link">Salisbury</a>
+      <a href="https://olympicfencema.com/fence-installation-north-andover-ma/" class="ofc-area-link">North Andover</a>
+      <a href="https://olympicfencema.com/beverly-fence-installation/" class="ofc-area-link">Beverly</a>
+      <a href="https://olympicfencema.com/groveland-fence-company/" class="ofc-area-link">Groveland</a>
+    </div>
+    
+    <p style="text-align: center; margin-top: 2rem; color: var(--ofc-text-light);">We also serve Ipswich, Gloucester, Salem, Lynn, Danvers, Peabody, Merrimac, West Newbury, Rowley, Georgetown, and Southern New Hampshire communities including Seabrook, Hampton, Portsmouth, Exeter, and more.</p>
+  </div>
+</section>
+
+<!-- FAQ Section with Accordion -->
+<section class="ofc-faq-section">
+  <h2 class="ofc-section-heading">Frequently Asked Questions</h2>
+  <p class="ofc-section-subheading">Get answers to the most common questions about commercial fence installation in Massachusetts.</p>
+  
+  <div class="ofc-faq-item">
+    <button class="ofc-faq-question">How much does commercial fence installation cost?</button>
+    <div class="ofc-faq-answer">
+      <div class="ofc-faq-answer-content">
+        Commercial fence costs vary based on several factors including fence type, height, total linear footage, site conditions, and any special security requirements. Chain-link fencing typically offers the most cost-effective solution for large perimeters, while ornamental steel provides premium aesthetics at a higher investment. Massachusetts installation costs generally run 15-25% higher than national averages due to soil conditions, permit requirements, and local labor rates. We provide detailed, transparent quotes with options to fit different budgets without compromising quality or compliance. Contact us for a free on-site consultation and written estimate specific to your project.
+      </div>
+    </div>
+  </div>
+  
+  <div class="ofc-faq-item">
+    <button class="ofc-faq-question">Do you handle permits for commercial projects?</button>
+    <div class="ofc-faq-answer">
+      <div class="ofc-faq-answer-content">
+        Yes, we handle all permit applications and approvals as part of our service. Commercial fence installations typically require building permits, and some municipalities have specific requirements for height, setbacks, and materials. We're familiar with permit requirements across all North Shore MA communities and work directly with local building departments to ensure your project stays on schedule. This service is included in our proposal at no additional charge, saving you time and ensuring compliance with all local regulations.
+      </div>
+    </div>
+  </div>
+  
+  <div class="ofc-faq-item">
+    <button class="ofc-faq-question">What's the typical timeline for commercial fence installation?</button>
+    <div class="ofc-faq-answer">
+      <div class="ofc-faq-answer-content">
+        Project timelines depend on scope, but most commercial installations follow this pattern: On-site consultation and quote (1-3 days), permit approval (2-4 weeks for most MA municipalities), and installation (3-10 days depending on linear footage and complexity). We provide clear timeline estimates in our proposal and communicate proactively if any delays occur. For urgent projects, we can often expedite permitting and scheduling. Our current lead time for non-emergency commercial projects is typically 4-6 weeks from signed proposal to project completion.
+      </div>
+    </div>
+  </div>
+  
+  <div class="ofc-faq-item">
+    <button class="ofc-faq-question">Can you work around our business hours?</button>
+    <div class="ofc-faq-answer">
+      <div class="ofc-faq-answer-content">
+        Absolutely. We understand that minimizing disruption to your operations is critical. We can schedule installation work during off-hours, weekends, or in phases to accommodate your business needs. For retail properties, we often work early mornings or after closing. For schools and municipal properties, we coordinate around academic calendars and public events. Our crews are professional, efficient, and trained to maintain site safety and cleanliness while working around active facilities. We discuss scheduling preferences during the initial consultation to create a plan that works for your operation.
+      </div>
+    </div>
+  </div>
+  
+  <div class="ofc-faq-item">
+    <button class="ofc-faq-question">What fence height is best for commercial security?</button>
+    <div class="ofc-faq-answer">
+      <div class="ofc-faq-answer-content">
+        Fence height recommendations depend on your security needs and local zoning regulations. For general commercial security, 6-foot chain-link fencing is the standard minimum. High-security applications like warehouses or industrial facilities often require 8-10 foot heights, sometimes with barbed wire or anti-climb features. Massachusetts regulations typically limit commercial fence heights to 10-12 feet without special approval, though utility and industrial sites may qualify for taller installations. We assess your specific security requirements and recommend appropriate heights that balance effectiveness with compliance and budget considerations.
+      </div>
+    </div>
+  </div>
+  
+  <div class="ofc-faq-item">
+    <button class="ofc-faq-question">Do you offer financing for commercial projects?</button>
+    <div class="ofc-faq-answer">
+      <div class="ofc-faq-answer-content">
+        Yes, we understand that commercial projects represent significant investments. We work with businesses to provide flexible payment options including standard payment schedules (deposit, progress payments, final payment), extended payment plans for larger projects, and can provide documentation for your business financing if needed. Many commercial clients also benefit from tax deductions for property improvements and security installations. We're happy to structure payment terms that work with your budget and accounting preferences. Discuss payment options during your consultation to find the best approach for your business.
+      </div>
+    </div>
+  </div>
+  
+  <div class="ofc-faq-item">
+    <button class="ofc-faq-question">How long will my commercial fence last?</button>
+    <div class="ofc-faq-answer">
+      <div class="ofc-faq-answer-content">
+        Lifespan varies by material: Galvanized chain-link fencing lasts 25+ years with minimal maintenance. Vinyl-coated chain-link extends to 30+ years. Ornamental steel and aluminum can last 35+ years with powder-coating. Vinyl privacy fencing offers 35+ year lifespan with zero maintenance. All our installations are backed by our lifetime workmanship warranty, which covers installation defects and structural failures for as long as you own the property. This far exceeds the industry standard 1-3 year warranties offered by most competitors. Proper maintenance and periodic inspections help maximize fence lifespan regardless of material choice.
+      </div>
+    </div>
+  </div>
+  
+  <div class="ofc-faq-item">
+    <button class="ofc-faq-question">What's included in your lifetime workmanship warranty?</button>
+    <div class="ofc-faq-answer">
+      <div class="ofc-faq-answer-content">
+        Our lifetime workmanship warranty covers all installation-related issues for as long as you own the property. This includes post stability, gate function, proper fence alignment, hardware installation, and structural integrity of our installation work. The warranty is transferable if you sell the property, which can be a valuable selling point. It does not cover damage from accidents, severe weather events, or normal wear on materials (which are covered by manufacturer warranties). This warranty demonstrates our confidence in our installation quality and gives you long-term peace of mind. We respond promptly to any warranty claims and handle repairs quickly to minimize any impact on your operations.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Services Section -->
+<section style="max-width: 1200px; margin: 4rem auto; padding: 0 1.5rem;">
+  <h2 class="ofc-section-heading">Explore Our Other Services</h2>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+    <div style="padding: 2rem; background: var(--ofc-bg-light); border-radius: 8px; text-align: center;">
+      <h3 style="color: var(--ofc-primary); margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Residential Fencing</h3>
+      <p style="margin-bottom: 1.5rem; color: var(--ofc-text-dark);">Privacy fences, cedar, vinyl, and chain-link for homeowners across North Shore MA.</p>
+      <a href="https://olympicfencema.com/residential-projects/" style="color: var(--ofc-primary); text-decoration: none; font-weight: 600;">Learn More →</a>
+    </div>
+    
+    <div style="padding: 2rem; background: var(--ofc-bg-light); border-radius: 8px; text-align: center;">
+      <h3 style="color: var(--ofc-primary); margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Specialized Services</h3>
+      <p style="margin-bottom: 1.5rem; color: var(--ofc-text-dark);">Coring, bollards, parking lot signage, and indoor safety systems.</p>
+      <a href="https://olympicfencema.com/commercial-services/" style="color: var(--ofc-primary); text-decoration: none; font-weight: 600;">View Services →</a>
+    </div>
+    
+    <div style="padding: 2rem; background: var(--ofc-bg-light); border-radius: 8px; text-align: center;">
+      <h3 style="color: var(--ofc-primary); margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600;">Dog Fencing</h3>
+      <p style="margin-bottom: 1.5rem; color: var(--ofc-text-dark);">Secure enclosures for commercial kennels, veterinary clinics, and pet facilities.</p>
+      <a href="https://olympicfencema.com/dog-fencing/" style="color: var(--ofc-primary); text-decoration: none; font-weight: 600;">Explore Options →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section - Solid dark brand color -->
+<section class="ofc-cta-section">
+  <h2>Ready to Secure Your Commercial Property?</h2>
+  <p>Get a free on-site consultation and detailed proposal from North Shore Massachusetts's most trusted commercial fence contractor.</p>
+  
+  <div class="ofc-cta-buttons">
+    <a href="https://olympicfencema.com/contact-us/" class="ofc-btn-primary">Get Your Free Estimate</a>
+    <a href="tel:978-997-2302" class="ofc-btn-secondary">Call (978) 997-2302</a>
+  </div>
+  
+  <p style="margin-top: 2rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.9);">Same-day response guaranteed • Licensed & insured • Lifetime workmanship warranty</p>
+</section>
+
+<!-- FAQ Accordion JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const faqQuestions = document.querySelectorAll('.ofc-faq-question');
+  
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', function() {
+      const answer = this.nextElementSibling;
+      const isActive = this.classList.contains('active');
+      
+      // Close all other FAQs
+      faqQuestions.forEach(q => {
+        q.classList.remove('active');
+        q.nextElementSibling.style.maxHeight = null;
+      });
+      
+      // Toggle current FAQ
+      if (!isActive) {
+        this.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+});
+</script>
+
+<!-- Schema Markup for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Commercial Fence Installation",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Olympic Fence Company",
+    "image": "https://olympicfencema.com/wp-content/uploads/2025/09/Olympic-new-square-logo-white.webp",
+    "telephone": "978-997-2302",
+    "email": "jlapierre@olympicfencema.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "81 Garden Street",
+      "addressLocality": "West Newbury",
+      "addressRegion": "MA",
+      "postalCode": "01985",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.8034,
+      "longitude": -70.9617
+    },
+    "priceRange": "$$",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Newburyport"
+      },
+      {
+        "@type": "City",
+        "name": "Amesbury"
+      },
+      {
+        "@type": "City",
+        "name": "Haverhill"
+      },
+      {
+        "@type": "City",
+        "name": "Salisbury"
+      },
+      {
+        "@type": "City",
+        "name": "North Andover"
+      },
+      {
+        "@type": "City",
+        "name": "Beverly"
+      },
+      {
+        "@type": "City",
+        "name": "Groveland"
+      }
+    ]
+  },
+  "description": "Professional commercial fence installation for businesses, municipalities, and industrial properties across North Shore Massachusetts. Lifetime workmanship warranty, 40+ years experience.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Commercial Fencing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Industrial Security Fencing",
+          "description": "Heavy-duty perimeter protection for warehouses and manufacturing facilities"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Municipal Property Fencing",
+          "description": "Compliant installations for parks, schools, and public facilities"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Business Property Fencing",
+          "description": "Professional perimeter solutions for office complexes and retail properties"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does commercial fence installation cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Commercial fence costs vary based on fence type, height, linear footage, site conditions, and security requirements. Chain-link offers cost-effective solutions for large perimeters, while ornamental steel provides premium aesthetics. Massachusetts installation costs run 15-25% higher than national averages. We provide detailed, transparent quotes with options to fit different budgets. Contact us for a free consultation and written estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle permits for commercial projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we handle all permit applications and approvals as part of our service. We're familiar with permit requirements across all North Shore MA communities and work directly with local building departments to ensure compliance. This service is included in our proposal at no additional charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the typical timeline for commercial fence installation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most commercial installations follow this pattern: consultation and quote (1-3 days), permit approval (2-4 weeks), and installation (3-10 days depending on scope). Our current lead time for non-emergency commercial projects is typically 4-6 weeks from signed proposal to completion. We provide clear timeline estimates and communicate proactively about any changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you work around our business hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We can schedule installation during off-hours, weekends, or in phases to minimize disruption. For retail properties, we often work early mornings or after closing. We coordinate around your business needs to keep operations running smoothly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What fence height is best for commercial security?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For general commercial security, 6-foot chain-link is the standard minimum. High-security applications often require 8-10 feet, sometimes with barbed wire or anti-climb features. Massachusetts regulations typically limit commercial heights to 10-12 feet without special approval. We assess your specific needs and recommend appropriate heights balancing effectiveness with compliance."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Olympic Fence Company",
+  "image": "https://olympicfencema.com/wp-content/uploads/2025/09/Olympic-new-square-logo-white.webp",
+  "telephone": "978-997-2302",
+  "email": "jlapierre@olympicfencema.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "81 Garden Street",
+    "addressLocality": "West Newbury",
+    "addressRegion": "MA",
+    "postalCode": "01985",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.8034,
+    "longitude": -70.9617
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Eric T."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "James was a true professional. He was always on time, transparent in time line and pricing. He was easy to work with and if you are looking for a fence you should look no further. The work was done really well and his crew kept the site clean as possible."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Colleen M."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Highly recommend Olympic Fence Co!! Had a chain link fence installed at my child care center and I couldn't be happier. From start to finish I was pleased with everything. Will definitely be calling Olympic Fence for my next project!!"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Angela O."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "We can't say enough about this companies professionalism, quality of work and materials. James answered all our questions and concerns and offered some very good solutions in a budget we could work with. His team could not have been more respectful of our property and left our yard in pristine condition."
+    }
+  ]
+}
+</script>
