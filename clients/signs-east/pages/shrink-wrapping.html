@@ -1,0 +1,1229 @@
+<!--
+  Signs East - Boat Shrink Wrapping Page
+  Built: January 2026
+  
+  IMPLEMENTATION NOTES:
+  - These sections go BELOW the existing Elementor hero (H1/H2)
+  - Keep existing footer
+  - H1 in Elementor: "Boat Shrink Wrapping"
+  - H2 in Elementor: "Professional Winter Protection for NH & MA Boat Owners"
+  
+  SECTION ORDER:
+  1. Intro (white bg) - what shrink wrapping is, why it matters
+  2. What We Protect (gray bg) - boats, equipment, outdoor items
+  3. Why Shrink Wrap (white bg) - benefits over tarps/covers
+  4. Our Process (gray bg) - how it works
+  5. FAQ (white bg) - seasonal timing, pricing, etc.
+  6. Final CTA (dark bg)
+-->
+
+<!-- ============================================================
+     SECTION 1: INTRO
+     Background: White | Purpose: Explain service, establish value
+     ============================================================ -->
+
+<style>
+.se-wrap-intro {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-wrap-intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.se-wrap-intro-container h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  line-height: 1.2;
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+.se-wrap-intro-container p {
+  font-size: 17px;
+  color: #333333;
+  line-height: 1.7;
+  margin: 0 0 20px 0;
+}
+
+.se-wrap-intro-container p:last-of-type {
+  margin-bottom: 30px;
+}
+
+.se-wrap-intro-container a.inline-link {
+  color: #C61C1C;
+  text-decoration: none;
+  border-bottom: 1px solid #C61C1C;
+}
+
+.se-wrap-intro-container a.inline-link:hover {
+  color: #a51717;
+  border-color: #a51717;
+}
+
+.se-wrap-intro-cta {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.se-wrap-intro-cta:hover {
+  background-color: #a51717;
+  color: #FFFFFF;
+}
+
+/* Season callout */
+.se-wrap-season {
+  background-color: #E3F2FD;
+  border-left: 4px solid #1976D2;
+  padding: 20px 25px;
+  margin: 30px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.se-wrap-season p {
+  margin: 0;
+  font-size: 16px;
+  color: #0D47A1;
+}
+
+.se-wrap-season strong {
+  color: #1565C0;
+}
+
+@media (max-width: 1024px) {
+  .se-wrap-intro-container h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-wrap-intro {
+    padding: 50px 20px;
+  }
+  .se-wrap-intro-container h2 {
+    font-size: 28px;
+  }
+  .se-wrap-intro-container p {
+    font-size: 16px;
+  }
+  .se-wrap-season {
+    padding: 15px 20px;
+  }
+  .se-wrap-season p {
+    font-size: 15px;
+  }
+}
+</style>
+
+<section class="se-wrap-intro">
+  <div class="se-wrap-intro-container">
+    <h2>Keep Your Boat Protected Through New England Winters</h2>
+    <p>Shrink wrapping creates a tight, weatherproof barrier around your boat that protects against snow, ice, rain, UV damage, and debris. Unlike tarps that flap in the wind and collect water, shrink wrap forms a custom-fit seal that stays put all winter.</p>
+    <p>We serve boat owners throughout the North Shore of Massachusetts and Southern New Hampshire - from small fishing boats to large cruisers. Whether your boat is on a trailer in your driveway or stored at a marina, we come to you.</p>
+    
+    <div class="se-wrap-season">
+      <p><strong>Seasonal Service:</strong> Shrink wrapping season typically runs from late September through early December. Book early - fall schedules fill up fast, especially in October and November.</p>
+    </div>
+    
+    <p>Already have <a href="/boat-graphics-wraps/" class="inline-link">boat graphics</a> or lettering? No problem - we wrap over existing graphics without damage. And when spring comes, the wrap removes cleanly.</p>
+    <a href="/contact-us/" class="se-wrap-intro-cta">Get a Shrink Wrap Quote</a>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 2: WHAT WE PROTECT
+     Background: Gray | Features: 3 service cards
+     ============================================================ -->
+
+<style>
+.se-wrap-services {
+  background-color: #F5F5F5;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-wrap-services-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.se-wrap-services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-wrap-services-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-wrap-services-header p {
+  font-size: 17px;
+  color: #555555;
+  margin: 0;
+}
+
+.se-wrap-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.se-wrap-service-card {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 35px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.se-wrap-service-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #C61C1C;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.se-wrap-service-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #FFFFFF;
+}
+
+.se-wrap-service-card h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 12px 0;
+}
+
+.se-wrap-service-card p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .se-wrap-services-header h2 {
+    font-size: 32px;
+  }
+  .se-wrap-service-card {
+    padding: 30px 25px;
+  }
+  .se-wrap-service-card h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-wrap-services {
+    padding: 50px 20px;
+  }
+  .se-wrap-services-header {
+    margin-bottom: 35px;
+  }
+  .se-wrap-services-header h2 {
+    font-size: 28px;
+  }
+  .se-wrap-services-header p {
+    font-size: 16px;
+  }
+  .se-wrap-services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .se-wrap-service-card {
+    padding: 28px 24px;
+  }
+  .se-wrap-service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+  }
+  .se-wrap-service-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  .se-wrap-service-card h3 {
+    font-size: 20px;
+  }
+}
+</style>
+
+<section class="se-wrap-services">
+  <div class="se-wrap-services-container">
+    
+    <div class="se-wrap-services-header">
+      <h2>What We Shrink Wrap</h2>
+      <p>Boats are our primary focus, but we protect other outdoor equipment too.</p>
+    </div>
+    
+    <div class="se-wrap-services-grid">
+      
+      <!-- Card 1: Boats -->
+      <div class="se-wrap-service-card">
+        <div class="se-wrap-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.5L20 10.62V6c0-1.1-.9-2-2-2h-3V1H9v3H6c-1.1 0-2 .9-2 2v4.62l-1.29.42c-.26.08-.48.26-.6.5s-.15.52-.06.78L3.95 19zM6 6h12v3.97L12 8 6 9.97V6z"/></svg>
+        </div>
+        <h3>Boats & Watercraft</h3>
+        <p>Powerboats, sailboats, fishing boats, pontoons, jet skis, and kayaks. From 12-foot dinghies to 40+ foot cruisers. On trailers, on lifts, or on stands - we come to your location.</p>
+      </div>
+      
+      <!-- Card 2: Outdoor Equipment -->
+      <div class="se-wrap-service-card">
+        <div class="se-wrap-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+        </div>
+        <h3>Outdoor Equipment</h3>
+        <p>Patio furniture sets, grills, outdoor kitchens, generators, and lawn equipment. If it lives outside and needs winter protection, we can wrap it.</p>
+      </div>
+      
+      <!-- Card 3: Commercial/Industrial -->
+      <div class="se-wrap-service-card">
+        <div class="se-wrap-service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"/></svg>
+        </div>
+        <h3>Commercial & Industrial</h3>
+        <p>Palletized goods, machinery, construction materials, and equipment awaiting installation. Industrial-grade protection for items that need to stay dry and protected on job sites.</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 3: WHY SHRINK WRAP
+     Background: White | Features: Benefits vs tarps/covers
+     ============================================================ -->
+
+<style>
+.se-wrap-benefits {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-wrap-benefits-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.se-wrap-benefits-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-wrap-benefits-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-wrap-benefits-header p {
+  font-size: 17px;
+  color: #555555;
+  margin: 0;
+}
+
+.se-wrap-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.se-wrap-benefit-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.se-wrap-benefit-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-color: #C61C1C;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.se-wrap-benefit-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #FFFFFF;
+}
+
+.se-wrap-benefit-content h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 6px 0;
+}
+
+.se-wrap-benefit-content p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .se-wrap-benefits-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-wrap-benefits {
+    padding: 50px 20px;
+  }
+  .se-wrap-benefits-header {
+    margin-bottom: 35px;
+  }
+  .se-wrap-benefits-header h2 {
+    font-size: 28px;
+  }
+  .se-wrap-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .se-wrap-benefit-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+  .se-wrap-benefit-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .se-wrap-benefit-content h3 {
+    font-size: 17px;
+  }
+  .se-wrap-benefit-content p {
+    font-size: 14px;
+  }
+}
+</style>
+
+<section class="se-wrap-benefits">
+  <div class="se-wrap-benefits-container">
+    
+    <div class="se-wrap-benefits-header">
+      <h2>Why Shrink Wrap Instead of a Tarp?</h2>
+      <p>Tarps are cheap. They're also terrible. Here's why shrink wrap is worth it.</p>
+    </div>
+    
+    <div class="se-wrap-benefits-grid">
+      
+      <div class="se-wrap-benefit-item">
+        <div class="se-wrap-benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/></svg>
+        </div>
+        <div class="se-wrap-benefit-content">
+          <h3>Custom Fit</h3>
+          <p>Shrink wrap conforms to your boat's exact shape. No flapping, no pooling water, no gaps where snow and debris get in.</p>
+        </div>
+      </div>
+      
+      <div class="se-wrap-benefit-item">
+        <div class="se-wrap-benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/></svg>
+        </div>
+        <div class="se-wrap-benefit-content">
+          <h3>Weatherproof Seal</h3>
+          <p>Heat-sealed seams create a watertight barrier. Rain, snow, and ice stay out - completely.</p>
+        </div>
+      </div>
+      
+      <div class="se-wrap-benefit-item">
+        <div class="se-wrap-benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/></svg>
+        </div>
+        <div class="se-wrap-benefit-content">
+          <h3>UV Protection</h3>
+          <p>Our shrink wrap blocks harmful UV rays that fade gelcoat, crack vinyl, and degrade rubber seals.</p>
+        </div>
+      </div>
+      
+      <div class="se-wrap-benefit-item">
+        <div class="se-wrap-benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/></svg>
+        </div>
+        <div class="se-wrap-benefit-content">
+          <h3>Wind Resistant</h3>
+          <p>Once shrunk, it stays put. No straps to tighten, no corners coming loose, no midnight emergencies.</p>
+        </div>
+      </div>
+      
+      <div class="se-wrap-benefit-item">
+        <div class="se-wrap-benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/></svg>
+        </div>
+        <div class="se-wrap-benefit-content">
+          <h3>Prevents Mold & Mildew</h3>
+          <p>Ventilation openings allow airflow while keeping moisture out. Your boat stays dry inside, not damp.</p>
+        </div>
+      </div>
+      
+      <div class="se-wrap-benefit-item">
+        <div class="se-wrap-benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/></svg>
+        </div>
+        <div class="se-wrap-benefit-content">
+          <h3>Pest Protection</h3>
+          <p>Sealed wrap keeps out mice, squirrels, birds, and insects that love to nest in stored boats.</p>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 4: OUR PROCESS
+     Background: Gray | Features: How shrink wrapping works
+     ============================================================ -->
+
+<style>
+.se-wrap-process {
+  background-color: #F5F5F5;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-wrap-process-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.se-wrap-process-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-wrap-process-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-wrap-process-header p {
+  font-size: 17px;
+  color: #555555;
+  margin: 0;
+}
+
+.se-wrap-process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.se-wrap-process-step {
+  display: flex;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.se-wrap-process-step:last-child {
+  border-bottom: none;
+}
+
+.se-wrap-process-number {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Baskervville', serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.se-wrap-process-content h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 10px 0;
+}
+
+.se-wrap-process-content p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .se-wrap-process-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-wrap-process {
+    padding: 50px 20px;
+  }
+  .se-wrap-process-header {
+    margin-bottom: 35px;
+  }
+  .se-wrap-process-header h2 {
+    font-size: 28px;
+  }
+  .se-wrap-process-step {
+    gap: 20px;
+    padding: 25px 0;
+  }
+  .se-wrap-process-number {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 18px;
+  }
+  .se-wrap-process-content h3 {
+    font-size: 19px;
+  }
+  .se-wrap-process-content p {
+    font-size: 15px;
+  }
+}
+</style>
+
+<section class="se-wrap-process">
+  <div class="se-wrap-process-container">
+    
+    <div class="se-wrap-process-header">
+      <h2>How It Works</h2>
+      <p>We come to you - your driveway, marina, or storage yard.</p>
+    </div>
+    
+    <div class="se-wrap-process-steps">
+      
+      <div class="se-wrap-process-step">
+        <div class="se-wrap-process-number">1</div>
+        <div class="se-wrap-process-content">
+          <h3>Schedule & Prep</h3>
+          <p>Call or email us with your boat details (length, type, location). We'll schedule a time that works for you. Before we arrive, remove loose items and make sure the boat is accessible.</p>
+        </div>
+      </div>
+      
+      <div class="se-wrap-process-step">
+        <div class="se-wrap-process-number">2</div>
+        <div class="se-wrap-process-content">
+          <h3>Frame Installation</h3>
+          <p>We build a lightweight support frame to prevent water pooling and snow accumulation. The frame creates a peaked structure that sheds precipitation instead of collecting it.</p>
+        </div>
+      </div>
+      
+      <div class="se-wrap-process-step">
+        <div class="se-wrap-process-number">3</div>
+        <div class="se-wrap-process-content">
+          <h3>Wrap & Heat Shrink</h3>
+          <p>We cover your boat with industrial-grade shrink wrap, then heat it with propane torches to shrink the material tight. All seams are heat-welded for a complete seal.</p>
+        </div>
+      </div>
+      
+      <div class="se-wrap-process-step">
+        <div class="se-wrap-process-number">4</div>
+        <div class="se-wrap-process-content">
+          <h3>Ventilation & Access</h3>
+          <p>We install ventilation openings to prevent moisture buildup inside. If needed, we can add a zipper door for winter access. Your boat is now protected until spring.</p>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 5: FAQ
+     Background: White | Features: Shrink wrapping questions
+     ============================================================ -->
+
+<style>
+.se-wrap-faq {
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-wrap-faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.se-wrap-faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-wrap-faq-header h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #191919;
+  margin: 0 0 15px 0;
+}
+
+.se-wrap-faq-header p {
+  font-size: 17px;
+  color: #555555;
+  margin: 0;
+}
+
+.se-wrap-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.se-wrap-faq-item {
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.se-wrap-faq-question {
+  width: 100%;
+  padding: 22px 25px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #191919;
+  transition: color 0.2s ease;
+}
+
+.se-wrap-faq-question:hover {
+  color: #C61C1C;
+}
+
+.se-wrap-faq-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.se-wrap-faq-icon::before,
+.se-wrap-faq-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #C61C1C;
+  transition: transform 0.3s ease;
+}
+
+.se-wrap-faq-icon::before {
+  width: 14px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-wrap-faq-icon::after {
+  width: 2px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-wrap-faq-item.active .se-wrap-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-wrap-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-wrap-faq-answer-inner {
+  padding: 0 25px 22px 25px;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.7;
+}
+
+.se-wrap-faq-answer-inner a {
+  color: #C61C1C;
+  text-decoration: none;
+  border-bottom: 1px solid #C61C1C;
+}
+
+.se-wrap-faq-answer-inner a:hover {
+  color: #a51717;
+  border-color: #a51717;
+}
+
+.se-wrap-faq-item.active .se-wrap-faq-answer {
+  max-height: 350px;
+}
+
+@media (max-width: 1024px) {
+  .se-wrap-faq-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-wrap-faq {
+    padding: 50px 20px;
+  }
+  .se-wrap-faq-header {
+    margin-bottom: 35px;
+  }
+  .se-wrap-faq-header h2 {
+    font-size: 28px;
+  }
+  .se-wrap-faq-header p {
+    font-size: 16px;
+  }
+  .se-wrap-faq-question {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
+  .se-wrap-faq-answer-inner {
+    padding: 0 20px 18px 20px;
+    font-size: 15px;
+  }
+}
+</style>
+
+<section class="se-wrap-faq">
+  <div class="se-wrap-faq-container">
+    
+    <div class="se-wrap-faq-header">
+      <h2>Shrink Wrapping Questions</h2>
+      <p>What boat owners ask us most often.</p>
+    </div>
+    
+    <div class="se-wrap-faq-list">
+      
+      <div class="se-wrap-faq-item">
+        <button class="se-wrap-faq-question" aria-expanded="false">
+          How much does boat shrink wrapping cost?
+          <span class="se-wrap-faq-icon"></span>
+        </button>
+        <div class="se-wrap-faq-answer">
+          <div class="se-wrap-faq-answer-inner">
+            Pricing is based on boat length. Most boats in the 18-26 foot range run $12-15 per foot. Larger boats or those with complex shapes (tall towers, flybridge, etc.) may cost more. We provide exact quotes before scheduling. There's typically a minimum charge around $250-300 for smaller boats.
+          </div>
+        </div>
+      </div>
+      
+      <div class="se-wrap-faq-item">
+        <button class="se-wrap-faq-question" aria-expanded="false">
+          When should I schedule shrink wrapping?
+          <span class="se-wrap-faq-icon"></span>
+        </button>
+        <div class="se-wrap-faq-answer">
+          <div class="se-wrap-faq-answer-inner">
+            Peak season is October through early December. We recommend booking in September or early October to secure your spot. If you wait until November, schedules get tight. We can wrap boats through December if weather permits, but earlier is better.
+          </div>
+        </div>
+      </div>
+      
+      <div class="se-wrap-faq-item">
+        <button class="se-wrap-faq-question" aria-expanded="false">
+          Will shrink wrap damage my boat graphics?
+          <span class="se-wrap-faq-icon"></span>
+        </button>
+        <div class="se-wrap-faq-answer">
+          <div class="se-wrap-faq-answer-inner">
+            No - we use heat carefully and keep the flame moving. Properly applied shrink wrap won't damage gelcoat, vinyl graphics, or painted surfaces. We do this every year on boats with registration numbers, names, and full graphics without issues.
+          </div>
+        </div>
+      </div>
+      
+      <div class="se-wrap-faq-item">
+        <button class="se-wrap-faq-question" aria-expanded="false">
+          Can I access my boat during winter?
+          <span class="se-wrap-faq-icon"></span>
+        </button>
+        <div class="se-wrap-faq-answer">
+          <div class="se-wrap-faq-answer-inner">
+            Yes - we can install a zipper door that lets you enter and exit while keeping the wrap sealed. This is useful if you need to check on the boat, run the engine occasionally, or retrieve items. Let us know when scheduling if you need access.
+          </div>
+        </div>
+      </div>
+      
+      <div class="se-wrap-faq-item">
+        <button class="se-wrap-faq-question" aria-expanded="false">
+          How do I remove the shrink wrap in spring?
+          <span class="se-wrap-faq-icon"></span>
+        </button>
+        <div class="se-wrap-faq-answer">
+          <div class="se-wrap-faq-answer-inner">
+            Most people cut it off themselves with a utility knife - it comes off easily. Cut along the top, peel it down the sides, and dispose of it. The wrap is recyclable at many locations. If you'd rather not deal with it, we can remove it for an additional fee.
+          </div>
+        </div>
+      </div>
+      
+      <div class="se-wrap-faq-item">
+        <button class="se-wrap-faq-question" aria-expanded="false">
+          Do you come to marinas?
+          <span class="se-wrap-faq-icon"></span>
+        </button>
+        <div class="se-wrap-faq-answer">
+          <div class="se-wrap-faq-answer-inner">
+            Yes - we wrap boats at marinas, boatyards, storage facilities, and private residences throughout the North Shore and Southern NH. Some marinas have their own shrink wrap services or preferred vendors, so check with your marina first.
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.se-wrap-faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    const isActive = item.classList.contains('active');
+    
+    // Close all items
+    document.querySelectorAll('.se-wrap-faq-item').forEach(i => {
+      i.classList.remove('active');
+      i.querySelector('.se-wrap-faq-question').setAttribute('aria-expanded', 'false');
+    });
+    
+    // Open clicked item if it wasn't already open
+    if (!isActive) {
+      item.classList.add('active');
+      button.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+
+
+<!-- ============================================================
+     SECTION 6: FINAL CTA
+     Background: Dark solid | Features: Dual CTAs
+     ============================================================ -->
+
+<style>
+.se-wrap-cta {
+  background-color: #191919;
+  padding: 100px 20px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.se-wrap-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.se-wrap-cta-container h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+}
+
+.se-wrap-cta-container .lead-text {
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 35px 0;
+  line-height: 1.5;
+}
+
+.se-wrap-cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.se-wrap-cta-primary {
+  display: inline-block;
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.se-wrap-cta-primary:hover {
+  background-color: #a51717;
+  color: #FFFFFF;
+}
+
+.se-wrap-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 30px;
+  border: 2px solid #FFFFFF;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.se-wrap-cta-secondary:hover {
+  background-color: #FFFFFF;
+  color: #191919;
+}
+
+.se-wrap-cta-secondary svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.se-wrap-cta-link {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.se-wrap-cta-link:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .se-wrap-cta-container h2 {
+    font-size: 36px;
+  }
+  .se-wrap-cta-container .lead-text {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 767px) {
+  .se-wrap-cta {
+    padding: 70px 20px;
+  }
+  .se-wrap-cta-container h2 {
+    font-size: 30px;
+  }
+  .se-wrap-cta-container .lead-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .se-wrap-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .se-wrap-cta-primary,
+  .se-wrap-cta-secondary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 14px 30px;
+  }
+}
+</style>
+
+<section class="se-wrap-cta">
+  <div class="se-wrap-cta-container">
+    
+    <h2>Ready to Protect Your Boat?</h2>
+    <p class="lead-text">Tell us about your boat and location. We'll get you a quote and schedule your wrap.</p>
+    
+    <div class="se-wrap-cta-buttons">
+      <a href="/contact-us/" class="se-wrap-cta-primary">Get Your Free Quote</a>
+      <a href="tel:+19782732992" class="se-wrap-cta-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        (978) 273-2992
+      </a>
+    </div>
+    
+    <a href="/boat-graphics-wraps/" class="se-wrap-cta-link">Need Boat Graphics Too? →</a>
+    
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SERVICE SCHEMA MARKUP
+     For search engine rich results
+     ============================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Boat Shrink Wrapping",
+  "name": "Boat Shrink Wrapping Services",
+  "description": "Professional boat shrink wrapping for winter storage protection. Serving North Shore Massachusetts and Southern New Hampshire boat owners. Mobile service - we come to your location.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Signs East LLC",
+    "image": "https://signseast.com/wp-content/uploads/2025/10/signseast-logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "34 NH-125",
+      "addressLocality": "Kingston",
+      "addressRegion": "NH",
+      "postalCode": "03848",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-978-273-2992",
+    "url": "https://signseast.com",
+    "priceRange": "$$"
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "North Shore Massachusetts"
+    },
+    {
+      "@type": "AdministrativeArea", 
+      "name": "Southern New Hampshire"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Shrink Wrapping Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Boat Shrink Wrapping"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Outdoor Equipment Wrapping"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Commercial/Industrial Wrapping"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does boat shrink wrapping cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing is based on boat length. Most boats in the 18-26 foot range run $12-15 per foot. Larger boats or those with complex shapes may cost more. There's typically a minimum charge around $250-300 for smaller boats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I schedule shrink wrapping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Peak season is October through early December. We recommend booking in September or early October to secure your spot. If you wait until November, schedules get tight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will shrink wrap damage my boat graphics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No - we use heat carefully and keep the flame moving. Properly applied shrink wrap won't damage gelcoat, vinyl graphics, or painted surfaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I access my boat during winter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes - we can install a zipper door that lets you enter and exit while keeping the wrap sealed. This is useful if you need to check on the boat, run the engine occasionally, or retrieve items."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I remove the shrink wrap in spring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most people cut it off themselves with a utility knife - it comes off easily. Cut along the top, peel it down the sides, and dispose of it. The wrap is recyclable at many locations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you come to marinas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes - we wrap boats at marinas, boatyards, storage facilities, and private residences throughout the North Shore and Southern NH."
+      }
+    }
+  ]
+}
+</script>
