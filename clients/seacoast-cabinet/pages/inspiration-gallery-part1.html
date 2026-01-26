@@ -1,0 +1,970 @@
+<style>
+    /* =====================================================
+       CSS CUSTOM PROPERTIES - Brand Design System
+       ===================================================== */
+    :root {
+        /* Brand Colors */
+        --coastal-blue: #7d99ad;
+        --coastal-blue-dark: #5a7a8f;
+        --coastal-blue-light: #a8bcc9;
+        --warm-gold: #b8905f;
+        --warm-gold-dark: #a07a4f;
+        --warm-gold-light: #d4b896;
+        --deep-charcoal: #2c3e50;
+        --pure-white: #ffffff;
+        --light-gray: #f8f9fa;
+        --medium-gray: #6c757d;
+        --warm-beige: #f5f2ed;
+        --success-green: #5cb85c;
+
+        /* Typography */
+        --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+        /* Spacing Scale */
+        --space-xs: 0.5rem;
+        --space-sm: 1rem;
+        --space-md: 1.5rem;
+        --space-lg: 2rem;
+        --space-xl: 3rem;
+        --space-2xl: 4rem;
+        --space-3xl: 6rem;
+        --space-4xl: 8rem;
+
+        /* Container Widths */
+        --container-sm: 640px;
+        --container-md: 768px;
+        --container-lg: 1024px;
+        --container-xl: 1280px;
+        --container-2xl: 1536px;
+        --container-full: 1800px;
+
+        /* Border Radius */
+        --radius-sm: 4px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+        --radius-xl: 16px;
+
+        /* Shadows */
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+        --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+        --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+        --shadow-xl: 0 12px 40px rgba(0,0,0,0.15);
+        --shadow-gold: 0 8px 24px rgba(184, 144, 95, 0.35);
+
+        /* Transitions */
+        --transition-fast: 0.15s ease;
+        --transition-base: 0.3s ease;
+        --transition-slow: 0.5s ease;
+    }
+
+    /* =====================================================
+       GALLERY BASE STYLES
+       ===================================================== */
+    .gallery-page-wrapper {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--deep-charcoal);
+        line-height: 1.6;
+    }
+
+    .gallery-page-wrapper img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .gallery-page-wrapper a {
+        color: inherit;
+        text-decoration: none;
+        transition: color var(--transition-fast);
+    }
+
+    /* =====================================================
+       TYPOGRAPHY
+       ===================================================== */
+    .gallery-page-wrapper h1, 
+    .gallery-page-wrapper h2, 
+    .gallery-page-wrapper h3, 
+    .gallery-page-wrapper h4, 
+    .gallery-page-wrapper h5, 
+    .gallery-page-wrapper h6 {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: var(--space-md);
+        color: var(--coastal-blue);
+    }
+
+    .gallery-page-wrapper h2 {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+    }
+
+    .gallery-page-wrapper h3 {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        color: var(--deep-charcoal);
+    }
+
+    .gallery-page-wrapper h4 {
+        font-size: clamp(1.1rem, 2vw, 1.25rem);
+        color: var(--deep-charcoal);
+    }
+
+    .gallery-page-wrapper p {
+        margin-bottom: var(--space-md);
+    }
+
+    /* =====================================================
+       LAYOUT CONTAINERS
+       ===================================================== */
+    .gallery-container {
+        width: 100%;
+        max-width: var(--container-xl);
+        margin: 0 auto;
+        padding: 0 var(--space-md);
+    }
+
+    .gallery-container-wide {
+        width: 100%;
+        max-width: var(--container-full);
+        margin: 0 auto;
+        padding: 0 var(--space-md);
+    }
+
+    @media (min-width: 1024px) {
+        .gallery-container,
+        .gallery-container-wide {
+            padding: 0 var(--space-xl);
+        }
+    }
+
+    @media (min-width: 1536px) {
+        .gallery-container,
+        .gallery-container-wide {
+            padding: 0 var(--space-2xl);
+        }
+    }
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+    .gallery-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: var(--radius-md);
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all var(--transition-base);
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .gallery-btn-primary {
+        background-color: var(--warm-gold);
+        color: var(--pure-white);
+        box-shadow: var(--shadow-md);
+    }
+
+    .gallery-btn-primary:hover {
+        background-color: var(--warm-gold-dark);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-gold);
+    }
+
+    .gallery-btn-primary:active {
+        transform: translateY(-1px);
+    }
+
+    .gallery-btn-white {
+        background-color: var(--warm-gold);
+        color: var(--pure-white);
+        box-shadow: var(--shadow-md);
+    }
+
+    .gallery-btn-white:hover {
+        background-color: var(--warm-gold-dark);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-gold);
+    }
+
+    .gallery-btn-group {
+        display: flex;
+        gap: var(--space-md);
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 640px) {
+        .gallery-btn {
+            width: 100%;
+            padding: 0.875rem 1.5rem;
+        }
+
+        .gallery-btn-group {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    /* =====================================================
+       INTRODUCTION SECTION
+       ===================================================== */
+    .gallery-intro-section {
+        padding: var(--space-3xl) 0;
+        background-color: var(--warm-beige);
+        position: relative;
+    }
+
+    .gallery-intro-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--coastal-blue), var(--warm-gold));
+    }
+
+    .gallery-intro-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .gallery-intro-content h2 {
+        margin-bottom: var(--space-lg);
+    }
+
+    .gallery-intro-content p {
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.8;
+        color: var(--deep-charcoal);
+    }
+
+    .gallery-intro-content a {
+        color: var(--coastal-blue);
+        font-weight: 600;
+        border-bottom: 2px solid transparent;
+        transition: border-color var(--transition-fast);
+    }
+
+    .gallery-intro-content a:hover {
+        border-bottom-color: var(--coastal-blue);
+    }
+
+    /* Trust Indicators */
+    .gallery-trust-indicators {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--space-md);
+        margin-top: var(--space-xl);
+        padding: var(--space-lg);
+        background-color: var(--pure-white);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+    }
+
+    .gallery-trust-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-sm);
+        padding: var(--space-sm);
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--coastal-blue);
+        text-align: center;
+    }
+
+    .gallery-trust-badge::before {
+        content: '✓';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        background-color: var(--success-green);
+        color: var(--pure-white);
+        border-radius: 50%;
+        font-size: 0.875rem;
+        font-weight: 700;
+    }
+
+    .gallery-trust-badge a {
+        color: var(--coastal-blue);
+    }
+
+    .gallery-intro-cta {
+        margin-top: var(--space-xl);
+    }
+
+    .gallery-intro-cta .gallery-btn-primary {
+        color: var(--pure-white);
+    }
+
+    /* =====================================================
+       GALLERY SECTIONS
+       ===================================================== */
+    .gallery-section {
+        padding: var(--space-3xl) 0;
+    }
+
+    .gallery-section-white {
+        background-color: var(--pure-white);
+    }
+
+    .gallery-section-gray {
+        background-color: var(--light-gray);
+    }
+
+    .gallery-section-header {
+        text-align: center;
+        margin-bottom: var(--space-xl);
+    }
+
+    .gallery-section-intro {
+        max-width: 1000px;
+        margin: 0 auto var(--space-xl);
+        text-align: center;
+        font-size: clamp(1rem, 2vw, 1.1rem);
+        line-height: 1.8;
+    }
+
+    .gallery-section-intro a {
+        color: var(--coastal-blue);
+        font-weight: 600;
+        border-bottom: 2px solid transparent;
+        transition: border-color var(--transition-fast);
+    }
+
+    .gallery-section-intro a:hover {
+        border-bottom-color: var(--coastal-blue);
+    }
+
+    /* Featured Elements Box */
+    .gallery-featured-elements {
+        max-width: 900px;
+        margin: 0 auto var(--space-xl);
+        background-color: var(--pure-white);
+        padding: var(--space-xl) var(--space-xl);
+        border-radius: var(--radius-lg);
+        border: none;
+        box-shadow: var(--shadow-md);
+        text-align: center;
+    }
+
+    .gallery-featured-elements h3 {
+        font-size: 1.15rem;
+        margin-bottom: var(--space-lg);
+        color: var(--coastal-blue);
+        text-align: center;
+    }
+
+    .gallery-featured-elements ul {
+        list-style: none;
+        display: inline-block;
+        text-align: left;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .gallery-featured-elements li {
+        padding: var(--space-xs) 0;
+        padding-left: 1.75rem;
+        position: relative;
+        font-size: 0.95rem;
+    }
+
+    .gallery-featured-elements li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: var(--warm-gold);
+        font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+        .gallery-featured-elements {
+            padding: var(--space-lg);
+        }
+    }
+
+    /* =====================================================
+       GALLERY GRID
+       ===================================================== */
+    .gallery-grid {
+        display: grid;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-xl);
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 640px) {
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .gallery-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+        }
+    }
+
+    @media (min-width: 1536px) {
+        .gallery-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .gallery-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 640px) {
+        .gallery-grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    /* Gallery Items */
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        background-color: var(--pure-white);
+        transition: all var(--transition-base);
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-xl);
+    }
+
+    .gallery-item-image {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 4/3;
+    }
+
+    .gallery-item-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-slow);
+    }
+
+    .gallery-item:hover .gallery-item-image img {
+        transform: scale(1.08);
+    }
+
+    .gallery-item-image::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(44, 62, 80, 0.4) 0%, transparent 50%);
+        opacity: 0;
+        transition: opacity var(--transition-base);
+    }
+
+    .gallery-item:hover .gallery-item-image::after {
+        opacity: 1;
+    }
+
+    .gallery-caption {
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .gallery-caption h4 {
+        font-size: 1.05rem;
+        margin-bottom: var(--space-xs);
+        color: var(--deep-charcoal);
+        transition: color var(--transition-fast);
+    }
+
+    .gallery-item:hover .gallery-caption h4 {
+        color: var(--coastal-blue);
+    }
+
+    .gallery-caption p {
+        font-size: 0.9rem;
+        color: var(--medium-gray);
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+
+    /* =====================================================
+       SECTION CTA
+       ===================================================== */
+    .gallery-section-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--space-md) var(--space-lg);
+        margin-top: var(--space-xl);
+    }
+
+    .gallery-cta-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+        color: var(--coastal-blue);
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all var(--transition-fast);
+    }
+
+    .gallery-cta-link:hover {
+        color: var(--warm-gold);
+        gap: var(--space-sm);
+    }
+
+    .gallery-cta-link::after {
+        content: '→';
+        transition: transform var(--transition-fast);
+    }
+
+    .gallery-cta-link:hover::after {
+        transform: translateX(4px);
+    }
+
+    @media (max-width: 640px) {
+        .gallery-section-cta {
+            flex-direction: column;
+        }
+    }
+
+    /* =====================================================
+       FINAL CTA SECTION
+       ===================================================== */
+    .gallery-final-cta {
+        padding: var(--space-3xl) 0;
+        background: linear-gradient(135deg, var(--coastal-blue) 0%, var(--coastal-blue-dark) 100%);
+        color: var(--pure-white);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-final-cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".1" fill="%23ffffff"/></svg>') no-repeat bottom;
+        background-size: cover;
+        opacity: 0.15;
+        pointer-events: none;
+    }
+
+    .gallery-final-cta-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .gallery-final-cta h2 {
+        color: var(--pure-white);
+        margin-bottom: var(--space-md);
+    }
+
+    .gallery-final-cta-text {
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.8;
+        margin-bottom: var(--space-xl);
+        opacity: 0.95;
+    }
+
+    .gallery-final-cta .gallery-btn-group {
+        margin-bottom: var(--space-xl);
+    }
+
+    .gallery-final-cta-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-xs);
+        font-size: 1.05rem;
+        text-align: center;
+    }
+
+    .gallery-final-cta-info strong {
+        color: var(--warm-gold-light);
+    }
+
+    /* =====================================================
+       MOBILE STICKY CTA
+       ===================================================== */
+    .gallery-sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--pure-white);
+        padding: var(--space-sm) var(--space-md);
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+        z-index: 1000;
+        display: none;
+        transform: translateY(100%);
+        transition: transform var(--transition-base);
+    }
+
+    .gallery-sticky-cta.visible {
+        transform: translateY(0);
+    }
+
+    .gallery-sticky-cta .gallery-btn {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .gallery-sticky-cta {
+            display: block;
+        }
+    }
+
+    /* =====================================================
+       ANIMATIONS
+       ===================================================== */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .gallery-item {
+        animation: fadeInUp 0.6s ease-out both;
+    }
+
+    .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+    .gallery-item:nth-child(2) { animation-delay: 0.2s; }
+    .gallery-item:nth-child(3) { animation-delay: 0.3s; }
+    .gallery-item:nth-child(4) { animation-delay: 0.4s; }
+
+    @media (prefers-reduced-motion: reduce) {
+        .gallery-item,
+        .gallery-item-image img,
+        .gallery-btn,
+        .gallery-cta-link {
+            animation: none;
+            transition: none;
+        }
+    }
+</style>
+
+<div class="gallery-page-wrapper">
+
+<!-- Introduction Section -->
+<section class="gallery-intro-section">
+    <div class="gallery-container">
+        <div class="gallery-intro-content">
+            <h2>Real Projects, Real Inspiration for Your Home</h2>
+            <p>
+                At Seacoast Cabinet, we've been transforming kitchens and bathrooms since 1998. This gallery showcases our favorite completed projects, featuring our three premium cabinet lines—Mantra, Homecrest, and Omega—along with stunning <a href="https://seacoastcabinetne.com/countertops/">countertops</a> and custom <a href="https://seacoastcabinetne.com/design-services/">design solutions</a>. Whether you're renovating a cozy Newburyport kitchen or designing an open-concept space in Portsmouth, you'll find ideas that inspire. Explore our <a href="https://seacoastcabinetne.com/virtual-design/">virtual design services</a> or use our <a href="https://seacoastcabinetne.com/budget-planner/">budget planner</a> to start planning your project today.
+            </p>
+
+            <div class="gallery-trust-indicators">
+                <div class="gallery-trust-badge">Best of Newburyport Winner</div>
+                <div class="gallery-trust-badge">NKBA Member</div>
+                <div class="gallery-trust-badge"><a href="https://seacoastcabinetne.com/our-team/">Family-Owned Since 1998</a></div>
+            </div>
+
+            <div class="gallery-intro-cta">
+                <a href="https://seacoastcabinetne.com/contact/" class="gallery-btn gallery-btn-primary">Start Your Project Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 1: Modern Kitchen Designs -->
+<section id="modern-kitchens" class="gallery-section gallery-section-white">
+    <div class="gallery-container-wide">
+        <div class="gallery-section-header">
+            <h2>Sleek & Contemporary Kitchen Transformations</h2>
+        </div>
+
+        <div class="gallery-section-intro">
+            <p>
+                Our modern kitchen designs blend clean lines, minimalist aesthetics, and maximum functionality. Featuring flat-panel slab doors, handleless cabinets, and contemporary finishes, these projects showcase how American-made cabinetry can create sophisticated, urban-inspired spaces. Notice the thoughtful storage solutions, <a href="https://seacoastcabinetne.com/countertops/">quartz countertops</a>, and integrated appliances that define modern kitchen luxury.
+            </p>
+        </div>
+
+        <div class="gallery-featured-elements">
+            <h3>Featured Design Elements</h3>
+            <ul>
+                <li>Slab cabinet doors with matte finishes</li>
+                <li>Two-tone color schemes (navy, charcoal, white)</li>
+                <li>Waterfall edge countertops</li>
+                <li>Under-cabinet LED lighting</li>
+                <li>Integrated smart storage solutions</li>
+            </ul>
+        </div>
+
+        <div class="gallery-grid">
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/5X5A8238-scaled.jpg"
+                         alt="Modern white and wood kitchen with sleek slab doors and contemporary design in North Shore MA"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Contemporary White & Wood Kitchen</h4>
+                    <p>Clean slab doors with natural wood accents and modern hardware</p>
+                </div>
+            </article>
+
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/5X5A8242-scaled.jpg"
+                         alt="Modern kitchen island with quartz countertops and minimalist design Massachusetts"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Modern Kitchen Island Design</h4>
+                    <p>Sleek island with quartz countertops and integrated seating</p>
+                </div>
+            </article>
+
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/Deondre-Seacoast-5-scaled.jpg"
+                         alt="Contemporary kitchen with open shelving and modern cabinetry North Shore MA"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Open Concept Modern Kitchen</h4>
+                    <p>Contemporary design with open shelving and clean lines</p>
+                </div>
+            </article>
+
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/dutton4-scaled.jpg"
+                         alt="Modern kitchen with two-tone cabinets and contemporary finishes New Hampshire"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Two-Tone Modern Kitchen</h4>
+                    <p>Sophisticated blend of contrasting cabinet colors and modern details</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="gallery-section-cta">
+            <a href="https://seacoastcabinetne.com/contact/" class="gallery-btn gallery-btn-primary">Love This Style? Design Your Modern Kitchen</a>
+            <a href="https://seacoastcabinetne.com/cabinets/" class="gallery-cta-link">View Cabinet Options</a>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Traditional Kitchen Elegance -->
+<section id="traditional-kitchens" class="gallery-section gallery-section-gray">
+    <div class="gallery-container-wide">
+        <div class="gallery-section-header">
+            <h2>Timeless Traditional Kitchen Designs</h2>
+        </div>
+
+        <div class="gallery-section-intro">
+            <p>
+                Classic never goes out of style. Our traditional kitchen designs feature rich wood tones, raised panel doors, and elegant details that create warm, inviting spaces for families to gather. These projects showcase the beauty of custom cabinetry with extensive finish options, paired with <a href="https://seacoastcabinetne.com/countertops/">granite and marble countertops</a> for lasting sophistication.
+            </p>
+        </div>
+
+        <div class="gallery-featured-elements">
+            <h3>Featured Design Elements</h3>
+            <ul>
+                <li>Raised panel cabinet doors</li>
+                <li>Crown molding and decorative trim</li>
+                <li>Classic hardware (knobs and pulls)</li>
+                <li>Natural wood stains and painted finishes</li>
+                <li>Granite and marble countertops</li>
+            </ul>
+        </div>
+
+        <div class="gallery-grid">
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/5X5A8207-scaled.jpg"
+                         alt="Traditional white kitchen with raised panel doors and classic design Rowley MA"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Classic White Traditional Kitchen</h4>
+                    <p>Elegant raised panel doors with timeless crown molding</p>
+                </div>
+            </article>
+
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/5X5A8214-scaled.jpg"
+                         alt="Traditional kitchen with granite countertops and classic cabinetry North Shore MA"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Traditional Kitchen with Granite</h4>
+                    <p>Rich granite countertops complement classic cabinet design</p>
+                </div>
+            </article>
+
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/5X5A8218-scaled.jpg"
+                         alt="Warm traditional kitchen with wood cabinetry and classic details Massachusetts"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Warm Traditional Design</h4>
+                    <p>Natural wood tones create an inviting family gathering space</p>
+                </div>
+            </article>
+
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/5X5A8221-scaled.jpg"
+                         alt="Traditional kitchen island with raised panel details and classic hardware NH"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Traditional Kitchen Island</h4>
+                    <p>Detailed island design with classic hardware and elegant finishes</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="gallery-section-cta">
+            <a href="https://seacoastcabinetne.com/contact/" class="gallery-btn gallery-btn-primary">Create Your Timeless Kitchen</a>
+            <a href="https://seacoastcabinetne.com/cabinets/" class="gallery-cta-link">Explore Custom Cabinets</a>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Farmhouse & Rustic Charm -->
+<section id="farmhouse-kitchens" class="gallery-section gallery-section-white">
+    <div class="gallery-container-wide">
+        <div class="gallery-section-header">
+            <h2>Cozy Farmhouse Kitchen Inspiration</h2>
+        </div>
+
+        <div class="gallery-section-intro">
+            <p>
+                Bring warmth and character to your home with farmhouse kitchen designs that blend rustic charm with modern convenience. These North Shore and New Hampshire projects feature shaker-style doors, open shelving, apron-front sinks, and natural wood elements that create the perfect family-friendly cooking space.
+            </p>
+        </div>
+
+        <div class="gallery-featured-elements">
+            <h3>Featured Design Elements</h3>
+            <ul>
+                <li>Shaker-style cabinet doors</li>
+                <li>Distressed and painted finishes</li>
+                <li>Open shelving displays</li>
+                <li>Farmhouse sinks</li>
+                <li>Butcher block countertops</li>
+                <li>Vintage-inspired hardware</li>
+            </ul>
+        </div>
+
+        <div class="gallery-grid">
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/Farmhouse-Rustic-Charm-kitchen-1.jpg"
+                         alt="Farmhouse kitchen with shaker cabinets and rustic charm North Shore MA"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Classic Farmhouse Kitchen</h4>
+                    <p>Shaker doors and warm tones create inviting farmhouse appeal</p>
+                </div>
+            </article>
+
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/Farmhouse-Rustic-Charm-kitchen-2.jpg"
+                         alt="Rustic kitchen with natural wood and farmhouse sink Massachusetts"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Rustic Kitchen Design</h4>
+                    <p>Natural wood elements and vintage details define this space</p>
+                </div>
+            </article>
+
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/Farmhouse-Rustic-Charm-kitchen-3.jpg"
+                         alt="Farmhouse kitchen with open shelving and painted cabinets New Hampshire"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Farmhouse with Open Shelving</h4>
+                    <p>Painted cabinets and open shelves add farmhouse character</p>
+                </div>
+            </article>
+
+            <article class="gallery-item">
+                <div class="gallery-item-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/Farmhouse-Rustic-Charm-kitchen-4.jpg"
+                         alt="Cozy farmhouse kitchen with butcher block and vintage hardware Rowley MA"
+                         loading="lazy"
+                         width="800"
+                         height="600">
+                </div>
+                <div class="gallery-caption">
+                    <h4>Cozy Farmhouse Kitchen</h4>
+                    <p>Butcher block counters and vintage hardware complete the look</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="gallery-section-cta">
+            <a href="https://seacoastcabinetne.com/contact/" class="gallery-btn gallery-btn-primary">Design Your Farmhouse Kitchen</a>
+            <a href="https://seacoastcabinetne.com/cabinets/" class="gallery-cta-link">Browse Cabinet Styles & Finishes</a>
+        </div>
+    </div>
+</section>
