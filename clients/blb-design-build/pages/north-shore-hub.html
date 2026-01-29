@@ -171,9 +171,31 @@
    ============================================= */
 .blb-ns-services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 3rem;
+}
+
+/* 5-card layout: 3 on top, 2 centered below */
+.blb-ns-services-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  margin-top: 3rem;
+}
+
+.blb-ns-services-grid-5 .blb-ns-service-card:nth-child(1),
+.blb-ns-services-grid-5 .blb-ns-service-card:nth-child(2),
+.blb-ns-services-grid-5 .blb-ns-service-card:nth-child(3) {
+  grid-column: span 2;
+}
+
+.blb-ns-services-grid-5 .blb-ns-service-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.blb-ns-services-grid-5 .blb-ns-service-card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .blb-ns-service-card {
@@ -461,9 +483,18 @@
    ============================================= */
 @media (max-width: 1024px) {
   .blb-ns-services-grid,
+  .blb-ns-services-grid-5,
   .blb-ns-areas-grid,
   .blb-ns-portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .blb-ns-services-grid-5 .blb-ns-service-card:nth-child(1),
+  .blb-ns-services-grid-5 .blb-ns-service-card:nth-child(2),
+  .blb-ns-services-grid-5 .blb-ns-service-card:nth-child(3),
+  .blb-ns-services-grid-5 .blb-ns-service-card:nth-child(4),
+  .blb-ns-services-grid-5 .blb-ns-service-card:nth-child(5) {
+    grid-column: auto;
   }
   
   .blb-ns-intro,
@@ -487,6 +518,7 @@
   }
   
   .blb-ns-services-grid,
+  .blb-ns-services-grid-5,
   .blb-ns-areas-grid {
     grid-template-columns: 1fr;
   }
@@ -553,7 +585,7 @@
       <p>Whether you're updating a single room or reimagining your entire home, our team coordinates every detail - from design and permitting to construction and final finishes.</p>
     </div>
     
-    <div class="blb-ns-services-grid">
+    <div class="blb-ns-services-grid-5">
       <div class="blb-ns-service-card">
         <a href="https://blbdesignbuild.com/kitchen-remodeling" aria-label="Learn more about kitchen remodeling"></a>
         <img src="https://blbdesignbuild.com/wp-content/uploads/2024/06/88HighStreet_FREEBIRD-32.jpg" alt="Custom kitchen remodel on the North Shore">
@@ -587,6 +619,15 @@
         <div class="blb-ns-service-card-overlay">
           <h3>Whole Home Remodeling</h3>
           <p>Complete transformations that reimagine flow, function, and character throughout your home.</p>
+        </div>
+      </div>
+      
+      <div class="blb-ns-service-card">
+        <a href="https://blbdesignbuild.com/north-shore-remodeling/historic-home-renovations/" aria-label="Learn more about historic home renovations"></a>
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2025/05/418-Main-St-49.jpg" alt="Historic Georgian home kitchen renovation with hand-hewn beams">
+        <div class="blb-ns-service-card-overlay">
+          <h3>Historic Home Renovations</h3>
+          <p>Modernize your Georgian, Federal, or Colonial home while preserving the character that makes it irreplaceable.</p>
         </div>
       </div>
     </div>
@@ -995,4 +1036,5 @@ document.addEventListener('DOMContentLoaded', function() {
   ]
 }
 </script>
+
 
