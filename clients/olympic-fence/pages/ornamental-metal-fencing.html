@@ -478,7 +478,7 @@ Responsive: Mobile-first, touch targets 44px+
    ======================================== */
 .ofc-metal-reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--ofc-space-lg);
   margin: var(--ofc-space-lg) 0;
 }
@@ -814,6 +814,10 @@ Responsive: Mobile-first, touch targets 44px+
   
   .ofc-metal-two-col-reverse {
     direction: ltr;
+  }
+  
+  .ofc-metal-reviews-grid {
+    grid-template-columns: 1fr;
   }
   
   .ofc-metal-comparison-table th,
@@ -1163,7 +1167,7 @@ Responsive: Mobile-first, touch targets 44px+
       </article>
     </div>
     
-    <div class="ofc-metal-cta-group">
+    <div class="ofc-metal-cta-group" style="justify-content: center;">
       <a href="https://olympicfencema.com/contact-us/" class="ofc-metal-cta-button">Request Free Estimate</a>
     </div>
   </div>
