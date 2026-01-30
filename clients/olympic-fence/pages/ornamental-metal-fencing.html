@@ -1,172 +1,147 @@
 <!-- 
-Olympic Fence - Ornamental Aluminum & Steel Fencing Service Page
-UPDATED: Enhanced for SEO, accessibility, and mobile responsiveness
-Designed for insertion below hero section and above footer
-Brand colors from Olympic Fence style guide
+ORNAMENTAL METAL FENCING PAGE CONTENT
+Olympic Fence Company
+Optimized for: Ornamental aluminum and steel fence installation North Shore MA
+Content sits below hero/H1 and above footer
+Updated: January 2026 - Brand aligned per BRAND-KIT.md
 
-SEO Improvements:
-- Comprehensive schema markup (LocalBusiness, Service, FAQPage)
-- Optimized heading hierarchy (H2-H4)
-- Enhanced internal linking
-- Image lazy loading with descriptive alt text
-
-Accessibility Improvements:
-- ARIA labels and roles
-- Improved color contrast (WCAG AA compliant)
-- Focus states for all interactive elements
-- Screen reader optimizations
-
-Mobile/Responsive Improvements:
-- Enhanced touch targets (min 44px)
-- Optimized form iframe sizing
-- Better grid breakpoints
-- Improved typography scaling
+SEO: Schema markup (LocalBusiness, Service, FAQPage, Reviews)
+Accessibility: WCAG AA compliant, ARIA labels, focus states
+Responsive: Mobile-first, touch targets 44px+
 -->
 
 <style>
 /* ========================================
-   Olympic Fence Ornamental Metal Fencing
-   Embedded Styles - OPTIMIZED
+   Olympic Fence - Ornamental Metal Fencing
+   CSS Namespace: .ofc-metal-
    ======================================== */
 
-/* CSS Custom Properties - Brand Colors & Design Tokens */
+/* CSS Custom Properties - Per BRAND-KIT.md */
 :root {
-  /* Brand Colors - Olympic Fence */
-  --of-primary-purple: #272262;
-  --of-accent-purple: #4a4494;
-  --of-light-purple: #6b67a8;
-  
-  /* Text Colors */
-  --of-dark-text: #1a1a2e;
-  --of-body-text: #333333;
-  --of-light-text: #555555;
-  --of-muted-text: #717171;
-  
-  /* Background Colors */
-  --of-white: #ffffff;
-  --of-off-white: #fafafa;
-  --of-light-gray: #f5f6f8;
-  --of-medium-gray: #e5e7eb;
-  --of-border-gray: #d1d5db;
-  
-  /* Accent Colors */
-  --of-success-green: #22c55e;
-  --of-star-gold: #facc15;
-  --of-warning-orange: #f97316;
+  --ofc-primary: #272262;
+  --ofc-primary-hover: #4a4494;
+  --ofc-text-dark: #333333;
+  --ofc-text-light: #666666;
+  --ofc-text-muted: #717171;
+  --ofc-bg-light: #f8f9fa;
+  --ofc-border: #e9ecef;
+  --ofc-white: #ffffff;
+  --ofc-star: #ffc107;
+  --ofc-success: #28a745;
   
   /* Spacing Scale */
-  --of-space-xs: 0.5rem;
-  --of-space-sm: 1rem;
-  --of-space-md: 1.5rem;
-  --of-space-lg: 2rem;
-  --of-space-xl: 3rem;
-  --of-space-2xl: 4rem;
-  --of-space-3xl: 5rem;
+  --ofc-space-xs: 0.5rem;
+  --ofc-space-sm: 1rem;
+  --ofc-space-md: 1.5rem;
+  --ofc-space-lg: 2rem;
+  --ofc-space-xl: 3rem;
+  --ofc-space-2xl: 4rem;
+  --ofc-space-3xl: 5rem;
   
   /* Typography Scale */
-  --of-text-sm: 0.9375rem;
-  --of-text-base: 1.0625rem;
-  --of-text-lg: 1.125rem;
-  --of-text-xl: 1.25rem;
-  --of-text-2xl: 1.5rem;
-  --of-text-3xl: 2rem;
-  --of-text-4xl: 2.5rem;
+  --ofc-text-sm: 0.9375rem;
+  --ofc-text-base: 1.0625rem;
+  --ofc-text-lg: 1.125rem;
+  --ofc-text-xl: 1.25rem;
+  --ofc-text-2xl: 1.5rem;
+  --ofc-text-3xl: 2rem;
+  --ofc-text-4xl: 2.5rem;
   
   /* Border Radius */
-  --of-radius-sm: 4px;
-  --of-radius-md: 8px;
-  --of-radius-lg: 12px;
-  --of-radius-full: 50%;
+  --ofc-radius-sm: 4px;
+  --ofc-radius-md: 8px;
+  --ofc-radius-lg: 12px;
+  --ofc-radius-full: 50%;
   
   /* Shadows */
-  --of-shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-  --of-shadow-md: 0 4px 12px rgba(0,0,0,0.1);
-  --of-shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
-  --of-shadow-purple: 0 4px 20px rgba(39, 34, 98, 0.15);
+  --ofc-shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --ofc-shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --ofc-shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --ofc-shadow-purple: 0 4px 20px rgba(39, 34, 98, 0.15);
   
   /* Transitions */
-  --of-transition-fast: 0.15s ease;
-  --of-transition-base: 0.25s ease;
-  --of-transition-slow: 0.35s ease;
+  --ofc-transition-fast: 0.15s ease;
+  --ofc-transition-base: 0.25s ease;
+  --ofc-transition-slow: 0.35s ease;
 }
 
 /* ========================================
    Base Typography
    ======================================== */
-.of-metal-fencing {
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: var(--of-body-text);
+.ofc-metal-metal-fencing {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ofc-text-dark);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.of-metal-fencing *,
-.of-metal-fencing *::before,
-.of-metal-fencing *::after {
+.ofc-metal-metal-fencing *,
+.ofc-metal-metal-fencing *::before,
+.ofc-metal-metal-fencing *::after {
   box-sizing: border-box;
 }
 
-.of-metal-fencing h2 {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+.ofc-metal-metal-fencing h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
-  font-size: clamp(1.75rem, 4vw, var(--of-text-4xl));
+  font-size: clamp(1.75rem, 4vw, var(--ofc-text-4xl));
   line-height: 1.2;
-  color: var(--of-primary-purple);
-  margin: 0 0 var(--of-space-md) 0;
+  color: var(--ofc-primary);
+  margin: 0 0 var(--ofc-space-md) 0;
   letter-spacing: -0.02em;
   text-align: center;
 }
 
-.of-metal-fencing h3 {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+.ofc-metal-metal-fencing h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
   font-size: clamp(1.35rem, 3vw, 1.75rem);
   line-height: 1.3;
-  color: var(--of-primary-purple);
-  margin: 0 0 var(--of-space-sm) 0;
+  color: var(--ofc-primary);
+  margin: 0 0 var(--ofc-space-sm) 0;
 }
 
-.of-metal-fencing h4 {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+.ofc-metal-metal-fencing h4 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
-  font-size: clamp(1.1rem, 2vw, var(--of-text-xl));
+  font-size: clamp(1.1rem, 2vw, var(--ofc-text-xl));
   line-height: 1.4;
-  color: var(--of-dark-text);
-  margin: 0 0 var(--of-space-xs) 0;
+  color: var(--ofc-text-dark);
+  margin: 0 0 var(--ofc-space-xs) 0;
 }
 
-.of-metal-fencing p {
-  font-size: var(--of-text-lg);
+.ofc-metal-metal-fencing p {
+  font-size: var(--ofc-text-lg);
   line-height: 1.75;
-  margin: 0 0 var(--of-space-md) 0;
+  margin: 0 0 var(--ofc-space-md) 0;
 }
 
-.of-metal-fencing li {
-  font-size: var(--of-text-lg);
+.ofc-metal-metal-fencing li {
+  font-size: var(--ofc-text-lg);
   line-height: 1.7;
 }
 
-.of-metal-fencing a {
-  color: var(--of-accent-purple);
+.ofc-metal-metal-fencing a {
+  color: var(--ofc-primary-hover);
   text-decoration: none;
-  transition: color var(--of-transition-fast);
+  transition: color var(--ofc-transition-fast);
 }
 
-.of-metal-fencing a:hover,
-.of-metal-fencing a:focus {
-  color: var(--of-primary-purple);
+.ofc-metal-metal-fencing a:hover,
+.ofc-metal-metal-fencing a:focus {
+  color: var(--ofc-primary);
   text-decoration: underline;
 }
 
-.of-metal-fencing a:focus-visible {
-  outline: 3px solid var(--of-accent-purple);
+.ofc-metal-metal-fencing a:focus-visible {
+  outline: 3px solid var(--ofc-primary-hover);
   outline-offset: 2px;
-  border-radius: var(--of-radius-sm);
+  border-radius: var(--ofc-radius-sm);
 }
 
 /* Screen reader only */
-.of-sr-only {
+.ofc-metal-sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -181,71 +156,71 @@ Mobile/Responsive Improvements:
 /* ========================================
    Trust Bar Section
    ======================================== */
-.of-trust-bar {
-  background: linear-gradient(135deg, var(--of-primary-purple) 0%, var(--of-accent-purple) 100%);
-  padding: var(--of-space-lg) var(--of-space-md);
-  margin: 0 0 var(--of-space-xl) 0;
+.ofc-metal-trust-bar {
+  background: linear-gradient(135deg, var(--ofc-primary) 0%, var(--ofc-primary-hover) 100%);
+  padding: var(--ofc-space-lg) var(--ofc-space-md);
+  margin: 0 0 var(--ofc-space-xl) 0;
 }
 
-.of-trust-bar-container {
+.ofc-metal-trust-bar-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--of-space-lg);
+  gap: var(--ofc-space-lg);
   align-items: center;
 }
 
-.of-trust-item {
+.ofc-metal-trust-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--of-space-xs);
+  gap: var(--ofc-space-xs);
   text-align: center;
 }
 
-.of-trust-icon {
+.ofc-metal-trust-icon {
   width: 52px;
   height: 52px;
   background: rgba(255,255,255,0.15);
-  border-radius: var(--of-radius-full);
+  border-radius: var(--ofc-radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: var(--of-white);
-  transition: transform var(--of-transition-base), background var(--of-transition-base);
+  color: var(--ofc-white);
+  transition: transform var(--ofc-transition-base), background var(--ofc-transition-base);
 }
 
-.of-trust-item:hover .of-trust-icon {
+.ofc-metal-trust-item:hover .ofc-metal-trust-icon {
   transform: scale(1.1);
   background: rgba(255,255,255,0.25);
 }
 
-.of-trust-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: var(--of-text-sm);
+.ofc-metal-trust-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--ofc-text-sm);
   font-weight: 600;
-  color: var(--of-white);
+  color: var(--ofc-white);
   line-height: 1.35;
 }
 
 /* ========================================
    Section Containers
    ======================================== */
-.of-section {
+.ofc-metal-section {
   max-width: 1200px;
-  margin: 0 auto var(--of-space-2xl) auto;
-  padding: 0 var(--of-space-md);
+  margin: 0 auto var(--ofc-space-2xl) auto;
+  padding: 0 var(--ofc-space-md);
 }
 
-.of-section-alt {
-  background: var(--of-light-gray);
-  padding: var(--of-space-2xl) var(--of-space-md);
-  margin: 0 0 var(--of-space-2xl) 0;
+.ofc-metal-section-alt {
+  background: var(--ofc-bg-light);
+  padding: var(--ofc-space-2xl) var(--ofc-space-md);
+  margin: 0 0 var(--ofc-space-2xl) 0;
 }
 
-.of-section-alt-inner {
+.ofc-metal-section-alt-inner {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -253,67 +228,67 @@ Mobile/Responsive Improvements:
 /* ========================================
    Images
    ======================================== */
-.of-feature-image {
+.ofc-metal-feature-image {
   width: 100%;
   height: auto;
-  border-radius: var(--of-radius-md);
-  margin: var(--of-space-lg) 0;
-  box-shadow: var(--of-shadow-md);
-  transition: transform var(--of-transition-base), box-shadow var(--of-transition-base);
+  border-radius: var(--ofc-radius-md);
+  margin: var(--ofc-space-lg) 0;
+  box-shadow: var(--ofc-shadow-md);
+  transition: transform var(--ofc-transition-base), box-shadow var(--ofc-transition-base);
 }
 
-.of-feature-image:hover {
+.ofc-metal-feature-image:hover {
   transform: translateY(-2px);
-  box-shadow: var(--of-shadow-lg);
+  box-shadow: var(--ofc-shadow-lg);
 }
 
-.of-image-caption {
-  font-size: var(--of-text-sm);
-  color: var(--of-muted-text);
+.ofc-metal-image-caption {
+  font-size: var(--ofc-text-sm);
+  color: var(--ofc-text-muted);
   font-style: italic;
   text-align: center;
-  margin: var(--of-space-sm) 0 var(--of-space-lg) 0;
+  margin: var(--ofc-space-sm) 0 var(--ofc-space-lg) 0;
 }
 
 /* ========================================
    Two Column Layout
    ======================================== */
-.of-two-col {
+.ofc-metal-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--of-space-xl);
+  gap: var(--ofc-space-xl);
   align-items: start;
-  margin: var(--of-space-lg) 0;
+  margin: var(--ofc-space-lg) 0;
 }
 
-.of-two-col-reverse {
+.ofc-metal-two-col-reverse {
   direction: rtl;
 }
 
-.of-two-col-reverse > * {
+.ofc-metal-two-col-reverse > * {
   direction: ltr;
 }
 
 /* ========================================
    Benefits List
    ======================================== */
-.of-benefits-list {
+.ofc-metal-benefits-list {
   list-style: none;
   padding: 0;
-  margin: var(--of-space-md) 0;
+  margin: var(--ofc-space-md) 0;
 }
 
-.of-benefits-list li {
+.ofc-metal-benefits-list li {
   padding-left: 2rem;
   position: relative;
-  margin-bottom: var(--of-space-sm);
+  margin-bottom: var(--ofc-space-sm);
 }
 
-.of-benefits-list li::before {
+.ofc-metal-benefits-list li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--of-success-green);
+  color: var(--ofc-success);
   font-weight: bold;
   font-size: 1.25rem;
   line-height: 1.7;
@@ -322,390 +297,390 @@ Mobile/Responsive Improvements:
 /* ========================================
    Style Cards Grid
    ======================================== */
-.of-styles-grid {
+.ofc-metal-styles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--of-space-lg);
-  margin: var(--of-space-lg) 0;
+  gap: var(--ofc-space-lg);
+  margin: var(--ofc-space-lg) 0;
 }
 
-.of-style-card {
-  background: var(--of-white);
-  border: 2px solid var(--of-medium-gray);
-  border-radius: var(--of-radius-md);
-  padding: var(--of-space-lg);
+.ofc-metal-style-card {
+  background: var(--ofc-white);
+  border: 2px solid var(--ofc-border);
+  border-radius: var(--ofc-radius-md);
+  padding: var(--ofc-space-lg);
   text-align: center;
-  transition: transform var(--of-transition-base), box-shadow var(--of-transition-base), border-color var(--of-transition-base);
+  transition: transform var(--ofc-transition-base), box-shadow var(--ofc-transition-base), border-color var(--ofc-transition-base);
 }
 
-.of-style-card:hover {
+.ofc-metal-style-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--of-shadow-purple);
-  border-color: var(--of-accent-purple);
+  box-shadow: var(--ofc-shadow-purple);
+  border-color: var(--ofc-primary-hover);
 }
 
-.of-style-card h4 {
-  color: var(--of-primary-purple);
-  margin-bottom: var(--of-space-xs);
+.ofc-metal-style-card h4 {
+  color: var(--ofc-primary);
+  margin-bottom: var(--ofc-space-xs);
 }
 
-.of-style-card p {
-  font-size: var(--of-text-base);
+.ofc-metal-style-card p {
+  font-size: var(--ofc-text-base);
   margin-bottom: 0;
-  color: var(--of-light-text);
+  color: var(--ofc-text-light);
 }
 
 /* ========================================
    Process Steps
    ======================================== */
-.of-process-steps {
+.ofc-metal-process-steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--of-space-md);
-  margin: var(--of-space-lg) 0;
+  gap: var(--ofc-space-md);
+  margin: var(--ofc-space-lg) 0;
 }
 
-.of-process-step {
+.ofc-metal-process-step {
   position: relative;
   padding-left: 3rem;
 }
 
-.of-step-number {
+.ofc-metal-step-number {
   position: absolute;
   left: 0;
   top: 0;
   width: 2.25rem;
   height: 2.25rem;
-  background: linear-gradient(135deg, var(--of-accent-purple) 0%, var(--of-primary-purple) 100%);
-  color: var(--of-white);
-  border-radius: var(--of-radius-full);
+  background: linear-gradient(135deg, var(--ofc-primary-hover) 0%, var(--ofc-primary) 100%);
+  color: var(--ofc-white);
+  border-radius: var(--ofc-radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
-  font-size: var(--of-text-base);
-  box-shadow: var(--of-shadow-sm);
+  font-size: var(--ofc-text-base);
+  box-shadow: var(--ofc-shadow-sm);
 }
 
-.of-process-step h4 {
-  color: var(--of-primary-purple);
+.ofc-metal-process-step h4 {
+  color: var(--ofc-primary);
   margin-top: 0;
-  margin-bottom: var(--of-space-xs);
-  font-size: var(--of-text-base);
+  margin-bottom: var(--ofc-space-xs);
+  font-size: var(--ofc-text-base);
 }
 
-.of-process-step p {
-  font-size: var(--of-text-sm);
-  color: var(--of-light-text);
+.ofc-metal-process-step p {
+  font-size: var(--ofc-text-sm);
+  color: var(--ofc-text-light);
   margin-bottom: 0;
 }
 
 /* ========================================
    Comparison Table - Mobile Optimized
    ======================================== */
-.of-table-wrapper {
+.ofc-metal-table-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin: var(--of-space-lg) 0;
-  border-radius: var(--of-radius-md);
-  box-shadow: var(--of-shadow-sm);
+  margin: var(--ofc-space-lg) 0;
+  border-radius: var(--ofc-radius-md);
+  box-shadow: var(--ofc-shadow-sm);
 }
 
-.of-comparison-table {
+.ofc-metal-comparison-table {
   width: 100%;
   min-width: 500px;
   border-collapse: collapse;
-  background: var(--of-white);
+  background: var(--ofc-white);
 }
 
-.of-comparison-table thead {
-  background: var(--of-primary-purple);
-  color: var(--of-white);
+.ofc-metal-comparison-table thead {
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
 }
 
-.of-comparison-table th,
-.of-comparison-table td {
-  padding: var(--of-space-sm) var(--of-space-md);
+.ofc-metal-comparison-table th,
+.ofc-metal-comparison-table td {
+  padding: var(--ofc-space-sm) var(--ofc-space-md);
   text-align: left;
-  border-bottom: 1px solid var(--of-medium-gray);
-  font-size: var(--of-text-base);
+  border-bottom: 1px solid var(--ofc-border);
+  font-size: var(--ofc-text-base);
 }
 
-.of-comparison-table th {
+.ofc-metal-comparison-table th {
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  font-size: var(--of-text-sm);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--ofc-text-sm);
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
-.of-comparison-table tbody tr {
-  transition: background var(--of-transition-fast);
+.ofc-metal-comparison-table tbody tr {
+  transition: background var(--ofc-transition-fast);
 }
 
-.of-comparison-table tbody tr:hover {
-  background: var(--of-off-white);
+.ofc-metal-comparison-table tbody tr:hover {
+  background: var(--ofc-bg-light);
 }
 
-.of-comparison-table tbody tr:last-child td {
+.ofc-metal-comparison-table tbody tr:last-child td {
   border-bottom: none;
 }
 
 /* Mobile Comparison Cards - Alternative View */
-.of-comparison-cards {
+.ofc-metal-comparison-cards {
   display: none;
 }
 
-.of-comparison-card {
-  background: var(--of-white);
-  border: 2px solid var(--of-medium-gray);
-  border-radius: var(--of-radius-md);
-  padding: var(--of-space-md);
-  margin-bottom: var(--of-space-md);
+.ofc-metal-comparison-card {
+  background: var(--ofc-white);
+  border: 2px solid var(--ofc-border);
+  border-radius: var(--ofc-radius-md);
+  padding: var(--ofc-space-md);
+  margin-bottom: var(--ofc-space-md);
 }
 
-.of-comparison-card h4 {
-  color: var(--of-primary-purple);
-  margin-bottom: var(--of-space-sm);
-  padding-bottom: var(--of-space-xs);
-  border-bottom: 2px solid var(--of-accent-purple);
+.ofc-metal-comparison-card h4 {
+  color: var(--ofc-primary);
+  margin-bottom: var(--ofc-space-sm);
+  padding-bottom: var(--ofc-space-xs);
+  border-bottom: 2px solid var(--ofc-primary-hover);
 }
 
-.of-comparison-card-row {
+.ofc-metal-comparison-card-row {
   display: flex;
   justify-content: space-between;
-  padding: var(--of-space-xs) 0;
-  border-bottom: 1px solid var(--of-light-gray);
-  gap: var(--of-space-sm);
+  padding: var(--ofc-space-xs) 0;
+  border-bottom: 1px solid var(--ofc-bg-light);
+  gap: var(--ofc-space-sm);
 }
 
-.of-comparison-card-row:last-child {
+.ofc-metal-comparison-card-row:last-child {
   border-bottom: none;
 }
 
-.of-comparison-card-label {
+.ofc-metal-comparison-card-label {
   font-weight: 600;
-  color: var(--of-dark-text);
+  color: var(--ofc-text-dark);
   flex: 0 0 40%;
-  font-size: var(--of-text-sm);
+  font-size: var(--ofc-text-sm);
 }
 
-.of-comparison-card-value {
-  color: var(--of-light-text);
+.ofc-metal-comparison-card-value {
+  color: var(--ofc-text-light);
   flex: 1;
   text-align: right;
-  font-size: var(--of-text-sm);
+  font-size: var(--ofc-text-sm);
 }
 
 /* ========================================
    Reviews Section
    ======================================== */
-.of-reviews-grid {
+.ofc-metal-reviews-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: var(--of-space-lg);
-  margin: var(--of-space-lg) 0;
+  gap: var(--ofc-space-lg);
+  margin: var(--ofc-space-lg) 0;
 }
 
-.of-review-card {
-  background: var(--of-white);
-  border: 2px solid var(--of-medium-gray);
-  border-radius: var(--of-radius-md);
-  padding: var(--of-space-lg);
-  transition: box-shadow var(--of-transition-base), border-color var(--of-transition-base);
+.ofc-metal-review-card {
+  background: var(--ofc-white);
+  border: 2px solid var(--ofc-border);
+  border-radius: var(--ofc-radius-md);
+  padding: var(--ofc-space-lg);
+  transition: box-shadow var(--ofc-transition-base), border-color var(--ofc-transition-base);
 }
 
-.of-review-card:hover {
-  box-shadow: var(--of-shadow-md);
-  border-color: var(--of-accent-purple);
+.ofc-metal-review-card:hover {
+  box-shadow: var(--ofc-shadow-md);
+  border-color: var(--ofc-primary-hover);
 }
 
-.of-review-stars {
-  color: var(--of-star-gold);
-  font-size: var(--of-text-xl);
-  margin-bottom: var(--of-space-sm);
+.ofc-metal-review-stars {
+  color: var(--ofc-star);
+  font-size: var(--ofc-text-xl);
+  margin-bottom: var(--ofc-space-sm);
   letter-spacing: 2px;
 }
 
-.of-review-text {
+.ofc-metal-review-text {
   font-style: italic;
-  color: var(--of-body-text);
-  margin-bottom: var(--of-space-sm);
+  color: var(--ofc-text-dark);
+  margin-bottom: var(--ofc-space-sm);
   line-height: 1.65;
-  font-size: var(--of-text-base);
+  font-size: var(--ofc-text-base);
 }
 
-.of-review-author {
+.ofc-metal-review-author {
   font-weight: 600;
-  color: var(--of-primary-purple);
-  font-size: var(--of-text-sm);
+  color: var(--ofc-primary);
+  font-size: var(--ofc-text-sm);
 }
 
 /* ========================================
    FAQ Section
    ======================================== */
-.of-faq-list {
-  margin: var(--of-space-lg) auto;
+.ofc-metal-faq-list {
+  margin: var(--ofc-space-lg) auto;
   max-width: 900px;
 }
 
-.of-faq-item {
-  background: var(--of-white);
-  border: 2px solid var(--of-medium-gray);
-  border-radius: var(--of-radius-md);
-  margin-bottom: var(--of-space-sm);
+.ofc-metal-faq-item {
+  background: var(--ofc-white);
+  border: 2px solid var(--ofc-border);
+  border-radius: var(--ofc-radius-md);
+  margin-bottom: var(--ofc-space-sm);
   overflow: hidden;
-  transition: border-color var(--of-transition-fast);
+  transition: border-color var(--ofc-transition-fast);
 }
 
-.of-faq-item:hover {
-  border-color: var(--of-accent-purple);
+.ofc-metal-faq-item:hover {
+  border-color: var(--ofc-primary-hover);
 }
 
-.of-faq-question {
+.ofc-metal-faq-question {
   width: 100%;
   background: none;
   border: none;
-  padding: var(--of-space-md);
+  padding: var(--ofc-space-md);
   text-align: left;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--of-space-sm);
-  font-family: 'Poppins', sans-serif;
-  font-size: var(--of-text-lg);
+  gap: var(--ofc-space-sm);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--ofc-text-lg);
   font-weight: 600;
-  color: var(--of-primary-purple);
-  transition: background var(--of-transition-fast);
+  color: var(--ofc-primary);
+  transition: background var(--ofc-transition-fast);
   min-height: 56px; /* Touch target */
 }
 
-.of-faq-question:hover {
-  background: var(--of-off-white);
+.ofc-metal-faq-question:hover {
+  background: var(--ofc-bg-light);
 }
 
-.of-faq-question:focus-visible {
-  outline: 3px solid var(--of-accent-purple);
+.ofc-metal-faq-question:focus-visible {
+  outline: 3px solid var(--ofc-primary-hover);
   outline-offset: -3px;
-  background: var(--of-off-white);
+  background: var(--ofc-bg-light);
 }
 
-.of-faq-icon {
-  font-size: var(--of-text-xl);
-  color: var(--of-accent-purple);
-  transition: transform var(--of-transition-base);
+.ofc-metal-faq-icon {
+  font-size: var(--ofc-text-xl);
+  color: var(--ofc-primary-hover);
+  transition: transform var(--ofc-transition-base);
   flex-shrink: 0;
 }
 
-.of-faq-question[aria-expanded="true"] .of-faq-icon {
+.ofc-metal-faq-question[aria-expanded="true"] .ofc-metal-faq-icon {
   transform: rotate(180deg);
 }
 
-.of-faq-answer {
-  padding: 0 var(--of-space-md);
+.ofc-metal-faq-answer {
+  padding: 0 var(--ofc-space-md);
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--of-transition-slow), padding var(--of-transition-slow);
+  transition: max-height var(--ofc-transition-slow), padding var(--ofc-transition-slow);
 }
 
-.of-faq-answer.active {
+.ofc-metal-faq-answer.active {
   max-height: 2000px;
-  padding: 0 var(--of-space-md) var(--of-space-md) var(--of-space-md);
+  padding: 0 var(--ofc-space-md) var(--ofc-space-md) var(--ofc-space-md);
 }
 
-.of-faq-answer p {
-  margin: 0 0 var(--of-space-sm) 0;
-  font-size: var(--of-text-base);
-  color: var(--of-light-text);
+.ofc-metal-faq-answer p {
+  margin: 0 0 var(--ofc-space-sm) 0;
+  font-size: var(--ofc-text-base);
+  color: var(--ofc-text-light);
 }
 
-.of-faq-answer p:last-child {
+.ofc-metal-faq-answer p:last-child {
   margin-bottom: 0;
 }
 
 /* ========================================
    CTA Buttons
    ======================================== */
-.of-cta-button {
+.ofc-metal-cta-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--of-accent-purple);
+  background: var(--ofc-primary-hover);
   color: #ffffff !important;
   padding: 1rem 2rem;
-  border-radius: var(--of-radius-md);
-  font-family: 'Poppins', sans-serif;
+  border-radius: var(--ofc-radius-md);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
-  font-size: var(--of-text-lg);
+  font-size: var(--ofc-text-lg);
   text-decoration: none !important;
-  transition: background var(--of-transition-base), transform var(--of-transition-fast), box-shadow var(--of-transition-base);
+  transition: background var(--ofc-transition-base), transform var(--ofc-transition-fast), box-shadow var(--ofc-transition-base);
   border: none;
   cursor: pointer;
   min-height: 52px; /* Touch target */
-  gap: var(--of-space-xs);
+  gap: var(--ofc-space-xs);
 }
 
-.of-cta-button:hover,
-.of-cta-button:focus {
-  background: var(--of-primary-purple);
+.ofc-metal-cta-button:hover,
+.ofc-metal-cta-button:focus {
+  background: var(--ofc-primary);
   transform: translateY(-2px);
   text-decoration: none !important;
   color: #ffffff !important;
-  box-shadow: var(--of-shadow-purple);
+  box-shadow: var(--ofc-shadow-purple);
 }
 
-.of-cta-button:focus-visible {
-  outline: 3px solid var(--of-star-gold);
+.ofc-metal-cta-button:focus-visible {
+  outline: 3px solid var(--ofc-star);
   outline-offset: 2px;
 }
 
-.of-cta-button-secondary {
+.ofc-metal-cta-button-secondary {
   background: transparent;
-  color: var(--of-accent-purple) !important;
-  border: 2px solid var(--of-accent-purple);
+  color: var(--ofc-primary-hover) !important;
+  border: 2px solid var(--ofc-primary-hover);
 }
 
-.of-cta-button-secondary:hover,
-.of-cta-button-secondary:focus {
-  background: var(--of-accent-purple);
+.ofc-metal-cta-button-secondary:hover,
+.ofc-metal-cta-button-secondary:focus {
+  background: var(--ofc-primary-hover);
   color: #ffffff !important;
 }
 
-.of-cta-group {
+.ofc-metal-cta-group {
   display: flex;
-  gap: var(--of-space-sm);
+  gap: var(--ofc-space-sm);
   flex-wrap: wrap;
-  margin: var(--of-space-lg) 0;
+  margin: var(--ofc-space-lg) 0;
 }
 
 /* ========================================
    Final CTA Section
    ======================================== */
-.of-final-cta {
-  background: linear-gradient(135deg, var(--of-primary-purple) 0%, var(--of-accent-purple) 100%);
-  padding: var(--of-space-3xl) var(--of-space-md);
-  margin: var(--of-space-2xl) 0 0 0;
+.ofc-metal-final-cta {
+  background: linear-gradient(135deg, var(--ofc-primary) 0%, var(--ofc-primary-hover) 100%);
+  padding: var(--ofc-space-3xl) var(--ofc-space-md);
+  margin: var(--ofc-space-2xl) 0 0 0;
   text-align: center;
-  color: var(--of-white);
+  color: var(--ofc-white);
 }
 
-.of-final-cta h2 {
+.ofc-metal-final-cta h2 {
   color: #ffffff !important;
-  margin-bottom: var(--of-space-sm);
+  margin-bottom: var(--ofc-space-sm);
 }
 
-.of-final-cta p {
+.ofc-metal-final-cta p {
   color: rgba(255,255,255,0.95) !important;
-  font-size: var(--of-text-xl);
-  margin-bottom: var(--of-space-lg);
+  font-size: var(--ofc-text-xl);
+  margin-bottom: var(--ofc-space-lg);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.of-final-cta-inner {
+.ofc-metal-final-cta-inner {
   max-width: 900px;
   margin: 0 auto;
 }
@@ -713,22 +688,22 @@ Mobile/Responsive Improvements:
 /* ========================================
    Contact Form Container
    ======================================== */
-.of-contact-form {
-  background: var(--of-white);
-  border-radius: var(--of-radius-lg);
-  padding: var(--of-space-lg);
-  margin: var(--of-space-lg) auto;
+.ofc-metal-contact-form {
+  background: var(--ofc-white);
+  border-radius: var(--ofc-radius-lg);
+  padding: var(--ofc-space-lg);
+  margin: var(--ofc-space-lg) auto;
   max-width: 600px;
-  box-shadow: var(--of-shadow-lg);
+  box-shadow: var(--ofc-shadow-lg);
 }
 
-.of-contact-form h3 {
-  color: var(--of-primary-purple);
+.ofc-metal-contact-form h3 {
+  color: var(--ofc-primary);
   text-align: center;
-  margin-bottom: var(--of-space-sm);
+  margin-bottom: var(--ofc-space-sm);
 }
 
-.of-contact-form iframe {
+.ofc-metal-contact-form iframe {
   width: 100% !important;
   min-height: 1100px !important;
   border: none !important;
@@ -738,22 +713,22 @@ Mobile/Responsive Improvements:
 /* ========================================
    Service Area List
    ======================================== */
-.of-service-areas {
+.ofc-metal-service-areas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: var(--of-space-sm);
-  margin: var(--of-space-lg) 0;
+  gap: var(--ofc-space-sm);
+  margin: var(--ofc-space-lg) 0;
   list-style: none;
   padding: 0;
 }
 
-.of-service-areas li {
+.ofc-metal-service-areas li {
   padding-left: 1.75rem;
   position: relative;
-  font-size: var(--of-text-base);
+  font-size: var(--ofc-text-base);
 }
 
-.of-service-areas li::before {
+.ofc-metal-service-areas li::before {
   content: "📍";
   position: absolute;
   left: 0;
@@ -762,69 +737,69 @@ Mobile/Responsive Improvements:
 /* ========================================
    Decision Guide Box
    ======================================== */
-.of-decision-box {
-  background: var(--of-off-white);
-  border-left: 4px solid var(--of-accent-purple);
-  padding: var(--of-space-md);
-  margin: var(--of-space-lg) 0;
-  border-radius: 0 var(--of-radius-sm) var(--of-radius-sm) 0;
+.ofc-metal-decision-box {
+  background: var(--ofc-bg-light);
+  border-left: 4px solid var(--ofc-primary-hover);
+  padding: var(--ofc-space-md);
+  margin: var(--ofc-space-lg) 0;
+  border-radius: 0 var(--ofc-radius-sm) var(--ofc-radius-sm) 0;
 }
 
-.of-decision-box h4 {
+.ofc-metal-decision-box h4 {
   margin-top: 0;
-  color: var(--of-primary-purple);
+  color: var(--ofc-primary);
 }
 
-.of-decision-box p {
-  font-size: var(--of-text-base);
-  margin-bottom: var(--of-space-sm);
+.ofc-metal-decision-box p {
+  font-size: var(--ofc-text-base);
+  margin-bottom: var(--ofc-space-sm);
 }
 
-.of-decision-box p:last-child {
+.ofc-metal-decision-box p:last-child {
   margin-bottom: 0;
 }
 
 /* ========================================
    Footer Contact Info
    ======================================== */
-.of-footer-info {
-  margin-top: var(--of-space-lg);
+.ofc-metal-footer-info {
+  margin-top: var(--ofc-space-lg);
   color: white;
 }
 
-.of-footer-info p {
+.ofc-metal-footer-info p {
   color: rgba(255,255,255,0.95);
-  margin-bottom: var(--of-space-xs);
+  margin-bottom: var(--ofc-space-xs);
 }
 
-.of-footer-phone {
-  font-size: var(--of-text-2xl);
-  margin: var(--of-space-sm) 0;
+.ofc-metal-footer-phone {
+  font-size: var(--ofc-text-2xl);
+  margin: var(--ofc-space-sm) 0;
 }
 
-.of-footer-phone a {
+.ofc-metal-footer-phone a {
   color: #ffffff !important;
   text-decoration: none;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
-  gap: var(--of-space-xs);
-  transition: opacity var(--of-transition-fast);
+  gap: var(--ofc-space-xs);
+  transition: opacity var(--ofc-transition-fast);
 }
 
-.of-footer-phone a:hover {
+.ofc-metal-footer-phone a:hover {
   opacity: 0.9;
   text-decoration: none !important;
 }
 
-.of-footer-divider {
-  margin-top: var(--of-space-lg);
-  padding-top: var(--of-space-lg);
+.ofc-metal-footer-divider {
+  margin-top: var(--ofc-space-lg);
+  padding-top: var(--ofc-space-lg);
   border-top: 1px solid rgba(255,255,255,0.25);
 }
 
-.of-footer-checklist {
-  font-size: var(--of-text-sm);
+.ofc-metal-footer-checklist {
+  font-size: var(--ofc-text-sm);
   line-height: 1.8;
 }
 
@@ -832,19 +807,19 @@ Mobile/Responsive Improvements:
    Responsive Design - Tablet
    ======================================== */
 @media (max-width: 1024px) {
-  .of-two-col {
+  .ofc-metal-two-col {
     grid-template-columns: 1fr;
-    gap: var(--of-space-lg);
+    gap: var(--ofc-space-lg);
   }
   
-  .of-two-col-reverse {
+  .ofc-metal-two-col-reverse {
     direction: ltr;
   }
   
-  .of-comparison-table th,
-  .of-comparison-table td {
-    padding: var(--of-space-sm);
-    font-size: var(--of-text-sm);
+  .ofc-metal-comparison-table th,
+  .ofc-metal-comparison-table td {
+    padding: var(--ofc-space-sm);
+    font-size: var(--ofc-text-sm);
   }
 }
 
@@ -852,74 +827,74 @@ Mobile/Responsive Improvements:
    Responsive Design - Mobile Landscape
    ======================================== */
 @media (max-width: 1024px) {
-  .of-process-steps {
+  .ofc-metal-process-steps {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .of-trust-bar-container {
+  .ofc-metal-trust-bar-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--of-space-md);
+    gap: var(--ofc-space-md);
   }
   
-  .of-trust-icon {
+  .ofc-metal-trust-icon {
     width: 44px;
     height: 44px;
     font-size: 1.25rem;
   }
   
-  .of-trust-text {
+  .ofc-metal-trust-text {
     font-size: 0.8125rem;
   }
   
-  .of-styles-grid {
+  .ofc-metal-styles-grid {
     grid-template-columns: 1fr;
   }
   
-  .of-process-steps {
+  .ofc-metal-process-steps {
     grid-template-columns: 1fr;
-    gap: var(--of-space-md);
+    gap: var(--ofc-space-md);
   }
   
-  .of-reviews-grid {
+  .ofc-metal-reviews-grid {
     grid-template-columns: 1fr;
   }
   
-  .of-cta-group {
+  .ofc-metal-cta-group {
     flex-direction: column;
     align-items: center;
   }
   
-  .of-cta-button {
+  .ofc-metal-cta-button {
     width: 100%;
     max-width: 320px;
     text-align: center;
     justify-content: center;
   }
   
-  .of-service-areas {
+  .ofc-metal-service-areas {
     grid-template-columns: 1fr 1fr;
   }
   
-  .of-contact-form {
-    padding: var(--of-space-md);
+  .ofc-metal-contact-form {
+    padding: var(--ofc-space-md);
   }
   
-  .of-section-alt {
-    padding: var(--of-space-xl) var(--of-space-md);
+  .ofc-metal-section-alt {
+    padding: var(--ofc-space-xl) var(--ofc-space-md);
   }
   
-  .of-final-cta {
-    padding: var(--of-space-xl) var(--of-space-md);
+  .ofc-metal-final-cta {
+    padding: var(--ofc-space-xl) var(--ofc-space-md);
   }
   
   /* Show mobile comparison cards, hide table */
-  .of-table-wrapper {
+  .ofc-metal-table-wrapper {
     display: none;
   }
   
-  .of-comparison-cards {
+  .ofc-metal-comparison-cards {
     display: block;
   }
 }
@@ -928,38 +903,38 @@ Mobile/Responsive Improvements:
    Responsive Design - Mobile Portrait
    ======================================== */
 @media (max-width: 480px) {
-  .of-trust-bar-container {
+  .ofc-metal-trust-bar-container {
     grid-template-columns: 1fr 1fr;
-    gap: var(--of-space-sm);
+    gap: var(--ofc-space-sm);
   }
   
-  .of-trust-bar {
-    padding: var(--of-space-md) var(--of-space-sm);
+  .ofc-metal-trust-bar {
+    padding: var(--ofc-space-md) var(--ofc-space-sm);
   }
   
-  .of-section,
-  .of-section-alt {
-    padding-left: var(--of-space-sm);
-    padding-right: var(--of-space-sm);
+  .ofc-metal-section,
+  .ofc-metal-section-alt {
+    padding-left: var(--ofc-space-sm);
+    padding-right: var(--ofc-space-sm);
   }
   
-  .of-service-areas {
+  .ofc-metal-service-areas {
     grid-template-columns: 1fr;
   }
   
-  .of-faq-question {
-    font-size: var(--of-text-base);
-    padding: var(--of-space-sm);
+  .ofc-metal-faq-question {
+    font-size: var(--ofc-text-base);
+    padding: var(--ofc-space-sm);
   }
   
-  .of-process-step {
+  .ofc-metal-process-step {
     padding-left: 3.5rem;
   }
   
-  .of-step-number {
+  .ofc-metal-step-number {
     width: 2.5rem;
     height: 2.5rem;
-    font-size: var(--of-text-lg);
+    font-size: var(--ofc-text-lg);
   }
 }
 
@@ -967,27 +942,27 @@ Mobile/Responsive Improvements:
    Print Styles
    ======================================== */
 @media print {
-  .of-trust-bar,
-  .of-cta-group,
-  .of-final-cta,
-  .of-contact-form {
+  .ofc-metal-trust-bar,
+  .ofc-metal-cta-group,
+  .ofc-metal-final-cta,
+  .ofc-metal-contact-form {
     display: none;
   }
   
-  .of-metal-fencing {
+  .ofc-metal-metal-fencing {
     font-size: 12pt;
     line-height: 1.5;
     color: #000;
   }
   
-  .of-metal-fencing h2,
-  .of-metal-fencing h3,
-  .of-metal-fencing h4 {
+  .ofc-metal-metal-fencing h2,
+  .ofc-metal-metal-fencing h3,
+  .ofc-metal-metal-fencing h4 {
     color: #000;
     page-break-after: avoid;
   }
   
-  .of-feature-image {
+  .ofc-metal-feature-image {
     max-width: 100%;
     page-break-inside: avoid;
   }
@@ -997,9 +972,9 @@ Mobile/Responsive Improvements:
    Reduced Motion
    ======================================== */
 @media (prefers-reduced-motion: reduce) {
-  .of-metal-fencing *,
-  .of-metal-fencing *::before,
-  .of-metal-fencing *::after {
+  .ofc-metal-metal-fencing *,
+  .ofc-metal-metal-fencing *::before,
+  .ofc-metal-metal-fencing *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -1008,31 +983,31 @@ Mobile/Responsive Improvements:
 </style>
 
 <!-- Trust Bar Section -->
-<section class="of-trust-bar" aria-label="Trust signals and credentials">
-  <div class="of-trust-bar-container">
-    <div class="of-trust-item">
-      <div class="of-trust-icon" aria-hidden="true">✓</div>
-      <div class="of-trust-text">Lifetime Workmanship<br>Warranty</div>
+<section class="ofc-metal-trust-bar" aria-label="Trust signals and credentials">
+  <div class="ofc-metal-trust-bar-container">
+    <div class="ofc-metal-trust-item">
+      <div class="ofc-metal-trust-icon" aria-hidden="true">✓</div>
+      <div class="ofc-metal-trust-text">Lifetime Workmanship<br>Warranty</div>
     </div>
-    <div class="of-trust-item">
-      <div class="of-trust-icon" aria-hidden="true">🏆</div>
-      <div class="of-trust-text">40+ Years Family<br>Experience</div>
+    <div class="ofc-metal-trust-item">
+      <div class="ofc-metal-trust-icon" aria-hidden="true">🏆</div>
+      <div class="ofc-metal-trust-text">40+ Years Family<br>Experience</div>
     </div>
-    <div class="of-trust-item">
-      <div class="of-trust-icon" aria-hidden="true">⭐</div>
-      <div class="of-trust-text">American Fence<br>Association Member</div>
+    <div class="ofc-metal-trust-item">
+      <div class="ofc-metal-trust-icon" aria-hidden="true">⭐</div>
+      <div class="ofc-metal-trust-text">American Fence<br>Association Member</div>
     </div>
-    <div class="of-trust-item">
-      <div class="of-trust-icon" aria-hidden="true">🛡️</div>
-      <div class="of-trust-text">Licensed & Fully<br>Insured</div>
+    <div class="ofc-metal-trust-item">
+      <div class="ofc-metal-trust-icon" aria-hidden="true">🛡️</div>
+      <div class="ofc-metal-trust-text">Licensed & Fully<br>Insured</div>
     </div>
   </div>
 </section>
 
-<div class="of-metal-fencing">
+<div class="ofc-metal-metal-fencing">
 
 <!-- Section 1: Introduction / Value Proposition -->
-<section class="of-section" aria-labelledby="intro-heading">
+<section class="ofc-metal-section" aria-labelledby="intro-heading">
   <h2 id="intro-heading">Premium Ornamental Metal Fencing Built for New England Weather</h2>
   
   <p>For over 40 years, Olympic Fence has helped North Shore Massachusetts homeowners and businesses protect their properties with durable, beautiful metal fencing designed to withstand harsh coastal weather. Our ornamental aluminum and steel fencing solutions combine superior security with elegant aesthetics—without the constant maintenance required by traditional wood or iron fencing.</p>
@@ -1043,24 +1018,24 @@ Mobile/Responsive Improvements:
   
   <p>As a <a href="https://olympicfencema.com/about-us/">second-generation, family-owned business</a>, we treat every installation like we're working on our own property—because our reputation depends on it.</p>
   
-  <div class="of-cta-group" style="justify-content: center;">
-    <a href="https://olympicfencema.com/contact-us/" class="of-cta-button">Get Free Estimate</a>
-    <a href="tel:9789972302" class="of-cta-button of-cta-button-secondary">
+  <div class="ofc-metal-cta-group" style="justify-content: center;">
+    <a href="https://olympicfencema.com/contact-us/" class="ofc-metal-cta-button">Get Free Estimate</a>
+    <a href="tel:9789972302" class="ofc-metal-cta-button of-cta-button-secondary">
       <span aria-hidden="true">📞</span> Call (978) 997-2302
     </a>
   </div>
 </section>
 
 <!-- Section 2: Why Choose Aluminum & Steel Fencing -->
-<section class="of-section-alt" aria-labelledby="benefits-heading">
-  <div class="of-section-alt-inner">
+<section class="ofc-metal-section-alt" aria-labelledby="benefits-heading">
+  <div class="ofc-metal-section-alt-inner">
     <h2 id="benefits-heading">Why Choose Ornamental Aluminum & Steel Fencing?</h2>
     
-    <div class="of-two-col">
+    <div class="ofc-metal-two-col">
       <div>
         <h3 id="aluminum-benefits">Ornamental Aluminum Fencing Benefits</h3>
         
-        <ul class="of-benefits-list" aria-labelledby="aluminum-benefits">
+        <ul class="ofc-metal-benefits-list" aria-labelledby="aluminum-benefits">
           <li><strong>Rust-proof for coastal New England weather</strong>—Never corrodes in salt air or humidity</li>
           <li><strong>Zero maintenance required</strong>—Never needs painting, staining, or sealing</li>
           <li><strong>Lightweight but durable</strong>—Easy installation without sacrificing strength</li>
@@ -1076,29 +1051,29 @@ Mobile/Responsive Improvements:
       <div>
         <img src="https://olympicfencema.com/wp-content/uploads/2026/01/Before_After-Split-Screen-Front-Yard-Property-Line.jpg" 
              alt="Before and after aluminum fence installation: transformation from weathered wooden fence to elegant ornamental aluminum property line fence in Massachusetts" 
-             class="of-feature-image"
+             class="ofc-metal-feature-image"
              loading="lazy"
              width="600"
              height="400">
-        <p class="of-image-caption">Aluminum property line transformation—from weathered fence to elegant, maintenance-free boundary</p>
+        <p class="ofc-metal-image-caption">Aluminum property line transformation—from weathered fence to elegant, maintenance-free boundary</p>
       </div>
     </div>
     
-    <div class="of-two-col">
+    <div class="ofc-metal-two-col">
       <div>
         <img src="https://olympicfencema.com/wp-content/uploads/2026/01/Commercial_Detail-Shot.jpg" 
              alt="Close-up detail of ornamental steel fence showing superior construction, decorative finials, and professional welding craftsmanship" 
-             class="of-feature-image"
+             class="ofc-metal-feature-image"
              loading="lazy"
              width="600"
              height="400">
-        <p class="of-image-caption">Steel fence detail showing robust construction and ornamental design elements</p>
+        <p class="ofc-metal-image-caption">Steel fence detail showing robust construction and ornamental design elements</p>
       </div>
       
       <div>
         <h3 id="steel-benefits">Ornamental Steel Fencing Benefits</h3>
         
-        <ul class="of-benefits-list" aria-labelledby="steel-benefits">
+        <ul class="ofc-metal-benefits-list" aria-labelledby="steel-benefits">
           <li><strong>Superior strength for high-security</strong>—Strongest residential/commercial fencing option</li>
           <li><strong>Impact-resistant construction</strong>—Withstands vehicle contact and forced entry attempts</li>
           <li><strong>Custom ornamental designs</strong>—Intricate scrollwork and decorative elements</li>
@@ -1115,38 +1090,38 @@ Mobile/Responsive Improvements:
 </section>
 
 <!-- Section 3: Popular Styles & Applications -->
-<section class="of-section" aria-labelledby="styles-heading">
+<section class="ofc-metal-section" aria-labelledby="styles-heading">
   <h2 id="styles-heading">Custom Metal Fence Styles for Every Need</h2>
   
   <p>Olympic Fence offers ornamental aluminum and steel fencing for diverse applications across residential, commercial, and municipal properties throughout North Shore Massachusetts.</p>
   
-  <div class="of-styles-grid" role="list">
-    <article class="of-style-card" role="listitem">
+  <div class="ofc-metal-styles-grid" role="list">
+    <article class="ofc-metal-style-card" role="listitem">
       <h4>Residential Property Lines</h4>
       <p>Define boundaries with elegant aluminum or steel fencing that enhances curb appeal while providing security and privacy options.</p>
     </article>
     
-    <article class="of-style-card" role="listitem">
+    <article class="ofc-metal-style-card" role="listitem">
       <h4>Pool Enclosures</h4>
       <p>MA code-compliant <a href="https://olympicfencema.com/pool-fencing/">pool fencing</a> with self-closing gates, rust-proof aluminum construction, and proper picket spacing.</p>
     </article>
     
-    <article class="of-style-card" role="listitem">
+    <article class="ofc-metal-style-card" role="listitem">
       <h4>Pet Containment</h4>
       <p>Secure <a href="https://olympicfencema.com/dog-fencing/">dog fencing</a> with appropriate height and spacing to prevent escapes while maintaining yard visibility.</p>
     </article>
     
-    <article class="of-style-card" role="listitem">
+    <article class="ofc-metal-style-card" role="listitem">
       <h4>Commercial Security</h4>
       <p>Heavy-duty steel fencing for businesses requiring enhanced protection, access control, and professional appearance.</p>
     </article>
     
-    <article class="of-style-card" role="listitem">
+    <article class="ofc-metal-style-card" role="listitem">
       <h4>Municipal Facilities</h4>
       <p>Athletic fields, parks, and school perimeters with high-strength steel systems built for heavy use and long lifespans.</p>
     </article>
     
-    <article class="of-style-card" role="listitem">
+    <article class="ofc-metal-style-card" role="listitem">
       <h4>Garden & Decorative</h4>
       <p>Low ornamental aluminum fencing for garden beds, landscaping accents, and property feature highlighting.</p>
     </article>
@@ -1156,52 +1131,52 @@ Mobile/Responsive Improvements:
 </section>
 
 <!-- Section 4: Installation Process -->
-<section class="of-section-alt" aria-labelledby="process-heading">
-  <div class="of-section-alt-inner">
+<section class="ofc-metal-section-alt" aria-labelledby="process-heading">
+  <div class="ofc-metal-section-alt-inner">
     <h2 id="process-heading">Professional Installation Backed by Lifetime Workmanship Warranty</h2>
     
     <p>Olympic Fence's proven 4-step process ensures your ornamental aluminum or steel fence is installed correctly the first time, with transparent communication and expert guidance throughout.</p>
     
-    <div class="of-process-steps" role="list">
-      <article class="of-process-step" role="listitem">
-        <div class="of-step-number" aria-hidden="true">1</div>
+    <div class="ofc-metal-process-steps" role="list">
+      <article class="ofc-metal-process-step" role="listitem">
+        <div class="ofc-metal-step-number" aria-hidden="true">1</div>
         <h4>Free Consultation & Estimate</h4>
         <p>We visit your property to assess terrain, measure accurately, discuss material options, review your budget, and provide transparent pricing with no hidden fees. You'll understand exactly what you're getting and what it costs.</p>
       </article>
       
-      <article class="of-process-step" role="listitem">
-        <div class="of-step-number" aria-hidden="true">2</div>
+      <article class="ofc-metal-process-step" role="listitem">
+        <div class="ofc-metal-step-number" aria-hidden="true">2</div>
         <h4>Permit Assistance</h4>
         <p>Navigating Massachusetts fence regulations can be confusing. We help with height restrictions (6ft backyards, 3-4ft front yards), property line coordination, local permit applications, and compliance with town-specific codes.</p>
       </article>
       
-      <article class="of-process-step" role="listitem">
-        <div class="of-step-number" aria-hidden="true">3</div>
+      <article class="ofc-metal-process-step" role="listitem">
+        <div class="ofc-metal-step-number" aria-hidden="true">3</div>
         <h4>Expert Installation</h4>
         <p>Our professional crews respect your property, keep job sites clean, ensure proper post anchoring and panel alignment, and complete most projects in 2-4 days. As one customer noted: our team "never let the dog out" during installation.</p>
       </article>
       
-      <article class="of-process-step" role="listitem">
-        <div class="of-step-number" aria-hidden="true">4</div>
+      <article class="ofc-metal-process-step" role="listitem">
+        <div class="ofc-metal-step-number" aria-hidden="true">4</div>
         <h4>Lifetime Warranty & Support</h4>
         <p>Unlike competitors offering 2-3 year warranties, Olympic Fence backs every installation with a lifetime workmanship guarantee. We respond promptly to concerns and stand behind 40+ years of local reputation.</p>
       </article>
     </div>
     
-    <div class="of-cta-group">
-      <a href="https://olympicfencema.com/contact-us/" class="of-cta-button">Request Free Estimate</a>
+    <div class="ofc-metal-cta-group">
+      <a href="https://olympicfencema.com/contact-us/" class="ofc-metal-cta-button">Request Free Estimate</a>
     </div>
   </div>
 </section>
 
 <!-- Section 5: Aluminum vs Steel Comparison -->
-<section class="of-section" aria-labelledby="comparison-heading">
+<section class="ofc-metal-section" aria-labelledby="comparison-heading">
   <h2 id="comparison-heading">Choosing Between Aluminum and Steel Fencing</h2>
   
   <p>Both ornamental aluminum and steel fencing offer excellent durability and aesthetics, but each excels in different applications. This comparison helps you select the right material for your property needs and budget.</p>
   
-  <div class="of-table-wrapper" role="region" aria-labelledby="comparison-heading" tabindex="0">
-    <table class="of-comparison-table">
+  <div class="ofc-metal-table-wrapper" role="region" aria-labelledby="comparison-heading" tabindex="0">
+    <table class="ofc-metal-comparison-table">
       <thead>
         <tr>
           <th scope="col">Feature</th>
@@ -1245,65 +1220,65 @@ Mobile/Responsive Improvements:
   </div>
   
   <!-- Mobile-friendly comparison cards (hidden on desktop) -->
-  <div class="of-comparison-cards" aria-labelledby="comparison-heading">
-    <div class="of-comparison-card">
+  <div class="ofc-metal-comparison-cards" aria-labelledby="comparison-heading">
+    <div class="ofc-metal-comparison-card">
       <h4>Aluminum Fencing</h4>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Best For</span>
-        <span class="of-comparison-card-value">Pools, residential, coastal</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Best For</span>
+        <span class="ofc-metal-comparison-card-value">Pools, residential, coastal</span>
       </div>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Durability</span>
-        <span class="of-comparison-card-value">Rust-proof, lightweight</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Durability</span>
+        <span class="ofc-metal-comparison-card-value">Rust-proof, lightweight</span>
       </div>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Maintenance</span>
-        <span class="of-comparison-card-value">None required</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Maintenance</span>
+        <span class="ofc-metal-comparison-card-value">None required</span>
       </div>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Cost</span>
-        <span class="of-comparison-card-value">$20-30/ft installed</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Cost</span>
+        <span class="ofc-metal-comparison-card-value">$20-30/ft installed</span>
       </div>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Lifespan</span>
-        <span class="of-comparison-card-value">25+ years</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Lifespan</span>
+        <span class="ofc-metal-comparison-card-value">25+ years</span>
       </div>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Security</span>
-        <span class="of-comparison-card-value">Good (residential)</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Security</span>
+        <span class="ofc-metal-comparison-card-value">Good (residential)</span>
       </div>
     </div>
     
-    <div class="of-comparison-card">
+    <div class="ofc-metal-comparison-card">
       <h4>Steel Fencing</h4>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Best For</span>
-        <span class="of-comparison-card-value">High-security, commercial</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Best For</span>
+        <span class="ofc-metal-comparison-card-value">High-security, commercial</span>
       </div>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Durability</span>
-        <span class="of-comparison-card-value">Strongest, impact-resistant</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Durability</span>
+        <span class="ofc-metal-comparison-card-value">Strongest, impact-resistant</span>
       </div>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Maintenance</span>
-        <span class="of-comparison-card-value">Minimal inspection</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Maintenance</span>
+        <span class="ofc-metal-comparison-card-value">Minimal inspection</span>
       </div>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Cost</span>
-        <span class="of-comparison-card-value">$30-50/ft installed</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Cost</span>
+        <span class="ofc-metal-comparison-card-value">$30-50/ft installed</span>
       </div>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Lifespan</span>
-        <span class="of-comparison-card-value">30+ years</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Lifespan</span>
+        <span class="ofc-metal-comparison-card-value">30+ years</span>
       </div>
-      <div class="of-comparison-card-row">
-        <span class="of-comparison-card-label">Security</span>
-        <span class="of-comparison-card-value">Maximum (commercial)</span>
+      <div class="ofc-metal-comparison-card-row">
+        <span class="ofc-metal-comparison-card-label">Security</span>
+        <span class="ofc-metal-comparison-card-value">Maximum (commercial)</span>
       </div>
     </div>
   </div>
   
-  <aside class="of-decision-box" aria-labelledby="decision-guide">
+  <aside class="ofc-metal-decision-box" aria-labelledby="decision-guide">
     <h4 id="decision-guide">Quick Decision Guide</h4>
     <p><strong>Choose Aluminum if:</strong> You need pool safety fencing, want the lowest maintenance option, live in a coastal area with salt air, prefer a budget-conscious solution, or prioritize lightweight installation.</p>
     <p><strong>Choose Steel if:</strong> Maximum security is required, you have a commercial or municipal property, the fence faces high-impact risks, you want custom ornamental designs, or need the absolute strongest fencing available.</p>
@@ -1313,7 +1288,7 @@ Mobile/Responsive Improvements:
 </section>
 
 <!-- Section 6: Before & After Gallery -->
-<section class="of-section" aria-labelledby="gallery-heading">
+<section class="ofc-metal-section" aria-labelledby="gallery-heading">
   <h2 id="gallery-heading">See the Olympic Fence Difference</h2>
   
   <p>Real transformations from actual Olympic Fence installations across North Shore Massachusetts. These projects demonstrate our commitment to quality workmanship and customer satisfaction.</p>
@@ -1321,60 +1296,60 @@ Mobile/Responsive Improvements:
   <figure>
     <img src="https://olympicfencema.com/wp-content/uploads/2026/01/New-England-Ornamental-steel-fence.jpg" 
          alt="Professionally installed ornamental steel fence in New England featuring elegant curved top design, decorative finials, and expert powder-coated finish" 
-         class="of-feature-image"
+         class="ofc-metal-feature-image"
          loading="lazy"
          width="1200"
          height="600">
-    <figcaption class="of-image-caption">Custom ornamental steel fence installation featuring decorative elements and professional-grade construction</figcaption>
+    <figcaption class="ofc-metal-image-caption">Custom ornamental steel fence installation featuring decorative elements and professional-grade construction</figcaption>
   </figure>
   
   <figure>
     <img src="https://olympicfencema.com/wp-content/uploads/2026/01/Before_After-Split-Screen-Residential-Transformation.jpg" 
          alt="Before and after residential metal fence installation: dramatic property transformation from old wooden fence to modern black ornamental aluminum system" 
-         class="of-feature-image"
+         class="ofc-metal-feature-image"
          loading="lazy"
          width="1200"
          height="600">
-    <figcaption class="of-image-caption">Complete residential transformation—from outdated fencing to modern ornamental aluminum system installed in just 4 days</figcaption>
+    <figcaption class="ofc-metal-image-caption">Complete residential transformation—from outdated fencing to modern ornamental aluminum system installed in just 4 days</figcaption>
   </figure>
   
   <p><strong>Your project could be next.</strong> Olympic Fence has completed hundreds of aluminum and steel fence installations throughout Newburyport, Amesbury, Haverhill, and surrounding communities.</p>
   
-  <div class="of-cta-group">
-    <a href="https://olympicfencema.com/contact-us/" class="of-cta-button">Start Your Project</a>
+  <div class="ofc-metal-cta-group">
+    <a href="https://olympicfencema.com/contact-us/" class="ofc-metal-cta-button">Start Your Project</a>
   </div>
 </section>
 
 <!-- Section 7: Customer Reviews -->
-<section class="of-section-alt" aria-labelledby="reviews-heading">
-  <div class="of-section-alt-inner">
+<section class="ofc-metal-section-alt" aria-labelledby="reviews-heading">
+  <div class="ofc-metal-section-alt-inner">
     <h2 id="reviews-heading">What North Shore Homeowners Say About Olympic Fence</h2>
     
     <p>Real reviews from real customers who trusted Olympic Fence for their metal fencing needs. These testimonials reflect our commitment to quality, communication, and customer satisfaction.</p>
     
-    <div class="of-reviews-grid" role="list">
-      <article class="of-review-card" role="listitem">
-        <div class="of-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote class="of-review-text">
+    <div class="ofc-metal-reviews-grid" role="list">
+      <article class="ofc-metal-review-card" role="listitem">
+        <div class="ofc-metal-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote class="ofc-metal-review-text">
           "David and his team installed a new fence and removed the old fence for our pool area. They were able to fit our job into their schedule even quicker than estimated. The fence looks great, we will definitely use them again!"
         </blockquote>
-        <cite class="of-review-author">— Steve B.</cite>
+        <cite class="ofc-metal-review-author">— Steve B.</cite>
       </article>
       
-      <article class="of-review-card" role="listitem">
-        <div class="of-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote class="of-review-text">
+      <article class="ofc-metal-review-card" role="listitem">
+        <div class="ofc-metal-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote class="ofc-metal-review-text">
           "James and his team did a great job removing a badly installed vinyl fence, replacing with beautiful cedar! A fantastic job! Scheduling was easy and the job was done promptly! I am beyond pleased with my new fence and I appreciate the care they took in getting the job done right."
         </blockquote>
-        <cite class="of-review-author">— T. Rogers</cite>
+        <cite class="ofc-metal-review-author">— T. Rogers</cite>
       </article>
       
-      <article class="of-review-card" role="listitem">
-        <div class="of-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote class="of-review-text">
+      <article class="ofc-metal-review-card" role="listitem">
+        <div class="ofc-metal-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote class="ofc-metal-review-text">
           "James was a true professional. He was always on time, transparent in timeline and pricing. He was easy to work with and if you are looking for a fence you should look no further. The work was done really well and his crew kept the site clean as possible."
         </blockquote>
-        <cite class="of-review-author">— Eric T.</cite>
+        <cite class="ofc-metal-review-author">— Eric T.</cite>
       </article>
     </div>
     
@@ -1383,77 +1358,77 @@ Mobile/Responsive Improvements:
 </section>
 
 <!-- Section 8: FAQ Section with Collapsible Answers -->
-<section class="of-section" aria-labelledby="faq-heading">
+<section class="ofc-metal-section" aria-labelledby="faq-heading">
   <h2 id="faq-heading">Common Questions About Metal Fencing in Massachusetts</h2>
   
   <p>Get answers to frequently asked questions about ornamental aluminum and steel fencing for North Shore properties. Don't see your question? <a href="https://olympicfencema.com/contact-us/">Contact us</a> for personalized guidance.</p>
   
-  <div class="of-faq-list" role="list">
-    <div class="of-faq-item" role="listitem">
-      <button class="of-faq-question" 
+  <div class="ofc-metal-faq-list" role="list">
+    <div class="ofc-metal-faq-item" role="listitem">
+      <button class="ofc-metal-faq-question" 
               aria-expanded="false" 
               aria-controls="faq-answer-1"
               id="faq-question-1">
         <span>Do I need a permit for metal fencing in Massachusetts?</span>
-        <span class="of-faq-icon" aria-hidden="true">▼</span>
+        <span class="ofc-metal-faq-icon" aria-hidden="true">▼</span>
       </button>
-      <div class="of-faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
+      <div class="ofc-metal-faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
         <p>Most Massachusetts towns don't require permits for fences under 6 feet. Backyard fences are typically limited to 6 feet, front yards to 3-4 feet. Olympic Fence handles all permit applications and knows the specific requirements for every North Shore community we serve.</p>
       </div>
     </div>
     
-    <div class="of-faq-item" role="listitem">
-      <button class="of-faq-question" 
+    <div class="ofc-metal-faq-item" role="listitem">
+      <button class="ofc-metal-faq-question" 
               aria-expanded="false" 
               aria-controls="faq-answer-2"
               id="faq-question-2">
         <span>How long does metal fencing last in New England weather?</span>
-        <span class="of-faq-icon" aria-hidden="true">▼</span>
+        <span class="ofc-metal-faq-icon" aria-hidden="true">▼</span>
       </button>
-      <div class="of-faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2">
+      <div class="ofc-metal-faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2">
         <p><strong>Aluminum:</strong> 25+ years with virtually no maintenance—the powder-coated finish resists UV, moisture, and salt air.</p>
         <p><strong>Steel:</strong> 30+ years with minimal care—galvanized coatings prevent rust even in harsh coastal conditions.</p>
         <p>Both significantly outlast wood fencing (15-20 years) and require far less upkeep than traditional wrought iron.</p>
       </div>
     </div>
     
-    <div class="of-faq-item" role="listitem">
-      <button class="of-faq-question" 
+    <div class="ofc-metal-faq-item" role="listitem">
+      <button class="ofc-metal-faq-question" 
               aria-expanded="false" 
               aria-controls="faq-answer-3"
               id="faq-question-3">
         <span>How much does ornamental metal fencing cost?</span>
-        <span class="of-faq-icon" aria-hidden="true">▼</span>
+        <span class="ofc-metal-faq-icon" aria-hidden="true">▼</span>
       </button>
-      <div class="of-faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3">
+      <div class="ofc-metal-faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3">
         <p><strong>Aluminum:</strong> $20-30 per linear foot installed</p>
         <p><strong>Steel:</strong> $30-50 per linear foot installed</p>
         <p>Cost factors include fence height, style complexity, gates, and site conditions. Olympic Fence provides transparent written quotes with no hidden fees, and every installation includes our lifetime workmanship warranty.</p>
       </div>
     </div>
     
-    <div class="of-faq-item" role="listitem">
-      <button class="of-faq-question" 
+    <div class="ofc-metal-faq-item" role="listitem">
+      <button class="ofc-metal-faq-question" 
               aria-expanded="false" 
               aria-controls="faq-answer-4"
               id="faq-question-4">
         <span>Is metal fencing safe for pools?</span>
-        <span class="of-faq-icon" aria-hidden="true">▼</span>
+        <span class="ofc-metal-faq-icon" aria-hidden="true">▼</span>
       </button>
-      <div class="of-faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4">
+      <div class="ofc-metal-faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4">
         <p>Yes! Ornamental aluminum is excellent for pool enclosures and meets Massachusetts safety requirements. Key features include picket spacing under 4 inches, non-climbable surfaces, self-closing/self-latching gates, and rust-proof construction. We handle permits and ensure your fence passes inspection the first time.</p>
       </div>
     </div>
     
-    <div class="of-faq-item" role="listitem">
-      <button class="of-faq-question" 
+    <div class="ofc-metal-faq-item" role="listitem">
+      <button class="ofc-metal-faq-question" 
               aria-expanded="false" 
               aria-controls="faq-answer-5"
               id="faq-question-5">
         <span>What's included in your lifetime workmanship warranty?</span>
-        <span class="of-faq-icon" aria-hidden="true">▼</span>
+        <span class="ofc-metal-faq-icon" aria-hidden="true">▼</span>
       </button>
-      <div class="of-faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5">
+      <div class="ofc-metal-faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5">
         <p>Our lifetime warranty covers all installation-related issues for as long as you own your home: post stability, panel alignment, gate operation, and structural integrity. This far exceeds the 1-3 year warranties competitors offer. With 40+ years serving North Shore Massachusetts, we'll be here to honor our warranty.</p>
       </div>
     </div>
@@ -1461,28 +1436,28 @@ Mobile/Responsive Improvements:
 </section>
 
 <!-- Section 9: Service Area - Consolidated -->
-<section class="of-section" aria-labelledby="service-area-heading" style="padding-bottom: var(--of-space-lg);">
+<section class="ofc-metal-section" aria-labelledby="service-area-heading" style="padding-bottom: var(--ofc-space-lg);">
   <h2 id="service-area-heading">Serving North Shore Massachusetts & Beyond</h2>
   
-  <p style="text-align: center; max-width: 800px; margin: 0 auto var(--of-space-md) auto;">Professional ornamental metal fence installation within a <strong>30-mile radius</strong> of West Newbury, MA (70 miles for commercial/municipal projects).</p>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto var(--ofc-space-md) auto;">Professional ornamental metal fence installation within a <strong>30-mile radius</strong> of West Newbury, MA (70 miles for commercial/municipal projects).</p>
   
-  <p style="text-align: center; color: var(--of-light-text); font-size: var(--of-text-base);">
+  <p style="text-align: center; color: var(--ofc-text-light); font-size: var(--ofc-text-base);">
     <strong>Featured Areas:</strong> Newburyport • Amesbury • Haverhill • North Andover • Salisbury • Beverly • Groveland • Salem • Gloucester • Merrimac • Georgetown • Boxford • Topsfield • Rowley • West Newbury
   </p>
   
-  <p style="text-align: center; margin-top: var(--of-space-sm);"><a href="https://olympicfencema.com/contact-us/">Contact us</a> to confirm service availability for your location.</p>
+  <p style="text-align: center; margin-top: var(--ofc-space-sm);"><a href="https://olympicfencema.com/contact-us/">Contact us</a> to confirm service availability for your location.</p>
 </section>
 
 <!-- Final CTA Section with AM Connect Form -->
-<section class="of-final-cta" aria-labelledby="cta-heading">
-  <div class="of-final-cta-inner">
+<section class="ofc-metal-final-cta" aria-labelledby="cta-heading">
+  <div class="ofc-metal-final-cta-inner">
     <h2 id="cta-heading">Ready for a Metal Fence That Lasts Decades?</h2>
     
     <p>Get your free estimate from North Shore Massachusetts' most trusted fencing contractor. Olympic Fence delivers professional installation, transparent pricing, and a lifetime workmanship warranty that exceeds industry standards.</p>
     
-    <div class="of-contact-form">
+    <div class="ofc-metal-contact-form">
       <h3>Get Your Free Estimate</h3>
-      <p style="text-align: center; color: var(--of-light-text); margin-bottom: var(--of-space-md); font-size: var(--of-text-base);">Fill out the form below and we'll respond the same day during business hours.</p>
+      <p style="text-align: center; color: var(--ofc-text-light); margin-bottom: var(--ofc-space-md); font-size: var(--ofc-text-base);">Fill out the form below and we'll respond the same day during business hours.</p>
       
       <!-- AM Connect Form Embed -->
       <div style="width:100%;min-height:1100px;">
@@ -1491,22 +1466,22 @@ Mobile/Responsive Improvements:
       </div>
     </div>
     
-    <div class="of-footer-info">
+    <div class="ofc-metal-footer-info">
       <p><strong>Or call us directly:</strong></p>
-      <p class="of-footer-phone">
+      <p class="ofc-metal-footer-phone">
         <a href="tel:9789972302" aria-label="Call Olympic Fence at 978-997-2302">
           <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(978) 997-2302
         </a>
       </p>
       
-      <div class="of-footer-divider">
+      <div class="ofc-metal-footer-divider">
         <p><strong>Olympic Fence Company</strong></p>
         <p>81 Garden St, West Newbury, MA 01985</p>
         <p>Email: <a href="mailto:jlapierre@olympicfencema.com" style="color: #ffffff !important; text-decoration: underline;">jlapierre@olympicfencema.com</a></p>
       </div>
       
       <div style="margin-top: 1.5rem;">
-        <p class="of-footer-checklist">
+        <p class="ofc-metal-footer-checklist">
           ✓ Free, no-obligation quotes<br>
           ✓ Licensed & insured contractors<br>
           ✓ Lifetime workmanship warranty<br>
@@ -1527,7 +1502,7 @@ Mobile/Responsive Improvements:
   
   // Initialize FAQ functionality
   function initFAQ() {
-    const faqButtons = document.querySelectorAll('.of-faq-question');
+    const faqButtons = document.querySelectorAll('.ofc-metal-faq-question');
     
     faqButtons.forEach(function(button) {
       button.addEventListener('click', function() {
@@ -1550,7 +1525,7 @@ Mobile/Responsive Improvements:
     const isExpanded = button.getAttribute('aria-expanded') === 'true';
     
     // Close all other FAQs
-    document.querySelectorAll('.of-faq-question').forEach(function(btn) {
+    document.querySelectorAll('.ofc-metal-faq-question').forEach(function(btn) {
       if (btn !== button) {
         btn.setAttribute('aria-expanded', 'false');
         const otherAnswerId = btn.getAttribute('aria-controls');
@@ -1579,7 +1554,6 @@ Mobile/Responsive Improvements:
 
 <!-- Preconnect for external resources -->
 <link rel="preconnect" href="https://link.amconnect.io" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 
 <!-- Schema Markup for SEO - Service -->
 <script type="application/ld+json">
@@ -1605,8 +1579,8 @@ Mobile/Responsive Improvements:
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "42.8057",
-      "longitude": "-71.0047"
+      "latitude": "42.8034",
+      "longitude": "-70.9617"
     },
     "url": "https://olympicfencema.com",
     "priceRange": "$$",
@@ -1632,8 +1606,8 @@ Mobile/Responsive Improvements:
     "@type": "GeoCircle",
     "geoMidpoint": {
       "@type": "GeoCoordinates",
-      "latitude": "42.8057",
-      "longitude": "-71.0047"
+      "latitude": "42.8034",
+      "longitude": "-70.9617"
     },
     "geoRadius": "30"
   },
