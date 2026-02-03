@@ -1,0 +1,682 @@
+<!-- 
+NEWBURYPORT LOCATION PAGE CONTENT - UPDATED
+For placement in right column below hero, above footer
+Target: ~1800 words
+Brand Colors: #b7254d (primary red), #0e3160 (navy), #ffffff (white)
+
+CHANGES MADE:
+1. Trust section moved to top (under intro/hero)
+2. Benefit cards forced to single row on desktop
+3. Phone number updated to (978) 961-4513
+
+FONTS REQUIRED - Add to page <head>:
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+-->
+
+<style>
+/* Newburyport Location Page Styles */
+.kealeys-newburyport-content {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.7;
+    max-width: 100%;
+}
+
+.kealeys-newburyport-content h2 {
+    font-family: 'Manrope', sans-serif;
+    color: #0e3160;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1.5rem 0;
+    line-height: 1.3;
+}
+
+.kealeys-newburyport-content h3 {
+    font-family: 'Manrope', sans-serif;
+    color: #0e3160;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+}
+
+.kealeys-newburyport-intro {
+    background: linear-gradient(135deg, #0e3160 0%, #1a4a8a 100%);
+    color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 12px rgba(14, 49, 96, 0.15);
+}
+
+.kealeys-newburyport-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+.kealeys-newburyport-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.kealeys-cta-button {
+    display: inline-block;
+    background-color: #b7254d;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(183, 37, 77, 0.3);
+}
+
+.kealeys-cta-button:hover {
+    background-color: #8f1d3d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(183, 37, 77, 0.4);
+    color: #ffffff;
+}
+
+.kealeys-image-container {
+    margin: 2.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.kealeys-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* UPDATED: Benefits grid forced to single row on desktop */
+.kealeys-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.kealeys-benefit-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #b7254d;
+    transition: all 0.3s ease;
+}
+
+.kealeys-benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.kealeys-benefit-card h3 {
+    font-family: 'Manrope', sans-serif;
+    color: #0e3160;
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.kealeys-trust-section {
+    background: linear-gradient(135deg, #b7254d 0%, #d63563 100%);
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.kealeys-trust-section h2 {
+    font-family: 'Manrope', sans-serif;
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.kealeys-trust-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.kealeys-stat {
+    text-align: center;
+}
+
+.kealeys-stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.kealeys-stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* FAQ Section with Dropdown */
+.kealeys-faq-section {
+    margin: 2.5rem 0;
+}
+
+.kealeys-faq-section h2 {
+    font-family: 'Manrope', sans-serif;
+}
+
+.kealeys-faq-item {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.kealeys-faq-item:hover {
+    border-color: #b7254d;
+}
+
+.kealeys-faq-question {
+    font-family: 'Manrope', sans-serif;
+    background: #f8f9fa;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #0e3160;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.kealeys-faq-question:hover {
+    background: #e9ecef;
+}
+
+.kealeys-faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #b7254d;
+    transition: transform 0.3s ease;
+}
+
+.kealeys-faq-question.active::after {
+    transform: rotate(45deg);
+}
+
+.kealeys-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 1.25rem;
+}
+
+.kealeys-faq-answer.active {
+    max-height: 1000px;
+    padding: 1rem 1.25rem;
+}
+
+.kealeys-faq-answer p {
+    margin: 0 0 0.75rem 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.kealeys-faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.kealeys-map-container {
+    margin: 3rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.kealeys-map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .kealeys-benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .kealeys-benefit-card {
+        padding: 1.5rem;
+    }
+    
+    .kealeys-benefit-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .kealeys-newburyport-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .kealeys-newburyport-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .kealeys-newburyport-intro,
+    .kealeys-trust-section {
+        padding: 1.5rem;
+    }
+    
+    /* Stack cards on mobile */
+    .kealeys-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .kealeys-trust-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .kealeys-stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .kealeys-map-container iframe {
+        height: 350px;
+    }
+}
+</style>
+
+<div class="kealeys-newburyport-content">
+
+    <!-- Introduction Section -->
+    <div class="kealeys-newburyport-intro">
+        <p>Newburyport's historic coastal charm comes with unique challenges - salt air, humidity, and centuries-old homes all impact your indoor air quality and home safety. Since 1994, Kealey's Duct and Dryer Cleaning Service has been protecting Newburyport families with thorough, professional <a href="https://bkductdryercleaning.com/air-duct-cleaning/" style="color: #ffffff; text-decoration: underline;">air duct cleaning</a> and <a href="https://bkductdryercleaning.com/dryer-vent-cleaning/" style="color: #ffffff; text-decoration: underline;">dryer vent cleaning</a> services.</p>
+        
+        <p>Our family-owned business combines mechanical engineering expertise with genuine care for your home. Whether you're in the historic downtown, along the waterfront, or in the expanding neighborhoods, we deliver the meticulous service that's earned us a 5-star reputation across the North Shore.</p>
+    </div>
+
+    <!-- MOVED: Trust Section Now At Top (Under Hero/Intro) -->
+    <div class="kealeys-trust-section">
+        <h2>Trusted by Newburyport Families Since 1994</h2>
+        <div class="kealeys-trust-stats">
+            <div class="kealeys-stat">
+                <span class="kealeys-stat-number">30+</span>
+                <span class="kealeys-stat-label">Years Serving North Shore</span>
+            </div>
+            <div class="kealeys-stat">
+                <span class="kealeys-stat-number">5★</span>
+                <span class="kealeys-stat-label">Average Customer Rating</span>
+            </div>
+            <div class="kealeys-stat">
+                <span class="kealeys-stat-number">100%</span>
+                <span class="kealeys-stat-label">Family-Owned & Operated</span>
+            </div>
+        </div>
+        <a href="https://bkductdryercleaning.com/about/" class="kealeys-cta-button">Learn About Our Family Business</a>
+    </div>
+
+    <!-- Coastal Home Context Image -->
+    <div class="kealeys-image-container">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Newburyport-Coastal-Home-Context.jpg" alt="Newburyport coastal homes requiring specialized duct cleaning services" loading="lazy">
+    </div>
+
+    <!-- Why Newburyport Homeowners Need Professional Cleaning -->
+    <h2>Why Newburyport Homes Need Specialized Duct and Dryer Vent Cleaning</h2>
+    
+    <p>Newburyport's coastal location creates specific challenges for homeowners. The combination of salt air, seasonal humidity fluctuations, and the prevalence of historic properties means your HVAC system and dryer vents face unique stresses that require professional attention.</p>
+    
+    <!-- UPDATED: Benefits grid now forces 3 columns on desktop -->
+    <div class="kealeys-benefits-grid">
+        <div class="kealeys-benefit-card">
+            <h3>Combat Coastal Moisture</h3>
+            <p>Salt air and humidity accelerate dust accumulation and can promote mold growth in ductwork. Regular professional cleaning protects your indoor air quality and prevents moisture-related damage.</p>
+        </div>
+        
+        <div class="kealeys-benefit-card">
+            <h3>Historic Home Considerations</h3>
+            <p>Many Newburyport homes feature older HVAC systems or challenging ductwork configurations. Our 30+ years of experience means we understand how to clean these systems thoroughly without causing damage.</p>
+        </div>
+        
+        <div class="kealeys-benefit-card">
+            <h3>Fire Prevention Priority</h3>
+            <p>Coastal humidity can cause dryer lint to compact more densely, creating serious fire hazards. Professional dryer vent cleaning is essential - the U.S. Fire Administration reports that failure to clean is the leading cause of dryer fires.</p>
+        </div>
+    </div>
+
+    <p>Understanding these local factors, we've adapted our services specifically for Newburyport's unique needs, ensuring your home receives the specialized care it deserves.</p>
+
+    <!-- Air Duct Cleaning Benefits -->
+    <h2>Professional Air Duct Cleaning Benefits for Newburyport Residents</h2>
+    
+    <p>Professional <a href="https://bkductdryercleaning.com/air-duct-cleaning/">air duct cleaning</a> delivers measurable improvements to your home's health, comfort, and efficiency. Here's what Newburyport homeowners can expect:</p>
+
+    <h3>Dramatically Improved Indoor Air Quality</h3>
+    <p>Research published in the International Journal of Environmental Research and Public Health confirms that professional HVAC duct cleaning significantly reduces airborne particulate matter and bioaerosols. This is especially important in Newburyport, where coastal air quality combined with indoor dust can impact respiratory health.</p>
+    
+    <p>Clean air ducts eliminate accumulated dust, mold spores, pet dander, and other allergens that circulate through your home. For families with allergies or respiratory conditions, this improvement can be life-changing. Many of our Newburyport clients report noticeable relief from allergy symptoms within days of professional cleaning.</p>
+
+    <!-- Before & After Image -->
+    <div class="kealeys-image-container">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Before_After-Air-Duct-Cleaning.jpg" alt="Before and after professional air duct cleaning in Newburyport MA" loading="lazy">
+    </div>
+
+    <h3>Lower Energy Bills Through HVAC Efficiency</h3>
+    <p>When ducts are clogged with debris, your HVAC system works significantly harder to maintain comfortable temperatures. This increased strain leads to higher energy consumption and accelerated system wear. Professional duct cleaning restores optimal airflow, allowing your system to operate efficiently.</p>
+    
+    <p>For Newburyport homeowners, this efficiency gain translates to lower monthly utility costs and extended equipment lifespan - protecting your investment in your home's comfort systems.</p>
+
+    <h3>EPA Guidelines for When Cleaning Is Needed</h3>
+    <p>The EPA recommends professional duct cleaning when specific conditions exist - visible mold growth, substantial pest infestation, or excessive dust and debris. Additionally, cleaning is beneficial after home renovations, when purchasing an older home, or if occupants experience unexplained respiratory issues.</p>
+    
+    <p>Our free inspection helps Newburyport homeowners determine if cleaning is necessary. We'll never recommend services you don't need - our reputation is built on honesty and transparency. <a href="https://bkductdryercleaning.com/when-to-clean-air-ducts-insights-from-the-epa-for-2025/" style="color: #b7254d;">Learn more about EPA guidelines for air duct cleaning</a>.</p>
+
+    <!-- Dryer Vent Cleaning Section -->
+    <h2>Critical Dryer Vent Cleaning for Fire Prevention</h2>
+    
+    <p>Dryer vent cleaning isn't just about efficiency - it's about protecting your family and property from fire hazards. <a href="https://bkductdryercleaning.com/dryer-vent-cleaning/">Professional dryer vent cleaning</a> is one of the most important safety services homeowners can schedule.</p>
+
+    <!-- Dryer Cleaning Process Image -->
+    <div class="kealeys-image-container">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Dryer-Cleaning-in-Process.jpg" alt="Professional dryer vent cleaning process in Newburyport" loading="lazy">
+    </div>
+
+    <h3>Understanding the Fire Risk</h3>
+    <p>Lint is highly flammable. When it accumulates in dryer vents, it restricts airflow and causes the dryer to overheat. The U.S. Fire Administration reports thousands of dryer fires annually, with failure to clean being the leading cause. In Newburyport's humid coastal environment, lint can compact more densely, potentially increasing fire risk.</p>
+    
+    <p>Warning signs include clothes taking multiple cycles to dry, the dryer feeling unusually hot to the touch, a burning smell during operation, or excessive lint visible around the dryer. If you notice any of these signs, immediate professional cleaning is essential.</p>
+
+    <h3>Recommended Cleaning Frequency</h3>
+    <p>Most Newburyport households should schedule professional dryer vent cleaning annually. However, larger families, those with pets (pet hair accelerates lint accumulation), or households that use the dryer frequently may need service every 6-9 months. <a href="https://bkductdryercleaning.com/how-often-to-clean-dryer-vents-fire-prevention-tips-2026/" style="color: #b7254d;">Read our complete guide to dryer vent cleaning frequency</a>.</p>
+    
+    <p>Regular maintenance not only prevents fires but also improves dryer efficiency, reduces energy consumption, and extends the appliance's lifespan - saving you money while keeping your family safe.</p>
+
+    <!-- Pricing and Process Section -->
+    <h2>Transparent Pricing and Professional Process</h2>
+    
+    <h3>What Newburyport Homeowners Can Expect</h3>
+    <p>We believe in honest, upfront pricing with no hidden fees. Our costs reflect the thoroughness of our service and our commitment to quality:</p>
+    
+    <ul style="margin: 1.5rem 0; line-height: 2;">
+        <li><strong>Residential Air Duct Cleaning:</strong> Typically $300-$500, depending on home size and system complexity</li>
+        <li><strong>Dryer Vent Cleaning:</strong> Generally $100-$200, based on vent length and accessibility</li>
+        <li><strong>Commercial Services:</strong> Custom pricing based on system size and building requirements</li>
+    </ul>
+    
+    <p>Every job begins with a thorough inspection. We assess your specific needs and provide a detailed estimate before beginning any work. No surprises, no pressure - just honest recommendations based on 30+ years of experience.</p>
+
+    <h3>Our Professional Cleaning Process</h3>
+    <p>For air duct cleaning, we use high-powered vacuums and specialized brushes to thoroughly clean every component of your system. Video inspection tools allow us to show you the before-and-after condition of your ductwork - providing visual proof of our thoroughness.</p>
+    
+    <p>Dryer vent cleaning typically takes about an hour. We inspect the entire venting system, remove all lint and debris using specialized tools, verify proper airflow, and provide recommendations for ongoing maintenance. You'll receive a detailed report on your system's condition.</p>
+    
+    <p>Our No-Mess Promise means we protect your home during the service and leave your workspace cleaner than we found it. This attention to detail is why Newburyport families trust us year after year.</p>
+
+    <!-- Service Area -->
+    <h2>Comprehensive Coverage Throughout Newburyport and Surrounding Areas</h2>
+    
+    <p>We proudly serve all Newburyport neighborhoods - from the historic downtown and waterfront districts to newer developments throughout the city. Our <a href="https://bkductdryercleaning.com/services-area/">service area</a> extends throughout Essex County and into southern New Hampshire, ensuring quick response times for all our clients.</p>
+    
+    <p>Whether you're a homeowner seeking residential services or a property manager needing commercial duct cleaning for multi-unit buildings, we have the experience and equipment to handle projects of any size. Our understanding of local building codes and the unique characteristics of North Shore properties ensures code-compliant, effective service.</p>
+
+    <!-- FAQ Section with Dropdown -->
+    <div class="kealeys-faq-section">
+        <h2>Frequently Asked Questions About Duct and Dryer Vent Cleaning in Newburyport</h2>
+        
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                How often should I have my air ducts cleaned in Newburyport?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>The EPA recommends cleaning when specific conditions exist rather than on a fixed schedule. However, most Newburyport homes benefit from professional cleaning every 3-5 years. Homes with pets, allergies, recent renovations, or located in high-humidity coastal areas may need more frequent service.</p>
+                <p>We offer free inspections to assess your specific needs - we'll never recommend services you don't need. <a href="https://bkductdryercleaning.com/when-to-clean-air-ducts-insights-from-the-epa-for-2025/" style="color: #b7254d;">Read more about EPA guidelines</a>.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                Will duct cleaning really improve my home's air quality?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>Yes. Research published in peer-reviewed journals confirms that professional HVAC duct cleaning significantly reduces airborne particulate matter and bioaerosols. Many Newburyport clients report noticeable improvements in allergy symptoms and overall air freshness.</p>
+                <p>The extent of improvement depends on the initial condition of your ducts. During our inspection, we can show you the current state of your system and explain what results you can expect.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                How do I know if my dryer vent needs cleaning?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>Warning signs include: clothes taking longer than one cycle to dry, the dryer feeling unusually hot, a burning smell during operation, excessive lint around the dryer area, or the outside vent flap not opening properly during use.</p>
+                <p>Even without these warning signs, annual professional cleaning is recommended for fire prevention and efficiency. <a href="https://bkductdryercleaning.com/how-often-to-clean-dryer-vents-fire-prevention-tips-2026/" style="color: #b7254d;">Learn more about dryer vent maintenance</a>.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                What makes Kealey's different from other duct cleaning services?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>We're a family-owned business with 30+ years of experience serving North Shore communities. Our owner has a mechanical engineering background, ensuring technically sound service. We offer transparent pricing, visual proof of our work through before-and-after documentation, and a No-Mess Promise.</p>
+                <p>Most importantly, we never recommend unnecessary services. Our reputation is built on honesty - we've earned 5-star ratings by treating every Newburyport home as if it were our own. <a href="https://bkductdryercleaning.com/about/" style="color: #b7254d;">Learn more about our family business</a>.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                Do you serve both residential and commercial properties in Newburyport?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>Yes. We provide comprehensive duct and dryer vent cleaning for residential homes, multi-unit properties, and commercial buildings throughout Newburyport. Our experience includes historic properties, newer construction, and everything in between.</p>
+                <p>Commercial property managers appreciate our flexible scheduling, thorough documentation for compliance purposes, and our ability to work efficiently with minimal disruption to occupants.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                Is professional duct cleaning necessary after home renovations?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>Absolutely. Construction dust, drywall particles, and debris can infiltrate your HVAC system during renovations, circulating throughout your home for months or years. Professional cleaning after renovation removes these contaminants before they affect your air quality.</p>
+                <p>This is especially important for Newburyport's historic homes undergoing restoration or modernization - protecting your investment while ensuring healthy indoor air. <a href="https://bkductdryercleaning.com/essential-air-duct-cleaning-for-pet-owners-in-north-shore-ma/" style="color: #b7254d;">Learn about other situations requiring professional cleaning</a>.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                How long does the cleaning process take?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>Dryer vent cleaning typically takes 45 minutes to an hour. Full air duct cleaning for an average home takes 2-4 hours, depending on the size of your system and the extent of cleaning needed.</p>
+                <p>We work efficiently while maintaining our commitment to thoroughness. You're welcome to be present during the service - many Newburyport clients appreciate seeing the before-and-after results firsthand.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="kealeys-newburyport-intro" style="margin-top: 3rem; text-align: center;">
+        <h2 style="color: #ffffff; margin-top: 0;">Schedule Your Free Inspection Today</h2>
+        <p>Protect your Newburyport home with professional duct and dryer vent cleaning from a family business that's served the North Shore for over 30 years. We offer free, no-obligation inspections and transparent pricing.</p>
+        <p><strong>Call us at <a href="tel:9789614513" style="color: #ffffff; text-decoration: underline;">(978) 961-4513</a> or request your free quote online.</strong></p>
+        <a href="https://bkductdryercleaning.com/contact/" class="kealeys-cta-button">Get Your Free Quote</a>
+    </div>
+
+    <!-- Map Section -->
+    <div class="kealeys-map-container">
+        <h2 style="margin-bottom: 1.5rem;">Proudly Serving Newburyport, MA</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46828.30263240471!2d-70.91428189896021!3d42.81436911528021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2e109acaea8db%3A0x5508797887c45490!2sNewburyport%2C%20MA!5e0!3m2!1sen!2sus!4v1768864026645!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</div>
+
+<!-- FAQ Dropdown JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.kealeys-faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const isActive = this.classList.contains('active');
+            
+            // Close all other FAQs
+            faqQuestions.forEach(q => {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+            });
+            
+            // Toggle current FAQ
+            if (!isActive) {
+                this.classList.add('active');
+                answer.classList.add('active');
+            }
+        });
+    });
+});
+</script>
+
+<!-- Schema Markup for LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kealey's Duct and Dryer Cleaning Service",
+  "image": "https://bkductdryercleaning.com/wp-content/uploads/2026/01/Before_After-Air-Duct-Cleaning.jpg",
+  "@id": "https://bkductdryercleaning.com/newburyport-ma/",
+  "url": "https://bkductdryercleaning.com/newburyport-ma/",
+  "telephone": "(978) 961-4513",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9 Del Logan Drive",
+    "addressLocality": "Salisbury",
+    "addressRegion": "MA",
+    "postalCode": "01952",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.8143691,
+    "longitude": -70.9142818
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/kealeysdryerventcleaning/"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "83"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Newburyport",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Newburyport",
+      "addressRegion": "MA",
+      "addressCountry": "US"
+    }
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.8143691,
+      "longitude": -70.9142818
+    },
+    "geoRadius": "25000"
+  }
+}
+</script>
+
+<!-- Schema Markup for FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often should I have my air ducts cleaned in Newburyport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The EPA recommends cleaning when specific conditions exist rather than on a fixed schedule. However, most Newburyport homes benefit from professional cleaning every 3-5 years. Homes with pets, allergies, recent renovations, or located in high-humidity coastal areas may need more frequent service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will duct cleaning really improve my home's air quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Research published in peer-reviewed journals confirms that professional HVAC duct cleaning significantly reduces airborne particulate matter and bioaerosols. Many Newburyport clients report noticeable improvements in allergy symptoms and overall air freshness."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if my dryer vent needs cleaning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Warning signs include: clothes taking longer than one cycle to dry, the dryer feeling unusually hot, a burning smell during operation, excessive lint around the dryer area, or the outside vent flap not opening properly during use. Even without these warning signs, annual professional cleaning is recommended for fire prevention and efficiency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Kealey's different from other duct cleaning services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kealey's is a family-owned business with 30+ years of experience serving North Shore communities. The owner has a mechanical engineering background, ensuring technically sound service. They offer transparent pricing, visual proof of work through before-and-after documentation, and a No-Mess Promise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you serve both residential and commercial properties in Newburyport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Kealey's provides comprehensive duct and dryer vent cleaning for residential homes, multi-unit properties, and commercial buildings throughout Newburyport, including historic properties and newer construction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is professional duct cleaning necessary after home renovations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Construction dust, drywall particles, and debris can infiltrate your HVAC system during renovations, circulating throughout your home for months or years. Professional cleaning after renovation removes these contaminants before they affect your air quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the cleaning process take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dryer vent cleaning typically takes 45 minutes to an hour. Full air duct cleaning for an average home takes 2-4 hours, depending on the size of your system and the extent of cleaning needed."
+      }
+    }
+  ]
+}
+</script>
