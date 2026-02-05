@@ -955,6 +955,54 @@
     line-height: 1.7 !important;
   }
 
+  /* ===== BOOKING NOTE / MID-SECTION CTA ===== */
+  .amc-re-booking-note {
+    text-align: center !important;
+    margin-top: 48px !important;
+    padding-top: 32px !important;
+    border-top: 1px solid #e5e7eb !important;
+  }
+
+  .amc-re-booking-note p {
+    color: #888 !important;
+    font-size: 15px !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .amc-re-services-list-wrapper {
+    margin-bottom: 0 !important;
+  }
+
+  /* Single featured card - full width */
+  .amc-re-pricing-grid:has(.amc-re-pricing-card:only-child) {
+    grid-template-columns: 1fr !important;
+    max-width: 600px !important;
+    margin: 0 auto 60px auto !important;
+  }
+
+  .amc-re-tours-grid:has(.amc-re-tours-card:only-child) {
+    grid-template-columns: 1fr !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-re-tours-card:only-child {
+    padding: 36px !important;
+  }
+
+  .amc-re-tours-card:only-child h4 {
+    font-size: 22px !important;
+    color: #1a2b4a !important;
+    margin-bottom: 12px !important;
+  }
+
+  .amc-re-tours-card:only-child .amc-re-tours-card-includes {
+    font-size: 15px !important;
+    color: #555 !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+  }
+
   /* ===== RESPONSIVE ===== */
   @media (max-width: 1024px) {
     .amc-re-gallery-grid {
@@ -1005,6 +1053,11 @@
 
     .amc-re-headline {
       font-size: 28px !important;
+    }
+
+    .amc-re-pricing-grid:has(.amc-re-pricing-card:only-child),
+    .amc-re-tours-grid:has(.amc-re-tours-card:only-child) {
+      max-width: 100% !important;
     }
 
     .amc-re-pricing-grid,
@@ -1078,9 +1131,9 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
         Agent Login
       </a>
-      <a href="mailto:info@amcreativemktg.com?subject=Real%20Estate%20Photo%20Shoot%20Request" class="amc-re-btn amc-re-btn-secondary">
+      <a href="https://property.listingmedia.io/view/default.asp?s=1935720" class="amc-re-btn amc-re-btn-secondary" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m3 8 9 6 9-6"/></svg>
-        Request a Shoot
+        Book a Shoot
       </a>
     </div>
   </div>
@@ -1135,7 +1188,7 @@
   </div>
 </section>
 
-<!-- ===== PHOTOGRAPHY PRICING ===== -->
+<!-- ===== PHOTOGRAPHY ===== -->
 <section class="amc-re-pricing">
   <div class="amc-re-pricing-container">
     <div class="amc-re-section-header">
@@ -1143,43 +1196,55 @@
       <h2 class="amc-re-headline">Professional Listing Photos</h2>
     </div>
     <div class="amc-re-pricing-grid">
-      <div class="amc-re-pricing-card">
-        <h4 class="amc-re-pricing-title">0-2,000 Sq Ft</h4>
-        <p class="amc-re-pricing-desc">Premium photos inside and out</p>
-        <div class="amc-re-pricing-amount">$285</div>
-      </div>
       <div class="amc-re-pricing-card featured">
-        <h4 class="amc-re-pricing-title">2,000-3,000 Sq Ft</h4>
-        <p class="amc-re-pricing-desc">Professional, stunning photos</p>
-        <div class="amc-re-pricing-amount">$325</div>
+        <h4 class="amc-re-pricing-title">Photos Starting at $285</h4>
+        <p class="amc-re-pricing-desc">Premium interior and exterior photography that showcases every listing at its best. Packages scaled to property size.</p>
       </div>
-      <div class="amc-re-pricing-card">
-        <h4 class="amc-re-pricing-title">3,000-5,000 Sq Ft</h4>
-        <p class="amc-re-pricing-desc">Expertly crafted imagery</p>
-        <div class="amc-re-pricing-amount">$425</div>
+    </div>
+
+    <div class="amc-re-services-list-wrapper">
+      <h3 class="amc-re-photo-addons-title">What's Included</h3>
+      <div class="amc-re-photo-addons-grid">
+        <div class="amc-re-photo-addon-item">
+          <span class="amc-re-photo-addon-name">Interior & Exterior Photos</span>
+          <span class="amc-re-photo-addon-note">Professional, HDR-quality imagery</span>
+        </div>
+        <div class="amc-re-photo-addon-item">
+          <span class="amc-re-photo-addon-name">All Property Sizes</span>
+          <span class="amc-re-photo-addon-note">Packages for every listing</span>
+        </div>
+        <div class="amc-re-photo-addon-item">
+          <span class="amc-re-photo-addon-name">Fast Turnaround</span>
+          <span class="amc-re-photo-addon-note">24-48 hour delivery</span>
+        </div>
       </div>
     </div>
 
     <!-- Photography Add-Ons -->
     <div class="amc-re-photo-addons">
-      <h3 class="amc-re-photo-addons-title">Photography Add-Ons</h3>
+      <h3 class="amc-re-photo-addons-title">Available Add-Ons</h3>
       <div class="amc-re-photo-addons-grid">
         <div class="amc-re-photo-addon-item">
           <span class="amc-re-photo-addon-name">Floor Plans</span>
-          <span class="amc-re-photo-addon-note">Up to 4,000 sq ft</span>
-          <span class="amc-re-photo-addon-price">+$120</span>
+          <span class="amc-re-photo-addon-note">Professional layout diagrams</span>
         </div>
         <div class="amc-re-photo-addon-item">
           <span class="amc-re-photo-addon-name">Aerial Photos</span>
           <span class="amc-re-photo-addon-note">Drone photography</span>
-          <span class="amc-re-photo-addon-price">+$85</span>
         </div>
         <div class="amc-re-photo-addon-item">
           <span class="amc-re-photo-addon-name">Twilight Photos</span>
-          <span class="amc-re-photo-addon-note">Golden hour magic</span>
-          <span class="amc-re-photo-addon-price">+$30</span>
+          <span class="amc-re-photo-addon-note">Golden hour exteriors</span>
         </div>
       </div>
+    </div>
+
+    <div class="amc-re-booking-note">
+      <p>Exact pricing and availability confirmed on the booking page.</p>
+      <a href="https://property.listingmedia.io/view/default.asp?s=1935720" class="amc-re-btn amc-re-btn-primary" target="_blank">
+        Book a Shoot
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -1194,19 +1259,8 @@
     </div>
     <div class="amc-re-tours-grid">
       <div class="amc-re-tours-card">
-        <h4>0-2,000 Sq Ft</h4>
-        <div class="amc-re-tours-card-price">$1,050</div>
-        <p class="amc-re-tours-card-includes">Includes photos, floor plan, aerial</p>
-      </div>
-      <div class="amc-re-tours-card">
-        <h4>2,000-4,000 Sq Ft</h4>
-        <div class="amc-re-tours-card-price">$1,150</div>
-        <p class="amc-re-tours-card-includes">Includes photos, floor plan, aerial</p>
-      </div>
-      <div class="amc-re-tours-card">
-        <h4>4,000-6,000 Sq Ft</h4>
-        <div class="amc-re-tours-card-price">$1,350</div>
-        <p class="amc-re-tours-card-includes">Includes photos, floor plan, aerial</p>
+        <h4>Video Tours Starting at $750</h4>
+        <p class="amc-re-tours-card-includes">Includes professional photography, floor plans, aerial shots, and both horizontal and vertical video formats. Packages scaled to property size.</p>
       </div>
     </div>
 
@@ -1221,7 +1275,6 @@
             <h4>Raw Video Clips</h4>
           </div>
           <p>Professionally colored and stabilized video clips, ready to edit into your social posts, Canva templates, and future marketing materials.</p>
-          <div class="amc-re-social-video-price">+$200</div>
         </div>
         <div class="amc-re-social-video-card">
           <div class="amc-re-social-video-header">
@@ -1229,9 +1282,16 @@
             <h4>Social Media Video Tour</h4>
           </div>
           <p>Approximately 60-second edited vertical video, fully optimized for social platforms. Just post and watch the engagement roll in.</p>
-          <div class="amc-re-social-video-price">+$300</div>
         </div>
       </div>
+    </div>
+
+    <div class="amc-re-booking-note">
+      <p>Exact pricing and availability confirmed on the booking page.</p>
+      <a href="https://property.listingmedia.io/view/default.asp?s=1935720" class="amc-re-btn amc-re-btn-primary" target="_blank">
+        Book a Shoot
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -1247,8 +1307,8 @@
         <h3>Need Something Custom?</h3>
         <p>Paid ads, virtual staging, agent branding videos, and more. Let's talk about your marketing needs.</p>
       </div>
-      <a href="mailto:info@amcreativemktg.com?subject=Custom%20Real%20Estate%20Marketing%20Inquiry" class="amc-re-btn amc-re-btn-primary">
-        Inquire
+      <a href="https://property.listingmedia.io/view/default.asp?s=1935720" class="amc-re-btn amc-re-btn-primary" target="_blank">
+        Book a Shoot
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -1318,9 +1378,9 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m3 8 9 6 9-6"/></svg>
         </div>
         <h3>Ready to Book?</h3>
-        <p>Send us an email with your property details and we'll get you scheduled.</p>
-        <a href="mailto:info@amcreativemktg.com?subject=Real%20Estate%20Photo%20Shoot%20Request" class="amc-re-btn amc-re-btn-primary">
-          Request a Shoot
+        <p>Select your services, choose a date, and get confirmed pricing all in one place.</p>
+        <a href="https://property.listingmedia.io/view/default.asp?s=1935720" class="amc-re-btn amc-re-btn-primary" target="_blank">
+          Book a Shoot
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
