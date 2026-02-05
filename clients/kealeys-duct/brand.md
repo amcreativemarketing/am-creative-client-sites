@@ -1,21 +1,26 @@
 # Kealey's Duct & Dryer Cleaning - Brand Reference
 
 ## Colors
-- Primary: #0d4f6e (Dark Teal/Blue)
-- Secondary: #1a7fa8 (Medium Teal)
-- Text Dark: #1a365d (Navy)
-- Text Body: #4a5568 (Slate Gray)
-- Background Light: #f8fafc (Off White)
+- Primary Red: #b7254d
+- Navy: #0e3160
+- White: #ffffff
+- Gray Light: #f5f5f5
+- Gray Medium: #e0e0e0
+- Text Dark: #333333
+- Text Medium: #666666
 
 ## Typography
-- Headlines: System sans-serif, weight 700
-- Body: System sans-serif, weight 400
+- Headlines: Manrope, weight 600-700
+- Body: Inter, weight 400-500
+- Google Fonts import: `https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500&display=swap`
 
 ## Voice & Tone
 - Professional but warm, family-focused
 - Trust-building, addresses "scam PTSD" in industry
 - Before/after proof emphasis
 - No-pressure, transparent pricing messaging
+- Education-first approach
+- No em dashes - use regular dashes/commas
 
 ## Key Services
 - Dryer Vent Cleaning (scalable, quicker jobs)
@@ -26,6 +31,9 @@
 - Phone: (978) 961-4513
 - Email: kealeys@bkductdryercleaning.com
 - Website: https://bkductdryercleaning.com
+- Facebook: https://www.facebook.com/profile.php?id=61566588223772
+- Google Maps: https://www.google.com/maps/place/Kealey's+Duct+and+Dryer+Cleaning+Service
+- Coordinates: 42.865545, -70.874248
 
 ## Service Areas
 **Massachusetts (Essex County):**
@@ -40,6 +48,10 @@ Portsmouth, Exeter, Hampton, Stratham, Seabrook, Hampton Falls, Rye, North Hampt
 - Air Duct Cleaning: /air-duct-cleaning/
 - Dryer Vent Cleaning: /dryer-vent-cleaning/
 - Service Areas Hub: /services-area/
+- Pricing: /pricing/
+- FAQs: /faqs/
+- Blog: /blog/
+- About: /about/
 - Salisbury: /salisbury-ma/
 - Amesbury: /amesbury-ma/
 - Newburyport: /newburyport-ma/
