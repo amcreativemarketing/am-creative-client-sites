@@ -1,0 +1,848 @@
+<!--
+ESSEX COUNTY, MA LOCATION PAGE CONTENT - REWRITTEN 2.5.26
+For placement in right column below hero, above footer
+Target: ~1800 words
+Brand Colors: #b7254d (primary red), #0e3160 (navy), #ffffff (white)
+
+FONTS REQUIRED - Add to page <head>:
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+HERO OPTIONS (if applicable):
+  Option A: H1: Essex County Duct & Dryer Vent Cleaning | H2: Family-Owned Since 1993. Serving Salisbury to Ipswich.
+  Option B: H1: Professional Air Duct & Dryer Vent Cleaning in Essex County | H2: 32+ Years Protecting North Shore Homes from Fire Hazards and Poor Air Quality
+  CTAs: "Get Your Free Quote" → /contact/ | "Call (978) 961-4513" → tel:9789614513
+
+IMAGES PROVIDED:
+- HVAC Cleaning: https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-9.webp
+- Before/After Air Duct: https://bkductdryercleaning.com/wp-content/uploads/2026/01/Before_After-Air-Duct-Cleaning.webp
+- HVAC Before/After Split: https://bkductdryercleaning.com/wp-content/uploads/2026/02/HVAC-Cleaning-Before_After-Split-Image.png
+- HVAC Air Duct Before/After: https://bkductdryercleaning.com/wp-content/uploads/2026/02/HVAC-Air-Duct-Cleaning-Before_After.webp
+- Service Area Map Image: https://bkductdryercleaning.com/wp-content/uploads/2026/02/Essex-County-MA_Kealeys-Duct-and-Dryer-Cleaning.png
+-->
+
+<style>
+/* Essex County Location Page Styles */
+.kealeys-essex-content {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.7;
+    max-width: 100%;
+}
+
+.kealeys-essex-content h2 {
+    font-family: 'Manrope', sans-serif;
+    color: #0e3160;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1.5rem 0;
+    line-height: 1.3;
+}
+
+.kealeys-essex-content h3 {
+    font-family: 'Manrope', sans-serif;
+    color: #0e3160;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+}
+
+.kealeys-essex-content p {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+.kealeys-essex-content a {
+    color: #b7254d;
+    text-decoration: underline;
+}
+
+.kealeys-essex-content a:hover {
+    color: #8f1d3d;
+}
+
+/* Introduction Section */
+.kealeys-essex-intro {
+    background: linear-gradient(135deg, #0e3160 0%, #1a4a8a 100%);
+    color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 12px rgba(14, 49, 96, 0.15);
+}
+
+.kealeys-essex-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+.kealeys-essex-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.kealeys-essex-intro a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* CTA Button */
+.kealeys-essex-cta {
+    display: inline-block;
+    background-color: #b7254d;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(183, 37, 77, 0.3);
+}
+
+.kealeys-essex-cta:hover {
+    background-color: #8f1d3d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(183, 37, 77, 0.4);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Trust Section */
+.kealeys-essex-trust {
+    background: linear-gradient(135deg, #b7254d 0%, #d63563 100%);
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.kealeys-essex-trust h2 {
+    font-family: 'Manrope', sans-serif;
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.kealeys-essex-trust-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.kealeys-essex-stat {
+    text-align: center;
+}
+
+.kealeys-essex-stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.kealeys-essex-stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Image Container */
+.kealeys-essex-image {
+    margin: 2.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.kealeys-essex-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Benefits Grid */
+.kealeys-essex-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.kealeys-essex-benefit-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #b7254d;
+    transition: all 0.3s ease;
+}
+
+.kealeys-essex-benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.kealeys-essex-benefit-card h3 {
+    font-family: 'Manrope', sans-serif;
+    color: #0e3160;
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+/* Review Cards */
+.kealeys-essex-reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.kealeys-essex-review-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid #b7254d;
+    font-style: italic;
+    position: relative;
+}
+
+.kealeys-essex-review-card::before {
+    content: '"';
+    font-size: 3rem;
+    color: #b7254d;
+    opacity: 0.3;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.kealeys-essex-review-card p {
+    font-style: italic;
+    padding-top: 1.5rem;
+}
+
+.kealeys-essex-review-author {
+    font-style: normal;
+    font-weight: 600;
+    color: #0e3160;
+    margin-top: 1rem;
+    display: block;
+}
+
+.kealeys-essex-review-stars {
+    color: #f5a623;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Service Area Grid */
+.kealeys-essex-towns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.kealeys-essex-town {
+    background: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.kealeys-essex-town:hover {
+    background: #0e3160;
+    color: #ffffff;
+}
+
+.kealeys-essex-town a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* FAQ Section */
+.kealeys-essex-faq {
+    margin: 2.5rem 0;
+}
+
+.kealeys-essex-faq-item {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.kealeys-essex-faq-item:hover {
+    border-color: #b7254d;
+}
+
+.kealeys-essex-faq-question {
+    font-family: 'Manrope', sans-serif;
+    background: #f8f9fa;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #0e3160;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.kealeys-essex-faq-question:hover {
+    background: #e9ecef;
+}
+
+.kealeys-essex-faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #b7254d;
+    transition: transform 0.3s ease;
+}
+
+.kealeys-essex-faq-question.active::after {
+    transform: rotate(45deg);
+}
+
+.kealeys-essex-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 1.25rem;
+}
+
+.kealeys-essex-faq-answer.active {
+    max-height: 1000px;
+    padding: 1rem 1.25rem;
+}
+
+.kealeys-essex-faq-answer p {
+    margin: 0 0 0.75rem 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.kealeys-essex-faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+/* Map Container */
+.kealeys-essex-map {
+    margin: 3rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.kealeys-essex-map iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .kealeys-essex-benefits {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .kealeys-essex-benefit-card {
+        padding: 1.5rem;
+    }
+
+    .kealeys-essex-benefit-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .kealeys-essex-reviews {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .kealeys-essex-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .kealeys-essex-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .kealeys-essex-intro,
+    .kealeys-essex-trust {
+        padding: 1.5rem;
+    }
+
+    .kealeys-essex-benefits {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .kealeys-essex-reviews {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .kealeys-essex-trust-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .kealeys-essex-stat-number {
+        font-size: 1.5rem;
+    }
+
+    .kealeys-essex-map iframe {
+        height: 350px;
+    }
+
+    .kealeys-essex-towns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+
+<div class="kealeys-essex-content">
+
+    <!-- Introduction Section -->
+    <div class="kealeys-essex-intro">
+        <p>Essex County's coastal environment - salt air, seasonal humidity swings, and New England winters - puts extra strain on your HVAC system and dryer vents. Since 1993, Kealey's Duct and Dryer Cleaning Service has been protecting homes across the North Shore with thorough, professional <a href="https://bkductdryercleaning.com/air-duct-cleaning/">air duct cleaning</a> and <a href="https://bkductdryercleaning.com/dryer-vent-cleaning/">dryer vent cleaning</a> services.</p>
+
+        <p>Run by Brian Kealey (mechanical engineer) and his son Keenan, we combine technical expertise with a no-nonsense approach - transparent pricing, before-and-after proof, and work we stand behind. No gimmicks, no "$99 specials," just honest <a href="https://bkductdryercleaning.com/services/">cleaning services</a> from a family that's been doing this for over three decades.</p>
+
+        <div style="text-align: center;">
+            <a href="https://bkductdryercleaning.com/contact/" class="kealeys-essex-cta" style="color: #ffffff;">Get Your Free Quote</a>
+        </div>
+    </div>
+
+    <!-- Trust Section -->
+    <div class="kealeys-essex-trust">
+        <h2>Trusted by Essex County Families Since 1993</h2>
+        <div class="kealeys-essex-trust-stats">
+            <div class="kealeys-essex-stat">
+                <span class="kealeys-essex-stat-number">32+</span>
+                <span class="kealeys-essex-stat-label">Years Serving the North Shore</span>
+            </div>
+            <div class="kealeys-essex-stat">
+                <span class="kealeys-essex-stat-number">5.0★</span>
+                <span class="kealeys-essex-stat-label">Google Rating (80+ Reviews)</span>
+            </div>
+            <div class="kealeys-essex-stat">
+                <span class="kealeys-essex-stat-number">100%</span>
+                <span class="kealeys-essex-stat-label">Family-Owned & Operated</span>
+            </div>
+        </div>
+        <a href="https://bkductdryercleaning.com/about/" class="kealeys-essex-cta" style="margin-top: 1.5rem; color: #ffffff;">Learn About Our Family Business</a>
+    </div>
+
+    <!-- Service Area Map Image -->
+    <div class="kealeys-essex-image">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/Essex-County-MA_Kealeys-Duct-and-Dryer-Cleaning.png" alt="Kealey's Duct and Dryer Cleaning service area map covering Essex County Massachusetts" loading="lazy">
+    </div>
+
+    <!-- Why Essex County Homes Need This -->
+    <h2>Why Essex County Homes Need Specialized Duct and Dryer Vent Cleaning</h2>
+
+    <p>Living along the coast means your home deals with conditions that inland properties don't face. Salt-laden air accelerates dust buildup in ductwork. Seasonal humidity changes can promote mold growth inside vents. And the mix of historic and modern construction across Essex County means every home has different cleaning needs.</p>
+
+    <div class="kealeys-essex-benefits">
+        <div class="kealeys-essex-benefit-card">
+            <h3>Healthier Indoor Air</h3>
+            <p>Dust, pet dander, mold spores, and allergens accumulate in your ductwork over time. Professional cleaning removes these contaminants, reducing allergy symptoms and improving the air your family breathes every day. Learn more about <a href="https://bkductdryercleaning.com/when-to-clean-air-ducts-insights-from-the-epa-for-2025/">what the EPA says about air duct cleaning</a>.</p>
+        </div>
+
+        <div class="kealeys-essex-benefit-card">
+            <h3>Lower Energy Bills</h3>
+            <p>Clogged ducts force your HVAC system to work harder, driving up energy costs. Clean ductwork restores proper airflow and helps your system run efficiently, which typically shows up as lower monthly utility bills.</p>
+        </div>
+
+        <div class="kealeys-essex-benefit-card">
+            <h3>Fire Prevention</h3>
+            <p>Lint is highly flammable. The U.S. Fire Administration reports that failure to clean dryer vents is the leading cause of dryer fires. In humid coastal environments, lint compacts more densely, making regular professional cleaning even more critical.</p>
+        </div>
+    </div>
+
+    <!-- Before/After Image -->
+    <div class="kealeys-essex-image">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/HVAC-Cleaning-Before_After-Split-Image.png" alt="Before and after HVAC air duct cleaning by Kealey's in Essex County MA" loading="lazy">
+    </div>
+
+    <!-- Air Duct Cleaning Section -->
+    <h2>Professional Air Duct Cleaning Across Essex County</h2>
+
+    <p>Your HVAC system circulates air through your home 5-7 times per day. Over time, that ductwork collects dust, debris, pet hair, pollen, and potentially mold - especially in Essex County's humid coastal climate. Professional <a href="https://bkductdryercleaning.com/air-duct-cleaning/">air duct cleaning</a> removes these contaminants so your family breathes cleaner air. If you have pets, the buildup happens even faster - read our guide on <a href="https://bkductdryercleaning.com/essential-air-duct-cleaning-for-pet-owners-in-north-shore-ma/">air duct cleaning for pet owners</a> to learn why.</p>
+
+    <h3>What Our Air Duct Cleaning Includes</h3>
+    <p>We start with a thorough video inspection of your ductwork to assess current conditions and identify problem areas. Using high-powered vacuums and specialized rotary brushes, we clean every supply and return duct, register, and grille in your system. We finish with a final inspection - and we'll show you the before-and-after so you can see exactly what we removed.</p>
+
+    <p>The process typically takes 2-4 hours depending on your home's size and system complexity. Our No-Mess Promise means we protect your floors, furniture, and walls during service, and leave your home cleaner than we found it.</p>
+
+    <!-- HVAC Cleaning Image -->
+    <div class="kealeys-essex-image">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-9.webp" alt="Professional HVAC duct cleaning service in Essex County Massachusetts" loading="lazy">
+    </div>
+
+    <!-- Dryer Vent Cleaning Section -->
+    <h2>Dryer Vent Cleaning - Essential Fire Prevention for Your Home</h2>
+
+    <p>Dryer vent cleaning is one of the most important - and most overlooked - safety services homeowners can schedule. Lint buildup in your dryer vent restricts airflow, causes your dryer to overheat, and creates a serious fire hazard. <a href="https://bkductdryercleaning.com/dryer-vent-cleaning/">Professional dryer vent cleaning</a> eliminates that risk.</p>
+
+    <h3>Warning Signs Your Dryer Vent Needs Cleaning</h3>
+    <p>If your clothes take more than one cycle to dry, the dryer feels unusually hot to the touch, you notice a burning smell during operation, or you see excessive lint collecting around the dryer area - your vent needs professional attention now. Even without these warning signs, annual cleaning is recommended for fire prevention.</p>
+
+    <h3>Our Dryer Vent Cleaning Process</h3>
+    <p>We inspect the full length of your dryer vent from the dryer connection to the exterior exhaust. Using specialized rotary tools and high-powered vacuums, we remove all lint and debris, then verify proper airflow with testing equipment. The entire process takes about 45 minutes to an hour, and we provide a condition report when we're done.</p>
+
+    <!-- Before/After Dryer Image -->
+    <div class="kealeys-essex-image">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/HVAC-Air-Duct-Cleaning-Before_After.webp" alt="Before and after dryer vent cleaning results in Essex County" loading="lazy">
+    </div>
+
+    <!-- Pricing Section -->
+    <h2>Transparent Pricing - No Surprises</h2>
+
+    <p>We believe in honest, upfront pricing. No bait-and-switch, no hidden fees, no pressure tactics. Here's what Essex County homeowners can expect:</p>
+
+    <ul style="margin: 1.5rem 0; line-height: 2;">
+        <li><strong>Residential Air Duct Cleaning:</strong> Typically $300-$500, based on home size and system complexity</li>
+        <li><strong>Dryer Vent Cleaning:</strong> Generally $100-$200, based on vent length and accessibility</li>
+        <li><strong>Commercial Services:</strong> Custom pricing for multi-unit and commercial properties</li>
+    </ul>
+
+    <p>Every job starts with a free inspection. We assess your specific needs and give you a detailed estimate before starting any work. If cleaning isn't necessary, we'll tell you - our reputation is built on honesty, not upselling.</p>
+
+    <a href="https://bkductdryercleaning.com/contact/" class="kealeys-essex-cta" style="color: #ffffff;">Request Your Free Inspection</a>
+
+    <!-- Customer Reviews -->
+    <h2>What Essex County Homeowners Are Saying</h2>
+
+    <div class="kealeys-essex-reviews">
+        <div class="kealeys-essex-review-card">
+            <div class="kealeys-essex-review-stars">★★★★★</div>
+            <p>Keenan & Brian of Kealey's Duct and Dryer Cleaning are the most competent, efficient and friendly duct cleaners we have used in over 40 years of home ownership.</p>
+            <span class="kealeys-essex-review-author">- Google Review</span>
+        </div>
+
+        <div class="kealeys-essex-review-card">
+            <div class="kealeys-essex-review-stars">★★★★★</div>
+            <p>Honest, thorough, and reasonably priced. They showed us exactly what they cleaned with before-and-after photos. No pressure, no upselling - just great work.</p>
+            <span class="kealeys-essex-review-author">- Google Review</span>
+        </div>
+
+        <div class="kealeys-essex-review-card">
+            <div class="kealeys-essex-review-stars">★★★★★</div>
+            <p>Professional from start to finish. They were on time, explained everything, and left our home spotless. You can tell this is a family that takes pride in their work.</p>
+            <span class="kealeys-essex-review-author">- Google Review</span>
+        </div>
+    </div>
+
+    <!-- Service Area Section -->
+    <h2>Serving All of Essex County, Massachusetts</h2>
+
+    <p>We serve residential and commercial properties throughout Essex County. Whether you're in a historic waterfront home or a newer suburban development, we have the experience and equipment to handle your specific needs. Our <a href="https://bkductdryercleaning.com/services-area/">service area</a> also extends into southern New Hampshire for quick response times across the region.</p>
+
+    <div class="kealeys-essex-towns">
+        <div class="kealeys-essex-town"><a href="https://bkductdryercleaning.com/salisbury-ma/">Salisbury</a></div>
+        <div class="kealeys-essex-town"><a href="https://bkductdryercleaning.com/amesbury-ma/">Amesbury</a></div>
+        <div class="kealeys-essex-town"><a href="https://bkductdryercleaning.com/newburyport-ma/">Newburyport</a></div>
+        <div class="kealeys-essex-town">Newbury</div>
+        <div class="kealeys-essex-town">West Newbury</div>
+        <div class="kealeys-essex-town">Merrimac</div>
+        <div class="kealeys-essex-town">Haverhill</div>
+        <div class="kealeys-essex-town">Georgetown</div>
+        <div class="kealeys-essex-town">Rowley</div>
+        <div class="kealeys-essex-town">Ipswich</div>
+    </div>
+
+    <p>Don't see your town listed? We likely serve your area. <a href="https://bkductdryercleaning.com/contact/">Contact us</a> or call <a href="tel:9789614513">(978) 961-4513</a> to confirm service availability.</p>
+
+    <!-- FAQ Section -->
+    <div class="kealeys-essex-faq">
+        <h2>Frequently Asked Questions - Duct & Dryer Vent Cleaning in Essex County</h2>
+        <p style="margin-bottom: 1.5rem;">Have more questions? Visit our full <a href="https://bkductdryercleaning.com/faqs/">FAQ page</a> or call us at <a href="tel:9789614513">(978) 961-4513</a>.</p>
+
+        <div class="kealeys-essex-faq-item">
+            <div class="kealeys-essex-faq-question">
+                How often should Essex County homeowners clean their air ducts?
+            </div>
+            <div class="kealeys-essex-faq-answer">
+                <p>Most Essex County homes benefit from professional air duct cleaning every 3-5 years. However, homes closer to the coast, households with pets or allergy sufferers, or properties that have undergone recent renovations may need more frequent service. Our free inspection helps determine your specific timeline.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-essex-faq-item">
+            <div class="kealeys-essex-faq-question">
+                How often should I have my dryer vent cleaned?
+            </div>
+            <div class="kealeys-essex-faq-answer">
+                <p>Annual dryer vent cleaning is recommended for most households. Larger families, pet owners, or anyone using the dryer more than 4-5 times per week should consider cleaning every 6-9 months. Coastal humidity can cause lint to compact more densely, so Essex County homes may need slightly more frequent service.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-essex-faq-item">
+            <div class="kealeys-essex-faq-question">
+                How long does the cleaning process take?
+            </div>
+            <div class="kealeys-essex-faq-answer">
+                <p>Dryer vent cleaning typically takes 45 minutes to an hour. Full air duct cleaning runs 2-4 hours depending on your home's size and the condition of your ductwork. We work efficiently without cutting corners, and you're welcome to watch the process.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-essex-faq-item">
+            <div class="kealeys-essex-faq-question">
+                Will the cleaning process make a mess in my home?
+            </div>
+            <div class="kealeys-essex-faq-answer">
+                <p>No. Our No-Mess Promise means we protect your floors, furniture, and walls during the entire service. We use drop cloths, shoe covers, and contained vacuum systems. Many clients tell us their home looks cleaner after we leave than before we started.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-essex-faq-item">
+            <div class="kealeys-essex-faq-question">
+                What makes Kealey's different from other duct cleaning companies?
+            </div>
+            <div class="kealeys-essex-faq-answer">
+                <p>Three things set us apart: our owner Brian Kealey's mechanical engineering background (which means technically superior service), our 32+ year track record in Essex County (we're not a fly-by-night operation), and our commitment to transparency (before-and-after photo proof, honest pricing, and we'll tell you if you don't actually need cleaning). Check out our <a href="https://bkductdryercleaning.com/about/" style="color: #b7254d;">About page</a> to learn more about our family.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-essex-faq-item">
+            <div class="kealeys-essex-faq-question">
+                Do you offer same-day or emergency service?
+            </div>
+            <div class="kealeys-essex-faq-answer">
+                <p>We do our best to accommodate urgent requests, especially for dryer vent situations where there may be a safety concern. Call us at <a href="tel:9789614513" style="color: #b7254d;">(978) 961-4513</a> and we'll work to get you scheduled as quickly as possible.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="kealeys-essex-intro" style="margin-top: 3rem; text-align: center;">
+        <h2 style="color: #ffffff; margin-top: 0;">Schedule Your Free Inspection Today</h2>
+        <p>Protect your Essex County home with professional duct and dryer vent cleaning from a family business that's been serving the North Shore for over 32 years. Transparent pricing, real results, no gimmicks.</p>
+        <p><strong>Call us at <a href="tel:9789614513" style="color: #ffffff; text-decoration: underline;">(978) 961-4513</a> or request your free quote online.</strong></p>
+        <a href="https://bkductdryercleaning.com/contact/" class="kealeys-essex-cta" style="color: #ffffff;">Get Your Free Quote</a>
+    </div>
+
+    <!-- Map Section -->
+    <div class="kealeys-essex-map">
+        <h2 style="margin-bottom: 1.5rem;">Proudly Serving Essex County, MA</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d751439.8471489097!2d-71.53855113737282!3d42.63354729583568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4016f0a553cb5%3A0xa49723f635170a75!2sEssex%20County%2C%20MA!5e0!3m2!1sen!2sus!4v1770324555195!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</div>
+
+<!-- FAQ Dropdown JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.kealeys-essex-faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const isActive = this.classList.contains('active');
+
+            // Close all other FAQs
+            faqQuestions.forEach(q => {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+            });
+
+            // Toggle current FAQ
+            if (!isActive) {
+                this.classList.add('active');
+                answer.classList.add('active');
+            }
+        });
+    });
+});
+</script>
+
+<!-- Schema Markup for LocalBusiness -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kealey's Duct and Dryer Cleaning Service",
+    "image": "https://bkductdryercleaning.com/wp-content/uploads/2026/02/HVAC-Cleaning-Before_After-Split-Image.png",
+    "@id": "https://bkductdryercleaning.com/essex-county-ma/",
+    "url": "https://bkductdryercleaning.com/essex-county-ma/",
+    "telephone": "(978) 961-4513",
+    "email": "kealeys@bkductdryercleaning.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9 Del-Logan Drive",
+        "addressLocality": "Salisbury",
+        "addressRegion": "MA",
+        "postalCode": "01952",
+        "addressCountry": "US"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.865545,
+        "longitude": -70.874248
+    },
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+    },
+    "sameAs": [
+        "https://www.facebook.com/profile.php?id=61566588223772"
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "83"
+    },
+    "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Essex County",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "MA",
+            "addressCountry": "US"
+        }
+    },
+    "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 42.865545,
+            "longitude": -70.874248
+        },
+        "geoRadius": "40000"
+    },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Duct and Dryer Vent Cleaning Services",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Air Duct Cleaning",
+                    "description": "Professional HVAC air duct cleaning for residential and commercial properties in Essex County MA"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Dryer Vent Cleaning",
+                    "description": "Professional dryer vent cleaning and lint removal for fire prevention in Essex County MA"
+                }
+            }
+        ]
+    }
+}
+</script>
+
+<!-- Schema Markup for FAQPage -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How often should Essex County homeowners clean their air ducts?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most Essex County homes benefit from professional air duct cleaning every 3-5 years. However, homes closer to the coast, households with pets or allergy sufferers, or properties that have undergone recent renovations may need more frequent service."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How often should I have my dryer vent cleaned?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Annual dryer vent cleaning is recommended for most households. Larger families, pet owners, or anyone using the dryer more than 4-5 times per week should consider cleaning every 6-9 months. Coastal humidity can cause lint to compact more densely, so Essex County homes may need slightly more frequent service."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long does the cleaning process take?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dryer vent cleaning typically takes 45 minutes to an hour. Full air duct cleaning runs 2-4 hours depending on your home's size and the condition of your ductwork."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Will the cleaning process make a mess in my home?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Kealey's No-Mess Promise means they protect your floors, furniture, and walls during the entire service using drop cloths, shoe covers, and contained vacuum systems."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What makes Kealey's different from other duct cleaning companies?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Three things: owner Brian Kealey's mechanical engineering background for technically superior service, a 32+ year track record in Essex County, and a commitment to transparency with before-and-after photo proof, honest pricing, and honest recommendations."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you offer same-day or emergency service?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kealey's does their best to accommodate urgent requests, especially for dryer vent situations with safety concerns. Call (978) 961-4513 for scheduling."
+            }
+        }
+    ]
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://bkductdryercleaning.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Service Areas",
+            "item": "https://bkductdryercleaning.com/services-area/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Essex County, MA",
+            "item": "https://bkductdryercleaning.com/essex-county-ma/"
+        }
+    ]
+}
+</script>
