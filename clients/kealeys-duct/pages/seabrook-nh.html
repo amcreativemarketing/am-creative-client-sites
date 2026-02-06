@@ -1,0 +1,1032 @@
+<!-- 
+SEABROOK, NH LOCATION PAGE CONTENT
+For placement in right column below hero, above footer
+Target: ~1800 words
+Brand Colors: #b7254d (primary red), #0e3160 (navy), #ffffff (white)
+
+FONTS REQUIRED - Add to page <head>:
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+-->
+
+<style>
+/* Seabrook Location Page Styles */
+
+/* Hero Section */
+.kealeys-seabrook-hero {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    background-image: url('https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-10.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.kealeys-seabrook-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(14, 49, 96, 0.5) 0%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+.kealeys-seabrook-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 3rem 2.5rem;
+    max-width: 720px;
+    color: #ffffff;
+}
+
+.kealeys-seabrook-hero-content h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.75rem 0;
+    color: #ffffff;
+}
+
+.kealeys-seabrook-hero-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 560px;
+}
+
+.kealeys-hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.kealeys-hero-cta-primary {
+    display: inline-block;
+    background-color: #b7254d;
+    color: #ffffff;
+    padding: 0.85rem 1.75rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(183, 37, 77, 0.4);
+}
+
+.kealeys-hero-cta-primary:hover {
+    background-color: #d63563;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(183, 37, 77, 0.5);
+    color: #ffffff;
+}
+
+.kealeys-hero-cta-secondary {
+    display: inline-block;
+    color: #ffffff;
+    padding: 0.85rem 1.75rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.kealeys-hero-cta-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .kealeys-seabrook-hero {
+        min-height: 340px;
+    }
+    
+    .kealeys-seabrook-hero-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .kealeys-seabrook-hero-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .kealeys-seabrook-hero-content h2 {
+        font-size: 1rem;
+    }
+    
+    .kealeys-hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+}
+
+.kealeys-seabrook-content {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.7;
+    max-width: 100%;
+}
+
+.kealeys-seabrook-content h2 {
+    font-family: 'Manrope', sans-serif;
+    color: #0e3160;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1.5rem 0;
+    line-height: 1.3;
+}
+
+.kealeys-seabrook-content h3 {
+    font-family: 'Manrope', sans-serif;
+    color: #0e3160;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+}
+
+.kealeys-seabrook-intro {
+    background: #ffffff;
+    color: #333333;
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.kealeys-seabrook-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+    color: #333333;
+}
+
+.kealeys-seabrook-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.kealeys-seabrook-intro a {
+    color: #b7254d;
+    text-decoration: underline;
+}
+
+.kealeys-seabrook-cta-final {
+    background: linear-gradient(135deg, #b7254d 0%, #d63563 100%);
+    color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(183, 37, 77, 0.15);
+}
+
+.kealeys-seabrook-cta-final h2 {
+    color: #ffffff;
+}
+
+.kealeys-seabrook-cta-final p {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+.kealeys-seabrook-cta-final p:last-of-type {
+    margin-bottom: 0;
+}
+
+.kealeys-seabrook-cta-final .kealeys-cta-button {
+    background-color: #ffffff;
+    color: #b7254d;
+}
+
+.kealeys-seabrook-cta-final .kealeys-cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #8f1d3d;
+}
+
+.kealeys-cta-button {
+    display: inline-block;
+    background-color: #b7254d;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(183, 37, 77, 0.3);
+}
+
+.kealeys-cta-button:hover {
+    background-color: #8f1d3d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(183, 37, 77, 0.4);
+    color: #ffffff;
+}
+
+.kealeys-image-container {
+    margin: 2rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 680px;
+}
+
+.kealeys-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 380px;
+    object-fit: cover;
+}
+
+/* Benefits grid - 3 columns desktop */
+.kealeys-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.kealeys-benefit-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #b7254d;
+    transition: all 0.3s ease;
+}
+
+.kealeys-benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.kealeys-benefit-card h3 {
+    font-family: 'Manrope', sans-serif;
+    color: #0e3160;
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.kealeys-trust-section {
+    background: linear-gradient(135deg, #b7254d 0%, #d63563 100%);
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.kealeys-trust-section h2 {
+    font-family: 'Manrope', sans-serif;
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.kealeys-trust-section .kealeys-cta-button {
+    background-color: #ffffff;
+    color: #b7254d;
+}
+
+.kealeys-trust-section .kealeys-cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #8f1d3d;
+}
+
+.kealeys-trust-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.kealeys-stat {
+    text-align: center;
+}
+
+.kealeys-stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.kealeys-stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Reviews Section */
+.kealeys-reviews-section {
+    margin: 2.5rem 0;
+}
+
+.kealeys-review-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.kealeys-review-card:hover {
+    border-color: #b7254d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kealeys-review-stars {
+    color: #f5a623;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.kealeys-review-text {
+    font-style: italic;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.kealeys-review-author {
+    font-weight: 600;
+    color: #0e3160;
+    font-size: 0.95rem;
+}
+
+/* Warning Signs Section */
+.kealeys-warning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.kealeys-warning-item {
+    background: #fff8f0;
+    border: 1px solid #f0d0a0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.kealeys-warning-icon {
+    color: #b7254d;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* FAQ Section with Dropdown */
+.kealeys-faq-section {
+    margin: 2.5rem 0;
+}
+
+.kealeys-faq-section h2 {
+    font-family: 'Manrope', sans-serif;
+}
+
+.kealeys-faq-item {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.kealeys-faq-item:hover {
+    border-color: #b7254d;
+}
+
+.kealeys-faq-question {
+    font-family: 'Manrope', sans-serif;
+    background: #f8f9fa;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #0e3160;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.kealeys-faq-question:hover {
+    background: #e9ecef;
+}
+
+.kealeys-faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #b7254d;
+    transition: transform 0.3s ease;
+}
+
+.kealeys-faq-question.active::after {
+    transform: rotate(45deg);
+}
+
+.kealeys-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 1.25rem;
+}
+
+.kealeys-faq-answer.active {
+    max-height: 1000px;
+    padding: 1rem 1.25rem;
+}
+
+.kealeys-faq-answer p {
+    margin: 0 0 0.75rem 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.kealeys-faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.kealeys-map-container {
+    margin: 3rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 680px;
+}
+
+.kealeys-map-container iframe {
+    width: 100%;
+    height: 380px;
+    border: 0;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .kealeys-benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .kealeys-benefit-card {
+        padding: 1.5rem;
+    }
+    
+    .kealeys-benefit-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .kealeys-seabrook-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .kealeys-seabrook-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .kealeys-seabrook-intro,
+    .kealeys-trust-section {
+        padding: 1.5rem;
+    }
+    
+    /* Stack cards on mobile */
+    .kealeys-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .kealeys-warning-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .kealeys-trust-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .kealeys-stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .kealeys-map-container iframe {
+        height: 300px;
+    }
+}
+</style>
+
+<div class="kealeys-seabrook-hero">
+    <div class="kealeys-seabrook-hero-overlay"></div>
+    <div class="kealeys-seabrook-hero-content">
+        <h1>Professional Dryer Vent &amp; Duct Cleaning in Seabrook, NH</h1>
+        <h2>Family-owned since 1993. Trusted by Seacoast homeowners for fire prevention, cleaner air, and lower energy bills.</h2>
+        <div class="kealeys-hero-ctas">
+            <a href="https://bkductdryercleaning.com/contact/" class="kealeys-hero-cta-primary">Get Your Free Quote</a>
+            <a href="tel:9789614513" class="kealeys-hero-cta-secondary">Call (978) 961-4513</a>
+        </div>
+    </div>
+</div>
+
+<div class="kealeys-seabrook-content">
+
+    <!-- Introduction Section -->
+    <div class="kealeys-seabrook-intro">
+        <p>Seabrook sits right on the New Hampshire Seacoast, where ocean air, humidity, and salt exposure take a real toll on your home's air systems. Since 1993, Kealey's Duct and Dryer Cleaning Service has been helping families across the Seacoast protect their homes with professional <a href="https://bkductdryercleaning.com/dryer-vent-cleaning/">dryer vent cleaning</a> and <a href="https://bkductdryercleaning.com/air-duct-cleaning/">air duct cleaning</a> services.</p>
+        
+        <p>We're a father-and-son team, Brian and Keenan Kealey, and we bring the same care to every Seabrook home that we'd want in our own. From the beach cottages near Seabrook Beach to the neighborhoods along Route 1 and Route 286, we provide thorough, honest <a href="https://bkductdryercleaning.com/services/">duct and dryer vent cleaning services</a> backed by 32+ years of hands-on experience and a mechanical engineering background. <a href="https://bkductdryercleaning.com/the-hidden-truth-about-air-ducts-and-dryer-vents-in-massachusetts-homes/" style="color: #b7254d;">Read about what's really hiding in your ducts and dryer vents</a>.</p>
+    </div>
+
+    <!-- Trust Section -->
+    <div class="kealeys-trust-section">
+        <h2>Trusted Across the Seacoast Since 1993</h2>
+        <div class="kealeys-trust-stats">
+            <div class="kealeys-stat">
+                <span class="kealeys-stat-number">32+</span>
+                <span class="kealeys-stat-label">Years Serving the Seacoast</span>
+            </div>
+            <div class="kealeys-stat">
+                <span class="kealeys-stat-number">5&#9733;</span>
+                <span class="kealeys-stat-label">Average Customer Rating</span>
+            </div>
+            <div class="kealeys-stat">
+                <span class="kealeys-stat-number">100%</span>
+                <span class="kealeys-stat-label">Family-Owned & Operated</span>
+            </div>
+        </div>
+        <a href="https://bkductdryercleaning.com/about/" class="kealeys-cta-button">Learn About Our Family Business</a>
+    </div>
+
+    <!-- Seabrook Location Image -->
+    <div class="kealeys-image-container">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/Seabrook-NH-Location-Specific-Photo.jpg" alt="Seabrook NH homes and coastal properties served by Kealey's Duct and Dryer Cleaning" loading="lazy">
+    </div>
+
+    <!-- Why Seabrook Homes Need This Service -->
+    <h2>Why Seabrook Homes Need Specialized Duct and Dryer Vent Cleaning</h2>
+    
+    <p>Living on the Seacoast means dealing with environmental factors that most inland homeowners never think about. Seabrook's proximity to the ocean introduces salt air, higher humidity levels, and seasonal temperature swings that directly affect how your HVAC system and dryer vents perform over time.</p>
+    
+    <div class="kealeys-benefits-grid">
+        <div class="kealeys-benefit-card">
+            <h3>Salt Air and Humidity Buildup</h3>
+            <p>Seabrook's ocean air carries moisture and salt particles that accelerate dust accumulation and can promote mold growth inside ductwork. Regular professional cleaning prevents these coastal contaminants from circulating through your home.</p>
+        </div>
+        
+        <div class="kealeys-benefit-card">
+            <h3>Fire Prevention Priority</h3>
+            <p>Coastal humidity causes dryer lint to compact more densely, creating serious fire hazards. The U.S. Fire Administration reports that failure to clean dryer vents is the leading cause of residential dryer fires, with approximately 2,900 fires reported each year.</p>
+        </div>
+        
+        <div class="kealeys-benefit-card">
+            <h3>Energy Efficiency Savings</h3>
+            <p>Clogged vents force your dryer to work harder and run longer. Professional cleaning can reduce drying time by 30-50%, lowering your monthly utility costs. Many Seabrook homeowners find the energy savings pay for the cleaning within a few months. <a href="https://bkductdryercleaning.com/save-energy-how-clean-air-ducts-reduce-bills/" style="color: #b7254d;">See how clean ducts reduce your energy bills</a>.</p>
+        </div>
+    </div>
+
+    <p>These local factors are exactly why we've tailored our approach for Seacoast properties. We understand what salt air does to your systems, and we clean accordingly.</p>
+
+    <!-- Dryer Vent Cleaning Section (Primary Service - NH Expansion Focus) -->
+    <h2>Professional Dryer Vent Cleaning in Seabrook, NH</h2>
+    
+    <p><a href="https://bkductdryercleaning.com/dryer-vent-cleaning/">Dryer vent cleaning</a> is one of the most important, and most overlooked, safety services for your home. Lint is highly flammable. When it accumulates in your dryer vent, it restricts airflow and causes the dryer to overheat, creating a fire risk that grows with every load of laundry. Our <a href="https://bkductdryercleaning.com/the-complete-guide-to-dryer-vent-cleaning-everything-you-need-to-know/" style="color: #b7254d;">complete guide to dryer vent cleaning</a> explains exactly how this happens and what you can do about it.</p>
+
+    <!-- Dryer Vent Before/After Image -->
+    <div class="kealeys-image-container">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/Dryer-Vent-Cleaning-Before_After-Split-Screen.jpg" alt="Before and after professional dryer vent cleaning in Seabrook NH showing lint removal results" loading="lazy">
+    </div>
+
+    <h3>What You'll Notice After Professional Dryer Vent Cleaning</h3>
+    <p>Our <a href="https://bkductdryercleaning.com/dryer-vent-cleaning/">dryer vent cleaning service</a> removes dangerous lint buildup from the entire vent system, from the dryer connection to the exterior cap. After cleaning, most Seabrook homeowners notice their clothes dry in a single cycle again, the laundry area stays cooler, and their dryer runs quieter. That's not just convenience, it's a sign that the fire risk has been eliminated and your dryer is working the way it should.</p>
+
+    <h3>Recommended Cleaning Frequency</h3>
+    <p>Most Seabrook households should schedule professional dryer vent cleaning at least once a year. Larger families, homes with pets, or households that run the dryer frequently may benefit from service every 6-9 months. If you have pets, <a href="https://bkductdryercleaning.com/essential-air-duct-cleaning-for-pet-owners-in-north-shore-ma/" style="color: #b7254d;">pet hair accelerates lint and dust buildup</a> in both dryer vents and ductwork. <a href="https://bkductdryercleaning.com/how-often-to-clean-dryer-vents-fire-prevention-tips-2026/" style="color: #b7254d;">Read our complete guide to dryer vent cleaning frequency</a>.</p>
+
+    <!-- Warning Signs Section -->
+    <h2>Warning Signs Your Dryer Vent Needs Cleaning</h2>
+    
+    <p>Don't wait for a problem to become an emergency. Watch for these common warning signs in your Seabrook home:</p>
+    
+    <div class="kealeys-warning-grid">
+        <div class="kealeys-warning-item">
+            <span class="kealeys-warning-icon">&#9888;</span>
+            <div><strong>Clothes take more than one cycle to dry</strong> - this is often the first sign of restricted airflow.</div>
+        </div>
+        <div class="kealeys-warning-item">
+            <span class="kealeys-warning-icon">&#9888;</span>
+            <div><strong>Dryer feels extremely hot to the touch</strong> - excessive heat buildup indicates poor ventilation and fire risk.</div>
+        </div>
+        <div class="kealeys-warning-item">
+            <span class="kealeys-warning-icon">&#9888;</span>
+            <div><strong>Burning smell during operation</strong> - this is a serious warning sign that should never be ignored.</div>
+        </div>
+        <div class="kealeys-warning-item">
+            <span class="kealeys-warning-icon">&#9888;</span>
+            <div><strong>Laundry room feels hot and humid</strong> - trapped moisture and poor ventilation need immediate attention.</div>
+        </div>
+        <div class="kealeys-warning-item">
+            <span class="kealeys-warning-icon">&#9888;</span>
+            <div><strong>Visible lint at the exterior vent opening</strong> - if you can see buildup outside, the inside is likely much worse.</div>
+        </div>
+        <div class="kealeys-warning-item">
+            <span class="kealeys-warning-icon">&#9888;</span>
+            <div><strong>It's been over a year since professional cleaning</strong> - annual service is the minimum recommendation.</div>
+        </div>
+    </div>
+    
+    <p>If you're experiencing any of these warning signs, <a href="https://bkductdryercleaning.com/contact/" style="color: #b7254d;">contact us today</a> to schedule your dryer vent cleaning before a small issue becomes a dangerous one.</p>
+
+    <!-- Air Duct Cleaning Section -->
+    <h2>Professional Air Duct Cleaning for Seabrook Homes</h2>
+    
+    <p>The air quality inside your home directly impacts your family's health, comfort, and energy costs. Professional <a href="https://bkductdryercleaning.com/air-duct-cleaning/">air duct cleaning</a> removes accumulated dust, allergens, mold spores, pet dander, and other contaminants that circulate through your HVAC system with every cycle.</p>
+
+    <!-- Air Duct Before/After Image -->
+    <div class="kealeys-image-container">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/Air-Duct-Cleaning-Before_After-Split-Screen.jpg" alt="Before and after air duct cleaning results in Seabrook NH home" loading="lazy">
+    </div>
+
+    <p>This is especially important in Seabrook's coastal climate. Humidity and salt air introduce unique contaminants that inland homes don't face. Clean ducts mean your HVAC system runs more efficiently, your indoor air is healthier, and your equipment lasts longer. For families with asthma, allergies, or respiratory sensitivities, the improvement can be significant. <a href="https://bkductdryercleaning.com/health-benefits-cleaner-air-ducts-for-your-family/" style="color: #b7254d;">Learn more about the health benefits of clean air ducts</a>. You can also read about <a href="https://bkductdryercleaning.com/save-energy-how-clean-air-ducts-reduce-bills/" style="color: #b7254d;">how clean air ducts reduce your energy bills</a>.</p>
+
+    <h3>When Should You Clean Your Air Ducts?</h3>
+    <p>The EPA recommends professional duct cleaning when you see visible mold growth, notice substantial pest activity, or find excessive dust and debris in your ductwork. Cleaning is also a smart move after home renovations, when purchasing an older home, or if household members experience unexplained allergy symptoms. <a href="https://bkductdryercleaning.com/when-to-clean-air-ducts-insights-from-the-epa-for-2025/" style="color: #b7254d;">Read more about EPA guidelines for air duct cleaning</a>.</p>
+
+    <!-- HVAC Service Photo -->
+    <div class="kealeys-image-container">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/HVAC-Cleaning-in-Action-Service-Photo.jpg" alt="Kealey's HVAC cleaning technician servicing ductwork in Seabrook NH" loading="lazy">
+    </div>
+
+    <!-- Pricing and Process -->
+    <h2>Transparent Pricing and Our Professional Process</h2>
+    
+    <h3>What Seabrook Homeowners Can Expect</h3>
+    <p>We believe in upfront pricing with no surprises. Our costs reflect the thoroughness of our work and 32+ years of expertise:</p>
+    
+    <ul style="margin: 1.5rem 0; line-height: 2;">
+        <li><strong>Dryer Vent Cleaning:</strong> Generally $100-$200, based on vent length and accessibility</li>
+        <li><strong>Residential Air Duct Cleaning:</strong> Typically $300-$500, depending on home size and system complexity</li>
+        <li><strong>Commercial Services:</strong> Custom pricing based on system size and building requirements</li>
+    </ul>
+    
+    <p>Every job starts with a thorough inspection. We assess your system's condition, explain what we find, and provide a clear estimate before starting any work. No pressure, no upsells. Just honest recommendations from a family that's been doing this for over three decades. <a href="https://bkductdryercleaning.com/pricing/" style="color: #b7254d;">View our pricing details</a> or check our <a href="https://bkductdryercleaning.com/faqs/" style="color: #b7254d;">FAQ page</a> for more common questions.</p>
+
+    <h3>Our Cleaning Process</h3>
+    <p>We follow a systematic approach for every Seabrook home. It starts with a comprehensive inspection of your system, where we identify any hazards, efficiency issues, or code concerns. Then we use professional-grade equipment, including high-powered vacuums and rotary brush systems, to thoroughly clean every inch of your ductwork or dryer vent line.</p>
+    
+    <p>After cleaning, we verify results with airflow testing and provide you with before-and-after documentation so you can see exactly what we removed. We wrap up with maintenance tips tailored to your specific system and Seabrook's coastal conditions. Our No-Mess Promise means we leave your home cleaner than we found it.</p>
+
+    <!-- Google Reviews Section -->
+    <div class="kealeys-reviews-section">
+        <h2>What Our Customers Are Saying</h2>
+        
+        <div class="kealeys-review-card">
+            <div class="kealeys-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="kealeys-review-text">"Brian and his son, Keenan, were true professionals. They were communicative, prompt and friendly...they took the time to explain how they completed the cleaning of our 2nd floor dryer and it's duct (that hadn't been cleaned in almost 10 years - yikes, it was bad). I would highly recommend them for any of the services they provide based on our very positive experience."</p>
+            <span class="kealeys-review-author">- Joseph B.</span>
+        </div>
+
+        <div class="kealeys-review-card">
+            <div class="kealeys-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="kealeys-review-text">"Brian & his son Keenan did a FANTASTIC job! They were easy to book with, done in an hour, and not only did they do the vents but they left my wash closet even cleaner than they found it. They went above and beyond! 10/10 service!"</p>
+            <span class="kealeys-review-author">- Allison O.</span>
+        </div>
+
+        <div class="kealeys-review-card">
+            <div class="kealeys-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="kealeys-review-text">"Such a great company to work with!!! Would recommend to anyone! Professional and fantastic service!!!!!"</p>
+            <span class="kealeys-review-author">- Michelle C.</span>
+        </div>
+    </div>
+
+    <!-- Service Area Section -->
+    <h2>Serving Seabrook and the Greater Seacoast Region</h2>
+    
+    <p>We proudly serve all of Seabrook, NH (ZIP 03874), including Seabrook Beach, the downtown business district along Route 1, residential neighborhoods near Route 286, and all surrounding communities. Our <a href="https://bkductdryercleaning.com/services-area/">service area</a> covers the entire Seacoast region:</p>
+    
+    <ul style="margin: 1.5rem 0; line-height: 2;">
+        <li><strong>New Hampshire Seacoast:</strong> <a href="https://bkductdryercleaning.com/hampton-nh/" style="color: #b7254d;">Hampton</a>, Hampton Falls, Hampton Beach, North Hampton, Rye, <a href="https://bkductdryercleaning.com/exeter-nh/" style="color: #b7254d;">Exeter</a>, <a href="https://bkductdryercleaning.com/portsmouth-nh/" style="color: #b7254d;">Portsmouth</a>, <a href="https://bkductdryercleaning.com/stratham-nh/" style="color: #b7254d;">Stratham</a></li>
+        <li><strong>Massachusetts North Shore:</strong> <a href="https://bkductdryercleaning.com/salisbury-ma/" style="color: #b7254d;">Salisbury</a>, <a href="https://bkductdryercleaning.com/amesbury-ma/" style="color: #b7254d;">Amesbury</a>, <a href="https://bkductdryercleaning.com/newburyport-ma/" style="color: #b7254d;">Newburyport</a></li>
+        <li><strong>County Coverage:</strong> <a href="https://bkductdryercleaning.com/rockingham-county-nh/" style="color: #b7254d;">Rockingham County, NH</a> and <a href="https://bkductdryercleaning.com/essex-county-ma/" style="color: #b7254d;">Essex County, MA</a></li>
+    </ul>
+    
+    <p>Whether you're a homeowner needing routine maintenance, a property manager handling multi-unit buildings, or a business owner maintaining commercial dryer systems, we have the experience and equipment to handle it. Our location in Salisbury, MA puts us just minutes from Seabrook, ensuring quick response times for all service calls.</p>
+
+    <!-- FAQ Section -->
+    <div class="kealeys-faq-section">
+        <h2>Frequently Asked Questions About Dryer Vent and Duct Cleaning in Seabrook</h2>
+        
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                How often should I have my dryer vent cleaned in Seabrook?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>For most Seabrook households, we recommend professional dryer vent cleaning at least once per year. If you have a large family, do laundry frequently, have pets, or notice any warning signs, you may benefit from cleaning every 6-9 months. Commercial properties with high-volume dryer usage should consider quarterly service.</p>
+                <p><a href="https://bkductdryercleaning.com/how-often-to-clean-dryer-vents-fire-prevention-tips-2026/" style="color: #b7254d;">Read our complete cleaning frequency guide</a>.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                How much does dryer vent cleaning cost in Seabrook, NH?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>Dryer vent cleaning typically ranges from $100-$200, depending on the length and configuration of your vent system, accessibility, and condition. We provide transparent pricing with no hidden fees. <a href="https://bkductdryercleaning.com/contact/" style="color: #b7254d;">Contact us for a free quote</a> specific to your property. Most homeowners find the service pays for itself through <a href="https://bkductdryercleaning.com/save-energy-how-clean-air-ducts-reduce-bills/" style="color: #b7254d;">energy savings</a> alone.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                Is dryer vent cleaning really necessary for safety?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>Yes. According to the U.S. Fire Administration, failure to clean dryer vents is the leading cause of residential dryer fires. Lint is extremely flammable, and when it accumulates in your vent system, it creates a serious fire hazard. Professional cleaning removes this dangerous buildup and significantly reduces your risk. Beyond fire safety, clean vents improve efficiency, reduce energy costs, and extend your dryer's lifespan.</p>
+                <p><a href="https://bkductdryercleaning.com/the-complete-guide-to-dryer-vent-cleaning-everything-you-need-to-know/" style="color: #b7254d;">Read our complete guide to dryer vent cleaning</a>.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                How long does the cleaning process take?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>Dryer vent cleaning typically takes 45 minutes to 90 minutes, depending on the system length and condition. Air duct cleaning for an average-sized home takes 2-4 hours, based on the size of your HVAC system. We work efficiently while making sure the job is done thoroughly.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                What makes Kealey's different from other cleaning services?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>We're a father-and-son team with 32+ years of experience, not a franchise or a crew working off a script. Our owner, Brian Kealey, has a mechanical engineering background, which means technically sound service backed by real expertise. We offer transparent pricing, before-and-after photo proof of our work, and a No-Mess Promise.</p>
+                <p>Most importantly, we never recommend services you don't need. We've earned our 5-star reputation by being honest about what your home actually requires. <a href="https://bkductdryercleaning.com/about/" style="color: #b7254d;">Learn more about our family business</a>.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                Do you service both residential and commercial properties?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>Yes. We serve residential homes, multi-unit apartment buildings, laundromats, hotels, and commercial facilities throughout Seabrook and the Seacoast region. For property managers and business owners, we can set up regular maintenance schedules to keep your properties safe and compliant.</p>
+            </div>
+        </div>
+
+        <div class="kealeys-faq-item">
+            <div class="kealeys-faq-question">
+                Do you offer same-day or emergency dryer vent services?
+            </div>
+            <div class="kealeys-faq-answer">
+                <p>Yes. We offer same-day service when available and respond quickly to urgent situations. If you smell burning from your dryer, notice excessive heat, or see other danger signs, <a href="https://bkductdryercleaning.com/contact/" style="color: #b7254d;">contact us immediately</a> and we'll prioritize your service call.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="kealeys-seabrook-cta-final">
+        <h2 style="color: #ffffff; margin-top: 0;">Schedule Your Dryer Vent or Duct Cleaning in Seabrook Today</h2>
+        <p>Protect your Seabrook home with professional service from a family business that's been keeping Seacoast homes safe for over 32 years. We offer free inspections, transparent pricing, and same-day availability.</p>
+        <p><strong>Call us at <a href="tel:9789614513" style="color: #ffffff; text-decoration: underline;">(978) 961-4513</a> or request your free quote online.</strong></p>
+        <a href="https://bkductdryercleaning.com/contact/" class="kealeys-cta-button">Get Your Free Quote</a>
+    </div>
+
+    <!-- Map Section -->
+    <div class="kealeys-map-container">
+        <h2 style="margin-bottom: 1.5rem;">Proudly Serving Seabrook, NH</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93551.26922459286!2d-70.94695933674848!3d42.883878404330275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2e64dce33d097%3A0x3896735743830cf4!2sSeabrook%2C%20NH!5e0!3m2!1sen!2sus!4v1770394347994!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</div>
+
+<!-- FAQ Dropdown JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.kealeys-faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const isActive = this.classList.contains('active');
+            
+            // Close all other FAQs
+            faqQuestions.forEach(q => {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+            });
+            
+            // Toggle current FAQ
+            if (!isActive) {
+                this.classList.add('active');
+                answer.classList.add('active');
+            }
+        });
+    });
+});
+</script>
+
+<!-- Schema Markup for LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kealey's Duct and Dryer Cleaning Service",
+  "image": "https://bkductdryercleaning.com/wp-content/uploads/2026/02/Seabrook-NH-Location-Specific-Photo.jpg",
+  "@id": "https://bkductdryercleaning.com/seabrook-nh/",
+  "url": "https://bkductdryercleaning.com/seabrook-nh/",
+  "telephone": "(978) 961-4513",
+  "email": "kealeys@bkductdryercleaning.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9 Del Logan Drive",
+    "addressLocality": "Salisbury",
+    "addressRegion": "MA",
+    "postalCode": "01952",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.8838784,
+    "longitude": -70.9469593
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61566588223772"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "83"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Seabrook",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Seabrook",
+      "addressRegion": "NH",
+      "postalCode": "03874",
+      "addressCountry": "US"
+    }
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.8838784,
+      "longitude": -70.9469593
+    },
+    "geoRadius": "25000"
+  }
+}
+</script>
+
+<!-- Schema Markup for FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often should I have my dryer vent cleaned in Seabrook?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most Seabrook households, we recommend professional dryer vent cleaning at least once per year. If you have a large family, do laundry frequently, have pets, or notice any warning signs, you may benefit from cleaning every 6-9 months. Commercial properties with high-volume dryer usage should consider quarterly service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does dryer vent cleaning cost in Seabrook, NH?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dryer vent cleaning typically ranges from $100-$200, depending on the length and configuration of your vent system, accessibility, and condition. We provide transparent pricing with no hidden fees. Contact us for a free quote specific to your property."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is dryer vent cleaning really necessary for safety?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. According to the U.S. Fire Administration, failure to clean dryer vents is the leading cause of residential dryer fires. Lint is extremely flammable, and when it accumulates in your vent system, it creates a serious fire hazard. Professional cleaning removes this dangerous buildup and significantly reduces your risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the cleaning process take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dryer vent cleaning typically takes 45 minutes to 90 minutes, depending on the system length and condition. Air duct cleaning for an average-sized home takes 2-4 hours, based on the size of your HVAC system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Kealey's different from other cleaning services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kealey's is a father-and-son team with 32+ years of experience. The owner has a mechanical engineering background, ensuring technically sound service. They offer transparent pricing, before-and-after photo proof, and a No-Mess Promise. They never recommend unnecessary services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you service both residential and commercial properties?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Kealey's serves residential homes, multi-unit apartment buildings, laundromats, hotels, and commercial facilities throughout Seabrook and the Seacoast region. Regular maintenance schedules are available for property managers and business owners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer same-day or emergency dryer vent services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Kealey's offers same-day service when available and responds quickly to urgent situations like burning smells or excessive heat from dryers."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Review Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kealey's Duct and Dryer Cleaning Service",
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Joseph B."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Brian and his son, Keenan, were true professionals. They were communicative, prompt and friendly...they took the time to explain how they completed the cleaning of our 2nd floor dryer and it's duct (that hadn't been cleaned in almost 10 years). I would highly recommend them for any of the services they provide based on our very positive experience."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Allison O."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Brian & his son Keenan did a FANTASTIC job! They were easy to book with, done in an hour, and not only did they do the vents but they left my wash closet even cleaner than they found it. They went above and beyond! 10/10 service!"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Michelle C."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Such a great company to work with! Would recommend to anyone! Professional and fantastic service!"
+    }
+  ]
+}
+</script>
