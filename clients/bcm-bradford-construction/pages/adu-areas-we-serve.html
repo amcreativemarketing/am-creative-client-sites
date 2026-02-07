@@ -1,0 +1,314 @@
+<!--
+  BCM ADU Areas We Serve Block
+  Self-contained HTML/CSS for the main ADU hub page.
+  Drop into Elementor HTML widget.
+  Brand: Navy #060097, Gold #FFCD57, Dark Slate #1E293B, Light Gray #F2F5F7
+  Fonts: Plus Jakarta Sans (headings), Inter (body)
+
+  TO UPDATE: Uncomment or add <a> links in the appropriate region group.
+  URL pattern: /adu-construction-[city]-[state]/
+
+  LINKING RULES:
+  - This block links DOWN from the hub to location pages
+  - Each location page links BACK here + to 2-3 nearby siblings
+  - See Notion "Location Service Page Cross-Linking Strategy" for full guide
+-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap');
+
+  /* === BCM Areas We Serve - ADU Hub === */
+  :root {
+    --bcm-navy: #060097;
+    --bcm-gold: #FFCD57;
+    --bcm-gold-hover: #E5B84E;
+    --bcm-white: #FFFFFF;
+    --bcm-dark-slate: #1E293B;
+    --bcm-medium-gray: #67768E;
+    --bcm-text: #555555;
+    --bcm-light-gray: #F2F5F7;
+    --bcm-off-white: #F9FAFB;
+    --bcm-border: #e0e0e0;
+    --bcm-shadow: 0 4px 20px rgba(6, 0, 151, 0.08);
+    --bcm-shadow-hover: 0 8px 30px rgba(6, 0, 151, 0.15);
+    --bcm-radius: 8px;
+    --bcm-radius-lg: 12px;
+    --bcm-radius-pill: 9999px;
+    --bcm-transition: all 0.3s ease;
+  }
+
+  .bcm-adu-areas {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    background: var(--bcm-light-gray);
+    padding: 80px 20px;
+  }
+
+  .bcm-adu-areas,
+  .bcm-adu-areas p,
+  .bcm-adu-areas a,
+  .bcm-adu-areas span {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .bcm-adu-areas h2,
+  .bcm-adu-areas h3 {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.2;
+  }
+
+  .bcm-adu-areas-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Section Header - matches Andover pattern */
+  .bcm-adu-areas__header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .bcm-adu-areas__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--bcm-dark-slate);
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+  }
+
+  .bcm-adu-areas__subtitle {
+    font-size: 1.125rem;
+    color: var(--bcm-medium-gray);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* Region Grid */
+  .bcm-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  /* Region Cards - matches benefit-card pattern */
+  .bcm-area-group {
+    background: var(--bcm-white);
+    border-radius: var(--bcm-radius-lg);
+    padding: 32px;
+    box-shadow: var(--bcm-shadow);
+    transition: var(--bcm-transition);
+    border-top: 4px solid var(--bcm-gold);
+  }
+
+  .bcm-area-group:hover {
+    box-shadow: var(--bcm-shadow-hover);
+    transform: translateY(-3px);
+  }
+
+  .bcm-area-group h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--bcm-dark-slate);
+    margin: 0 0 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .bcm-region-icon {
+    font-size: 1.1rem;
+    display: inline-block;
+  }
+
+  .bcm-region-desc {
+    font-size: 0.875rem;
+    color: var(--bcm-medium-gray);
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+  }
+
+  /* City Link Pills - matches service-pill pattern */
+  .bcm-area-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .bcm-area-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--bcm-off-white);
+    color: var(--bcm-navy);
+    text-decoration: none;
+    border-radius: var(--bcm-radius-pill);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 2px solid var(--bcm-light-gray);
+    transition: var(--bcm-transition);
+  }
+
+  .bcm-area-links a:hover {
+    background: var(--bcm-navy);
+    color: var(--bcm-white);
+    border-color: var(--bcm-navy);
+    transform: translateY(-2px);
+    box-shadow: var(--bcm-shadow-hover);
+  }
+
+  /* Placeholder for pages not yet built */
+  .bcm-area-links a.bcm-coming-soon {
+    background: var(--bcm-light-gray);
+    color: var(--bcm-medium-gray);
+    border-color: var(--bcm-border);
+    cursor: default;
+    pointer-events: none;
+    font-style: italic;
+  }
+
+  .bcm-areas-coming-text {
+    font-size: 0.9rem;
+    color: var(--bcm-medium-gray);
+    font-style: italic;
+    padding: 10px 0 0;
+  }
+
+  /* Bottom CTA */
+  .bcm-areas-footer {
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .bcm-areas-footer p {
+    font-size: 1rem;
+    color: var(--bcm-medium-gray);
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+  }
+
+  .bcm-areas-cta {
+    display: inline-block;
+    padding: 16px 32px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--bcm-radius-pill);
+    transition: var(--bcm-transition);
+    cursor: pointer;
+    border: none;
+    background-color: var(--bcm-gold);
+    color: var(--bcm-dark-slate);
+  }
+
+  .bcm-areas-cta:hover {
+    background-color: var(--bcm-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--bcm-shadow-hover);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .bcm-areas-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bcm-adu-areas {
+      padding: 60px 20px;
+    }
+
+    .bcm-adu-areas__title {
+      font-size: 1.875rem;
+    }
+
+    .bcm-areas-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .bcm-area-group {
+      padding: 24px;
+    }
+  }
+</style>
+
+<section class="bcm-adu-areas">
+  <div class="bcm-adu-areas-inner">
+
+    <div class="bcm-adu-areas__header">
+      <h2 class="bcm-adu-areas__title">ADU Construction Across the North Shore &amp; Beyond</h2>
+      <p class="bcm-adu-areas__subtitle">Bradford Construction designs and builds custom accessory dwelling units throughout Eastern Massachusetts and Southern New Hampshire. Select your town for local ADU details.</p>
+    </div>
+
+    <div class="bcm-areas-grid">
+
+      <!-- REGION 1: North Shore -->
+      <div class="bcm-area-group">
+        <h3><span class="bcm-region-icon">&#128205;</span> North Shore</h3>
+        <p class="bcm-region-desc">Essex County coastal communities</p>
+        <div class="bcm-area-links">
+          <a href="/adu-construction-newburyport-ma/">Newburyport</a>
+          <a href="/adu-construction-ipswich-ma/">Ipswich</a>
+          <a href="/adu-construction-georgetown-ma/">Georgetown</a>
+          <!-- ADD NEW NORTH SHORE CITIES HERE
+          <a href="/adu-construction-salisbury-ma/">Salisbury</a>
+          <a href="/adu-construction-rowley-ma/">Rowley</a>
+          <a href="/adu-construction-essex-ma/">Essex</a>
+          <a href="/adu-construction-gloucester-ma/">Gloucester</a>
+          <a href="/adu-construction-rockport-ma/">Rockport</a>
+          <a href="/adu-construction-beverly-ma/">Beverly</a>
+          <a href="/adu-construction-boxford-ma/">Boxford</a>
+          -->
+        </div>
+      </div>
+
+      <!-- REGION 2: Merrimack Valley -->
+      <div class="bcm-area-group">
+        <h3><span class="bcm-region-icon">&#128205;</span> Merrimack Valley</h3>
+        <p class="bcm-region-desc">Greater Haverhill &amp; surrounding towns</p>
+        <div class="bcm-area-links">
+          <a href="/adu-construction-andover-ma/">Andover</a>
+          <a href="/adu-construction-haverhill-ma/">Haverhill</a>
+          <!-- ADD NEW MERRIMACK VALLEY CITIES HERE
+          <a href="/adu-construction-north-andover-ma/">North Andover</a>
+          <a href="/adu-construction-methuen-ma/">Methuen</a>
+          <a href="/adu-construction-amesbury-ma/">Amesbury</a>
+          <a href="/adu-construction-lawrence-ma/">Lawrence</a>
+          <a href="/adu-construction-groveland-ma/">Groveland</a>
+          <a href="/adu-construction-west-newbury-ma/">West Newbury</a>
+          <a href="/adu-construction-merrimac-ma/">Merrimac</a>
+          -->
+        </div>
+      </div>
+
+      <!-- REGION 3: Southern New Hampshire -->
+      <div class="bcm-area-group">
+        <h3><span class="bcm-region-icon">&#128205;</span> Southern New Hampshire</h3>
+        <p class="bcm-region-desc">Rockingham &amp; Hillsborough counties</p>
+        <div class="bcm-area-links">
+          <!-- ADD NH CITIES AS PAGES ARE BUILT
+          <a href="/adu-construction-salem-nh/">Salem</a>
+          <a href="/adu-construction-plaistow-nh/">Plaistow</a>
+          <a href="/adu-construction-londonderry-nh/">Londonderry</a>
+          <a href="/adu-construction-windham-nh/">Windham</a>
+          <a href="/adu-construction-hampstead-nh/">Hampstead</a>
+          <a href="/adu-construction-exeter-nh/">Exeter</a>
+          -->
+          <span class="bcm-areas-coming-text">Location pages coming soon</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bcm-areas-footer">
+      <p>Don't see your town? We likely serve your area.</p>
+      <a href="/contact/" class="bcm-areas-cta">Ask About Your Property</a>
+    </div>
+
+  </div>
+</section>
