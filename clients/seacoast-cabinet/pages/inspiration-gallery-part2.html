@@ -85,7 +85,7 @@
         <div class="gallery-grid gallery-grid-2">
             <article class="gallery-item">
                 <div class="gallery-item-image">
-                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/Small-Kitchen-Transformations-1.jpg"
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/Small-Kitchen-Transformations-1.webp"
                          alt="Small kitchen transformation with smart storage solutions North Shore MA"
                          loading="lazy"
                          width="800"
@@ -99,7 +99,7 @@
 
             <article class="gallery-item">
                 <div class="gallery-item-image">
-                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/Small-Kitchen-Transformations-2.jpg"
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/Small-Kitchen-Transformations-2.webp"
                          alt="Efficient small kitchen with pull-out storage and light colors Massachusetts"
                          loading="lazy"
                          width="800"
@@ -198,104 +198,3 @@
 </section>
 
 </div><!-- End .gallery-page-wrapper -->
-
-<!-- Mobile Sticky CTA -->
-<div class="gallery-sticky-cta" id="galleryStickyCta">
-    <a href="https://seacoastcabinetne.com/contact/" class="gallery-btn gallery-btn-primary">Schedule Free Consultation</a>
-</div>
-
-<!-- JavaScript -->
-<script>
-    // Sticky CTA visibility on scroll
-    (function() {
-        const stickyCta = document.getElementById('galleryStickyCta');
-        if (!stickyCta) return;
-        
-        let ticking = false;
-
-        function updateStickyCta() {
-            const scrollY = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const docHeight = document.documentElement.scrollHeight;
-
-            if (scrollY > 300 && scrollY < (docHeight - windowHeight - 200)) {
-                stickyCta.classList.add('visible');
-            } else {
-                stickyCta.classList.remove('visible');
-            }
-
-            ticking = false;
-        }
-
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                window.requestAnimationFrame(updateStickyCta);
-                ticking = true;
-            }
-        });
-    })();
-
-    // Analytics tracking
-    (function() {
-        document.querySelectorAll('.gallery-item').forEach(function(item) {
-            item.addEventListener('click', function() {
-                if (typeof gtag !== 'undefined') {
-                    var img = this.querySelector('img');
-                    gtag('event', 'gallery_image_click', {
-                        'event_category': 'Gallery',
-                        'event_label': img ? img.alt : 'Unknown'
-                    });
-                }
-            });
-        });
-
-        document.querySelectorAll('.gallery-btn').forEach(function(button) {
-            button.addEventListener('click', function() {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'cta_click', {
-                        'event_category': 'CTA',
-                        'event_label': this.textContent.trim()
-                    });
-                }
-            });
-        });
-
-        var scrollDepth = 0;
-        var scrollMilestones = [25, 50, 75, 100];
-
-        window.addEventListener('scroll', function() {
-            var scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
-
-            scrollMilestones.forEach(function(milestone) {
-                if (scrollPercent >= milestone && scrollDepth < milestone) {
-                    scrollDepth = milestone;
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'scroll_depth', {
-                            'event_category': 'Engagement',
-                            'event_label': milestone + '%'
-                        });
-                    }
-                }
-            });
-        });
-    })();
-
-    // Intersection Observer for animation on scroll
-    (function() {
-        if ('IntersectionObserver' in window) {
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animationPlayState = 'running';
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.gallery-item').forEach(function(item) {
-                item.style.animationPlayState = 'paused';
-                observer.observe(item);
-            });
-        }
-    })();
-</script>
