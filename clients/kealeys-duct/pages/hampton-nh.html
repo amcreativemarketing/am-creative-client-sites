@@ -1,0 +1,943 @@
+<!-- HERO OPTIONS (managed by Elementor)
+     Option A: Professional Duct & Dryer Vent Cleaning in Hampton, NH / Serving Seacoast Homeowners Since 1993
+     Option B: Hampton's Trusted Air Duct & Dryer Vent Experts / No-Mess Promise · Visual Proof · Fire Safety
+     CTA Primary: Request Free Quote → /contact/
+     CTA Secondary: Call (978) 961-4513
+-->
+
+<style>
+/* Namespace: kealeys-hampton */
+:root {
+    --kealeys-primary: #b7254d;
+    --kealeys-secondary: #0e3160;
+    --kealeys-white: #ffffff;
+    --kealeys-light-gray: #f4f4f4;
+}
+
+.kealeys-hampton-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.kealeys-hampton-content h2 {
+    color: var(--kealeys-secondary);
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.kealeys-hampton-content h3 {
+    color: var(--kealeys-primary);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.kealeys-intro-section {
+    margin-bottom: 40px;
+}
+
+.kealeys-intro-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.kealeys-about-box {
+    background: var(--kealeys-secondary);
+    color: var(--kealeys-white);
+    padding: 40px;
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.kealeys-about-box h2 {
+    color: var(--kealeys-white);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.kealeys-about-box p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.kealeys-about-box a {
+    color: var(--kealeys-white);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.kealeys-trust-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--kealeys-primary);
+    color: var(--kealeys-white);
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.kealeys-trust-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.kealeys-trust-item strong {
+    display: block;
+    font-size: 24px;
+    color: var(--kealeys-white);
+    margin-bottom: 5px;
+}
+
+.kealeys-trust-item span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.kealeys-image-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.kealeys-image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.kealeys-image-section figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.kealeys-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.kealeys-feature-card {
+    background: var(--kealeys-light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--kealeys-primary);
+}
+
+.kealeys-feature-card h3 {
+    color: var(--kealeys-secondary);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.kealeys-feature-card p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.kealeys-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.kealeys-service-box {
+    background: var(--kealeys-white);
+    border: 2px solid var(--kealeys-secondary);
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.kealeys-service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(14, 49, 96, 0.15);
+}
+
+.kealeys-service-box h3 {
+    color: var(--kealeys-primary);
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.kealeys-service-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.kealeys-service-box li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.kealeys-service-box li:before {
+    content: "✓";
+    color: var(--kealeys-primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.kealeys-two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.kealeys-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.kealeys-review-card {
+    background: var(--kealeys-white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-top: 3px solid var(--kealeys-primary);
+}
+
+.kealeys-review-stars {
+    color: #f5a623;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.kealeys-review-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.kealeys-review-author {
+    font-weight: bold;
+    color: var(--kealeys-primary);
+    font-size: 14px;
+}
+
+.kealeys-coastal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.kealeys-coastal-card {
+    background: var(--kealeys-white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--kealeys-primary);
+}
+
+.kealeys-coastal-card h3 {
+    margin-top: 0;
+}
+
+.kealeys-faq-section {
+    margin: 50px 0;
+}
+
+.kealeys-faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.kealeys-faq-question {
+    background: var(--kealeys-light-gray);
+    border: none;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--kealeys-secondary);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kealeys-faq-question:hover {
+    background: #e8e8e8;
+}
+
+.kealeys-faq-question::after {
+    content: "+";
+    font-size: 24px;
+    color: var(--kealeys-primary);
+    font-weight: bold;
+}
+
+.kealeys-faq-question.active::after {
+    content: "−";
+}
+
+.kealeys-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+}
+
+.kealeys-faq-answer.active {
+    max-height: 500px;
+    padding: 20px;
+}
+
+.kealeys-map-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.kealeys-map-section iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.kealeys-area-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.kealeys-area-tag {
+    background: var(--kealeys-light-gray);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+.kealeys-cta-box {
+    background: var(--kealeys-primary);
+    color: var(--kealeys-white);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.kealeys-cta-box h2 {
+    color: var(--kealeys-white);
+    margin-bottom: 20px;
+}
+
+.kealeys-cta-box p {
+    color: var(--kealeys-white);
+}
+
+.kealeys-cta-button {
+    display: inline-block;
+    background: var(--kealeys-white);
+    color: var(--kealeys-primary);
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.kealeys-cta-button:hover {
+    background: var(--kealeys-secondary);
+    color: var(--kealeys-white);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .kealeys-feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .kealeys-two-column {
+        grid-template-columns: 1fr;
+    }
+    
+    .kealeys-feature-grid,
+    .kealeys-services-grid,
+    .kealeys-coastal-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .kealeys-reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .kealeys-trust-bar {
+        flex-direction: column;
+    }
+
+    .kealeys-hampton-content h2 {
+        font-size: 26px;
+    }
+
+    .kealeys-map-section iframe {
+        height: 350px;
+    }
+}
+</style>
+
+<div class="kealeys-hampton-content">
+
+    <!-- Introduction Section -->
+    <section class="kealeys-intro-section">
+        <p>Hampton's coastal charm brings unique challenges for homeowners, from salt air and seasonal humidity to sand and moisture working their way into your HVAC system and dryer vents. Since 1993, Kealey's Duct and Dryer Cleaning Service has been protecting Seacoast families with thorough, professional <a href="https://bkductdryercleaning.com/air-duct-cleaning/">air duct cleaning</a> and <a href="https://bkductdryercleaning.com/dryer-vent-cleaning/">dryer vent cleaning</a> services built on transparency, visual proof, and real results.</p>
+
+        <p>Whether you're in Hampton Beach, near Winnacunnet, or along the seacoast, we combine mechanical engineering expertise with a genuine commitment to doing the job right the first time. No bait-and-switch pricing, no rushing through the work, no wondering if it was actually done. Just honest, thorough service from a father-and-son team that treats your home like our own.</p>
+    </section>
+
+    <!-- About Kealey's -->
+    <section class="kealeys-about-box">
+        <h2>About Kealey's Duct and Dryer Cleaning</h2>
+        <p>Founded by Brian Kealey, a mechanical engineer with a focus on indoor air quality, our family-owned business has served the North Shore and Seacoast since 1993. Brian's engineering background means technically sound service using professional-grade equipment and methods that actually work. Today, his son Keenan works alongside him, continuing the family tradition of thoroughness, integrity, and treating every Hampton home the way they'd treat their own.</p>
+        <p>We know the duct cleaning industry has a reputation problem. Too many companies run cheap "whole house" specials, show up, blow air through the first few feet of ductwork, and call it done. That's not how we operate. We show you what we find, show you what we removed, and leave your home cleaner than we found it.</p>
+        <p><a href="https://bkductdryercleaning.com/about/">Learn more about our family and our story →</a></p>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="kealeys-trust-bar">
+        <div class="kealeys-trust-item">
+            <strong>32+ Years</strong>
+            <span>Serving Hampton & Seacoast Families</span>
+        </div>
+        <div class="kealeys-trust-item">
+            <strong>5.0★ Rating</strong>
+            <span>80+ Google Reviews</span>
+        </div>
+        <div class="kealeys-trust-item">
+            <strong>Licensed & Insured</strong>
+            <span>Full Residential & Commercial</span>
+        </div>
+    </div>
+
+    <!-- Feature Image 1 -->
+    <figure class="kealeys-image-section">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/Hampton-NH_Location-Service-Kealeys.jpg" alt="Professional duct and dryer vent cleaning service in Hampton NH - Kealey's technician performing thorough cleaning" loading="lazy">
+        <figcaption>Our team performing comprehensive duct and dryer vent cleaning for a Hampton homeowner</figcaption>
+    </figure>
+
+    <!-- Google Reviews Section -->
+    <section style="margin: 50px 0;">
+        <h2 style="text-align: center;">What Hampton-Area Customers Are Saying</h2>
+        
+        <div class="kealeys-reviews-grid">
+            <div class="kealeys-review-card">
+                <div class="kealeys-review-stars">★★★★★</div>
+                <p class="kealeys-review-text">"They did an excellent job cleaning my dryer vent and the inside of my dryer. It looks almost new again on the inside and dries clothes much better than before. They were knowledgeable and walked me through every step of the cleaning process they did. Highly recommend."</p>
+                <p class="kealeys-review-author">— Richard T.</p>
+            </div>
+            
+            <div class="kealeys-review-card">
+                <div class="kealeys-review-stars">★★★★★</div>
+                <p class="kealeys-review-text">"Brian was super responsive to my request late in the evening and arrived for the job the next day, not just on time but early. He did an exceptional job and at an excellent price. Local services are always the best and Kealey's is no exception!"</p>
+                <p class="kealeys-review-author">— Amy F.</p>
+            </div>
+            
+            <div class="kealeys-review-card">
+                <div class="kealeys-review-stars">★★★★★</div>
+                <p class="kealeys-review-text">"They did a fantastic job and were very professional. They also took the time to explain how our systems works as I'd never owned a home with forced hot air or central air conditioning. I'd rate this company a 10 out of 10. They also installed a much safer dryer vent system than the one we had when we moved in. Safety is always number one in my mind and this company is top notch. A+"</p>
+                <p class="kealeys-review-author">— Elizabeth J.</p>
+            </div>
+        </div>
+        
+        <p style="text-align: center; margin-top: 25px; font-size: 16px;">
+            <a href="https://www.google.com/maps/place/Kealey's+Duct+and+Dryer+Cleaning+Service/" target="_blank" rel="noopener" style="color: var(--kealeys-primary); text-decoration: none; font-weight: bold;">Read 80+ More 5-Star Google Reviews →</a>
+        </p>
+    </section>
+
+    <!-- Why Choose Kealey's -->
+    <section>
+        <h2>The Kealey's Difference</h2>
+        <p style="margin-bottom: 30px; font-size: 17px;">Here's what sets us apart from other duct cleaning companies serving Hampton:</p>
+        
+        <div class="kealeys-feature-grid">
+            <div class="kealeys-feature-card">
+                <h3>No-Mess Promise</h3>
+                <p>We leave your home cleaner than we found it. Protective drop cloths, thorough cleanup, and organized workspace every time.</p>
+            </div>
+            
+            <div class="kealeys-feature-card">
+                <h3>Visual Proof</h3>
+                <p>Before and after photos with every job so you can see exactly what we removed. No guesswork, no wondering if it was done.</p>
+            </div>
+            
+            <div class="kealeys-feature-card">
+                <h3>Fast Response</h3>
+                <p>Prompt communication and callbacks within hours. We answer texts and calls even on weekends when you need us.</p>
+            </div>
+            
+            <div class="kealeys-feature-card">
+                <h3>Engineering Expertise</h3>
+                <p>Owner Brian Kealey's mechanical engineering background ensures technically sound methods and professional-grade equipment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section>
+        <h2 style="margin-top: 50px;">Our Hampton Services</h2>
+        
+        <div class="kealeys-services-grid">
+            <div class="kealeys-service-box">
+                <h3>Air Duct Cleaning</h3>
+                <p>Comprehensive HVAC system cleaning that improves air quality and system efficiency. Especially important in Hampton's humid coastal climate.</p>
+                <ul>
+                    <li>Removes dust, allergens, pet dander, and mold</li>
+                    <li>Eliminates musty coastal humidity odors</li>
+                    <li>Post-renovation construction dust removal</li>
+                    <li>Allergy and respiratory relief</li>
+                    <li>2-3 hour thorough process</li>
+                </ul>
+                <a href="https://bkductdryercleaning.com/air-duct-cleaning/hampton-nh/" style="color: var(--kealeys-primary); text-decoration: none; font-weight: bold;">Learn More About Air Duct Cleaning in Hampton →</a>
+            </div>
+            
+            <div class="kealeys-service-box">
+                <h3>Dryer Vent Cleaning</h3>
+                <p>Critical fire prevention service that also improves dryer efficiency and lowers energy bills. Coastal lint compaction makes this essential.</p>
+                <ul>
+                    <li>Prevents 2,900+ annual dryer fires nationally</li>
+                    <li>Reduces drying time by up to 50%</li>
+                    <li>Removes pounds of accumulated lint</li>
+                    <li>Bird nest and blockage removal</li>
+                    <li>Quick 45 min to 1-hour service</li>
+                </ul>
+                <a href="https://bkductdryercleaning.com/dryer-vent-cleaning/" style="color: var(--kealeys-primary); text-decoration: none; font-weight: bold;">Learn More About Dryer Vent Cleaning →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Image -->
+    <figure class="kealeys-image-section">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Before_After-Air-Duct-Cleaning.webp" alt="Before and after air duct cleaning results showing dramatic improvement in Hampton NH home" loading="lazy">
+        <figcaption>Before and after comparison from a recent Hampton-area service appointment</figcaption>
+    </figure>
+
+    <!-- Coastal Climate Section -->
+    <section style="background: var(--kealeys-light-gray); padding: 40px; border-radius: 8px; margin: 50px 0;">
+        <h2>Why Coastal Hampton Homes Need Extra Attention</h2>
+        <p style="font-size: 17px; margin-bottom: 25px;">Hampton's location on New Hampshire's seacoast creates conditions that accelerate duct contamination and dryer vent hazards compared to inland homes.</p>
+
+        <div class="kealeys-coastal-grid">
+            <div class="kealeys-coastal-card">
+                <h3>Humidity and Mold Risk</h3>
+                <p>Coastal air carries moisture that promotes mold growth inside ductwork. If your HVAC smells musty when it kicks on, there's a good chance humidity has created conditions for mold to thrive in your system.</p>
+            </div>
+
+            <div class="kealeys-coastal-card">
+                <h3>Salt Air and Lint Compaction</h3>
+                <p>Salt air and humidity cause dryer lint to compact more densely than it would in dry climates. That packed lint blocks airflow faster and increases fire risk, which is why Hampton dryer vents often need cleaning more frequently.</p>
+            </div>
+
+            <div class="kealeys-coastal-card">
+                <h3>Vacation Properties</h3>
+                <p>Hampton Beach summer rentals and seasonal homes need proper HVAC and dryer maintenance as part of opening and closing procedures. Sitting idle for months creates the perfect environment for mold and dust buildup.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- When to Schedule -->
+    <section>
+        <h2>When Hampton Homes Need Professional Cleaning</h2>
+        
+        <div class="kealeys-two-column">
+            <div>
+                <h3>Air Duct Cleaning Signs:</h3>
+                <ul style="line-height: 2;">
+                    <li>Visible dust around vent registers</li>
+                    <li>Musty or moldy odors when HVAC runs</li>
+                    <li>Family members experiencing increased allergies</li>
+                    <li>After home renovation or construction</li>
+                    <li>Haven't cleaned ducts in 3-5 years</li>
+                    <li>Just purchased a previously occupied home</li>
+                </ul>
+                <p><a href="https://bkductdryercleaning.com/air-duct-cleaning/hampton-nh/" style="color: var(--kealeys-primary);">Hampton Air Duct Cleaning Services & Process →</a></p>
+                <p><a href="https://bkductdryercleaning.com/when-to-clean-air-ducts-insights-from-the-epa-for-2025/" style="color: var(--kealeys-primary);">Read: When to Clean Air Ducts (EPA Insights) →</a></p>
+            </div>
+            
+            <div>
+                <h3>Dryer Vent Cleaning Signs:</h3>
+                <ul style="line-height: 2;">
+                    <li>Clothes taking 2+ cycles to fully dry</li>
+                    <li>Dryer getting extremely hot to touch</li>
+                    <li>Burning smell when dryer is running</li>
+                    <li>Lint visible around dryer door seal</li>
+                    <li>Vent hood flap doesn't open properly</li>
+                    <li>Haven't cleaned vent in 12+ months</li>
+                </ul>
+                <p><a href="https://bkductdryercleaning.com/how-often-to-clean-dryer-vents-fire-prevention-tips-2026/" style="color: var(--kealeys-primary);">Read: How Often to Clean Dryer Vents →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Image -->
+    <figure class="kealeys-image-section">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-4.webp" alt="Professional rotary brush air duct cleaning equipment in action - Kealey's Hampton NH" loading="lazy">
+        <figcaption>Our industrial-grade rotary brush system provides thorough duct cleaning</figcaption>
+    </figure>
+
+    <!-- Benefits Section -->
+    <section style="background: var(--kealeys-light-gray); padding: 40px; border-radius: 8px; margin: 50px 0;">
+        <h2>Benefits for Hampton Homeowners</h2>
+        
+        <div class="kealeys-two-column">
+            <div>
+                <h3>Air Duct Cleaning Benefits:</h3>
+                <ul style="line-height: 2;">
+                    <li><strong>Improved Indoor Air Quality:</strong> Remove accumulated dust, allergens, and contaminants</li>
+                    <li><strong>Allergy & Respiratory Relief:</strong> Reduce triggers for asthma and allergies</li>
+                    <li><strong>HVAC Efficiency:</strong> Improve system airflow and reduce energy costs</li>
+                    <li><strong>Eliminate Odors:</strong> Remove musty smells common in coastal Seacoast homes</li>
+                    <li><strong>Extended System Life:</strong> Reduce strain on heating and cooling equipment</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3>Dryer Vent Cleaning Benefits:</h3>
+                <ul style="line-height: 2;">
+                    <li><strong>Fire Prevention:</strong> Eliminate the #1 cause of dryer fires (lint buildup)</li>
+                    <li><strong>Energy Savings:</strong> Reduce drying time and lower electric bills</li>
+                    <li><strong>Faster Drying:</strong> Clothes dry in single cycle instead of multiple</li>
+                    <li><strong>Extended Dryer Life:</strong> Reduce wear on heating elements and motor</li>
+                    <li><strong>Peace of Mind:</strong> Know your family is safe from fire hazards</li>
+                </ul>
+            </div>
+        </div>
+        
+        <p style="margin-top: 20px;"><a href="https://bkductdryercleaning.com/the-hidden-truth-about-air-ducts-and-dryer-vents-in-massachusetts-homes" style="color: var(--kealeys-primary);">Read: The Hidden Truth About Air Ducts & Dryer Vents →</a></p>
+        
+        <p style="margin-top: 15px;"><a href="https://bkductdryercleaning.com/essential-air-duct-cleaning-for-pet-owners-in-north-shore-ma/" style="color: var(--kealeys-primary);">For Pet Owners: Essential Air Duct Cleaning Guide →</a></p>
+    </section>
+
+    <!-- Mid-page CTA -->
+    <div class="kealeys-cta-box">
+        <h2>Protect Your Hampton Home</h2>
+        <p style="font-size: 18px; margin-bottom: 25px;">Transparent pricing, no-mess guarantee, and before/after photo proof with every job.</p>
+        <a href="https://bkductdryercleaning.com/contact/" class="kealeys-cta-button">Request Free Quote</a>
+        <a href="tel:9789614513" class="kealeys-cta-button">Call (978) 961-4513</a>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="kealeys-faq-section">
+        <h2>Frequently Asked Questions - Hampton, NH</h2>
+        
+        <div class="kealeys-faq-item">
+            <button class="kealeys-faq-question">How often should I clean my dryer vent in Hampton?</button>
+            <div class="kealeys-faq-answer">
+                <p>We recommend professional dryer vent cleaning every 12-18 months for most Hampton households. If you do multiple loads per week, have a long vent run, or notice your dryer taking longer to dry clothes, you may need more frequent cleaning (every 6-12 months). Coastal humidity in Hampton can cause lint to compact more densely, making regular professional cleaning especially important for fire prevention.</p>
+            </div>
+        </div>
+        
+        <div class="kealeys-faq-item">
+            <button class="kealeys-faq-question">How often should air ducts be cleaned in coastal homes?</button>
+            <div class="kealeys-faq-answer">
+                <p>The EPA recommends cleaning air ducts "as needed" when there are specific issues like visible mold, pest infestations, or excessive dust. For most Hampton homes, we recommend every 3-5 years. However, coastal humidity can accelerate dust accumulation and mold growth, so homes near Hampton Beach or with older HVAC systems may benefit from cleaning every 2-3 years.</p>
+            </div>
+        </div>
+        
+        <div class="kealeys-faq-item">
+            <button class="kealeys-faq-question">Will duct cleaning make a mess in my home?</button>
+            <div class="kealeys-faq-answer">
+                <p>Absolutely not. We promise a no-mess experience. We use protective drop cloths throughout our workspace, maintain an organized setup, and thoroughly clean up before we leave. Many customers tell us we leave their homes cleaner than we found them. You'll see the difference in our attention to detail from the moment we arrive.</p>
+            </div>
+        </div>
+        
+        <div class="kealeys-faq-item">
+            <button class="kealeys-faq-question">How long does a typical cleaning take?</button>
+            <div class="kealeys-faq-answer">
+                <p>Dryer vent cleaning typically takes 45 minutes to 1 hour. A thorough whole-home air duct cleaning takes 2-3 hours for an average-sized Hampton home (1,500-2,500 sq ft). Larger homes or those with more extensive ductwork may take 3-4 hours. We never rush - taking the proper time ensures we clean every vent thoroughly, not just the first 10 feet like some competitors.</p>
+            </div>
+        </div>
+        
+        <div class="kealeys-faq-item">
+            <button class="kealeys-faq-question">How much does duct and dryer vent cleaning cost in Hampton?</button>
+            <div class="kealeys-faq-answer">
+                <p>Pricing varies based on your home's size, number of vents, and system accessibility. Air duct cleaning typically ranges from $300-$500 for residential homes, while dryer vent cleaning generally costs $100-$200. We provide clear, upfront quotes with no hidden fees or surprise charges. Every job begins with a thorough inspection, and what we quote is what you pay. Contact us for a free, no-obligation quote: <a href="tel:9789614513" style="color: var(--kealeys-primary);">(978) 961-4513</a></p>
+            </div>
+        </div>
+        
+        <div class="kealeys-faq-item">
+            <button class="kealeys-faq-question">Do you service Hampton Beach vacation rentals?</button>
+            <div class="kealeys-faq-answer">
+                <p>Yes. We work with many Hampton Beach property owners and vacation rental managers. We understand the importance of seasonal opening and closing procedures, and can ensure your rental property's HVAC and dryer systems are clean and safe for guests. We offer flexible scheduling to work around your rental calendar and provide documentation for your maintenance records.</p>
+            </div>
+        </div>
+        
+        <div class="kealeys-faq-item">
+            <button class="kealeys-faq-question">Do you service commercial properties in Hampton?</button>
+            <div class="kealeys-faq-answer">
+                <p>Yes. We provide comprehensive duct and dryer vent cleaning for commercial properties throughout Hampton, including laundromats, hotels, salons, restaurants, and multi-unit residential buildings. We offer flexible scheduling, thorough documentation for compliance purposes, and efficient service with minimal disruption to your operations. <a href="https://bkductdryercleaning.com/contact/" style="color: var(--kealeys-primary);">Contact us to discuss your commercial needs</a>.</p>
+            </div>
+        </div>
+        
+        <div class="kealeys-faq-item">
+            <button class="kealeys-faq-question">Do I need to be home during the service?</button>
+            <div class="kealeys-faq-answer">
+                <p>We ask that someone 18+ be home when we arrive to show us your system layout and answer any questions. After that initial walkthrough, you're welcome to go about your day or leave if needed. Our team is fully background-checked, licensed, and insured. Many Hampton customers trust us with their home while they run errands or work from another room.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Image -->
+    <figure class="kealeys-image-section">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/HVAC-Air-Duct-Cleaning-Before_After.webp" alt="Dramatic before and after comparison showing effectiveness of professional HVAC air duct cleaning in Hampton NH" loading="lazy">
+        <figcaption>The difference professional duct cleaning makes - before and after from a recent Hampton-area job</figcaption>
+    </figure>
+
+    <!-- Map Section -->
+    <section class="kealeys-map-section">
+        <h2>Serving Hampton, NH and Surrounding Seacoast Communities</h2>
+
+        <div class="kealeys-area-tags">
+            <span class="kealeys-area-tag">Hampton, NH</span>
+            <span class="kealeys-area-tag">Hampton Beach, NH</span>
+            <span class="kealeys-area-tag">North Hampton, NH</span>
+            <span class="kealeys-area-tag">Hampton Falls, NH</span>
+            <span class="kealeys-area-tag">Seabrook, NH</span>
+            <span class="kealeys-area-tag">Rye, NH</span>
+            <span class="kealeys-area-tag">Portsmouth, NH</span>
+            <span class="kealeys-area-tag">Exeter, NH</span>
+            <span class="kealeys-area-tag">Stratham, NH</span>
+            <span class="kealeys-area-tag">Newburyport, MA</span>
+        </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93481.64708941444!2d-70.9222392842341!3d42.92977095086748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2e86dbae46463%3A0xe89c74abe205382!2sHampton%2C%20NH!5e0!3m2!1sen!2sus!4v1770311683075!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <p style="margin-top: 20px;">See our complete <a href="https://bkductdryercleaning.com/services-area/" style="color: var(--kealeys-primary);">service area coverage</a> for more details on communities we serve.</p>
+    </section>
+
+    <!-- Final CTA -->
+    <div class="kealeys-cta-box">
+        <h2>Ready to Breathe Easier in Your Hampton Home?</h2>
+        <p style="font-size: 18px; margin-bottom: 25px;">Get your free quote today. Fast response, transparent pricing, no-mess guarantee.</p>
+        <a href="https://bkductdryercleaning.com/contact/" class="kealeys-cta-button">Request Free Quote</a>
+        <a href="tel:9789614513" class="kealeys-cta-button">Call (978) 961-4513</a>
+    </div>
+
+</div>
+
+<!-- LocalBusiness Schema for Hampton -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kealey's Duct and Dryer Cleaning Service - Hampton",
+  "image": "https://bkductdryercleaning.com/wp-content/uploads/2026/02/Hampton-NH_Location-Service-Kealeys.jpg",
+  "description": "Professional air duct and dryer vent cleaning services in Hampton, NH. Family-owned since 1993, serving Seacoast homeowners with no-mess promise and visual proof.",
+  "@id": "https://bkductdryercleaning.com/hampton-nh/",
+  "url": "https://bkductdryercleaning.com/hampton-nh/",
+  "telephone": "(978) 961-4513",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9 Del Logan Drive",
+    "addressLocality": "Salisbury",
+    "addressRegion": "MA",
+    "postalCode": "01952",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.9298,
+    "longitude": -70.8389
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Hampton",
+    "containedIn": {
+      "@type": "State",
+      "name": "New Hampshire"
+    }
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "16:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "80"
+  },
+  "sameAs": [
+    "https://www.facebook.com/KealeysService"
+  ]
+}
+</script>
+
+<!-- Service Schema - Dryer Vent -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Dryer Vent Cleaning",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Kealey's Duct and Dryer Cleaning Service"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Hampton",
+    "containedIn": {
+      "@type": "State",
+      "name": "New Hampshire"
+    }
+  },
+  "description": "Professional dryer vent cleaning in Hampton, NH. Fire prevention, improved efficiency, and lint removal by certified technicians.",
+  "offers": {
+    "@type": "Offer",
+    "priceRange": "$100-$200"
+  }
+}
+</script>
+
+<!-- Service Schema - Air Duct -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Air Duct Cleaning",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Kealey's Duct and Dryer Cleaning Service"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Hampton",
+    "containedIn": {
+      "@type": "State",
+      "name": "New Hampshire"
+    }
+  },
+  "description": "Comprehensive HVAC air duct cleaning in Hampton, NH. Mold prevention, allergen removal, and improved indoor air quality for coastal homes.",
+  "offers": {
+    "@type": "Offer",
+    "priceRange": "$300-$500"
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often should I clean my dryer vent in Hampton?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend professional dryer vent cleaning every 12-18 months for most Hampton households. If you do multiple loads per week, have a long vent run, or notice longer drying times, you may need more frequent cleaning every 6-12 months. Coastal humidity can cause lint to compact more densely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should air ducts be cleaned in coastal homes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The EPA recommends cleaning air ducts as needed when there are specific issues. For most Hampton homes, we recommend every 3-5 years. Coastal humidity can accelerate dust accumulation and mold growth, so homes near Hampton Beach may benefit from cleaning every 2-3 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will duct cleaning make a mess in my home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We promise a no-mess experience with protective drop cloths, organized workspace, and thorough cleanup. Many customers tell us we leave their homes cleaner than we found them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical cleaning take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dryer vent cleaning typically takes 45 minutes to 1 hour. A thorough whole-home air duct cleaning takes 2-3 hours for an average-sized Hampton home (1,500-2,500 sq ft). Larger homes may take 3-4 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does duct and dryer vent cleaning cost in Hampton?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Air duct cleaning typically ranges from $300-$500 for residential homes, while dryer vent cleaning generally costs $100-$200. We provide clear, upfront quotes with no hidden fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you service Hampton Beach vacation rentals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We work with many Hampton Beach property owners and vacation rental managers. We offer flexible scheduling, seasonal opening and closing maintenance, and documentation for your records."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- JavaScript for FAQ Accordion -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.kealeys-faq-question');
+    
+    faqQuestions.forEach(function(question) {
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const isActive = this.classList.contains('active');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.kealeys-faq-question').forEach(function(q) {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+            });
+            
+            // Toggle current FAQ
+            if (!isActive) {
+                this.classList.add('active');
+                answer.classList.add('active');
+            }
+        });
+    });
+});
+</script>
