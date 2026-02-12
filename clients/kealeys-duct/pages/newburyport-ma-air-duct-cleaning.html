@@ -1,0 +1,1141 @@
+<!-- 
+  Air Duct Cleaning - Newburyport, MA | Kealey's Duct & Dryer Cleaning
+  Path: /air-duct-cleaning/newburyport-ma/
+  Parent: /air-duct-cleaning/
+  Type: Service-Location (child page)
+  
+  Hero Options:
+  Option A: H1: "Professional Air Duct Cleaning in Newburyport, MA" / H2: "Breathe Easier with Trusted, Family-Owned HVAC Cleaning Since 1993"
+  Option B: H1: "Air Duct Cleaning Services in Newburyport, MA" / H2: "Better Air Quality, Lower Energy Bills, and a Healthier Home"
+  Option C: H1: "Newburyport Air Duct Cleaning Done Right" / H2: "32+ Years of Honest, No-Mess HVAC Cleaning for North Shore Homes"
+  
+  CTAs: "Get a Free Quote" → /contact/ | "Call (978) 961-4513" → tel:+19789614513
+-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500&display=swap');
+
+  :root {
+    --kealeys-red: #b7254d;
+    --kealeys-red-dark: #9a1e40;
+    --kealeys-navy: #0e3160;
+    --kealeys-navy-light: #1a4a8a;
+    --kealeys-white: #ffffff;
+    --kealeys-gray-light: #f5f5f5;
+    --kealeys-gray-medium: #e0e0e0;
+    --kealeys-text-dark: #333333;
+    --kealeys-text-medium: #666666;
+  }
+
+  .kealeys-nbpt-adc * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .kealeys-nbpt-adc {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--kealeys-text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  .kealeys-nbpt-adc h1,
+  .kealeys-nbpt-adc h2,
+  .kealeys-nbpt-adc h3,
+  .kealeys-nbpt-adc h4 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .kealeys-nbpt-adc a {
+    color: var(--kealeys-red);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .kealeys-nbpt-adc a:hover {
+    color: var(--kealeys-red-dark);
+  }
+
+  /* ========== HERO ========== */
+  .kealeys-nbpt-hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--kealeys-white);
+    overflow: hidden;
+  }
+
+  .kealeys-nbpt-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-13.webp') center/cover no-repeat;
+    z-index: 0;
+  }
+
+  .kealeys-nbpt-hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(14, 49, 96, 0.88) 0%, rgba(14, 49, 96, 0.80) 100%);
+    z-index: 1;
+  }
+
+  .kealeys-nbpt-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    padding: 60px 24px;
+  }
+
+  .kealeys-nbpt-hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    color: #ffffff;
+  }
+
+  .kealeys-nbpt-hero h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 28px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+  }
+
+  .kealeys-nbpt-hero-ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .kealeys-nbpt-btn-primary,
+  .kealeys-nbpt-adc a.kealeys-nbpt-btn-primary {
+    display: inline-block;
+    background: var(--kealeys-red);
+    color: #ffffff !important;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s ease, transform 0.15s ease;
+    text-decoration: none;
+  }
+
+  .kealeys-nbpt-btn-primary:hover,
+  .kealeys-nbpt-adc a.kealeys-nbpt-btn-primary:hover {
+    background: var(--kealeys-red-dark);
+    color: #ffffff !important;
+    transform: translateY(-1px);
+  }
+
+  .kealeys-nbpt-btn-secondary,
+  .kealeys-nbpt-adc a.kealeys-nbpt-btn-secondary {
+    display: inline-block;
+    background: var(--kealeys-red);
+    color: #ffffff !important;
+    padding: 14px 32px;
+    border-radius: 6px;
+    border: 2px solid var(--kealeys-red);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    text-decoration: none;
+  }
+
+  .kealeys-nbpt-btn-secondary:hover,
+  .kealeys-nbpt-adc a.kealeys-nbpt-btn-secondary:hover {
+    background: var(--kealeys-red-dark);
+    border-color: var(--kealeys-red-dark);
+    color: #ffffff !important;
+    transform: translateY(-1px);
+  }
+
+  /* ========== TRUST BADGES ========== */
+  .kealeys-nbpt-trust-bar {
+    background: var(--kealeys-navy);
+    padding: 20px 24px;
+  }
+
+  .kealeys-nbpt-trust-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .kealeys-nbpt-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--kealeys-white);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+
+  .kealeys-nbpt-trust-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--kealeys-red);
+    flex-shrink: 0;
+  }
+
+  .kealeys-nbpt-trust-icon svg {
+    width: 15px;
+    height: 15px;
+    fill: var(--kealeys-white);
+  }
+
+  /* ========== CONTENT SECTIONS ========== */
+  .kealeys-nbpt-section {
+    padding: 60px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .kealeys-nbpt-section-alt {
+    background: var(--kealeys-gray-light);
+  }
+
+  .kealeys-nbpt-section-navy {
+    background: var(--kealeys-navy);
+    color: var(--kealeys-white);
+  }
+
+  .kealeys-nbpt-section h2 {
+    font-size: 1.9rem;
+    color: var(--kealeys-navy);
+    margin-bottom: 20px;
+  }
+
+  .kealeys-nbpt-section-navy h2 {
+    color: var(--kealeys-white);
+  }
+
+  .kealeys-nbpt-section h3 {
+    font-size: 1.35rem;
+    color: var(--kealeys-navy);
+    margin-bottom: 14px;
+    margin-top: 28px;
+  }
+
+  .kealeys-nbpt-section p {
+    margin-bottom: 16px;
+    font-size: 1.02rem;
+    color: var(--kealeys-text-dark);
+  }
+
+  .kealeys-nbpt-section-navy p {
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* ========== TWO COL LAYOUT ========== */
+  .kealeys-nbpt-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .kealeys-nbpt-two-col img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .kealeys-nbpt-two-col-reverse {
+    direction: rtl;
+  }
+
+  .kealeys-nbpt-two-col-reverse > * {
+    direction: ltr;
+  }
+
+  /* ========== BENEFIT CARDS ========== */
+  .kealeys-nbpt-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 36px 0;
+  }
+
+  .kealeys-nbpt-card {
+    background: var(--kealeys-white);
+    border-radius: 10px;
+    padding: 32px 24px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--kealeys-red);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .kealeys-nbpt-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+  }
+
+  .kealeys-nbpt-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: rgba(183, 37, 77, 0.1);
+    margin-bottom: 14px;
+  }
+
+  .kealeys-nbpt-card-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: var(--kealeys-red);
+  }
+
+  .kealeys-nbpt-card h3 {
+    font-size: 1.15rem;
+    color: var(--kealeys-navy);
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  .kealeys-nbpt-card p {
+    font-size: 0.95rem;
+    color: var(--kealeys-text-medium);
+    margin-bottom: 0;
+  }
+
+  /* ========== BEFORE/AFTER ========== */
+  .kealeys-nbpt-ba-container {
+    margin: 30px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .kealeys-nbpt-ba-container img {
+    width: 100%;
+    display: block;
+  }
+
+  .kealeys-nbpt-ba-caption {
+    background: var(--kealeys-navy);
+    color: var(--kealeys-white);
+    text-align: center;
+    padding: 14px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  /* ========== PROCESS STEPS ========== */
+  .kealeys-nbpt-process {
+    counter-reset: process-step;
+    margin: 36px 0;
+  }
+
+  .kealeys-nbpt-step {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    padding: 24px;
+    background: var(--kealeys-white);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  .kealeys-nbpt-step-num {
+    counter-increment: process-step;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    background: var(--kealeys-red);
+    color: var(--kealeys-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .kealeys-nbpt-step h3 {
+    margin-top: 0;
+    font-size: 1.15rem;
+  }
+
+  .kealeys-nbpt-step p {
+    margin-bottom: 0;
+  }
+
+  /* ========== TESTIMONIALS ========== */
+  .kealeys-nbpt-testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 36px 0;
+  }
+
+  .kealeys-nbpt-testimonial {
+    background: var(--kealeys-white);
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    position: relative;
+  }
+
+  .kealeys-nbpt-stars {
+    color: #f5a623;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+
+  .kealeys-nbpt-testimonial p {
+    font-style: italic;
+    color: var(--kealeys-text-medium);
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+
+  .kealeys-nbpt-testimonial-author {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    color: var(--kealeys-navy);
+    font-size: 0.92rem;
+  }
+
+  /* ========== FAQ ========== */
+  .kealeys-nbpt-faq-list {
+    margin: 30px 0;
+  }
+
+  .kealeys-nbpt-faq-item {
+    border: 1px solid var(--kealeys-gray-medium);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .kealeys-nbpt-faq-question {
+    padding: 18px 24px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--kealeys-navy);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--kealeys-white);
+    transition: background 0.2s ease;
+  }
+
+  .kealeys-nbpt-faq-question:hover {
+    background: var(--kealeys-gray-light);
+  }
+
+  .kealeys-nbpt-faq-question::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--kealeys-red);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  .kealeys-nbpt-faq-item.active .kealeys-nbpt-faq-question::after {
+    content: '−';
+  }
+
+  .kealeys-nbpt-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 24px;
+    font-size: 0.98rem;
+    color: var(--kealeys-text-medium);
+    line-height: 1.7;
+  }
+
+  .kealeys-nbpt-faq-item.active .kealeys-nbpt-faq-answer {
+    max-height: 400px;
+    padding: 0 24px 18px;
+  }
+
+  /* ========== AREAS SERVED ========== */
+  .kealeys-nbpt-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 24px 0;
+  }
+
+  .kealeys-nbpt-area-tag {
+    background: var(--kealeys-white);
+    padding: 12px 16px;
+    border-radius: 6px;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--kealeys-navy);
+    border: 1px solid var(--kealeys-gray-medium);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .kealeys-nbpt-area-tag:hover {
+    border-color: var(--kealeys-red);
+    box-shadow: 0 2px 8px rgba(183, 37, 77, 0.1);
+  }
+
+  .kealeys-nbpt-area-tag a {
+    color: var(--kealeys-navy);
+    text-decoration: none;
+  }
+
+  .kealeys-nbpt-area-tag a:hover {
+    color: var(--kealeys-red);
+  }
+
+  /* ========== MAP ========== */
+  .kealeys-nbpt-map-wrapper {
+    margin: 30px 0 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .kealeys-nbpt-map-wrapper iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+  }
+
+  /* ========== BOTTOM CTA ========== */
+  .kealeys-nbpt-bottom-cta {
+    text-align: center;
+    padding: 60px 24px;
+    background: var(--kealeys-navy);
+    color: var(--kealeys-white);
+  }
+
+  .kealeys-nbpt-bottom-cta h2 {
+    color: var(--kealeys-white);
+    font-size: 2rem;
+    margin-bottom: 14px;
+  }
+
+  .kealeys-nbpt-bottom-cta p {
+    color: rgba(255,255,255,0.88);
+    max-width: 600px;
+    margin: 0 auto 28px;
+  }
+
+  .kealeys-nbpt-bottom-cta .kealeys-nbpt-hero-ctas {
+    justify-content: center;
+  }
+
+  /* ========== INLINE CTA ========== */
+  .kealeys-nbpt-inline-cta {
+    text-align: center;
+    margin: 36px 0;
+    padding: 32px;
+    background: linear-gradient(135deg, var(--kealeys-navy) 0%, var(--kealeys-navy-light) 100%);
+    border-radius: 10px;
+    color: var(--kealeys-white);
+  }
+
+  .kealeys-nbpt-inline-cta p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 1024px) {
+    .kealeys-nbpt-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .kealeys-nbpt-testimonials {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .kealeys-nbpt-areas-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .kealeys-nbpt-hero h1 {
+      font-size: 1.8rem;
+    }
+    .kealeys-nbpt-hero h2 {
+      font-size: 1.05rem;
+    }
+    .kealeys-nbpt-hero-content {
+      padding: 40px 20px;
+    }
+    .kealeys-nbpt-section h2 {
+      font-size: 1.55rem;
+    }
+    .kealeys-nbpt-two-col,
+    .kealeys-nbpt-two-col-reverse {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .kealeys-nbpt-two-col-reverse {
+      direction: ltr;
+    }
+    .kealeys-nbpt-cards {
+      grid-template-columns: 1fr;
+    }
+    .kealeys-nbpt-testimonials {
+      grid-template-columns: 1fr;
+    }
+    .kealeys-nbpt-areas-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .kealeys-nbpt-trust-inner {
+      gap: 20px;
+    }
+    .kealeys-nbpt-trust-item {
+      font-size: 0.82rem;
+    }
+    .kealeys-nbpt-hero-ctas {
+      flex-direction: column;
+      align-items: center;
+    }
+    .kealeys-nbpt-btn-primary,
+    .kealeys-nbpt-btn-secondary {
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+    }
+    .kealeys-nbpt-step {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .kealeys-nbpt-bottom-cta h2 {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+
+<div class="kealeys-nbpt-adc">
+
+  <!-- ========== HERO ========== -->
+  <section class="kealeys-nbpt-hero">
+    <div class="kealeys-nbpt-hero-bg" role="img" aria-label="Professional HVAC air duct cleaning in a Newburyport home"></div>
+    <div class="kealeys-nbpt-hero-content">
+      <h1>Professional Air Duct Cleaning in Newburyport, MA</h1>
+      <h2>Breathe Easier with Trusted, Family-Owned HVAC Cleaning Since 1993</h2>
+      <div class="kealeys-nbpt-hero-ctas">
+        <a href="/contact/" class="kealeys-nbpt-btn-primary">Get a Free Quote</a>
+        <a href="tel:+19789614513" class="kealeys-nbpt-btn-secondary">Call (978) 961-4513</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST BAR ========== -->
+  <div class="kealeys-nbpt-trust-bar">
+    <div class="kealeys-nbpt-trust-inner">
+      <div class="kealeys-nbpt-trust-item">
+        <span class="kealeys-nbpt-trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></span>
+        Family-Owned Since 1993
+      </div>
+      <div class="kealeys-nbpt-trust-item">
+        <span class="kealeys-nbpt-trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+        5.0 Rating - 80+ Google Reviews
+      </div>
+      <div class="kealeys-nbpt-trust-item">
+        <span class="kealeys-nbpt-trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span>
+        Mechanical Engineer Owned
+      </div>
+      <div class="kealeys-nbpt-trust-item">
+        <span class="kealeys-nbpt-trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></span>
+        Licensed &amp; Insured
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== KEY BENEFITS OF AIR DUCT CLEANING ========== -->
+  <section class="kealeys-nbpt-section">
+    <h2>Key Benefits of Air Duct Cleaning in Newburyport, MA</h2>
+    <p>Newburyport homes face unique air quality challenges. Coastal humidity, salt air, pollen from the Plum Island marshes, and older ductwork in the city's historic properties all contribute to buildup inside your HVAC system. Professional <a href="/air-duct-cleaning/">air duct cleaning</a> removes dust, allergens, mold spores, and debris that accumulate over time, giving your family cleaner air and a more efficient heating and cooling system.</p>
+
+    <div class="kealeys-nbpt-cards">
+      <div class="kealeys-nbpt-card">
+        <span class="kealeys-nbpt-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.5 17c0 1.65-1.35 3-3 3s-3-1.35-3-3h2c0 .55.45 1 1 1s1-.45 1-1-.45-1-1-1H2v-2h9.5c1.65 0 3 1.35 3 3zM19 6.5C19 4.57 17.43 3 15.5 3S12 4.57 12 6.5h2c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5S16.33 8 15.5 8H2v2h13.5c1.93 0 3.5-1.57 3.5-3.5zm-.5 4.5H2v2h16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5v2c1.93 0 3.5-1.57 3.5-3.5S20.43 11 18.5 11z"/></svg></span>
+        <h3>Improved Indoor Air Quality</h3>
+        <p>Remove dust, mold, <a href="/essential-air-duct-cleaning-for-pet-owners-in-north-shore-ma/">pet dander</a>, and allergens from your ductwork. Research shows clean ducts significantly reduce airborne pollutants, which is especially important for family members with allergies or respiratory conditions.</p>
+      </div>
+      <div class="kealeys-nbpt-card">
+        <span class="kealeys-nbpt-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></span>
+        <h3>Lower Energy Bills</h3>
+        <p>When ducts are clogged with debris, your HVAC system works harder to circulate air. Clean ducts allow air to flow freely, which can reduce energy consumption and extend the life of your heating and cooling equipment.</p>
+      </div>
+      <div class="kealeys-nbpt-card">
+        <span class="kealeys-nbpt-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span>
+        <h3>Enhanced HVAC Efficiency</h3>
+        <p>A clean system runs better and lasts longer. Regular maintenance reduces strain on your furnace and air conditioner, potentially saving you from costly repairs and early system replacement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INDOOR AIR QUALITY + IMAGE ========== -->
+  <section class="kealeys-nbpt-section-alt">
+    <div class="kealeys-nbpt-section">
+      <h2>How Air Duct Cleaning Improves Indoor Air Quality and Reduces Allergens</h2>
+      <div class="kealeys-nbpt-two-col">
+        <div>
+          <p>The average person spends roughly 22 hours indoors each day. That means the air circulating through your home's ducts has a direct impact on your family's health. Dust, mold, bacteria, and allergens accumulate inside ductwork and get recirculated every time your system runs.</p>
+          <p>Professional HVAC duct cleaning removes these contaminants at the source. Studies on commercial cleaning methods confirm that proper duct cleaning significantly reduces airborne particulate matter and viable bioaerosols. For Newburyport homeowners with allergies, asthma, or young children, cleaner ducts mean fewer symptoms and a healthier living environment.</p>
+          <p>Coastal moisture in the Newburyport area makes mold growth inside ducts more likely than in inland communities. That extra humidity gives mold and mildew the conditions they need to thrive, hidden behind your walls and above your ceilings.</p>
+        </div>
+        <div>
+          <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/HVAC-Air-Duct-Cleaning-Before_After.webp" alt="Before and after air duct cleaning showing significant dust and debris removal from Newburyport home ductwork" loading="lazy" width="540" height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ENERGY EFFICIENCY ========== -->
+  <section class="kealeys-nbpt-section">
+    <h2>Clean Air Ducts Lower Energy Bills and Boost HVAC Efficiency</h2>
+    <div class="kealeys-nbpt-two-col kealeys-nbpt-two-col-reverse">
+      <div>
+        <p>Debris-packed ducts force your system to push air through restricted passages. The result is higher energy consumption, uneven heating and cooling across rooms, and more wear on your equipment. Many Newburyport homeowners notice their utility bills drop after a thorough duct cleaning, simply because the system no longer has to work overtime.</p>
+        <p>This efficiency gain also has an environmental benefit. A system that runs less frequently to maintain the same temperature produces fewer emissions and puts less strain on the local power grid. It's one of the most straightforward upgrades you can make to your home's energy profile.</p>
+        <p>For older homes in downtown Newburyport or along High Street, where ductwork may not have been cleaned in years (or decades), the improvement can be dramatic. Our team often pulls pounds of debris from systems that haven't been professionally maintained.</p>
+      </div>
+      <div>
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-13.webp" alt="Kealey's technician performing professional air duct cleaning inside a home" loading="lazy" width="540" height="400">
+      </div>
+    </div>
+
+    <div class="kealeys-nbpt-inline-cta">
+      <p>Ready to see the difference clean ducts make in your Newburyport home?</p>
+      <a href="/contact/" class="kealeys-nbpt-btn-primary">Get Your Free Quote</a>
+    </div>
+  </section>
+
+  <!-- ========== DRYER VENT FIRE PREVENTION ========== -->
+  <section class="kealeys-nbpt-section-alt">
+    <div class="kealeys-nbpt-section">
+      <h2>Why Dryer Vent Cleaning Is Essential for Fire Prevention in Newburyport</h2>
+      <div class="kealeys-nbpt-two-col">
+        <div>
+          <p>Lint buildup in dryer vents is one of the most overlooked fire hazards in residential homes. The U.S. Fire Administration reports that failure to clean dryer vents is a leading cause of home clothes dryer fires across the country. These fires are almost entirely preventable with regular professional cleaning.</p>
+          <p>In Newburyport, where many homes feature longer vent runs due to basement laundry setups or multi-story configurations, lint accumulates faster and creates greater risk. When airflow becomes restricted, the dryer overheats, and it only takes a spark to ignite the highly flammable lint trapped inside the vent line.</p>
+
+          <h3>Signs Your Dryer Vent Needs Cleaning</h3>
+          <p>Watch for these warning signs: clothes taking longer than one cycle to dry, a burning smell when the dryer is running, the dryer feeling unusually hot to the touch, or visible lint collecting around the outside vent opening. Any of these means it's time to call a professional. Experts recommend cleaning dryer vents at least once a year, and more frequently if you have pets or a large household.</p>
+        </div>
+        <div>
+          <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/Exterior-Dryer-Vent-Cleaning-Before_After-Split-Screen.webp" alt="Dryer vent cleaning before and after comparison showing lint and debris removal" loading="lazy" width="540" height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COSTS & PRICING ========== -->
+  <section class="kealeys-nbpt-section">
+    <h2>Typical Costs and Pricing Factors for Duct and Dryer Vent Cleaning in Newburyport</h2>
+    <p>Understanding what affects the cost of duct cleaning helps you make an informed decision. Several factors play a role in pricing, including the size of your home, the complexity of your duct system, the type of property, and how long it's been since the last cleaning.</p>
+
+    <h3>How Service Scope and Property Type Affect Costs</h3>
+    <p>Larger homes with extensive duct runs naturally require more time and specialized attention. A two-bedroom condo will cost less than a four-bedroom colonial. Commercial properties, which often have larger, more complex systems, require different equipment and techniques than residential work. Whether you need just dryer vent cleaning or a full HVAC system cleaning will also determine the scope and cost of your service.</p>
+
+    <h3>Transparent Pricing from Kealey's</h3>
+    <p>We don't believe in hidden fees or surprise charges. When you request a quote from Kealey's, you'll get a clear estimate based on your specific home and needs. We explain exactly what's included, what we'll do, and what it costs before we start any work. That commitment to honesty is one reason Newburyport homeowners continue to choose us over larger, less transparent competitors. <a href="/contact/">Request your free quote</a> to see the difference.</p>
+  </section>
+
+  <!-- ========== PROFESSIONAL PROCESS ========== -->
+  <section class="kealeys-nbpt-section-alt">
+    <div class="kealeys-nbpt-section">
+      <h2>Our Professional Duct and Dryer Vent Cleaning Process</h2>
+      <p>Unlike "blow-and-go" companies that rush through jobs, Kealey's follows a thorough, step-by-step process developed by owner Brian Kealey, a mechanical engineer who built his own cleaning tools for maximum effectiveness.</p>
+
+      <div class="kealeys-nbpt-two-col">
+        <div>
+          <div class="kealeys-nbpt-process">
+            <div class="kealeys-nbpt-step">
+              <div class="kealeys-nbpt-step-num">1</div>
+              <div>
+                <h3>Inspection and Assessment</h3>
+                <p>We start by inspecting your entire duct system or dryer vent line. We assess the condition, identify problem areas, and explain what we find before any cleaning begins. You'll know exactly what to expect.</p>
+              </div>
+            </div>
+            <div class="kealeys-nbpt-step">
+              <div class="kealeys-nbpt-step-num">2</div>
+              <div>
+                <h3>Deep Cleaning with Specialized Equipment</h3>
+                <p>We use high-powered vacuums, rotating brushes, and engineer-designed tools to dislodge and remove debris from your ductwork. Every vent, register, and trunk line gets attention. For dryer vents, we clear the entire run from the dryer to the exterior exhaust.</p>
+              </div>
+            </div>
+            <div class="kealeys-nbpt-step">
+              <div class="kealeys-nbpt-step-num">3</div>
+              <div>
+                <h3>Visual Proof and Follow-Up</h3>
+                <p>After cleaning, we show you before-and-after photos so you can see exactly what came out of your system. We provide a written report on the condition of your ducts and recommendations for future maintenance. Our No-Mess Promise means we leave your home as clean as we found it.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-9.webp" alt="Kealey's team performing professional HVAC air duct cleaning using specialized equipment" loading="lazy" width="540" height="500">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BEFORE/AFTER PROOF ========== -->
+  <section class="kealeys-nbpt-section">
+    <h2>See the Difference: Before and After Air Duct Cleaning</h2>
+    <p>We believe in showing our work. Every job includes before-and-after documentation so you can see exactly what we removed from your duct system. Here's what a typical Kealey's cleaning looks like:</p>
+    <div class="kealeys-nbpt-ba-container">
+      <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/HVAC-Air-Duct-Cleaning-Before_After.webp" alt="Dramatic before and after comparison of air duct cleaning showing dust, debris, and allergen removal from residential HVAC system" loading="lazy" width="1080" height="500">
+      <div class="kealeys-nbpt-ba-caption">Actual before-and-after results from a Kealey's air duct cleaning job</div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="kealeys-nbpt-section-alt">
+    <div class="kealeys-nbpt-section">
+      <h2>What Newburyport Area Homeowners Say About Kealey's</h2>
+      <p>Our 5-star reputation is built on real results and honest service. Here's what recent customers have to say:</p>
+
+      <div class="kealeys-nbpt-testimonials">
+        <div class="kealeys-nbpt-testimonial">
+          <div class="kealeys-nbpt-stars">★★★★★</div>
+          <p>"This is the second time we've used Kealey Duct and Dryer Cleaning to perform routine maintenance on our dryer. Brian is quick to respond and he and his son do a great job. I'd be happy to recommend him."</p>
+          <div class="kealeys-nbpt-testimonial-author">- Elizabeth D.</div>
+        </div>
+        <div class="kealeys-nbpt-testimonial">
+          <div class="kealeys-nbpt-stars">★★★★★</div>
+          <p>"Highly recommended! Brian is phenomenal to work with. Communicates well, always on time, does a great job and very easy to talk to!"</p>
+          <div class="kealeys-nbpt-testimonial-author">- Jamey M.</div>
+        </div>
+        <div class="kealeys-nbpt-testimonial">
+          <div class="kealeys-nbpt-stars">★★★★★</div>
+          <p>"Brian and his team did an exceptional job. They were very professional and easy to work with. I would highly recommend them for any duct cleaning job."</p>
+          <div class="kealeys-nbpt-testimonial-author">- Danielle S.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AREAS SERVED ========== -->
+  <section class="kealeys-nbpt-section">
+    <h2>Serving Newburyport and Surrounding Communities</h2>
+    <div class="kealeys-nbpt-two-col" style="margin-bottom: 30px;">
+      <div>
+        <p>Kealey's Duct and Dryer Cleaning Service is proud to serve homeowners and commercial property owners throughout Newburyport and the surrounding North Shore and Seacoast regions. We understand the specific challenges that coastal New England homes face, from salt air corrosion to moisture-related duct issues, and we tailor our approach to meet local needs.</p>
+        <p>In addition to Newburyport, we provide professional <a href="/air-duct-cleaning/">air duct cleaning</a> and <a href="/dryer-vent-cleaning/">dryer vent cleaning</a> across <a href="/essex-county-ma/">Essex County, MA</a> and <a href="/rockingham-county-nh/">Rockingham County, NH</a>:</p>
+      </div>
+      <div>
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Newburyport-Coastal-Home-Context.webp" alt="Coastal home in Newburyport, MA where salt air and humidity create unique air duct cleaning challenges" loading="lazy" width="540" height="400">
+      </div>
+    </div>
+
+    <div class="kealeys-nbpt-areas-grid">
+      <div class="kealeys-nbpt-area-tag"><a href="/salisbury-ma/">Salisbury, MA</a></div>
+      <div class="kealeys-nbpt-area-tag"><a href="/amesbury-ma/">Amesbury, MA</a></div>
+      <div class="kealeys-nbpt-area-tag">Newbury, MA</div>
+      <div class="kealeys-nbpt-area-tag">West Newbury, MA</div>
+      <div class="kealeys-nbpt-area-tag">Merrimac, MA</div>
+      <div class="kealeys-nbpt-area-tag">Rowley, MA</div>
+      <div class="kealeys-nbpt-area-tag"><a href="/essex-county-ma/">Essex County, MA</a></div>
+      <div class="kealeys-nbpt-area-tag"><a href="/air-duct-cleaning/hampton-nh/">Hampton, NH</a></div>
+      <div class="kealeys-nbpt-area-tag"><a href="/seabrook-nh/">Seabrook, NH</a></div>
+      <div class="kealeys-nbpt-area-tag"><a href="/stratham-nh/">Stratham, NH</a></div>
+      <div class="kealeys-nbpt-area-tag"><a href="/exeter-nh/">Exeter, NH</a></div>
+      <div class="kealeys-nbpt-area-tag"><a href="/rye-nh">Rye, NH</a></div>
+      <div class="kealeys-nbpt-area-tag"><a href="/portsmouth-nh/">Portsmouth, NH</a></div>
+      <div class="kealeys-nbpt-area-tag"><a href="/rockingham-county-nh/">Rockingham County, NH</a></div>
+    </div>
+
+    <p>Learn more about our complete <a href="/services-area/">service area</a>, browse all of our <a href="/services/">services</a>, or read <a href="/about/">our story</a> as a family business serving the North Shore since 1993. Also serving <a href="/air-duct-cleaning/salisbury-ma/">Salisbury</a> and <a href="/air-duct-cleaning/hampton-nh/">Hampton</a> with dedicated air duct cleaning pages.</p>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="kealeys-nbpt-section-alt">
+    <div class="kealeys-nbpt-section">
+      <h2>Frequently Asked Questions About Air Duct Cleaning in Newburyport</h2>
+
+      <div class="kealeys-nbpt-faq-list">
+        <div class="kealeys-nbpt-faq-item">
+          <div class="kealeys-nbpt-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            How often should I have my air ducts cleaned?
+          </div>
+          <div class="kealeys-nbpt-faq-answer">
+            Most homeowners benefit from air duct cleaning every 3 to 5 years. However, if you have pets, family members with allergies or asthma, or if your Newburyport home is near the coast where moisture accelerates buildup, more frequent cleaning may be recommended. We'll assess your system and give you an honest recommendation based on what we find.
+          </div>
+        </div>
+
+        <div class="kealeys-nbpt-faq-item">
+          <div class="kealeys-nbpt-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            How do I know if my air ducts need cleaning?
+          </div>
+          <div class="kealeys-nbpt-faq-answer">
+            Common signs include visible dust blowing from vents, musty or stale odors when your system runs, increased allergy symptoms indoors, uneven airflow between rooms, and higher-than-normal energy bills. If you notice any of these, it's worth scheduling an inspection.
+          </div>
+        </div>
+
+        <div class="kealeys-nbpt-faq-item">
+          <div class="kealeys-nbpt-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            How long does professional air duct cleaning take?
+          </div>
+          <div class="kealeys-nbpt-faq-answer">
+            A typical residential air duct cleaning takes 3 to 5 hours depending on the size of your home and the condition of your ductwork. We take our time to clean every register, trunk line, and return thoroughly. Dryer vent cleaning is quicker, usually about an hour.
+          </div>
+        </div>
+
+        <div class="kealeys-nbpt-faq-item">
+          <div class="kealeys-nbpt-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            Is air duct cleaning worth it?
+          </div>
+          <div class="kealeys-nbpt-faq-answer">
+            For most homes, yes. Clean ducts improve air quality, reduce allergens, and help your HVAC system run more efficiently. The benefits are especially noticeable in older Newburyport homes where ducts may not have been cleaned in years. We always show you before-and-after photos so you can see exactly what was removed.
+          </div>
+        </div>
+
+        <div class="kealeys-nbpt-faq-item">
+          <div class="kealeys-nbpt-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            What is your No-Mess Promise?
+          </div>
+          <div class="kealeys-nbpt-faq-answer">
+            We protect your home during every job. Our technicians cover floors and furnishings, use sealed vacuum systems that prevent dust from escaping, and clean up completely before we leave. You won't find dust or debris anywhere. If you do, we'll come back and make it right at no charge.
+          </div>
+        </div>
+
+        <div class="kealeys-nbpt-faq-item">
+          <div class="kealeys-nbpt-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            How is Kealey's different from other duct cleaning companies?
+          </div>
+          <div class="kealeys-nbpt-faq-answer">
+            Kealey's is a father-and-son team with over 32 years of experience. Our owner, Brian Kealey, is a mechanical engineer who designed custom cleaning tools for better results. We're not a franchise or a call center operation. You'll work directly with Brian and his son Keenan on every job. We provide before-and-after photos, transparent pricing with no hidden fees, and a No-Mess Promise that guarantees your home stays clean. Check our <a href="/faqs/">FAQ page</a> for more details.
+          </div>
+        </div>
+
+        <div class="kealeys-nbpt-faq-item">
+          <div class="kealeys-nbpt-faq-question" onclick="this.parentElement.classList.toggle('active')">
+            Do you clean both residential and commercial ducts in Newburyport?
+          </div>
+          <div class="kealeys-nbpt-faq-answer">
+            Yes. We serve both homeowners and commercial property owners throughout Newburyport and the surrounding area. Commercial systems often require specialized techniques due to their size and complexity, and we have the equipment and experience to handle them.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAP ========== -->
+  <section class="kealeys-nbpt-section">
+    <h2>Find Us Near Newburyport, MA</h2>
+    <p>Kealey's Duct and Dryer Cleaning Service is based in Salisbury, MA, just minutes from Newburyport. We're proud to be your local, family-owned cleaning professionals.</p>
+    <div class="kealeys-nbpt-map-wrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93656.63881790714!2d-70.95548324055397!3d42.8143469597212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2e109acaea8db%3A0x5508797887c45490!2sNewburyport%2C%20MA!5e0!3m2!1sen!2sus!4v1770908336481!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Newburyport, MA service area for Kealey's Duct and Dryer Cleaning"></iframe>
+    </div>
+  </section>
+
+  <!-- ========== BOTTOM CTA ========== -->
+  <section class="kealeys-nbpt-bottom-cta">
+    <h2>Ready for Cleaner Air in Your Newburyport Home?</h2>
+    <p>Get a free, no-obligation quote from Kealey's. We'll explain exactly what your home needs, what it costs, and when we can get started.</p>
+    <div class="kealeys-nbpt-hero-ctas">
+      <a href="/contact/" class="kealeys-nbpt-btn-primary">Get a Free Quote</a>
+      <a href="tel:+19789614513" class="kealeys-nbpt-btn-secondary">Call (978) 961-4513</a>
+    </div>
+  </section>
+
+</div>
+
+<!-- ========== SCHEMA MARKUP ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://bkductdryercleaning.com/#business",
+  "name": "Kealey's Duct and Dryer Cleaning Service",
+  "image": "https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-10.webp",
+  "url": "https://bkductdryercleaning.com/air-duct-cleaning/newburyport-ma/",
+  "telephone": "+19789614513",
+  "email": "kealeys@bkductdryercleaning.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9 Del-Logan Drive",
+    "addressLocality": "Salisbury",
+    "addressRegion": "MA",
+    "postalCode": "01952",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.865545,
+    "longitude": -70.874248
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Newburyport",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Essex County, MA"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "80",
+    "bestRating": "5"
+  },
+  "priceRange": "$$",
+  "foundingDate": "1993",
+  "description": "Professional air duct cleaning and dryer vent cleaning services in Newburyport, MA. Family-owned since 1993, Kealey's provides thorough HVAC cleaning with before-and-after proof, transparent pricing, and a No-Mess Promise.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Duct and Dryer Vent Cleaning Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Air Duct Cleaning in Newburyport, MA",
+          "description": "Complete residential and commercial HVAC air duct cleaning for Newburyport homes. Removes dust, allergens, mold, and debris to improve indoor air quality."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dryer Vent Cleaning in Newburyport, MA",
+          "description": "Professional dryer vent cleaning to prevent fire hazards, improve dryer efficiency, and reduce energy costs for Newburyport homeowners."
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often should I have my air ducts cleaned?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most homeowners benefit from air duct cleaning every 3 to 5 years. However, if you have pets, family members with allergies or asthma, or if your Newburyport home is near the coast where moisture accelerates buildup, more frequent cleaning may be recommended."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if my air ducts need cleaning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common signs include visible dust blowing from vents, musty or stale odors when your system runs, increased allergy symptoms indoors, uneven airflow between rooms, and higher-than-normal energy bills."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does professional air duct cleaning take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical residential air duct cleaning takes 3 to 5 hours depending on the size of your home and the condition of your ductwork. Dryer vent cleaning is quicker, usually about an hour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is air duct cleaning worth it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most homes, yes. Clean ducts improve air quality, reduce allergens, and help your HVAC system run more efficiently. The benefits are especially noticeable in older Newburyport homes where ducts may not have been cleaned in years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Kealey's No-Mess Promise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kealey's protects your home during every job. Technicians cover floors and furnishings, use sealed vacuum systems that prevent dust from escaping, and clean up completely before leaving. If any mess is found, they will return and make it right at no charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Kealey's different from other duct cleaning companies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kealey's is a father-and-son team with over 32 years of experience. Owner Brian Kealey is a mechanical engineer who designed custom cleaning tools. They provide before-and-after photos, transparent pricing with no hidden fees, and a No-Mess Promise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you clean both residential and commercial ducts in Newburyport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Kealey's serves both homeowners and commercial property owners throughout Newburyport and the surrounding area. Commercial systems require specialized techniques due to their size and complexity."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://bkductdryercleaning.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Air Duct Cleaning",
+      "item": "https://bkductdryercleaning.com/air-duct-cleaning/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Newburyport, MA",
+      "item": "https://bkductdryercleaning.com/air-duct-cleaning/newburyport-ma/"
+    }
+  ]
+}
+</script>
