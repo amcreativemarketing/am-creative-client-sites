@@ -1,0 +1,1086 @@
+<!--
+FAQ LANDING PAGE - BK DUCT & DRYER CLEANING
+Page: /faqs/ (replacement/upgrade)
+H1: Frequently Asked Questions About Dryer Vent and Air Duct Cleaning
+Target: 2,500-3,000 words | 4 FAQ sections + bonus quick FAQs
+Brand: Kealey's Duct & Dryer Cleaning
+Last Updated: 2026-02-13
+Search Atlas Content ID: 209751
+-->
+
+<style>
+/* ===== FAQ LANDING PAGE STYLES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500&display=swap');
+
+/* --- Reset & Base --- */
+.kk-faq *,
+.kk-faq *::before,
+.kk-faq *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.kk-faq {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.7;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.kk-faq h1, .kk-faq h2, .kk-faq h3, .kk-faq h4 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #0e3160;
+}
+
+.kk-faq h2 { font-size: 1.85rem; margin-bottom: 0.75rem; }
+.kk-faq h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #0e3160; }
+.kk-faq p { margin-bottom: 1rem; }
+
+.kk-faq a {
+    color: #b7254d;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+.kk-faq a:hover { color: #0e3160; }
+
+/* --- Section Container --- */
+.kk-faq-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+.kk-faq-section-alt { background: #f5f5f5; }
+
+/* ===== HERO ===== */
+.kk-faq-hero {
+    position: relative;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-4.webp') center/cover no-repeat;
+    padding: 3.5rem 1.5rem;
+}
+.kk-faq-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(14, 49, 96, 0.45);
+}
+.kk-faq-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+.kk-faq-hero h1 {
+    font-size: 2.3rem;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.kk-faq-hero h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+.kk-faq-cta {
+    display: inline-block;
+    background: #b7254d;
+    color: #ffffff !important;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s;
+}
+.kk-faq-cta:hover {
+    background: #9a1d3f;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+/* ===== TRUST BADGES ===== */
+.kk-faq-trust {
+    background: #f5f5f5;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+.kk-faq-trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.kk-faq-trust-item {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #0e3160;
+    white-space: nowrap;
+}
+.kk-faq-trust-item span {
+    color: #b7254d;
+    margin-right: 5px;
+}
+
+/* ===== TABLE OF CONTENTS ===== */
+.kk-faq-toc {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.75rem 2rem;
+    margin: 0 auto 2rem;
+    max-width: 700px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.kk-faq-toc h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: #0e3160;
+    text-align: center;
+}
+.kk-faq-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem 2rem;
+}
+.kk-faq-toc-list li {
+    font-size: 0.95rem;
+}
+.kk-faq-toc-list li a {
+    text-decoration: none;
+    color: #0e3160;
+    font-weight: 500;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    transition: color 0.2s;
+}
+.kk-faq-toc-list li a:hover { color: #b7254d; }
+.kk-faq-toc-num {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    color: #b7254d;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* ===== FAQ ITEMS ===== */
+.kk-faq-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 0.85rem;
+    background: #ffffff;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+.kk-faq-item:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.07); }
+
+.kk-faq-q {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    color: #0e3160;
+    font-size: 1.05rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.15rem 1.5rem;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    line-height: 1.4;
+}
+.kk-faq-q::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: #b7254d;
+    flex-shrink: 0;
+    transition: transform 0.25s;
+    line-height: 1;
+}
+.kk-faq-q.open::after { content: '\2212'; }
+
+.kk-faq-a {
+    display: none;
+    padding: 0 1.5rem 1.25rem;
+    color: #444;
+    line-height: 1.75;
+}
+.kk-faq-a.open { display: block; }
+
+/* Section heading with anchor offset */
+.kk-faq-anchor {
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+}
+
+.kk-faq-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+.kk-faq-section-number {
+    background: #b7254d;
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* ===== IMAGES ===== */
+.kk-faq-img {
+    width: 100%;
+    max-width: 440px;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    margin: 1.25rem auto;
+    display: block;
+}
+.kk-faq-img-float-right {
+    float: right;
+    width: 42%;
+    max-width: 380px;
+    margin: 0 0 1.25rem 1.75rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+.kk-faq-img-float-left {
+    float: left;
+    width: 42%;
+    max-width: 380px;
+    margin: 0 1.75rem 1.25rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+.kk-faq-clear { clear: both; }
+
+/* ===== COMPARISON TABLE ===== */
+.kk-faq-table-wrap {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.kk-faq-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 520px;
+}
+.kk-faq-table thead th {
+    background: #0e3160;
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    padding: 14px 16px;
+    text-align: left;
+}
+.kk-faq-table tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.kk-faq-table tbody tr:nth-child(even) { background: #f9f9f9; }
+.kk-faq-table tbody tr:last-child td { border-bottom: none; }
+.kk-faq-check { color: #22863a; font-weight: 700; font-size: 1.1rem; }
+.kk-faq-x { color: #cc3333; font-weight: 700; font-size: 1.1rem; }
+.kk-faq-maybe { color: #cc8800; font-weight: 600; }
+
+/* ===== CTA BANNER ===== */
+.kk-faq-cta-banner {
+    background: linear-gradient(135deg, #0e3160 0%, #162d4a 100%);
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+.kk-faq-cta-banner h2 {
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+.kk-faq-cta-banner p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+/* ===== REVIEWS ===== */
+.kk-faq-review-strip {
+    background: #f5f5f5;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+.kk-faq-review-quote {
+    max-width: 680px;
+    margin: 0 auto;
+    font-style: italic;
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+.kk-faq-review-author {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    color: #0e3160;
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+}
+.kk-faq-review-stars {
+    color: #f5a623;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== BOTTOM NAV ===== */
+.kk-faq-links-section {
+    background: #0e3160;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+.kk-faq-links-section h3 {
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+}
+.kk-faq-links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.kk-faq-links-grid a {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    color: #ffffff !important;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: background 0.2s;
+}
+.kk-faq-links-grid a:hover {
+    background: #b7254d;
+    border-color: #b7254d;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .kk-faq-hero { min-height: 360px; padding: 2.5rem 1.25rem; }
+    .kk-faq-hero h1 { font-size: 1.7rem; }
+    .kk-faq h2 { font-size: 1.45rem; }
+    .kk-faq-toc-list { grid-template-columns: 1fr; }
+    .kk-faq-img-float-right,
+    .kk-faq-img-float-left {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    .kk-faq-q { font-size: 0.98rem; padding: 1rem 1.25rem; }
+    .kk-faq-a { padding: 0 1.25rem 1rem; }
+    .kk-faq-trust-row { gap: 0.75rem 1.25rem; }
+    .kk-faq-trust-item { font-size: 0.82rem; }
+}
+</style>
+
+<div class="kk-faq">
+
+<!-- ===== HERO ===== -->
+<div class="kk-faq-hero">
+    <div class="kk-faq-hero-content">
+        <h1>Frequently Asked Questions About Dryer Vent and Air Duct Cleaning</h1>
+        <h2>Costs, safety, maintenance schedules, and everything homeowners need to know before booking professional cleaning services.</h2>
+        <a href="/contact/" class="kk-faq-cta">Get Your Free Quote</a>
+    </div>
+</div>
+
+<!-- ===== TRUST BADGES ===== -->
+<div class="kk-faq-trust">
+    <div class="kk-faq-trust-row">
+        <div class="kk-faq-trust-item"><span>★</span> 5.0 Rating, 80+ Google Reviews</div>
+        <div class="kk-faq-trust-item"><span>✓</span> Family-Owned Since 1993</div>
+        <div class="kk-faq-trust-item"><span>✓</span> Licensed & Insured</div>
+        <div class="kk-faq-trust-item"><span>✓</span> Before & After Photo Proof</div>
+        <div class="kk-faq-trust-item"><span>✓</span> Mechanical Engineering Expertise</div>
+    </div>
+</div>
+
+<!-- ===== INTRO + TABLE OF CONTENTS ===== -->
+<div class="kk-faq-section">
+    <p>Whether you're researching <a href="/dryer-vent-cleaning/">dryer vent cleaning</a> for the first time or wondering when your <a href="/air-duct-cleaning/">air ducts</a> were last serviced, you probably have questions. Below, we've organized the most common questions we hear from homeowners across the seacoast region into four categories. Click any section to jump straight to the answers you need.</p>
+
+    <div class="kk-faq-toc">
+        <h3>Jump to a Section</h3>
+        <ul class="kk-faq-toc-list">
+            <li><a href="#section-1"><span class="kk-faq-toc-num">01</span> Identifying Problems</a></li>
+            <li><a href="#section-2"><span class="kk-faq-toc-num">02</span> Maintenance Schedules</a></li>
+            <li><a href="#section-3"><span class="kk-faq-toc-num">03</span> Pricing & Costs</a></li>
+            <li><a href="#section-4"><span class="kk-faq-toc-num">04</span> Safety & Fire Prevention</a></li>
+            <li><a href="#section-compare"><span class="kk-faq-toc-num">05</span> Why Choose Kealey's</a></li>
+            <li><a href="#section-quick"><span class="kk-faq-toc-num">06</span> Quick-Answer FAQs</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- ============================================================= -->
+<!-- SECTION 1: IDENTIFYING PROBLEMS                                -->
+<!-- ============================================================= -->
+<div class="kk-faq-section kk-faq-section-alt">
+    <span class="kk-faq-anchor" id="section-1"></span>
+    <div class="kk-faq-section-header">
+        <div class="kk-faq-section-number">1</div>
+        <h2>What Are the Signs That Your Dryer Vent Needs Cleaning?</h2>
+    </div>
+
+    <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Dryer-Cleaning-in-Process.webp"
+         alt="Professional dryer vent cleaning in progress showing lint removal from vent line"
+         class="kk-faq-img-float-right" width="380" height="285" loading="lazy">
+
+    <h3>How Does Lint Buildup Affect Dryer Performance and Safety?</h3>
+    <p>Lint is a natural byproduct of drying clothes, and while your lint trap catches a portion of it, a significant amount passes through and accumulates inside your dryer vent line over time. This buildup restricts airflow, forces your dryer to work harder, and creates a serious fire risk. According to the National Fire Protection Association (NFPA), failure to clean dryer vents is the leading contributing factor in home dryer fires.</p>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Why is my dryer taking longer to dry clothes?
+        </div>
+        <div class="kk-faq-a">
+            <p>Extended drying times are the most common sign of a clogged dryer vent. When lint restricts the exhaust airflow, moisture can't escape efficiently, leaving clothes damp after a normal cycle. If you're running two or more cycles to fully dry a load, your vent almost certainly needs professional cleaning. Our <a href="/how-often-to-clean-dryer-vents-fire-prevention-tips-2026/">dryer vent maintenance guide</a> explains how lint accumulation happens and what to watch for.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Can lint buildup actually cause a fire?
+        </div>
+        <div class="kk-faq-a">
+            <p>Yes, and it's more common than most homeowners realize. The NFPA reports an estimated 15,970 home fires each year involving dryers and washing machines. Lint is highly flammable, and when it accumulates inside a vent line, the combination of heat and restricted airflow can ignite it. The risk increases with longer or more complex vent runs, which are common in older homes throughout <a href="/essex-county-ma/">Essex County</a> and the New Hampshire seacoast.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            How does a clogged vent affect my energy bills?
+        </div>
+        <div class="kk-faq-a">
+            <p>A restricted dryer vent forces your dryer to run longer and work harder with every load. This translates directly to higher electricity or gas bills. Industry data suggests that a clean dryer vent can improve efficiency by 15-25%, which adds up quickly for households doing multiple loads per week. Beyond energy costs, the added strain on your dryer's heating element and motor can shorten the appliance's lifespan.</p>
+        </div>
+    </div>
+
+    <h3>What Common Indicators Show a Clogged Dryer Vent?</h3>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            What does a clogged dryer vent look like from the outside?
+        </div>
+        <div class="kk-faq-a">
+            <p>Check the exterior vent hood where your dryer exhausts to the outside of your home. If the flap doesn't open when the dryer is running, lint is visible around the opening, or you see debris blocking the vent, airflow is restricted. You may also notice lint collecting on the wall or ground near the vent exit. These are clear signs it's time to call a professional for <a href="/dryer-vent-cleaning/">dryer vent cleaning</a>.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Should I be concerned if my dryer or laundry room feels unusually hot?
+        </div>
+        <div class="kk-faq-a">
+            <p>Absolutely. If the top of your dryer is hot to the touch during operation, or your laundry room feels significantly warmer than normal, that heat is being trapped instead of exhausting outside. This is a safety concern that means your vent needs immediate attention. A burning smell during dryer operation is an even more urgent warning sign, and you should stop using the dryer and call a professional right away.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-clear"></div>
+</div>
+
+
+<!-- ===== REVIEW STRIP 1 ===== -->
+<div class="kk-faq-review-strip">
+    <div class="kk-faq-review-stars">★★★★★</div>
+    <p class="kk-faq-review-quote">"I can't recommend Kealey's services enough! They were fast, clean, and reliable. Super nice guys and will definitely use them again!"</p>
+    <p class="kk-faq-review-author">- Julia L.</p>
+</div>
+
+
+<!-- ============================================================= -->
+<!-- SECTION 2: MAINTENANCE SCHEDULE                                -->
+<!-- ============================================================= -->
+<div class="kk-faq-section">
+    <span class="kk-faq-anchor" id="section-2"></span>
+    <div class="kk-faq-section-header">
+        <div class="kk-faq-section-number">2</div>
+        <h2>How Often Should You Schedule Professional Dryer Vent and Air Duct Cleaning?</h2>
+    </div>
+
+    <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Image-2-Maintenance_Prevention.webp"
+         alt="Home maintenance and prevention for dryer vent and HVAC systems"
+         class="kk-faq-img-float-left" width="380" height="285" loading="lazy">
+
+    <h3>What Factors Influence Cleaning Frequency for Dryer Vents?</h3>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            How often should dryer vents be cleaned?
+        </div>
+        <div class="kk-faq-a">
+            <p>The NFPA recommends professional dryer vent cleaning at least once per year as a minimum baseline. However, the right frequency for your home depends on several factors including household size, laundry volume, whether you have pets, and the length and complexity of your vent run. Larger families doing daily loads may benefit from cleaning every six to nine months. Our detailed guide covers this in depth: <a href="/how-often-to-clean-dryer-vents-fire-prevention-tips-2026/">how often to clean your dryer vent</a>.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Do homes with pets need more frequent vent cleaning?
+        </div>
+        <div class="kk-faq-a">
+            <p>Yes. Pet hair and dander end up in your laundry and contribute significantly to lint buildup in your dryer vent. Homes with dogs or cats, especially breeds that shed heavily, should consider cleaning every six to nine months rather than annually. The same applies to your <a href="/air-duct-cleaning/">air duct system</a>, where pet dander circulates through every room each time your HVAC runs.</p>
+        </div>
+    </div>
+
+    <h3>How Often Should Air Ducts Be Cleaned?</h3>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            What's the recommended air duct cleaning frequency?
+        </div>
+        <div class="kk-faq-a">
+            <p>For most homes, professional air duct cleaning every three to five years is a good baseline. You should schedule sooner if you notice visible dust blowing from vents, experience unexplained allergy flare-ups, have recently completed renovations, or have moved into a home where the cleaning history is unknown. Coastal homes in areas like <a href="/newburyport-ma/">Newburyport</a>, <a href="/portsmouth-nh/">Portsmouth</a>, and <a href="/hampton-nh/">Hampton</a> may benefit from more frequent cleaning due to salt air and humidity accelerating buildup.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Does regular cleaning really prevent fires and improve efficiency?
+        </div>
+        <div class="kk-faq-a">
+            <p>The data is clear on this. Clean dryer vents eliminate the lint fuel source that causes dryer fires, and clean air ducts allow your HVAC system to operate with less resistance. Homeowners typically see energy savings of 15-25% after a professional dryer vent cleaning, and HVAC systems with clean ductwork run more efficiently and last longer. When you factor in reduced fire risk, lower utility bills, and extended equipment life, regular cleaning pays for itself.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-clear"></div>
+</div>
+
+
+<!-- ===== MID-PAGE CTA ===== -->
+<div class="kk-faq-cta-banner">
+    <h2>Ready to Schedule Your Cleaning?</h2>
+    <p>Get a free, no-obligation quote from a team that's been serving the seacoast since 1993.</p>
+    <a href="/contact/" class="kk-faq-cta">Request a Free Quote</a>
+</div>
+
+
+<!-- ============================================================= -->
+<!-- SECTION 3: PRICING & COST                                      -->
+<!-- ============================================================= -->
+<div class="kk-faq-section">
+    <span class="kk-faq-anchor" id="section-3"></span>
+    <div class="kk-faq-section-header">
+        <div class="kk-faq-section-number">3</div>
+        <h2>What Are the Typical Costs of Professional Dryer Vent and Air Duct Cleaning?</h2>
+    </div>
+
+    <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-14.webp"
+         alt="Kealey's technician performing thorough HVAC duct cleaning with professional equipment"
+         class="kk-faq-img-float-right" width="380" height="285" loading="lazy">
+
+    <h3>How Do Service Prices Vary Based on Scope and Location?</h3>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            How much does dryer vent cleaning cost?
+        </div>
+        <div class="kk-faq-a">
+            <p>Dryer vent cleaning costs depend on the length and complexity of your vent run, accessibility, and whether any repairs are needed. At Kealey's, we provide transparent, upfront quotes before any work begins. There are no hidden fees or surprise charges. <a href="/contact/">Contact us</a> for a free estimate specific to your home. Be cautious of companies advertising extremely low prices, as these are often "bait-and-switch" operations that upsell once they're in your home.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            What factors affect the cost of air duct cleaning?
+        </div>
+        <div class="kk-faq-a">
+            <p>The primary factors are the size of your home (number of vents and returns), the type of duct system, accessibility of the ductwork, and its current condition. A 1,500 square foot home with standard ductwork will cost less than a 3,500 square foot home with complex runs through multiple levels. We assess your specific system and provide a clear quote so you know exactly what to expect before we start work.</p>
+        </div>
+    </div>
+
+    <h3>What Are the Benefits of Professional Cleaning Over DIY?</h3>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Can I clean my dryer vent myself?
+        </div>
+        <div class="kk-faq-a">
+            <p>You can perform basic maintenance like cleaning your lint trap after every load and vacuuming around your dryer. However, for the vent line itself, especially runs that go through walls, ceilings, or travel long distances to the exterior, professional equipment is needed to fully clear compacted lint. DIY kits with brush rods can push lint further into the line or miss bends where buildup is heaviest. Professional cleaning ensures the entire run is clear from dryer to exterior vent hood.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Is professional air duct cleaning really worth the cost?
+        </div>
+        <div class="kk-faq-a">
+            <p>When done properly by a reputable company, yes. The key word is "properly." The duct cleaning industry has companies that charge very little and do almost nothing, which has given the service a mixed reputation. A thorough professional cleaning removes years of accumulated dust, allergens, pet dander, and debris that your HVAC filter can't capture. We provide before-and-after photos on every job so you can see exactly what was in your ducts. Read more in our blog post: <a href="/when-to-clean-air-ducts-insights-from-the-epa-for-2025/">what the EPA actually says about air duct cleaning</a>.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-clear"></div>
+</div>
+
+
+<!-- ===== REVIEW STRIP 2 ===== -->
+<div class="kk-faq-review-strip">
+    <div class="kk-faq-review-stars">★★★★★</div>
+    <p class="kk-faq-review-quote">"The guys came out and went above and beyond making sure our dryer was up and running. Trustworthy, well priced, and quality work. Will be my go to maintenance company for our dryer vents."</p>
+    <p class="kk-faq-review-author">- Mathew R.</p>
+</div>
+
+
+<!-- ============================================================= -->
+<!-- SECTION 4: SAFETY & PREVENTION                                 -->
+<!-- ============================================================= -->
+<div class="kk-faq-section kk-faq-section-alt">
+    <span class="kk-faq-anchor" id="section-4"></span>
+    <div class="kk-faq-section-header">
+        <div class="kk-faq-section-number">4</div>
+        <h2>How Does Dryer Vent Cleaning Prevent Fires and Enhance Home Safety?</h2>
+    </div>
+
+    <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Exterior-Vent-Hood-Visible-Transformation.webp"
+         alt="Before and after exterior dryer vent hood showing dramatic cleaning transformation"
+         class="kk-faq-img-float-left" width="380" height="285" loading="lazy">
+
+    <h3>What Are the Latest Statistics on Dryer Vent Fire Risks?</h3>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            How many dryer fires happen each year?
+        </div>
+        <div class="kk-faq-a">
+            <p>The NFPA estimates approximately 15,970 home fires per year involve dryers and washing machines, resulting in an estimated $238 million in property damage, hundreds of injuries, and multiple fatalities annually. Failure to clean the dryer vent is the leading contributing factor, accounting for roughly one-third of all dryer fires. These aren't freak accidents. They're predictable, preventable events that regular <a href="/dryer-vent-cleaning/">professional dryer vent cleaning</a> eliminates.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            What causes dryer vent fires?
+        </div>
+        <div class="kk-faq-a">
+            <p>The combination of lint (a highly flammable material), heat from the dryer, and restricted airflow from a clogged vent creates the conditions for ignition. When airflow is blocked, temperatures inside the vent line rise well beyond normal operating range. Lint compacts at bends and joints in the vent line, and eventually the accumulated material reaches its ignition point. The risk is highest in homes with longer vent runs, crushed or kinked flexible ducting, or vents that haven't been cleaned in over a year.</p>
+        </div>
+    </div>
+
+    <h3>What Safety Tips Should Homeowners Follow to Reduce Fire Hazards?</h3>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            What can I do between professional cleanings to stay safe?
+        </div>
+        <div class="kk-faq-a">
+            <p>Clean your lint trap before or after every single load. Periodically check the exterior vent hood to make sure it opens freely and isn't blocked by debris, snow, or nesting animals. Avoid overloading your dryer, as larger loads produce more lint. Never run your dryer when you're not home or while sleeping. If your dryer uses a flexible transition duct (the connection between the dryer and the wall), make sure it's the rigid or semi-rigid metal type rather than plastic or foil, which can sag, trap lint, and are more combustible.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Does homeowners insurance cover dryer fires caused by lint buildup?
+        </div>
+        <div class="kk-faq-a">
+            <p>Most standard homeowners insurance policies cover fire damage regardless of cause. However, if an insurance investigation determines that negligence (such as failure to maintain the dryer vent) contributed to the fire, it could complicate your claim. Some insurers are beginning to ask about maintenance history for dryer vents, similar to how they assess furnace and chimney maintenance. Regular professional cleaning provides documented proof that you've maintained your system responsibly.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-clear"></div>
+</div>
+
+
+<!-- ============================================================= -->
+<!-- COMPARISON CHART                                               -->
+<!-- ============================================================= -->
+<div class="kk-faq-section">
+    <span class="kk-faq-anchor" id="section-compare"></span>
+    <div class="kk-faq-section-header">
+        <div class="kk-faq-section-number">5</div>
+        <h2>Why Homeowners Choose Kealey's Over the Competition</h2>
+    </div>
+
+    <p>The duct and dryer vent cleaning industry unfortunately has more than its share of companies that advertise low prices, rush through jobs, or upsell services you don't need. As a <a href="/about/">family-owned business</a> serving the seacoast since 1993, owner Brian Kealey built our reputation on the opposite approach: honest quotes, thorough work, and before-and-after proof on every job.</p>
+
+    <div class="kk-faq-table-wrap">
+        <table class="kk-faq-table">
+            <thead>
+                <tr>
+                    <th>What Matters</th>
+                    <th>Kealey's</th>
+                    <th>Typical Competitors</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Before & after photo documentation</td>
+                    <td><span class="kk-faq-check">✓ Every job</span></td>
+                    <td><span class="kk-faq-x">✗ Rarely offered</span></td>
+                </tr>
+                <tr>
+                    <td>Transparent, upfront pricing</td>
+                    <td><span class="kk-faq-check">✓ No hidden fees</span></td>
+                    <td><span class="kk-faq-x">✗ Bait-and-switch common</span></td>
+                </tr>
+                <tr>
+                    <td>Engineering-level HVAC knowledge</td>
+                    <td><span class="kk-faq-check">✓ Mechanical engineer owner</span></td>
+                    <td><span class="kk-faq-x">✗ Minimal training</span></td>
+                </tr>
+                <tr>
+                    <td>Licensed & fully insured</td>
+                    <td><span class="kk-faq-check">✓ Verified</span></td>
+                    <td><span class="kk-faq-maybe">? Varies widely</span></td>
+                </tr>
+                <tr>
+                    <td>Family-owned local business</td>
+                    <td><span class="kk-faq-check">✓ Since 1993</span></td>
+                    <td><span class="kk-faq-x">✗ Often franchise/national</span></td>
+                </tr>
+                <tr>
+                    <td>Full-system cleaning process</td>
+                    <td><span class="kk-faq-check">✓ Supply, return & main</span></td>
+                    <td><span class="kk-faq-x">✗ Vents only (surface-level)</span></td>
+                </tr>
+                <tr>
+                    <td>No-mess guarantee</td>
+                    <td><span class="kk-faq-check">✓ Always</span></td>
+                    <td><span class="kk-faq-maybe">? Depends on crew</span></td>
+                </tr>
+                <tr>
+                    <td>32+ years of experience</td>
+                    <td><span class="kk-faq-check">✓ Established 1993</span></td>
+                    <td><span class="kk-faq-x">✗ Often under 5 years</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- ===== REVIEW STRIP 3 ===== -->
+<div class="kk-faq-review-strip">
+    <div class="kk-faq-review-stars">★★★★★</div>
+    <p class="kk-faq-review-quote">"Such a great company to work with!!! Would recommend to anyone! Professional and fantastic service!!!!! Thank you!!"</p>
+    <p class="kk-faq-review-author">- Michelle C.</p>
+</div>
+
+
+<!-- ============================================================= -->
+<!-- SECTION 6: QUICK-ANSWER BONUS FAQs                             -->
+<!-- ============================================================= -->
+<div class="kk-faq-section kk-faq-section-alt">
+    <span class="kk-faq-anchor" id="section-quick"></span>
+    <div class="kk-faq-section-header">
+        <div class="kk-faq-section-number">6</div>
+        <h2>Quick-Answer FAQs About Our Services</h2>
+    </div>
+
+    <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Before_After-Air-Duct-Cleaning.webp"
+         alt="Before and after comparison of professional air duct cleaning results"
+         class="kk-faq-img-float-right" width="380" height="285" loading="lazy">
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            How long does dryer vent cleaning take?
+        </div>
+        <div class="kk-faq-a">
+            <p>A professional dryer vent cleaning typically takes 30 to 60 minutes depending on the length and complexity of your vent run. We're thorough but efficient, and we clean up after ourselves so there's no mess left behind.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            What's included in professional air duct cleaning?
+        </div>
+        <div class="kk-faq-a">
+            <p>Our <a href="/air-duct-cleaning/">air duct cleaning service</a> includes a full inspection, cleaning of all supply and return ducts, main trunk lines, and register covers. We use professional-grade rotary brush systems and high-powered vacuums. The process takes two to four hours for most homes, and we provide before-and-after photos so you can see the results.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Do I need to be home during cleaning?
+        </div>
+        <div class="kk-faq-a">
+            <p>Yes, we ask that someone 18 or older be home during the service. We'll need access to your dryer or HVAC system, and we like to walk you through the before-and-after results when we're done. Most customers appreciate seeing exactly what we removed from their system.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            What are signs my air ducts need cleaning?
+        </div>
+        <div class="kk-faq-a">
+            <p>Look for visible dust blowing from supply registers when your HVAC turns on, dusty or musty smells when the system runs, inconsistent airflow between rooms, or an increase in allergy or respiratory symptoms at home. If you can see dust buildup inside your vent covers when you remove them, that's a strong indicator. Recent home renovations also warrant a cleaning, as construction dust settles deep inside ductwork.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Does air duct cleaning help with allergies?
+        </div>
+        <div class="kk-faq-a">
+            <p>Many of our customers report noticeable improvement in allergy and asthma symptoms after a professional duct cleaning. Dust, pollen, pet dander, and mold spores accumulate inside ductwork and recirculate every time your HVAC runs. Removing these irritants means cleaner air in every room. This is especially impactful for homes with pets or family members who suffer from seasonal allergies.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            What areas do you serve?
+        </div>
+        <div class="kk-faq-a">
+            <p>We serve homeowners across the Massachusetts and New Hampshire seacoast, including <a href="/salisbury-ma/">Salisbury</a>, <a href="/amesbury-ma/">Amesbury</a>, <a href="/newburyport-ma/">Newburyport</a>, <a href="/essex-county-ma/">Essex County</a>, <a href="/portsmouth-nh/">Portsmouth</a>, <a href="/hampton-nh/">Hampton</a>, <a href="/exeter-nh/">Exeter</a>, <a href="/rye-nh/">Rye</a>, <a href="/seabrook-nh/">Seabrook</a>, <a href="/stratham-nh/">Stratham</a>, <a href="/rockingham-county-nh/">Rockingham County</a>, and into southern Maine including <a href="/air-duct-cleaning/kittery-me/">Kittery</a>. Visit our <a href="/services-area/">service areas page</a> for the full list.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            How do I schedule a cleaning appointment?
+        </div>
+        <div class="kk-faq-a">
+            <p>The easiest way is to <a href="/contact/">fill out our contact form</a> or call us directly at <a href="tel:9789614513">(978) 961-4513</a>. We'll ask a few questions about your home and system, provide a quote, and schedule a time that works for you. Most appointments can be booked within a few days.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-item">
+        <div class="kk-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            What's the best time of year for duct and vent cleaning?
+        </div>
+        <div class="kk-faq-a">
+            <p>We offer service year-round, but there are strategic times to schedule. For air duct cleaning, early fall (before heating season) ensures clean air circulation through the winter months. For dryer vent cleaning, any time is a good time since it's a safety issue. Many homeowners schedule both services together to check both off in a single visit. Spring and late summer tend to have the most availability.</p>
+        </div>
+    </div>
+
+    <div class="kk-faq-clear"></div>
+</div>
+
+
+<!-- ===== FINAL CTA ===== -->
+<div class="kk-faq-cta-banner">
+    <h2>Didn't Find Your Answer?</h2>
+    <p>Call us at <a href="tel:9789614513" style="color:#ffffff;text-decoration:underline;">(978) 961-4513</a> or send us a message. We're happy to answer any question you have about dryer vent or air duct cleaning.</p>
+    <a href="/contact/" class="kk-faq-cta">Contact Us Today</a>
+</div>
+
+
+<!-- ===== BOTTOM NAV ===== -->
+<div class="kk-faq-links-section">
+    <h3>Explore Our Service Areas & Resources</h3>
+    <div class="kk-faq-links-grid">
+        <a href="/air-duct-cleaning/">Air Duct Cleaning</a>
+        <a href="/dryer-vent-cleaning/">Dryer Vent Cleaning</a>
+        <a href="/essex-county-ma/">Essex County, MA</a>
+        <a href="/salisbury-ma/">Salisbury, MA</a>
+        <a href="/hampton-nh/">Hampton, NH</a>
+        <a href="/amesbury-ma/">Amesbury, MA</a>
+        <a href="/portsmouth-nh/">Portsmouth, NH</a>
+        <a href="/newburyport-ma/">Newburyport, MA</a>
+        <a href="/exeter-nh/">Exeter, NH</a>
+        <a href="/stratham-nh/">Stratham, NH</a>
+        <a href="/rockingham-county-nh/">Rockingham County, NH</a>
+    </div>
+</div>
+
+</div><!-- .kk-faq -->
+
+
+<!-- ===== STRUCTURED DATA: LocalBusiness ===== -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kealey's Duct & Dryer Cleaning",
+    "description": "Professional air duct cleaning and dryer vent cleaning services. Family-owned since 1993 with 32+ years of experience. Licensed, insured, and 5-star rated.",
+    "url": "https://bkductdryercleaning.com/",
+    "telephone": "+19789614513",
+    "email": "kealeys@bkductdryercleaning.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9 Del-Logan Drive",
+        "addressLocality": "Salisbury",
+        "addressRegion": "MA",
+        "postalCode": "01952",
+        "addressCountry": "US"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.865545,
+        "longitude": -70.874248
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "80",
+        "bestRating": "5"
+    },
+    "sameAs": [
+        "https://www.facebook.com/profile.php?id=61566588223772",
+        "https://www.google.com/maps/place/Kealey's+Duct+and+Dryer+Cleaning+Service"
+    ],
+    "image": "https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-4.webp",
+    "priceRange": "$$"
+}
+</script>
+
+<!-- ===== STRUCTURED DATA: FAQPage Schema ===== -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Why is my dryer taking longer to dry clothes?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Extended drying times are the most common sign of a clogged dryer vent. When lint restricts the exhaust airflow, moisture can't escape efficiently, leaving clothes damp after a normal cycle. If you're running two or more cycles to fully dry a load, your vent almost certainly needs professional cleaning."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can lint buildup actually cause a fire?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The NFPA reports an estimated 15,970 home fires each year involving dryers and washing machines. Lint is highly flammable, and when it accumulates inside a vent line, the combination of heat and restricted airflow can ignite it. The risk increases with longer or more complex vent runs."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does a clogged vent affect my energy bills?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A restricted dryer vent forces your dryer to run longer and work harder with every load, translating directly to higher electricity or gas bills. Industry data suggests that a clean dryer vent can improve efficiency by 15-25%, which adds up quickly for households doing multiple loads per week."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What does a clogged dryer vent look like from the outside?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Check the exterior vent hood where your dryer exhausts outside. If the flap doesn't open when the dryer is running, lint is visible around the opening, or debris is blocking the vent, airflow is restricted. Lint collecting on the wall or ground near the vent exit is also a clear sign."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How often should dryer vents be cleaned?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The NFPA recommends professional dryer vent cleaning at least once per year. Larger families doing daily loads or homes with pets may benefit from cleaning every six to nine months. Frequency depends on household size, laundry volume, pets, and the length of your vent run."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What's the recommended air duct cleaning frequency?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For most homes, professional air duct cleaning every three to five years is a good baseline. Schedule sooner if you notice visible dust from vents, unexplained allergy flare-ups, recent renovations, or unknown cleaning history. Coastal homes may benefit from more frequent cleaning due to salt air and humidity."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much does dryer vent cleaning cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dryer vent cleaning costs depend on the length and complexity of your vent run, accessibility, and whether repairs are needed. Kealey's provides transparent, upfront quotes before any work begins with no hidden fees or surprise charges. Contact us for a free estimate specific to your home."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I clean my dryer vent myself?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can clean your lint trap and vacuum around your dryer. However, for the vent line itself, especially runs through walls and ceilings, professional equipment is needed to fully clear compacted lint. DIY kits can push lint further into the line or miss bends where buildup is heaviest."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is professional air duct cleaning really worth the cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "When done properly by a reputable company, yes. A thorough professional cleaning removes years of accumulated dust, allergens, pet dander, and debris that HVAC filters can't capture. Kealey's provides before-and-after photos on every job so you can see exactly what was in your ducts."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How many dryer fires happen each year?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The NFPA estimates approximately 15,970 home fires per year involve dryers and washing machines, resulting in an estimated $238 million in property damage. Failure to clean the dryer vent is the leading contributing factor, accounting for roughly one-third of all dryer fires."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What can I do between professional cleanings to stay safe?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Clean your lint trap after every load. Check the exterior vent hood periodically to ensure it opens freely. Avoid overloading your dryer. Never run your dryer when not home or while sleeping. Use rigid or semi-rigid metal transition ducts rather than plastic or foil types."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does air duct cleaning help with allergies?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Many customers report noticeable improvement in allergy and asthma symptoms after professional duct cleaning. Dust, pollen, pet dander, and mold spores accumulate inside ductwork and recirculate every time your HVAC runs. Removing these irritants means cleaner air in every room."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What areas do you serve?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We serve homeowners across Massachusetts and New Hampshire seacoast including Salisbury, Amesbury, Newburyport, Essex County, Portsmouth, Hampton, Exeter, Rye, Seabrook, Stratham, Rockingham County, and into southern Maine including Kittery."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I schedule a cleaning appointment?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fill out our contact form at bkductdryercleaning.com/contact/ or call us at (978) 961-4513. We'll ask about your home and system, provide a quote, and schedule a convenient time. Most appointments can be booked within a few days."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What's the best time of year for duct and vent cleaning?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Service is available year-round. For air ducts, early fall before heating season ensures clean air through winter. For dryer vents, any time works since it's a safety issue. Many homeowners schedule both together. Spring and late summer tend to have the most availability."
+            }
+        }
+    ]
+}
+</script>
