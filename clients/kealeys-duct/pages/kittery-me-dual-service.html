@@ -1,0 +1,822 @@
+<!--
+KITTERY, ME DUAL-SERVICE LOCATION PAGE
+Page: /kittery-me/ (or as defined)
+Services: Air Duct Cleaning (40%) + Dryer Vent Cleaning (40%) + Combined (20%)
+H1: Professional Dryer Vent & Duct Cleaning Services in Kittery, ME
+Word Count: ~1,800-2,000
+Brand: Kealey's Duct & Dryer Cleaning
+Last Updated: 2026-02-13
+-->
+
+<style>
+/* ===== KITTERY DUAL-SERVICE PAGE STYLES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500&display=swap');
+
+/* --- Reset & Base --- */
+.kk-kit *,
+.kk-kit *::before,
+.kk-kit *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.kk-kit {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.7;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.kk-kit h1, .kk-kit h2, .kk-kit h3, .kk-kit h4 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #0e3160;
+}
+
+.kk-kit h2 { font-size: 1.85rem; margin-bottom: 0.75rem; }
+.kk-kit h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.kk-kit p { margin-bottom: 1rem; }
+
+.kk-kit a {
+    color: #b7254d;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+.kk-kit a:hover { color: #0e3160; }
+
+/* --- Section Container --- */
+.kk-kit-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+/* ===== HERO ===== */
+.kk-kit-hero {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('https://bkductdryercleaning.com/wp-content/uploads/2025/11/8c47453b-3834-4e2f-9f50-369e7705802e.webp') center/cover no-repeat;
+    padding: 3.5rem 1.5rem;
+}
+.kk-kit-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(14, 49, 96, 0.62);
+}
+.kk-kit-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+}
+.kk-kit-hero h1 {
+    font-size: 2.4rem;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.kk-kit-hero h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+.kk-kit-hero-cta {
+    display: inline-block;
+    background: #b7254d;
+    color: #ffffff !important;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s;
+}
+.kk-kit-hero-cta:hover {
+    background: #9a1d3f;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+/* ===== TRUST BADGES ===== */
+.kk-kit-trust {
+    background: #f5f5f5;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+.kk-kit-trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.kk-kit-trust-item {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #0e3160;
+    white-space: nowrap;
+}
+.kk-kit-trust-item span {
+    color: #b7254d;
+    margin-right: 5px;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.kk-kit-section-alt { background: #f5f5f5; }
+
+/* Image floats */
+.kk-kit-img-right {
+    float: right;
+    width: 44%;
+    max-width: 400px;
+    margin: 0 0 1.25rem 1.75rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+.kk-kit-img-left {
+    float: left;
+    width: 44%;
+    max-width: 400px;
+    margin: 0 1.75rem 1.25rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+.kk-kit-img-full {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    margin: 1rem 0;
+}
+.kk-kit-clear { clear: both; }
+
+/* ===== WARNING SIGNS GRID ===== */
+.kk-kit-signs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.kk-kit-sign-card {
+    background: #ffffff;
+    border-left: 4px solid #b7254d;
+    padding: 1rem 1.25rem;
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.kk-kit-sign-card strong {
+    color: #0e3160;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* ===== COMPARISON TABLE ===== */
+.kk-kit-table-wrap {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.kk-kit-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 520px;
+}
+.kk-kit-table thead th {
+    background: #0e3160;
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    padding: 14px 16px;
+    text-align: left;
+}
+.kk-kit-table tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.kk-kit-table tbody tr:nth-child(even) { background: #f9f9f9; }
+.kk-kit-table tbody tr:last-child td { border-bottom: none; }
+.kk-kit-check { color: #22863a; font-weight: 700; font-size: 1.15rem; }
+.kk-kit-x { color: #cc3333; font-weight: 700; font-size: 1.15rem; }
+.kk-kit-maybe { color: #cc8800; font-weight: 600; }
+
+/* ===== REVIEWS ===== */
+.kk-kit-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+.kk-kit-review-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.kk-kit-stars {
+    color: #f5a623;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+}
+.kk-kit-review-text {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 0.75rem;
+    line-height: 1.65;
+}
+.kk-kit-reviewer {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    color: #0e3160;
+    font-size: 0.92rem;
+}
+
+/* ===== CTA BANNER ===== */
+.kk-kit-cta-banner {
+    background: linear-gradient(135deg, #0e3160 0%, #162d4a 100%);
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+.kk-kit-cta-banner h2 {
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+.kk-kit-cta-banner p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+.kk-kit-cta-banner .kk-kit-hero-cta {
+    font-size: 1.1rem;
+    padding: 15px 36px;
+}
+
+/* ===== FAQ SECTION ===== */
+.kk-kit-faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 0;
+}
+.kk-kit-faq-q {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    color: #0e3160;
+    font-size: 1.05rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.kk-kit-faq-q::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: #b7254d;
+    flex-shrink: 0;
+    transition: transform 0.25s;
+}
+.kk-kit-faq-q.open::after {
+    content: '−';
+}
+.kk-kit-faq-a {
+    display: none;
+    padding-top: 0.75rem;
+    color: #555;
+    line-height: 1.7;
+}
+.kk-kit-faq-a.open { display: block; }
+
+/* ===== MAP ===== */
+.kk-kit-map-section {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: #f5f5f5;
+}
+.kk-kit-map-section h2 {
+    margin-bottom: 1.25rem;
+}
+.kk-kit-map-section iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* ===== INTERNAL LINKS NAV ===== */
+.kk-kit-links-section {
+    background: #0e3160;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+.kk-kit-links-section h3 {
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+}
+.kk-kit-links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.kk-kit-links-grid a {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    color: #ffffff !important;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: background 0.2s;
+}
+.kk-kit-links-grid a:hover {
+    background: #b7254d;
+    border-color: #b7254d;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .kk-kit-hero { min-height: 380px; padding: 2.5rem 1.25rem; }
+    .kk-kit-hero h1 { font-size: 1.75rem; }
+    .kk-kit h2 { font-size: 1.5rem; }
+    .kk-kit-img-right,
+    .kk-kit-img-left {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    .kk-kit-trust-row { gap: 0.75rem 1.25rem; }
+    .kk-kit-trust-item { font-size: 0.82rem; }
+    .kk-kit-signs-grid { grid-template-columns: 1fr; }
+    .kk-kit-reviews { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="kk-kit">
+
+<!-- ===== HERO SECTION ===== -->
+<div class="kk-kit-hero">
+    <div class="kk-kit-hero-content">
+        <h1>Professional Dryer Vent & Duct Cleaning Services in Kittery, ME</h1>
+        <h2>Protect your Kittery home from fire hazards and improve indoor air quality with Maine's most trusted family-owned cleaning team.</h2>
+        <a href="/contact/" class="kk-kit-hero-cta">Get Your Free Quote</a>
+    </div>
+</div>
+
+<!-- ===== TRUST BADGES ===== -->
+<div class="kk-kit-trust">
+    <div class="kk-kit-trust-row">
+        <div class="kk-kit-trust-item"><span>★</span> 5.0 Rating, 80+ Google Reviews</div>
+        <div class="kk-kit-trust-item"><span>✓</span> Family-Owned Since 1993</div>
+        <div class="kk-kit-trust-item"><span>✓</span> Licensed & Insured</div>
+        <div class="kk-kit-trust-item"><span>✓</span> Before & After Photo Proof</div>
+        <div class="kk-kit-trust-item"><span>✓</span> Mechanical Engineering Expertise</div>
+    </div>
+</div>
+
+<!-- ===== SECTION 1: WHY KITTERY HOMES NEED DUCT & DRYER VENT CLEANING ===== -->
+<div class="kk-kit-section">
+    <h2>Why Kittery Homes Need Professional Duct and Dryer Vent Cleaning</h2>
+
+    <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/02/Kittery-Historic-Home-Exterior-Service.webp"
+         alt="Kealey's service van arriving at a historic Kittery, Maine home for duct and dryer vent cleaning"
+         class="kk-kit-img-right" width="400" height="300" loading="lazy">
+
+    <p>Kittery's coastal location along the Piscataqua River exposes homes to unique air quality challenges that inland properties don't face. Salt air accelerates corrosion inside ductwork, humidity creates conditions for mold growth, and the dramatic temperature swings between Maine's cold winters and warm summers force HVAC systems to work harder, circulating more dust, allergens, and debris through your home's air ducts.</p>
+
+    <p>From the historic homes along Kittery Point to newer construction in Kittery Foreside, every home in the area benefits from regular <a href="/air-duct-cleaning/">air duct cleaning</a> and <a href="/dryer-vent-cleaning/">dryer vent cleaning</a>. Older homes, especially those with original ductwork, tend to accumulate decades of dust, pet dander, and construction debris that standard HVAC filters simply can't capture. Meanwhile, dryer vents clogged with lint represent one of the most preventable fire hazards in any home.</p>
+
+    <h3>How Coastal Maine Conditions Affect Your Indoor Air Systems</h3>
+
+    <p>According to the National Fire Protection Association (NFPA), dryers and washing machines account for an estimated 15,970 home fires each year, with failure to clean dryer vents being the leading contributing factor. In coastal communities like Kittery, the combination of salt-laden air and high humidity makes lint accumulation even more problematic, as moisture causes lint to compact and harden inside vent lines.</p>
+
+    <p>For your HVAC system, the same coastal conditions mean that ductwork collects not just standard household dust, but also microscopic salt particles and moisture-related contaminants. The EPA notes that indoor air can be two to five times more polluted than outdoor air, and in a coastal environment, proper duct maintenance becomes even more critical for maintaining healthy indoor air quality.</p>
+
+    <div class="kk-kit-clear"></div>
+</div>
+
+<!-- ===== SECTION 2: AIR DUCT CLEANING - THE HEALTH INVESTMENT ===== -->
+<div class="kk-kit-section kk-kit-section-alt">
+    <h2>What Does Professional Air Duct Cleaning Include?</h2>
+
+    <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Before_After-Air-Duct-Cleaning.webp"
+         alt="Before and after comparison of air duct cleaning showing dramatic difference in duct cleanliness"
+         class="kk-kit-img-left" width="400" height="300" loading="lazy">
+
+    <p>Professional air duct cleaning goes far beyond what any DIY approach can accomplish. At <a href="/about/">Kealey's</a>, owner Brian Kealey brings a mechanical engineering background and 32+ years of hands-on experience to every job. Unlike "blow-and-go" companies that rush through with basic equipment, our thorough process addresses the entire HVAC system from supply vents to return ducts.</p>
+
+    <p>Our dedicated <a href="/air-duct-cleaning/kittery-me/">air duct cleaning in Kittery, ME</a> page covers even more detail on our HVAC cleaning process for local homes. Every air duct cleaning job begins with a complete inspection of your system. We document the condition of your ductwork with photos so you can see exactly what we're removing. Using professional-grade rotary brush systems and high-powered vacuum equipment, we dislodge and extract built-up contaminants throughout your entire duct network.</p>
+
+    <h3>Who Benefits Most from Air Duct Cleaning in Kittery?</h3>
+
+    <p>While every home benefits from clean ductwork, certain Kittery homeowners notice an especially dramatic improvement. Families with allergy or asthma sufferers often report significant relief after a professional cleaning, as removing accumulated dust, pollen, and pet dander from the duct system means these irritants are no longer being circulated through every room. Homeowners who have recently completed renovations should schedule a cleaning to remove construction dust that settles deep inside ductwork. And if you've recently moved into a home in Kittery Foreside, Kittery Point, or Badger's Island, a duct cleaning gives you a fresh start with the air you're breathing.</p>
+
+    <p>Ready to improve the air quality in your Kittery home? <a href="/contact/">Request a free quote</a> and we'll schedule a time that works for you.</p>
+
+    <div class="kk-kit-clear"></div>
+</div>
+
+<!-- ===== SECTION 3: DRYER VENT CLEANING - THE SAFETY ESSENTIAL ===== -->
+<div class="kk-kit-section">
+    <h2>Is Your Dryer Vent Putting Your Kittery Home at Risk?</h2>
+
+    <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Exterior-Vent-Hood-Visible-Transformation.webp"
+         alt="Exterior dryer vent hood showing before and after professional cleaning transformation"
+         class="kk-kit-img-right" width="400" height="300" loading="lazy">
+
+    <p>A clogged dryer vent isn't just an inconvenience that makes your clothes take longer to dry - it's a genuine fire hazard. Lint is highly flammable, and when it builds up inside your vent line, the heat from your dryer can ignite it. The U.S. Fire Administration reports that dryer fires cause an estimated $35 million in property loss annually, and the vast majority are preventable with regular cleaning. Our guide on <a href="/how-often-to-clean-dryer-vents-fire-prevention-tips-2026/">how often to clean your dryer vent</a> breaks down the recommended schedule based on household size and usage.</p>
+
+    <p>In Kittery's older neighborhoods, many homes have long or complex dryer vent runs that are especially prone to lint buildup. Vents that travel through walls, ceilings, or crawl spaces collect lint at every bend and joint. If your dryer takes more than one cycle to fully dry a load, the outside vent flap doesn't open when the dryer runs, or you notice a burning smell during operation, it's time for professional <a href="/dryer-vent-cleaning/">dryer vent cleaning</a>.</p>
+
+    <h3>Warning Signs Your Dryer Vent Needs Cleaning</h3>
+
+    <div class="kk-kit-signs-grid">
+        <div class="kk-kit-sign-card">
+            <strong>Extended Drying Times</strong>
+            Clothes taking two or more cycles to dry completely signals restricted airflow from lint buildup.
+        </div>
+        <div class="kk-kit-sign-card">
+            <strong>Hot Dryer or Laundry Room</strong>
+            Excessive heat on the dryer's exterior or in the surrounding area indicates exhaust isn't venting properly.
+        </div>
+        <div class="kk-kit-sign-card">
+            <strong>Burning Smell</strong>
+            A burning odor during operation is a serious warning that lint may be overheating inside the vent line.
+        </div>
+        <div class="kk-kit-sign-card">
+            <strong>Lint Around the Dryer</strong>
+            Visible lint accumulating behind, around, or on top of your dryer means the vent system isn't capturing exhaust properly.
+        </div>
+        <div class="kk-kit-sign-card">
+            <strong>Vent Flap Won't Open</strong>
+            The exterior vent hood should open when the dryer is running. If it stays shut, airflow is blocked.
+        </div>
+        <div class="kk-kit-sign-card">
+            <strong>It's Been Over a Year</strong>
+            The NFPA recommends annual dryer vent cleaning as a minimum. Larger households may need cleaning more frequently.
+        </div>
+    </div>
+
+    <div class="kk-kit-clear"></div>
+</div>
+
+<!-- ===== CTA BANNER ===== -->
+<div class="kk-kit-cta-banner">
+    <h2>Don't Wait Until It's Too Late</h2>
+    <p>Protect your Kittery home and family. Schedule your professional dryer vent and duct cleaning today.</p>
+    <a href="tel:9789614513" class="kk-kit-hero-cta">Call (978) 961-4513</a>
+</div>
+
+<!-- ===== SECTION 4: WHY CHOOSE KEALEY'S - COMPARISON ===== -->
+<div class="kk-kit-section kk-kit-section-alt">
+    <h2>Why Kittery Homeowners Choose Kealey's Over the Competition</h2>
+
+    <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-14.webp"
+         alt="Kealey's technician performing thorough HVAC system cleaning with professional equipment"
+         class="kk-kit-img-right" width="400" height="300" loading="lazy">
+
+    <p>The duct cleaning industry unfortunately has more than its share of "bait-and-switch" companies advertising $99 whole-house specials that end up costing much more, or worse, companies that do almost nothing and still charge full price. As a family-owned business serving the seacoast since 1993, <a href="/about/">Kealey's</a> has built our reputation on the opposite approach: honest pricing, thorough work, and before-and-after proof on every job.</p>
+
+    <p>Owner Brian Kealey's mechanical engineering degree means we understand HVAC systems at a technical level that most cleaning companies simply can't match. We don't just clean what's visible - we understand airflow dynamics, system design, and how to clean your entire system without causing damage.</p>
+
+    <div class="kk-kit-table-wrap">
+        <table class="kk-kit-table">
+            <thead>
+                <tr>
+                    <th>What Matters</th>
+                    <th>Kealey's</th>
+                    <th>Typical Competitors</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Before & after photo documentation</td>
+                    <td><span class="kk-kit-check">✓ Every job</span></td>
+                    <td><span class="kk-kit-x">✗ Rarely offered</span></td>
+                </tr>
+                <tr>
+                    <td>Transparent, upfront pricing</td>
+                    <td><span class="kk-kit-check">✓ No hidden fees</span></td>
+                    <td><span class="kk-kit-x">✗ Bait-and-switch common</span></td>
+                </tr>
+                <tr>
+                    <td>Engineering-level HVAC knowledge</td>
+                    <td><span class="kk-kit-check">✓ Mechanical engineer owner</span></td>
+                    <td><span class="kk-kit-x">✗ Minimal training</span></td>
+                </tr>
+                <tr>
+                    <td>Licensed & fully insured</td>
+                    <td><span class="kk-kit-check">✓ Verified</span></td>
+                    <td><span class="kk-kit-maybe">? Varies widely</span></td>
+                </tr>
+                <tr>
+                    <td>Family-owned local business</td>
+                    <td><span class="kk-kit-check">✓ Since 1993</span></td>
+                    <td><span class="kk-kit-x">✗ Often franchise/national</span></td>
+                </tr>
+                <tr>
+                    <td>Full-system cleaning process</td>
+                    <td><span class="kk-kit-check">✓ Supply, return, & main</span></td>
+                    <td><span class="kk-kit-x">✗ Vents only (surface-level)</span></td>
+                </tr>
+                <tr>
+                    <td>No-mess guarantee</td>
+                    <td><span class="kk-kit-check">✓ Always</span></td>
+                    <td><span class="kk-kit-maybe">? Depends on crew</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="kk-kit-clear"></div>
+</div>
+
+<!-- ===== SECTION 5: COMBINED VALUE & MAINTENANCE ===== -->
+<div class="kk-kit-section">
+    <h2>The Smart Approach: Combined Duct and Dryer Vent Maintenance</h2>
+
+    <img src="https://bkductdryercleaning.com/wp-content/uploads/2026/01/Image-2-Maintenance_Prevention.webp"
+         alt="Professional maintenance and prevention services for home duct and dryer vent systems"
+         class="kk-kit-img-left" width="400" height="300" loading="lazy">
+
+    <p>Many Kittery homeowners choose to schedule both <a href="/air-duct-cleaning/kittery-me/">air duct cleaning</a> and <a href="/dryer-vent-cleaning/">dryer vent cleaning</a> in the same visit. This makes sense for several reasons: you're already setting aside time for the appointment, your home's air systems are interconnected, and addressing both services ensures your entire indoor environment is clean and safe.</p>
+
+    <h3>How Often Should Kittery Residents Schedule Cleaning?</h3>
+
+    <p>For dryer vent cleaning, the NFPA recommends at least once per year. Households with larger families doing more laundry loads per week may benefit from cleaning every six to nine months. For air duct cleaning, every three to five years is a good baseline for most homes, though households with pets, smokers, allergy sufferers, or recent renovations may want to clean more frequently.</p>
+
+    <p>Maine's climate adds another factor. The long heating season means your HVAC system runs heavily from October through April, pushing more air through your ducts and accelerating the buildup of dust and debris. Scheduling your duct cleaning before heating season begins helps ensure clean air circulation throughout the coldest months.</p>
+
+    <h3>What to Expect When You Book with Kealey's</h3>
+
+    <p>From the first phone call, we keep things simple and straightforward. We'll ask a few questions about your home, your system, and any concerns you have. On the day of service, our team arrives on time, protects your floors and furnishings, and walks you through the process. We take before-and-after photos so you can see the results firsthand. No pressure, no upselling - just honest, thorough <a href="/services/">cleaning services</a> from a team that takes pride in their work.</p>
+
+    <div class="kk-kit-clear"></div>
+</div>
+
+<!-- ===== REVIEWS ===== -->
+<div class="kk-kit-section kk-kit-section-alt">
+    <h2>What Our Customers Are Saying</h2>
+    <p>Don't take our word for it. Here's what homeowners across the seacoast region have to say about working with Kealey's.</p>
+
+    <div class="kk-kit-reviews">
+        <div class="kk-kit-review-card">
+            <div class="kk-kit-stars">★★★★★</div>
+            <p class="kk-kit-review-text">"I can't recommend Kealey's services enough! They were fast, clean, and reliable. Super nice guys and will definitely use them again!"</p>
+            <div class="kk-kit-reviewer">- Julia L.</div>
+        </div>
+        <div class="kk-kit-review-card">
+            <div class="kk-kit-stars">★★★★★</div>
+            <p class="kk-kit-review-text">"Such a great company to work with!!! Would recommend to anyone! Professional and fantastic service!!!!! Thank you!!"</p>
+            <div class="kk-kit-reviewer">- Michelle C.</div>
+        </div>
+        <div class="kk-kit-review-card">
+            <div class="kk-kit-stars">★★★★★</div>
+            <p class="kk-kit-review-text">"The guys came out and went above and beyond making sure our dryer was up and running. Trustworthy, well priced, and quality work. Will be my go to maintenance company for our dryer vents."</p>
+            <div class="kk-kit-reviewer">- Mathew R.</div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== FAQ SECTION ===== -->
+<div class="kk-kit-section">
+    <h2>Frequently Asked Questions About Duct & Dryer Vent Cleaning in Kittery</h2>
+    <p>Have questions? Check our <a href="/faqs/">full FAQ page</a> or read some of the most common questions we hear from Kittery homeowners below.</p>
+
+    <div class="kk-kit-faq-item">
+        <div class="kk-kit-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            How much does dryer vent cleaning cost in Kittery, ME?
+        </div>
+        <div class="kk-kit-faq-a">
+            Our dryer vent cleaning pricing is transparent and competitive. The cost depends on the length and complexity of your vent run, but we always provide a clear quote before any work begins. No hidden fees, no surprise charges. <a href="/contact/">Contact us</a> for a free estimate specific to your home.
+        </div>
+    </div>
+
+    <div class="kk-kit-faq-item">
+        <div class="kk-kit-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            How long does a professional duct cleaning take?
+        </div>
+        <div class="kk-kit-faq-a">
+            A thorough air duct cleaning typically takes two to four hours depending on the size of your home and the complexity of your HVAC system. Dryer vent cleaning is faster, usually 30 to 60 minutes. If you're scheduling both services together, plan for a half-day window.
+        </div>
+    </div>
+
+    <div class="kk-kit-faq-item">
+        <div class="kk-kit-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Do you serve all areas of Kittery, Maine?
+        </div>
+        <div class="kk-kit-faq-a">
+            Absolutely. We serve all of Kittery including Kittery Foreside, Kittery Point, Badger's Island, and the surrounding areas. We also serve nearby communities including <a href="/portsmouth-nh/">Portsmouth, NH</a>, <a href="/rye-nh/">Rye, NH</a>, <a href="/exeter-nh/">Exeter, NH</a>, <a href="/hampton-nh/">Hampton, NH</a>, and towns throughout <a href="/essex-county-ma/">Essex County, MA</a> and <a href="/rockingham-county-nh/">Rockingham County, NH</a>.
+        </div>
+    </div>
+
+    <div class="kk-kit-faq-item">
+        <div class="kk-kit-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Can dirty air ducts make my allergies worse?
+        </div>
+        <div class="kk-kit-faq-a">
+            Yes. Dust, pollen, pet dander, and mold spores accumulate inside ductwork and get recirculated every time your HVAC system runs. For allergy and asthma sufferers, this can significantly worsen symptoms. A professional cleaning removes these irritants from your system, and many customers report noticeable improvement in their breathing and allergy symptoms.
+        </div>
+    </div>
+
+    <div class="kk-kit-faq-item">
+        <div class="kk-kit-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            Is air duct cleaning really worth it?
+        </div>
+        <div class="kk-kit-faq-a">
+            When done properly, yes. The key is hiring a reputable company that performs a thorough cleaning of your entire system, not just a quick pass over visible vents. We provide before-and-after photos on every job so you can see exactly what was in your ducts. Learn more about what the research says in our blog post: <a href="/when-to-clean-air-ducts-insights-from-the-epa-for-2025/">is air duct cleaning worth it?</a>
+        </div>
+    </div>
+
+    <div class="kk-kit-faq-item">
+        <div class="kk-kit-faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            What's the difference between air duct cleaning and dryer vent cleaning?
+        </div>
+        <div class="kk-kit-faq-a">
+            Air duct cleaning focuses on your HVAC system - the network of ducts that distribute heated and cooled air throughout your home. This impacts your indoor air quality and system efficiency. Dryer vent cleaning addresses the exhaust vent that carries hot, moist air and lint from your dryer to the outside of your home. This is primarily a fire safety service. Both are important, and many homeowners schedule them together for complete home maintenance.
+        </div>
+    </div>
+</div>
+
+<!-- ===== FINAL CTA BANNER ===== -->
+<div class="kk-kit-cta-banner">
+    <h2>Serving Kittery, ME and the Entire Seacoast Region</h2>
+    <p>Family-owned since 1993. 32+ years of experience. Before-and-after proof on every job. That's the Kealey's difference.</p>
+    <a href="/contact/" class="kk-kit-hero-cta">Schedule Your Cleaning Today</a>
+</div>
+
+<!-- ===== MAP SECTION ===== -->
+<div class="kk-kit-map-section">
+    <h2>Find Us Near Kittery, ME</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186650.84981493332!2d-70.81675539840333!3d43.032603814086066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2b8eb6a036a19%3A0x50281b31f67541f9!2sKittery%2C%20ME!5e0!3m2!1sen!2sus!4v1770994543403!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<!-- ===== INTERNAL LINKS ===== -->
+<div class="kk-kit-links-section">
+    <h3>Explore Our Service Areas & Resources</h3>
+    <div class="kk-kit-links-grid">
+        <a href="/air-duct-cleaning/">Air Duct Cleaning</a>
+        <a href="/dryer-vent-cleaning/">Dryer Vent Cleaning</a>
+        <a href="/essex-county-ma/">Essex County, MA</a>
+        <a href="/salisbury-ma/">Salisbury, MA</a>
+        <a href="/hampton-nh/">Hampton, NH</a>
+        <a href="/amesbury-ma/">Amesbury, MA</a>
+        <a href="/portsmouth-nh/">Portsmouth, NH</a>
+        <a href="/newburyport-ma/">Newburyport, MA</a>
+        <a href="/exeter-nh/">Exeter, NH</a>
+        <a href="/stratham-nh/">Stratham, NH</a>
+        <a href="/rockingham-county-nh/">Rockingham County, NH</a>
+    </div>
+</div>
+
+</div><!-- .kk-kit -->
+
+<!-- ===== STRUCTURED DATA ===== -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kealey's Duct & Dryer Cleaning",
+    "description": "Professional air duct cleaning and dryer vent cleaning services in Kittery, ME. Family-owned since 1993 with 32+ years of experience. Licensed, insured, and 5-star rated.",
+    "url": "https://bkductdryercleaning.com/",
+    "telephone": "+19789614513",
+    "email": "kealeys@bkductdryercleaning.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9 Del-Logan Drive",
+        "addressLocality": "Salisbury",
+        "addressRegion": "MA",
+        "postalCode": "01952",
+        "addressCountry": "US"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.865545,
+        "longitude": -70.874248
+    },
+    "areaServed": [
+        { "@type": "City", "name": "Kittery", "containedInPlace": { "@type": "State", "name": "Maine" } },
+        { "@type": "City", "name": "Portsmouth", "containedInPlace": { "@type": "State", "name": "New Hampshire" } },
+        { "@type": "City", "name": "Salisbury", "containedInPlace": { "@type": "State", "name": "Massachusetts" } }
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "80",
+        "bestRating": "5"
+    },
+    "sameAs": [
+        "https://www.facebook.com/profile.php?id=61566588223772",
+        "https://www.google.com/maps/place/Kealey's+Duct+and+Dryer+Cleaning+Service"
+    ],
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "18:00"
+    },
+    "image": "https://bkductdryercleaning.com/wp-content/uploads/2026/02/Kittery-Historic-Home-Exterior-Service.webp",
+    "priceRange": "$$"
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Professional Dryer Vent & Duct Cleaning in Kittery, ME",
+    "provider": {
+        "@type": "LocalBusiness",
+        "name": "Kealey's Duct & Dryer Cleaning"
+    },
+    "areaServed": {
+        "@type": "City",
+        "name": "Kittery",
+        "containedInPlace": { "@type": "State", "name": "Maine" }
+    },
+    "serviceType": ["Air Duct Cleaning", "Dryer Vent Cleaning", "HVAC Cleaning"],
+    "description": "Comprehensive air duct and dryer vent cleaning for Kittery, ME homes. Includes full-system HVAC duct cleaning and dryer vent lint removal with before-and-after photo documentation."
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How much does dryer vent cleaning cost in Kittery, ME?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our dryer vent cleaning pricing is transparent and competitive. The cost depends on the length and complexity of your vent run, but we always provide a clear quote before any work begins. No hidden fees, no surprise charges. Contact us for a free estimate specific to your home."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long does a professional duct cleaning take?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A thorough air duct cleaning typically takes two to four hours depending on the size of your home and the complexity of your HVAC system. Dryer vent cleaning is faster, usually 30 to 60 minutes. If you're scheduling both services together, plan for a half-day window."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you serve all areas of Kittery, Maine?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. We serve all of Kittery including Kittery Foreside, Kittery Point, Badger's Island, and the surrounding areas. We also serve nearby communities including Portsmouth NH, Rye NH, Exeter NH, Hampton NH, and towns throughout Essex County MA and Rockingham County NH."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can dirty air ducts make my allergies worse?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Dust, pollen, pet dander, and mold spores accumulate inside ductwork and get recirculated every time your HVAC system runs. For allergy and asthma sufferers, this can significantly worsen symptoms. A professional cleaning removes these irritants from your system."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is air duct cleaning really worth it?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "When done properly by a reputable company that performs a thorough cleaning of your entire system, yes. The key is hiring a company that cleans the full system, not just visible vents. Kealey's provides before-and-after photos on every job so you can see exactly what was removed."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What's the difference between air duct cleaning and dryer vent cleaning?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Air duct cleaning focuses on your HVAC system, the network of ducts that distribute heated and cooled air throughout your home. This impacts indoor air quality and system efficiency. Dryer vent cleaning addresses the exhaust vent carrying hot, moist air and lint from your dryer outside. This is primarily a fire safety service. Both are important for home maintenance."
+            }
+        }
+    ]
+}
+</script>
