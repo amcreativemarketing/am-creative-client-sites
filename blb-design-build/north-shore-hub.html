@@ -1,0 +1,1041 @@
+<!-- 
+  BLB Design / Build - North Shore MA Remodeling Hub Page
+  URL: /north-shore-remodeling/
+  Type: Location Hub (Root Node)
+  
+  HERO OPTIONS (for Divi):
+  
+  Option A - Geographic Focus:
+  H1: North Shore MA Home Remodeling & Renovation
+  H2: Design-build expertise for kitchens, bathrooms, additions, and whole-home transformations across Newburyport, Amesbury, and surrounding communities
+  
+  Option B - Trust-Forward:
+  H1: Your North Shore Design-Build Partner
+  H2: One team. One vision. Beautiful renovations for Amesbury, Newburyport, and communities across the North Shore.
+  
+  Option C - Outcome-Focused:
+  H1: North Shore Home Remodeling Done Right
+  H2: From concept to completion, BLB Design / Build delivers kitchens, baths, additions, and whole-home renovations you'll love - without the headaches.
+  
+  CTA: Start Your Project → /contact-us/
+-->
+
+<style>
+/* =============================================
+   BLB North Shore Hub Page Styles
+   Namespace: .blb-ns-
+   ============================================= */
+
+:root {
+  --blb-primary: #1a1a1a;
+  --blb-secondary: #666666;
+  --blb-body: #555555;
+  --blb-bg-light: #f8f8f8;
+  --blb-btn-gray: #f1f1f1;
+  --blb-white: #ffffff;
+  --blb-header-bar: #b8b8ae;
+}
+
+/* Base Section Styling */
+.blb-ns-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blb-ns-section-gray {
+  background-color: var(--blb-bg-light);
+  padding: 80px 20px;
+}
+
+.blb-ns-section-gray .blb-ns-section {
+  padding: 0;
+}
+
+/* Typography */
+.blb-ns-section h2 {
+  font-family: 'Messina Modern Light', sans-serif !important;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: var(--blb-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.blb-ns-section h3 {
+  font-family: 'Messina Modern Light', sans-serif !important;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--blb-primary);
+  margin-bottom: 0.75rem;
+}
+
+.blb-ns-section p {
+  font-family: 'Messina Modern Light', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--blb-body);
+  margin-bottom: 1.25rem;
+}
+
+.blb-ns-section-intro {
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.blb-ns-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  font-family: 'Messina Sans', 'Messina Modern Light', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid var(--blb-primary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.blb-ns-btn-primary {
+  background-color: var(--blb-primary);
+  color: var(--blb-white);
+}
+
+.blb-ns-btn-primary:hover {
+  background-color: var(--blb-white);
+  color: var(--blb-primary);
+}
+
+.blb-ns-btn-outline {
+  background-color: transparent;
+  color: var(--blb-primary);
+}
+
+.blb-ns-btn-outline:hover {
+  background-color: var(--blb-primary);
+  color: var(--blb-white);
+}
+
+/* New: Light Gray Button Style for Portfolio CTAs */
+.blb-ns-btn-light {
+  background-color: var(--blb-btn-gray);
+  color: var(--blb-white);
+  border: 2px solid var(--blb-btn-gray);
+}
+
+.blb-ns-btn-light:hover {
+  background-color: var(--blb-primary);
+  color: var(--blb-white);
+  border-color: var(--blb-primary);
+}
+
+/* =============================================
+   Section 1: Intro
+   ============================================= */
+.blb-ns-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.blb-ns-intro-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem;
+}
+
+.blb-ns-intro-content ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--blb-body);
+}
+
+.blb-ns-intro-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--blb-primary);
+  font-weight: bold;
+}
+
+.blb-ns-intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =============================================
+   Section 2: Services Grid
+   ============================================= */
+.blb-ns-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 3rem;
+}
+
+/* 5-card layout: 3 on top, 2 centered below */
+.blb-ns-services-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  margin-top: 3rem;
+}
+
+.blb-ns-services-grid-5 .blb-ns-service-card:nth-child(1),
+.blb-ns-services-grid-5 .blb-ns-service-card:nth-child(2),
+.blb-ns-services-grid-5 .blb-ns-service-card:nth-child(3) {
+  grid-column: span 2;
+}
+
+.blb-ns-services-grid-5 .blb-ns-service-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.blb-ns-services-grid-5 .blb-ns-service-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.blb-ns-service-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+
+.blb-ns-service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blb-ns-service-card:hover img {
+  transform: scale(1.05);
+}
+
+.blb-ns-service-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  padding: 30px 20px 20px;
+  color: var(--blb-white);
+}
+
+.blb-ns-service-card-overlay h3 {
+  color: var(--blb-white);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.blb-ns-service-card-overlay p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.blb-ns-service-card a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* =============================================
+   Section 3: Why Design-Build
+   ============================================= */
+.blb-ns-design-build {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.blb-ns-design-build-image img {
+  width: 100%;
+  height: auto;
+}
+
+.blb-ns-design-build-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 2rem 0;
+}
+
+.blb-ns-benefit {
+  padding: 20px;
+  background: var(--blb-white);
+  border-left: 3px solid var(--blb-primary);
+}
+
+.blb-ns-benefit h4 {
+  font-family: 'Messina Modern Light', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--blb-primary);
+  margin-bottom: 0.5rem;
+}
+
+.blb-ns-benefit p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: var(--blb-secondary);
+}
+
+/* =============================================
+   Section 4: Areas We Serve
+   ============================================= */
+.blb-ns-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 2.5rem;
+}
+
+.blb-ns-area-card {
+  background: var(--blb-white);
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease;
+}
+
+.blb-ns-area-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.blb-ns-area-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.blb-ns-area-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: var(--blb-secondary);
+}
+
+/* =============================================
+   Section 5: Portfolio Preview
+   ============================================= */
+.blb-ns-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 2.5rem 0;
+}
+
+.blb-ns-portfolio-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.blb-ns-portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blb-ns-portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.blb-ns-portfolio-cta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* =============================================
+   Section 6: Cost Factors
+   ============================================= */
+.blb-ns-cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.blb-ns-cost-table th,
+.blb-ns-cost-table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Messina Modern Light', sans-serif;
+}
+
+.blb-ns-cost-table th {
+  background: var(--blb-primary) !important;
+  color: var(--blb-white) !important;
+  font-weight: 400;
+}
+
+.blb-ns-cost-table td {
+  color: var(--blb-body) !important;
+  background: var(--blb-white);
+}
+
+.blb-ns-cost-table tr:nth-child(even) td {
+  background: var(--blb-bg-light);
+}
+
+.blb-ns-cost-disclaimer {
+  background: #fff8e6;
+  border-left: 4px solid #d4a005;
+  padding: 20px 25px;
+  margin: 2rem 0;
+}
+
+.blb-ns-cost-disclaimer p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* =============================================
+   Section 7: FAQs
+   ============================================= */
+.blb-ns-faq-list {
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+}
+
+.blb-ns-faq-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.blb-ns-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 25px 50px 25px 0;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Messina Modern Light', sans-serif;
+  font-size: 1.15rem;
+  color: var(--blb-primary);
+  position: relative;
+}
+
+.blb-ns-faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.blb-ns-faq-item.active .blb-ns-faq-question::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.blb-ns-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.blb-ns-faq-item.active .blb-ns-faq-answer {
+  max-height: 500px;
+  padding-bottom: 25px;
+}
+
+.blb-ns-faq-answer p {
+  margin-bottom: 0;
+}
+
+/* =============================================
+   Section 8: Final CTA
+   ============================================= */
+.blb-ns-final-cta {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blb-ns-final-cta h2 {
+  margin-bottom: 1rem;
+}
+
+.blb-ns-final-cta p {
+  margin-bottom: 2rem;
+}
+
+.blb-ns-trust-signals {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--blb-secondary);
+}
+
+/* =============================================
+   Responsive Styles
+   ============================================= */
+@media (max-width: 1024px) {
+  .blb-ns-services-grid,
+  .blb-ns-services-grid-5,
+  .blb-ns-areas-grid,
+  .blb-ns-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .blb-ns-services-grid-5 .blb-ns-service-card:nth-child(1),
+  .blb-ns-services-grid-5 .blb-ns-service-card:nth-child(2),
+  .blb-ns-services-grid-5 .blb-ns-service-card:nth-child(3),
+  .blb-ns-services-grid-5 .blb-ns-service-card:nth-child(4),
+  .blb-ns-services-grid-5 .blb-ns-service-card:nth-child(5) {
+    grid-column: auto;
+  }
+  
+  .blb-ns-intro,
+  .blb-ns-design-build {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .blb-ns-design-build-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .blb-ns-section {
+    padding: 60px 20px;
+  }
+  
+  .blb-ns-section h2 {
+    font-size: 2rem;
+  }
+  
+  .blb-ns-services-grid,
+  .blb-ns-services-grid-5,
+  .blb-ns-areas-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .blb-ns-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .blb-ns-design-build-benefits {
+    grid-template-columns: 1fr;
+  }
+  
+  .blb-ns-cost-table {
+    font-size: 0.9rem;
+  }
+  
+  .blb-ns-cost-table th,
+  .blb-ns-cost-table td {
+    padding: 12px 15px;
+  }
+  
+  .blb-ns-btn {
+    padding: 12px 30px;
+    text-align: center;
+  }
+  
+  .blb-ns-portfolio-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+<!-- =============================================
+     Section 1: Introduction
+     ============================================= -->
+<section class="blb-ns-section">
+  <div class="blb-ns-intro">
+    <div class="blb-ns-intro-content">
+      <h2>Full-Service Design-Build for North Shore Homeowners</h2>
+      <p>Since 2012, BLB Design / Build has helped families across the North Shore transform their homes through thoughtful design and expert project coordination. Based in Amesbury, we serve homeowners throughout Newburyport, West Newbury, Georgetown, Rowley, Boxford, and surrounding communities.</p>
+      <p>As a design-build firm, one team guides your project from initial concept through final walkthrough. No juggling architects, designers, and contractors. No finger-pointing when questions arise. Just clear communication and a single point of accountability.</p>
+      <ul>
+        <li>Kitchen and bathroom renovations</li>
+        <li>Home additions and expansions</li>
+        <li>Whole-home remodeling</li>
+        <li>Historic home renovations</li>
+      </ul>
+      <a href="https://blbdesignbuild.com/contact-us/" class="blb-ns-btn blb-ns-btn-primary">Tell Us About Your Project</a>
+    </div>
+    <div class="blb-ns-intro-image">
+      <img src="https://blbdesignbuild.com/wp-content/uploads/2024/09/Stratham_FREEBIRD-32.jpg" alt="Modern kitchen renovation by BLB Design / Build featuring white cabinetry and natural light">
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     Section 2: Services Grid
+     ============================================= -->
+<div class="blb-ns-section-gray">
+  <section class="blb-ns-section">
+    <div class="blb-ns-section-intro">
+      <h2>Remodeling Services for Every Vision</h2>
+      <p>Whether you're updating a single room or reimagining your entire home, our team coordinates every detail - from design and permitting to construction and final finishes.</p>
+    </div>
+    
+    <div class="blb-ns-services-grid-5">
+      <div class="blb-ns-service-card">
+        <a href="https://blbdesignbuild.com/kitchen-remodeling" aria-label="Learn more about kitchen remodeling"></a>
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2024/06/88HighStreet_FREEBIRD-32.jpg" alt="Custom kitchen remodel on the North Shore">
+        <div class="blb-ns-service-card-overlay">
+          <h3>Kitchen Remodeling</h3>
+          <p>Open layouts, custom cabinetry, and functional design for how you actually cook and gather.</p>
+        </div>
+      </div>
+      
+      <div class="blb-ns-service-card">
+        <a href="https://blbdesignbuild.com/north-shore-remodeling/bathroom-remodeling/" aria-label="Learn more about North Shore bathroom remodeling"></a>
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2025/09/4M4A0994-Enhanced-NR.jpg" alt="Luxury bathroom renovation with double vanity">
+        <div class="blb-ns-service-card-overlay">
+          <h3>Bathroom Remodeling</h3>
+          <p>Spa-inspired retreats with quality fixtures, thoughtful storage, and lasting finishes. <a href="https://blbdesignbuild.com/north-shore-remodeling/bathroom-remodeling/" style="color: #fff; text-decoration: underline; position: relative; z-index: 3;">Learn more →</a></p>
+        </div>
+      </div>
+      
+      <div class="blb-ns-service-card">
+        <a href="https://blbdesignbuild.com/additions/" aria-label="Learn more about home additions"></a>
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2024/01/314Haverhill_FREEBIRD-120.jpg" alt="Home addition with vaulted ceiling living space">
+        <div class="blb-ns-service-card-overlay">
+          <h3>Home Additions</h3>
+          <p>Second stories, in-law suites, and room expansions that blend seamlessly with your existing home. <a href="https://blbdesignbuild.com/north-shore-remodeling/second-story-additions/" style="color: #fff; text-decoration: underline; position: relative; z-index: 3;">Learn more →</a></p>
+        </div>
+      </div>
+      
+      <div class="blb-ns-service-card">
+        <a href="https://blbdesignbuild.com/whole-homes/" aria-label="Learn more about whole home remodeling"></a>
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2022/04/HighlandProject_Freebird-88.jpg" alt="Whole home exterior renovation">
+        <div class="blb-ns-service-card-overlay">
+          <h3>Whole Home Remodeling</h3>
+          <p>Complete transformations that reimagine flow, function, and character throughout your home.</p>
+        </div>
+      </div>
+      
+      <div class="blb-ns-service-card">
+        <a href="https://blbdesignbuild.com/north-shore-remodeling/historic-home-renovations/" aria-label="Learn more about historic home renovations"></a>
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2025/05/418-Main-St-49.jpg" alt="Historic Georgian home kitchen renovation with hand-hewn beams">
+        <div class="blb-ns-service-card-overlay">
+          <h3>Historic Home Renovations</h3>
+          <p>Modernize your Georgian, Federal, or Colonial home while preserving the character that makes it irreplaceable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =============================================
+     Section 3: Why Design-Build
+     ============================================= -->
+<section class="blb-ns-section">
+  <div class="blb-ns-design-build">
+    <div class="blb-ns-design-build-content">
+      <h2>Why Design-Build Works for North Shore Renovations</h2>
+      <p>Traditional remodeling means hiring an architect, then finding a builder, then hoping they communicate well enough to bring your vision to life. Design-build simplifies this by putting one team in charge of the entire process.</p>
+      <p>For North Shore homeowners - especially those with historic properties or complex additions - this integrated approach means fewer surprises, clearer timelines, and designs that are buildable from day one.</p>
+      
+      <div class="blb-ns-design-build-benefits">
+        <div class="blb-ns-benefit">
+          <h4>Single Point of Contact</h4>
+          <p>One team manages design, permits, and construction.</p>
+        </div>
+        <div class="blb-ns-benefit">
+          <h4>Realistic Budgets</h4>
+          <p>Construction expertise informs design decisions early.</p>
+        </div>
+        <div class="blb-ns-benefit">
+          <h4>Faster Timelines</h4>
+          <p>No handoff delays between separate firms.</p>
+        </div>
+        <div class="blb-ns-benefit">
+          <h4>Fewer Change Orders</h4>
+          <p>Buildability issues caught in design phase, not during construction.</p>
+        </div>
+      </div>
+      
+      <a href="https://blbdesignbuild.com/design-build-process/" class="blb-ns-btn blb-ns-btn-outline">Learn About Our Process</a>
+    </div>
+    <div class="blb-ns-design-build-image">
+      <img src="https://blbdesignbuild.com/wp-content/uploads/2024/12/December2024_BLB-11.jpg" alt="BLB Design / Build team outside Amesbury office">
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     Section 4: Areas We Serve
+     ============================================= -->
+<div class="blb-ns-section-gray">
+  <section class="blb-ns-section">
+    <div class="blb-ns-section-intro">
+      <h2>Communities We Serve Across the North Shore</h2>
+      <p>From coastal Newburyport to the rural character of West Newbury, we understand the unique considerations of North Shore homes - including historic preservation requirements, coastal building codes, and the architectural styles that define this region.</p>
+    </div>
+    
+    <div class="blb-ns-areas-grid">
+      <div class="blb-ns-area-card">
+        <h3>Newburyport</h3>
+        <p>Historic downtown homes and waterfront properties</p>
+      </div>
+      <div class="blb-ns-area-card">
+        <h3>Amesbury</h3>
+        <p>Our home base - Victorian and Colonial renovations</p>
+      </div>
+      <div class="blb-ns-area-card">
+        <h3>West Newbury</h3>
+        <p>Estate properties and rural character homes</p>
+      </div>
+      <div class="blb-ns-area-card">
+        <h3>Georgetown</h3>
+        <p>Antique homes and modern additions</p>
+      </div>
+      <div class="blb-ns-area-card">
+        <h3>Newbury</h3>
+        <p>Coastal properties and family homes</p>
+      </div>
+      <div class="blb-ns-area-card">
+        <h3>Rowley</h3>
+        <p>Historic farmhouses and contemporary updates</p>
+      </div>
+      <div class="blb-ns-area-card">
+        <h3>Boxford</h3>
+        <p>Custom homes in wooded settings</p>
+      </div>
+      <div class="blb-ns-area-card">
+        <h3>Surrounding Areas</h3>
+        <p>Serving communities within 30 miles of Amesbury</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =============================================
+     Section 5: Portfolio Preview
+     ============================================= -->
+<section class="blb-ns-section">
+  <div class="blb-ns-section-intro">
+    <h2>Recent North Shore Projects</h2>
+    <p>Every home tells a story. Here's a glimpse of how we've helped North Shore families create spaces that work for how they actually live.</p>
+  </div>
+  
+  <div class="blb-ns-portfolio-grid">
+    <div class="blb-ns-portfolio-item">
+      <img src="https://blbdesignbuild.com/wp-content/uploads/2024/09/Stratham_FREEBIRD-38.jpg" alt="Open concept kitchen renovation">
+    </div>
+    <div class="blb-ns-portfolio-item">
+      <img src="https://blbdesignbuild.com/wp-content/uploads/2025/09/4M4A0943-Enhanced-NR.jpg" alt="Modern bathroom with natural light">
+    </div>
+    <div class="blb-ns-portfolio-item">
+      <img src="https://blbdesignbuild.com/wp-content/uploads/2023/12/314Haverhill_FREEBIRD-129.jpg" alt="Living room addition with vaulted ceiling">
+    </div>
+    <div class="blb-ns-portfolio-item">
+      <img src="https://blbdesignbuild.com/wp-content/uploads/2025/03/Wilson_FREEBIRD-22.jpg" alt="Primary bedroom renovation">
+    </div>
+  </div>
+  
+  <div class="blb-ns-portfolio-cta">
+    <a href="https://blbdesignbuild.com/work/" class="blb-ns-btn blb-ns-btn-light">View Our Work</a>
+    <a href="https://blbdesignbuild.com/testimonials/" class="blb-ns-btn blb-ns-btn-light">Read Client Reviews</a>
+  </div>
+</section>
+
+<!-- =============================================
+     Section 6: Cost Factors
+     ============================================= -->
+<div class="blb-ns-section-gray">
+  <section class="blb-ns-section">
+    <div class="blb-ns-section-intro">
+      <h2>Understanding Home Remodeling Costs on the North Shore</h2>
+      <p>Every project is unique, and costs vary based on scope, materials, design complexity, and the specific conditions of your home. The ranges below offer general guidance based on regional projects - not a quote for your specific situation.</p>
+    </div>
+    
+    <table class="blb-ns-cost-table">
+      <thead>
+        <tr>
+          <th>Project Type</th>
+          <th>Typical Range</th>
+          <th>Key Cost Factors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Kitchen Remodeling</td>
+          <td>$30,000 - $80,000+</td>
+          <td>Layout changes, cabinetry quality, appliance selections, countertop materials</td>
+        </tr>
+        <tr>
+          <td>Bathroom Renovation</td>
+          <td>$20,000 - $40,000+</td>
+          <td>Fixture upgrades, tile selections, layout modifications, plumbing scope</td>
+        </tr>
+        <tr>
+          <td>Home Additions</td>
+          <td>$50,000 - $150,000+</td>
+          <td>Square footage, foundation requirements, structural complexity, finish level</td>
+        </tr>
+        <tr>
+          <td>Whole Home Remodeling</td>
+          <td>$100,000 - $300,000+</td>
+          <td>Project scope, systems upgrades, structural work, design complexity</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="blb-ns-cost-disclaimer">
+      <p><strong>Important:</strong> These ranges represent general market observations and should not be used for budgeting purposes. North Shore homes - particularly historic properties - often involve unique considerations that significantly impact costs. The only way to get accurate pricing for your project is through a detailed consultation and formal estimate. <a href="https://blbdesignbuild.com/contact-us/">Request a consultation</a> to discuss your specific project.</p>
+    </div>
+  </section>
+</div>
+
+<!-- =============================================
+     Section 7: FAQs
+     ============================================= -->
+<section class="blb-ns-section">
+  <h2 style="text-align: center;">Common Questions About North Shore Remodeling</h2>
+  
+  <div class="blb-ns-faq-list">
+    <div class="blb-ns-faq-item">
+      <button class="blb-ns-faq-question">What kitchen remodeling options are popular on the North Shore?</button>
+      <div class="blb-ns-faq-answer">
+        <p>North Shore homeowners often prioritize open-concept layouts that connect kitchens to living and dining areas - especially in older homes with more compartmentalized floor plans. Custom cabinetry, quality countertops like quartz or natural stone, and professional-grade appliances are common requests. Many clients also want to preserve architectural character while updating functionality, which requires thoughtful design that honors the home's history.</p>
+      </div>
+    </div>
+    
+    <div class="blb-ns-faq-item">
+      <button class="blb-ns-faq-question">What types of home additions work best for North Shore homes?</button>
+      <div class="blb-ns-faq-answer">
+        <p>The most common addition types we coordinate include second-story expansions, in-law suites for multigenerational living, first-floor primary suites for aging in place, and family room additions. Historic homes may have specific zoning or preservation requirements that influence what's possible. During our initial consultation, we discuss your goals and assess your property to identify the best approach for your situation.</p>
+      </div>
+    </div>
+    
+    <div class="blb-ns-faq-item">
+      <button class="blb-ns-faq-question">Do I need permits for home renovations in Massachusetts?</button>
+      <div class="blb-ns-faq-answer">
+        <p>Most structural changes, room additions, and significant renovations require building permits in Massachusetts. Requirements vary by municipality - Newburyport's historic district has different guidelines than Boxford, for example. As part of our design-build process, we handle all permitting and ensure your project meets local building codes and any historic preservation requirements that apply to your property.</p>
+      </div>
+    </div>
+    
+    <div class="blb-ns-faq-item">
+      <button class="blb-ns-faq-question">Why should I choose a design-build firm instead of hiring separately?</button>
+      <div class="blb-ns-faq-answer">
+        <p>With design-build, one team handles both design and construction from start to finish. This means better communication, fewer surprises, and designs that are buildable from day one. You have a single point of contact for questions and decisions rather than coordinating between an architect, designer, and general contractor. For complex projects like additions or whole-home renovations, this integrated approach typically results in smoother execution and more predictable timelines. <a href="https://blbdesignbuild.com/design-build-process/">Learn more about our process</a>.</p>
+      </div>
+    </div>
+    
+    <div class="blb-ns-faq-item">
+      <button class="blb-ns-faq-question">How long does a typical remodeling project take?</button>
+      <div class="blb-ns-faq-answer">
+        <p>Project timelines depend on scope, complexity, and permitting requirements. A bathroom renovation might take 4-8 weeks of active construction, while a kitchen remodel often runs 8-12 weeks. Home additions and whole-home renovations involve longer timelines due to structural work, inspections, and the coordination required. We provide a detailed timeline during the planning phase so you know what to expect. <a href="https://blbdesignbuild.com/contact-us/">Schedule a consultation</a> to discuss your project's specific timeline.</p>
+      </div>
+    </div>
+    
+    <div class="blb-ns-faq-item">
+      <button class="blb-ns-faq-question">What should I look for when choosing a remodeling contractor?</button>
+      <div class="blb-ns-faq-answer">
+        <p>Look for experience with projects similar to yours, proper licensing and insurance, a clear communication process, and references from past clients. For North Shore projects, familiarity with local building codes and historic preservation requirements matters. Ask about their process for handling unexpected issues - surprises happen in renovation, and how a contractor responds reveals a lot. Reading reviews and seeing completed work in person helps you understand what to expect.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     Section 8: Final CTA
+     ============================================= -->
+<div class="blb-ns-section-gray">
+  <section class="blb-ns-section">
+    <div class="blb-ns-final-cta">
+      <h2>Ready to Start Your North Shore Renovation?</h2>
+      <p>Whether you have detailed plans or just an idea of what you want, we're here to help you think through the possibilities. Tell us about your project and we'll schedule a time to talk.</p>
+      <a href="https://blbdesignbuild.com/contact-us/" class="blb-ns-btn blb-ns-btn-primary">Schedule a Consultation</a>
+      <p class="blb-ns-trust-signals">Based in Amesbury, MA • Serving the North Shore since 2012 • Five-Star Rated</p>
+    </div>
+  </section>
+</div>
+
+<!-- FAQ Accordion Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.blb-ns-faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.blb-ns-faq-question');
+    
+    question.addEventListener('click', function() {
+      // Close other open items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+        }
+      });
+      
+      // Toggle current item
+      item.classList.toggle('active');
+    });
+  });
+});
+</script>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://blbdesignbuild.com/#organization",
+  "name": "BLB Design / Build",
+  "image": "https://blbdesignbuild.com/wp-content/uploads/2024/12/December2024_BLB-11.jpg",
+  "url": "https://blbdesignbuild.com",
+  "telephone": "978-792-2880",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6 Chestnut Street, Suite 200",
+    "addressLocality": "Amesbury",
+    "addressRegion": "MA",
+    "postalCode": "01913",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.8584,
+    "longitude": -70.9300
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Newburyport",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Amesbury",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "West Newbury",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Georgetown",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Newbury",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Rowley",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Boxford",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Massachusetts"
+      }
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "priceRange": "$$$",
+  "sameAs": [
+    "https://www.facebook.com/blbdesignbuild",
+    "https://www.instagram.com/blbdesignbuild",
+    "https://www.houzz.com/professionals/design-build-firms/blb-design-build-pfvwus-pf~1955339837"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What kitchen remodeling options are popular on the North Shore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "North Shore homeowners often prioritize open-concept layouts that connect kitchens to living and dining areas - especially in older homes with more compartmentalized floor plans. Custom cabinetry, quality countertops like quartz or natural stone, and professional-grade appliances are common requests. Many clients also want to preserve architectural character while updating functionality, which requires thoughtful design that honors the home's history."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of home additions work best for North Shore homes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common addition types include second-story expansions, in-law suites for multigenerational living, first-floor primary suites for aging in place, and family room additions. Historic homes may have specific zoning or preservation requirements that influence what's possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need permits for home renovations in Massachusetts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most structural changes, room additions, and significant renovations require building permits in Massachusetts. Requirements vary by municipality - Newburyport's historic district has different guidelines than Boxford, for example. As part of the design-build process, permitting is handled to ensure projects meet local building codes and any historic preservation requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I choose a design-build firm instead of hiring separately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With design-build, one team handles both design and construction from start to finish. This means better communication, fewer surprises, and designs that are buildable from day one. You have a single point of contact for questions and decisions rather than coordinating between an architect, designer, and general contractor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical remodeling project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Project timelines depend on scope, complexity, and permitting requirements. A bathroom renovation might take 4-8 weeks of active construction, while a kitchen remodel often runs 8-12 weeks. Home additions and whole-home renovations involve longer timelines due to structural work, inspections, and the coordination required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I look for when choosing a remodeling contractor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Look for experience with projects similar to yours, proper licensing and insurance, a clear communication process, and references from past clients. For North Shore projects, familiarity with local building codes and historic preservation requirements matters. Ask about their process for handling unexpected issues - surprises happen in renovation, and how a contractor responds reveals a lot."
+      }
+    }
+  ]
+}
+</script>
+
+
+
