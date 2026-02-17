@@ -1,0 +1,1079 @@
+<!-- HERO OPTIONS (for Divi/Elementor hero section)
+     Option A: H1: "Andover MA Kitchen Design: Custom Kitchen Remodeling & Renovation" / H2: "Work with expert designers at our Rowley showroom - just 25 minutes from Andover."
+     Option B: H1: "Kitchen Design for Andover MA Homeowners" / H2: "Premium American-made cabinets, personalized design, and stress-free project planning."
+     Option C: H1: "Andover MA Kitchen Design & Custom Cabinetry" / H2: "See, touch, and compare cabinets in person. Your dream kitchen starts at our showroom."
+     CTAs: "Schedule Your Showroom Visit" → /contact/ | "Call 978-350-1040" → tel:+19783501040
+-->
+
+<style>
+/* ============================================
+   Seacoast Cabinet - Andover MA Location Page
+   Namespace: .sc-andover-*
+   ============================================ */
+
+:root {
+    --coastal-blue: #7d99ad;
+    --warm-gold: #b8905f;
+    --deep-charcoal: #2c3e50;
+    --pure-white: #ffffff;
+    --light-gray: #f8f8f8;
+    --medium-gray: #666666;
+    --warm-beige: #f5f2ed;
+    --success-green: #5cb85c;
+}
+
+/* Hero Section */
+.sc-andover-hero {
+    position: relative;
+    background: url('https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-52.webp') center center / cover no-repeat;
+    width: 100%;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sc-andover-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(44,62,80,0.5) 0%, rgba(44,62,80,0.72) 100%);
+    z-index: 1;
+}
+
+.sc-andover-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 80px 30px;
+    margin: 0 auto;
+}
+
+.sc-andover-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: var(--pure-white);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.sc-andover-hero h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--pure-white);
+    line-height: 1.55;
+    margin: 0 0 32px;
+    opacity: 0.93;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.sc-andover-hero .sc-andover-cta-primary {
+    font-size: 1.05rem;
+    padding: 15px 34px;
+}
+
+.sc-andover-hero .sc-andover-cta-secondary {
+    border-color: var(--pure-white);
+    color: var(--pure-white) !important;
+}
+
+.sc-andover-hero .sc-andover-cta-secondary:hover {
+    background-color: var(--pure-white);
+    color: var(--deep-charcoal) !important;
+}
+
+@media (max-width: 1024px) {
+    .sc-andover-hero {
+        min-height: 440px;
+    }
+
+    .sc-andover-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .sc-andover-hero-content {
+        padding: 60px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sc-andover-hero {
+        min-height: 400px;
+        background-position: center center;
+    }
+
+    .sc-andover-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .sc-andover-hero h2 {
+        font-size: 1rem;
+    }
+
+    .sc-andover-hero-content {
+        padding: 50px 20px;
+    }
+
+    .sc-andover-hero .sc-andover-cta-primary,
+    .sc-andover-hero .sc-andover-cta-secondary {
+        display: block;
+        text-align: center;
+        margin: 0 0 12px 0;
+    }
+}
+
+.sc-andover-wrap {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--deep-charcoal);
+    line-height: 1.7;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sc-andover-wrap h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--deep-charcoal);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.sc-andover-wrap h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--deep-charcoal);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.sc-andover-wrap p {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+}
+
+.sc-andover-wrap a {
+    color: var(--coastal-blue);
+    text-decoration: underline;
+}
+
+.sc-andover-wrap a:hover {
+    color: var(--warm-gold);
+}
+
+/* Trust Bar */
+.sc-andover-trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 40px;
+}
+
+.sc-andover-trust-item {
+    text-align: center;
+    flex: 0 1 200px;
+}
+
+.sc-andover-trust-item .trust-icon {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+}
+
+.sc-andover-trust-item strong {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--deep-charcoal);
+}
+
+.sc-andover-trust-item span {
+    font-size: 0.85rem;
+    color: var(--medium-gray);
+}
+
+/* Intro Section */
+.sc-andover-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.sc-andover-intro img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* CTA Buttons */
+.sc-andover-cta-primary {
+    display: inline-block;
+    background-color: var(--warm-gold);
+    color: var(--pure-white) !important;
+    padding: 14px 30px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-right: 12px;
+    margin-bottom: 10px;
+}
+
+.sc-andover-cta-primary:hover {
+    background-color: #a17a4f;
+    color: var(--pure-white) !important;
+}
+
+.sc-andover-cta-secondary {
+    display: inline-block;
+    border: 2px solid var(--coastal-blue);
+    color: var(--coastal-blue) !important;
+    padding: 12px 28px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.sc-andover-cta-secondary:hover {
+    background-color: var(--coastal-blue);
+    color: var(--pure-white) !important;
+}
+
+/* Services Grid */
+.sc-andover-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 30px 0 50px;
+}
+
+.sc-andover-service-card {
+    background: var(--light-gray);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sc-andover-service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.sc-andover-service-card .card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.sc-andover-service-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.sc-andover-service-card p {
+    font-size: 0.95rem;
+    color: var(--medium-gray);
+}
+
+/* Process Steps */
+.sc-andover-process {
+    background: var(--warm-beige);
+    padding: 50px 40px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.sc-andover-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.sc-andover-step {
+    text-align: center;
+    position: relative;
+}
+
+.sc-andover-step .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--coastal-blue);
+    color: var(--pure-white);
+    border-radius: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+}
+
+.sc-andover-step h3 {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.sc-andover-step p {
+    font-size: 0.92rem;
+    color: var(--medium-gray);
+}
+
+/* Two-Column Sections */
+.sc-andover-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.sc-andover-two-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.sc-andover-two-col.reverse img {
+    order: -1;
+}
+
+/* Cabinet Lines */
+.sc-andover-cabinet-lines {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 30px 0 50px;
+}
+
+.sc-andover-cabinet-card {
+    background: var(--pure-white);
+    border: 1px solid #e0e0e0;
+    padding: 28px;
+    border-radius: 8px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.sc-andover-cabinet-card:hover {
+    border-color: var(--coastal-blue);
+}
+
+.sc-andover-cabinet-card h3 {
+    color: var(--coastal-blue);
+}
+
+.sc-andover-cabinet-card p {
+    font-size: 0.95rem;
+    color: var(--medium-gray);
+}
+
+/* Reviews Section */
+.sc-andover-reviews {
+    background: var(--light-gray);
+    padding: 50px 40px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.sc-andover-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.sc-andover-review-card {
+    background: var(--pure-white);
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+}
+
+.sc-andover-review-stars {
+    color: var(--warm-gold);
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+}
+
+.sc-andover-review-card blockquote {
+    font-style: italic;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: var(--deep-charcoal);
+    margin: 0 0 16px 0;
+    padding: 0;
+    border: none;
+    flex-grow: 1;
+}
+
+.sc-andover-review-card .reviewer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--coastal-blue);
+}
+
+/* FAQ Section */
+.sc-andover-faq {
+    margin-bottom: 50px;
+}
+
+.sc-andover-faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+}
+
+.sc-andover-faq-item summary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--deep-charcoal);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sc-andover-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.sc-andover-faq-item summary::after {
+    content: "+";
+    font-size: 1.4rem;
+    color: var(--coastal-blue);
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.sc-andover-faq-item[open] summary::after {
+    content: "−";
+}
+
+.sc-andover-faq-item p {
+    margin-top: 12px;
+    font-size: 0.98rem;
+    color: var(--medium-gray);
+}
+
+/* Service Area */
+.sc-andover-service-area {
+    margin-bottom: 50px;
+}
+
+.sc-andover-area-towns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.sc-andover-area-towns a {
+    background: var(--light-gray);
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none !important;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--deep-charcoal) !important;
+    transition: background 0.3s ease;
+}
+
+.sc-andover-area-towns a:hover {
+    background: var(--coastal-blue);
+    color: var(--pure-white) !important;
+}
+
+.sc-andover-area-towns span {
+    background: var(--coastal-blue);
+    color: var(--pure-white);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+/* Map Section */
+.sc-andover-map {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.sc-andover-map iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Final CTA */
+.sc-andover-final-cta {
+    background: var(--coastal-blue);
+    color: var(--pure-white);
+    padding: 50px 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sc-andover-final-cta h2 {
+    color: var(--pure-white);
+    margin-bottom: 10px;
+}
+
+.sc-andover-final-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    opacity: 0.95;
+}
+
+.sc-andover-final-cta .sc-andover-cta-primary {
+    background-color: var(--warm-gold);
+    font-size: 1.1rem;
+    padding: 16px 36px;
+}
+
+.sc-andover-final-cta .phone-link {
+    color: var(--pure-white) !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-decoration: none !important;
+}
+
+.sc-andover-final-cta .phone-link:hover {
+    text-decoration: underline !important;
+}
+
+/* Gallery Grid */
+.sc-andover-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 24px 0 12px;
+}
+
+.sc-andover-gallery a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sc-andover-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.sc-andover-gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sc-andover-intro,
+    .sc-andover-two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .sc-andover-two-col.reverse img {
+        order: 0;
+    }
+
+    .sc-andover-services-grid,
+    .sc-andover-cabinet-lines,
+    .sc-andover-reviews-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sc-andover-steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sc-andover-wrap h2 {
+        font-size: 1.6rem;
+    }
+
+    .sc-andover-trust-bar {
+        gap: 20px;
+    }
+
+    .sc-andover-services-grid,
+    .sc-andover-cabinet-lines,
+    .sc-andover-reviews-grid,
+    .sc-andover-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .sc-andover-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .sc-andover-process,
+    .sc-andover-reviews,
+    .sc-andover-final-cta {
+        padding: 30px 20px;
+    }
+
+    .sc-andover-cta-primary,
+    .sc-andover-cta-secondary {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+    }
+}
+</style>
+
+<div class="sc-andover-hero">
+    <div class="sc-andover-hero-content">
+        <h1>Andover MA Kitchen Design: Custom Remodeling & Renovation Services</h1>
+        <h2>Work with expert designers at our Rowley showroom, just 25 minutes from Andover. See, touch, and compare American-made cabinets in person.</h2>
+        <a href="https://seacoastcabinetne.com/contact/" class="sc-andover-cta-primary">Schedule Your Showroom Visit</a>
+        <a href="tel:+19783501040" class="sc-andover-cta-secondary">Call 978-350-1040</a>
+    </div>
+</div>
+
+<div class="sc-andover-wrap">
+
+    <!-- Trust Bar -->
+    <div class="sc-andover-trust-bar">
+        <div class="sc-andover-trust-item">
+            <div class="trust-icon">★★★★★</div>
+            <strong>4.9 Google Rating</strong>
+            <span>Based on real reviews</span>
+        </div>
+        <div class="sc-andover-trust-item">
+            <div class="trust-icon">🇺🇸</div>
+            <strong>American-Made Cabinets</strong>
+            <span>Omega, Mantra & Homecrest</span>
+        </div>
+        <div class="sc-andover-trust-item">
+            <div class="trust-icon">📍</div>
+            <strong>Serving Andover & North Shore</strong>
+            <span>Rowley showroom, 25 min away</span>
+        </div>
+    </div>
+
+    <!-- Intro Section -->
+    <div class="sc-andover-intro">
+        <div>
+            <h2>What Custom Kitchen Remodeling Services Are Available for Andover MA Homeowners?</h2>
+            <p>If you're planning a kitchen remodel in Andover, MA, our <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Rowley showroom</a> is just a quick drive down Route 93 and Route 1. At Seacoast Cabinet, we work directly with Andover homeowners to plan kitchens that match their homes, their lifestyles, and their budgets.</p>
+            <p>Every project starts with a one-on-one consultation where you can see and touch real cabinet samples, compare finishes side by side, and talk through layout ideas with our <a href="https://seacoastcabinetne.com/design-services/">design team</a>. We carry <a href="https://seacoastcabinetne.com/cabinets/">Omega, Mantra, and Homecrest cabinets</a>, all American-made lines with extensive customization options and warranties that back every cabinet we sell.</p>
+            <p>Whether you're updating a colonial kitchen in Shawsheen Village or gutting and rebuilding in a newer Andover development, we'll help you make confident decisions from day one. See our full guide to <a href="https://seacoastcabinetne.com/kitchen-design/andover-ma/">kitchen design services in Andover</a>.</p>
+        </div>
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-69.webp" alt="Custom kitchen design with white cabinetry and modern finishes, completed for a homeowner near Andover MA by Seacoast Cabinet." width="600" height="400" loading="eager">
+    </div>
+
+    <!-- Services Cards -->
+    <h2>How Our Design Team Tailors Kitchen Renovations to Andover Homeowners</h2>
+    <p>We don't do cookie-cutter kitchens. Every Andover project gets individual attention from our designers, who understand the mix of home styles in the area, from classic New England colonials to contemporary builds. Here's what working with us looks like:</p>
+
+    <div class="sc-andover-services-grid">
+        <div class="sc-andover-service-card">
+            <div class="card-icon">🏠</div>
+            <h3>Personalized Design Consultation</h3>
+            <p>Meet one-on-one at our showroom. We'll review your space, discuss your style and budget, and walk you through real cabinet options you can see and feel.</p>
+        </div>
+        <div class="sc-andover-service-card">
+            <div class="card-icon">🎨</div>
+            <h3>Custom Finishes & Colors</h3>
+            <p>Choose from hundreds of door styles, finishes, and hardware options. Our cabinet lines offer custom color matching so your kitchen fits your vision exactly.</p>
+        </div>
+        <div class="sc-andover-service-card">
+            <div class="card-icon">📐</div>
+            <h3>Detailed Specs & Layouts</h3>
+            <p>We create accurate cabinet specifications and layouts your contractor can build from, reducing surprises and keeping your project on track.</p>
+        </div>
+    </div>
+
+    <!-- Two-Column: Cabinetry Options -->
+    <div class="sc-andover-two-col">
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-59.webp" alt="Close-up of soft-close cabinet drawer hardware at Seacoast Cabinet showroom, showing quality construction details for Andover MA kitchen projects." width="600" height="400" loading="lazy">
+        <div>
+            <h2>Which Cabinetry and Finish Options Define Custom Kitchen Designs?</h2>
+            <p>The cabinets you choose set the tone for your entire kitchen. At our showroom, Andover homeowners can compare three American-made cabinet lines side by side to find the right fit for their project.</p>
+            <p><strong>Omega Cabinetry</strong> gives you semi-custom flexibility with an extensive range of door styles, finishes, and modifications. If you need specific dimensions or unique features for your Andover home, Omega is often the right choice.</p>
+            <p><strong>Mantra Cabinets</strong> deliver quality construction with faster lead times and smart value. The selection of popular styles works beautifully in North Shore homes.</p>
+            <p><strong>Homecrest Cabinetry</strong> focuses on functional storage solutions with extensive customization. Ideal for maximizing space in kitchens where every inch counts.</p>
+            <p>All three lines feature soft-close doors and drawers, durable construction, and limited lifetime warranties. <a href="https://seacoastcabinetne.com/cabinets/">Explore all cabinet options here</a>.</p>
+        </div>
+    </div>
+
+    <!-- Process Section -->
+    <div class="sc-andover-process">
+        <h2>How Does the Kitchen Design Consultation Process Work?</h2>
+        <p>Our 4-step process takes you from initial ideas to a beautifully finished kitchen. Andover homeowners appreciate the clarity and communication at every stage.</p>
+
+        <div class="sc-andover-steps">
+            <div class="sc-andover-step">
+                <div class="step-number">1</div>
+                <h3>Showroom Visit</h3>
+                <p>Meet 1-on-1 at our <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Rowley showroom</a>, explore styles, and discuss your vision for your Andover kitchen.</p>
+            </div>
+            <div class="sc-andover-step">
+                <div class="step-number">2</div>
+                <h3>Design & Quote</h3>
+                <p>Our <a href="https://seacoastcabinetne.com/design-services/">design team</a> creates your layout with detailed cabinet specs and a transparent quote. No surprises.</p>
+            </div>
+            <div class="sc-andover-step">
+                <div class="step-number">3</div>
+                <h3>Order & Schedule</h3>
+                <p>Finalize your selections, place your order, and coordinate delivery timing with your project schedule.</p>
+            </div>
+            <div class="sc-andover-step">
+                <div class="step-number">4</div>
+                <h3>Delivery & Install</h3>
+                <p>Professional installation with a walkthrough to make sure everything looks and functions exactly as planned.</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 28px;">
+            <a href="https://seacoastcabinetne.com/our-process/" class="sc-andover-cta-primary">Learn More About Our Process</a>
+        </p>
+    </div>
+
+    <!-- Trends Section -->
+    <div class="sc-andover-two-col reverse">
+        <div>
+            <h2>What Are the Latest Kitchen Design Trends for Andover MA in 2026?</h2>
+            <p>Andover homeowners are making thoughtful updates that blend style with function. Here's what we're seeing in our most recent projects:</p>
+            <p><strong>Warm, layered color palettes</strong> are replacing all-white kitchens. Think warm grays, sage greens, and natural wood tones paired with white or off-white upper cabinets for a fresh, lived-in look.</p>
+            <p><strong>Large kitchen islands</strong> continue to anchor open-concept layouts, often with dedicated prep sinks, built-in storage, and seating for the whole family.</p>
+            <p><strong>Smart storage solutions</strong> like pull-out pantry organizers, deep drawers, and custom inserts are a priority for Andover families who use their kitchens daily.</p>
+            <p><strong>Quartz and natural stone countertops</strong> remain the top choice for durability and low maintenance. Our team coordinates <a href="https://seacoastcabinetne.com/countertops/">countertop selection</a> alongside your cabinetry so everything works together.</p>
+        </div>
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/08/Seacoast-Photos-93.webp" alt="Completed kitchen with large island, custom cabinetry, and modern finishes designed by Seacoast Cabinet for a home near Andover MA." width="600" height="400" loading="lazy">
+    </div>
+
+    <!-- Budget Section -->
+    <div class="sc-andover-two-col">
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-37.webp" alt="Kitchen renovation featuring American-made cabinets and quality finishes, representing Seacoast Cabinet's work for Andover MA area homeowners." width="600" height="400" loading="lazy">
+        <div>
+            <h2>How Can Andover Homeowners Budget Effectively for Kitchen Renovation?</h2>
+            <p>Kitchen renovations in the Andover area typically range from $25,000 to $80,000+ depending on scope, materials, and layout changes. Cabinetry usually accounts for about 30-40% of the total project budget.</p>
+            <p>Our team helps you understand the real costs upfront so there are no surprises mid-project. During your consultation, we'll walk through options at different price points and explain what drives the differences in quality, features, and lead times.</p>
+            <p>Timeline also affects your budget. Our American-made cabinet lines typically ship in 4-8 weeks, which means fewer delays and more predictable scheduling for your contractor. Use our <a href="https://seacoastcabinetne.com/budget-planner/">budget planner</a> to start mapping out your project costs.</p>
+            <p>We believe in transparency. You'll always know what you're paying for and why, before any decisions are finalized.</p>
+        </div>
+    </div>
+
+    <!-- Bathroom Section -->
+    <h2>Bathroom Cabinetry for Andover Homes</h2>
+    <p>Planning a bathroom renovation alongside your kitchen? We design and supply bathroom cabinetry with the same attention to detail and quality materials. Andover homeowners often bundle kitchen and bathroom projects to streamline the process and keep a consistent look throughout their home.</p>
+
+    <div class="sc-andover-gallery">
+        <a href="https://seacoastcabinetne.com/inspiration-gallery/">
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-25.webp" alt="Finished bathroom vanity with custom cabinetry designed by Seacoast Cabinet, available to Andover MA homeowners." loading="lazy">
+        </a>
+        <a href="https://seacoastcabinetne.com/inspiration-gallery/">
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-72.webp" alt="Bathroom with double sink vanity and custom cabinetry by Seacoast Cabinet for North Shore homeowners." loading="lazy">
+        </a>
+    </div>
+    <p style="text-align: center; margin-top: 10px;"><a href="https://seacoastcabinetne.com/inspiration-gallery/">Browse our full Inspiration Gallery</a></p>
+
+    <!-- Reviews Section -->
+    <div class="sc-andover-reviews">
+        <h2 style="text-align: center;">What Homeowners Say About Working With Us</h2>
+        <div class="sc-andover-reviews-grid">
+            <div class="sc-andover-review-card">
+                <div>
+                    <div class="sc-andover-review-stars">★★★★★</div>
+                    <blockquote>"Frank is an absolute pleasure to work with and is a master at his craft. People make the process and Frank has no shortcomings in delivering top tier products and service."</blockquote>
+                </div>
+                <div class="reviewer">— Rob T.</div>
+            </div>
+            <div class="sc-andover-review-card">
+                <div>
+                    <div class="sc-andover-review-stars">★★★★★</div>
+                    <blockquote>"We've done lots of projects around our house, but none have been as smooth and worry-free as the kitchen we did with Frank and his team. They have a perfect combination of product line, design talent and customer focus to ensure that our project came out perfectly. A great company!"</blockquote>
+                </div>
+                <div class="reviewer">— Ed K.</div>
+            </div>
+            <div class="sc-andover-review-card">
+                <div>
+                    <div class="sc-andover-review-stars">★★★★★</div>
+                    <blockquote>"Seacoast Cabinets provided exceptional service and quality customer service. I'm very pleased with the outcome of my kitchen."</blockquote>
+                </div>
+                <div class="reviewer">— Maria A.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Permits Section -->
+    <div class="sc-andover-two-col">
+        <div>
+            <h2>What Local Permits and Regulations Affect Kitchen Remodeling in Andover MA?</h2>
+            <p>Kitchen renovations in Andover often require building permits, especially when the project involves structural changes, electrical work, plumbing modifications, or changes to the home's footprint. The Town of Andover's Building Department handles permits and inspections for residential projects.</p>
+            <p>If your project involves moving walls, relocating plumbing, or updating electrical panels, your contractor will typically pull the necessary permits. Cosmetic updates like replacing cabinets and countertops on the existing layout usually don't require permits, but it's always worth confirming with the town.</p>
+            <p>Planning for permits early helps avoid scheduling delays. Our team works with Andover contractors regularly and can help you understand how the permitting process fits into your overall project timeline.</p>
+        </div>
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-69.webp" alt="Completed kitchen project showcasing Seacoast Cabinet's quality work available to Andover MA homeowners." width="600" height="400" loading="lazy">
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="sc-andover-process" style="background: var(--light-gray);">
+        <h2 style="text-align: center;">Why Andover Homeowners Choose Seacoast Cabinet</h2>
+        <div class="sc-andover-services-grid" style="margin-bottom: 0;">
+            <div class="sc-andover-service-card" style="background: var(--pure-white);">
+                <div class="card-icon">🤝</div>
+                <h3>Family-Owned & Local</h3>
+                <p>We're a North Shore business that treats every customer like a neighbor. You'll work with the same team from first visit to final walkthrough.</p>
+            </div>
+            <div class="sc-andover-service-card" style="background: var(--pure-white);">
+                <div class="card-icon">🇺🇸</div>
+                <h3>American-Made Quality</h3>
+                <p>All our cabinet lines are manufactured in the USA. Quality construction, extensive warranties, and no concerns about overseas shipping delays or tariffs.</p>
+            </div>
+            <div class="sc-andover-service-card" style="background: var(--pure-white);">
+                <div class="card-icon">✅</div>
+                <h3>Transparent Process</h3>
+                <p>Clear pricing, honest timelines, and detailed specs. You'll know exactly what you're getting and when, before you commit.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="sc-andover-faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <details class="sc-andover-faq-item">
+            <summary>Do you serve Andover, MA?</summary>
+            <p>Yes. While our showroom is in Rowley, we regularly work with Andover homeowners. The drive from Andover to our showroom is about 25 minutes via Route 93 and Route 1. Many Andover residents visit us for their kitchen design consultations and appreciate the personalized experience our showroom offers.</p>
+        </details>
+
+        <details class="sc-andover-faq-item">
+            <summary>What cabinet brands do you carry?</summary>
+            <p>We feature Omega, Mantra, and Homecrest cabinets, all American-made lines that balance custom options, quality, and value. You can see all three brands on display at our Rowley showroom. <a href="https://seacoastcabinetne.com/cabinets/">Explore all available styles</a>.</p>
+        </details>
+
+        <details class="sc-andover-faq-item">
+            <summary>How long does a typical kitchen cabinet project take?</summary>
+            <p>From your initial consultation to cabinet delivery, most projects take 6-10 weeks. Lead times depend on the cabinet line and level of customization. Our team gives you a clear timeline during the design phase so you and your contractor can plan accordingly.</p>
+        </details>
+
+        <details class="sc-andover-faq-item">
+            <summary>Do you work with contractors?</summary>
+            <p>Absolutely. We partner with contractors throughout the North Shore, including those working in Andover. We provide detailed cabinet specs and coordinated delivery schedules that make installation smooth for your builder.</p>
+        </details>
+
+        <details class="sc-andover-faq-item">
+            <summary>Can you help with countertops too?</summary>
+            <p>Yes. We supply and coordinate countertops as part of your project, including quartz, granite, and Cambria surfaces. <a href="https://seacoastcabinetne.com/countertops/">Learn more about our countertop options</a>.</p>
+        </details>
+
+        <details class="sc-andover-faq-item">
+            <summary>Do you offer Saturday appointments?</summary>
+            <p>Saturday visits are available by appointment. Use our <a href="https://seacoastcabinetne.com/contact/">contact page</a> to request a time that works for you, or call us at <a href="tel:+19783501040">978-350-1040</a>.</p>
+        </details>
+
+        <details class="sc-andover-faq-item">
+            <summary>How do I start planning my Andover kitchen remodel?</summary>
+            <p>Call <a href="tel:+19783501040">978-350-1040</a> or <a href="https://seacoastcabinetne.com/contact/">request a showroom visit</a>. Bringing photos and rough dimensions of your current kitchen helps, but we can guide you through everything you need during your visit. <a href="https://seacoastcabinetne.com/kitchen-design/andover-ma/">Learn more about kitchen design in Andover</a>.</p>
+        </details>
+    </div>
+
+    <!-- Service Area -->
+    <div class="sc-andover-service-area">
+        <h2>Serving Andover & Surrounding Communities</h2>
+        <p>From our Rowley showroom on Route 1, we serve homeowners throughout the Merrimack Valley and North Shore. Our central location makes it easy for customers across the region to visit, see cabinets in person, and work directly with our design team.</p>
+        <div class="sc-andover-area-towns">
+            <a href="https://seacoastcabinetne.com/kitchen-design/andover-ma/" style="background: var(--coastal-blue); color: var(--pure-white) !important;">Andover</a>
+            <a href="https://seacoastcabinetne.com/kitchen-cabinets/newburyport-ma/">Newburyport</a>
+            <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Rowley</a>
+            <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/">Haverhill</a>
+            <a href="https://seacoastcabinetne.com/kitchen-cabinets-topsfield/">Topsfield</a>
+            <a href="https://seacoastcabinetne.com/ipswich/">Ipswich</a>
+            <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Georgetown</a>
+            <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">North Andover</a>
+            <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Boxford</a>
+            <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Salem, NH</a>
+        </div>
+    </div>
+
+    <!-- Map -->
+    <div class="sc-andover-map">
+        <h2>Andover, MA</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187811.72258919512!2d-71.33098553454197!3d42.649525883276084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e308597f9a4cf5%3A0x28f59c5c00d57256!2sAndover%2C%20MA!5e0!3m2!1sen!2sus!4v1770654481814!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="sc-andover-final-cta">
+        <h2>Ready to Start Your Andover Kitchen Project?</h2>
+        <p>Visit our Rowley showroom to see cabinets in person and work with our design team.</p>
+        <a href="https://seacoastcabinetne.com/contact/" class="sc-andover-cta-primary">Schedule Your Showroom Visit</a>
+        <p style="margin-top: 16px; margin-bottom: 0;">Or call us at <a href="tel:+19783501040" class="phone-link">978-350-1040</a></p>
+    </div>
+
+</div>
+
+<!-- Schema Markup: LocalBusiness + Service + FAQ -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "LocalBusiness",
+            "@id": "https://seacoastcabinetne.com/#localbusiness",
+            "name": "Seacoast Cabinet",
+            "description": "Family-owned kitchen cabinet showroom in Rowley, MA serving Andover and the North Shore. Featuring American-made Omega, Mantra, and Homecrest cabinets with personalized design consultations.",
+            "telephone": "+1-978-350-1040",
+            "email": "inquiry@seacoastcabinetne.com",
+            "url": "https://seacoastcabinetne.com",
+            "image": "https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-69.webp",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "300 Newburyport Turnpike, Unit 3",
+                "addressLocality": "Rowley",
+                "addressRegion": "MA",
+                "postalCode": "01969",
+                "addressCountry": "US"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 42.7284,
+                "longitude": -70.8787
+            },
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "17:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Saturday",
+                    "opens": "10:00",
+                    "closes": "16:00"
+                }
+            ],
+            "areaServed": [
+                {"@type": "City", "name": "Andover", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+                {"@type": "City", "name": "North Andover", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+                {"@type": "City", "name": "Rowley", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+                {"@type": "City", "name": "Newburyport", "containedInPlace": {"@type": "State", "name": "Massachusetts"}}
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "ratingCount": "50"
+            }
+        },
+        {
+            "@type": "Service",
+            "name": "Kitchen Design and Remodeling Services in Andover MA",
+            "description": "Custom kitchen design consultation, American-made cabinetry supply, countertop coordination, and project planning for Andover MA homeowners.",
+            "provider": {
+                "@id": "https://seacoastcabinetne.com/#localbusiness"
+            },
+            "areaServed": {
+                "@type": "City",
+                "name": "Andover",
+                "containedInPlace": {
+                    "@type": "State",
+                    "name": "Massachusetts"
+                }
+            },
+            "serviceType": "Kitchen Design and Remodeling"
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Do you serve Andover, MA?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. While our showroom is in Rowley, we regularly work with Andover homeowners. The drive from Andover to our showroom is about 25 minutes via Route 93 and Route 1."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What cabinet brands do you carry?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We feature Omega, Mantra, and Homecrest cabinets, all American-made lines that balance custom options, quality, and value. You can see all three brands on display at our Rowley showroom."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long does a typical kitchen cabinet project take?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "From your initial consultation to cabinet delivery, most projects take 6-10 weeks. Lead times depend on the cabinet line and level of customization."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you work with contractors?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely. We partner with contractors throughout the North Shore, including those working in Andover. We provide detailed cabinet specs and coordinated delivery schedules that make installation smooth for your builder."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you help with countertops too?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We supply and coordinate countertops as part of your project, including quartz, granite, and Cambria surfaces."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer Saturday appointments?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Saturday visits are available by appointment. Use our contact page to request a time that works for you, or call us at 978-350-1040."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I start planning my Andover kitchen remodel?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Call 978-350-1040 or request a showroom visit on our contact page. Bringing photos and rough dimensions of your current kitchen helps, but we can guide you through everything you need during your visit."
+                    }
+                }
+            ]
+        }
+    ]
+}
+</script>
