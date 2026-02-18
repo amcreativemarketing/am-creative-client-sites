@@ -1,0 +1,1382 @@
+<!-- 
+  =====================================================
+  AM CREATIVE - BRADFORD CONSTRUCTION CASE STUDY PAGE
+  =====================================================
+  
+  Testimonial / case study page for Bradford Construction Management
+  Goes below Elementor hero, above footer
+  
+  HERO COPY OPTIONS (For your Elementor hero)
+  
+  OPTION A - Results-Led (Recommended):
+  H1: Contractor Marketing Case Study: From Chaos to $2-3M Pipeline
+  H2: How Bradford Construction became the North Shore's go-to premium ADU builder - 
+      with a marketing system that actually books jobs.
+  CTAs: "Get Your Growth Plan" → /contact/ | "See Our Plans" → /pricing/
+  
+  OPTION B - Testimonial-Led:
+  H1: "I Don't Think We Could've Done It Without Them"
+  H2: Bradford Construction went from burned-out on marketing to booked through 
+      spring and looking into summer. A contractor marketing success story.
+  CTAs: "Start Your Growth Engine" → /contact/ | "See Our Plans" → /pricing/
+  
+  OPTION C - Authority Angle:
+  H1: How a Construction Company Built Market Leadership with One Marketing System
+  H2: Bradford Construction had a great reputation but limited online reach. 18 months later, industry 
+      pros call them "the Mercedes of ADUs." This is their story.
+  CTAs: "Get Similar Results" → /contact/ | "See Our Plans" → /pricing/
+  
+  NOTE: All HTML below starts at H2 level to work under your Elementor H1.
+  ===================================================== -->
+
+<style>
+  /* ===== GLOBAL / RESET ===== */
+  .amc-cs {
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+
+  .amc-cs *, .amc-cs *::before, .amc-cs *::after {
+    box-sizing: border-box;
+  }
+
+  /* ===== VIDEO TESTIMONIAL SECTION ===== */
+  .amc-cs-video {
+    background: #1a2b4a !important;
+    padding: 80px 20px !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .amc-cs-video::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(184, 151, 106, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .amc-cs-video-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 60px !important;
+    align-items: center !important;
+  }
+
+  .amc-cs-video-player {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  .amc-cs-video-player video {
+    width: 100% !important;
+    display: block !important;
+    border-radius: 16px !important;
+  }
+
+  .amc-cs-video-content {
+    color: #ffffff !important;
+  }
+
+  .amc-cs-eyebrow {
+    color: #b8976a !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2.5px !important;
+    margin-bottom: 16px !important;
+    display: block !important;
+  }
+
+  .amc-cs-video-content h2 {
+    color: #ffffff !important;
+    font-size: clamp(26px, 3.5vw, 38px) !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    margin: 0 0 24px 0 !important;
+  }
+
+  .amc-cs-video-quote {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    font-style: italic !important;
+    margin: 0 0 24px 0 !important;
+    padding-left: 20px !important;
+    border-left: 3px solid #b8976a !important;
+  }
+
+  .amc-cs-video-attribution {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 15px !important;
+    margin: 0 !important;
+  }
+
+  .amc-cs-video-attribution strong {
+    color: #ffffff !important;
+  }
+
+  /* ===== KEY METRICS SECTION ===== */
+  .amc-cs-metrics {
+    background: #ffffff !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-cs-metrics-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-cs-section-header {
+    text-align: center !important;
+    margin-bottom: 48px !important;
+  }
+
+  .amc-cs-section-header h2 {
+    color: #1a2b4a !important;
+    font-size: clamp(28px, 4vw, 42px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin: 0 0 16px 0 !important;
+  }
+
+  .amc-cs-section-subhead {
+    color: #555555 !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-cs-metrics-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .amc-cs-metric-card {
+    background: #f8f9fa !important;
+    border-radius: 16px !important;
+    padding: 36px 24px !important;
+    text-align: center !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  }
+
+  .amc-cs-metric-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .amc-cs-metric-number {
+    color: #b8976a !important;
+    font-size: clamp(32px, 4vw, 48px) !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    margin: 0 0 8px 0 !important;
+    display: block !important;
+  }
+
+  .amc-cs-metric-label {
+    color: #1a2b4a !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    margin: 0 0 4px 0 !important;
+    display: block !important;
+  }
+
+  .amc-cs-metric-detail {
+    color: #4a5568 !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  /* ===== CHALLENGE SECTION ===== */
+  .amc-cs-challenge {
+    background: #f8f9fa !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-cs-challenge-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 60px !important;
+    align-items: center !important;
+  }
+
+  .amc-cs-challenge-content h2 {
+    color: #1a2b4a !important;
+    font-size: clamp(28px, 4vw, 38px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .amc-cs-text {
+    color: #4a5568 !important;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .amc-cs-challenge-quote {
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 28px 32px !important;
+    border-left: 4px solid #b8976a !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+    margin: 24px 0 0 0 !important;
+  }
+
+  .amc-cs-challenge-quote p {
+    color: #1a2b4a !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    font-style: italic !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  .amc-cs-challenge-quote cite {
+    color: #b8976a !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    font-style: normal !important;
+  }
+
+  .amc-cs-challenge-image {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .amc-cs-challenge-image img {
+    width: 100% !important;
+    display: block !important;
+    border-radius: 16px !important;
+    object-fit: cover !important;
+  }
+
+  .amc-cs-pain-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 20px 0 0 0 !important;
+  }
+
+  .amc-cs-pain-list li {
+    color: #4a5568 !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    padding: 8px 0 8px 28px !important;
+    position: relative;
+  }
+
+  .amc-cs-pain-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: #b8976a;
+    border-radius: 50%;
+  }
+
+  /* ===== STRATEGY SECTION ===== */
+  .amc-cs-strategy {
+    background: #ffffff !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-cs-strategy-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-cs-timeline {
+    position: relative;
+    margin-top: 48px;
+  }
+
+  .amc-cs-timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #b8976a, rgba(184, 151, 106, 0.2));
+  }
+
+  .amc-cs-phase {
+    position: relative;
+    padding-left: 72px;
+    margin-bottom: 48px;
+  }
+
+  .amc-cs-phase:last-child {
+    margin-bottom: 0;
+  }
+
+  .amc-cs-phase-marker {
+    position: absolute;
+    left: 12px;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, #b8976a 0%, #a07d4e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    z-index: 1;
+  }
+
+  .amc-cs-phase-time {
+    color: #b8976a !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    margin: 0 0 8px 0 !important;
+    display: block !important;
+  }
+
+  .amc-cs-phase h3 {
+    color: #1a2b4a !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  .amc-cs-phase .amc-cs-text {
+    margin: 0 !important;
+  }
+
+  /* ===== RESULTS SECTION ===== */
+  .amc-cs-results {
+    background: #1a2b4a !important;
+    padding: 80px 20px !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .amc-cs-results::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(184, 151, 106, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .amc-cs-results-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-cs-results .amc-cs-section-header h2 {
+    color: #ffffff !important;
+  }
+
+  .amc-cs-results .amc-cs-section-subhead {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  .amc-cs-results-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+
+  .amc-cs-result-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    padding: 32px !important;
+    transition: transform 0.3s ease, background 0.3s ease !important;
+  }
+
+  .amc-cs-result-card:hover {
+    transform: translateY(-4px) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .amc-cs-result-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(184, 151, 106, 0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .amc-cs-result-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+    color: #b8976a !important;
+  }
+
+  .amc-cs-result-card h3 {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+  }
+
+  .amc-cs-result-card p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+  }
+
+  .amc-cs-result-highlight {
+    color: #b8976a !important;
+    font-weight: 600 !important;
+  }
+
+  /* ===== PROOF POINTS / SOCIAL PROOF SECTION ===== */
+  .amc-cs-proof {
+    background: #f8f9fa !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-cs-proof-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-cs-proof-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 24px !important;
+    margin-top: 48px !important;
+  }
+
+  .amc-cs-proof-card {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 36px 28px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    text-align: center !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  }
+
+  .amc-cs-proof-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .amc-cs-proof-card .amc-cs-proof-quote-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(184, 151, 106, 0.15) 0%, rgba(184, 151, 106, 0.08) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+  }
+
+  .amc-cs-proof-card .amc-cs-proof-quote-icon svg {
+    width: 22px !important;
+    height: 22px !important;
+    color: #b8976a !important;
+  }
+
+  .amc-cs-proof-card blockquote {
+    color: #1a2b4a !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    font-style: italic !important;
+    margin: 0 0 16px 0 !important;
+  }
+
+  .amc-cs-proof-card cite {
+    color: #b8976a !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-style: normal !important;
+  }
+
+  /* ===== GALLERY SECTION ===== */
+  .amc-cs-gallery {
+    background: #ffffff !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-cs-gallery-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-cs-gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+    margin-top: 48px !important;
+  }
+
+  .amc-cs-gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .amc-cs-gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .amc-cs-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* ===== SERVICES PROVIDED SECTION ===== */
+  .amc-cs-services {
+    background: #f8f9fa !important;
+    padding: 80px 20px !important;
+  }
+
+  .amc-cs-services-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  .amc-cs-services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    margin-top: 48px !important;
+  }
+
+  .amc-cs-service-card {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 32px 28px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  }
+
+  .amc-cs-service-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .amc-cs-service-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(184, 151, 106, 0.15) 0%, rgba(184, 151, 106, 0.08) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .amc-cs-service-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+    color: #b8976a !important;
+  }
+
+  .amc-cs-service-card h3 {
+    color: #1a2b4a !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+  }
+
+  .amc-cs-service-card p {
+    color: #4a5568 !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+  }
+
+  .amc-cs-service-link {
+    color: #b8976a !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(184, 151, 106, 0.3) !important;
+    transition: border-color 0.2s ease !important;
+  }
+
+  .amc-cs-service-link:hover {
+    border-bottom-color: #b8976a !important;
+  }
+
+  /* ===== CTA SECTION ===== */
+  .amc-cs-cta {
+    background: linear-gradient(135deg, #1a2b4a 0%, #0f1b32 100%) !important;
+    padding: 100px 20px !important;
+    text-align: center !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .amc-cs-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(184, 151, 106, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .amc-cs-cta-container {
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  .amc-cs-cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(184, 151, 106, 0.15);
+    color: #b8976a;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+  }
+
+  .amc-cs-cta-badge svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .amc-cs-cta h2 {
+    color: #ffffff !important;
+    font-size: clamp(28px, 4vw, 42px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin: 0 0 16px 0 !important;
+  }
+
+  .amc-cs-cta-subhead {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    margin: 0 0 36px 0 !important;
+  }
+
+  .amc-cs-cta-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .amc-cs-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 18px 36px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    border: none !important;
+    font-family: inherit !important;
+  }
+
+  .amc-cs-btn-gold {
+    background: linear-gradient(135deg, #b8976a 0%, #a07d4e 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(184, 151, 106, 0.35) !important;
+  }
+
+  .amc-cs-btn-gold:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 30px rgba(184, 151, 106, 0.45) !important;
+  }
+
+  .amc-cs-btn-outline {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  }
+
+  .amc-cs-btn-outline:hover {
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .amc-cs-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  /* ===== CLIENT INFO BAR (Navy - flows into video section) ===== */
+  .amc-cs-client-bar {
+    background: #1a2b4a !important;
+    padding: 32px 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .amc-cs-client-bar-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+  }
+
+  .amc-cs-client-info {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  .amc-cs-client-logo {
+    width: 56px !important;
+    height: 56px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  .amc-cs-client-logo img {
+    width: 44px !important;
+    height: auto !important;
+  }
+
+  .amc-cs-client-bar .amc-cs-client-name,
+  .amc-cs-client-bar p.amc-cs-client-name,
+  .elementor-widget-container .amc-cs-client-name {
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin: 0 0 2px 0 !important;
+  }
+
+  .amc-cs-client-bar .amc-cs-client-detail,
+  .amc-cs-client-bar p.amc-cs-client-detail,
+  .elementor-widget-container .amc-cs-client-detail {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
+
+  .amc-cs-client-tags {
+    display: flex !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .amc-cs-tag {
+    background: rgba(184, 151, 106, 0.2) !important;
+    color: #b8976a !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 6px 14px !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(184, 151, 106, 0.25) !important;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .amc-cs-metrics-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .amc-cs-gallery-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .amc-cs-services-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .amc-cs-video,
+    .amc-cs-metrics,
+    .amc-cs-challenge,
+    .amc-cs-strategy,
+    .amc-cs-results,
+    .amc-cs-proof,
+    .amc-cs-gallery,
+    .amc-cs-services {
+      padding: 60px 20px !important;
+    }
+
+    .amc-cs-cta {
+      padding: 70px 20px !important;
+    }
+
+    .amc-cs-video-container,
+    .amc-cs-challenge-container {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+
+    .amc-cs-metrics-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 16px !important;
+    }
+
+    .amc-cs-results-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .amc-cs-proof-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .amc-cs-services-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .amc-cs-gallery-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .amc-cs-timeline::before {
+      left: 18px;
+    }
+
+    .amc-cs-phase {
+      padding-left: 52px;
+    }
+
+    .amc-cs-phase-marker {
+      left: 2px;
+      width: 30px;
+      height: 30px;
+      font-size: 13px;
+    }
+
+    .amc-cs-client-bar-container {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+
+    .amc-cs-cta-buttons {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+
+    .amc-cs-btn {
+      width: 100% !important;
+      max-width: 320px !important;
+      justify-content: center !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .amc-cs-metrics-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    .amc-cs-metric-card {
+      padding: 24px 16px !important;
+    }
+
+    .amc-cs-metric-number {
+      font-size: 28px !important;
+    }
+  }
+
+  /* ===== NUCLEAR COLOR FORCING (Elementor Override) ===== */
+  /* 
+     Elementor can inject color via .elementor-widget-container, 
+     .elementor-heading-title, inline styles, etc.
+     We force EVERY heading/text element explicitly per section.
+  */
+
+  /* --- LIGHT BACKGROUND SECTIONS: Navy text --- */
+  .amc-cs-metrics h2,
+  .amc-cs-challenge h2,
+  .amc-cs-proof h2,
+  .amc-cs-gallery h2,
+  .amc-cs-services h2,
+  .amc-cs .amc-cs-section-header h2,
+  .amc-cs-metrics .amc-cs-section-header h2,
+  .amc-cs-challenge .amc-cs-section-header h2,
+  .amc-cs-proof .amc-cs-section-header h2,
+  .amc-cs-gallery .amc-cs-section-header h2,
+  .amc-cs-services .amc-cs-section-header h2,
+  .elementor-widget-container .amc-cs-metrics h2,
+  .elementor-widget-container .amc-cs-challenge h2,
+  .elementor-widget-container .amc-cs-proof h2,
+  .elementor-widget-container .amc-cs-gallery h2,
+  .elementor-widget-container .amc-cs-services h2,
+  .elementor-element .amc-cs-metrics h2,
+  .elementor-element .amc-cs-challenge h2,
+  .elementor-element .amc-cs-proof h2,
+  .elementor-element .amc-cs-gallery h2,
+  .elementor-element .amc-cs-services h2 {
+    color: #1a2b4a !important;
+  }
+
+  .amc-cs-metrics h3,
+  .amc-cs-challenge h3,
+  .amc-cs-proof h3,
+  .amc-cs-gallery h3,
+  .amc-cs-strategy h3,
+  .elementor-widget-container .amc-cs-strategy h3 {
+    color: #1a2b4a !important;
+  }
+
+  .amc-cs-metrics p,
+  .amc-cs-challenge p,
+  .amc-cs-proof p,
+  .amc-cs-gallery p,
+  .amc-cs-strategy p {
+    color: #4a5568 !important;
+  }
+
+  /* --- NAVY BACKGROUND SECTIONS: White text --- */
+  .amc-cs-client-bar h2,
+  .amc-cs-client-bar h3,
+  .amc-cs-client-bar p,
+  .amc-cs-video h2,
+  .amc-cs-video h3,
+  .amc-cs-video p,
+  .amc-cs-results h2,
+  .amc-cs-results h3,
+  .amc-cs-results p,
+  .amc-cs-cta h2,
+  .amc-cs-cta h3,
+  .amc-cs-cta p,
+  .amc-cs-results .amc-cs-section-header h2,
+  .amc-cs-cta .amc-cs-section-header h2,
+  .elementor-widget-container .amc-cs-video h2,
+  .elementor-widget-container .amc-cs-results h2,
+  .elementor-widget-container .amc-cs-cta h2,
+  .elementor-widget-container .amc-cs-results .amc-cs-section-header h2,
+  .elementor-element .amc-cs-video h2,
+  .elementor-element .amc-cs-results h2,
+  .elementor-element .amc-cs-cta h2 {
+    color: #ffffff !important;
+  }
+
+  .amc-cs-results .amc-cs-section-subhead,
+  .amc-cs-cta .amc-cs-cta-subhead,
+  .elementor-widget-container .amc-cs-results .amc-cs-section-subhead {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  /* --- STRATEGY SECTION (light bg, navy headline) --- */
+  .amc-cs-strategy h2,
+  .amc-cs-strategy .amc-cs-section-header h2,
+  .elementor-widget-container .amc-cs-strategy h2,
+  .elementor-element .amc-cs-strategy h2 {
+    color: #1a2b4a !important;
+  }
+
+  /* --- EYEBROWS: Always gold --- */
+  .amc-cs .amc-cs-eyebrow,
+  .amc-cs-video .amc-cs-eyebrow,
+  .amc-cs-metrics .amc-cs-eyebrow,
+  .amc-cs-challenge .amc-cs-eyebrow,
+  .amc-cs-strategy .amc-cs-eyebrow,
+  .amc-cs-results .amc-cs-eyebrow,
+  .amc-cs-proof .amc-cs-eyebrow,
+  .amc-cs-gallery .amc-cs-eyebrow,
+  .amc-cs-services .amc-cs-eyebrow,
+  .amc-cs-cta .amc-cs-eyebrow,
+  .elementor-widget-container .amc-cs-eyebrow {
+    color: #b8976a !important;
+  }
+
+  /* --- SERVICE CARDS (light bg cards inside light section) --- */
+  .amc-cs-services .amc-cs-service-card h3,
+  .elementor-widget-container .amc-cs-service-card h3 {
+    color: #1a2b4a !important;
+  }
+
+  .amc-cs-services .amc-cs-service-card p,
+  .elementor-widget-container .amc-cs-service-card p {
+    color: #4a5568 !important;
+  }
+</style>
+
+<div class="amc-cs">
+
+  <!-- ===== CLIENT INFO BAR ===== -->
+  <div class="amc-cs-client-bar">
+    <div class="amc-cs-client-bar-container">
+      <div class="amc-cs-client-info">
+        <div class="amc-cs-client-logo">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/cropped-Untitled-design-150x150.webp" alt="Bradford Construction Management logo" width="44" height="44" loading="lazy">
+        </div>
+        <div>
+          <p class="amc-cs-client-name">Bradford Construction Management</p>
+          <p class="amc-cs-client-detail">Design-Build Contractor | Haverhill, MA | North Shore &amp; Southern NH</p>
+        </div>
+      </div>
+      <div class="amc-cs-client-tags">
+        <span class="amc-cs-tag">SEO</span>
+        <span class="amc-cs-tag">Social Media</span>
+        <span class="amc-cs-tag">Paid Ads</span>
+        <span class="amc-cs-tag">Lead Automation</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== VIDEO TESTIMONIAL SECTION ===== -->
+  <div class="amc-cs-video">
+    <div class="amc-cs-video-container">
+      <div class="amc-cs-video-player">
+        <video controls preload="metadata" poster="">
+          <source src="https://amcreativemktg.com/wp-content/uploads/2026/02/BCM-Testimonial.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="amc-cs-video-content">
+        <span class="amc-cs-eyebrow">Client Testimonial</span>
+        <h2>"I Don't Think We Could've Done It Without Them"</h2>
+        <div class="amc-cs-video-quote">
+          "Being able to partner with somebody and have that kind of lifted off my shoulders has been huge. We're already booked through Spring, we're looking into summer."
+        </div>
+        <p class="amc-cs-video-attribution">
+          <strong>Rick White</strong>, Owner - Bradford Construction Management
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== KEY METRICS SECTION ===== -->
+  <div class="amc-cs-metrics">
+    <div class="amc-cs-metrics-container">
+      <div class="amc-cs-section-header">
+        <span class="amc-cs-eyebrow">The Results</span>
+        <h2>Contractor Marketing Results That Actually Matter</h2>
+        <p class="amc-cs-section-subhead">Real outcomes from a real marketing system, not vanity metrics in a PDF nobody reads.</p>
+      </div>
+      <div class="amc-cs-metrics-grid">
+        <div class="amc-cs-metric-card">
+          <span class="amc-cs-metric-number">$2-3M</span>
+          <span class="amc-cs-metric-label">Active Pipeline</span>
+          <span class="amc-cs-metric-detail">Projects in various stages of qualification and close</span>
+        </div>
+        <div class="amc-cs-metric-card">
+          <span class="amc-cs-metric-number">$800K+</span>
+          <span class="amc-cs-metric-label">Sold in Q4 2025</span>
+          <span class="amc-cs-metric-detail">50% of the full year's revenue signed in a single quarter</span>
+        </div>
+        <div class="amc-cs-metric-card">
+          <span class="amc-cs-metric-number">3</span>
+          <span class="amc-cs-metric-label">Leads in One Day</span>
+          <span class="amc-cs-metric-detail">Three organic ADU leads totaling $1M+ in potential projects</span>
+        </div>
+        <div class="amc-cs-metric-card">
+          <span class="amc-cs-metric-number">$300K+</span>
+          <span class="amc-cs-metric-label">From AI Search</span>
+          <span class="amc-cs-metric-detail">Single project won through AI search visibility optimization</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== THE CHALLENGE SECTION ===== -->
+  <div class="amc-cs-challenge">
+    <div class="amc-cs-challenge-container">
+      <div class="amc-cs-challenge-content">
+        <span class="amc-cs-eyebrow">The Challenge</span>
+        <h2>Great at Building. Ready to Grow Beyond Referrals.</h2>
+        <p class="amc-cs-text">Bradford Construction had built an excellent reputation through word of mouth. Rick White and his team delivered premium renovation and ADU work across the North Shore. But referrals alone had a ceiling - and their online presence wasn't doing the heavy lifting it needed to.</p>
+        <p class="amc-cs-text">Previous marketing attempts hadn't delivered. TV campaigns brought minimal results. Print magazine ads weren't moving the needle. Multiple agencies came and went, delivering reports but never the phone calls that actually matter.</p>
+        <ul class="amc-cs-pain-list">
+          <li>Traditional advertising that wasn't generating real leads</li>
+          <li>Past agencies that delivered reports, not booked jobs</li>
+          <li>ADU program existed but wasn't converting online</li>
+          <li>Strong reputation offline, but limited visibility in search results</li>
+          <li>No cohesive digital presence or lead generation system</li>
+        </ul>
+        <div class="amc-cs-challenge-quote">
+          <p>"I'd tried TV, print magazines - spent real money and didn't see results. They call me now and I'm like, don't ever talk to me again."</p>
+          <cite>Rick White, Owner</cite>
+        </div>
+      </div>
+      <div class="amc-cs-challenge-image">
+        <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-33-1.webp" alt="Bradford Construction kitchen renovation project showcasing premium craftsmanship" width="550" height="400" loading="lazy" style="aspect-ratio: 550/400; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STRATEGY SECTION ===== -->
+  <div class="amc-cs-strategy">
+    <div class="amc-cs-strategy-container">
+      <div class="amc-cs-section-header">
+        <span class="amc-cs-eyebrow">The Strategy</span>
+        <h2>A Marketing System Built for a Growing Contractor</h2>
+        <p class="amc-cs-section-subhead">We didn't throw money at ads and hope. We built an integrated marketing system designed to generate qualified leads and position Bradford as the premium choice.</p>
+      </div>
+
+      <div class="amc-cs-timeline">
+        <!-- Phase 1 -->
+        <div class="amc-cs-phase">
+          <div class="amc-cs-phase-marker">1</div>
+          <span class="amc-cs-phase-time">Months 1-2: Foundation</span>
+          <h3>Know the Customer, Nail the Message</h3>
+          <p class="amc-cs-text">We started with deep Voice of Customer research, not ad spend. We identified Bradford's unique positioning - "The only builder who never leaves" - combining construction excellence with lifetime home services. From there we built a new conversion-focused website to give every growth strategy the best possible starting position, set up Google Business Profile, and implemented AM Connect for automated lead management.</p>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="amc-cs-phase">
+          <div class="amc-cs-phase-marker">2</div>
+          <span class="amc-cs-phase-time">Months 3-6: ADU Market Domination</span>
+          <h3>Own a Niche Before Going Wide</h3>
+          <p class="amc-cs-text">We built a comprehensive ADU landing page and digital lookbook, then drove traffic through targeted Meta ads. The messaging centered on "Dignity of Proximity" for aging-in-place families. AM Connect automated follow-up so no lead sat unanswered. The ADU page quickly became the 2nd most visited page on the entire site.</p>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="amc-cs-phase">
+          <div class="amc-cs-phase-marker">3</div>
+          <span class="amc-cs-phase-time">Months 6-12: Content &amp; Authority</span>
+          <h3>Make Them the Expert Everyone Talks About</h3>
+          <p class="amc-cs-text">We built a content engine around active job sites, educational posts, and client success stories. Social media went from sporadic to strategic - 8-10 posts per month positioning Rick as the North Shore ADU authority. Combined with local SEO optimization, Bradford started showing up everywhere their ideal clients looked.</p>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="amc-cs-phase">
+          <div class="amc-cs-phase-marker">4</div>
+          <span class="amc-cs-phase-time">Month 12+: Scale &amp; Expand</span>
+          <h3>Pour Fuel on What's Working</h3>
+          <p class="amc-cs-text">With the system proven, Rick made the call to invest more aggressively into marketing for 2026 - a major shift in mindset. We expanded to Google Ads, began geographic expansion into NH and Western Mass, and refined lead qualification to focus exclusively on premium projects. Industry pros now approach Rick unprompted, telling him they see Bradford as the go-to for premium ADU work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DETAILED RESULTS SECTION ===== -->
+  <div class="amc-cs-results">
+    <div class="amc-cs-results-container">
+      <div class="amc-cs-section-header">
+        <span class="amc-cs-eyebrow">What Changed</span>
+        <h2>From "Marketing Doesn't Work" to Market Leader</h2>
+        <p class="amc-cs-section-subhead">The transformation wasn't just in the numbers. It was in how Rick thinks about marketing as a growth engine for his business.</p>
+      </div>
+
+      <div class="amc-cs-results-grid">
+        <div class="amc-cs-result-card">
+          <div class="amc-cs-result-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <h3>Pipeline Explosion</h3>
+          <p>January 2026 alone brought <span class="amc-cs-result-highlight">3 organic ADU leads in a single day</span> - over $1M in potential projects. The pipeline grew to $2-3M for the quarter, with leads coming from expanded geographic territories across Massachusetts and into New Hampshire.</p>
+        </div>
+
+        <div class="amc-cs-result-card">
+          <div class="amc-cs-result-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3>Authority Positioning</h3>
+          <p>Bradford went from limited online exposure to industry-recognized. Prospects now tell Rick they view him as <span class="amc-cs-result-highlight">"the Mercedes of ADUs."</span> Other contractors and industry professionals approach him unprompted, saying they see Bradford as the go-to for premium ADU construction.</p>
+        </div>
+
+        <div class="amc-cs-result-card">
+          <div class="amc-cs-result-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3>Revenue Transformation</h3>
+          <p>Q4 2025 produced <span class="amc-cs-result-highlight">$800K+ in signed projects</span> - more than 50% of the entire prior year's revenue in a single quarter. Multiple $300K+ ADU projects moved into the pipeline, with the team booked through Spring 2026 and scheduling into summer.</p>
+        </div>
+
+        <div class="amc-cs-result-card">
+          <div class="amc-cs-result-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3>AI Search Win</h3>
+          <p>A prospect who was <span class="amc-cs-result-highlight">turned away by every other contractor</span> found Bradford through AI-powered search. That single lead converted into a $300K+ ADU project. Our optimization for AI search visibility now drives qualified leads that competitors can't even access.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROOF POINTS SECTION ===== -->
+  <div class="amc-cs-proof">
+    <div class="amc-cs-proof-container">
+      <div class="amc-cs-section-header">
+        <span class="amc-cs-eyebrow">In Their Words</span>
+        <h2>What the Market is Saying</h2>
+      </div>
+
+      <div class="amc-cs-proof-grid">
+        <div class="amc-cs-proof-card">
+          <div class="amc-cs-proof-quote-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          </div>
+          <blockquote>"I heard you guys are like the Mercedes of ADUs."</blockquote>
+          <cite>Prospect Feedback</cite>
+        </div>
+
+        <div class="amc-cs-proof-card">
+          <div class="amc-cs-proof-quote-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          </div>
+          <blockquote>"Don't even bother sending anybody else, we want them."</blockquote>
+          <cite>Referral Partner</cite>
+        </div>
+
+        <div class="amc-cs-proof-card">
+          <div class="amc-cs-proof-quote-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          </div>
+          <blockquote>"I don't think we could've done it without them. We're booked through Spring, looking into Summer."</blockquote>
+          <cite>Rick White, Owner</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROJECT GALLERY ===== -->
+  <div class="amc-cs-gallery">
+    <div class="amc-cs-gallery-container">
+      <div class="amc-cs-section-header">
+        <span class="amc-cs-eyebrow">Their Work</span>
+        <h2>The Kind of Projects Marketing Should Attract</h2>
+        <p class="amc-cs-section-subhead">Bradford delivers premium renovation and ADU work across the North Shore. Our job is making sure the right homeowners find them.</p>
+      </div>
+      <div class="amc-cs-gallery-grid">
+        <div class="amc-cs-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-32-1.webp" alt="Open concept kitchen and dining renovation by Bradford Construction" width="300" height="300" loading="lazy">
+        </div>
+        <div class="amc-cs-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-17-1.webp" alt="Open staircase renovation with natural light by Bradford Construction" width="300" height="300" loading="lazy">
+        </div>
+        <div class="amc-cs-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-35-1.webp" alt="Custom kitchen with tin ceiling detail by Bradford Construction" width="300" height="300" loading="lazy">
+        </div>
+        <div class="amc-cs-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-34-1.webp" alt="Dining room with reclaimed glass chandelier by Bradford Construction" width="300" height="300" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES PROVIDED ===== -->
+  <div class="amc-cs-services">
+    <div class="amc-cs-services-container">
+      <div class="amc-cs-section-header">
+        <span class="amc-cs-eyebrow">What We Delivered</span>
+        <h2>Full-Service Contractor Marketing, One Integrated System</h2>
+        <p class="amc-cs-section-subhead">Bradford's results didn't come from any single tactic. They came from a marketing system where every piece reinforces the others.</p>
+      </div>
+
+      <div class="amc-cs-services-grid">
+        <div class="amc-cs-service-card">
+          <div class="amc-cs-service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <h3>SEO &amp; Local Search</h3>
+          <p>Google Business Profile optimization, local search positioning, and AI search visibility that drove a single $300K+ project from a lead no competitor could reach. <a href="/seo/" class="amc-cs-service-link">Learn about our SEO services</a></p>
+        </div>
+
+        <div class="amc-cs-service-card">
+          <div class="amc-cs-service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+          </div>
+          <h3>Paid Advertising</h3>
+          <p>Targeted Meta ads driving traffic to a high-converting ADU landing page and lookbook. Campaign budgets scaled as ROI proved out, generating premium leads that closed into six-figure projects. <a href="/paid-advertising/" class="amc-cs-service-link">Learn about our ad management</a></p>
+        </div>
+
+        <div class="amc-cs-service-card">
+          <div class="amc-cs-service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
+          </div>
+          <h3>Social Media</h3>
+          <p>Strategic content from active job sites, educational posts, and client success stories. Rick went from "I don't post as much as I should" to socials that were "skyrocketing." <a href="/social-media/" class="amc-cs-service-link">Learn about social media management</a></p>
+        </div>
+
+        <div class="amc-cs-service-card">
+          <div class="amc-cs-service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3>Website &amp; Landing Pages</h3>
+          <p>Full website build to establish the foundation, plus an ADU landing page that became the 2nd most visited page on the entire site. Strategic updates, lookbook downloads, and conversion-focused design that turns visitors into leads. <a href="/web-design/" class="amc-cs-service-link">Learn about our web design</a></p>
+        </div>
+
+        <div class="amc-cs-service-card">
+          <div class="amc-cs-service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3>Lead Automation</h3>
+          <p>AM Connect CRM with automated SMS/email follow-up, nurture sequences, and lead qualification. No lead sits unanswered - the system responds instantly and routes qualified prospects to the team.</p>
+        </div>
+
+        <div class="amc-cs-service-card">
+          <div class="amc-cs-service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3>Strategy &amp; Positioning</h3>
+          <p>Voice of Customer research, competitive analysis, and messaging development that identified Bradford's "Builder for Life" positioning. Monthly strategy calls and performance reviews keep everything on track.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA SECTION ===== -->
+  <div class="amc-cs-cta">
+    <div class="amc-cs-cta-container">
+      <div class="amc-cs-cta-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        Ready to Grow?
+      </div>
+      <h2>Your Reputation Deserves Marketing That Actually Works</h2>
+      <p class="amc-cs-cta-subhead">If you're a contractor or home service pro tired of wasting money on marketing that doesn't bring in jobs, let's talk about building a system that does.</p>
+      <div class="amc-cs-cta-buttons">
+        <a href="/contact/" class="amc-cs-btn amc-cs-btn-gold">
+          Get Your Growth Plan
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="/pricing/" class="amc-cs-btn amc-cs-btn-outline">
+          See Our Plans
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DISCLAIMER ===== -->
+  <div style="background: #f8f9fa; padding: 24px 20px; text-align: center;">
+    <p style="color: #999; font-size: 13px; line-height: 1.6; max-width: 700px; margin: 0 auto;">Results are specific to this client's market, services, and execution. Individual outcomes vary based on market conditions, competition, budget, and commitment to the marketing process.</p>
+  </div>
+
+</div>

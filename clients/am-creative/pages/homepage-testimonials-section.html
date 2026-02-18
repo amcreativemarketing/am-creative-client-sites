@@ -1,0 +1,397 @@
+<!-- =====================================================
+     AM CREATIVE HOMEPAGE - TESTIMONIALS SECTION
+     Replaces existing Elementor testimonial carousel
+     
+     PLACEMENT: Drop into Elementor as HTML widget
+     where the current "Results From Real Clients" section lives.
+     ===================================================== -->
+
+<style>
+/* ===== TESTIMONIALS SECTION ===== */
+.amc-home-testimonials {
+  background: #f8f9fa;
+  padding: 100px 0;
+  position: relative;
+}
+
+.amc-home-testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.amc-home-testimonials-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.amc-home-testimonials-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #b8976a;
+  margin-bottom: 16px;
+}
+
+.amc-home-testimonials-headline {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a2b4a;
+  margin: 0 0 20px 0;
+}
+
+.amc-home-testimonials-subhead {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== TESTIMONIAL GRID ===== */
+.amc-home-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.amc-home-testimonials-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 808px;
+  margin: 0 auto;
+}
+
+/* ===== BASE CARD ===== */
+.amc-home-testimonial-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.amc-home-testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== STARS ===== */
+.amc-home-testimonial-stars {
+  color: #b8976a;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+/* ===== QUOTE TEXT ===== */
+.amc-home-testimonial-quote {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #4a5568;
+  flex: 1;
+  margin: 0 0 24px 0;
+}
+
+/* ===== ATTRIBUTION ===== */
+.amc-home-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.amc-home-testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a2b4a 0%, #2a3f6a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b8976a;
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.amc-home-testimonial-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.amc-home-testimonial-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a2b4a;
+  line-height: 1.3;
+}
+
+.amc-home-testimonial-role {
+  font-size: 13px;
+  color: #718096;
+  line-height: 1.4;
+}
+
+/* ===== RICK'S FEATURED CARD ===== */
+.amc-home-testimonial-card--featured {
+  border: 2px solid rgba(184, 151, 106, 0.3);
+  position: relative;
+}
+
+.amc-home-testimonial-card--featured::before {
+  content: 'FEATURED CASE STUDY';
+  position: absolute;
+  top: -12px;
+  left: 32px;
+  background: linear-gradient(135deg, #b8976a 0%, #a07d4e 100%);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px 14px;
+  border-radius: 4px;
+}
+
+.amc-home-testimonial-case-study-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #b8976a;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(184, 151, 106, 0.15);
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.amc-home-testimonial-case-study-link:hover {
+  gap: 12px;
+  color: #a07d4e;
+}
+
+.amc-home-testimonial-case-study-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.amc-home-testimonial-case-study-metrics {
+  display: flex;
+  gap: 20px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.amc-home-testimonial-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.amc-home-testimonial-metric-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2b4a;
+  line-height: 1.2;
+}
+
+.amc-home-testimonial-metric-label {
+  font-size: 11px;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== ELEMENTOR COLOR OVERRIDES ===== */
+.amc-home-testimonials h2.amc-home-testimonials-headline,
+.amc-home-testimonials .amc-home-testimonials-headline,
+.elementor-widget-container .amc-home-testimonials-headline,
+.elementor-element .amc-home-testimonials-headline {
+  color: #1a2b4a !important;
+}
+
+.amc-home-testimonials .amc-home-testimonials-eyebrow,
+.elementor-widget-container .amc-home-testimonials-eyebrow,
+.elementor-element .amc-home-testimonials-eyebrow {
+  color: #b8976a !important;
+}
+
+.amc-home-testimonials .amc-home-testimonial-name,
+.elementor-widget-container .amc-home-testimonial-name,
+.elementor-element .amc-home-testimonial-name {
+  color: #1a2b4a !important;
+}
+
+.amc-home-testimonials .amc-home-testimonial-quote,
+.elementor-widget-container .amc-home-testimonial-quote,
+.elementor-element .amc-home-testimonial-quote {
+  color: #4a5568 !important;
+}
+
+.amc-home-testimonials .amc-home-testimonials-subhead,
+.elementor-widget-container .amc-home-testimonials-subhead,
+.elementor-element .amc-home-testimonials-subhead {
+  color: #4a5568 !important;
+}
+
+.amc-home-testimonials .amc-home-testimonial-case-study-link,
+.elementor-widget-container .amc-home-testimonial-case-study-link {
+  color: #b8976a !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .amc-home-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .amc-home-testimonials-row-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .amc-home-testimonials {
+    padding: 70px 0;
+  }
+  .amc-home-testimonials-container {
+    padding: 0 24px;
+  }
+  .amc-home-testimonials-header {
+    margin-bottom: 40px;
+  }
+  .amc-home-testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .amc-home-testimonials-row-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .amc-home-testimonial-card {
+    padding: 28px 24px;
+  }
+  .amc-home-testimonial-case-study-metrics {
+    gap: 16px;
+  }
+}
+</style>
+
+<section class="amc-home-testimonials">
+  <div class="amc-home-testimonials-container">
+
+    <!-- Section Header -->
+    <div class="amc-home-testimonials-header">
+      <div class="amc-home-testimonials-eyebrow">Testimonials</div>
+      <h2 class="amc-home-testimonials-headline">Results From Real Clients</h2>
+      <p class="amc-home-testimonials-subhead">Hear from the home service pros and business owners we work with every day.</p>
+    </div>
+
+    <!-- Row 1: 3 Cards -->
+    <div class="amc-home-testimonials-grid">
+
+      <!-- Frank LeBlanc -->
+      <div class="amc-home-testimonial-card">
+        <div class="amc-home-testimonial-stars">★★★★★</div>
+        <p class="amc-home-testimonial-quote">"In just three months their SEO work helped us get more organic traffic and improve over the previous marketing agency we used. Their team also creates content and runs our socials which helps our reputation online and drives more locals to our showroom. No long contracts, always a quick reply, and the results speak for themselves. If you're a home-service business tired of juggling marketing vendors, stop and call Jon's crew."</p>
+        <div class="amc-home-testimonial-author">
+          <div class="amc-home-testimonial-avatar">FL</div>
+          <div class="amc-home-testimonial-info">
+            <span class="amc-home-testimonial-name">Frank LeBlanc</span>
+            <span class="amc-home-testimonial-role">Kitchen Design Showroom</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Amesbury Business -->
+      <div class="amc-home-testimonial-card">
+        <div class="amc-home-testimonial-stars">★★★★★</div>
+        <p class="amc-home-testimonial-quote">"We hired Jon to help with our Facebook &amp; Instagram ad campaigns. With very little direction, Jon was able to figure out what we wanted, create ads with photography he took, build cohesive campaigns, and provide recommendations based on his expertise. He handled it all soup to nuts for us, which was EXACTLY what we needed. Really felt like a partnership, or extension of our team."</p>
+        <div class="amc-home-testimonial-author">
+          <div class="amc-home-testimonial-avatar">AB</div>
+          <div class="amc-home-testimonial-info">
+            <span class="amc-home-testimonial-name">Amesbury Business</span>
+            <span class="amc-home-testimonial-role">Local Business Owner</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Christopher Cummings -->
+      <div class="amc-home-testimonial-card">
+        <div class="amc-home-testimonial-stars">★★★★★</div>
+        <p class="amc-home-testimonial-quote">"I'm delighted to share my exceptional experience working with Jon Almas. His expertise in creating captivating video content significantly enhanced our social media pages and website. Jon's professionalism, creativity, and commitment to delivering outstanding results make him a valuable asset. I highly recommend Jon for anyone seeking top-notch video production services."</p>
+        <div class="amc-home-testimonial-author">
+          <div class="amc-home-testimonial-avatar">CC</div>
+          <div class="amc-home-testimonial-info">
+            <span class="amc-home-testimonial-name">Christopher Cummings</span>
+            <span class="amc-home-testimonial-role">NH Business Owner</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Row 2: 2 Cards Centered -->
+    <div class="amc-home-testimonials-row-2">
+
+      <!-- Fabiana G -->
+      <div class="amc-home-testimonial-card">
+        <div class="amc-home-testimonial-stars">★★★★★</div>
+        <p class="amc-home-testimonial-quote">"Jon and the team at AM Creative created outstanding ads and videos that captured exactly what I envisioned. The results were immediate - more engagement, more inquiries, and a real connection with my audience."</p>
+        <div class="amc-home-testimonial-author">
+          <div class="amc-home-testimonial-avatar">FG</div>
+          <div class="amc-home-testimonial-info">
+            <span class="amc-home-testimonial-name">Fabiana G.</span>
+            <span class="amc-home-testimonial-role">Local Business Owner</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rick W - FEATURED with Case Study Link -->
+      <div class="amc-home-testimonial-card amc-home-testimonial-card--featured">
+        <div class="amc-home-testimonial-stars">★★★★★</div>
+        <p class="amc-home-testimonial-quote">"Jon has been amazing in helping us scale our business. Always available for a phone call when advice is needed as well. As a whole AM Creative is instrumental in the process of us growing our business and company standards."</p>
+        <div class="amc-home-testimonial-author">
+          <div class="amc-home-testimonial-info">
+            <span class="amc-home-testimonial-name">Rick W.</span>
+            <span class="amc-home-testimonial-role">MA Design-Build Firm</span>
+          </div>
+        </div>
+        <!-- Case Study Metrics -->
+        <div class="amc-home-testimonial-case-study-metrics">
+          <div class="amc-home-testimonial-metric">
+            <span class="amc-home-testimonial-metric-value">$2-3M</span>
+            <span class="amc-home-testimonial-metric-label">Pipeline Built</span>
+          </div>
+          <div class="amc-home-testimonial-metric">
+            <span class="amc-home-testimonial-metric-value">$800K+</span>
+            <span class="amc-home-testimonial-metric-label">Sold Q4 2025</span>
+          </div>
+          <div class="amc-home-testimonial-metric">
+            <span class="amc-home-testimonial-metric-value">18 Mo.</span>
+            <span class="amc-home-testimonial-metric-label">Partnership</span>
+          </div>
+        </div>
+        <!-- Case Study Link -->
+        <a href="/construction-marketing-results" class="amc-home-testimonial-case-study-link">
+          Read the Full Case Study
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
