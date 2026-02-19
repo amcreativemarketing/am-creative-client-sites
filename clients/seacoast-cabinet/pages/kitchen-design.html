@@ -384,7 +384,7 @@
         }
 
         .step-details li:before {
-            content: "→";
+            content: "\2192";
             position: absolute;
             left: 0;
             color: var(--coastal-blue);
@@ -447,7 +447,7 @@
         }
 
         .visual-features li:before {
-            content: "✓";
+            content: "\2713";
             display: inline-block;
             width: 28px;
             height: 28px;
@@ -734,7 +734,7 @@
         }
 
         .team-highlight li:before {
-            content: "•";
+            content: "\2022";
             position: absolute;
             left: 10px;
             color: var(--coastal-blue);
@@ -907,6 +907,70 @@
 
         .faq-answer a:hover {
             color: var(--warm-gold);
+        }
+
+        /* =============================================
+           LOCATION PAGES SECTION
+           ============================================= */
+        .location-pages-section {
+            background: var(--light-gray);
+            padding: 80px 0;
+        }
+
+        .location-pages-section h2 {
+            margin-bottom: 16px;
+        }
+
+        .location-pages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .location-pages-grid a,
+        .location-pages-grid span {
+            display: block;
+            background: var(--pure-white);
+            border-radius: 8px;
+            padding: 20px 24px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .location-pages-grid a {
+            color: var(--deep-charcoal);
+            border: 1px solid var(--coastal-blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .location-pages-grid a:hover {
+            background: var(--coastal-blue);
+            color: var(--pure-white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(125, 153, 173, 0.25);
+        }
+
+        .location-pages-grid span {
+            color: #b0b0b0;
+            border: 1px solid #e8e8e8;
+        }
+
+        .location-pages-footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: var(--medium-gray);
+        }
+
+        .location-pages-footer a {
+            color: var(--coastal-blue);
+            font-weight: 600;
         }
 
         /* =============================================
@@ -1131,7 +1195,7 @@
         <div class="why-choose-grid">
             <div class="why-choose-card">
                 <div class="why-icon-wrapper">
-                    📍
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 </div>
                 <h4>Local Design Team</h4>
                 <p>
@@ -1142,7 +1206,7 @@
 
             <div class="why-choose-card">
                 <div class="why-icon-wrapper">
-                    ✏️
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
                 </div>
                 <h4>Functional Design Philosophy</h4>
                 <p>
@@ -1153,7 +1217,7 @@
 
             <div class="why-choose-card">
                 <div class="why-icon-wrapper">
-                    🇺🇸
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
                 </div>
                 <h4>American-Made Quality</h4>
                 <p>
@@ -1232,7 +1296,7 @@
 
         <div class="team-highlight">
             <p>
-                When you work with us, you're getting a team that genuinely cares about the details. 
+                When you work with us, you're getting a team that cares about the details. 
                 We listen to how you use your kitchen, understand your storage challenges, and design 
                 solutions that make your daily routine easier.
             </p>
@@ -1306,7 +1370,7 @@
                 </div>
                 <div class="faq-answer">
                     <p>
-                        We offer both options! Many clients prefer visiting our Rowley showroom to see and touch cabinet 
+                        We offer both options. Many clients prefer visiting our Rowley showroom to see and touch cabinet 
                         samples in person. But if that's not convenient, we can come to your home for measurements and 
                         initial consultation, then work with you virtually to refine the design.
                     </p>
@@ -1334,7 +1398,7 @@
                 </div>
                 <div class="faq-answer">
                     <p>
-                        Absolutely! We provide contractor-ready CAD drawings and detailed specifications your builder needs 
+                        We provide contractor-ready CAD drawings and detailed specifications your builder needs 
                         for accurate installation. We can also coordinate directly with your contractor on timeline, delivery, 
                         and any technical questions that come up during the project.
                     </p>
@@ -1348,7 +1412,7 @@
                 </div>
                 <div class="faq-answer">
                     <p>
-                        That's completely normal! During your consultation, we'll discuss budget ranges and show you examples 
+                        That's completely normal. During your consultation, we'll discuss budget ranges and show you examples 
                         at different price points. We work with all three cabinet brands (Mantra, Homecrest, and Omega) which 
                         gives us flexibility to design within virtually any budget.
                     </p>
@@ -1362,7 +1426,7 @@
                 </div>
                 <div class="faq-answer">
                     <p>
-                        Yes! While our primary focus is cabinetry, we provide expert guidance on countertops, hardware, and 
+                        Yes. While our primary focus is cabinetry, we provide expert guidance on countertops, hardware, and 
                         finishes that complement your cabinet choice. We want your entire kitchen to feel cohesive and work 
                         within your budget. Learn more about our 
                         <a href="https://seacoastcabinetne.com/countertops/">countertop options</a>.
@@ -1377,7 +1441,7 @@
                 </div>
                 <div class="faq-answer">
                     <p>
-                        Definitely! While kitchens are our specialty, we also design beautiful bathroom vanities, home office 
+                        While kitchens are our specialty, we also design beautiful bathroom vanities, home office 
                         cabinetry, mudrooms, laundry rooms, and more. Any space that needs custom cabinetry, we can design.
                     </p>
                 </div>
@@ -1397,7 +1461,52 @@
                     </p>
                 </div>
             </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What areas does Seacoast Cabinet serve?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        From our showroom in Rowley, MA, we serve homeowners throughout the North Shore and surrounding communities. We regularly work with clients in 
+                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-andover-ma/">Andover</a>, 
+                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/">Newburyport</a>, 
+                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/">Haverhill</a>, 
+                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-topsfield-ma/">Topsfield</a>, 
+                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-ipswich-ma/">Ipswich</a>, 
+                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Rowley</a>, 
+                        and many other towns across the North Shore and Merrimack Valley. If you're not sure whether we cover your area, just 
+                        <a href="https://seacoastcabinetne.com/contact/">reach out</a> - chances are we do.
+                    </p>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
+
+<!-- Kitchen Design Location Pages -->
+<section class="location-pages-section">
+    <div class="container">
+        <h2>Kitchen Design Services Across the North Shore</h2>
+        <p class="section-intro">
+            From our Rowley showroom, we work with homeowners throughout the North Shore and Merrimack Valley. Explore kitchen design resources for your community.
+        </p>
+
+        <div class="location-pages-grid">
+            <a href="https://seacoastcabinetne.com/kitchen-design/andover-ma/">Andover, MA</a>
+            <!-- Future location pages - swap span to <a> with href when live -->
+            <span>Newburyport, MA</span>
+            <span>Haverhill, MA</span>
+            <span>Topsfield, MA</span>
+            <span>Ipswich, MA</span>
+            <span>Rowley, MA</span>
+            <span>Georgetown, MA</span>
+            <span>North Andover, MA</span>
+            <span>Salem, NH</span>
+        </div>
+
+        <p class="location-pages-footer">More communities coming soon. Don't see your town? <a href="https://seacoastcabinetne.com/contact/">Contact us</a> - we serve homeowners across the North Shore.</p>
     </div>
 </section>
 
@@ -1518,6 +1627,14 @@
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Definitely! While kitchens are our specialty, we also design beautiful bathroom vanities, home office cabinetry, mudrooms, laundry rooms, and more. Any space that needs custom cabinetry, we can design."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What areas does Seacoast Cabinet serve?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "From our showroom in Rowley, MA, we serve homeowners throughout the North Shore and surrounding communities. We regularly work with clients in Andover, Newburyport, Haverhill, Topsfield, Ipswich, Rowley, and many other towns across the North Shore and Merrimack Valley."
             }
         }
     ]
