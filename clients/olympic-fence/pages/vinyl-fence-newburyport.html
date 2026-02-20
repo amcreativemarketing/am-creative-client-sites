@@ -1,0 +1,1351 @@
+<!-- ================================================
+     VINYL FENCE INSTALLATION - NEWBURYPORT, MA
+     Service-Location Page for Olympic Fence Company
+     
+     HERO COPY OPTIONS (set in Elementor):
+     H1: Vinyl Fence Installation in Newburyport, MA
+     H2: Premium, Low-Maintenance Vinyl Fencing From Newburyport's Trusted Local Experts
+     CTA: Get Your Free Quote → /contact-us/
+     
+     META:
+     Title: Vinyl Fence Installation Newburyport MA | Olympic Fence Co (58 chars)
+     Description: Professional vinyl fence installation in Newburyport, MA. Olympic Fence Co offers durable, low-maintenance vinyl fencing solutions. Free quotes. Licensed & insured. (159 chars)
+     URL: /vinyl-fence-installation-newburyport-ma/
+     Hub Page: /vinyl/
+     ================================================ -->
+
+<style>
+/* ========================================
+   CSS Variables - Olympic Fence Brand
+   ======================================== */
+:root {
+  --ofc-primary: #272262;
+  --ofc-primary-hover: #4a4494;
+  --ofc-text-dark: #333333;
+  --ofc-text-light: #666666;
+  --ofc-bg-light: #f8f9fa;
+  --ofc-border: #e9ecef;
+  --ofc-white: #ffffff;
+  --ofc-star: #ffc107;
+  --ofc-success: #28a745;
+}
+
+/* ========================================
+   Vinyl Fence Newburyport - .ofc-vnb- namespace
+   ======================================== */
+
+/* ---------- HERO ---------- */
+.ofc-vnb-hero {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.ofc-vnb-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.ofc-vnb-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(39, 34, 98, 0.42) 0%, rgba(39, 34, 98, 0.55) 100%);
+  z-index: 2;
+}
+
+.ofc-vnb-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 820px;
+  padding: 60px 20px;
+  color: var(--ofc-white);
+}
+
+.ofc-vnb-hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  color: var(--ofc-white);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-vnb-hero-content h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 30px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-vnb-hero-ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ofc-vnb-btn-primary {
+  background: var(--ofc-white);
+  color: var(--ofc-primary) !important;
+  padding: 15px 32px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: 2px solid var(--ofc-white);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-vnb-btn-primary:hover {
+  background: transparent;
+  color: var(--ofc-white) !important;
+  transform: translateY(-2px);
+}
+
+.ofc-vnb-btn-secondary {
+  background: transparent;
+  color: var(--ofc-white) !important;
+  padding: 15px 32px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-vnb-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--ofc-white);
+  transform: translateY(-2px);
+}
+
+/* ---------- TRUST BAR ---------- */
+.ofc-vnb-trust-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 22px 20px;
+  background: var(--ofc-primary);
+  margin-bottom: 0;
+}
+
+.ofc-vnb-trust-item {
+  color: var(--ofc-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 18px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-vnb-trust-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 0.8rem;
+  font-style: normal;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* ---------- GLOBAL SECTION STYLES ---------- */
+.ofc-vnb-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-vnb-section-alt {
+  background: var(--ofc-bg-light);
+}
+
+.ofc-vnb-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ofc-primary);
+  line-height: 1.3;
+  margin: 0 0 20px 0;
+}
+
+.ofc-vnb-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ofc-primary);
+  line-height: 1.4;
+  margin: 30px 0 14px 0;
+}
+
+.ofc-vnb-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ofc-text-dark);
+  margin: 0 0 16px 0;
+}
+
+.ofc-vnb-section a {
+  color: var(--ofc-primary);
+  text-decoration: underline;
+}
+
+.ofc-vnb-section a:hover {
+  color: var(--ofc-primary-hover);
+}
+
+/* ---------- INTRO WITH IMAGE ---------- */
+.ofc-vnb-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ofc-vnb-intro-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- SERVICE CARDS ---------- */
+.ofc-vnb-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 30px 0;
+}
+
+.ofc-vnb-service-card {
+  background: var(--ofc-white);
+  border: 1px solid var(--ofc-border);
+  border-radius: 8px;
+  padding: 28px 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ofc-vnb-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.ofc-vnb-service-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  color: var(--ofc-primary);
+}
+
+.ofc-vnb-service-card p {
+  font-size: 0.95rem;
+  color: var(--ofc-text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---------- BENEFITS GRID ---------- */
+.ofc-vnb-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 30px 0;
+}
+
+.ofc-vnb-benefit-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--ofc-white);
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--ofc-border);
+}
+
+.ofc-vnb-benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 8px;
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.ofc-vnb-benefit-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ofc-primary);
+  margin: 0 0 6px 0;
+}
+
+.ofc-vnb-benefit-card p {
+  font-size: 0.95rem;
+  color: var(--ofc-text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---------- STYLES SHOWCASE ---------- */
+.ofc-vnb-styles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 30px 0;
+}
+
+.ofc-vnb-style-card {
+  background: var(--ofc-white);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--ofc-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ofc-vnb-style-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.ofc-vnb-style-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.ofc-vnb-style-card-body {
+  padding: 20px;
+}
+
+.ofc-vnb-style-card-body h3 {
+  font-size: 1.15rem;
+  margin: 0 0 8px 0;
+  color: var(--ofc-primary);
+}
+
+.ofc-vnb-style-card-body p {
+  font-size: 0.93rem;
+  color: var(--ofc-text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---------- BEFORE/AFTER ---------- */
+.ofc-vnb-ba-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.ofc-vnb-ba-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- PROCESS TIMELINE ---------- */
+.ofc-vnb-process-steps {
+  margin: 30px 0;
+  position: relative;
+}
+
+.ofc-vnb-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  position: relative;
+  padding-left: 60px;
+}
+
+.ofc-vnb-step-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 42px;
+  height: 42px;
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.ofc-vnb-step-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ofc-text-dark);
+  margin: 0 0 6px 0;
+}
+
+.ofc-vnb-step-content p {
+  font-size: 0.95rem;
+  color: var(--ofc-text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---------- AREAS SERVED ---------- */
+.ofc-vnb-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.ofc-vnb-area-tag {
+  background: var(--ofc-white);
+  border: 1px solid var(--ofc-border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--ofc-primary);
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+  display: block;
+}
+
+a.ofc-vnb-area-tag:hover {
+  background: var(--ofc-primary);
+  color: var(--ofc-white) !important;
+  transform: translateY(-2px);
+}
+
+.ofc-vnb-area-tag-plain {
+  background: var(--ofc-white);
+  border: 1px solid var(--ofc-border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--ofc-text-dark);
+  font-size: 0.95rem;
+}
+
+/* ---------- TESTIMONIALS ---------- */
+.ofc-vnb-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 30px 0;
+}
+
+.ofc-vnb-testimonial-card {
+  background: var(--ofc-white);
+  border: 1px solid var(--ofc-border);
+  border-radius: 8px;
+  padding: 28px 24px;
+  position: relative;
+}
+
+.ofc-vnb-testimonial-stars {
+  color: var(--ofc-star);
+  font-size: 1rem;
+  margin-bottom: 12px;
+  letter-spacing: 3px;
+  font-style: normal;
+}
+
+.ofc-vnb-testimonial-card blockquote {
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: var(--ofc-text-dark);
+  margin: 0 0 16px 0;
+  font-style: italic;
+  border: none;
+  padding: 0;
+}
+
+.ofc-vnb-testimonial-author {
+  font-weight: 600;
+  color: var(--ofc-primary);
+  font-size: 0.95rem;
+}
+
+.ofc-vnb-testimonial-source {
+  font-size: 0.8rem;
+  color: var(--ofc-text-light);
+}
+
+/* ---------- FAQ ---------- */
+.ofc-vnb-faq-section {
+  margin: 30px 0 10px 0;
+}
+
+.ofc-vnb-faq-item {
+  background: var(--ofc-white);
+  border: 1px solid var(--ofc-border);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.ofc-vnb-faq-item summary {
+  font-weight: 600;
+  color: var(--ofc-text-dark);
+  font-size: 1.05rem;
+  padding: 18px 20px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-vnb-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.ofc-vnb-faq-item summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--ofc-primary);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.ofc-vnb-faq-item[open] summary::after {
+  content: "\2212";
+}
+
+.ofc-vnb-faq-item summary:hover {
+  background: var(--ofc-bg-light);
+}
+
+.ofc-vnb-faq-answer {
+  color: var(--ofc-text-light);
+  line-height: 1.7;
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid var(--ofc-border);
+  font-size: 0.97rem;
+}
+
+/* ---------- CTA SECTION ---------- */
+.ofc-vnb-cta-section {
+  background: linear-gradient(135deg, var(--ofc-primary) 0%, var(--ofc-primary-hover) 100%);
+  padding: 50px 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.ofc-vnb-cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ofc-vnb-cta-section h2 {
+  color: var(--ofc-white);
+  font-size: 2rem;
+  margin: 0 0 14px 0;
+  font-weight: 700;
+}
+
+.ofc-vnb-cta-section p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin: 0 0 28px 0;
+  line-height: 1.6;
+}
+
+.ofc-vnb-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ofc-vnb-cta-btn-white {
+  background: var(--ofc-white);
+  color: var(--ofc-primary) !important;
+  padding: 16px 34px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: 2px solid var(--ofc-white);
+}
+
+.ofc-vnb-cta-btn-white:hover {
+  background: transparent;
+  color: var(--ofc-white) !important;
+  transform: translateY(-2px);
+}
+
+.ofc-vnb-cta-btn-outline {
+  background: transparent;
+  color: var(--ofc-white) !important;
+  padding: 16px 34px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.ofc-vnb-cta-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--ofc-white);
+  transform: translateY(-2px);
+}
+
+/* ---------- MAP SECTION ---------- */
+.ofc-vnb-map-section {
+  padding: 50px 20px;
+  background: var(--ofc-bg-light);
+}
+
+.ofc-vnb-map-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ofc-vnb-map-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ofc-primary);
+  margin: 0 0 12px 0;
+}
+
+.ofc-vnb-map-section p {
+  color: var(--ofc-text-light);
+  font-size: 1rem;
+  margin: 0 0 28px 0;
+}
+
+.ofc-vnb-map-embed {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ofc-vnb-map-embed iframe {
+  width: 100%;
+  height: 420px;
+  border: 0;
+  display: block;
+}
+
+/* ---------- BREADCRUMB LINK ---------- */
+.ofc-vnb-breadcrumb {
+  padding: 14px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 0.88rem;
+  color: var(--ofc-text-light);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ofc-vnb-breadcrumb a {
+  color: var(--ofc-primary);
+  text-decoration: none;
+}
+
+.ofc-vnb-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- INLINE CTA ---------- */
+.ofc-vnb-inline-cta {
+  text-align: center;
+  margin: 36px 0 10px 0;
+}
+
+.ofc-vnb-inline-cta a {
+  background: var(--ofc-primary);
+  color: var(--ofc-white) !important;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.ofc-vnb-inline-cta a:hover {
+  background: var(--ofc-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+  .ofc-vnb-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ofc-vnb-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ofc-vnb-areas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ofc-vnb-hero-content h1 {
+    font-size: 1.85rem;
+  }
+  .ofc-vnb-hero-content h2 {
+    font-size: 1.05rem;
+  }
+  .ofc-vnb-hero {
+    min-height: 400px;
+  }
+  .ofc-vnb-section h2 {
+    font-size: 1.6rem;
+  }
+  .ofc-vnb-section h3 {
+    font-size: 1.25rem;
+  }
+  .ofc-vnb-intro-grid {
+    grid-template-columns: 1fr;
+  }
+  .ofc-vnb-services-grid {
+    grid-template-columns: 1fr;
+  }
+  .ofc-vnb-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .ofc-vnb-styles-grid {
+    grid-template-columns: 1fr;
+  }
+  .ofc-vnb-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .ofc-vnb-areas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ofc-vnb-trust-item {
+    font-size: 0.82rem;
+    padding: 4px 10px;
+  }
+  .ofc-vnb-trust-icon {
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+  }
+  .ofc-vnb-benefit-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    font-size: 1rem;
+  }
+  .ofc-vnb-hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ofc-vnb-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ofc-vnb-cta-section h2 {
+    font-size: 1.6rem;
+  }
+}
+</style>
+
+<!-- ======================== HERO SECTION ======================== -->
+<div class="ofc-vnb-hero">
+  <img src="https://olympicfencema.com/wp-content/uploads/2025/09/26673.webp" alt="Vinyl fence installation in Newburyport, MA by Olympic Fence Company" class="ofc-vnb-hero-bg" />
+  <div class="ofc-vnb-hero-overlay"></div>
+  <div class="ofc-vnb-hero-content">
+    <h1>Vinyl Fence Installation in Newburyport, MA</h1>
+    <h2>Premium, Low-Maintenance Vinyl Fencing From Newburyport's Trusted Local Experts</h2>
+    <div class="ofc-vnb-hero-ctas">
+      <a href="/contact-us/" class="ofc-vnb-btn-primary">Get Your Free Quote</a>
+      <a href="tel:978-997-2302" class="ofc-vnb-btn-secondary">Call 978-997-2302</a>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== TRUST BAR ======================== -->
+<div class="ofc-vnb-trust-bar">
+  <span class="ofc-vnb-trust-item"><span class="ofc-vnb-trust-icon">&#9733;</span> 5.0 Google Rating</span>
+  <span class="ofc-vnb-trust-item"><span class="ofc-vnb-trust-icon">&#9741;</span> Lifetime Workmanship Warranty</span>
+  <span class="ofc-vnb-trust-item"><span class="ofc-vnb-trust-icon">&#10003;</span> Licensed &amp; Insured</span>
+  <span class="ofc-vnb-trust-item"><span class="ofc-vnb-trust-icon">&#8962;</span> Family-Owned Since 1985</span>
+  <span class="ofc-vnb-trust-item"><span class="ofc-vnb-trust-icon">&#9670;</span> AFA Member 2025</span>
+</div>
+
+<!-- ======================== BREADCRUMB ======================== -->
+<div class="ofc-vnb-breadcrumb">
+  <a href="/">Home</a> &rsaquo; <a href="/vinyl/">Vinyl Fencing</a> &rsaquo; Vinyl Fence Installation Newburyport, MA
+</div>
+
+<!-- ======================== SECTION: WHY CHOOSE OLYMPIC ======================== -->
+<div class="ofc-vnb-section">
+  <div class="ofc-vnb-intro-grid">
+    <div>
+      <h2>Why Choose Olympic Fence Co for Your Newburyport Vinyl Fence?</h2>
+      <p>If you're looking for vinyl fence installation in Newburyport, MA, Olympic Fence Company has been the go-to choice for North Shore homeowners for over 40 years. Owned and operated by the LaPierre family since 1985, we combine decades of local knowledge with materials built to handle coastal New England weather, from salt air along Plum Island to the freeze-thaw cycles that test every fence post through winter.</p>
+      <p>Every vinyl fence we install is backed by our <strong>lifetime workmanship warranty</strong>, a commitment that goes far beyond the industry-standard 2-3 year guarantees offered by competitors. We stand behind our work because we know the materials and methods we use are designed to last. Whether you need a privacy fence for your backyard or a decorative picket fence for your front yard near Downtown Newburyport, we'll help you pick the right style and get it installed on time and within budget.</p>
+      <p>As members of the American Fence Association and a fully licensed and insured contractor, we follow manufacturer-recommended installation methods and stay current with Newburyport building codes and permit requirements.</p>
+    </div>
+    <div>
+      <img src="https://olympicfencema.com/wp-content/uploads/2025/09/IMG_20250904_102855-2-1.jpg" alt="Professional vinyl fencing installed in Newburyport, MA by Olympic Fence Company" class="ofc-vnb-intro-img" />
+    </div>
+  </div>
+
+  <div class="ofc-vnb-inline-cta">
+    <a href="/contact-us/">Request Your Free Estimate</a>
+  </div>
+</div>
+
+<!-- ======================== SECTION: SERVICES ======================== -->
+<div class="ofc-vnb-section-alt">
+  <div class="ofc-vnb-section">
+    <h2>Our Vinyl Fence Installation Services in Newburyport</h2>
+    <p>From residential privacy fencing to commercial PVC solutions, we install every major style of vinyl fence for Newburyport properties. Each installation uses high-grade, UV-stabilized vinyl that resists fading, cracking, and yellowing, even with constant sun and salt exposure near the Merrimack River and waterfront areas.</p>
+
+    <div class="ofc-vnb-services-grid">
+      <div class="ofc-vnb-service-card">
+        <h3>Residential Vinyl Fence Installation</h3>
+        <p>Privacy fences, picket fences, semi-private designs, and pool enclosures for Newburyport homes. We work with your yard's terrain, whether it's flat or slopes toward the river, to deliver a clean, level installation.</p>
+      </div>
+      <div class="ofc-vnb-service-card">
+        <h3>Commercial Vinyl Fencing Solutions</h3>
+        <p>Durable, professional-grade vinyl fencing for Newburyport businesses, property managers, and HOA communities. Low-maintenance and consistent appearance across large-scale installations.</p>
+      </div>
+      <div class="ofc-vnb-service-card">
+        <h3>Vinyl Privacy Fences</h3>
+        <p>Full 6-foot privacy fencing that blocks the view from neighbors and streets. A popular choice throughout Newburyport for families, pet owners, and pool areas requiring code-compliant enclosures.</p>
+      </div>
+      <div class="ofc-vnb-service-card">
+        <h3>Vinyl Picket Fences</h3>
+        <p>Classic and decorative picket styles that complement Newburyport's colonial-style homes and historic neighborhoods. Available in white, tan, and other colors to match your property.</p>
+      </div>
+      <div class="ofc-vnb-service-card">
+        <h3>Vinyl Pool &amp; Safety Fencing</h3>
+        <p>Code-compliant pool enclosures with self-closing, self-latching gates. We know Newburyport's requirements for residential pool fencing and handle permitting details for you.</p>
+      </div>
+      <div class="ofc-vnb-service-card">
+        <h3>Vinyl Fence Repairs &amp; Replacements</h3>
+        <p>Storm damage, broken panels, or aging sections? We repair and replace vinyl fence components to restore your fence without a full reinstallation. <a href="/fence-repairs/">Learn more about our repair services</a>.</p>
+      </div>
+    </div>
+
+    <div class="ofc-vnb-inline-cta">
+      <a href="/contact-us/">Get a Free Quote for Your Project</a>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== SECTION: BENEFITS ======================== -->
+<div class="ofc-vnb-section">
+  <h2>Benefits of Vinyl Fencing for Newburyport Homeowners</h2>
+  <p>Vinyl is one of the most popular fencing materials in the Newburyport area for good reason. It holds up against the conditions that wear down other materials, and it looks great year after year with almost zero maintenance. Here's why Newburyport homeowners choose vinyl.</p>
+
+  <div class="ofc-vnb-benefits-grid">
+    <div class="ofc-vnb-benefit-card">
+      <span class="ofc-vnb-benefit-icon">&#9788;</span>
+      <div>
+        <h4>Coastal Weather Resistance</h4>
+        <p>Newburyport's salt air, humidity, and coastal storms take a toll on wood and metal. Vinyl won't rot, rust, or corrode, making it ideal for waterfront properties near Plum Island and the Merrimack River.</p>
+      </div>
+    </div>
+    <div class="ofc-vnb-benefit-card">
+      <span class="ofc-vnb-benefit-icon">&#10052;</span>
+      <div>
+        <h4>Freeze-Thaw Durability</h4>
+        <p>New England's freeze-thaw cycles crack and split inferior materials. Our vinyl fencing is engineered with UV stabilizers and impact modifiers that flex in extreme cold without breaking.</p>
+      </div>
+    </div>
+    <div class="ofc-vnb-benefit-card">
+      <span class="ofc-vnb-benefit-icon">&#10003;</span>
+      <div>
+        <h4>Low Maintenance, Long-Term Value</h4>
+        <p>No staining, painting, or sealing required. A quick rinse with a garden hose keeps vinyl looking new. With a typical lifespan of 35+ years, vinyl costs less over time compared to wood or metal.</p>
+      </div>
+    </div>
+    <div class="ofc-vnb-benefit-card">
+      <span class="ofc-vnb-benefit-icon">&#9650;</span>
+      <div>
+        <h4>Property Value &amp; Curb Appeal</h4>
+        <p>A well-installed vinyl fence increases both security and curb appeal, two factors that boost property value in the Newburyport housing market. It's an investment that pays for itself.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== SECTION: STYLES SHOWCASE ======================== -->
+<div class="ofc-vnb-section-alt">
+  <div class="ofc-vnb-section">
+    <h2>Vinyl Fence Styles &amp; Options Available</h2>
+    <p>Olympic Fence offers a full range of vinyl fence styles to match Newburyport's mix of colonial, Cape Cod, and modern home designs. Whether you want full privacy, a decorative border, or something in between, we'll walk you through every option at your free on-site consultation.</p>
+
+    <div class="ofc-vnb-styles-grid">
+      <div class="ofc-vnb-style-card">
+        <img src="https://olympicfencema.com/wp-content/uploads/2025/09/IMG_20250904_102855-2-1.jpg" alt="Vinyl privacy fence installed in Newburyport, MA" />
+        <div class="ofc-vnb-style-card-body">
+          <h3>Privacy Fence Designs</h3>
+          <p>Solid panels in 4-foot, 5-foot, and 6-foot heights. Tongue-and-groove construction eliminates gaps between boards for complete privacy. Available in white, tan, gray, and woodgrain textures.</p>
+        </div>
+      </div>
+      <div class="ofc-vnb-style-card">
+        <img src="https://olympicfencema.com/wp-content/uploads/2026/01/Vinyl-Picket.jpg" alt="Decorative vinyl picket fence in Newburyport, MA" />
+        <div class="ofc-vnb-style-card-body">
+          <h3>Decorative &amp; Picket Styles</h3>
+          <p>Traditional and contemporary picket designs that match the character of Newburyport's historic neighborhoods. Gothic, dog-ear, and flat-top profiles in various heights and spacings.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Additional Style Options</h3>
+    <p>We also install ranch rail fencing for rural Newburyport properties, semi-private styles that balance airflow with screening, and custom color and texture combinations. During your consultation, we'll bring samples so you can see and feel each option before making a decision.</p>
+
+    <div class="ofc-vnb-inline-cta">
+      <a href="/contact-us/">Schedule Your Free Consultation</a>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== SECTION: BEFORE/AFTER ======================== -->
+<div class="ofc-vnb-section">
+  <h2>See the Difference a Vinyl Fence Makes</h2>
+  <p>A vinyl privacy fence can completely transform how your backyard looks and feels. What was once an open, exposed yard becomes a private outdoor living space for your family, pets, and guests to enjoy year-round.</p>
+
+  <div class="ofc-vnb-ba-wrapper">
+    <img src="https://olympicfencema.com/wp-content/uploads/2025/12/Vinyl-Fence-Backyard-Upgrade-BEFORE_AFTER-SPLIT.webp" alt="Before and after example of a vinyl privacy fence backyard transformation" />
+  </div>
+
+  <p style="text-align:center; margin-top:16px; color:var(--ofc-text-light); font-size:0.95rem;">Example of how a vinyl privacy fence transforms an open backyard into a private outdoor space.</p>
+</div>
+
+<!-- ======================== SECTION: INSTALLATION PROCESS ======================== -->
+<div class="ofc-vnb-section-alt">
+  <div class="ofc-vnb-section">
+    <h2>Our Vinyl Fence Installation Process</h2>
+    <p>We keep things straightforward so you know exactly what to expect from first call to finished fence. Here's how a typical vinyl fence installation works with Olympic Fence.</p>
+
+    <div class="ofc-vnb-process-steps">
+      <div class="ofc-vnb-step">
+        <span class="ofc-vnb-step-number">1</span>
+        <div class="ofc-vnb-step-content">
+          <h4>Free On-Site Consultation</h4>
+          <p>We visit your Newburyport property to evaluate the terrain, discuss your goals (privacy, pets, pool code, curb appeal), and measure the project area. You'll get material samples and honest recommendations for your budget.</p>
+        </div>
+      </div>
+      <div class="ofc-vnb-step">
+        <span class="ofc-vnb-step-number">2</span>
+        <div class="ofc-vnb-step-content">
+          <h4>Custom Design &amp; Planning</h4>
+          <p>We create a detailed plan with layout, gate placement, and material specifications. If your project requires a Newburyport building permit (typically for fences over 6 feet), we handle the paperwork and guide you through the process.</p>
+        </div>
+      </div>
+      <div class="ofc-vnb-step">
+        <span class="ofc-vnb-step-number">3</span>
+        <div class="ofc-vnb-step-content">
+          <h4>Clear, Written Estimate</h4>
+          <p>You'll receive a detailed, written estimate that breaks down materials, labor, and timeline. No hidden fees, no pressure. We'll present options at different price points so you can choose what fits your budget.</p>
+        </div>
+      </div>
+      <div class="ofc-vnb-step">
+        <span class="ofc-vnb-step-number">4</span>
+        <div class="ofc-vnb-step-content">
+          <h4>Professional Installation</h4>
+          <p>Our experienced crew arrives on schedule, prepared with all materials. We set posts to proper depth, align every panel, and install gates for smooth operation. Your yard stays clean throughout the process.</p>
+        </div>
+      </div>
+      <div class="ofc-vnb-step">
+        <span class="ofc-vnb-step-number">5</span>
+        <div class="ofc-vnb-step-content">
+          <h4>Final Walkthrough &amp; Warranty</h4>
+          <p>We walk you through the finished fence, answer your questions, and leave you with warranty details. Our lifetime workmanship warranty means we're just a phone call away if you ever need us.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== SECTION: AREAS SERVED ======================== -->
+<div class="ofc-vnb-section">
+  <h2>Areas We Serve Near Newburyport, MA</h2>
+  <p>Based in West Newbury, Olympic Fence Company serves Newburyport and surrounding North Shore communities within a 30-mile radius for residential projects. Whether your property is in Downtown Newburyport, near Plum Island, along the waterfront, or in the Maudslay State Park area, we know the terrain and local building codes.</p>
+
+  <div class="ofc-vnb-areas-grid">
+    <a href="/newburyport-fence-company/" class="ofc-vnb-area-tag">Newburyport</a>
+    <a href="/amesbury-fence-company/" class="ofc-vnb-area-tag">Amesbury</a>
+    <a href="/salisbury-fence-company/" class="ofc-vnb-area-tag">Salisbury</a>
+    <a href="/haverhill-fence-company/" class="ofc-vnb-area-tag">Haverhill</a>
+    <a href="/groveland-fence-company/" class="ofc-vnb-area-tag">Groveland</a>
+    <a href="/north-andover-fence-company/" class="ofc-vnb-area-tag">North Andover</a>
+    <a href="/beverly-fence-company/" class="ofc-vnb-area-tag">Beverly</a>
+    <span class="ofc-vnb-area-tag-plain">West Newbury</span>
+    <span class="ofc-vnb-area-tag-plain">Newbury</span>
+    <span class="ofc-vnb-area-tag-plain">Plum Island</span>
+    <span class="ofc-vnb-area-tag-plain">Merrimac</span>
+    <span class="ofc-vnb-area-tag-plain">Georgetown</span>
+  </div>
+
+  <p style="margin-top:16px;">Looking for vinyl fence installation outside Newburyport? We also handle <a href="/commercial-projects/">commercial and municipal fencing projects</a> within a 70-mile radius. <a href="/contact-us/">Contact us</a> to confirm availability for your area.</p>
+</div>
+
+<!-- ======================== SECTION: TESTIMONIALS ======================== -->
+<div class="ofc-vnb-section-alt">
+  <div class="ofc-vnb-section">
+    <h2>What Newburyport Customers Say About Us</h2>
+    <p>Don't take our word for it. Here's what recent customers have to say about working with Olympic Fence Company.</p>
+
+    <div class="ofc-vnb-testimonials-grid">
+      <div class="ofc-vnb-testimonial-card">
+        <div class="ofc-vnb-testimonial-stars">★ ★ ★ ★ ★</div>
+        <blockquote>"Olympic fence did a fantastic job installing the fence in back yard. The crew was very professional and did the job much quicker than expected. I would recommend them to any one looking to get a fence installed."</blockquote>
+        <span class="ofc-vnb-testimonial-author">Tim F.</span>
+        <span class="ofc-vnb-testimonial-source"> - Google Review</span>
+      </div>
+      <div class="ofc-vnb-testimonial-card">
+        <div class="ofc-vnb-testimonial-stars">★ ★ ★ ★ ★</div>
+        <blockquote>"I highly recommend Olympic Fence. Communication, installation and attention to detail were outstanding. They worked within my budget and were much more reasonable than two other quotes that I got."</blockquote>
+        <span class="ofc-vnb-testimonial-author">Regina C.</span>
+        <span class="ofc-vnb-testimonial-source"> - Google Review</span>
+      </div>
+      <div class="ofc-vnb-testimonial-card">
+        <div class="ofc-vnb-testimonial-stars">★ ★ ★ ★ ★</div>
+        <blockquote>"We had a wonderful experience with Olympic Fence Company. James and his crew were professional, efficient and did outstanding work. Highly recommend to anyone in the area!"</blockquote>
+        <span class="ofc-vnb-testimonial-author">Kelsey L.</span>
+        <span class="ofc-vnb-testimonial-source"> - Google Review</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== SECTION: FAQ ======================== -->
+<div class="ofc-vnb-section">
+  <h2>Frequently Asked Questions About Vinyl Fencing in Newburyport</h2>
+
+  <div class="ofc-vnb-faq-section">
+    <details class="ofc-vnb-faq-item">
+      <summary>How much does vinyl fence installation cost in Newburyport?</summary>
+      <div class="ofc-vnb-faq-answer">
+        <p>Vinyl fence costs in Newburyport depend on the style (privacy, picket, semi-private), height, linear footage, and terrain of your property. Privacy fencing generally costs more per foot than picket styles. We provide free on-site estimates with detailed pricing so you can compare options and choose what works for your budget. <a href="/contact-us/">Request your free estimate here</a>.</p>
+      </div>
+    </details>
+
+    <details class="ofc-vnb-faq-item">
+      <summary>What are the best vinyl fence styles for Newburyport homes?</summary>
+      <div class="ofc-vnb-faq-answer">
+        <p>The most popular styles in Newburyport are 6-foot privacy fences for backyard enclosures and decorative picket fences for front yards, which complement the area's colonial and Cape Cod architecture. Semi-private designs are also popular for homeowners who want some screening without completely blocking airflow, especially near the waterfront.</p>
+      </div>
+    </details>
+
+    <details class="ofc-vnb-faq-item">
+      <summary>How long does vinyl fence installation take in Newburyport?</summary>
+      <div class="ofc-vnb-faq-answer">
+        <p>Most residential vinyl fence installations in Newburyport are completed within 1-3 days, depending on the size of the project and terrain. Larger properties or those with slopes, ledge, or difficult access may take slightly longer. We'll give you a clear timeline during your estimate.</p>
+      </div>
+    </details>
+
+    <details class="ofc-vnb-faq-item">
+      <summary>Do I need a permit for a vinyl fence in Newburyport, MA?</summary>
+      <div class="ofc-vnb-faq-answer">
+        <p>In Massachusetts, fences under 6 feet typically do not require a building permit. Fences over 6 feet generally do need a permit. Local Newburyport ordinances may also apply, especially in historic districts near Downtown Newburyport. We handle permitting guidance as part of our service and can walk you through the requirements for your specific property.</p>
+      </div>
+    </details>
+
+    <details class="ofc-vnb-faq-item">
+      <summary>How does vinyl fencing hold up in coastal New England weather?</summary>
+      <div class="ofc-vnb-faq-answer">
+        <p>Vinyl is one of the best fencing materials for coastal areas like Newburyport and Plum Island. It won't rot from moisture, corrode from salt air, or attract insects. Modern vinyl fencing includes UV stabilizers that prevent fading and impact modifiers that maintain flexibility through New England's freeze-thaw cycles. With proper installation, vinyl fencing can last 35 years or more.</p>
+      </div>
+    </details>
+
+    <details class="ofc-vnb-faq-item">
+      <summary>What maintenance does vinyl fencing require?</summary>
+      <div class="ofc-vnb-faq-answer">
+        <p>Very little. Vinyl fencing doesn't need painting, staining, or sealing. An occasional rinse with a garden hose removes dirt and pollen. For tougher spots, a mild soap and water solution does the job. That's one of the biggest reasons Newburyport homeowners choose vinyl over wood.</p>
+      </div>
+    </details>
+
+    <details class="ofc-vnb-faq-item">
+      <summary>Does vinyl fencing increase property value in Newburyport?</summary>
+      <div class="ofc-vnb-faq-answer">
+        <p>Yes. A well-installed fence adds security, privacy, and curb appeal, all of which are factors in Newburyport's housing market. Vinyl's clean appearance and long lifespan make it especially attractive to buyers because it won't need replacement or major maintenance for decades.</p>
+      </div>
+    </details>
+
+    <details class="ofc-vnb-faq-item">
+      <summary>What's the difference between vinyl and PVC fencing?</summary>
+      <div class="ofc-vnb-faq-answer">
+        <p>Vinyl fencing and PVC fencing are essentially the same product. PVC (polyvinyl chloride) is the material that vinyl fencing is made from. Some manufacturers use the terms interchangeably, while others use "vinyl" for the finished product and "PVC" for the raw material. Either way, you're getting the same durable, low-maintenance fence.</p>
+      </div>
+    </details>
+
+    <details class="ofc-vnb-faq-item">
+      <summary>Can vinyl fencing be installed on uneven or sloped yards?</summary>
+      <div class="ofc-vnb-faq-answer">
+        <p>Absolutely. Many Newburyport properties have slopes, especially those near the Merrimack River or in older neighborhoods. We use stepped and racked installation methods to follow your yard's natural grade while keeping the fence looking clean and professional. During your free consultation, we'll assess your terrain and recommend the best approach.</p>
+      </div>
+    </details>
+
+    <details class="ofc-vnb-faq-item">
+      <summary>How does Olympic Fence's warranty compare to other companies?</summary>
+      <div class="ofc-vnb-faq-answer">
+        <p>Olympic Fence Company offers a lifetime workmanship warranty on every installation. Most competitors in the Newburyport area offer warranties ranging from 1 to 3 years. Our warranty means if there's ever an issue with the quality of our work, we'll make it right at no additional cost to you.</p>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ======================== CTA SECTION ======================== -->
+<div class="ofc-vnb-cta-section">
+  <div class="ofc-vnb-cta-inner">
+    <h2>Ready to Transform Your Newburyport Property?</h2>
+    <p>Get a free, no-pressure estimate for your vinyl fence project. We'll visit your property, discuss your options, and give you a clear quote with no surprises.</p>
+    <div class="ofc-vnb-cta-buttons">
+      <a href="/contact-us/" class="ofc-vnb-cta-btn-white">Get Your Free Estimate</a>
+      <a href="tel:978-997-2302" class="ofc-vnb-cta-btn-outline">Call 978-997-2302</a>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== MAP SECTION ======================== -->
+<div class="ofc-vnb-map-section">
+  <div class="ofc-vnb-map-inner">
+    <h2>Serving Newburyport &amp; the North Shore</h2>
+    <p>Olympic Fence Company is based in West Newbury and proudly serves Newburyport and surrounding communities. <a href="/contact-us/" style="color:var(--ofc-primary);">Contact us</a> to schedule your free on-site consultation.</p>
+    <div class="ofc-vnb-map-embed">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93656.63881790714!2d-70.95548324055397!3d42.8143469597212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2e109acaea8db%3A0x5508797887c45490!2sNewburyport%2C%20MA!5e0!3m2!1sen!2sus!4v1771532368754!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== SCHEMA MARKUP ======================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Olympic Fence Company",
+  "image": "https://olympicfencema.com/wp-content/uploads/2025/09/Olympic-new-square-logo-white.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "81 Garden Street",
+    "addressLocality": "West Newbury",
+    "addressRegion": "MA",
+    "postalCode": "01985",
+    "addressCountry": "US"
+  },
+  "telephone": "978-997-2302",
+  "email": "jlapierre@olympicfencema.com",
+  "url": "https://olympicfencema.com",
+  "priceRange": "$$",
+  "openingHours": ["Mo-Fr 07:00-17:00"],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.8034,
+    "longitude": -70.9617
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "15"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Newburyport",
+    "addressRegion": "MA"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Vinyl Fence Installation",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Olympic Fence Company",
+    "telephone": "978-997-2302",
+    "url": "https://olympicfencema.com"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Newburyport",
+    "containedInPlace": {
+      "@type": "State",
+      "name": "Massachusetts"
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Vinyl Fencing Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Vinyl Fence Installation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Vinyl Fencing"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vinyl Privacy Fence Installation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vinyl Picket Fence Installation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vinyl Pool and Safety Fencing"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vinyl Fence Repair"}}
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does vinyl fence installation cost in Newburyport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vinyl fence costs in Newburyport depend on the style (privacy, picket, semi-private), height, linear footage, and terrain of your property. Privacy fencing generally costs more per foot than picket styles. Olympic Fence Company provides free on-site estimates with detailed pricing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the best vinyl fence styles for Newburyport homes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most popular styles in Newburyport are 6-foot privacy fences for backyard enclosures and decorative picket fences for front yards, which complement the area's colonial and Cape Cod architecture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does vinyl fence installation take in Newburyport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most residential vinyl fence installations in Newburyport are completed within 1-3 days, depending on the size of the project and terrain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a permit for a vinyl fence in Newburyport, MA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Massachusetts, fences under 6 feet typically do not require a building permit. Fences over 6 feet generally do need a permit. Local Newburyport ordinances may also apply, especially in historic districts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does vinyl fencing hold up in coastal New England weather?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vinyl is one of the best fencing materials for coastal areas like Newburyport. It won't rot from moisture, corrode from salt air, or attract insects. With proper installation, vinyl fencing can last 35 years or more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What maintenance does vinyl fencing require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Very little. Vinyl fencing doesn't need painting, staining, or sealing. An occasional rinse with a garden hose removes dirt and pollen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does vinyl fencing increase property value in Newburyport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A well-installed fence adds security, privacy, and curb appeal, all of which are factors in Newburyport's housing market."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between vinyl and PVC fencing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vinyl fencing and PVC fencing are essentially the same product. PVC (polyvinyl chloride) is the material that vinyl fencing is made from."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can vinyl fencing be installed on uneven or sloped yards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Many Newburyport properties have slopes. Olympic Fence uses stepped and racked installation methods to follow the yard's natural grade while keeping the fence looking clean and professional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Olympic Fence's warranty compare to other companies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Olympic Fence Company offers a lifetime workmanship warranty on every installation. Most competitors in the Newburyport area offer warranties ranging from 1 to 3 years."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://olympicfencema.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Vinyl Fencing",
+      "item": "https://olympicfencema.com/vinyl/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Vinyl Fence Installation Newburyport MA",
+      "item": "https://olympicfencema.com/vinyl-fence-installation-newburyport-ma/"
+    }
+  ]
+}
+</script>
