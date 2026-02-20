@@ -1,0 +1,254 @@
+<style>
+    /* --- Global Styles for Vinyl Page --- */
+    .vinyl-page-wrapper-el {
+        font-family: 'Montserrat', sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+    .vinyl-section-el {
+        padding: 60px 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .vinyl-section-el h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2c3e50;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .vinyl-section-el .section-subhead-el {
+        font-size: 17px;
+        color: #555;
+        max-width: 700px;
+        text-align: center;
+        margin: 0 auto 40px auto;
+    }
+
+    /* --- 1. Intro Section --- */
+    .vinyl-intro-el {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+    }
+    .vinyl-intro-text-el { flex: 1; min-width: 300px; }
+    .vinyl-intro-text-el p { font-size: 16px; color: #555; }
+    .vinyl-intro-image-el { flex: 1; min-width: 300px; }
+    .vinyl-intro-image-el img { width: 100%; border-radius: 8px; display: block; }
+
+    /* --- 2. Why Choose Olympic Vinyl? (Benefits) --- */
+    .vinyl-benefits-el {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    .vinyl-benefit-item-el {
+        flex: 1;
+        min-width: 280px;
+        padding: 20px;
+        background-color: #f7f9fc;
+        border-radius: 8px;
+    }
+    .vinyl-benefit-item-el h3 { font-size: 20px; margin: 0 0 10px 0; color: #333; }
+    .vinyl-benefit-item-el p { font-size: 15px; color: #555; margin: 0; }
+    
+    /* --- 3. Styles & Gallery --- */
+    .gallery-grid-el {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 30px;
+    }
+    .gallery-grid-el img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* --- 4. Process & FAQ --- */
+    .process-faq-container-el {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: flex-start;
+    }
+    .process-el, .faq-el {
+        flex: 1;
+        min-width: 300px;
+    }
+    .process-el h3, .faq-el h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .timeline-el { list-style: none; padding-left: 0; }
+    .timeline-el li { padding-left: 30px; position: relative; padding-bottom: 20px; border-left: 2px solid #ddd; }
+    .timeline-el li::before { content: ''; position: absolute; left: -9px; top: 5px; width: 16px; height: 16px; background: #005A9C; border-radius: 50%; }
+    .timeline-el li strong { display: block; font-size: 17px; }
+    .faq-accordion-el details { border-bottom: 1px solid #ddd; padding: 15px 0; }
+    .faq-accordion-el summary { font-weight: 600; font-size: 17px; cursor: pointer; list-style: none; }
+    .faq-accordion-el .faq-answer { padding: 15px 5px; color: #555; }
+    
+    /* --- 5. Final CTA Panel --- */
+    .final-cta-panel-el { background: #2c3e50; color: white; padding: 50px 20px; text-align: center; border-radius: 8px; }
+    .final-cta-panel-el h2 { color: white; margin-bottom: 15px; }
+    .final-cta-panel-el p { font-size: 17px; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; }
+    .cta-button-el { text-decoration: none; padding: 15px 35px; border-radius: 5px; font-weight: 700; background-color: #005A9C; color: white; display: inline-block; transition: transform 0.2s; }
+    .cta-button-el:hover { transform: translateY(-3px); }
+
+    /* --- 6. Location Hub Section --- */
+    .vinyl-location-grid-el {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        margin: 30px 0 10px 0;
+    }
+    .vinyl-location-tag-el {
+        display: inline-block;
+        background: #2c3e50;
+        color: #ffffff !important;
+        padding: 14px 28px;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: none !important;
+        transition: background 0.3s ease, transform 0.2s ease;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .vinyl-location-tag-el:hover {
+        background: #005A9C;
+        transform: translateY(-3px);
+    }
+    @media (max-width: 768px) {
+        .vinyl-location-grid-el {
+            gap: 10px;
+        }
+        .vinyl-location-tag-el {
+            padding: 12px 22px;
+            font-size: 15px;
+        }
+    }
+</style>
+
+<div class="vinyl-page-wrapper-el">
+
+    <section class="vinyl-section-el">
+        <div class="vinyl-intro-el">
+            <div class="vinyl-intro-text-el">
+                <h2>Low-Maintenance Vinyl Fencing</h2>
+                <p>For a beautiful fence without the upkeep, vinyl is the perfect choice. Modern vinyl fencing offers the clean, classic look of painted wood without the hassle of painting, staining, or sealing. It won't rot, warp, splinter, or peel, giving you a stunning, worry-free fence that lasts for decades. All of our vinyl installations are backed by our lifetime workmanship warranty for your complete peace of mind.</p>
+            </div>
+            <div class="vinyl-intro-image-el">
+                <img src="https://olympicfencema.com/wp-content/uploads/2025/09/IMG_20250320_141154-8.jpg" alt="A clean, white vinyl privacy fence with a lattice top installed by Olympic Fence.">
+            </div>
+        </div>
+    </section>
+
+    <section class="vinyl-section-el" style="background-color: #f7f9fc;">
+        <h2>The Modern Choice for Durability & Style</h2>
+        <p class="section-subhead-el">We combine high-quality materials with our expert installation process to deliver a superior vinyl fence.</p>
+        <div class="vinyl-benefits-el">
+            <div class="vinyl-benefit-item-el">
+                <h3>Lasting Color & No Upkeep</h3>
+                <p>Enjoy a fence that looks brand new for years. Vinyl never needs painting and cleans easily with just soap and water.</p>
+            </div>
+            <div class="vinyl-benefit-item-el">
+                <h3>Proven New England Durability</h3>
+                <p>Our vinyl fencing is designed to withstand harsh New England weather, from humid summers to heavy winter snow, without rotting or deteriorating.</p>
+            </div>
+            <div class="vinyl-benefit-item-el">
+                <h3>Guaranteed Installation</h3>
+                <p>Your investment is protected by both a strong manufacturer's warranty on the material and our own lifetime workmanship warranty on the installation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="vinyl-section-el">
+        <h2>Find Your Perfect Vinyl Fence Style</h2>
+        <p class="section-subhead-el">Vinyl offers incredible versatility. We install a wide range of styles, from full privacy panels to classic picket fences and post-and-rail designs, available in a variety of colors.</p>
+        <div class="gallery-grid-el">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/09/IMG_20250904_102855-2.jpg" alt="A white vinyl picket fence adding curb appeal to a residential home.">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/09/IMG_20250320_141154-7.jpg" alt="A tall, solid white vinyl privacy fence ensuring a secluded backyard.">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/09/IMG_20250904_102855-5.jpg" alt="A stylish dark-colored vinyl fence providing a modern look.">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/09/2020-04-30.jpg" alt="A semi-privacy vinyl fence with decorative elements.">
+        </div>
+    </section>
+    
+    <section class="vinyl-section-el">
+        <div class="process-faq-container-el">
+            <div class="process-el">
+                <h3>Our Simple Process</h3>
+                <ol class="timeline-el">
+                    <li><strong>Free Onsite Estimate</strong>We schedule a visit to discuss your needs and measure your property.</li>
+                    <li><strong>Clear Proposal</strong>You receive a detailed, transparent estimate with no hidden fees.</li>
+                    <li><strong>Scheduling & Permitting</strong>We handle all necessary town permits and set a clear installation date.</li>
+                    <li><strong>Professional Installation</strong>Our in-house crew builds your fence efficiently and leaves your property clean.</li>
+                </ol>
+            </div>
+            <div class="faq-el">
+                <h3>Common Questions</h3>
+                <div class="faq-accordion-el">
+                    <details>
+                        <summary>How long does vinyl fencing last?</summary>
+                        <div class="faq-answer">
+                            <p>With minimal maintenance, a high-quality vinyl fence can last 35 years or more, making it an excellent long-term investment.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Will vinyl fade or turn yellow?</summary>
+                        <div class="faq-answer">
+                            <p>Modern professional-grade vinyl is manufactured with UV inhibitors, like titanium dioxide, to protect it from fading and yellowing caused by the sun. It will retain its color for many years.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Vinyl Fencing by Location (Hub & Spoke) ========== -->
+    <section class="vinyl-section-el">
+        <h2>Vinyl Fencing by Location</h2>
+        <p class="section-subhead-el">We install vinyl fencing across the North Shore. Select your community for local project details, pricing factors, and permitting info.</p>
+        <div class="vinyl-location-grid-el">
+            <a href="https://olympicfencema.com/vinyl-fencing-newburyport/" class="vinyl-location-tag-el">Newburyport</a>
+        </div>
+    </section>
+    <!-- ========== End: Vinyl Fencing by Location ========== -->
+
+    <section class="vinyl-section-el">
+        <div class="final-cta-panel-el">
+            <h2>Ready for a Low-Maintenance Vinyl Fence?</h2>
+            <p>Let's get started. Contact our team today for a free, no-pressure estimate and see how great a maintenance-free fence can be.</p>
+            <a href="https://olympicfencema.com/contact-us/" class="cta-button-el" aria-label="Get a free estimate for a vinyl fence">Request Your Free Estimate</a>
+        </div>
+    </section>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How long does vinyl fencing last?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "With minimal maintenance, a high-quality vinyl fence can last 35 years or more, making it an excellent long-term investment."
+    }
+  },{
+    "@type": "Question",
+    "name": "Will vinyl fade or turn yellow?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Modern professional-grade vinyl is manufactured with UV inhibitors, like titanium dioxide, to protect it from fading and yellowing caused by the sun. It will retain its color for many years."
+    }
+  }]
+}
+</script>
