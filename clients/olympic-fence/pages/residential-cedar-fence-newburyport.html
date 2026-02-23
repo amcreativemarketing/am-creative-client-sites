@@ -1,0 +1,201 @@
+<style>
+    /* --- Global Styles for Cedar Page --- */
+    body {
+        /* Added for better preview rendering */
+        background-color: #fff;
+    }
+    .cedar-page-wrapper-el {
+        font-family: 'Montserrat', sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+    .cedar-section-el {
+        padding: 60px 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .cedar-section-el h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2c3e50;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .cedar-section-el .section-subhead-el {
+        font-size: 17px;
+        color: #555;
+        max-width: 700px;
+        text-align: center;
+        margin: 0 auto 40px auto;
+    }
+
+    /* --- 1. Intro Section --- */
+    .cedar-intro-el {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+    }
+    .cedar-intro-text-el { flex: 1; min-width: 300px; }
+    .cedar-intro-text-el p { font-size: 16px; color: #555; }
+    .cedar-intro-image-el { flex: 1; min-width: 300px; }
+    .cedar-intro-image-el img { width: 100%; border-radius: 8px; display: block; }
+
+    /* --- 2. Why Choose Olympic Cedar? (Benefits) --- */
+    .cedar-benefits-el {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    .cedar-benefit-item-el {
+        flex: 1;
+        min-width: 280px;
+        padding: 20px;
+        background-color: #f7f9fc;
+        border-radius: 8px;
+    }
+    .cedar-benefit-item-el h3 { font-size: 20px; margin: 0 0 10px 0; color: #333; }
+    .cedar-benefit-item-el p { font-size: 15px; color: #555; margin: 0; }
+    
+    /* --- 3. Styles & Gallery --- */
+    .gallery-grid-el {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        margin-top: 30px;
+    }
+    .gallery-grid-el img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* --- 4. Process & FAQ --- */
+    .process-faq-container-el {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: flex-start;
+    }
+    .process-el, .faq-el {
+        flex: 1;
+        min-width: 300px;
+    }
+    .process-el h3, .faq-el h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .timeline-el { list-style: none; padding-left: 0; }
+    .timeline-el li { padding-left: 30px; position: relative; padding-bottom: 20px; border-left: 2px solid #ddd; }
+    .timeline-el li::before { content: ''; position: absolute; left: -9px; top: 5px; width: 16px; height: 16px; background: #005A9C; border-radius: 50%; }
+    .timeline-el li strong { display: block; font-size: 17px; }
+    .faq-accordion-el details { border-bottom: 1px solid #ddd; padding: 15px 0; }
+    .faq-accordion-el summary { font-weight: 600; font-size: 17px; cursor: pointer; list-style: none; }
+     .faq-accordion-el summary::-webkit-details-marker { display: none; } /* Hide default arrow */
+    .faq-accordion-el .faq-answer { padding: 15px 5px; color: #555; }
+    
+    /* --- 5. Final CTA Panel --- */
+    .final-cta-panel-el { background: #2c3e50; color: white; padding: 50px 20px; text-align: center; border-radius: 8px; }
+    .final-cta-panel-el h2 { color: white; margin-bottom: 15px; }
+    .final-cta-panel-el p { font-size: 17px; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; }
+    .cta-button-el { text-decoration: none; padding: 15px 35px; border-radius: 5px; font-weight: 700; background-color: #005A9C; color: white; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; }
+    .cta-button-el:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+</style>
+
+<div class="cedar-page-wrapper-el">
+
+    <section class="cedar-section-el">
+        <div class="cedar-intro-el">
+            <div class="cedar-intro-text-el">
+                <h2>Timeless Beauty & Lasting Strength: Cedar Fencing</h2>
+                <p>Cedar is the premier choice for residential fencing, offering a classic New England aesthetic combined with natural durability. We build beautiful, long-lasting cedar fences tailored to your property, offering a range of installation methods to meet your specific needs. Whether you prefer a traditional post-in-concrete setup, our ultra-durable Wood-on-Steel system, or a modern No-Dig installation, we have the expertise to deliver a fence that stands strong for decades, all backed by our lifetime workmanship warranty.</p>
+            </div>
+            <div class="cedar-intro-image-el">
+                <img src="https://olympicfencema.com/wp-content/uploads/2025/09/cedar-wood-on-wire-no-dig.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </section>
+
+    <section class="cedar-section-el" style="background-color: #f7f9fc;">
+        <h2>The Olympic Fence Difference</h2>
+        <p class="section-subhead-el">We combine premium materials with expert craftsmanship and versatile installation options to deliver a superior cedar fence.</p>
+        <div class="cedar-benefits-el">
+            <div class="cedar-benefit-item-el">
+                <h3>Built for New England Weather</h3>
+                <p>Our installation techniques, from rot-resistant steel posts to sturdy concrete footings, ensure a fence that stands up to our tough climate.</p>
+            </div>
+            <div class="cedar-benefit-item-el">
+                <h3>Natural Beauty & Low Maintenance</h3>
+                <p>Enjoy the rich color of Western Red Cedar, which is inherently resistant to decay and insects. We can also apply a stain for added protection and color longevity.</p>
+            </div>
+            <div class="cedar-benefit-item-el">
+                <h3>Backed by a Lifetime Warranty</h3>
+                <p>As a second-generation family business, we stand behind our work with a lifetime workmanship warranty for your complete peace of mind.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cedar-section-el">
+        <h2>Find Your Perfect Cedar Fence Style</h2>
+        <p class="section-subhead-el">We build a variety of cedar fence styles, including privacy, picket, and modern shadowbox designs. Explore some of our recent projects below for inspiration.</p>
+        <div class="gallery-grid-el">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/09/cedar-vertical-photo.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/09/cedar-fence.jpeg" alt="" width="600" height="400" loading="lazy" decoding="async">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/09/20240904_132846-scaled.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/09/20240904_122837-scaled.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/09/unnamed1.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+            <img src="https://olympicfencema.com/wp-content/uploads/2025/09/IMG_20250813_095750-1.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+    </section>
+    
+    <section class="cedar-section-el">
+        <div class="process-faq-container-el">
+            <div class="process-el">
+                <h3>Our Simple Process</h3>
+                <ol class="timeline-el">
+                    <li><strong>Free Onsite Estimate</strong>We schedule a visit to discuss your needs, review installation options, and measure your property.</li>
+                    <li><strong>Clear Proposal</strong>You receive a detailed, transparent estimate outlining the chosen style and installation method.</li>
+                    <li><strong>Scheduling & Permitting</strong>We handle all necessary town permits and set a clear installation date.</li>
+                    <li><strong>Professional Installation</strong>Our in-house crew builds your fence efficiently and leaves your property clean.</li>
+                </ol>
+            </div>
+            <div class="faq-el">
+                <h3>Common Questions</h3>
+                <div class="faq-accordion-el">
+                    <details>
+                        <summary>What are your cedar fence installation options?</summary>
+                        <div class="faq-answer">
+                            <p>We offer several options: <strong>Traditional Installation</strong> with wood posts set in concrete, <strong>Wood-on-Steel</strong> where cedar panels are attached to durable steel posts to prevent rot, and <strong>No-Dig Installation</strong> which uses driven steel anchors for a less invasive process.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How long will a cedar fence last?</summary>
+                        <div class="faq-answer">
+                            <p>Properly installed cedar, especially with our rot-preventing techniques like steel posts, can easily last 20-30 years or more in New England.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Should I stain or seal my fence?</summary>
+                        <div class="faq-answer">
+                            <p>While not required, staining helps maintain the cedar's color and sealing reduces water absorption. We can help you decide what's best for your property and budget.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cedar-section-el">
+        <div class="final-cta-panel-el">
+            <h2>Ready to Invest in a Beautiful Cedar Fence?</h2>
+            <p>Let's get started. Contact our team today for a free, no-pressure estimate from the North Shore's trusted fencing experts.</p>
+            <a href="https://olympicfencema.com/contact-us/" class="cta-button-el" aria-label="Get a free estimate for a cedar fence">Request Your Free Estimate</a>
+        </div>
+    </section>
+
+</div>
