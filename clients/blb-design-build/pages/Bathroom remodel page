@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform your North Shore bathroom with BLB Design Build. Award-winning design-build experts serving Newburyport, Amesbury, and surrounding areas since 2012. Master bathrooms, powder rooms, and spa-inspired renovations.">
+    <meta name="keywords" content="bathroom remodeling, North Shore MA, design build, bathroom renovation, master bathroom, Newburyport, Amesbury, custom bathrooms">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Bathroom Remodeling North Shore | BLB Design Build">
+    <meta property="og:description" content="Award-winning bathroom transformations by North Shore's trusted design-build experts. One team from concept to completion.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blbdesignbuild.com/bathroom-remodeling">
+    
+    <title>Bathroom Remodeling North Shore MA | Design-Build Experts | BLB Design Build</title>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "BLB Design Build",
+        "description": "Award-winning design-build firm specializing in bathroom remodeling",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "6 Chestnut Street Suite 200",
+            "addressLocality": "Amesbury",
+            "addressRegion": "MA",
+            "postalCode": "01913"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "23"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #2c2c2c;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Section 2: Problem-Solution */
+        .problem-solution {
+            padding: 100px 0;
+            background: #fff;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.2s;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .content-column h2 {
+            font-size: 42px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+        }
+        
+        .content-column p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .content-column h3 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 25px;
+            color: #2c2c2c;
+        }
+        
+        .check-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        
+        .check-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            font-size: 17px;
+            color: #444;
+            transition: transform 0.3s ease;
+        }
+        
+        .check-list li:hover {
+            transform: translateX(5px);
+        }
+        
+        .check-list li::before {
+            content: "•";
+            color: #666;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .image-column img {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transition: transform 0.5s ease;
+        }
+        
+        .image-column img:hover {
+            transform: scale(1.02);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 2px solid #1a1a1a;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+        }
+        
+        /* Section 3: Services */
+        .services {
+            padding: 100px 0;
+            background: #f8f8f8;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.4s;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-header h2 {
+            font-size: 46px;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+        }
+        
+        .section-header p {
+            font-size: 19px;
+            color: #666;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            cursor: default;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: #e0e0e0;
+        }
+        
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: #2c2c2c;
+        }
+        
+        .service-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #666;
+        }
+        
+        .center-button {
+            text-align: center;
+        }
+        
+        /* Section 4: Process */
+        .process {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: #e0e0e0;
+            z-index: 1;
+        }
+        
+        .timeline-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #1a1a1a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 300;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-step:hover .step-number {
+            transform: scale(1.1);
+            background: #666;
+        }
+        
+        .timeline-step h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #2c2c2c;
+        }
+        
+        .timeline-step p {
+            font-size: 14px;
+            color: #666;
+            max-width: 180px;
+            margin: 0 auto;
+        }
+        
+        .callout-box {
+            background: #f8f8f8;
+            padding: 40px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 800px;
+            border-left: 4px solid #666;
+        }
+        
+        .callout-box p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        /* Section 5: Portfolio */
+        .portfolio {
+            padding: 100px 0;
+            background: #fff;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 30px 20px 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        .two-buttons {
+            text-align: center;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #1a1a1a;
+            color: #1a1a1a;
+        }
+        
+        .btn-outline:hover {
+            background: #1a1a1a;
+            color: white;
+        }
+        
+        /* Section 6: Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: #f8f8f8;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .stars {
+            color: #ffc107;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        
+        .testimonial-author {
+            font-weight: 500;
+            color: #2c2c2c;
+            font-size: 15px;
+        }
+        
+        /* Section 7: FAQ */
+        .faq {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 400;
+            color: #2c2c2c;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8f8f8;
+        }
+        
+        .faq-question::after {
+            content: "+";
+            font-size: 24px;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 30px 25px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+        }
+        
+        /* Section 8: Meet the Team */
+        .team {
+            padding: 100px 0;
+            background: #f8f8f8;
+        }
+        
+        /* Section 9: Final CTA */
+        .final-cta {
+            padding: 120px 0;
+            background: #1a1a1a;
+            text-align: center;
+            color: white;
+        }
+        
+        .final-cta h2 {
+            font-size: 52px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            color: white;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .btn-white {
+            background: white;
+            color: #1a1a1a;
+            border: 2px solid white;
+            font-size: 18px;
+            padding: 20px 50px;
+        }
+        
+        .btn-white:hover {
+            background: transparent;
+            color: white;
+        }
+        
+        .final-cta-footer {
+            margin-top: 60px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Contact Form Modal */
+        .form-section {
+            padding: 100px 0;
+            background: white;
+            display: none;
+        }
+        
+        .form-section.active {
+            display: block;
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .timeline::before {
+                display: none;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .two-buttons {
+                flex-direction: column;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .content-column h2 {
+                font-size: 28px;
+            }
+            
+            .final-cta h2 {
+                font-size: 36px;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Accessibility improvements */
+        .btn:focus,
+        .faq-question:focus {
+            outline: 2px solid #666;
+            outline-offset: 2px;
+        }
+        
+        /* Print styles */
+        @media print {
+            .btn,
+            .form-section {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 2: Problem-Solution -->
+    <section class="problem-solution">
+        <div class="container">
+            <div class="two-column">
+                <div class="content-column">
+                    <h2>Your Bathroom Should Be a Personal Sanctuary</h2>
+                    <p>Whether you're dreaming of a spa-inspired master bath or updating a powder room, we understand that your bathroom renovation is about more than just new fixtures. It's about creating a space that starts and ends your day perfectly, designed around your routines and preferences.</p>
+                    <h3>Our comprehensive design-build approach delivers:</h3>
+                    <ul class="check-list">
+                        <li>Single-source accountability from design through construction</li>
+                        <li>Expert space planning for any size bathroom</li>
+                        <li>Premium materials with lasting quality</li>
+                        <li>Meticulous attention to waterproofing and ventilation</li>
+                    </ul>
+                    <a href="https://blbdesignbuild.com/contact-us/" class="btn">Tell Us About Your Project</a>
+                </div>
+                <div class="image-column">
+                    <img src="https://blbdesignbuild.com/wp-content/uploads/2025/03/Wilson_FREEBIRD-49.jpg" alt="Luxury bathroom remodel by BLB Design Build">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Services Included -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Complete Bathroom Transformation Services</h2>
+                <p>Every detail coordinated by one expert team, from initial design to final fixtures.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Design Consultation</h3>
+                    <p>Collaborative planning to maximize your space and create a bathroom that reflects your style</p>
+                </div>
+                <div class="service-card">
+                    <h3>Plumbing Coordination</h3>
+                    <p>Complete plumbing updates coordinated with licensed professionals for fixtures and water-efficient solutions</p>
+                </div>
+                <div class="service-card">
+                    <h3>Tile & Stone Work</h3>
+                    <p>Expert coordination of flooring, shower surrounds, and decorative tile installation</p>
+                </div>
+                <div class="service-card">
+                    <h3>Vanity Selection</h3>
+                    <p>Guiding selection and coordinating installation of storage solutions with premium countertops</p>
+                </div>
+                <div class="service-card">
+                    <h3>Shower & Tub Systems</h3>
+                    <p>From walk-in showers to freestanding tubs, coordinating your perfect bathing experience</p>
+                </div>
+                <div class="service-card">
+                    <h3>Lighting Design</h3>
+                    <p>Layered lighting solutions coordinated for task, ambient, and accent illumination</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ventilation & Heating</h3>
+                    <p>Proper moisture control and comfort systems including heated floor coordination</p>
+                </div>
+                <div class="service-card">
+                    <h3>Accessibility Features</h3>
+                    <p>Universal design options for aging in place and enhanced safety coordination</p>
+                </div>
+            </div>
+            
+            <div class="center-button">
+                <a href="https://blbdesignbuild.com/contact-us/" class="btn">Ready to Start? Let's Talk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: The Process -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Bathroom Renovation Journey</h2>
+                <p>A streamlined process that makes your renovation as smooth as possible</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <h3>Initial Consultation</h3>
+                    <p>We explore your vision, needs, and investment parameters</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <h3>Design Development</h3>
+                    <p>3D renderings and detailed material selections bring your ideas to life</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <h3>Detailed Proposal</h3>
+                    <p>Transparent pricing with every element clearly outlined</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <h3>Expert Construction</h3>
+                    <p>Master craftsmen execute your design with precision</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">5</div>
+                    <h3>Final Inspection</h3>
+                    <p>Thorough walkthrough of your stunning new bathroom</p>
+                </div>
+            </div>
+            
+            <div class="center-button">
+                <a href="https://blbdesignbuild.com/contact-us/" class="btn">Schedule Your Discovery Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Portfolio Gallery -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Bathroom Transformations Across the North Shore</h2>
+                <p>From powder rooms to master suites – experience our attention to detail</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://blbdesignbuild.com/wp-content/uploads/2025/09/4M4A0929-Enhanced-NR.jpg" alt="Master bathroom renovation">
+                    <div class="portfolio-overlay">
+                        <p>Master Suite Retreat<br>Spa-inspired design with freestanding tub</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://blbdesignbuild.com/wp-content/uploads/2025/09/4M4A1004-Enhanced-NR.jpg" alt="Modern bathroom design">
+                    <div class="portfolio-overlay">
+                        <p>Contemporary Elegance<br>Clean lines with luxury finishes</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://blbdesignbuild.com/wp-content/uploads/2025/09/4M4A0923-Enhanced-NR.jpg" alt="Traditional bathroom remodel">
+                    <div class="portfolio-overlay">
+                        <p>Classic Transformation<br>Timeless design with modern amenities</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://blbdesignbuild.com/wp-content/uploads/2025/09/4M4A0943-Enhanced-NR.jpg" alt="Guest bathroom renovation">
+                    <div class="portfolio-overlay">
+                        <p>Luxurious Master Bath<br>Elegant design with premium finishes</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://blbdesignbuild.com/wp-content/uploads/2025/01/88HighStreet_FREEBIRD-77-copy.jpg" alt="Luxury shower installation">
+                    <div class="portfolio-overlay">
+                        <p>Walk-In Shower Suite<br>Barrier-free luxury with custom tile</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://blbdesignbuild.com/wp-content/uploads/2024/12/2.png" alt="Double vanity bathroom">
+                    <div class="portfolio-overlay">
+                        <p>Dual Vanity Design<br>His and hers with ample storage</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="two-buttons">
+                <a href="https://blbdesignbuild.com/work/" class="btn">See More Projects</a>
+                <a href="https://blbdesignbuild.com/contact-us/" class="btn btn-outline">Start Your Transformation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Bathroom Clients Say</h2>
+                <p>Real stories from North Shore homeowners who love their new bathrooms</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Earlier this year we chose BLB Builders to renovate our master bathroom. Our decision was based on the outstanding experience our daughter had with BLB during her own basement and exterior renovation in Newburyport."
+                    </p>
+                    <p class="testimonial-author">– Newburyport Family</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "We recently completed a full bathroom redesign and remodel with BLB, and from start to finish, the experience was exceptional. Every member of the BLB team went above and beyond at every stage of the project."
+                    </p>
+                    <p class="testimonial-author">– North Shore Homeowner</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Exceptional service! Remodeled both bathrooms flawlessly - on budget, outstanding craftsmanship. Our project manager Alison was professional, communicative and detail-oriented. Highly recommend without hesitation."
+                    </p>
+                    <p class="testimonial-author">– Amesbury Resident</p>
+                </div>
+            </div>
+            
+            <div class="two-buttons">
+                <a href="https://blbdesignbuild.com/testimonials/" class="btn">Read More Reviews</a>
+                <a href="https://blbdesignbuild.com/contact-us/" class="btn btn-outline">Experience BLB Quality</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Bathroom Remodeling Questions? We Have Answers.</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">How much does a bathroom remodel cost in the North Shore area?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Bathroom remodeling investments vary based on size, scope, and material selections. A powder room update requires different resources than a master suite transformation. During our consultation, we'll discuss your vision and provide a detailed, transparent proposal tailored to your specific project and budget goals. <a href="https://blbdesignbuild.com/contact-us/">Schedule a consultation</a> to get a personalized estimate.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How long will my bathroom remodel take?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Timeline depends entirely on your project's scope. A simple refresh with new fixtures and finishes moves quickly, while complete renovations with layout changes require more time for proper execution. We'll provide a detailed schedule during planning and pride ourselves on staying on track. <a href="https://blbdesignbuild.com/contact-us/">Contact us</a> to discuss your specific timeline needs.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Do you handle all permits and inspections?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, we manage all permits, inspections, and code compliance as part of our comprehensive service. Our team knows North Shore building requirements inside and out, ensuring your project meets all regulations for plumbing, electrical, and structural work. You won't need to navigate municipal requirements yourself.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can you work with small bathrooms?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely. Small bathrooms are some of our favorite challenges. Through clever design, strategic storage solutions, and proper fixture selection, we can make even the tightest spaces feel luxurious and functional. We've transformed countless powder rooms and small master baths throughout the North Shore.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What areas do you serve?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We proudly serve the entire North Shore and Merrimack Valley, including: Amesbury, Newburyport, Newbury, West Newbury, Salisbury, Seabrook, Georgetown, Groveland, Rowley, Ipswich, Essex, Haverhill, Merrimac, Boxford, Topsfield, and surrounding communities. Based in Amesbury, we typically work within a 30-minute radius.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="center-button">
+                <a href="https://blbdesignbuild.com/contact-us/" class="btn">Still Have Questions? Ask Us Anything</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Meet the Team -->
+    <section class="team">
+        <div class="container">
+            <div class="two-column">
+                <div class="content-column">
+                    <h2>Meet the BLB Team</h2>
+                    <p>Led by Ben Becker, our team brings together master craftsmen, innovative designers, and project management professionals who share a passion for transforming homes. With roots in multi-generational craftsmanship and a commitment to modern excellence, we've been honored with numerous awards including Best of Houzz, Chrysalis Awards, and Pro NE recognition.</p>
+                    <p>What sets us apart isn't just our technical expertise – it's our belief that your home renovation is about more than construction. It's about enhancing your lifestyle, protecting your investment, and creating spaces where memories are made. That's what we mean by going "Beyond the Build."</p>
+                    <div class="two-buttons" style="justify-content: flex-start;">
+                        <a href="https://blbdesignbuild.com/team/" class="btn">Meet Our Team</a>
+                        <a href="https://blbdesignbuild.com/about/" class="btn btn-outline">Our Story</a>
+                    </div>
+                </div>
+                <div class="image-column">
+                    <img src="https://blbdesignbuild.com/wp-content/uploads/2025/05/team-photo-25.png" alt="BLB Design Build team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Create Your Dream Bathroom?</h2>
+            <p>Let's discuss how we can transform your bathroom into the perfect retreat.</p>
+            <a href="https://blbdesignbuild.com/contact-us/" class="btn btn-white">Schedule Your Free Consultation</a>
+            <p class="final-cta-footer">Trusted by North Shore homeowners since 2012 | Five-Star Rated | Award-Winning Design-Build</p>
+        </div>
+    </section>
+
+    <!-- Optional: Embedded Form Section (Hidden by default, can be triggered by button click) -->
+    <section id="contact-form" class="form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Start Your Bathroom Transformation</h2>
+                <p>Tell us about your project and we'll be in touch within 24 hours</p>
+            </div>
+            <div class="form-container">
+                <iframe
+                    src="https://link.amconnect.io/widget/form/EbQuosYMDTFgaGT82CfX"
+                    style="width:100%;height:1320px;border:none;border-radius:4px"
+                    id="inline-EbQuosYMDTFgaGT82CfX" 
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Bathroom Remodeling Consultation"
+                    data-height="1320"
+                    data-layout-iframe-id="inline-EbQuosYMDTFgaGT82CfX"
+                    data-form-id="EbQuosYMDTFgaGT82CfX"
+                    title="Bathroom Remodeling Consultation Form">
+                </iframe>
+                <script src="https://link.amconnect.io/js/form_embed.js"></script>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+                
+                // Close other open FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Optional: Show form when specific buttons are clicked
+        function showContactForm() {
+            document.getElementById('contact-form').classList.add('active');
+            document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'all 0.8s ease';
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
