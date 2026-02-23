@@ -1,0 +1,888 @@
+<!-- 
+===========================================
+NORTH SHORE HOME ADDITIONS
+BLB Design / Build - Spoke Page under North Shore Hub
+===========================================
+
+URL: /north-shore-remodeling/home-additions/
+Parent Hub: /north-shore-remodeling/
+
+PAGE TITLE: North Shore Home Additions | BLB Design/Build MA
+META DESCRIPTION: Home addition services for North Shore MA homeowners. BLB Design/Build coordinates second stories, in-law suites, and room additions across Newburyport, Amesbury & beyond.
+
+===========================================
+DIVI HERO GUIDANCE
+===========================================
+
+HERO IMAGE: 
+https://blbdesignbuild.com/wp-content/uploads/2022/04/HighlandProject_Freebird-88.jpg
+(Second story addition exterior - actual BLB project)
+
+H1 OPTIONS (pick one):
+Option A: "North Shore Home Additions"
+Option B: "Home Additions for North Shore Families"
+
+H2 SUBHEAD OPTIONS (pick one):
+Option A: "Expert design-build coordination for second stories, in-law suites, and room additions across Newburyport, Amesbury, and North Shore communities."
+Option B: "More room without leaving the neighborhood you love. Design-build addition services for homes across the North Shore and Merrimack Valley."
+
+CTA BUTTON: "Tell Us About Your Project" → https://blbdesignbuild.com/contact-us/
+
+TRUST SIGNALS (optional, below CTA):
+Since 2012 | Five-Star Rated | Award-Winning Design-Build
+
+===========================================
+PAGE CONTENT STARTS BELOW (H2 level)
+===========================================
+-->
+
+<style>
+/* ========================================
+   BLB North Shore Home Additions
+   Namespace: .blb-ns-additions
+   ======================================== */
+
+/* CSS Custom Properties */
+:root {
+  --blb-black: #1a1a1a;
+  --blb-gray-dark: #555555;
+  --blb-gray-medium: #666666;
+  --blb-gray-light: #f8f8f8;
+  --blb-gray-button: #f1f1f1;
+  --blb-white: #ffffff;
+  --blb-header-bar: #b8b8ae;
+}
+
+/* Base Typography */
+.blb-ns-additions {
+  font-family: 'Messina Modern Light', sans-serif;
+  color: var(--blb-gray-dark);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.blb-ns-additions h2 {
+  font-family: 'Messina Modern Light', sans-serif !important;
+  font-weight: 400;
+  color: var(--blb-black);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.blb-ns-additions h3 {
+  font-family: 'Messina Modern Light', sans-serif !important;
+  font-weight: 400;
+  color: var(--blb-black);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.blb-ns-additions h4 {
+  font-family: 'Messina Modern Light', sans-serif !important;
+  font-weight: 400;
+  color: var(--blb-black);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.blb-ns-additions p {
+  margin-bottom: 1.25rem;
+  color: var(--blb-gray-dark);
+}
+
+.blb-ns-additions a {
+  color: var(--blb-black);
+  text-decoration: underline;
+}
+
+.blb-ns-additions a:hover {
+  opacity: 0.8;
+}
+
+/* Section Spacing */
+.blb-ns-additions-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blb-ns-additions-section.gray-bg {
+  background-color: var(--blb-gray-light);
+  max-width: 100%;
+  padding-left: calc((100% - 1200px) / 2 + 20px);
+  padding-right: calc((100% - 1200px) / 2 + 20px);
+}
+
+.blb-ns-additions-section.gray-bg .section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.blb-ns-additions .btn-primary {
+  display: inline-block;
+  background-color: var(--blb-black);
+  color: var(--blb-white);
+  padding: 15px 40px;
+  text-decoration: none;
+  font-family: 'Messina Sans', 'Messina Modern Light', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--blb-black);
+  transition: all 0.3s ease;
+}
+
+.blb-ns-additions .btn-primary:hover {
+  background-color: var(--blb-white);
+  color: var(--blb-black);
+}
+
+.blb-ns-additions .btn-outline {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--blb-black);
+  padding: 15px 40px;
+  text-decoration: none;
+  font-family: 'Messina Sans', 'Messina Modern Light', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--blb-black);
+  transition: all 0.3s ease;
+}
+
+.blb-ns-additions .btn-outline:hover {
+  background-color: var(--blb-black);
+  color: var(--blb-white);
+}
+
+/* Two Column Layout */
+.blb-ns-additions .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.blb-ns-additions .two-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Value Props List */
+.blb-ns-additions .value-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.blb-ns-additions .value-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.blb-ns-additions .value-list li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: var(--blb-black);
+}
+
+/* Types Grid */
+.blb-ns-additions .types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.blb-ns-additions .type-card {
+  background: var(--blb-white);
+  padding: 30px;
+  border: 1px solid #e5e5e5;
+}
+
+.blb-ns-additions .type-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Process Timeline */
+.blb-ns-additions .process-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.blb-ns-additions .process-step {
+  text-align: center;
+  position: relative;
+}
+
+.blb-ns-additions .step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--blb-black);
+  color: var(--blb-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-family: 'Messina Sans', sans-serif;
+  font-weight: 600;
+}
+
+.blb-ns-additions .process-step h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.blb-ns-additions .process-step p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Considerations Grid */
+.blb-ns-additions .considerations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.blb-ns-additions .consideration-card {
+  background: var(--blb-white);
+  padding: 30px;
+  border: 1px solid #e5e5e5;
+}
+
+.blb-ns-additions .consideration-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.blb-ns-additions .consideration-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Gallery Grid */
+.blb-ns-additions .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.blb-ns-additions .gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.blb-ns-additions .gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.blb-ns-additions .gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.blb-ns-additions .gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(26, 26, 26, 0.85);
+  color: var(--blb-white);
+  padding: 15px;
+  font-size: 0.9rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.blb-ns-additions .gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+}
+
+/* Testimonials */
+.blb-ns-additions .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.blb-ns-additions .testimonial-card {
+  background: var(--blb-white);
+  padding: 30px;
+  border: 1px solid #e5e5e5;
+}
+
+.blb-ns-additions .testimonial-stars {
+  color: #d4a853;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.blb-ns-additions .testimonial-card blockquote {
+  font-style: italic;
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.blb-ns-additions .testimonial-author {
+  font-size: 0.9rem;
+  color: var(--blb-black);
+  font-weight: 400;
+}
+
+/* Service Area Towns */
+.blb-ns-additions .towns-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.blb-ns-additions .town-item {
+  background: var(--blb-white);
+  padding: 15px 20px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  font-size: 0.95rem;
+}
+
+/* FAQ Accordion */
+.blb-ns-additions .faq-list {
+  margin-top: 30px;
+}
+
+.blb-ns-additions .faq-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blb-ns-additions .faq-question {
+  padding: 20px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Messina Modern Light', sans-serif;
+  font-size: 1.1rem;
+  color: var(--blb-black);
+}
+
+.blb-ns-additions .faq-question::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.blb-ns-additions .faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.blb-ns-additions .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.blb-ns-additions .faq-item.active .faq-answer {
+  max-height: 500px;
+}
+
+.blb-ns-additions .faq-answer p {
+  padding-bottom: 20px;
+}
+
+/* Team Section */
+.blb-ns-additions .team-section .two-col {
+  align-items: start;
+}
+
+.blb-ns-additions .team-section img {
+  max-width: 100%;
+}
+
+/* Final CTA */
+.blb-ns-additions .final-cta {
+  background-color: var(--blb-gray-light);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.blb-ns-additions .final-cta h2 {
+  margin-bottom: 0.75rem;
+}
+
+.blb-ns-additions .final-cta p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.blb-ns-additions .final-cta .btn-primary {
+  margin-bottom: 40px;
+}
+
+.blb-ns-additions .trust-footer {
+  margin-top: 0;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+  color: var(--blb-gray-medium);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button Group */
+.blb-ns-additions .btn-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .blb-ns-additions .two-col {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .blb-ns-additions .types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blb-ns-additions .process-timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blb-ns-additions .considerations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blb-ns-additions .towns-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blb-ns-additions .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .blb-ns-additions h2 {
+    font-size: 1.8rem;
+  }
+
+  .blb-ns-additions-section {
+    padding: 40px 20px;
+  }
+
+  .blb-ns-additions .types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blb-ns-additions .process-timeline {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .blb-ns-additions .considerations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blb-ns-additions .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blb-ns-additions .gallery-item img {
+    height: 250px;
+  }
+
+  .blb-ns-additions .towns-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blb-ns-additions .btn-group {
+    flex-direction: column;
+  }
+
+  .blb-ns-additions .btn-primary,
+  .blb-ns-additions .btn-outline {
+    text-align: center;
+    width: 100%;
+  }
+}
+</style>
+
+<div class="blb-ns-additions">
+
+  <!-- ========================================
+       SECTION 1: INTRODUCTION / PROBLEM-SOLUTION
+       ======================================== -->
+  <section class="blb-ns-additions-section">
+    <div class="two-col">
+      <div>
+        <h2>Your North Shore Home Has Room to Grow</h2>
+        <p>You chose the North Shore for a reason - the coastal communities, the walkable downtowns, the neighbors who've become friends. When your family outgrows the house, the answer isn't always starting over somewhere new. For many homeowners we work with across Newburyport, Amesbury, and surrounding towns, the better path is expanding the home they already love.</p>
+        <p>BLB Design / Build coordinates home additions from concept through completion. One team manages design, permitting, and construction so you're not juggling an architect, a designer, and a general contractor who've never worked together.</p>
+        <ul class="value-list">
+          <li>One team coordinating design through construction</li>
+          <li>Experience with older North Shore homes and local building requirements</li>
+          <li>Transparent pricing with detailed planning before quoting</li>
+          <li>Your home treated with the same respect we'd give our own</li>
+        </ul>
+        <a href="https://blbdesignbuild.com/contact-us/" class="btn-primary">Tell Us About Your Project</a>
+      </div>
+      <div>
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2024/01/314Haverhill_FREEBIRD-120.jpg" alt="" width="1080" height="720" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       SECTION 2: TYPES OF ADDITIONS
+       ======================================== -->
+  <section class="blb-ns-additions-section gray-bg">
+    <div class="section-inner">
+      <h2>Types of Home Additions for North Shore Homes</h2>
+      <p>Every addition project starts with a different need. Here's how we help North Shore families expand their homes - whether you're dealing with a tight lot, an aging colonial, or a growing family.</p>
+
+      <div class="types-grid">
+        <div class="type-card">
+          <h3>Second Story Additions</h3>
+          <p>Add a full floor without expanding your footprint. Ideal for North Shore properties where lot size or setback requirements limit ground-level expansion. We coordinate structural engineering, design integration, and construction to blend the new floor with your existing home. <a href="https://blbdesignbuild.com/north-shore-remodeling/second-story-additions/">Learn more about second story additions</a>.</p>
+        </div>
+
+        <div class="type-card">
+          <h3>In-Law Suites and ADUs</h3>
+          <p>Create independent living space for aging parents or adult children. These additions balance privacy with proximity, often including a separate entrance, kitchenette, and full bath. Massachusetts zoning changes have made ADUs more accessible for many North Shore properties.</p>
+        </div>
+
+        <div class="type-card">
+          <h3>First Floor Master Suites</h3>
+          <p>Plan ahead for aging in place with a main-level bedroom and accessible bath. Popular with North Shore homeowners in two-story colonials and capes who want to stay in their home long-term without navigating stairs every day.</p>
+        </div>
+
+        <div class="type-card">
+          <h3>Room Additions</h3>
+          <p>Expand your kitchen, add a family room, or create a sunroom that brings the outdoors in. Room additions solve specific space problems for daily living and entertaining - particularly valuable for the smaller floor plans common in older North Shore homes.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px;">
+        <a href="https://blbdesignbuild.com/contact-us/" class="btn-primary">Discuss Your Addition Project</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       SECTION 3: NORTH SHORE CONSIDERATIONS
+       ======================================== -->
+  <section class="blb-ns-additions-section">
+    <h2>What Makes North Shore Additions Different</h2>
+    <p>Adding onto a home built in the 1800s is different from expanding a 1990s subdivision house. The North Shore's housing stock, local regulations, and coastal climate create specific considerations that require experience to navigate well.</p>
+
+    <div class="considerations-grid">
+      <div class="consideration-card">
+        <h3>Older Home Structures</h3>
+        <p>Many North Shore homes were built decades or centuries ago. Adding onto them requires understanding how older framing, foundations, and systems work - and how to tie new construction into existing structures without compromising what's already there. We've worked on colonials, capes, victorians, and mid-century ranches across the area.</p>
+      </div>
+
+      <div class="consideration-card">
+        <h3>Local Zoning and Permitting</h3>
+        <p>Setback requirements, lot coverage limits, and height restrictions vary by town and zone across the North Shore. Historic districts in communities like Newburyport add another layer of review. We research these constraints early and give you an honest assessment of what's possible on your specific property.</p>
+      </div>
+
+      <div class="consideration-card">
+        <h3>Matching Existing Character</h3>
+        <p>The goal isn't a visible addition - it's an expansion that looks like it was always part of the home. North Shore neighborhoods have distinct architectural character, and a well-designed addition should complement it. Our <a href="https://blbdesignbuild.com/design-build-process/">design-build approach</a> keeps design and construction aligned so the finished project blends naturally.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 30px;">Working with <a href="https://blbdesignbuild.com/north-shore-remodeling/historic-home-renovations/">historic homes on the North Shore</a> is something our team has real experience with. The knowledge that comes from opening up walls in homes built across different eras helps us plan more accurately and avoid the surprises that catch less experienced teams off guard.</p>
+  </section>
+
+
+  <!-- ========================================
+       SECTION 4: DESIGN-BUILD PROCESS
+       ======================================== -->
+  <section class="blb-ns-additions-section gray-bg">
+    <div class="section-inner">
+      <h2>How Your Home Addition Comes Together</h2>
+      <p>A proven process that takes the guesswork out of your project. Learn more about our <a href="https://blbdesignbuild.com/design-build-process/">design-build approach</a>.</p>
+
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h4>Discovery Call</h4>
+          <p>We listen to your vision, needs, and goals for the project</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h4>Design Phase</h4>
+          <p>Collaborative planning that balances your vision with practical realities</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h4>Detailed Proposal</h4>
+          <p>Comprehensive scope, specifications, and transparent pricing</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h4>Permitting and Construction</h4>
+          <p>We coordinate permits and guide the build with regular updates</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h4>Final Walkthrough</h4>
+          <p>Complete review ensuring every detail meets expectations</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="https://blbdesignbuild.com/contact-us/" class="btn-primary">Start Your Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       SECTION 5: PORTFOLIO GALLERY
+       ======================================== -->
+  <section class="blb-ns-additions-section">
+    <h2>Home Addition Projects</h2>
+    <p>A look at the craftsmanship and attention to detail BLB Design / Build brings to every addition project.</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2022/04/HighlandProject_Freebird-88.jpg" alt="" width="1080" height="720" loading="lazy">
+        <div class="gallery-caption">
+          <h4>Second Story Addition</h4>
+          <p>Full floor addition with integrated design</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2024/01/314Haverhill_FREEBIRD-3.jpg" alt="" width="1080" height="720" loading="lazy">
+        <div class="gallery-caption">
+          <h4>Expanded Living Space</h4>
+          <p>Open concept addition for family gatherings</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2025/03/Wilson_FREEBIRD-22.jpg" alt="" width="1080" height="720" loading="lazy">
+        <div class="gallery-caption">
+          <h4>Primary Suite Addition</h4>
+          <p>Main-level bedroom with custom details</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2023/12/314Haverhill_FREEBIRD-129.jpg" alt="" width="1080" height="720" loading="lazy">
+        <div class="gallery-caption">
+          <h4>Great Room Addition</h4>
+          <p>Vaulted ceilings with architectural detail</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2025/09/314Haverhill_FREEBIRD-9.jpg" alt="" width="1080" height="720" loading="lazy">
+        <div class="gallery-caption">
+          <h4>Entry Expansion</h4>
+          <p>Welcoming foyer with custom millwork</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2025/08/4M4A0763-Enhanced-NR.jpg" alt="" width="1080" height="720" loading="lazy">
+        <div class="gallery-caption">
+          <h4>Functional Addition</h4>
+          <p>Mudroom with built-in storage</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-group" style="justify-content: center;">
+      <a href="https://blbdesignbuild.com/work/" class="btn-outline">View Our Portfolio</a>
+      <a href="https://blbdesignbuild.com/contact-us/" class="btn-primary">Start Your Addition</a>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       SECTION 6: TESTIMONIALS
+       ======================================== -->
+  <section class="blb-ns-additions-section gray-bg">
+    <div class="section-inner">
+      <h2>What Our Clients Say</h2>
+      <p>Real stories from homeowners who trusted BLB with their projects.</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"We recently renovated my mother's single-family home back to a two-family to allow for generational living and thinking about the future. We did have some surprises due to the age of the house, but Ben offered solid solutions that worked and helped keep extra costs down. Our new house is beautiful and my mom is loving her space as well."</blockquote>
+          <div class="testimonial-author">- Lisa S.</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"BLB worked with me to renovate my home which was originally built around 1850. Ben did a great job providing me with a very detailed cost estimate, and change orders as the job progressed. The reconstruction and craftsmanship are outstanding, and well-matched to retain the character of my colonial home."</blockquote>
+          <div class="testimonial-author">- Lisa S.</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"The crew was outstanding, cooperative, helpful, knowledgeable, and very neat. Because we had to live through the construction it would have been difficult had Ben not coordinated the outside contractors to meet the deadline. BLB does quality work and was supervised to make sure we were pleased throughout the project."</blockquote>
+          <div class="testimonial-author">- Janine C.</div>
+        </div>
+      </div>
+
+      <div class="btn-group" style="justify-content: center; margin-top: 40px;">
+        <a href="https://blbdesignbuild.com/testimonials/" class="btn-outline">Read More Reviews</a>
+        <a href="https://blbdesignbuild.com/contact-us/" class="btn-primary">Experience BLB Quality</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       SECTION 7: SERVICE AREA
+       ======================================== -->
+  <section class="blb-ns-additions-section">
+    <h2>North Shore Communities We Serve</h2>
+    <p>BLB Design / Build is based in Amesbury, MA, coordinating home additions for homeowners throughout the North Shore and Merrimack Valley. Explore all of our <a href="https://blbdesignbuild.com/north-shore-remodeling/">North Shore remodeling services</a>.</p>
+
+    <div class="towns-grid">
+      <div class="town-item">Newburyport</div>
+      <div class="town-item">Amesbury</div>
+      <div class="town-item">West Newbury</div>
+      <div class="town-item">Newbury</div>
+      <div class="town-item">Salisbury</div>
+      <div class="town-item">Georgetown</div>
+      <div class="town-item">Rowley</div>
+      <div class="town-item">Boxford</div>
+      <div class="town-item">Groveland</div>
+      <div class="town-item">Merrimac</div>
+    </div>
+
+    <p style="margin-top: 30px;">We also coordinate <a href="https://blbdesignbuild.com/kitchen-remodeling/">kitchen remodeling</a>, <a href="https://blbdesignbuild.com/north-shore-remodeling/bathroom-remodeling/">bathroom renovations</a>, and <a href="https://blbdesignbuild.com/whole-homes/">whole-home remodeling</a> for North Shore homeowners. Each project gets the same design-build coordination and attention to detail.</p>
+  </section>
+
+
+  <!-- ========================================
+       SECTION 8: FAQ
+       ======================================== -->
+  <section class="blb-ns-additions-section gray-bg">
+    <div class="section-inner">
+      <h2>Home Addition Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">Do I need permits for a home addition on the North Shore?</div>
+          <div class="faq-answer">
+            <p>Yes. All additions require building permits, and most require review by the local planning or zoning board. Setback requirements, lot coverage limits, and height restrictions vary by town. In historic districts like those in Newburyport, additional approvals from the historical commission may apply. We coordinate the entire permit process, including applications, plans, and town meetings when required.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What if you discover hidden issues when you open the walls?</div>
+          <div class="faq-answer">
+            <p>Older homes sometimes have surprises: outdated wiring, inadequate framing, or previous repairs done poorly. When we encounter issues, we discuss options and costs with you before proceeding. Our detailed discovery process minimizes surprises, but we plan for contingencies and communicate openly when they arise. No work proceeds without your approval.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I know if my lot can accommodate an addition?</div>
+          <div class="faq-answer">
+            <p>Setback requirements, lot coverage limits, and height restrictions vary by town and zone across the North Shore. Sometimes a creative design solution works around tight restrictions. Sometimes the numbers don't work, and a <a href="https://blbdesignbuild.com/north-shore-remodeling/second-story-additions/">second story addition</a> makes more sense than building out. We research these constraints early and give you an honest assessment during your <a href="https://blbdesignbuild.com/contact-us/">discovery call</a> before you invest in detailed plans.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What's the difference between design-build and hiring an architect separately?</div>
+          <div class="faq-answer">
+            <p>With design-build, one company coordinates both design and construction. This creates accountability, streamlines communication, and typically reduces cost and timeline. When you hire an architect separately, you're managing two relationships and hoping they work well together. Design-build works especially well for additions, where construction realities need to inform design decisions from the start. <a href="https://blbdesignbuild.com/design-build-process/">Learn more about our process</a>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can you match the style of my existing home with a new addition?</div>
+          <div class="faq-answer">
+            <p>That's the goal. A well-designed addition should look like it was always part of the home, not a visible afterthought. Our design-build approach means the team designing your addition understands exactly how it will be constructed. This is especially important with older North Shore homes where matching rooflines, siding profiles, trim details, and window proportions requires careful coordination between design and construction.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <a href="https://blbdesignbuild.com/contact-us/" class="btn-primary">Still Have Questions? Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       SECTION 9: MEET THE TEAM
+       ======================================== -->
+  <section class="blb-ns-additions-section team-section">
+    <div class="two-col">
+      <div>
+        <h2>Meet the BLB Team</h2>
+        <p>Led by Ben Becker, our team brings together experienced craftsmen, thoughtful designers, and project management professionals who share a passion for transforming homes. With roots in multi-generational craftsmanship and a commitment to modern excellence, we've been honored with numerous awards including Best of Houzz, Chrysalis Awards, and Pro NE recognition.</p>
+        <p>What sets us apart isn't just our technical expertise - it's our belief that your home renovation is about more than construction. It's about enhancing your lifestyle, protecting your investment, and creating spaces where memories are made. That's what we mean by going "Beyond the Build."</p>
+        <p>We also coordinate <a href="https://blbdesignbuild.com/home-additions/">home addition services</a> beyond the North Shore. Visit our main additions page to learn more about our full range of design-build addition capabilities.</p>
+        <div class="btn-group">
+          <a href="https://blbdesignbuild.com/team/" class="btn-outline">Meet Our Team</a>
+          <a href="https://blbdesignbuild.com/about/" class="btn-outline">Our Story</a>
+        </div>
+      </div>
+      <div>
+        <img src="https://blbdesignbuild.com/wp-content/uploads/2024/12/December2024_BLB-11.jpg" alt="" width="1080" height="720" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       SECTION 10: FINAL CTA
+       ======================================== -->
+  <section class="blb-ns-additions-section final-cta" style="max-width: 100%;">
+    <h2>Ready to Discuss Your Addition?</h2>
+    <p>Let's have a conversation about what you need, what's realistic for your property, and how we can help make it happen.</p>
+    <a href="https://blbdesignbuild.com/contact-us/" class="btn-primary">Schedule Your Discovery Call</a>
+    <div class="trust-footer">
+      Trusted by North Shore homeowners since 2012 | Five-Star Rated | Award-Winning Design-Build
+    </div>
+  </section>
+
+</div>
+
+<!-- FAQ Accordion Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var faqItems = document.querySelectorAll('.blb-ns-additions .faq-item');
+  faqItems.forEach(function(item) {
+    var question = item.querySelector('.faq-question');
+    if (question) {
+      question.addEventListener('click', function() {
+        var isActive = item.classList.contains('active');
+        faqItems.forEach(function(i) { i.classList.remove('active'); });
+        if (!isActive) { item.classList.add('active'); }
+      });
+    }
+  });
+});
+</script>
