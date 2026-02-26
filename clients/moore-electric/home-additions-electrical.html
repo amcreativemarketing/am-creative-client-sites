@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Addition Electrical Work in NH, MA & ME | Moore Electric Inc.</title>
+    <meta name="description" content="Electrical work for home additions by a licensed Master Electrician. Panel upgrades, wiring, permits, and inspections handled start to finish. Serving NH, MA & ME.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --moore-teal: #0B4B4B;
+            --moore-teal-dark: #093C3C;
+            --moore-gold: #C9A227;
+            --moore-gold-dark: #A8891F;
+            --moore-gold-light: #E8D48A;
+            --moore-cream: #F2F0EA;
+            --moore-gray: #C7D0D0;
+            --moore-gray-dark: #9BABAB;
+            --moore-text: #0C2424;
+            --moore-text-light: #FFFFFF;
+            --moore-text-muted: #4A5F5F;
+            --section-padding: clamp(60px, 8vw, 100px);
+            --container-max: 1200px;
+            --shadow-sm: 0 2px 8px rgba(12,36,36,0.06);
+            --shadow-md: 0 4px 20px rgba(12,36,36,0.08);
+            --shadow-lg: 0 8px 40px rgba(12,36,36,0.12);
+            --transition-fast: 0.2s ease;
+            --transition-med: 0.3s ease;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--moore-text);
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--moore-teal); text-decoration: none; transition: color var(--transition-fast); }
+        a:hover { color: var(--moore-gold); }
+        h1, h2, h3, h4 { font-family: 'Raleway', sans-serif; font-weight: 700; line-height: 1.2; color: var(--moore-text); }
+        h1 { font-size: clamp(2.25rem, 5vw, 3.25rem); letter-spacing: -0.02em; }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); font-weight: 600; }
+        p { margin-bottom: 1.25rem; }
+        p:last-child { margin-bottom: 0; }
+        .lead { font-size: 1.25rem; color: var(--moore-text-muted); line-height: 1.6; }
+        .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+        section { padding: var(--section-padding) 0; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-med);
+            text-decoration: none;
+        }
+        .btn--primary { background: var(--moore-teal); color: var(--moore-text-light) !important; border-color: var(--moore-teal); }
+        .btn--primary:hover { background: var(--moore-teal-dark); border-color: var(--moore-teal-dark); color: var(--moore-text-light) !important; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn--gold { background: var(--moore-gold); color: var(--moore-text) !important; border-color: var(--moore-gold); }
+        .btn--gold:hover { background: var(--moore-gold-dark); border-color: var(--moore-gold-dark); color: var(--moore-text) !important; transform: translateY(-2px); }
+        .btn--white { background: var(--moore-text-light); color: var(--moore-teal) !important; border-color: var(--moore-text-light); }
+        .btn--white:hover { background: var(--moore-cream); color: var(--moore-teal-dark) !important; }
+        .btn--outline-white { background: transparent; color: var(--moore-text-light) !important; border-color: var(--moore-text-light); }
+        .btn--outline-white:hover { background: var(--moore-text-light); color: var(--moore-teal) !important; }
+        .btn svg { width: 18px; height: 18px; }
+
+        /* Trust Bar */
+        .trust-bar { background: var(--moore-cream); border-bottom: 1px solid rgba(12,36,36,0.08); padding: 16px 0; }
+        .trust-bar__inner { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 32px; }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--moore-text);
+            letter-spacing: 0.5px;
+        }
+        .trust-item svg { width: 16px; height: 16px; color: var(--moore-gold); flex-shrink: 0; }
+        .trust-item--highlight { background: var(--moore-gold); color: var(--moore-text); padding: 6px 14px; border-radius: 4px; }
+        .trust-item--highlight svg { color: var(--moore-text); }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%);
+            color: var(--moore-text-light);
+            padding: clamp(80px, 12vw, 140px) 0;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        @media (min-width: 900px) { .hero__grid { grid-template-columns: 1.1fr 0.9fr; gap: 64px; } }
+        .hero__content { animation: fadeInUp 0.8s ease-out; }
+        .hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201,162,39,0.15);
+            border: 1px solid rgba(201,162,39,0.3);
+            color: #C9A227 !important;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+        }
+        .hero__title { color: #FFFFFF !important; margin-bottom: 20px; }
+        .hero__subtitle {
+            font-size: clamp(1.125rem, 2.5vw, 1.35rem);
+            color: rgba(255,255,255,0.85) !important;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            max-width: 540px;
+        }
+        .hero__content h1, .hero__content p { color: #FFFFFF !important; }
+        .hero__content .hero__subtitle { color: rgba(255,255,255,0.85) !important; }
+        .hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+        .hero__image { position: relative; animation: fadeIn 1s ease-out 0.3s both; }
+        .hero__image img { border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .hero__image-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -10px;
+            background: var(--moore-gold);
+            color: var(--moore-text);
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+        .hero__image-badge-number { font-family: 'Raleway', sans-serif; font-size: 2rem; font-weight: 700; line-height: 1; }
+        .hero__image-badge-text { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        @media (max-width: 899px) {
+            .hero__image { max-width: 500px; margin: 0 auto; }
+            .hero__image-badge { bottom: -16px; right: 10px; padding: 12px 18px; }
+            .hero__image-badge-number { font-size: 1.5rem; }
+        }
+
+        /* Intro */
+        .intro { background: #fff; }
+        .intro__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+        @media (min-width: 900px) { .intro__grid { grid-template-columns: 1fr 1fr; gap: 64px; } }
+        .intro__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .intro__checklist { list-style: none; margin-top: 24px; }
+        .intro__checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(12,36,36,0.07);
+            font-size: 1.0625rem;
+            color: var(--moore-text-muted);
+        }
+        .intro__checklist li:last-child { border-bottom: none; }
+        .intro__checklist li svg { width: 20px; height: 20px; color: var(--moore-gold); flex-shrink: 0; margin-top: 3px; }
+        .intro__stat-box {
+            background: var(--moore-cream);
+            border-radius: 8px;
+            padding: 40px;
+            border-left: 4px solid var(--moore-gold);
+        }
+        .intro__stat-box h3 { margin-bottom: 16px; }
+        .intro__stat-box p { color: var(--moore-text-muted); font-size: 1.0625rem; }
+
+        /* Services Grid */
+        .services { background: var(--moore-cream); }
+        .services__header { text-align: center; max-width: 700px; margin: 0 auto 56px; }
+        .services__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        @media (min-width: 900px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+        .service-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-med);
+            border: 1px solid transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(201,162,39,0.2);
+        }
+        .service-card__icon {
+            width: 48px;
+            height: 48px;
+            background: var(--moore-gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .service-card__icon svg { width: 24px; height: 24px; color: var(--moore-text); }
+        .service-card__title { font-size: 1.125rem; margin-bottom: 12px; color: var(--moore-text); }
+        .service-card__text { font-size: 16px; color: var(--moore-text-muted); line-height: 1.6; }
+        .service-card__text a { font-weight: 600; }
+
+        /* Kitchen Bath Table Section */
+        .kitchen-bath { background: #fff; }
+        .kitchen-bath__header { text-align: center; max-width: 700px; margin: 0 auto 40px; }
+        .kitchen-bath__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .kitchen-bath__intro { max-width: 800px; margin: 0 auto 40px; text-align: center; color: var(--moore-text-muted); font-size: 1.0625rem; }
+        .service-table-wrap { overflow-x: auto; margin-top: 8px; }
+        .service-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .service-table thead { background: var(--moore-teal); color: var(--moore-text-light); }
+        .service-table thead th {
+            padding: 18px 24px;
+            text-align: left;
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .service-table tbody tr:nth-child(even) { background: var(--moore-cream); }
+        .service-table tbody tr:nth-child(odd) { background: #fff; }
+        .service-table tbody tr { border-bottom: 1px solid rgba(12,36,36,0.07); }
+        .service-table td {
+            padding: 18px 24px;
+            vertical-align: top;
+            color: var(--moore-text);
+            line-height: 1.6;
+        }
+        .service-table td:first-child { font-family: 'Raleway', sans-serif; font-weight: 600; color: var(--moore-teal); white-space: nowrap; }
+        .service-table td strong { color: var(--moore-text); }
+        @media (max-width: 600px) {
+            .service-table td, .service-table thead th { padding: 14px 16px; font-size: 0.9rem; }
+        }
+
+        /* Panel Band */
+        .panel-band {
+            background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%);
+            color: var(--moore-text-light);
+            text-align: center;
+            padding: clamp(48px, 8vw, 80px) 0;
+        }
+        .panel-band h2 { color: var(--moore-text-light); margin-bottom: 16px; }
+        .panel-band p { color: rgba(255,255,255,0.85); font-size: 1.125rem; max-width: 680px; margin: 0 auto 28px; }
+
+        /* Process */
+        .process { background: #fff; }
+        .process__header { text-align: center; max-width: 700px; margin: 0 auto 56px; }
+        .process__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .process-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media (min-width: 768px) { .process-grid { grid-template-columns: repeat(3, 1fr); } }
+        .process-step { text-align: center; position: relative; padding: 24px 16px; }
+        .process-step__number {
+            width: 56px;
+            height: 56px;
+            background: var(--moore-teal);
+            color: var(--moore-text-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        .process-step__title { margin-bottom: 12px; font-size: 1.125rem; }
+        .process-step__text { font-size: 16px; color: var(--moore-text-muted); }
+        @media (min-width: 768px) {
+            .process-step:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                top: 52px;
+                right: -12px;
+                width: 24px;
+                height: 2px;
+                background: var(--moore-gold);
+            }
+        }
+
+        /* Permits */
+        .permits { background: var(--moore-cream); }
+        .permits__header { text-align: center; max-width: 700px; margin: 0 auto 48px; }
+        .permits__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .permits-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media (min-width: 768px) { .permits-grid { grid-template-columns: repeat(3, 1fr); } }
+        .permit-card { background: #fff; border-radius: 8px; padding: 32px; box-shadow: var(--shadow-sm); }
+        .permit-card__state {
+            font-family: 'Raleway', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 12px;
+        }
+        .permit-card h3 { font-size: 1.125rem; margin-bottom: 12px; }
+        .permit-card p { font-size: 15px; color: var(--moore-text-muted); line-height: 1.6; }
+
+        /* Why Us */
+        .why-us { background: #fff; }
+        .why-us__header { text-align: center; max-width: 700px; margin: 0 auto 56px; }
+        .why-us__header .lead { margin-top: 16px; }
+        .why-us__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .why-us-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+        @media (min-width: 768px) { .why-us-grid { grid-template-columns: repeat(3, 1fr); } }
+        .why-card { text-align: center; padding: 24px; }
+        .why-card__icon {
+            width: 64px;
+            height: 64px;
+            background: var(--moore-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        .why-card__icon svg { width: 28px; height: 28px; color: var(--moore-teal); }
+        .why-card__title { margin-bottom: 12px; }
+        .why-card__text { color: var(--moore-text-muted); }
+
+        /* Related */
+        .related { background: var(--moore-cream); }
+        .related__header { text-align: center; max-width: 700px; margin: 0 auto 48px; }
+        .related__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        @media (min-width: 768px) { .related-grid { grid-template-columns: repeat(3, 1fr); } }
+        .related-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: all var(--transition-med);
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+        .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: rgba(201,162,39,0.2); }
+        .related-card__icon {
+            width: 40px;
+            height: 40px;
+            background: var(--moore-teal);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .related-card__icon svg { width: 20px; height: 20px; color: var(--moore-text-light); }
+        .related-card__text { font-family: 'Raleway', sans-serif; font-size: 15px; font-weight: 600; color: var(--moore-text); line-height: 1.3; }
+
+        /* Service Area */
+        .service-area { background: #fff; }
+        .service-area__header { text-align: center; max-width: 700px; margin: 0 auto 40px; }
+        .service-area__eyebrow {
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--moore-gold);
+            margin-bottom: 16px;
+        }
+        .service-area__towns { text-align: center; color: var(--moore-text-muted); font-size: 1.0625rem; line-height: 1.8; max-width: 900px; margin: 0 auto 32px; }
+        .service-area__licenses { text-align: center; background: var(--moore-cream); padding: 24px 32px; border-radius: 8px; display: inline-block; margin: 0 auto; box-shadow: var(--shadow-sm); }
+        .service-area__licenses-title { font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 600; color: var(--moore-text); margin-bottom: 8px; }
+        .service-area__licenses-list { font-size: 15px; color: var(--moore-text-muted); }
+        .service-area__center { text-align: center; }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%);
+            color: var(--moore-text-light);
+            padding: clamp(60px, 10vw, 100px) 0;
+        }
+        .final-cta__grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
+        @media (min-width: 768px) { .final-cta__grid { grid-template-columns: 1fr 1fr; } }
+        .final-cta h2 { color: var(--moore-text-light); margin-bottom: 16px; }
+        .final-cta p { color: rgba(255,255,255,0.85); font-size: 1.125rem; margin-bottom: 24px; }
+        .final-cta__contact { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 32px; }
+        .final-cta__contact-item { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+        .final-cta__contact-item:last-child { margin-bottom: 0; }
+        .final-cta__contact-icon { width: 48px; height: 48px; background: var(--moore-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .final-cta__contact-icon svg { width: 22px; height: 22px; color: var(--moore-text); }
+        .final-cta__contact-label { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+        .final-cta__contact-value { font-family: 'Raleway', sans-serif; font-size: 1.125rem; font-weight: 600; color: var(--moore-text-light); }
+        .final-cta__contact-value a { color: var(--moore-text-light); }
+        .final-cta__contact-value a:hover { color: var(--moore-gold); }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        @media (max-width: 600px) {
+            .services-grid, .related-grid { grid-template-columns: 1fr; }
+            .trust-bar__inner { gap: 8px 16px; }
+            .trust-item { font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-bar__inner">
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    Master Electrician
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    25+ Years Experience
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Licensed in MA, NH & ME
+                </div>
+                <div class="trust-item trust-item--highlight">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    5.0 Google Rating
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__grid">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        Home Addition Electrical
+                    </div>
+                    <h1 class="hero__title">Electrical Work for Home Additions in NH, MA & ME</h1>
+                    <p class="hero__subtitle">Adding a room, garage, or in-law suite changes what your electrical system has to handle. Moore Electric Inc. is your home addition electrical contractor in NH, MA, and ME - handling wiring, panel upgrades, permits, and inspections start to finish, by a licensed Master Electrician.</p>
+                    <div class="hero__ctas">
+                        <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            Get a Free Estimate
+                        </a>
+                        <a href="tel:603-836-9513" class="btn btn--outline-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            (603) 836-9513
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <!-- REPLACE: Photo of new construction wiring rough-in, framing with boxes, or a finished addition -->
+                    <img src="https://apz71fid6y.wpdns.site/wp-content/uploads/2026/01/Photo-Jan-15-2026-10-34-11-AM-11.jpg" alt="" width="600" height="450">
+                    <div class="hero__image-badge">
+                        <div class="hero__image-badge-number">25+</div>
+                        <div class="hero__image-badge-text">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro__grid">
+                <div>
+                    <div class="intro__eyebrow">What Changes When You Add On</div>
+                    <h2>Your Existing Panel May Not Be Enough</h2>
+                    <p>When planning a home addition, the electrical systems are one of the first things a licensed electrician needs to evaluate. Most homes built before 2000 weren't designed with today's loads in mind. Add a bedroom, garage, or finished basement and you're asking your system to do more than it was wired for.</p>
+                    <p>That's not a problem - it just needs to be planned for from the start. As your home addition electrical contractor, we assess your current panel capacity, design the wiring services for your addition, and handle every step from rough-in through the final inspection. No handoffs, no coordination headaches.</p>
+                    <ul class="intro__checklist">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Panel capacity assessed before any work begins
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            All circuits planned for how you'll actually use the space
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Permits pulled and inspections scheduled in NH, MA & ME
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Coordinated with your GC or builder throughout the project
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            100% code-compliant work, every time
+                        </li>
+                    </ul>
+                </div>
+                <div class="intro__stat-box">
+                    <h3>Addition Types We Work On</h3>
+                    <p>Bedroom or in-law suite additions - outlets, lighting, dedicated circuits for HVAC and data.</p>
+                    <p>Garage additions - panel subfeeds, lighting, EV charger rough-in, door openers, workshop circuits.</p>
+                    <p>Finished basements - general lighting, outlets, egress lighting, home theater or home office circuits.</p>
+                    <p>Sunrooms and screened porches - lighting, outlets, ceiling fans, weatherproof wiring where required.</p>
+                    <p>Second-story additions - full rough-in wiring coordinated with your framing schedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services">
+        <div class="container">
+            <div class="services__header">
+                <div class="services__eyebrow">What We Handle</div>
+                <h2>Electrical Wiring Services for Home Additions</h2>
+                <p class="lead">From the first walkthrough to the final inspection, here's what's typically included when you hire a licensed electrician for a home addition project.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Panel Evaluation & Upgrades</h3>
+                    <p class="service-card__text">We check your existing panel before any work begins. If it can't support the addition, we'll recommend the right upgrade. Most additions require at least a <a href="https://mooreelectricinc.net/electrical-panel-upgrades/">200-amp panel</a> if you don't already have one.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Rough-In Wiring</h3>
+                    <p class="service-card__text">All wiring installed during the framing stage before drywall goes up. We coordinate with your builder or GC to hit the right window so the project stays on schedule.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Lighting Design & Installation</h3>
+                    <p class="service-card__text">Recessed lighting, ceiling fixtures, accent lighting, and dimmer controls planned around the room layout - not just dropped wherever is easiest to wire.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Outlets & Dedicated Circuits</h3>
+                    <p class="service-card__text">Code-required outlet spacing, GFCI protection where needed, and dedicated circuits for mini-splits, appliances, home offices, or <a href="https://mooreelectricinc.net/ev-charger-installation/">EV chargers</a>.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Kitchen & Bath Circuits</h3>
+                    <p class="service-card__text">Additions with <a href="https://mooreelectricinc.net/kitchen-bath-electrical/">kitchens or bathrooms</a> require specific circuit configurations - small appliance circuits, exhaust fans, GFCI and AFCI protection - all to NEC standards.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Permits & Final Inspections</h3>
+                    <p class="service-card__text">We pull all required electrical permits in NH, MA, and ME and schedule the inspection. Your addition won't have loose ends when it comes time to close out the project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kitchen & Bath Electrical Table -->
+    <section class="kitchen-bath">
+        <div class="container">
+            <div class="kitchen-bath__header">
+                <div class="kitchen-bath__eyebrow">Specialized Services</div>
+                <h2>Kitchen & Bath Electrical for Home Additions in NH</h2>
+            </div>
+            <p class="kitchen-bath__intro">Kitchens and bathrooms in home additions require specialized electrical installations due to NEC safety requirements around water proximity, appliance loads, and ventilation. Moore Electric Inc. handles kitchen and bath electrical work with dedicated circuits, GFCI protection, and AFCI breakers as required by code.</p>
+            <div class="service-table-wrap">
+                <table class="service-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Description</th>
+                            <th>Why It's Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dedicated Appliance Circuits</td>
+                            <td>Separate 20-amp circuits for refrigerators, dishwashers, microwaves, and other high-draw appliances</td>
+                            <td>Prevents overload and tripped breakers from shared circuits; code-required for kitchen appliances</td>
+                        </tr>
+                        <tr>
+                            <td>GFCI Outlets</td>
+                            <td>Ground Fault Circuit Interrupter outlets installed at all countertop receptacles, bathrooms, and wet-area locations</td>
+                            <td>NEC 2023 requires GFCI protection within 6 feet of any sink; protects against shock in wet areas</td>
+                        </tr>
+                        <tr>
+                            <td>AFCI Protection</td>
+                            <td>Arc Fault Circuit Interrupter breakers on bedroom circuits and living space circuits in the addition</td>
+                            <td>Required under NEC 2023 for all 15 and 20-amp circuits in living areas; reduces arc-related fire risk</td>
+                        </tr>
+                        <tr>
+                            <td>Small Appliance Circuits</td>
+                            <td>Two dedicated 20-amp circuits for countertop appliances in kitchen additions</td>
+                            <td>NEC requires a minimum of two small appliance branch circuits for any kitchen</td>
+                        </tr>
+                        <tr>
+                            <td>Exhaust Fan Wiring</td>
+                            <td>Bathroom exhaust fans wired to a dedicated circuit or switched independently from lighting</td>
+                            <td>Required ventilation for bathrooms without operable windows; code-required in new additions</td>
+                        </tr>
+                        <tr>
+                            <td>Under-Cabinet Lighting</td>
+                            <td>Low-voltage LED task lighting wired into a dedicated circuit, controlled by a dimmer switch</td>
+                            <td>Improves kitchen functionality and adds resale value; best installed during rough-in phase</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top: 24px; color: var(--moore-text-muted); font-size: 1rem; text-align: center;">Questions about what your kitchen or bath addition needs? <a href="https://mooreelectricinc.net/kitchen-bath-electrical/">See our full kitchen & bath electrical page</a> or <a href="https://mooreelectricinc.net/contact/">request an estimate.</a></p>
+        </div>
+    </section>
+
+    <!-- Panel Upgrade Band -->
+    <section class="panel-band">
+        <div class="container">
+            <h2>Many Additions Require a Panel Upgrade</h2>
+            <p>If your home has a 100-amp panel - common in homes built before 1990 - adding significant square footage can mean upgrading to 200 amps, depending on your current load and what the addition will demand. It's not always required, but it's worth checking before any work starts. A new panel sets your home up for decades of reliable power. We'll tell you straight whether you need one and give you honest pricing upfront.</p>
+            <a href="https://mooreelectricinc.net/electrical-panel-upgrades/" class="btn btn--gold">Learn About Panel Upgrades</a>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process">
+        <div class="container">
+            <div class="process__header">
+                <div class="process__eyebrow">How It Works</div>
+                <h2>Our Process for Addition Electrical Work</h2>
+                <p class="lead">Here's what to expect when you hire us for your home addition project.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-step__number">1</div>
+                    <h3 class="process-step__title">Walkthrough & Scope</h3>
+                    <p class="process-step__text">We meet on-site to review the addition plans, assess your current panel, and scope out the full electrical package. You'll get a clear proposal before anything starts.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">2</div>
+                    <h3 class="process-step__title">Permits Pulled</h3>
+                    <p class="process-step__text">We file the electrical permit with your town or city. In NH, MA, and ME, all electrical work on an addition requires a permit and inspection - we handle it so you don't have to.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">3</div>
+                    <h3 class="process-step__title">Rough-In & Panel Work</h3>
+                    <p class="process-step__text">Once framing is up, we run all wiring, install boxes, and handle any panel upgrades. Timed to your build schedule so nothing holds up your GC.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">4</div>
+                    <h3 class="process-step__title">Rough-In Inspection</h3>
+                    <p class="process-step__text">The inspector reviews wiring before drywall goes up. We're on-site and address anything that needs adjustment on the spot.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">5</div>
+                    <h3 class="process-step__title">Trim-Out</h3>
+                    <p class="process-step__text">After drywall, we install all devices - outlets, switches, fixtures, and cover plates. Everything gets tested before we leave.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">6</div>
+                    <h3 class="process-step__title">Final Inspection</h3>
+                    <p class="process-step__text">We schedule and pass the final electrical inspection. Your addition is fully permitted, code-compliant, and ready to use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Permits by State -->
+    <section class="permits">
+        <div class="container">
+            <div class="permits__header">
+                <div class="permits__eyebrow">Licensed Across All Three States</div>
+                <h2>We Handle Permits in NH, MA & ME</h2>
+                <p class="lead">Electrical permit requirements vary by state and municipality. We know the process in each market we serve and handle filing on your behalf.</p>
+            </div>
+            <div class="permits-grid">
+                <div class="permit-card">
+                    <div class="permit-card__state">New Hampshire</div>
+                    <h3>NH License #14511</h3>
+                    <p>NH follows NEC 2023 with state amendments. Addition work requires a permit filed with the local building department. We coordinate with your town's electrical inspector from rough-in through final sign-off.</p>
+                </div>
+                <div class="permit-card">
+                    <div class="permit-card__state">Massachusetts</div>
+                    <h3>MA License #22825</h3>
+                    <p>MA adopted NEC 2023 with state-specific requirements around AFCI and GFCI protection. Permit filing goes through your local inspectional services department. We manage the process and show up for every inspection.</p>
+                </div>
+                <div class="permit-card">
+                    <div class="permit-card__state">Maine</div>
+                    <h3>ME License #MS60023064</h3>
+                    <p>Maine uses NEC 2020 as the base code. Permits for addition electrical work are filed at the municipal level. We're familiar with requirements in southern Maine towns from Kittery to York.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us__header">
+                <div class="why-us__eyebrow">Why Moore Electric</div>
+                <h2>The Electrician Who Actually Shows Up</h2>
+                <p class="lead">Residential electrical remodeling and home additions require a contractor who understands how builds work - not just how to run wire. Here's what sets us apart.</p>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <div class="why-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <h3 class="why-card__title">Owner on Every Job</h3>
+                    <p class="why-card__text">Brenden Moore is a Master Electrician with 25+ years of experience. He's not sending a crew - he's the one doing the work and responsible for it being done right.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3 class="why-card__title">Builder-Friendly</h3>
+                    <p class="why-card__text">We understand how additions get built and schedule around your framing timeline. Rough-in happens when the walls are open, not whenever it's convenient for us.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3 class="why-card__title">Clear Communication</h3>
+                    <p class="why-card__text">We tell you exactly what's needed, what it costs, and why. No upselling work that isn't necessary. Upfront pricing before we start, no surprises mid-project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="related">
+        <div class="container">
+            <div class="related__header">
+                <div class="related__eyebrow">Related Services</div>
+                <h2>Other Electrical Work We Do</h2>
+            </div>
+            <div class="related-grid">
+                <a href="https://mooreelectricinc.net/electrical-panel-upgrades/" class="related-card">
+                    <div class="related-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+                    </div>
+                    <div class="related-card__text">Panel Upgrades</div>
+                </a>
+                <a href="https://mooreelectricinc.net/electrical-rewiring/" class="related-card">
+                    <div class="related-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    </div>
+                    <div class="related-card__text">Whole-House Rewiring</div>
+                </a>
+                <a href="https://mooreelectricinc.net/kitchen-bath-electrical/" class="related-card">
+                    <div class="related-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div class="related-card__text">Kitchen & Bath Electrical</div>
+                </a>
+                <a href="https://mooreelectricinc.net/ev-charger-installation/" class="related-card">
+                    <div class="related-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <div class="related-card__text">EV Charger Installation</div>
+                </a>
+                <a href="https://mooreelectricinc.net/new-construction-electrical/" class="related-card">
+                    <div class="related-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <div class="related-card__text">New Construction</div>
+                </a>
+                <a href="https://mooreelectricinc.net/electrical-repairs/" class="related-card">
+                    <div class="related-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <div class="related-card__text">Electrical Repairs</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="service-area">
+        <div class="container">
+            <div class="service-area__header">
+                <div class="service-area__eyebrow">Service Area</div>
+                <h2>Home Addition Electrical Throughout NH, MA & ME</h2>
+            </div>
+            <p class="service-area__towns">
+                <strong>New Hampshire:</strong> Plaistow, Exeter, Stratham, Hampton, Hampton Falls, Seabrook, Kingston, Newton, East Kingston, Kensington, Salem, Atkinson, Danville, Sandown, Hampstead, Derry, Londonderry, Windham<br><br>
+                <strong>Massachusetts:</strong> Newburyport, Newbury, Salisbury, Amesbury, Merrimac, West Newbury, Haverhill, Groveland, Georgetown, Boxford, Rowley, Ipswich, Topsfield, Methuen, Andover, North Andover<br><br>
+                <strong>Southern Maine:</strong> York, Kittery, Eliot, South Berwick, Ogunquit, Wells
+            </p>
+            <div class="service-area__center">
+                <div class="service-area__licenses">
+                    <div class="service-area__licenses-title">Licensed & Insured</div>
+                    <div class="service-area__licenses-list">MA Lic #22825 &nbsp;|&nbsp; NH Lic #14511 &nbsp;|&nbsp; ME Lic #MS60023064</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta__grid">
+                <div>
+                    <h2>Planning a Home Addition? Let's Talk Electrical.</h2>
+                    <p>The best time to get the electrician involved is before your GC breaks ground. We'll review your plans, assess your panel, and give you a clear scope and price - no surprises during the build.</p>
+                    <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Get a Free Estimate</a>
+                </div>
+                <div class="final-cta__contact">
+                    <div class="final-cta__contact-item">
+                        <div class="final-cta__contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <div class="final-cta__contact-label">Call Us</div>
+                            <div class="final-cta__contact-value"><a href="tel:603-836-9513">(603) 836-9513</a></div>
+                        </div>
+                    </div>
+                    <div class="final-cta__contact-item">
+                        <div class="final-cta__contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <div class="final-cta__contact-label">Email</div>
+                            <div class="final-cta__contact-value"><a href="/cdn-cgi/l/email-protection#1c737a7a757f795c7173736e797970797f686e757f75727f32727968"><span class="__cf_email__" data-cfemail="68070e0e010b0d280507071a0d0d040d0b1c1a010b01060b46060d1c">[email&#160;protected]</span></a></div>
+                        </div>
+                    </div>
+                    <div class="final-cta__contact-item">
+                        <div class="final-cta__contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <div class="final-cta__contact-label">Based In</div>
+                            <div class="final-cta__contact-value">Plaistow, NH</d
