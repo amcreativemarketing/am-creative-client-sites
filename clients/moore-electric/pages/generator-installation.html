@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root{--moore-teal:#0B4B4B;--moore-teal-dark:#093C3C;--moore-gold:#C9A227;--moore-gold-dark:#A8891F;--moore-gold-light:#E8D48A;--moore-cream:#F2F0EA;--moore-gray:#C7D0D0;--moore-gray-dark:#9BABAB;--moore-text:#0C2424;--moore-text-light:#FFFFFF;--moore-text-muted:#4A5F5F;--section-padding:clamp(60px,8vw,100px);--container-max:1200px;--shadow-sm:0 2px 8px rgba(12,36,36,0.06);--shadow-md:0 4px 20px rgba(12,36,36,0.08);--shadow-lg:0 8px 40px rgba(12,36,36,0.12);--transition-fast:0.2s ease;--transition-med:0.3s ease}
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Source Sans Pro',-apple-system,BlinkMacSystemFont,sans-serif;font-size:18px;line-height:1.7;color:var(--moore-text);background:#fff;-webkit-font-smoothing:antialiased}
+        img{max-width:100%;height:auto;display:block}
+        a{color:var(--moore-teal);text-decoration:none;transition:color var(--transition-fast)}
+        a:hover{color:var(--moore-gold)}
+        h1,h2,h3,h4{font-family:'Raleway',sans-serif;font-weight:700;line-height:1.2;color:var(--moore-text)}
+        h1{font-size:clamp(2.25rem,5vw,3.25rem);letter-spacing:-0.02em}
+        h2{font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:1rem}
+        h3{font-size:clamp(1.25rem,2.5vw,1.5rem);font-weight:600}
+        p{margin-bottom:1.25rem}
+        p:last-child{margin-bottom:0}
+        .lead{font-size:1.2rem;color:var(--moore-text-muted);line-height:1.6}
+        .container{max-width:var(--container-max);margin:0 auto;padding:0 24px}
+        section{padding:var(--section-padding) 0}
+        .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 32px;font-family:'Raleway',sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;border-radius:4px;border:2px solid transparent;cursor:pointer;transition:all var(--transition-med);text-decoration:none;min-height:52px}
+        .btn--primary{background:var(--moore-teal) !important;color:#fff !important;border-color:var(--moore-teal) !important}
+        .btn--primary:hover{background:var(--moore-teal-dark) !important;border-color:var(--moore-teal-dark) !important;color:#fff !important;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+        .btn--gold{background:var(--moore-gold) !important;color:#0C2424 !important;border-color:var(--moore-gold) !important}
+        .btn--gold:hover{background:var(--moore-gold-dark) !important;border-color:var(--moore-gold-dark) !important;color:#0C2424 !important;transform:translateY(-2px)}
+        .btn--white{background:#fff !important;color:var(--moore-teal) !important;border-color:#fff !important}
+        .btn--white:hover{background:var(--moore-cream) !important;color:var(--moore-teal-dark) !important}
+        .btn--outline-white{background:transparent !important;color:#fff !important;border-color:#fff !important}
+        .btn--outline-white:hover{background:#fff !important;color:var(--moore-teal) !important}
+        .btn svg{width:18px;height:18px;flex-shrink:0}
+
+        /* Trust Bar */
+        .trust-bar{background:var(--moore-cream);border-bottom:1px solid rgba(12,36,36,0.08);padding:14px 0}
+        .trust-bar__inner{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 28px}
+        .trust-item{display:flex;align-items:center;gap:8px;font-family:'Raleway',sans-serif;font-size:13px;font-weight:600;color:var(--moore-text);letter-spacing:0.5px}
+        .trust-item svg{width:15px;height:15px;color:var(--moore-gold);flex-shrink:0}
+        .trust-item--highlight{background:var(--moore-gold);color:var(--moore-text);padding:5px 12px;border-radius:4px}
+        .trust-item--highlight svg{color:var(--moore-text)}
+
+        /* Hero */
+        .hero{position:relative;background:linear-gradient(135deg,var(--moore-teal-dark) 0%,var(--moore-teal) 100%);color:var(--moore-text-light);padding:clamp(80px,12vw,140px) 0;overflow:hidden}
+        .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+        .hero__grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;position:relative;z-index:1}
+        @media(min-width:900px){.hero__grid{grid-template-columns:1.1fr 0.9fr;gap:64px}}
+        .hero__badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,39,0.15);border:1px solid rgba(201,162,39,0.3);color:var(--moore-gold);padding:8px 16px;border-radius:50px;font-family:'Raleway',sans-serif;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:24px}
+        .hero__badge svg{width:14px;height:14px}
+        .hero h1{color:var(--moore-text-light);margin-bottom:20px}
+        .hero h1 span{color:var(--moore-gold)}
+        .hero__lead{font-size:1.2rem;color:rgba(255,255,255,0.85);margin-bottom:36px;line-height:1.6}
+        .hero__ctas{display:flex;flex-wrap:wrap;gap:16px}
+        .hero__card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:28px;backdrop-filter:blur(10px)}
+        .hero__card-title{font-family:'Raleway',sans-serif;font-weight:700;font-size:1rem;color:var(--moore-gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+        .hero__stat-list{list-style:none}
+        .hero__stat-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:0.95rem;color:rgba(255,255,255,0.9)}
+        .hero__stat-list li:last-child{border-bottom:none}
+        .hero__stat-list svg{width:16px;height:16px;color:var(--moore-gold);flex-shrink:0;margin-top:3px}
+
+        /* Storm section */
+        .storm{background:var(--moore-cream)}
+        .storm__grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+        @media(min-width:900px){.storm__grid{grid-template-columns:1fr 1fr}}
+        .storm__eyebrow{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--moore-gold);margin-bottom:12px}
+        .storm__stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+        .storm__stat{background:#fff;border-radius:10px;padding:20px;text-align:center;box-shadow:var(--shadow-sm)}
+        .storm__stat-num{font-family:'Raleway',sans-serif;font-size:2.2rem;font-weight:700;color:var(--moore-teal);line-height:1}
+        .storm__stat-label{font-size:0.85rem;color:var(--moore-text-muted);margin-top:4px}
+        .storm__callout{background:var(--moore-teal);color:var(--moore-text-light);border-radius:12px;padding:28px 32px;margin-top:32px}
+        .storm__callout p{color:rgba(255,255,255,0.9);margin-bottom:0;font-size:1rem}
+        .storm__callout strong{color:var(--moore-gold)}
+
+        /* Comparison */
+        .comparison{background:#fff}
+        .comparison__eyebrow{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--moore-gold);margin-bottom:12px;text-align:center}
+        .comparison__intro{text-align:center;max-width:720px;margin:0 auto 48px}
+        .comparison__grid{display:grid;grid-template-columns:1fr;gap:24px}
+        @media(min-width:768px){.comparison__grid{grid-template-columns:1fr 1fr}}
+        .comp-card{border:2px solid var(--moore-gray);border-radius:12px;padding:32px;position:relative}
+        .comp-card--standby{border-color:var(--moore-teal)}
+        .comp-card__badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--moore-teal);color:#fff;font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 14px;border-radius:50px;white-space:nowrap}
+        .comp-card__title{font-family:'Raleway',sans-serif;font-size:1.25rem;font-weight:700;color:var(--moore-text);margin-bottom:8px}
+        .comp-card__price{font-family:'Raleway',sans-serif;font-size:1rem;font-weight:600;color:var(--moore-text-muted);margin-bottom:20px}
+        .comp-card ul{list-style:none}
+        .comp-card ul li{display:flex;align-items:flex-start;gap:10px;padding:6px 0;font-size:0.95rem;color:var(--moore-text-muted)}
+        .comp-card ul li svg{width:16px;height:16px;flex-shrink:0;margin-top:3px}
+        .check{color:var(--moore-teal)}
+        .cross{color:#cc4444}
+        .comp-verdict{margin-top:24px;padding:16px;background:var(--moore-cream);border-radius:8px;font-size:0.9rem;color:var(--moore-text)}
+
+        /* What's included */
+        .included{background:var(--moore-teal)}
+        .included__header{text-align:center;margin-bottom:48px}
+        .included__eyebrow{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--moore-gold);margin-bottom:12px}
+        .included__header h2{color:var(--moore-text-light)}
+        .included__header p{color:rgba(255,255,255,0.8);max-width:640px;margin:0 auto}
+        .steps-grid{display:grid;grid-template-columns:1fr;gap:20px}
+        @media(min-width:600px){.steps-grid{grid-template-columns:1fr 1fr}}
+        @media(min-width:900px){.steps-grid{grid-template-columns:repeat(3,1fr)}}
+        .step-card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:24px}
+        .step-card__num{font-family:'Raleway',sans-serif;font-size:2rem;font-weight:700;color:var(--moore-gold);line-height:1;margin-bottom:8px}
+        .step-card__title{font-family:'Raleway',sans-serif;font-weight:600;font-size:1rem;color:var(--moore-text-light);margin-bottom:8px}
+        .step-card__text{font-size:0.9rem;color:rgba(255,255,255,0.75);margin-bottom:0}
+
+        /* Generac */
+        .generac{background:var(--moore-cream)}
+        .generac__grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:start}
+        @media(min-width:900px){.generac__grid{grid-template-columns:1.1fr 0.9fr}}
+        .generac__eyebrow{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--moore-gold);margin-bottom:12px}
+        .generac__badge-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+        .generac__badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--moore-gray);border-radius:8px;padding:10px 16px;font-family:'Raleway',sans-serif;font-size:13px;font-weight:600;color:var(--moore-text)}
+        .generac__badge svg{width:16px;height:16px;color:var(--moore-teal)}
+        .risk-box{background:#fff;border-radius:12px;padding:28px;border-left:4px solid var(--moore-gold)}
+        .risk-box__title{font-family:'Raleway',sans-serif;font-weight:700;font-size:1rem;color:var(--moore-text);margin-bottom:16px}
+        .risk-list{list-style:none}
+        .risk-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--moore-cream);font-size:0.95rem;color:var(--moore-text-muted)}
+        .risk-list li:last-child{border-bottom:none}
+        .risk-list svg{width:16px;height:16px;color:#cc4444;flex-shrink:0;margin-top:3px}
+
+        /* Sizing */
+        .sizing{background:#fff}
+        .sizing__eyebrow{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--moore-gold);margin-bottom:12px;text-align:center}
+        .sizing__intro{text-align:center;max-width:700px;margin:0 auto 48px}
+        .sizing-grid{display:grid;grid-template-columns:1fr;gap:20px}
+        @media(min-width:600px){.sizing-grid{grid-template-columns:1fr 1fr}}
+        @media(min-width:900px){.sizing-grid{grid-template-columns:repeat(3,1fr)}}
+        .size-card{border:2px solid var(--moore-gray);border-radius:12px;padding:28px;text-align:center;transition:border-color var(--transition-med),box-shadow var(--transition-med)}
+        .size-card--featured{border-color:var(--moore-teal);box-shadow:var(--shadow-md);position:relative}
+        .size-card--featured::before{content:'Most Common';position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--moore-teal);color:#fff;font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 14px;border-radius:50px;white-space:nowrap}
+        .size-card__kw{font-family:'Raleway',sans-serif;font-size:2rem;font-weight:700;color:var(--moore-teal);line-height:1}
+        .size-card__label{font-size:0.85rem;color:var(--moore-text-muted);margin:4px 0 16px}
+        .size-card__price{font-family:'Raleway',sans-serif;font-size:1.4rem;font-weight:700;color:var(--moore-text);margin-bottom:12px}
+        .size-card__desc{font-size:0.9rem;color:var(--moore-text-muted);margin-bottom:16px}
+        .size-card__circuits{font-size:0.85rem;color:var(--moore-text-muted);font-style:italic}
+        .sizing__note{margin-top:40px;background:var(--moore-cream);border-radius:10px;padding:24px 28px;display:flex;gap:16px;align-items:flex-start}
+        .sizing__note svg{width:22px;height:22px;color:var(--moore-gold);flex-shrink:0;margin-top:2px}
+        .sizing__note p{margin-bottom:0;font-size:0.95rem;color:var(--moore-text-muted)}
+        .sizing__cta{text-align:center;margin-top:40px}
+
+        /* Cost section */
+        .cost{background:var(--moore-cream)}
+        .cost__grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:start}
+        @media(min-width:900px){.cost__grid{grid-template-columns:1fr 1fr}}
+        .cost__eyebrow{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--moore-gold);margin-bottom:12px}
+        .cost-drivers{list-style:none;margin-top:28px}
+        .cost-drivers li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--moore-gray)}
+        .cost-drivers li:last-child{border-bottom:none}
+        .cost-driver__icon{width:40px;height:40px;background:var(--moore-teal);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .cost-driver__icon svg{width:18px;height:18px;color:#fff}
+        .cost-driver__text h4{font-family:'Raleway',sans-serif;font-weight:600;font-size:1rem;color:var(--moore-text);margin-bottom:4px}
+        .cost-driver__text p{font-size:0.9rem;color:var(--moore-text-muted);margin-bottom:0}
+        .financing-box{background:#fff;border-radius:12px;padding:28px;margin-top:28px;border-top:4px solid var(--moore-gold)}
+        .financing-box__title{font-family:'Raleway',sans-serif;font-weight:700;font-size:1.1rem;color:var(--moore-text);margin-bottom:8px}
+        .tax-box{background:var(--moore-teal);color:#fff;border-radius:12px;padding:28px}
+        .tax-box h3{color:var(--moore-gold);margin-bottom:8px}
+        .tax-box p{color:rgba(255,255,255,0.85);font-size:0.95rem;margin-bottom:16px}
+        .tax-box p:last-child{margin-bottom:0}
+
+        /* Mid CTA */
+        .mid-cta{background:var(--moore-teal-dark);padding:clamp(48px,6vw,80px) 0}
+        .mid-cta__content{text-align:center;max-width:700px;margin:0 auto}
+        .mid-cta h2{color:var(--moore-text-light);margin-bottom:16px}
+        .mid-cta p{color:rgba(255,255,255,0.85);margin-bottom:32px}
+        .mid-cta__ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+        .mid-cta__phone{font-family:'Raleway',sans-serif;font-size:1.4rem;font-weight:700;color:var(--moore-gold);margin-bottom:8px}
+
+        /* Why Moore */
+        .why-moore{background:#fff}
+        .why-moore__header{text-align:center;margin-bottom:48px}
+        .why-moore__eyebrow{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--moore-gold);margin-bottom:12px}
+        .why-grid{display:grid;grid-template-columns:1fr;gap:20px}
+        @media(min-width:600px){.why-grid{grid-template-columns:1fr 1fr}}
+        @media(min-width:900px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+        .why-card{background:var(--moore-cream);border-radius:10px;padding:24px}
+        .why-card__icon{width:44px;height:44px;background:var(--moore-teal);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+        .why-card__icon svg{width:20px;height:20px;color:#fff}
+        .why-card__title{font-family:'Raleway',sans-serif;font-weight:600;font-size:1rem;color:var(--moore-text);margin-bottom:6px}
+        .why-card__text{font-size:0.9rem;color:var(--moore-text-muted);margin-bottom:0}
+
+        /* FAQ */
+        .faq{background:var(--moore-cream)}
+        .faq__header{text-align:center;margin-bottom:48px}
+        .faq__eyebrow{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--moore-gold);margin-bottom:12px}
+        .faq-list{max-width:800px;margin:0 auto}
+        .faq-item{background:#fff;border-radius:8px;margin-bottom:10px;overflow:hidden;box-shadow:var(--shadow-sm)}
+        .faq-item__question{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;font-family:'Raleway',sans-serif;font-size:1rem;font-weight:600;color:var(--moore-text);transition:color var(--transition-fast)}
+        .faq-item__question:hover{color:var(--moore-teal)}
+        .faq-item__icon{width:20px;height:20px;flex-shrink:0;color:var(--moore-gold);transition:transform var(--transition-med)}
+        .faq-item__answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+        .faq-item__answer-inner{padding:0 24px 20px;font-size:0.95rem;color:var(--moore-text-muted);line-height:1.7}
+        .faq-item__answer-inner p{margin-bottom:0}
+        .faq-item.active .faq-item__icon{transform:rotate(45deg)}
+        .faq-item.active .faq-item__answer{max-height:400px}
+
+        /* Service Area */
+        .service-area{background:#fff}
+        .service-area__header{text-align:center;margin-bottom:40px}
+        .service-area__eyebrow{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--moore-gold);margin-bottom:12px}
+        .area-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+        @media(min-width:600px){.area-grid{grid-template-columns:repeat(3,1fr)}}
+        @media(min-width:900px){.area-grid{grid-template-columns:repeat(4,1fr)}}
+        .area-tag{background:var(--moore-cream);border-radius:6px;padding:10px 16px;font-family:'Raleway',sans-serif;font-size:13px;font-weight:600;color:var(--moore-text-muted);text-align:center}
+
+        /* Final CTA */
+        .final-cta{background:linear-gradient(135deg,var(--moore-teal-dark) 0%,var(--moore-teal) 100%);padding:clamp(60px,10vw,120px) 0}
+        .final-cta__content{text-align:center;max-width:700px;margin:0 auto}
+        .final-cta h2{color:var(--moore-text-light);font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:16px}
+        .final-cta p{color:rgba(255,255,255,0.85);font-size:1.1rem;margin-bottom:36px}
+        .final-cta__phone{display:block;font-family:'Raleway',sans-serif;font-size:1.6rem;font-weight:700;color:var(--moore-gold);margin-bottom:8px;text-decoration:none}
+        .final-cta__ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+        .final-cta__license{margin-top:28px;font-size:0.85rem;color:rgba(255,255,255,0.55)}
+    </style>
+</head>
+<body>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+    <div class="container">
+        <div class="trust-bar__inner">
+            <div class="trust-item trust-item--highlight">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                Master Electrician
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Licensed in MA, NH &amp; ME
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                25+ Years Experience
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Best Electrician Newburyport 2024 &amp; 2025
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero__grid">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    Standby Generator Installation
+                </div>
+                <h1>Generator Installation in <span>New Hampshire</span></h1>
+                <p class="hero__lead">Power outages in NH and ME can hit hard and last longer than expected. Moore Electric installs standby generators that turn on automatically, so when the next storm hits, your home never skips a beat. Every install is supervised by Brenden Moore, a licensed Master Electrician.</p>
+                <div class="hero__ctas">
+                    <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.96-1.96a2 2 0 0 1 2.12-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 15.48l.42 1.44z"/></svg>
+                        Get a Free Assessment
+                    </a>
+                    <a href="tel:6038369513" class="btn btn--outline-white">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.96-1.96a2 2 0 0 1 2.12-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 15.48l.42 1.44z"/></svg>
+                        603-836-9513
+                    </a>
+                </div>
+            </div>
+            <div class="hero__sidebar">
+                <div class="hero__card">
+                    <div class="hero__card-title">What Moore Electric Handles</div>
+                    <ul class="hero__stat-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Whole-home load assessment &amp; sizing</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Automatic transfer switch installation</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>All permits pulled &amp; inspections passed</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Utility company coordination</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Generator pad or mounting</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Startup walkthrough with homeowner</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Generac standby generator installation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Storm Section -->
+<section class="storm">
+    <div class="container">
+        <div class="storm__grid">
+            <div>
+                <div class="storm__eyebrow">Why NH &amp; ME Homeowners Are Installing Generators</div>
+                <h2>Power Outages Here Are Not a Rare Event</h2>
+                <p>New Hampshire sits in one of the most storm-affected corridors in the country. Ice storms, nor'easters, and summer Derecho events knock out power for thousands of homes every year - sometimes for multiple days at a stretch. The White Mountains funnel brutal winter weather directly into the seacoast region.</p>
+                <p>For most NH and ME homeowners, losing power means losing heat (most modern HVAC systems need electricity to run), losing water from well pumps, and losing refrigerated food. For families with medical equipment, the stakes are even higher.</p>
+                <p>Standby generators eliminate that vulnerability entirely. They detect an outage and kick on automatically within seconds - no action needed from you, whether you're home or away.</p>
+                <div class="storm__stats">
+                    <div class="storm__stat">
+                        <div class="storm__stat-num">4-6x</div>
+                        <div class="storm__stat-label">Per year NH averages major outage events</div>
+                    </div>
+                    <div class="storm__stat">
+                        <div class="storm__stat-num">72 hrs</div>
+                        <div class="storm__stat-label">Typical longest outage duration in NH storms</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="storm__callout">
+                    <p><strong>Not all generator installs are equal.</strong> A standby generator connects directly to your home's electrical panel and gas supply. It requires a licensed Master Electrician to size the system, install the transfer switch, and pull permits. This is not a job for a general handyman or an unlicensed contractor - and NH state law agrees.</p>
+                </div>
+                <div style="margin-top:24px;background:#fff;border-radius:12px;padding:28px">
+                    <h3 style="margin-bottom:16px;font-size:1.1rem">What a Generator Protects</h3>
+                    <ul style="list-style:none">
+                        <li style="display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--moore-cream);font-size:0.95rem;color:var(--moore-text-muted)"><svg style="width:16px;height:16px;color:var(--moore-teal);flex-shrink:0;margin-top:3px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Heating &amp; cooling systems (HVAC, heat pumps)</li>
+                        <li style="display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--moore-cream);font-size:0.95rem;color:var(--moore-text-muted)"><svg style="width:16px;height:16px;color:var(--moore-teal);flex-shrink:0;margin-top:3px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Well pump &amp; water supply</li>
+                        <li style="display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--moore-cream);font-size:0.95rem;color:var(--moore-text-muted)"><svg style="width:16px;height:16px;color:var(--moore-teal);flex-shrink:0;margin-top:3px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Refrigerator &amp; freezer</li>
+                        <li style="display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--moore-cream);font-size:0.95rem;color:var(--moore-text-muted)"><svg style="width:16px;height:16px;color:var(--moore-teal);flex-shrink:0;margin-top:3px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Medical equipment &amp; devices</li>
+                        <li style="display:flex;gap:10px;padding:7px 0;font-size:0.95rem;color:var(--moore-text-muted)"><svg style="width:16px;height:16px;color:var(--moore-teal);flex-shrink:0;margin-top:3px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>EV charger &amp; sump pump</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison -->
+<section class="comparison">
+    <div class="container">
+        <div class="comparison__eyebrow">Know the Difference</div>
+        <div class="comparison__intro">
+            <h2>Standby vs. Portable Generators</h2>
+            <p class="lead">Before committing to any generator, it helps to understand what each type actually does - and what it doesn't.</p>
+        </div>
+        <div class="comparison__grid">
+            <div class="comp-card">
+                <div class="comp-card__title">Portable Generator</div>
+                <ul>
+                    <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Lower upfront cost</li>
+                    <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Portable, can be stored away</li>
+                    <li><svg class="cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Manual start - you must be home</li>
+                    <li><svg class="cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Requires gasoline - supply may be limited in storms</li>
+                    <li><svg class="cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Powers limited circuits only</li>
+                    <li><svg class="cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Carbon monoxide risk if used improperly</li>
+                    <li><svg class="cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Does not add home value</li>
+                </ul>
+                <div class="comp-verdict">Good for temporary, limited backup. Not a long-term solution for NH storm seasons.</div>
+            </div>
+            <div class="comp-card comp-card--standby">
+                <div class="comp-card__badge">Recommended</div>
+                <div class="comp-card__title">Standby Generator</div>
+                <ul>
+                    <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Turns on automatically within seconds</li>
+                    <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Runs on natural gas or propane - no fuel runs</li>
+                    <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Powers your whole home or all critical circuits</li>
+                    <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Works whether you're home or away</li>
+                    <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Permanent installation, adds home value</li>
+                    <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Runs self-tests weekly</li>
+                    <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>May qualify for federal tax credit</li>
+                </ul>
+                <div class="comp-verdict">If you want true whole-home backup power that turns on automatically when the grid fails, standby generator installation is the right choice.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What's Included -->
+<section class="included">
+    <div class="container">
+        <div class="included__header">
+            <div class="included__eyebrow">The Installation Process</div>
+            <h2>What a Professional Generator Installation Includes</h2>
+            <p>Moore Electric handles every step from initial sizing through final inspection. Here's what's included in every installation.</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-card__num">01</div>
+                <div class="step-card__title">Electrical Load Assessment</div>
+                <p class="step-card__text">Brenden reviews your panel and calculates your home's exact power needs to size the right generator - not too small, not oversized.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-card__num">02</div>
+                <div class="step-card__title">Transfer Switch Installation</div>
+                <p class="step-card__text">Moore Electric installs an automatic transfer switch (ATS) that detects an outage and switches your home to generator power within seconds.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-card__num">03</div>
+                <div class="step-card__title">Permit Pulling</div>
+                <p class="step-card__text">Every generator installation in NH requires an electrical permit and state inspection. Moore Electric pulls all permits - many contractors skip this, creating legal and insurance issues.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-card__num">04</div>
+                <div class="step-card__title">Utility Coordination</div>
+                <p class="step-card__text">For natural gas connections or propane tank siting, Moore Electric coordinates with your utility and propane supplier to ensure proper fuel supply.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-card__num">05</div>
+                <div class="step-card__title">Generator Placement &amp; Mounting</div>
+                <p class="step-card__text">Generator pad or mounting installed to NH code requirements. Proper placement accounts for clearances, exhaust direction, and long-term serviceability.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-card__num">06</div>
+                <div class="step-card__title">Startup &amp; Walkthrough</div>
+                <p class="step-card__text">Brenden personally starts the system, verifies everything is running correctly, and walks you through how your generator operates and self-tests.</p>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:40px">
+            <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Schedule a Free On-Site Assessment</a>
+        </div>
+    </div>
+</section>
+
+<!-- Generac -->
+<section class="generac">
+    <div class="container">
+        <div class="generac__grid">
+            <div>
+                <div class="generac__eyebrow">Authorized Installer</div>
+                <h2>Generac Generator Installation</h2>
+                <p>Generac is the most recognized standby generator brand in the country - and for good reason. Their home standby systems are engineered specifically for residential use, come in a wide range of sizes, and include remote monitoring through the Mobile Link app so you can check your generator's status from anywhere.</p>
+                <p>Moore Electric installs Generac standby generators throughout Southern NH and Northern MA. When you call a licensed Master Electrician rather than a general contractor or handyman for this installation, you're protecting both the warranty and the long-term reliability of the system.</p>
+                <p>Generac's warranty requires installation by a licensed electrician. An unpermitted or improper installation voids manufacturer coverage and can create serious liability for the homeowner.</p>
+                <div class="generac__badge-row">
+                    <div class="generac__badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Generac Installations
+                    </div>
+                    <div class="generac__badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Licensed Master Electrician
+                    </div>
+                    <div class="generac__badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        Permits Always Pulled
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="risk-box">
+                    <div class="risk-box__title">What Happens Without a Licensed Installer</div>
+                    <ul class="risk-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Generac manufacturer warranty is voided</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>NH state law requires a licensed electrician for transfer switch work</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Homeowners insurance may not cover fire or damage from unpermitted work</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Improper transfer switch installation creates serious backfeed hazards for utility workers</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Problems discovered at resale when unpermitted work surfaces during inspection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sizing -->
+<section class="sizing">
+    <div class="container">
+        <div class="sizing__eyebrow">Generator Sizing Guide</div>
+        <div class="sizing__intro">
+            <h2>How Do You Know What Size You Need?</h2>
+            <p class="lead">Generator sizing depends on your home's square footage, load requirements, and which circuits you need to keep running. Here's how most projects break down.</p>
+        </div>
+        <div class="sizing-grid">
+            <div class="size-card">
+                <div class="size-card__kw">10-16 kW</div>
+                <div class="size-card__label">Essential Circuits</div>
+                <div class="size-card__desc">Critical loads only - keeps your heat, well pump, refrigerator, and lighting running. Good for smaller homes or projects focused on the most important systems.</div>
+                <div class="size-card__circuits">Powers 8-12 critical circuits</div>
+            </div>
+            <div class="size-card size-card--featured">
+                <div class="size-card__kw">18-22 kW</div>
+                <div class="size-card__label">Whole Home (2,000-3,000 sq ft)</div>
+                <div class="size-card__desc">Full whole-home backup for a typical NH/MA house. Handles HVAC, kitchen, well pump, and all standard loads simultaneously.</div>
+                <div class="size-card__circuits">Powers entire home panel</div>
+            </div>
+            <div class="size-card">
+                <div class="size-card__kw">24-26 kW+</div>
+                <div class="size-card__label">Large Homes &amp; High-Load</div>
+                <div class="size-card__desc">Large homes, or homes with well pumps, EV chargers, heat pumps, and high-demand appliances all running simultaneously.</div>
+                <div class="size-card__circuits"><a href="https://mooreelectricinc.net/ev-charger-installation/">EV charger</a> homes often fall in this range</div>
+            </div>
+        </div>
+        <div class="sizing__note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <p><strong>Natural gas vs. propane affects both upfront and ongoing cost.</strong> Homes on natural gas typically have lower fuel costs. Propane requires a tank installation but is widely available in rural NH and ME. Some homes may also need a <a href="https://mooreelectricinc.net/panel-upgrades/">panel upgrade</a> before a generator can be added - Moore Electric can assess both in the same visit.</p>
+        </div>
+        <div class="sizing__cta">
+            <a href="https://mooreelectricinc.net/contact/" class="btn btn--primary">Get a Free On-Site Assessment - Right-Size Your Generator</a>
+        </div>
+    </div>
+</section>
+
+<!-- Cost Section -->
+<section class="cost">
+    <div class="container">
+        <div class="cost__grid">
+            <div>
+                <div class="cost__eyebrow">What Affects Your Price</div>
+                <h2>Generator Installation Cost in NH - What to Expect</h2>
+                <p>Every home is different, so every generator project is priced based on your specific situation - the size of the system, your existing electrical setup, and what's needed to do the job right. Brenden walks through all of this during a free on-site assessment before any numbers are put on paper.</p>
+                <p>The biggest factors that influence your final price:</p>
+                <ul class="cost-drivers">
+                    <li>
+                        <div class="cost-driver__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                        <div class="cost-driver__text">
+                            <h4>Generator Size &amp; Brand</h4>
+                            <p>Larger generators and premium models cost more upfront but typically offer better reliability and warranty coverage.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cost-driver__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg></div>
+                        <div class="cost-driver__text">
+                            <h4>Transfer Switch Type</h4>
+                            <p>Automatic transfer switches cost more than manual, but are standard for standby systems and worth every dollar.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cost-driver__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                        <div class="cost-driver__text">
+                            <h4>Gas Line or Propane Tank</h4>
+                            <p>Homes without existing natural gas may need propane tank installation or gas line trenching, which adds to the total.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cost-driver__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+                        <div class="cost-driver__text">
+                            <h4>Panel Capacity</h4>
+                            <p>Some older homes need a <a href="https://mooreelectricinc.net/panel-upgrades/">panel upgrade</a> before a generator can be properly integrated. Moore Electric can quote both together.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="tax-box">
+                    <h3>Federal Tax Credit Available</h3>
+                    <p>The Inflation Reduction Act's Energy Efficient Home Improvement Credit offers 30% back (up to $600) on qualifying panel upgrades that support generator-ready infrastructure.</p>
+                    <p>Ask Moore Electric about tax credit eligibility during your assessment visit.</p>
+                </div>
+                <div class="financing-box">
+                    <div class="financing-box__title">Get an Honest Quote - No Pressure</div>
+                    <p style="font-size:0.95rem;color:var(--moore-text-muted);margin-bottom:20px">Brenden provides a detailed written quote after assessing your home's specific situation. The price quoted is the price you pay - no surprises when the job is done.</p>
+                    <a href="https://mooreelectricinc.net/contact/" class="btn btn--primary" style="width:100%;justify-content:center">Request a Free Assessment</a>
+                    <p style="text-align:center;font-size:0.85rem;color:var(--moore-text-muted);margin-top:12px;margin-bottom:0">Or call <a href="tel:6038369513" style="font-weight:600">603-836-9513</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mid CTA -->
+<div class="mid-cta">
+    <div class="container">
+        <div class="mid-cta__content">
+            <h2>Ready to Stop Worrying About the Next Storm?</h2>
+            <p>Most standby generator installations are completed in 1-2 days. Moore Electric handles everything from permits to final inspection.</p>
+            <div class="mid-cta__phone"><a href="tel:6038369513" style="color:var(--moore-gold);text-decoration:none">603-836-9513</a></div>
+            <div class="mid-cta__ctas">
+                <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Schedule a Free Assessment</a>
+                <a href="tel:6038369513" class="btn btn--outline-white">Call Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Why Moore -->
+<section class="why-moore">
+    <div class="container">
+        <div class="why-moore__header">
+            <div class="why-moore__eyebrow">The Moore Difference</div>
+            <h2>Why Homeowners Choose Moore Electric for Generator Installation</h2>
+            <p class="lead">Generator installation is one of the most complex residential electrical projects there is. Who does it matters.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
+                <div class="why-card__title">Owner on Every Job</div>
+                <p class="why-card__text">Brenden Moore personally oversees every generator installation. Not a project manager, not a crew lead - the licensed Master Electrician himself.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="why-card__title">All Permits Pulled</div>
+                <p class="why-card__text">Moore Electric handles every permit and inspection. This protects your warranty, your insurance, and your home's resale value.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                <div class="why-card__title">Upfront Pricing</div>
+                <p class="why-card__text">The price quoted after assessment is the price charged. No change orders, no surprise additions when the job's done.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                <div class="why-card__title">25+ Years Experience</div>
+                <p class="why-card__text">Brenden has installed and serviced electrical systems across NH, MA, and ME for over 25 years. Generator installations are complex - experience matters.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div class="why-card__title">Family-Owned</div>
+                <p class="why-card__text">This is not a franchise or a large crew of subcontractors. Moore Electric is a family business built on referrals and repeat customers.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                <div class="why-card__title">Clear Communication</div>
+                <p class="why-card__text">Generator installs involve multiple steps, utility coordination, and inspections. Brenden keeps customers informed at every stage - no surprises.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+    <div class="container">
+        <div class="faq__header">
+            <div class="faq__eyebrow">Common Questions</div>
+            <h2>Generator Installation FAQs</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-item__question">Do I need a permit for generator installation in NH?
+                    <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-item__answer"><div class="faq-item__answer-inner"><p>Yes. In New Hampshire, generator installation requires an electrical permit and state inspection by a licensed Master Electrician. Transfer switch installation must be performed by a licensed electrician - it's not optional. Moore Electric handles all permitting as part of every installation.</p></div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-item__question">What's the difference between a manual and automatic transfer switch?
+                    <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-item__answer"><div class="faq-item__answer-inner"><p>A manual transfer switch requires you to physically flip a switch when the power goes out. An automatic transfer switch (ATS) detects the outage and switches to generator power within seconds - no action needed. For a true standby system, an automatic transfer switch is standard.</p></div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-item__question">How long does a generator installation take?
+                    <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-item__answer"><div class="faq-item__answer-inner"><p>Most residential standby generator installations take 1-2 days for the electrical work. If propane tank delivery or gas line extension is needed, that may add additional time for the gas contractor's portion. Moore Electric coordinates the full timeline so you know what to expect.</p></div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-item__question">Can I install a generator myself?
+                    <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-item__answer"><div class="faq-item__answer-inner"><p>Not legally in New Hampshire. Transfer switch installation must be performed by a licensed electrician. Unpermitted installations void manufacturer warranties, may void your homeowners insurance, and create serious backfeed hazards for utility workers. The savings are not worth the risk.</p></div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-item__question">Does Moore Electric install Generac generators?
+                    <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-item__answer"><div class="faq-item__answer-inner"><p>Yes. Moore Electric installs Generac standby generators throughout Southern NH and Northern MA. Generac is the most widely used residential standby brand, and Moore Electric's Master Electrician license ensures the warranty and installation are both fully compliant.</p></div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-item__question">Will my home need a panel upgrade before adding a generator?
+                    <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-item__answer"><div class="faq-item__answer-inner"><p>Some older homes do need a <a href="https://mooreelectricinc.net/panel-upgrades/">panel upgrade</a> before a generator can be added correctly. Brenden assesses your panel during the free on-site visit and can quote both the panel work and generator installation together if needed.</p></div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-item__question">Does a generator work with an EV charger or heat pump?
+                    <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-item__answer"><div class="faq-item__answer-inner"><p>Yes, but sizing matters. Homes with <a href="https://mooreelectricinc.net/ev-charger-installation/">EV chargers</a> or heat pumps typically need a 24 kW or larger system to run everything simultaneously. Moore Electric's load assessment accounts for all high-draw appliances in your home.</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Area -->
+<section class="service-area">
+    <div class="container">
+        <div class="service-area__header">
+            <div class="service-area__eyebrow">Coverage Area</div>
+            <h2>Generator Installation Service Area</h2>
+            <p style="max-width:640px;margin:0 auto;color:var(--moore-text-muted)">Moore Electric serves Southern New Hampshire, Northern Massachusetts, and Southern Maine. Licensed in all three states.</p>
+        </div>
+        <div class="area-grid">
+            <div class="area-tag">Plaistow, NH</div>
+            <div class="area-tag">Exeter, NH</div>
+            <div class="area-tag">Stratham, NH</div>
+            <div class="area-tag">Hampton, NH</div>
+            <div class="area-tag">Newburyport, MA</div>
+            <div class="area-tag">Amesbury, MA</div>
+            <div class="area-tag">Haverhill, MA</div>
+            <div class="area-tag">Salisbury, MA</div>
+            <div class="area-tag">York, ME</div>
+            <div class="area-tag">Kittery, ME</div>
+            <div class="area-tag">Southern NH</div>
+            <div class="area-tag">Northern MA</div>
+        </div>
+        <p style="text-align:center;margin-top:28px;color:var(--moore-text-muted);font-size:0.95rem">Not sure if we cover your area? <a href="tel:6038369513">Call 603-836-9513</a> - coverage varies by project type.</p>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+    <div class="container">
+        <div class="final-cta__content">
+            <h2>Don't Wait Until the Power's Already Out</h2>
+            <p>Generator installation season gets busy fast before winter. The best time to schedule is before storm season arrives.</p>
+            <div class="final-cta__ctas">
+                <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Request a Free Assessment</a>
+            </div>
+            <p class="final-cta__license">Moore Electric Inc. | NH Lic #14511 | MA Lic #22825 | ME Lic #MS60023064</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.faq-item__question').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement,a=i.classList.contains('active');document.querySelectorAll('.faq-item').forEach(f=>f.classList.remove('active'));if(!a)i.classList.add('active')})});
+</script>
+</body>
+</html>
