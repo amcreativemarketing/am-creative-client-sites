@@ -1,0 +1,1011 @@
+<!-- 
+  =====================================================
+  AM CREATIVE PLANS PAGE - SIMPLIFIED
+  =====================================================
+  
+  Leaner tier display to drive guide downloads
+  Includes website add-on callout
+  
+  UPDATED: February 28, 2026
+  - Replaced LeadFlow Essentials with Local Web & AI Presence ($597)
+  - Local Growth Engine: $997
+  - Growth Engine Pro: $1,597
+  - Blueprint Content Partner: $1,997
+  - Updated website callout and FAQ
+  - Local Web & AI Presence card updated for AI search messaging
+  - Local Growth Engine updated: platform-agnostic (no longer WordPress-specific)
+  - Strategy calls framed as available on request, not proactive monthly
+-->
+
+<style>
+  /* ===== INTRO SECTION ===== */
+  .amc-plans-intro {
+    background: #ffffff !important;
+    padding: 80px 20px !important;
+    text-align: center !important;
+  }
+  .amc-plans-intro-container {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+  }
+  .amc-plans-intro-eyebrow {
+    color: #b8976a !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 16px !important;
+  }
+  .amc-plans-intro-headline {
+    color: #1a2b4a !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin: 0 0 20px 0 !important;
+  }
+  .amc-plans-intro-text {
+    color: #555 !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+  }
+
+  /* ===== TIERS SECTION ===== */
+  .amc-plans-tiers {
+    background: #f8f9fa !important;
+    padding: 80px 20px !important;
+  }
+  .amc-plans-tiers-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+  }
+  .amc-plans-tiers-header {
+    text-align: center !important;
+    margin-bottom: 60px !important;
+  }
+  .amc-plans-tiers-eyebrow {
+    color: #b8976a !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 16px !important;
+  }
+  .amc-plans-tiers-headline {
+    color: #1a2b4a !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+  .amc-plans-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+  }
+  .amc-plan-card {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid #e5e7eb !important;
+  }
+  .amc-plan-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1) !important;
+  }
+  .amc-plan-card.featured {
+    border: 2px solid #b8976a !important;
+  }
+  .amc-plan-header {
+    padding: 28px 24px 20px 24px !important;
+    text-align: center !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+  }
+  .amc-plan-card.featured .amc-plan-header {
+    background: linear-gradient(135deg, #1a2b4a 0%, #0f1a2e 100%) !important;
+    border-bottom: 3px solid #b8976a !important;
+  }
+  .amc-plan-badge {
+    display: inline-block !important;
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 5px 10px !important;
+    border-radius: 4px !important;
+    margin-bottom: 12px !important;
+  }
+  .amc-plan-name {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #1a2b4a !important;
+    margin: 0 0 8px 0 !important;
+    line-height: 1.3 !important;
+  }
+  .amc-plan-card.featured .amc-plan-name {
+    color: #ffffff !important;
+  }
+  .amc-plan-tagline {
+    font-size: 14px !important;
+    color: #666 !important;
+    margin: 0 0 16px 0 !important;
+    line-height: 1.5 !important;
+  }
+  .amc-plan-card.featured .amc-plan-tagline {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  .amc-plan-price {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: center !important;
+    gap: 4px !important;
+  }
+  .amc-plan-price-amount {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: #1a2b4a !important;
+    line-height: 1 !important;
+  }
+  .amc-plan-card.featured .amc-plan-price-amount {
+    color: #b8976a !important;
+  }
+  .amc-plan-price-period {
+    font-size: 14px !important;
+    color: #888 !important;
+  }
+  .amc-plan-card.featured .amc-plan-price-period {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+  .amc-plan-body {
+    padding: 24px !important;
+    flex: 1 !important;
+  }
+  .amc-plan-features {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .amc-plan-features li {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding: 8px 0 !important;
+    font-size: 14px !important;
+    color: #444 !important;
+    line-height: 1.4 !important;
+  }
+  .amc-plan-features li svg {
+    width: 16px !important;
+    height: 16px !important;
+    color: #b8976a !important;
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
+  }
+  .amc-plan-footer {
+    padding: 0 24px 24px 24px !important;
+  }
+  .amc-plan-cta {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    background: #1a2b4a !important;
+    color: #ffffff !important;
+    padding: 14px 20px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    cursor: pointer !important;
+    font-family: inherit !important;
+  }
+  .amc-plan-cta:hover {
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+    transform: translateY(-2px) !important;
+  }
+  .amc-plan-card.featured .amc-plan-cta {
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+  }
+  .amc-plan-card.featured .amc-plan-cta:hover {
+    background: #ffffff !important;
+  }
+
+  /* ===== ADD-ONS CALLOUT ===== */
+  .amc-plans-addons {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    margin-top: 40px !important;
+  }
+  .amc-plans-addon {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    padding: 24px 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+  .amc-plans-addon-icon {
+    width: 48px !important;
+    height: 48px !important;
+    background: rgba(184, 151, 106, 0.1) !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+  .amc-plans-addon-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+    color: #b8976a !important;
+  }
+  .amc-plans-addon-content {
+    flex: 1 !important;
+  }
+  .amc-plans-addon-title {
+    color: #1a2b4a !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin: 0 0 4px 0 !important;
+  }
+  .amc-plans-addon-desc {
+    color: #666 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+  }
+  .amc-plans-addon-price {
+    color: #1a2b4a !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+  .amc-plans-addon-price span {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #888 !important;
+  }
+
+  /* ===== PRICING GUIDE BANNER ===== */
+  .amc-plans-guide-section {
+    background: #ffffff !important;
+    padding: 80px 20px !important;
+  }
+  .amc-plans-guide-container {
+    max-width: 900px !important;
+    margin: 0 auto !important;
+  }
+  .amc-plans-guide-box {
+    background: linear-gradient(135deg, #1a2b4a 0%, #0f1a2e 100%) !important;
+    border-radius: 20px !important;
+    padding: 60px !important;
+    text-align: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  .amc-plans-guide-box::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -50% !important;
+    right: -20% !important;
+    width: 400px !important;
+    height: 400px !important;
+    background: radial-gradient(circle, rgba(184, 151, 106, 0.15) 0%, transparent 70%) !important;
+    pointer-events: none !important;
+  }
+  .amc-plans-guide-box::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -50% !important;
+    left: -20% !important;
+    width: 400px !important;
+    height: 400px !important;
+    background: radial-gradient(circle, rgba(184, 151, 106, 0.1) 0%, transparent 70%) !important;
+    pointer-events: none !important;
+  }
+  .amc-plans-guide-content {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  .amc-plans-guide-icon {
+    width: 72px !important;
+    height: 72px !important;
+    background: rgba(184, 151, 106, 0.15) !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 24px auto !important;
+  }
+  .amc-plans-guide-icon svg {
+    width: 36px !important;
+    height: 36px !important;
+    color: #b8976a !important;
+  }
+  .amc-plans-guide-headline {
+    color: #ffffff !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    margin: 0 0 16px 0 !important;
+    line-height: 1.2 !important;
+  }
+  .amc-plans-guide-text {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    margin: 0 0 32px 0 !important;
+    max-width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .amc-plans-guide-list {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 32px !important;
+    margin-bottom: 36px !important;
+    flex-wrap: wrap !important;
+  }
+  .amc-plans-guide-list-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 15px !important;
+  }
+  .amc-plans-guide-list-item svg {
+    width: 18px !important;
+    height: 18px !important;
+    color: #b8976a !important;
+  }
+  .amc-plans-guide-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+    padding: 20px 40px !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-family: inherit !important;
+    transition: all 0.3s ease !important;
+  }
+  .amc-plans-guide-cta:hover {
+    background: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  }
+  .amc-plans-guide-cta svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* ===== HOW IT WORKS ===== */
+  .amc-plans-process {
+    background: #f8f9fa !important;
+    padding: 80px 20px !important;
+  }
+  .amc-plans-process-container {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+  }
+  .amc-plans-process-header {
+    text-align: center !important;
+    margin-bottom: 60px !important;
+  }
+  .amc-plans-process-eyebrow {
+    color: #b8976a !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 16px !important;
+  }
+  .amc-plans-process-headline {
+    color: #1a2b4a !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+  .amc-plans-process-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 40px !important;
+  }
+  .amc-plans-process-item {
+    text-align: center !important;
+  }
+  .amc-plans-process-number {
+    width: 60px !important;
+    height: 60px !important;
+    background: #1a2b4a !important;
+    color: #ffffff !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 20px auto !important;
+  }
+  .amc-plans-process-title {
+    color: #1a2b4a !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin: 0 0 12px 0 !important;
+  }
+  .amc-plans-process-desc {
+    color: #666 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+  }
+
+  /* ===== FAQ SECTION ===== */
+  .amc-plans-faq {
+    background: #ffffff !important;
+    padding: 80px 20px !important;
+  }
+  .amc-plans-faq-container {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+  }
+  .amc-plans-faq-header {
+    text-align: center !important;
+    margin-bottom: 48px !important;
+  }
+  .amc-plans-faq-eyebrow {
+    color: #b8976a !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 16px !important;
+  }
+  .amc-plans-faq-headline {
+    color: #1a2b4a !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+  .amc-plans-faq-item {
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    margin-bottom: 12px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+  }
+  .amc-plans-faq-item:hover {
+    border-color: #d1d5db !important;
+  }
+  .amc-plans-faq-question {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 20px 24px !important;
+    background: #ffffff !important;
+    border: none !important;
+    cursor: pointer !important;
+    text-align: left !important;
+    font-family: inherit !important;
+    transition: background 0.3s ease !important;
+  }
+  .amc-plans-faq-question:hover {
+    background: #f9fafb !important;
+  }
+  .amc-plans-faq-question-text {
+    color: #1a2b4a !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    padding-right: 16px !important;
+  }
+  .amc-plans-faq-icon {
+    width: 24px !important;
+    height: 24px !important;
+    color: #b8976a !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.3s ease !important;
+  }
+  .amc-plans-faq-item.active .amc-plans-faq-icon {
+    transform: rotate(45deg) !important;
+  }
+  .amc-plans-faq-answer {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease !important;
+  }
+  .amc-plans-faq-item.active .amc-plans-faq-answer {
+    max-height: 300px !important;
+  }
+  .amc-plans-faq-answer-inner {
+    padding: 0 24px 24px 24px !important;
+    color: #555 !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ===== FINAL CTA ===== */
+  .amc-plans-final-cta {
+    background: linear-gradient(135deg, #1a2b4a 0%, #0f1a2e 100%) !important;
+    padding: 80px 20px !important;
+    text-align: center !important;
+  }
+  .amc-plans-final-cta-container {
+    max-width: 700px !important;
+    margin: 0 auto !important;
+  }
+  .amc-plans-final-cta-headline {
+    color: #ffffff !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin: 0 0 16px 0 !important;
+  }
+  .amc-plans-final-cta-text {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    margin: 0 0 32px 0 !important;
+  }
+  .amc-plans-final-cta-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: #b8976a !important;
+    color: #1a2b4a !important;
+    padding: 20px 48px !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+  }
+  .amc-plans-final-cta-button:hover {
+    background: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  }
+  .amc-plans-final-cta-button svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1100px) {
+    .amc-plans-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .amc-plans-intro,
+    .amc-plans-tiers,
+    .amc-plans-guide-section,
+    .amc-plans-process,
+    .amc-plans-faq,
+    .amc-plans-final-cta {
+      padding: 60px 20px !important;
+    }
+    .amc-plans-intro-headline,
+    .amc-plans-tiers-headline,
+    .amc-plans-process-headline,
+    .amc-plans-faq-headline,
+    .amc-plans-final-cta-headline,
+    .amc-plans-guide-headline {
+      font-size: 28px !important;
+    }
+    .amc-plans-grid {
+      grid-template-columns: 1fr !important;
+      max-width: 400px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .amc-plans-addons {
+      grid-template-columns: 1fr !important;
+    }
+    .amc-plans-process-grid {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    .amc-plans-guide-box {
+      padding: 40px 24px !important;
+    }
+    .amc-plans-guide-list {
+      flex-direction: column !important;
+      gap: 12px !important;
+    }
+  }
+</style>
+
+<!-- ===== INTRO SECTION ===== -->
+<section class="amc-plans-intro">
+  <div class="amc-plans-intro-container">
+    <p class="amc-plans-intro-eyebrow">Our Approach</p>
+    <h2 class="amc-plans-intro-headline">Website. Visibility. Leads. All in One System.</h2>
+    <p class="amc-plans-intro-text">Every plan includes the marketing tools and strategy to get found, capture leads, and grow. We build the foundation that stops opportunities from slipping through the cracks, then layer growth strategies on top. No long contracts. Month-to-month after setup. You stay because it's working.</p>
+  </div>
+</section>
+
+<!-- ===== PRICING TIERS ===== -->
+<section class="amc-plans-tiers">
+  <div class="amc-plans-tiers-container">
+    <div class="amc-plans-tiers-header">
+      <p class="amc-plans-tiers-eyebrow">Plans</p>
+      <h2 class="amc-plans-tiers-headline">Choose Your Growth Path</h2>
+    </div>
+
+    <div class="amc-plans-grid">
+
+      <!-- Tier 1: Local Web & AI Presence -->
+      <div class="amc-plan-card">
+        <div class="amc-plan-header">
+          <h3 class="amc-plan-name">Local Web & AI Presence</h3>
+          <p class="amc-plan-tagline">New managed website + foundation SEO.</p>
+          <div class="amc-plan-price">
+            <span class="amc-plan-price-amount">$597</span>
+            <span class="amc-plan-price-period">/mo</span>
+          </div>
+        </div>
+        <div class="amc-plan-body">
+          <ul class="amc-plan-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Managed website built and hosted for you
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Optimized for Google and AI search results
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              GBP management, citations & link building
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              1-2 content pieces per month
+            </li>
+          </ul>
+        </div>
+        <div class="amc-plan-footer">
+          <a href="/contact/" class="amc-plan-cta">Get Started</a>
+        </div>
+      </div>
+
+      <!-- Tier 2: Local Growth Engine (UPDATED: platform-agnostic, strategy calls as available) -->
+      <div class="amc-plan-card featured">
+        <div class="amc-plan-header">
+          <span class="amc-plan-badge">Most Popular</span>
+          <h3 class="amc-plan-name">Local Growth Engine</h3>
+          <p class="amc-plan-tagline">Full CRM + enhanced SEO program.</p>
+          <div class="amc-plan-price">
+            <span class="amc-plan-price-amount">$997</span>
+            <span class="amc-plan-price-period">/mo</span>
+          </div>
+        </div>
+        <div class="amc-plan-body">
+          <ul class="amc-plan-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Professional website built or optimized
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Full AM Connect CRM with AI concierge
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              2-4 content pieces + enhanced link building
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Strategy calls available + detailed reporting
+            </li>
+          </ul>
+        </div>
+        <div class="amc-plan-footer">
+          <a href="/contact/" class="amc-plan-cta">Get Started</a>
+        </div>
+      </div>
+
+      <!-- Tier 3: Growth Engine Pro -->
+      <div class="amc-plan-card">
+        <div class="amc-plan-header">
+          <h3 class="amc-plan-name">Growth Engine Pro</h3>
+          <p class="amc-plan-tagline">Full marketing engine with ads.</p>
+          <div class="amc-plan-price">
+            <span class="amc-plan-price-amount">$1,597</span>
+            <span class="amc-plan-price-period">/mo</span>
+          </div>
+        </div>
+        <div class="amc-plan-body">
+          <ul class="amc-plan-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Everything in Local Growth
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Managed Google + Meta ads
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Email & SMS marketing
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Landing pages & lead magnets
+            </li>
+          </ul>
+        </div>
+        <div class="amc-plan-footer">
+          <a href="/contact/" class="amc-plan-cta">Get Started</a>
+        </div>
+      </div>
+
+      <!-- Tier 4: Blueprint Content Partner -->
+      <div class="amc-plan-card">
+        <div class="amc-plan-header">
+          <h3 class="amc-plan-name">Blueprint Content Partner</h3>
+          <p class="amc-plan-tagline">Full market presence with video and social.</p>
+          <div class="amc-plan-price">
+            <span class="amc-plan-price-amount">$1,997</span>
+            <span class="amc-plan-price-period">/mo</span>
+          </div>
+        </div>
+        <div class="amc-plan-body">
+          <ul class="amc-plan-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Everything in Growth Engine Pro
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Social media (6-10 posts/mo)
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Video editing & YouTube
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              A la carte filming ($425/session)
+            </li>
+          </ul>
+        </div>
+        <div class="amc-plan-footer">
+          <a href="/contact/" class="amc-plan-cta">Get Started</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Add-Ons (UPDATED: website add-on now references Local Growth Engine too) -->
+    <div class="amc-plans-addons">
+      <div class="amc-plans-addon">
+        <div class="amc-plans-addon-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div class="amc-plans-addon-content">
+          <h4 class="amc-plans-addon-title">Websites</h4>
+          <p class="amc-plans-addon-desc">Included with Local Web & AI Presence, Local Growth Engine, and Blueprint tiers. Add a website to other plans for a one-time setup fee.</p>
+        </div>
+        <div class="amc-plans-addon-price">+$200-500<span> one-time</span></div>
+      </div>
+      <div class="amc-plans-addon">
+        <div class="amc-plans-addon-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
+            <path d="M12 18V6"></path>
+          </svg>
+        </div>
+        <div class="amc-plans-addon-content">
+          <h4 class="amc-plans-addon-title">Ad Spend Separate</h4>
+          <p class="amc-plans-addon-desc">For Pro and Blueprint, your ad budget goes directly to Google or Meta. We recommend $500-3k/mo.</p>
+        </div>
+        <div class="amc-plans-addon-price">You control</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING GUIDE BANNER ===== -->
+<section class="amc-plans-guide-section">
+  <div class="amc-plans-guide-container">
+    <div class="amc-plans-guide-box">
+      <div class="amc-plans-guide-content">
+        <div class="amc-plans-guide-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <h3 class="amc-plans-guide-headline">Want the Full Breakdown?</h3>
+        <p class="amc-plans-guide-text">Get our complete Services & Pricing Guide with detailed deliverables, setup fees, and everything included at each tier.</p>
+        <div class="amc-plans-guide-list">
+          <div class="amc-plans-guide-list-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Full feature comparison
+          </div>
+          <div class="amc-plans-guide-list-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Setup fee details
+          </div>
+          <div class="amc-plans-guide-list-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Monthly deliverables
+          </div>
+        </div>
+        <button type="button" class="amc-plans-guide-cta amc-lead-modal-trigger">
+          Download Free Guide
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="amc-plans-process">
+  <div class="amc-plans-process-container">
+    <div class="amc-plans-process-header">
+      <p class="amc-plans-process-eyebrow">Getting Started</p>
+      <h2 class="amc-plans-process-headline">How It Works</h2>
+    </div>
+    <div class="amc-plans-process-grid">
+      <div class="amc-plans-process-item">
+        <div class="amc-plans-process-number">1</div>
+        <h3 class="amc-plans-process-title">Discovery Call</h3>
+        <p class="amc-plans-process-desc">We talk about your business, goals, and what's not working. No pitch - just an honest conversation.</p>
+      </div>
+      <div class="amc-plans-process-item">
+        <div class="amc-plans-process-number">2</div>
+        <h3 class="amc-plans-process-title">Custom Recommendation</h3>
+        <p class="amc-plans-process-desc">Based on your situation, we recommend the tier that makes sense. We'll be straight with you.</p>
+      </div>
+      <div class="amc-plans-process-item">
+        <div class="amc-plans-process-number">3</div>
+        <h3 class="amc-plans-process-title">Launch and Optimize</h3>
+        <p class="amc-plans-process-desc">We build your system, flip the switch, and start optimizing. You'll see what's working in your dashboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ (UPDATED: website FAQ references Local Growth Engine) ===== -->
+<section class="amc-plans-faq">
+  <div class="amc-plans-faq-container">
+    <div class="amc-plans-faq-header">
+      <p class="amc-plans-faq-eyebrow">Questions</p>
+      <h2 class="amc-plans-faq-headline">Common Questions</h2>
+    </div>
+
+    <div class="amc-plans-faq-item">
+      <button class="amc-plans-faq-question" aria-expanded="false">
+        <span class="amc-plans-faq-question-text">Do you require long-term contracts?</span>
+        <svg class="amc-plans-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <div class="amc-plans-faq-answer">
+        <div class="amc-plans-faq-answer-inner">
+          No. All plans are month-to-month after initial setup. You stay because it's working, not because you're locked in.
+        </div>
+      </div>
+    </div>
+
+    <div class="amc-plans-faq-item">
+      <button class="amc-plans-faq-question" aria-expanded="false">
+        <span class="amc-plans-faq-question-text">Do I need a new website to get started?</span>
+        <svg class="amc-plans-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <div class="amc-plans-faq-answer">
+        <div class="amc-plans-faq-answer-inner">
+          Not necessarily. If you already have a site that's working, we optimize it. If you need one, our Local Web & AI Presence, Local Growth Engine, and Blueprint tiers include a website built into the engagement. For other plans, add a website for a one-time setup fee based on scope.
+        </div>
+      </div>
+    </div>
+
+    <div class="amc-plans-faq-item">
+      <button class="amc-plans-faq-question" aria-expanded="false">
+        <span class="amc-plans-faq-question-text">Can I upgrade or downgrade later?</span>
+        <svg class="amc-plans-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <div class="amc-plans-faq-answer">
+        <div class="amc-plans-faq-answer-inner">
+          Absolutely. Many clients start with a foundation and add SEO or ads when they're ready. Each tier builds on the previous one, so upgrading is straightforward.
+        </div>
+      </div>
+    </div>
+
+    <div class="amc-plans-faq-item">
+      <button class="amc-plans-faq-question" aria-expanded="false">
+        <span class="amc-plans-faq-question-text">How long until I see results?</span>
+        <svg class="amc-plans-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <div class="amc-plans-faq-answer">
+        <div class="amc-plans-faq-answer-inner">
+          Lead capture improvements show up immediately. Paid ads can generate leads within weeks. SEO is a longer game - typically 3-6 months to see significant movement, but the results compound.
+        </div>
+      </div>
+    </div>
+
+    <div class="amc-plans-faq-item">
+      <button class="amc-plans-faq-question" aria-expanded="false">
+        <span class="amc-plans-faq-question-text">What types of businesses do you work with?</span>
+        <svg class="amc-plans-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <div class="amc-plans-faq-answer">
+        <div class="amc-plans-faq-answer-inner">
+          Primarily home service businesses - contractors, roofers, HVAC, plumbers, remodelers, cleaning companies, landscapers. We also work with other local service businesses that need help getting found and converting leads.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="amc-plans-final-cta">
+  <div class="amc-plans-final-cta-container">
+    <h2 class="amc-plans-final-cta-headline">Not Sure Which Plan Fits?</h2>
+    <p class="amc-plans-final-cta-text">A 15-minute call is all it takes to figure out what makes sense for your business.</p>
+    <a href="/contact/" class="amc-plans-final-cta-button">
+      Book a Discovery Call
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ Accordion Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.amc-plans-faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.amc-plans-faq-question');
+    
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.amc-plans-faq-question').setAttribute('aria-expanded', 'false');
+      });
+      
+      if (!isActive) {
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+});
+</script>
