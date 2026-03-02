@@ -69,62 +69,142 @@ Higher organic traffic to enable higher quality leads and growth.
 
 ## Visual Branding
 
-| Element | Value |
+### Colors
+
+| Role | Hex | Usage |
+|------|-----|-------|
+| **Primary** | #111827 | Dark charcoal/near-black - headings, primary buttons, nav |
+| **Accent** | #8B2727 | Dark red/maroon - links, secondary buttons, hover states |
+| **Background** | #FFFFFF | White - page background |
+| **Text** | #000000 | Black - body copy |
+| **Link** | #8B2727 | Same as accent - all hyperlinks |
+
+### Typography
+
+| Element | Font | Size | Notes |
+|---------|------|------|-------|
+| **Heading Font** | Inter | - | Fallback: ui-sans-serif, system-ui, sans-serif |
+| **Body Font** | Inter | - | Same family throughout |
+| **H1** | Inter | 60px | Homepage hero |
+| **H2** | Inter | 36px | Section headings |
+| **Body** | Inter | 16px | Paragraph text |
+
+### UI Components
+
+| Element | Style |
 |---------|-------|
-| **Primary Colors** | [NEEDS MANUAL EXTRACTION] - site blocked from automated tools. Pull with browser DevTools from clarkebuildingcompany.com. Logo suggests red/dark color scheme based on "Red logo" and "White logo" variants. |
-| **Secondary Colors** | [NEEDS MANUAL EXTRACTION] |
-| **Fonts** | [NEEDS MANUAL EXTRACTION] - Topline Pro sites typically use Inter, Poppins, or Montserrat. Confirm via browser DevTools. |
-| **Logo Files** | White logo and Red logo uploaded to onboarding form in Notion |
+| **Primary Button** | Background: #111827 (black), Text: #FFFFFF, Border radius: 0px |
+| **Secondary Button** | Background: #8B2727 (maroon), Text: #FFFFFF, Border radius: 0px |
+| **General Border Radius** | 5px |
+| **Base Spacing Unit** | 4px |
+| **Framework** | Tailwind CSS |
+| **Color Scheme** | Light |
+
+### Logo
+
+| Variant | Location |
+|---------|----------|
+| **Primary (CDN)** | https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/58788d32-b095-4096-a739-b865d51c522f.png |
+| **White logo** | Uploaded to onboarding form in Notion |
+| **Red logo** | Uploaded to onboarding form in Notion |
 
 ## Current Website Structure (Topline Pro)
 
-**Platform:** Topline Pro (template-based site - needs WordPress/Elementor rebuild)
+**Platform:** Topline Pro (template-based site, Tailwind CSS framework)
 **Domain:** clarkebuildingcompany.com
 **Domain Registrar:** Google Domains (now Squarespace Domains)
+**Total Pages Found:** 37 URLs (verified via Firecrawl sitemap scan, March 2026)
 
-### Indexed Pages (Google, as of March 2026)
+### Navigation Structure
 
-| Page | URL | Status |
-|------|-----|--------|
-| **Homepage** | https://clarkebuildingcompany.com/ | Indexed - title says "Best Construction & Remodeling Ipswich" (WRONG - should be West Newbury) |
-| **General Remodeling** | https://clarkebuildingcompany.com/service-general-remodeling | Indexed |
-| **Kitchen Renovation** | https://clarkebuildingcompany.com/service-kitchen-renovation | Indexed |
+- Home
+- Services (dropdown): Kitchen Renovation, Bathroom Renovation, Carpentry, Deck & Patio Installation, Flooring, General Remodeling, House Additions
+- Galleries: Exterior Renovations, Interior Renovations, All
+- Reviews
+- Blog
 
-### Known Service Pages (from Topline Pro template, not all indexed)
+### Service Pages (7 confirmed)
 
-| Page | URL Pattern (estimated) | Notes |
-|------|------------------------|-------|
-| Bathroom Renovation | /service-bathroom-renovation | Present per search snippets, not in Google index |
-| Carpentry | /service-carpentry | Present per search snippets, not indexed |
-| Deck & Patio | /service-deck-patio-installation | Present per search snippets, not indexed |
-| Flooring | /service-flooring | Present per search snippets, not indexed |
-| House Additions | /service-house-additions | Present per search snippets, not indexed |
+| Page | URL | Google Index Status |
+|------|-----|-------------------|
+| Kitchen Renovation | /service-kitchen-renovation | Indexed |
+| Bathroom Renovation | /service-bathroom-renovation | NOT indexed |
+| Carpentry | /service-carpentry | NOT indexed |
+| Deck & Patio Installation | /service-deck-patio-installation | NOT indexed |
+| Flooring | /service-flooring | NOT indexed |
+| General Remodeling | /service-general-remodeling | Indexed |
+| House Additions | /service-house-additions | NOT indexed |
 
-### Other Pages (standard Topline Pro template)
+### Gallery Pages (3 confirmed)
 
-| Page | URL Pattern (estimated) | Notes |
-|------|------------------------|-------|
-| About | /about | Standard template page |
-| Reviews/Testimonials | /reviews | Reviews displayed on homepage |
-| Gallery | /gallery | Project photos |
-| Contact | /contact | Free estimate form |
+| Page | URL |
+|------|-----|
+| All Projects | /gallery-All |
+| Exterior Renovations | /gallery-Exterior-Renovations |
+| Interior Renovations | /gallery-Interior-Renovations |
 
-### Homepage Structure (from search data)
+### Utility Pages (4 confirmed)
 
-- Hero section with business tagline
-- Services overview grid
-- Customer testimonials section (at least 3 reviews visible)
-- CTA: Free estimate / "Get a Quote"
-- Process section: "respond quickly to chat" > "gather project info" > "share transparent quote"
+| Page | URL | Notes |
+|------|-----|-------|
+| Reviews | /reviews | Customer reviews page |
+| Contact | /contact | Primary contact/quote form |
+| Contact 2-Step | /contact-2-step | Alternate contact flow |
+| Success | /success | Form submission confirmation |
+
+### Blog Posts (21 confirmed - 1 index + 20 posts)
+
+| Page | URL |
+|------|-----|
+| Blog Index | /blog |
+| ADU Regulations in Massachusetts | /blog-understanding-adu-regulations-in-massachusetts-a-comprehensive-guide |
+| Bathroom Renovation Costs | /blog-how-much-does-a-bathroom-renovation-cost-in-2025-a-comprehensive-guide |
+| Building a Home Addition | /blog-building-a-home-addition-a-comprehensive-guide-for-homeowners |
+| Contractor Selection Guide | /blog-how-to-choose-the-right-contractor-a-guide-for-homeowners |
+| Deck Materials Comparison | /blog-comparing-wood-and-composite-deck-materials-a-comprehensive-guide |
+| Energy-Efficient Renovation Tips | /blog-energy-efficient-renovation-tips-for-homeowners |
+| Flooring Options Guide | /blog-a-comprehensive-guide-to-flooring-options-for-your-home-renovation |
+| Home Renovation Planning | /blog-a-step-by-step-guide-to-planning-your-home-renovation |
+| Interior Carpentry Guide | /blog-a-comprehensive-guide-to-interior-carpentry-for-homeowners |
+| Kitchen Design Trends 2025 | /blog-kitchen-design-trends-for-2025-what-homeowners-need-to-know |
+| Kitchen Renovation Costs | /blog-how-much-does-a-kitchen-renovation-cost-a-comprehensive-guide-for-homeowners |
+| Kitchen Renovation ROI | /blog-the-roi-of-kitchen-renovations-how-a-new-kitchen-can-boost-your-home-s-value |
+| Kitchen Remodel FAQ | /blog-top-10-questions-to-ask-before-starting-a-kitchen-remodel |
+| Living Space Maximizing | /blog-maximizing-your-living-space-creative-home-addition-ideas |
+| North Shore Kitchen Trends | /blog-north-shore-kitchen-renovation-trends-a-comprehensive-guide-for-homeowners |
+| Open Floor Plan Benefits | /blog-the-benefits-of-open-floor-plans-a-comprehensive-guide |
+| Outdoor Living Spaces | /blog-transform-your-outdoor-living-space-a-comprehensive-guide-to-deck-and-patio-installation |
+| Renovation Budget Planning | /blog-how-to-plan-a-renovation-budget-a-comprehensive-guide-for-homeowners |
+| Renovation vs Addition | /blog-when-to-renovate-vs-when-to-add-on-a-homeowner-s-guide |
+| Sustainable Building MA | /blog-sustainable-building-practices-for-massachusetts-homeowners |
+
+### Homepage Content Structure (verified)
+
+- **H1:** "Clarke Building Company"
+- **Subhead:** "Clarke Building Company, based in West Newbury, MA and servicing the North Shore specializes in customized home remodeling and additions..."
+- **Trust Badges:** "Licensed", "Insured"
+- **CTAs:** "Get a Free Quote", "Call Us", "Send us a Text"
+- **About Us section** with company description
+- **7 service cards** with descriptions and images
+- **3-step quote process:** "Respond quickly to your chat" > "Gather project info" > "Share transparent quote"
+- **Gallery section:** 16+ images (all currently labeled "Kitchen Renovation" regardless of content)
+- **Reviews section:** 15 customer reviews with full text
+- **FAQ section:** 3 questions answered
+- **Service areas section**
+- **Contact form fields:** Full name, Phone, Email, Address, Preferred Date, Services dropdown (8 options including "Other"), Message
 
 ### Critical Issues Found
 
-1. **Title tag says "Ipswich"** - Homepage title references "Best Construction & Remodeling Ipswich" but business is in West Newbury
-2. **Low indexation** - Only 3 pages indexed out of 8+ that exist
-3. **No About/Meet Dave page indexed** - Biggest brand differentiator has zero search visibility
-4. **No ADU page exists** - Money service with no dedicated page
-5. **20+ blog posts generating zero traffic** - Content strategy not working on current platform
-6. **HTTPS duplicate content issues** - Known from Search Atlas audit
+1. **Title tag says "Ipswich"** - Homepage title: "Clarke Building Company - Best Construction & Remodeling Ipswich" (should be West Newbury)
+2. **Meta description says "Ipswich, MA"** - "Discover Clarke Building Company, your go-to for the best construction remodeling in Ipswich, MA"
+3. **Google review link points to Facebook** - "Leave us a review on Google" button links to facebook.com/105756331640670/reviews (BROKEN)
+4. **Low indexation** - Only 3 of 7 service pages indexed in Google
+5. **No About/Meet Dave page** - Biggest brand differentiator has no dedicated page
+6. **No ADU page exists** - Money service with no dedicated page (blog post exists but no service page)
+7. **All gallery images mislabeled** - Every image labeled "Kitchen Renovation" regardless of actual content
+8. **Bathroom page exists but should be excluded** - Per Dave, bathrooms are not a service they offer
+9. **20+ blog posts generating zero traffic** - Content strategy not working on current platform
+10. **HTTPS duplicate content issues** - Known from Search Atlas audit
 
 ## Online Presence
 
