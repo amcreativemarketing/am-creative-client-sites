@@ -653,6 +653,245 @@
     }
     
     /* ============================================
+       CUSTOM BUILDS - YOUR WAY
+       ============================================ */
+    
+    .custom-builds {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+    }
+    
+    .custom-builds__content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .custom-builds__title {
+      font-size: 2.5rem;
+      color: var(--bcm-navy);
+      margin-bottom: 1rem;
+    }
+    
+    .custom-builds__intro {
+      font-size: 1.05rem;
+      color: var(--bcm-medium-gray);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    
+    .custom-builds__options {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .custom-builds__option {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.25rem;
+      background: var(--bcm-white);
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    
+    .custom-builds__option-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--bcm-navy);
+      color: var(--bcm-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .custom-builds__option-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+    
+    .custom-builds__option-content h4 {
+      font-size: 1.05rem;
+      color: var(--bcm-navy);
+      margin-bottom: 0.25rem;
+    }
+    
+    .custom-builds__option-content p {
+      font-size: 0.9rem;
+      color: var(--bcm-medium-gray);
+      line-height: 1.5;
+    }
+    
+    .custom-builds__sidebar {
+      background: var(--bcm-navy);
+      color: var(--bcm-white);
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .custom-builds__sidebar-title {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .custom-builds__sidebar-text {
+      font-size: 1rem;
+      opacity: 0.9;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    
+    .custom-builds__sidebar-features {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .custom-builds__sidebar-feature {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    
+    .custom-builds__sidebar-bullet {
+      width: 6px;
+      height: 6px;
+      background: var(--bcm-gold);
+      border-radius: 50%;
+      margin-top: 0.55em;
+      flex-shrink: 0;
+    }
+    
+    .custom-builds__sidebar-feature-text {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+    }
+    
+    .custom-builds__sidebar-bottom {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.9rem;
+      color: var(--bcm-gold);
+      font-weight: 600;
+    }
+    
+    /* ============================================
+       LIVE FROM JOB SITE
+       ============================================ */
+    
+    .jobsite {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+    }
+    
+    .jobsite__content {
+      background: var(--bcm-dark-slate);
+      color: var(--bcm-white);
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .jobsite__title {
+      font-size: 2.25rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .jobsite__subtitle {
+      font-size: 1.1rem;
+      color: var(--bcm-gold);
+      margin-bottom: 1.5rem;
+    }
+    
+    .jobsite__intro {
+      font-size: 1rem;
+      opacity: 0.9;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    
+    .jobsite__highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    
+    .jobsite__highlight {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    
+    .jobsite__highlight-bullet {
+      width: 6px;
+      height: 6px;
+      background: var(--bcm-gold);
+      border-radius: 50%;
+      margin-top: 0.55em;
+      flex-shrink: 0;
+    }
+    
+    .jobsite__highlight-text {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+    }
+    
+    .jobsite__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--bcm-gold);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    
+    .jobsite__photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 4px;
+    }
+    
+    .jobsite__photo {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .jobsite__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .jobsite__photo-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.5rem 0.75rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    /* ============================================
        ICF VS WOOD COMPARISON
        ============================================ */
     
@@ -1833,7 +2072,7 @@
         <div class="model-intro__content">
           <p class="eyebrow">ADU Model</p>
           <h2 class="model-intro__name">The Elm</h2>
-          <p class="model-intro__tagline">Our most versatile single-story design, available in four exterior styles</p>
+          <p class="model-intro__tagline">Our most versatile single-story design - available in four exterior styles, and fully customizable to your property</p>
           
           <div class="model-intro__specs">
             <div class="model-intro__spec">
@@ -1857,7 +2096,7 @@
           <div class="model-intro__price">
             <p class="model-intro__price-label">Wood-Framed Starting From</p>
             <p class="model-intro__price-value">$217,000</p>
-            <p class="model-intro__price-note">ICF construction available from $252,000. Turnkey price includes permits, electrical, plumbing, and professional finishes.</p>
+            <p class="model-intro__price-note">ICF construction available from $252,000. Turnkey price includes permits, electrical, plumbing, and professional finishes. Custom sizes and layouts available - this is your starting point, not your only option.</p>
           </div>
         </div>
       </div>
@@ -1987,7 +2226,7 @@
         <div class="model-intro__content">
           <p class="eyebrow">ADU Model</p>
           <h2 class="model-intro__name">The Maple</h2>
-          <p class="model-intro__tagline">Two stories of living space for families who need more room</p>
+          <p class="model-intro__tagline">Two stories of living space for families who need more room - adjust the layout, finishes, and footprint to fit your life</p>
           
           <div class="model-intro__specs">
             <div class="model-intro__spec">
@@ -2011,7 +2250,7 @@
           <div class="model-intro__price">
             <p class="model-intro__price-label">Wood-Framed Starting From</p>
             <p class="model-intro__price-value">$280,000</p>
-            <p class="model-intro__price-note">ICF construction available from $320,000. Ideal for multi-generational living or rental income.</p>
+            <p class="model-intro__price-note">ICF construction available from $320,000. Ideal for multi-generational living or rental income. We can adjust square footage, bedroom count, and finishes to match your needs.</p>
           </div>
         </div>
       </div>
@@ -2076,7 +2315,78 @@
     </div>
     
     <!-- ============================================
-         PAGE 10: ICF VS WOOD COMPARISON
+         PAGE 10: YOUR ADU, YOUR WAY
+         ============================================ -->
+    <div class="page page--cream">
+      <div class="custom-builds">
+        <div class="custom-builds__content">
+          <p class="eyebrow">Beyond Our Models</p>
+          <h2 class="custom-builds__title">Your ADU, Your Way</h2>
+          <p class="custom-builds__intro">The Elm and Maple are starting points - not your only options. Every property is different, every family has different needs, and we build accordingly.</p>
+          
+          <div class="custom-builds__options">
+            <div class="custom-builds__option">
+              <div class="custom-builds__option-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M9 17h1"/></svg>
+              </div>
+              <div class="custom-builds__option-content">
+                <h4>Build Over Your Existing Garage</h4>
+                <p>Already have a garage with good bones? We can add a full living space above it - often the most cost-effective path to an ADU since the foundation and first floor are already there.</p>
+              </div>
+            </div>
+            
+            <div class="custom-builds__option">
+              <div class="custom-builds__option-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M3 7v1a3 3 0 0 0 6 0V7"/><path d="M9 7v1a3 3 0 0 0 6 0V7"/><path d="M15 7v1a3 3 0 0 0 6 0V7"/><path d="M3 7h18"/><path d="M5 21V11"/><path d="M19 21V11"/></svg>
+              </div>
+              <div class="custom-builds__option-content">
+                <h4>New ADU + Garage Together</h4>
+                <p>Need both? We design and build the garage and ADU as one project - living space above, parking and storage below. One permit process, one timeline, one team.</p>
+              </div>
+            </div>
+            
+            <div class="custom-builds__option">
+              <div class="custom-builds__option-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <div class="custom-builds__option-content">
+                <h4>Fully Custom Design</h4>
+                <p>Different square footage, unique layout, specific accessibility needs, attached breezeway to the main house - if you can describe it, we can design and build it.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="custom-builds__sidebar">
+          <h3 class="custom-builds__sidebar-title">Same Process, Same Standards</h3>
+          <p class="custom-builds__sidebar-text">Whether you choose a standard model or go fully custom, every Bradford ADU gets the same treatment:</p>
+          
+          <div class="custom-builds__sidebar-features">
+            <div class="custom-builds__sidebar-feature">
+              <span class="custom-builds__sidebar-bullet"></span>
+              <p class="custom-builds__sidebar-feature-text">In-house design tailored to your property's setbacks, grades, and utility access</p>
+            </div>
+            <div class="custom-builds__sidebar-feature">
+              <span class="custom-builds__sidebar-bullet"></span>
+              <p class="custom-builds__sidebar-feature-text">Clear pricing with written change orders - no surprises regardless of project scope</p>
+            </div>
+            <div class="custom-builds__sidebar-feature">
+              <span class="custom-builds__sidebar-bullet"></span>
+              <p class="custom-builds__sidebar-feature-text">Daily photo documentation from first shovel to final walkthrough</p>
+            </div>
+            <div class="custom-builds__sidebar-feature">
+              <span class="custom-builds__sidebar-bullet"></span>
+              <p class="custom-builds__sidebar-feature-text">BHS lifetime support included - your custom ADU gets the same ongoing care</p>
+            </div>
+          </div>
+          
+          <p class="custom-builds__sidebar-bottom">Custom pricing starts at $360/sqft depending on scope and finishes.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ============================================
+         PAGE 11: ICF VS WOOD COMPARISON
          ============================================ -->
     <div class="page page--white">
       <div class="comparison">
@@ -2137,7 +2447,69 @@
     </div>
     
     <!-- ============================================
-         PAGE 11: SITE REQUIREMENTS
+         PAGE 12: LIVE FROM THE JOB SITE
+         ============================================ -->
+    <div class="page page--dark">
+      <div class="jobsite">
+        <div class="jobsite__content">
+          <p class="eyebrow" style="color: var(--bcm-gold);">Live From the Job Site</p>
+          <h2 class="jobsite__title">ICF Construction in Action</h2>
+          <p class="jobsite__subtitle">A real Bradford build, happening now</p>
+          <p class="jobsite__intro">This is what ICF construction actually looks like. Our crew stacking forms, setting rebar, bracing walls, and pouring concrete on a current ADU project in the Merrimack Valley.</p>
+          
+          <div class="jobsite__highlights">
+            <div class="jobsite__highlight">
+              <span class="jobsite__highlight-bullet"></span>
+              <p class="jobsite__highlight-text">Interlocking foam forms stacked and braced on site</p>
+            </div>
+            <div class="jobsite__highlight">
+              <span class="jobsite__highlight-bullet"></span>
+              <p class="jobsite__highlight-text">Steel rebar reinforcement placed before the pour</p>
+            </div>
+            <div class="jobsite__highlight">
+              <span class="jobsite__highlight-bullet"></span>
+              <p class="jobsite__highlight-text">Concrete pumped directly into the wall cavity</p>
+            </div>
+            <div class="jobsite__highlight">
+              <span class="jobsite__highlight-bullet"></span>
+              <p class="jobsite__highlight-text">Result: solid concrete walls with built-in insulation</p>
+            </div>
+          </div>
+          
+          <a href="https://youtube.com/playlist?list=PL6EGCoyx0XpO6v05dI9WRBhB5dToH0fhz&si=w9DS9l1lVWNGAWCP" class="jobsite__cta" target="_blank">Watch the Full Build Series →</a>
+        </div>
+        
+        <div class="jobsite__photos">
+          <div class="jobsite__photo">
+            <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8b6e9512d1c52ae3a29.jpg" alt="Aerial view of ICF foundation and wall layout">
+            <div class="jobsite__photo-caption">Aerial view - foundation and ICF wall layout</div>
+          </div>
+          <div class="jobsite__photo">
+            <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8b684bc3817527c66bf.jpg" alt="Setting ICF blocks into position">
+            <div class="jobsite__photo-caption">Setting ICF blocks into position</div>
+          </div>
+          <div class="jobsite__photo">
+            <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8b65dfd508cb0c6f269.jpg" alt="Measuring for rebar placement">
+            <div class="jobsite__photo-caption">Measuring for rebar placement</div>
+          </div>
+          <div class="jobsite__photo">
+            <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8b6a8a1309ad96bc914.jpg" alt="Crew lifting ICF block into place">
+            <div class="jobsite__photo-caption">Crew lifting ICF block into place</div>
+          </div>
+          <div class="jobsite__photo">
+            <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8ac2837e8651e2879d1.jpg" alt="Bracing system ready for concrete pour">
+            <div class="jobsite__photo-caption">Bracing system ready for concrete pour</div>
+          </div>
+          <div class="jobsite__photo">
+            <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8ac2d8479594861edf9.jpg" alt="Concrete being pumped into wall cavity">
+            <div class="jobsite__photo-caption">Concrete being pumped into the wall cavity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ============================================
+         PAGE 13: SITE REQUIREMENTS
          ============================================ -->
     <div class="page page--cream">
       <div class="site-requirements">
@@ -2446,7 +2818,7 @@
         </div>
         
         <div class="process__image">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/Elm-DBL-Winter-Ready.webp" alt="Completed ADU in winter">
+          <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8ac2837e8651e2879d1.jpg" alt="ICF walls braced and ready for concrete pour">
           <div class="process__image-overlay">
             <p class="process__image-title">Typical Timeline</p>
             <p class="process__image-text">ICF construction: ~1 month on site. Wood-framed: 2-3 months. Permit timelines vary by town - we'll give you realistic expectations upfront.</p>
@@ -2508,6 +2880,11 @@
               <span class="investment__included-item">1 Year BHS</span>
             </div>
           </div>
+          
+          <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.15);">
+            <p style="font-size: 0.85rem; color: var(--bcm-gold); font-weight: 600; margin-bottom: 0.35rem;">Going Custom?</p>
+            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.75); line-height: 1.5;">These are starting points. We also build over existing garages, design ADU + garage combos, and create fully custom layouts. Pricing starts at $360/sqft based on scope and finishes.</p>
+          </div>
         </div>
         
         <div class="investment__faq">
@@ -2529,6 +2906,10 @@
             <div class="investment__faq-item">
               <h4 class="investment__faq-question">Can I live on-site during construction?</h4>
               <p class="investment__faq-answer">Absolutely. ADU construction happens in your backyard with minimal disruption to your main home.</p>
+            </div>
+            <div class="investment__faq-item">
+              <h4 class="investment__faq-question">What if I want something different from the Elm or Maple?</h4>
+              <p class="investment__faq-answer">Our models are starting points, not limits. We build over existing garages, design ADU-and-garage combos, adjust square footage, and create fully custom layouts. Tell us what you need and we'll design around it.</p>
             </div>
           </div>
         </div>
