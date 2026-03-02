@@ -71,10 +71,60 @@ Higher organic traffic to enable higher quality leads and growth.
 
 | Element | Value |
 |---------|-------|
-| **Primary Colors** | [NEEDS INFO] - pull from current Topline Pro site |
-| **Secondary Colors** | [NEEDS INFO] |
-| **Fonts** | [NEEDS INFO] - pull from current site |
+| **Primary Colors** | [NEEDS MANUAL EXTRACTION] - site blocked from automated tools. Pull with browser DevTools from clarkebuildingcompany.com. Logo suggests red/dark color scheme based on "Red logo" and "White logo" variants. |
+| **Secondary Colors** | [NEEDS MANUAL EXTRACTION] |
+| **Fonts** | [NEEDS MANUAL EXTRACTION] - Topline Pro sites typically use Inter, Poppins, or Montserrat. Confirm via browser DevTools. |
 | **Logo Files** | White logo and Red logo uploaded to onboarding form in Notion |
+
+## Current Website Structure (Topline Pro)
+
+**Platform:** Topline Pro (template-based site - needs WordPress/Elementor rebuild)
+**Domain:** clarkebuildingcompany.com
+**Domain Registrar:** Google Domains (now Squarespace Domains)
+
+### Indexed Pages (Google, as of March 2026)
+
+| Page | URL | Status |
+|------|-----|--------|
+| **Homepage** | https://clarkebuildingcompany.com/ | Indexed - title says "Best Construction & Remodeling Ipswich" (WRONG - should be West Newbury) |
+| **General Remodeling** | https://clarkebuildingcompany.com/service-general-remodeling | Indexed |
+| **Kitchen Renovation** | https://clarkebuildingcompany.com/service-kitchen-renovation | Indexed |
+
+### Known Service Pages (from Topline Pro template, not all indexed)
+
+| Page | URL Pattern (estimated) | Notes |
+|------|------------------------|-------|
+| Bathroom Renovation | /service-bathroom-renovation | Present per search snippets, not in Google index |
+| Carpentry | /service-carpentry | Present per search snippets, not indexed |
+| Deck & Patio | /service-deck-patio-installation | Present per search snippets, not indexed |
+| Flooring | /service-flooring | Present per search snippets, not indexed |
+| House Additions | /service-house-additions | Present per search snippets, not indexed |
+
+### Other Pages (standard Topline Pro template)
+
+| Page | URL Pattern (estimated) | Notes |
+|------|------------------------|-------|
+| About | /about | Standard template page |
+| Reviews/Testimonials | /reviews | Reviews displayed on homepage |
+| Gallery | /gallery | Project photos |
+| Contact | /contact | Free estimate form |
+
+### Homepage Structure (from search data)
+
+- Hero section with business tagline
+- Services overview grid
+- Customer testimonials section (at least 3 reviews visible)
+- CTA: Free estimate / "Get a Quote"
+- Process section: "respond quickly to chat" > "gather project info" > "share transparent quote"
+
+### Critical Issues Found
+
+1. **Title tag says "Ipswich"** - Homepage title references "Best Construction & Remodeling Ipswich" but business is in West Newbury
+2. **Low indexation** - Only 3 pages indexed out of 8+ that exist
+3. **No About/Meet Dave page indexed** - Biggest brand differentiator has zero search visibility
+4. **No ADU page exists** - Money service with no dedicated page
+5. **20+ blog posts generating zero traffic** - Content strategy not working on current platform
+6. **HTTPS duplicate content issues** - Known from Search Atlas audit
 
 ## Online Presence
 
@@ -84,14 +134,20 @@ Higher organic traffic to enable higher quality leads and growth.
 | **Facebook** | https://www.facebook.com/Clarkebuildingco/ |
 | **Instagram** | No account - create shell during onboarding |
 | **Google Business Profile** | NOT VERIFIED - 80-85% through, hit a snag. PRIORITY #1 |
-| **Houzz** | 10-12 reviews (cannot view currently) |
+| **Houzz** | 5/5 rating, reviews mention reliability and communication |
+| **BuildZoom** | Score 97/100 - top 18% of MA contractors |
 | **Domain Registrar** | Google Domains (now Squarespace Domains) |
 
 ## Competitors
 
-- Fahey Construction - https://www.faheyconstructionmd.com/
-- CS Builders (Ipswich)
-- Open Meadows - https://www.openmeadow.com/
+| Competitor | Location | BuildZoom | Reviews | Digital Strength |
+|-----------|----------|-----------|---------|-----------------|
+| Open Meadow Builders | Topsfield | 100 | Moderate positive | Strong - testimonials page, professional site |
+| Walczak Design + Build | Ipswich | 103 | Strong (5/5 multi-platform) | Strongest - ADU content, design-build positioning |
+| Nobleport Construction | Newburyport | 145 | Moderate (4.4 Angi) | Strong - top 1% BuildZoom, 30+ years |
+| Fahey Construction | Ipswich | 96 | ZERO public reviews | Weak - no digital proof |
+| CS Builders | Ipswich | 94 | Negative | Weak - no-show review, minimal presence |
+| Ipswich Bay Builders | Ipswich | N/A | Minimal | Weak - limited visibility |
 
 ## SEO Context
 
