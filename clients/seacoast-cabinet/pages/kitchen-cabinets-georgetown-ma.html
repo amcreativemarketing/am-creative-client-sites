@@ -1,0 +1,1201 @@
+<style>
+/* ========================================
+   Seacoast Cabinet - Georgetown MA Location Page
+   Mobile-first | Divi-safe with !important
+   ======================================== */
+
+.sc-georgetown-page {
+    --coastal-blue: #7d99ad;
+    --warm-gold: #b8905f;
+    --deep-charcoal: #2c3e50;
+    --pure-white: #ffffff;
+    --light-gray: #f8f8f8;
+    --medium-gray: #666666;
+    --warm-beige: #f5f2ed;
+    --success-green: #5cb85c;
+    font-family: 'Open Sans', sans-serif !important;
+    color: #2c3e50 !important;
+    line-height: 1.6 !important;
+    /* ---- DIVI FULL-WIDTH BREAKOUT ---- */
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    margin-left: -50vw !important;
+    max-width: none !important;
+}
+
+.sc-georgetown-page *,
+.sc-georgetown-page *::before,
+.sc-georgetown-page *::after {
+    box-sizing: border-box !important;
+}
+
+/* Force Divi parent containers to allow full-width */
+.et_pb_code_inner,
+.et_pb_module,
+.et_pb_code,
+.et_pb_column,
+.et_pb_row,
+.et_pb_section {
+    overflow: visible !important;
+}
+
+/* Strip all Divi spacing and width constraints from ancestors */
+.sc-georgetown-page .et_pb_code_inner,
+.sc-georgetown-page .et_pb_module,
+.sc-georgetown-page .et_pb_code {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Divi row/column width and padding resets */
+.sc-georgetown-page,
+.sc-georgetown-page .et_pb_row,
+.sc-georgetown-page .et_pb_column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.sc-georgetown-page .et_pb_row {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Divi section level - prevent max-width clamping */
+.sc-georgetown-page .et_pb_section {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+/* Catch Divi specialty/fullwidth sections too */
+.et_pb_fullwidth_code .sc-georgetown-page,
+.et_pb_section .sc-georgetown-page {
+    width: 100vw !important;
+    max-width: none !important;
+}
+
+.sc-georgetown-page h1,
+.sc-georgetown-page h2,
+.sc-georgetown-page h3,
+.sc-georgetown-page h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    line-height: 1.2 !important;
+    margin-top: 0 !important;
+}
+
+.sc-georgetown-page p {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+}
+
+.sc-georgetown-page a {
+    text-decoration: none !important;
+}
+
+/* ---- HERO SECTION ---- */
+.sc-georgetown-hero {
+    position: relative !important;
+    background-image: url('https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-95.webp') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 60px 20px !important;
+    text-align: center !important;
+    min-height: 420px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+.sc-georgetown-hero::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(44, 62, 80, 0.7) !important;
+    z-index: 1 !important;
+}
+
+.sc-georgetown-hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 860px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+}
+
+.sc-georgetown-hero h1 {
+    color: #ffffff !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 16px !important;
+}
+
+.sc-georgetown-hero h2 {
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 28px !important;
+    line-height: 1.5 !important;
+}
+
+.sc-georgetown-hero-ctas {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: center !important;
+}
+
+.sc-georgetown-btn-primary {
+    display: inline-block !important;
+    background-color: #b8905f !important;
+    color: #ffffff !important;
+    padding: 16px 32px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    border-radius: 4px !important;
+    min-width: 280px !important;
+    text-align: center !important;
+    transition: background-color 0.3s ease !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.sc-georgetown-btn-primary:hover {
+    background-color: #a07a4f !important;
+    color: #ffffff !important;
+}
+
+.sc-georgetown-btn-secondary-link {
+    color: #ffffff !important;
+    font-size: 0.95rem !important;
+    text-decoration: underline !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.sc-georgetown-btn-secondary-link:hover {
+    opacity: 0.85 !important;
+    color: #ffffff !important;
+}
+
+/* ---- TRUST BADGES (dark bar) ---- */
+.sc-georgetown-trust-bar {
+    background-color: #2c3e50 !important;
+    padding: 20px 20px !important;
+    width: 100% !important;
+}
+
+.sc-georgetown-trust-badges {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 24px !important;
+}
+
+.sc-georgetown-trust-badge {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.sc-georgetown-trust-badge .badge-icon {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 22px !important;
+    height: 22px !important;
+}
+
+/* ---- SECTION CONTAINERS ---- */
+.sc-georgetown-section {
+    padding: 48px 24px !important;
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+.sc-georgetown-section-alt {
+    background-color: #f5f2ed !important;
+    width: 100% !important;
+    clear: both !important;
+}
+
+.sc-georgetown-section-gray {
+    background-color: #f8f8f8 !important;
+    width: 100% !important;
+    clear: both !important;
+}
+
+.sc-georgetown-section h2 {
+    color: #2c3e50 !important;
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    line-height: 1.3 !important;
+}
+
+.sc-georgetown-section h3 {
+    color: #2c3e50 !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Inner sections inside colored wrappers inherit max-width but don't double-pad */
+.sc-georgetown-section-alt .sc-georgetown-section,
+.sc-georgetown-section-gray .sc-georgetown-section {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+}
+
+/* ---- SPLIT LAYOUT (image + text side by side) ---- */
+.sc-georgetown-split {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    align-items: start !important;
+    margin: 32px 0 !important;
+}
+
+.sc-georgetown-split-image {
+    overflow: hidden !important;
+    border-radius: 8px !important;
+}
+
+.sc-georgetown-split-image img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    display: block !important;
+    object-fit: cover !important;
+}
+
+.sc-georgetown-split-text h3 {
+    color: #7d99ad !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+}
+
+.sc-georgetown-split-text p {
+    color: #666666 !important;
+    font-size: 0.95rem !important;
+}
+
+/* ---- HIGHLIGHT NUMBERS STRIP ---- */
+.sc-georgetown-highlights {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    margin: 28px 0 !important;
+}
+
+.sc-georgetown-highlight-card {
+    text-align: center !important;
+    padding: 28px 20px !important;
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    border: 1px solid #e8e8e8 !important;
+}
+
+.sc-georgetown-highlight-card .highlight-number {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 2.4rem !important;
+    font-weight: 700 !important;
+    color: #b8905f !important;
+    line-height: 1 !important;
+    margin-bottom: 8px !important;
+}
+
+.sc-georgetown-highlight-card .highlight-label {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: #7d99ad !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 8px !important;
+}
+
+.sc-georgetown-highlight-card p {
+    color: #666666 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0 !important;
+}
+
+/* ---- COMPARISON TABLE ---- */
+.sc-georgetown-comparison-wrap {
+    overflow-x: auto !important;
+    margin: 28px 0 !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.sc-georgetown-comparison {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    min-width: 600px !important;
+    font-size: 0.95rem !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
+
+.sc-georgetown-comparison thead th {
+    background: #2c3e50 !important;
+    color: #ffffff !important;
+    padding: 14px 16px !important;
+    text-align: left !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+}
+
+.sc-georgetown-comparison thead th:first-child {
+    border-radius: 6px 0 0 0 !important;
+}
+
+.sc-georgetown-comparison thead th:last-child {
+    border-radius: 0 6px 0 0 !important;
+}
+
+.sc-georgetown-comparison thead th.highlight-col {
+    background: #7d99ad !important;
+}
+
+.sc-georgetown-comparison tbody td {
+    padding: 14px 16px !important;
+    border-bottom: 1px solid #e8e8e8 !important;
+    vertical-align: top !important;
+    color: #2c3e50 !important;
+}
+
+.sc-georgetown-comparison tbody td:first-child {
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    background: #f8f8f8 !important;
+}
+
+.sc-georgetown-comparison tbody td.highlight-col {
+    background: rgba(125, 153, 173, 0.08) !important;
+}
+
+.sc-georgetown-comparison tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 6px !important;
+}
+
+.sc-georgetown-comparison tbody tr:last-child td:last-child {
+    border-radius: 0 0 6px 0 !important;
+}
+
+.sc-georgetown-comparison .check-yes {
+    color: #5cb85c !important;
+    font-weight: 700 !important;
+}
+
+.sc-georgetown-comparison .check-no {
+    color: #cc4444 !important;
+    font-weight: 700 !important;
+}
+
+/* ---- CABINET TIERS ---- */
+.sc-georgetown-tier-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin: 24px 0 !important;
+}
+
+.sc-georgetown-tier-card {
+    border: 1px solid #e8e8e8 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+}
+
+.sc-georgetown-tier-card .tier-header {
+    background: #7d99ad !important;
+    color: #ffffff !important;
+    padding: 16px !important;
+    text-align: center !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+}
+
+.sc-georgetown-tier-card .tier-body {
+    padding: 20px !important;
+}
+
+.sc-georgetown-tier-card .tier-price {
+    text-align: center !important;
+    font-weight: 700 !important;
+    color: #b8905f !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 12px !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.sc-georgetown-tier-card .tier-desc {
+    color: #666666 !important;
+    font-size: 0.95rem !important;
+    text-align: center !important;
+}
+
+/* ---- PROCESS CARDS (numbered) ---- */
+.sc-georgetown-process-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin: 28px 0 !important;
+}
+
+.sc-georgetown-process-card {
+    background: #ffffff !important;
+    border: 1px solid #e8e8e8 !important;
+    border-radius: 8px !important;
+    padding: 28px 24px !important;
+    border-top: 4px solid #7d99ad !important;
+}
+
+.sc-georgetown-process-card .process-number {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #b8905f !important;
+    line-height: 1 !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+}
+
+.sc-georgetown-process-card h3 {
+    margin-bottom: 8px !important;
+}
+
+.sc-georgetown-process-card p {
+    color: #666666 !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 0 !important;
+}
+
+/* ---- REVIEWS ---- */
+.sc-georgetown-reviews {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin: 24px 0 !important;
+}
+
+.sc-georgetown-review-card {
+    background: #ffffff !important;
+    border: 1px solid #e8e8e8 !important;
+    border-radius: 8px !important;
+    padding: 24px !important;
+}
+
+.sc-georgetown-review-stars {
+    margin-bottom: 12px !important;
+    display: flex !important;
+    gap: 2px !important;
+}
+
+.sc-georgetown-review-text {
+    font-style: italic !important;
+    color: #2c3e50 !important;
+    margin-bottom: 12px !important;
+    line-height: 1.6 !important;
+}
+
+.sc-georgetown-review-author {
+    font-weight: 600 !important;
+    color: #7d99ad !important;
+    font-size: 0.9rem !important;
+}
+
+.sc-georgetown-review-badge {
+    text-align: center !important;
+    margin-top: 20px !important;
+    padding: 16px !important;
+    background: #f8f8f8 !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* ---- SERVICE AREA LINKS ---- */
+.sc-georgetown-area-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin: 20px 0 !important;
+}
+
+.sc-georgetown-area-link {
+    display: block !important;
+    padding: 12px 16px !important;
+    background: #7d99ad !important;
+    color: #ffffff !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.sc-georgetown-area-link:hover {
+    background-color: #6a8899 !important;
+    color: #ffffff !important;
+}
+
+.sc-georgetown-hub-link {
+    display: inline-block !important;
+    background-color: #b8905f !important;
+    color: #ffffff !important;
+    padding: 14px 28px !important;
+    font-weight: 600 !important;
+    border-radius: 4px !important;
+    margin-top: 20px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.sc-georgetown-hub-link:hover {
+    background-color: #a07a4f !important;
+    color: #ffffff !important;
+}
+
+/* ---- FAQ ACCORDION ---- */
+.sc-georgetown-faq-list {
+    margin-top: 24px !important;
+}
+
+.sc-georgetown-faq-item {
+    border: 1px solid #e8e8e8 !important;
+    border-radius: 6px !important;
+    margin-bottom: 10px !important;
+    overflow: hidden !important;
+}
+
+.sc-georgetown-faq-question {
+    width: 100% !important;
+    background: #ffffff !important;
+    border: none !important;
+    padding: 18px 48px 18px 20px !important;
+    text-align: left !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    cursor: pointer !important;
+    position: relative !important;
+    min-height: 44px !important;
+    line-height: 1.4 !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.sc-georgetown-faq-question:hover {
+    background-color: #f8f8f8 !important;
+}
+
+.sc-georgetown-faq-question::after {
+    content: '+' !important;
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    font-size: 1.4rem !important;
+    color: #7d99ad !important;
+    font-weight: 400 !important;
+    transition: transform 0.3s ease !important;
+}
+
+.sc-georgetown-faq-question.active::after {
+    content: '\2212' !important;
+}
+
+.sc-georgetown-faq-answer {
+    display: none !important;
+    padding: 0 20px 20px !important;
+    color: #666666 !important;
+    line-height: 1.7 !important;
+}
+
+.sc-georgetown-faq-answer.active {
+    display: block !important;
+}
+
+/* ---- FINAL CTA ---- */
+.sc-georgetown-final-cta {
+    background-color: #2c3e50 !important;
+    padding: 48px 20px !important;
+    text-align: center !important;
+    color: #ffffff !important;
+    width: 100% !important;
+}
+
+.sc-georgetown-final-cta h2 {
+    color: #ffffff !important;
+    margin-bottom: 16px !important;
+}
+
+.sc-georgetown-final-cta p {
+    color: rgba(255,255,255,0.9) !important;
+    max-width: 720px !important;
+    margin: 0 auto 28px !important;
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+}
+
+.sc-georgetown-final-cta .sc-georgetown-contact-info {
+    margin-top: 20px !important;
+    color: rgba(255,255,255,0.85) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.8 !important;
+}
+
+.sc-georgetown-final-cta .sc-georgetown-contact-info a {
+    color: #b8905f !important;
+    font-weight: 600 !important;
+}
+
+/* ---- MAP SECTION ---- */
+.sc-georgetown-map-section {
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.sc-georgetown-map-section iframe {
+    width: 100% !important;
+    height: 350px !important;
+    border: 0 !important;
+    display: block !important;
+}
+
+/* ---- SECTION IMAGE ---- */
+.sc-georgetown-section-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    margin: 28px 0 8px !important;
+    display: block !important;
+    object-fit: cover !important;
+}
+
+/* ========================================
+   TABLET (768px+)
+   ======================================== */
+@media (min-width: 768px) {
+    .sc-georgetown-hero {
+        padding: 80px 40px !important;
+        min-height: 500px !important;
+    }
+
+    .sc-georgetown-hero h1 {
+        font-size: 2.6rem !important;
+    }
+
+    .sc-georgetown-hero h2 {
+        font-size: 1.25rem !important;
+    }
+
+    .sc-georgetown-trust-badges {
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 40px !important;
+    }
+
+    .sc-georgetown-section {
+        padding: 64px 40px !important;
+    }
+
+    .sc-georgetown-split {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 40px !important;
+    }
+
+    .sc-georgetown-highlights {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 24px !important;
+    }
+
+    .sc-georgetown-tier-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px !important;
+    }
+
+    .sc-georgetown-process-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px !important;
+    }
+
+    .sc-georgetown-reviews {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px !important;
+    }
+
+    .sc-georgetown-area-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .sc-georgetown-section h2 {
+        font-size: 1.85rem !important;
+    }
+
+    .sc-georgetown-map-section iframe {
+        height: 450px !important;
+    }
+}
+
+/* ========================================
+   DESKTOP (1024px+)
+   ======================================== */
+@media (min-width: 1024px) {
+    .sc-georgetown-hero {
+        padding: 100px 40px !important;
+        min-height: 560px !important;
+    }
+
+    .sc-georgetown-hero h1 {
+        font-size: 3rem !important;
+    }
+
+    .sc-georgetown-hero h2 {
+        font-size: 1.3rem !important;
+    }
+
+    .sc-georgetown-section {
+        padding: 80px 40px !important;
+    }
+
+    .sc-georgetown-split {
+        gap: 56px !important;
+    }
+
+    .sc-georgetown-process-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    .sc-georgetown-area-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    .sc-georgetown-section h2 {
+        font-size: 2rem !important;
+    }
+
+    .sc-georgetown-final-cta {
+        padding: 72px 40px !important;
+    }
+
+    .sc-georgetown-final-cta h2 {
+        font-size: 2rem !important;
+    }
+}
+
+/* ========================================
+   WIDE DESKTOP (1440px+)
+   ======================================== */
+@media (min-width: 1440px) {
+    .sc-georgetown-hero {
+        padding: 120px 60px !important;
+        min-height: 600px !important;
+    }
+
+    .sc-georgetown-hero h1 {
+        font-size: 3.4rem !important;
+    }
+
+    .sc-georgetown-section {
+        padding: 88px 40px !important;
+    }
+
+    .sc-georgetown-trust-badges {
+        gap: 56px !important;
+    }
+
+    .sc-georgetown-map-section iframe {
+        height: 500px !important;
+    }
+}
+</style>
+
+<div class="sc-georgetown-page">
+
+    <!-- ==================== HERO ==================== -->
+    <div class="sc-georgetown-hero">
+        <div class="sc-georgetown-hero-content">
+            <h1>Kitchen Cabinets in Georgetown, MA</h1>
+            <h2>Your Georgetown kitchen deserves more than a catalog. Get one-on-one design, photorealistic 3D renderings, and American-made custom cabinetry - all from our showroom just 8 miles away in Rowley.</h2>
+            <div class="sc-georgetown-hero-ctas">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-georgetown-btn-primary">Schedule Your Free Consultation</a>
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-georgetown-btn-secondary-link">Visit Our Rowley Showroom - Only 8 Miles from Georgetown</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TRUST BADGES (dark charcoal bar - Boxford uses light gray) ==================== -->
+    <div class="sc-georgetown-trust-bar">
+        <div class="sc-georgetown-trust-badges">
+            <div class="sc-georgetown-trust-badge">
+                <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b8905f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+                <span>3D Renderings Included</span>
+            </div>
+            <div class="sc-georgetown-trust-badge">
+                <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b8905f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+                <span>Design Fee Goes Toward Your Order</span>
+            </div>
+            <div class="sc-georgetown-trust-badge">
+                <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b8905f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+                <span>NKBA Certified Designers</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SECTION 2: SERVICE OVERVIEW (split image+text - Boxford uses 3-card grid) ==================== -->
+    <div class="sc-georgetown-section">
+        <h2>Georgetown Kitchen Cabinet Design, Built Around Your Home</h2>
+        <p>Seacoast Cabinet brings dedicated <a href="https://seacoastcabinetne.com/design-services/">kitchen design services</a> to Georgetown, MA homeowners who want more than a standard cabinet order. We pair you with a designer who learns your space, your habits, and your goals - then builds a custom cabinetry plan you can actually see in 3D before committing to a single purchase.</p>
+
+        <div class="sc-georgetown-split">
+            <div class="sc-georgetown-split-image">
+                <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/02/5X5A8218-scaled.webp" alt="" width="960" height="640" loading="lazy" decoding="async">
+            </div>
+            <div class="sc-georgetown-split-text">
+                <h3>Custom Cabinetry, Not Stock Boxes</h3>
+                <p>Every Georgetown kitchen we work on starts from scratch. We measure your space, discuss how you actually use your kitchen, and design a layout that fits - whether that's a full renovation or targeted upgrades to storage and functionality.</p>
+                <h3>Renderings Before You Commit</h3>
+                <p>Our designers produce photorealistic 3D renderings so you see your finished kitchen - finishes, hardware, cabinet placement - before anything ships. It's the best way to eliminate surprises and make confident decisions.</p>
+                <h3>We Work With Your Contractor</h3>
+                <p>We produce detailed CAD drawings and specifications your contractor needs for a clean installation. From <a href="https://seacoastcabinetne.com/multi-unit-kitchen-cabinets/">multi-unit builds</a> to single-kitchen renovations, we stay involved through the process.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SECTION 3: COMPARISON CHART (Georgetown-unique section) ==================== -->
+    <div class="sc-georgetown-section-alt">
+        <div class="sc-georgetown-section">
+            <h2>How a Dedicated Showroom Compares to Other Cabinet Sources</h2>
+            <p>Georgetown homeowners have plenty of places to buy cabinets. Here's how working with a local design showroom stacks up against the alternatives.</p>
+
+            <div class="sc-georgetown-comparison-wrap">
+                <table class="sc-georgetown-comparison">
+                    <thead>
+                        <tr>
+                            <th>What You Get</th>
+                            <th class="highlight-col">Seacoast Cabinet</th>
+                            <th>Big-Box Stores</th>
+                            <th>Online Retailers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Personal Design Consultation</td>
+                            <td class="highlight-col"><span class="check-yes">Yes - showroom or in-home</span></td>
+                            <td><span class="check-no">Limited availability</span></td>
+                            <td><span class="check-no">No</span></td>
+                        </tr>
+                        <tr>
+                            <td>Photorealistic 3D Renderings</td>
+                            <td class="highlight-col"><span class="check-yes">Every project</span></td>
+                            <td><span class="check-no">Rarely available</span></td>
+                            <td><span class="check-no">No</span></td>
+                        </tr>
+                        <tr>
+                            <td>Touch Finishes Before Ordering</td>
+                            <td class="highlight-col"><span class="check-yes">Full showroom displays</span></td>
+                            <td>Small samples</td>
+                            <td><span class="check-no">Photos only</span></td>
+                        </tr>
+                        <tr>
+                            <td>Semi-Custom and Full Custom Options</td>
+                            <td class="highlight-col"><span class="check-yes">Three American-made lines</span></td>
+                            <td>Stock and limited semi-custom</td>
+                            <td>Stock sizes only</td>
+                        </tr>
+                        <tr>
+                            <td>Contractor-Ready CAD Drawings</td>
+                            <td class="highlight-col"><span class="check-yes">Detailed specs included</span></td>
+                            <td><span class="check-no">Basic layouts</span></td>
+                            <td><span class="check-no">Not available</span></td>
+                        </tr>
+                        <tr>
+                            <td>Active Installation Coordination</td>
+                            <td class="highlight-col"><span class="check-yes">Through final install</span></td>
+                            <td>Third-party subcontractors</td>
+                            <td><span class="check-no">DIY or find your own</span></td>
+                        </tr>
+                        <tr>
+                            <td>Design Fee Applied to Order</td>
+                            <td class="highlight-col"><span class="check-yes">100% credited</span></td>
+                            <td><span class="check-no">No</span></td>
+                            <td><span class="check-no">No</span></td>
+                        </tr>
+                        <tr>
+                            <td>Lifetime Warranty</td>
+                            <td class="highlight-col"><span class="check-yes">Limited lifetime on all lines</span></td>
+                            <td>Varies by product</td>
+                            <td>Limited or none</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/11/20251111-223225-a14c3a83280a7b18-e4b14ff6-9375-4eb1-bf59-bce44047c0bf.webp" alt="" width="960" height="640" loading="lazy" decoding="async" class="sc-georgetown-section-image">
+        </div>
+    </div>
+
+    <!-- ==================== SECTION 4: BY THE NUMBERS (Boxford uses icon-circle value points) ==================== -->
+    <div class="sc-georgetown-section">
+        <h2>What Working with Seacoast Cabinet Looks Like</h2>
+
+        <div class="sc-georgetown-highlights">
+            <div class="sc-georgetown-highlight-card">
+                <div class="highlight-number">8 mi</div>
+                <div class="highlight-label">From Georgetown</div>
+                <p>A quick drive down Route 97 to our <a href="https://seacoastcabinetne.com/contact/">Rowley showroom</a></p>
+            </div>
+            <div class="sc-georgetown-highlight-card">
+                <div class="highlight-number">3</div>
+                <div class="highlight-label">Cabinet Lines</div>
+                <p>Mantra, Homecrest, and <a href="https://seacoastcabinetne.com/cabinets/">Omega</a> - all American-made</p>
+            </div>
+            <div class="sc-georgetown-highlight-card">
+                <div class="highlight-number">100%</div>
+                <div class="highlight-label">Fee Credited</div>
+                <p>Your design fee applies directly to your cabinet purchase</p>
+            </div>
+            <div class="sc-georgetown-highlight-card">
+                <div class="highlight-number">4.9</div>
+                <div class="highlight-label">Google Rating</div>
+                <p>90+ five-star reviews from North Shore homeowners</p>
+            </div>
+        </div>
+
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/seacoast-showroom-12.webp" alt="" width="960" height="640" loading="lazy" decoding="async" class="sc-georgetown-section-image">
+    </div>
+
+    <!-- ==================== SECTION 5: CABINET COLLECTIONS ==================== -->
+    <div class="sc-georgetown-section-gray">
+        <div class="sc-georgetown-section">
+            <h2>Three Levels of American-Made Kitchen Cabinetry</h2>
+            <p>Every cabinet line we carry is manufactured in the U.S. by MasterBrand Cabinets and backed by a limited lifetime warranty. The right choice depends on your Georgetown kitchen's needs, your style preferences, and your budget.</p>
+
+            <div class="sc-georgetown-tier-grid">
+                <div class="sc-georgetown-tier-card">
+                    <div class="tier-header">Mantra Cabinets</div>
+                    <div class="tier-body">
+                        <div class="tier-price">$$</div>
+                        <p class="tier-desc">Solid construction in traditional and transitional styles. A smart entry point for Georgetown homeowners updating their kitchen without a full renovation budget.</p>
+                    </div>
+                </div>
+                <div class="sc-georgetown-tier-card">
+                    <div class="tier-header">Homecrest Cabinetry</div>
+                    <div class="tier-body">
+                        <div class="tier-price">$$$</div>
+                        <p class="tier-desc">Expanded finish palette, more hardware choices, and built-in storage accessories. The sweet spot for Georgetown kitchens that need both form and function.</p>
+                    </div>
+                </div>
+                <div class="sc-georgetown-tier-card">
+                    <div class="tier-header">Omega Cabinetry</div>
+                    <div class="tier-body">
+                        <div class="tier-price">$$$$</div>
+                        <p class="tier-desc">Fully custom construction - inset, overlay, painted, stained - with every detail specified to your exact requirements. Built for complete kitchen transformations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 24px;">
+                <a href="https://seacoastcabinetne.com/cabinets/" class="sc-georgetown-btn-primary">Browse Cabinet Collections</a>
+            </div>
+
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/seacoast-showroom-11.webp" alt="" width="960" height="640" loading="lazy" decoding="async" class="sc-georgetown-section-image">
+        </div>
+    </div>
+
+    <!-- ==================== SECTION 6: REVIEWS (before process - Boxford has process first) ==================== -->
+    <div class="sc-georgetown-section">
+        <h2>Hear from North Shore Homeowners Who Worked with Us</h2>
+
+        <div class="sc-georgetown-reviews">
+            <div class="sc-georgetown-review-card">
+                <div class="sc-georgetown-review-stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="sc-georgetown-review-text">"Seacoast Cabinets designs and layouts are beautiful and timeless. Their beautiful store layout gives you an immediate confidence that you're in good hands. Their installation process efficient and organized. Frank and his team are complete pro's from start to finish. I highly recommend them for all your remolding and new construction cabinet needs."</p>
+                <div class="sc-georgetown-review-author">- Randell M.</div>
+            </div>
+            <div class="sc-georgetown-review-card">
+                <div class="sc-georgetown-review-stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="sc-georgetown-review-text">"We've done lots of projects around our house, but none have been as smooth and worry-free as the kitchen we did with Frank and his team. They have a perfect combination of product line, design talent and customer focus to ensure that our project came out perfectly. A great company!"</p>
+                <div class="sc-georgetown-review-author">- Ed K.</div>
+            </div>
+            <div class="sc-georgetown-review-card">
+                <div class="sc-georgetown-review-stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="sc-georgetown-review-text">"Frank and the team at Seacoast cabinets are incredible. The designers blew my mind with their ideas, so creative and so beautiful. My kitchen is more incredible than I could have ever imagined. I feel so fancy! Everything was white glove service from start to finish. A perfect installation. I was so afraid, after hearing stories from Friends of renovation nightmares and mine was a renovation dream!"</p>
+                <div class="sc-georgetown-review-author">- Leah L.</div>
+            </div>
+        </div>
+
+        <div class="sc-georgetown-review-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#b8905f" stroke="#b8905f" stroke-width="1" style="vertical-align: middle; margin-right: 4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.9 Stars &middot; 90+ Google Reviews
+        </div>
+
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/02/5X5A8214-scaled.webp" alt="" width="960" height="640" loading="lazy" decoding="async" class="sc-georgetown-section-image">
+    </div>
+
+    <!-- ==================== SECTION 7: DESIGN PROCESS (numbered cards - Boxford uses vertical timeline) ==================== -->
+    <div class="sc-georgetown-section-alt">
+        <div class="sc-georgetown-section">
+            <h2>From First Call to Installed Cabinets - Here's How It Works</h2>
+            <p>Our <a href="https://seacoastcabinetne.com/our-process/">design process</a> is built to keep things clear and stress-free from your first conversation to your finished Georgetown kitchen.</p>
+
+            <div class="sc-georgetown-process-grid">
+                <div class="sc-georgetown-process-card">
+                    <span class="process-number">01</span>
+                    <h3>Free Consultation</h3>
+                    <p>Tell us about your Georgetown kitchen - the space, the problems, and the vision. We'll meet at our Rowley showroom or come to your home.</p>
+                </div>
+                <div class="sc-georgetown-process-card">
+                    <span class="process-number">02</span>
+                    <h3>3D Design + Renderings</h3>
+                    <p>We measure, draft, and produce photorealistic renderings so you see every finish, fixture, and cabinet placement before approving anything.</p>
+                </div>
+                <div class="sc-georgetown-process-card">
+                    <span class="process-number">03</span>
+                    <h3>Finalize Your Selections</h3>
+                    <p>Choose your <a href="https://seacoastcabinetne.com/cabinets/">cabinet line</a>, finishes, hardware, and <a href="https://seacoastcabinetne.com/countertops/">countertop surfaces</a>. Your design fee is credited toward the final order.</p>
+                </div>
+                <div class="sc-georgetown-process-card">
+                    <span class="process-number">04</span>
+                    <h3>Contractor Handoff + Install</h3>
+                    <p>We deliver detailed CAD drawings to your contractor and stay actively involved through installation to make sure everything goes according to plan.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 12px;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-georgetown-btn-primary">Get Started - Book a Free Consultation</a>
+            </div>
+
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/Custom-Design-Flexibility-Unique-Storage-Solutions-1.webp" alt="" width="960" height="640" loading="lazy" decoding="async" class="sc-georgetown-section-image">
+        </div>
+    </div>
+
+    <!-- ==================== SECTION 8: FAQ ==================== -->
+    <div class="sc-georgetown-section">
+        <h2>Common Questions About Kitchen Cabinets in Georgetown, MA</h2>
+
+        <div class="sc-georgetown-faq-list">
+            <div class="sc-georgetown-faq-item">
+                <button class="sc-georgetown-faq-question" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('active');">How close is your showroom to Georgetown, MA?</button>
+                <div class="sc-georgetown-faq-answer">
+                    <p>Our Rowley showroom is about 8 miles from Georgetown - roughly 15 minutes down Route 97. We're the closest full-service kitchen cabinet showroom to Georgetown. If you'd prefer, we also offer in-home consultations anywhere in Essex County. Get directions on our <a href="https://seacoastcabinetne.com/contact/">contact page</a>.</p>
+                </div>
+            </div>
+            <div class="sc-georgetown-faq-item">
+                <button class="sc-georgetown-faq-question" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('active');">What's included in the design consultation?</button>
+                <div class="sc-georgetown-faq-answer">
+                    <p>Your consultation includes a full review of your space, your goals, and your style preferences. From there, we develop a custom layout and produce 3D renderings showing your finished kitchen. Your design fee is credited 100% toward your cabinet purchase. Learn more about our <a href="https://seacoastcabinetne.com/design-services/">design services</a>.</p>
+                </div>
+            </div>
+            <div class="sc-georgetown-faq-item">
+                <button class="sc-georgetown-faq-question" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('active');">What cabinet brands do you carry?</button>
+                <div class="sc-georgetown-faq-answer">
+                    <p>We carry Mantra, Homecrest, and Omega - three American-made lines manufactured by MasterBrand Cabinets. Together they cover everything from budget-conscious renovations to fully custom builds with inset, overlay, painted, and stained options. View all three on our <a href="https://seacoastcabinetne.com/cabinets/">cabinets page</a>.</p>
+                </div>
+            </div>
+            <div class="sc-georgetown-faq-item">
+                <button class="sc-georgetown-faq-question" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('active');">How much should I budget for new kitchen cabinets?</button>
+                <div class="sc-georgetown-faq-answer">
+                    <p>Costs depend on your kitchen size, the cabinet line you select, and the finishes involved. We give you a detailed estimate after your design consultation so there are no surprises. Our <a href="https://seacoastcabinetne.com/budget-planner/">budget planner</a> is a good place to start getting a ballpark figure.</p>
+                </div>
+            </div>
+            <div class="sc-georgetown-faq-item">
+                <button class="sc-georgetown-faq-question" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('active');">Will I actually see my kitchen before ordering?</button>
+                <div class="sc-georgetown-faq-answer">
+                    <p>Yes. Every project includes photorealistic 3D renderings that show your exact layout, finishes, and hardware choices. You approve the renderings before we place any orders. It's the part of the process our Georgetown clients consistently say they're most glad they had.</p>
+                </div>
+            </div>
+            <div class="sc-georgetown-faq-item">
+                <button class="sc-georgetown-faq-question" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('active');">I already have a contractor - can you work with them?</button>
+                <div class="sc-georgetown-faq-answer">
+                    <p>That's exactly how most of our projects work. We provide your contractor with detailed CAD drawings, specifications, and measurements. We also coordinate directly with them during installation. Whether it's a single Georgetown kitchen or a <a href="https://seacoastcabinetne.com/multi-unit-kitchen-cabinets/">multi-unit project</a>, we make the handoff smooth.</p>
+                </div>
+            </div>
+            <div class="sc-georgetown-faq-item">
+                <button class="sc-georgetown-faq-question" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('active');">What about countertops - do you handle those too?</button>
+                <div class="sc-georgetown-faq-answer">
+                    <p>Yes - we offer <a href="https://seacoastcabinetne.com/countertops/">countertop solutions</a> including Cambria quartz surfaces and other premium materials. Coordinating cabinets and countertops together means your Georgetown kitchen project stays cohesive from design through installation.</p>
+                </div>
+            </div>
+            <div class="sc-georgetown-faq-item">
+                <button class="sc-georgetown-faq-question" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('active');">Is cabinet refacing an option?</button>
+                <div class="sc-georgetown-faq-answer">
+                    <p>We specialize in new custom cabinetry, not refacing. That said, if your existing cabinets are structurally sound, new doors and hardware might get you the fresh look you want at a lower cost. We'll walk through your options during your free consultation and help you decide what makes sense for your Georgetown home.</p>
+                </div>
+            </div>
+            <div class="sc-georgetown-faq-item">
+                <button class="sc-georgetown-faq-question" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('active');">Can I browse kitchen ideas before visiting the showroom?</button>
+                <div class="sc-georgetown-faq-answer">
+                    <p>Definitely. Our <a href="https://seacoastcabinetne.com/inspiration-gallery/">inspiration gallery</a> features completed North Shore kitchen projects with a range of styles and cabinet lines. It's a great way to start identifying what you like before your consultation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SECTION 9: SERVICE AREA LINKS ==================== -->
+    <div class="sc-georgetown-section-gray">
+        <div class="sc-georgetown-section">
+            <h2>Kitchen Cabinet Services Across the North Shore</h2>
+            <p>We work with homeowners throughout Essex County and the NH Seacoast. Find <a href="https://seacoastcabinetne.com/kitchen-design/">kitchen design services</a> near you:</p>
+
+            <div class="sc-georgetown-area-grid">
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/" class="sc-georgetown-area-link">Newburyport, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/" class="sc-georgetown-area-link">Haverhill, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-boxford-ma/" class="sc-georgetown-area-link">Boxford, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-ipswich-ma/" class="sc-georgetown-area-link">Ipswich, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-topsfield-ma/" class="sc-georgetown-area-link">Topsfield, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" class="sc-georgetown-area-link">Rowley, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-amesbury-ma/" class="sc-georgetown-area-link">Amesbury, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-andover-ma/" class="sc-georgetown-area-link">Andover, MA</a>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-georgetown-hub-link">View All Kitchen Design Services</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FINAL CTA ==================== -->
+    <div class="sc-georgetown-final-cta">
+        <h2>Ready to Start Your Georgetown Kitchen Project?</h2>
+        <p>Your first consultation is free, and your design fee goes directly toward your cabinet purchase. Whether you visit our showroom or we come to you, we'll make the process simple from day one.</p>
+        <a href="https://seacoastcabinetne.com/contact/" class="sc-georgetown-btn-primary">Book Your Free Consultation</a>
+        <div class="sc-georgetown-contact-info">
+            <p>Call us: <a href="tel:+19783501040">978-350-1040</a></p>
+            <p>Showroom: 300 Newburyport Turnpike, Unit 3, Rowley, MA 01969</p>
+            <p>Mon-Fri: 9am - 5pm &middot; Sat: 10am - 4pm &middot; Sun: Closed</p>
+        </div>
+    </div>
+
+    <!-- ==================== EMBEDDED MAP ==================== -->
+    <div class="sc-georgetown-map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46896.53675719056!2d-71.02058097159613!3d42.724180671919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e31cbd86a4499d%3A0x26d4f3e8fbe2aeb7!2sGeorgetown%2C%20MA%2001833!5e0!3m2!1sen!2sus!4v1772487898673!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</div>
