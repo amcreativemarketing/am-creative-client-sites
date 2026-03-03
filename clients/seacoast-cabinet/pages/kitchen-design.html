@@ -1,1665 +1,1211 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitchen Design Services in Rowley, MA | Free Consultation | Seacoast Cabinet</title>
-    <meta name="description" content="Professional kitchen design services with 3D renderings and expert guidance. Design fees credited toward your purchase. Free consultation at our Rowley showroom.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        /* =============================================
-           CSS RESET & VARIABLES
-           ============================================= */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            /* Primary Palette */
-            --coastal-blue: #7d99ad;
-            --coastal-blue-dark: #6a8799;
-            --warm-gold: #b8905f;
-            --warm-gold-dark: #9d7a4f;
-            --deep-charcoal: #2c3e50;
-            --pure-white: #ffffff;
-            
-            /* Secondary Palette */
-            --light-gray: #f8f8f8;
-            --medium-gray: #666666;
-            --warm-beige: #f5f2ed;
-            --success-green: #5cb85c;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--deep-charcoal);
-            background: var(--pure-white);
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.2;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .container-wide {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Section Spacing */
-        section {
-            padding: 100px 0;
-        }
-
-        @media (max-width: 768px) {
-            section {
-                padding: 60px 0;
-            }
-        }
-
-        /* Typography */
-        h2 {
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--deep-charcoal);
-            line-height: 1.2;
-            margin-bottom: 24px;
-            text-align: center;
-        }
-
-        h3 {
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--deep-charcoal);
-            margin-bottom: 18px;
-        }
-
-        h4 {
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--deep-charcoal);
-            margin-bottom: 12px;
-        }
-
-        .section-intro {
-            max-width: 800px;
-            margin: 0 auto 70px;
-            text-align: center;
-            font-size: 18px;
-            color: var(--medium-gray);
-            line-height: 1.8;
-        }
-
-        @media (max-width: 768px) {
-            h2 {
-                font-size: 32px;
-            }
-            h3 {
-                font-size: 24px;
-            }
-            .section-intro {
-                font-size: 16px;
-                margin-bottom: 50px;
-            }
-        }
-
-        /* Links */
-        a {
-            color: var(--coastal-blue);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--warm-gold);
-        }
-
-        /* Buttons */
-        .btn-primary {
-            display: inline-block;
-            background: var(--warm-gold);
-            color: var(--pure-white);
-            padding: 16px 32px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary:hover {
-            background: var(--warm-gold-dark);
-            color: var(--pure-white);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(184, 144, 95, 0.3);
-        }
-
-        .btn-secondary {
-            display: inline-block;
-            background: transparent;
-            color: var(--coastal-blue);
-            padding: 16px 32px;
-            font-size: 16px;
-            font-weight: 600;
-            border: 2px solid var(--coastal-blue);
-            border-radius: 5px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: var(--coastal-blue);
-            color: var(--pure-white);
-        }
-
-        .btn-white {
-            background: var(--pure-white);
-            color: var(--coastal-blue);
-            padding: 16px 32px;
-            font-weight: 600;
-        }
-
-        .btn-white:hover {
-            background: var(--light-gray);
-            color: var(--coastal-blue);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-outline-white {
-            background: transparent;
-            color: var(--pure-white);
-            border: 2px solid var(--pure-white);
-            padding: 16px 32px;
-            font-weight: 600;
-        }
-
-        .btn-outline-white:hover {
-            background: var(--pure-white);
-            color: var(--coastal-blue);
-        }
-
-        /* =============================================
-           HERO INTRODUCTION SECTION
-           ============================================= */
-        .intro-section {
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--pure-white) 100%);
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .intro-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-
-        .intro-content {
-            padding-right: 40px;
-        }
-
-        .intro-content h2 {
-            text-align: left;
-            margin-bottom: 30px;
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--deep-charcoal);
-        }
-
-        .intro-content p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: var(--medium-gray);
-            margin-bottom: 25px;
-            text-align: left;
-        }
-
-        .intro-image {
-            position: relative;
-            height: 500px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
-        }
-
-        .intro-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .intro-highlight {
-            background: var(--pure-white);
-            padding: 35px 40px;
-            border-radius: 10px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-            margin-top: 50px;
-            border-left: 4px solid var(--warm-gold);
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .intro-highlight p {
-            font-size: 17px;
-            margin-bottom: 0;
-            color: var(--deep-charcoal);
-            text-align: center;
-            line-height: 1.7;
-        }
-
-        .intro-highlight strong {
-            color: var(--warm-gold);
-            font-weight: 600;
-        }
-
-        @media (max-width: 968px) {
-            .intro-wrapper {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .intro-content {
-                padding-right: 0;
-            }
-            .intro-content h2 {
-                text-align: center;
-                font-size: 36px;
-            }
-            .intro-content p {
-                text-align: center;
-            }
-            .intro-image {
-                height: 350px;
-            }
-        }
-
-        /* =============================================
-           PROCESS SECTION
-           ============================================= */
-        .process-section {
-            background: var(--pure-white);
-            position: relative;
-        }
-
-        .process-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 70px;
-        }
-
-        .process-step {
-            text-align: center;
-            padding: 50px 35px;
-            background: var(--pure-white);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            position: relative;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .process-step:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
-            border-color: var(--coastal-blue);
-        }
-
-        .step-number {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--coastal-blue) 0%, var(--coastal-blue-dark) 100%);
-            color: var(--pure-white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            font-weight: 600;
-            margin: 0 auto 25px;
-            box-shadow: 0 4px 16px rgba(125, 153, 173, 0.3);
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .process-step h3 {
-            font-size: 22px;
-            margin-bottom: 18px;
-            font-weight: 600;
-        }
-
-        .process-step p {
-            font-size: 16px;
-            color: var(--medium-gray);
-            line-height: 1.7;
-        }
-
-        .step-details {
-            text-align: left;
-            margin-top: 25px;
-            padding-top: 25px;
-            border-top: 1px solid #e8e8e8;
-        }
-
-        .step-details ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .step-details li {
-            padding: 10px 0;
-            font-size: 15px;
-            color: var(--medium-gray);
-            position: relative;
-            padding-left: 28px;
-        }
-
-        .step-details li:before {
-            content: "\2192";
-            position: absolute;
-            left: 0;
-            color: var(--coastal-blue);
-            font-weight: bold;
-        }
-
-        @media (max-width: 968px) {
-            .process-steps {
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-        }
-
-        /* =============================================
-           VISUAL BREAK SECTION
-           ============================================= */
-        .visual-break {
-            background: var(--light-gray);
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .visual-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .visual-text {
-            padding-right: 40px;
-        }
-
-        .visual-text h3 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 25px;
-            color: var(--deep-charcoal);
-        }
-
-        .visual-text p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: var(--medium-gray);
-            margin-bottom: 25px;
-        }
-
-        .visual-features {
-            list-style: none;
-            padding: 0;
-            margin: 35px 0;
-        }
-
-        .visual-features li {
-            padding: 12px 0;
-            font-size: 17px;
-            color: var(--deep-charcoal);
-            display: flex;
-            align-items: center;
-        }
-
-        .visual-features li:before {
-            content: "\2713";
-            display: inline-block;
-            width: 28px;
-            height: 28px;
-            background: var(--success-green);
-            color: var(--pure-white);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 28px;
-            margin-right: 15px;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        .visual-image-container {
-            position: relative;
-            height: 550px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
-        }
-
-        .visual-image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        @media (max-width: 968px) {
-            .visual-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-            .visual-text {
-                padding-right: 0;
-            }
-            .visual-text h3 {
-                font-size: 28px;
-            }
-            .visual-image-container {
-                height: 400px;
-            }
-        }
-
-        /* =============================================
-           DELIVERABLES SECTION
-           ============================================= */
-        .deliverables-section {
-            background: var(--coastal-blue);
-            color: var(--pure-white);
-            position: relative;
-        }
-
-        .deliverables-section h2,
-        .deliverables-section .section-intro {
-            color: var(--pure-white);
-        }
-
-        .deliverables-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 35px;
-            margin-top: 60px;
-        }
-
-        .deliverable-card {
-            background: rgba(255, 255, 255, 0.10);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .deliverable-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-4px);
-        }
-
-        .deliverable-number {
-            display: inline-block;
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 45px;
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .deliverable-card h4 {
-            color: var(--pure-white);
-            font-size: 22px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .deliverable-card p {
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        @media (max-width: 768px) {
-            .deliverables-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* =============================================
-           WHY CHOOSE SECTION
-           ============================================= */
-        .why-choose-section {
-            background: var(--pure-white);
-        }
-
-        .why-choose-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-            margin-top: 70px;
-        }
-
-        .why-choose-card {
-            text-align: center;
-            padding: 35px;
-            transition: all 0.3s ease;
-        }
-
-        .why-choose-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .why-icon-wrapper {
-            width: 80px;
-            height: 80px;
-            background: var(--warm-beige);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 32px;
-            color: var(--coastal-blue);
-        }
-
-        .why-choose-card h4 {
-            font-size: 22px;
-            margin-bottom: 18px;
-            color: var(--deep-charcoal);
-            font-weight: 600;
-        }
-
-        .why-choose-card p {
-            color: var(--medium-gray);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        @media (max-width: 968px) {
-            .why-choose-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-
-        /* =============================================
-           PORTFOLIO SECTION
-           ============================================= */
-        .portfolio-section {
-            background: var(--light-gray);
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-        .portfolio-item:hover img {
-            transform: scale(1.08);
-        }
-
-        @media (max-width: 968px) {
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-            .portfolio-item img {
-                height: 280px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .portfolio-cta {
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        /* =============================================
-           TEAM SECTION
-           ============================================= */
-        .team-section {
-            background: var(--pure-white);
-        }
-
-        .team-intro {
-            max-width: 800px;
-            margin: 0 auto 50px;
-            text-align: center;
-        }
-
-        .team-intro p {
-            font-size: 18px;
-            color: var(--medium-gray);
-            line-height: 1.8;
-            margin-bottom: 35px;
-        }
-
-        .team-highlight {
-            background: var(--pure-white);
-            padding: 45px;
-            border-radius: 10px;
-            border: 1px solid rgba(0,0,0,0.05);
-            margin: 50px auto;
-            max-width: 900px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .team-highlight p {
-            font-size: 17px;
-            color: var(--deep-charcoal);
-            margin-bottom: 25px;
-            line-height: 1.8;
-        }
-
-        .team-highlight ul {
-            list-style: none;
-            padding: 0;
-            margin: 30px 0;
-        }
-
-        .team-highlight li {
-            padding: 15px 0;
-            font-size: 16px;
-            color: var(--medium-gray);
-            padding-left: 35px;
-            position: relative;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .team-highlight li:last-child {
-            border-bottom: none;
-        }
-
-        .team-highlight li:before {
-            content: "\2022";
-            position: absolute;
-            left: 10px;
-            color: var(--coastal-blue);
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .team-highlight li strong {
-            color: var(--deep-charcoal);
-        }
-
-        /* =============================================
-           PRICING SECTION
-           ============================================= */
-        .pricing-section {
-            background: var(--warm-beige);
-            padding: 80px 0;
-        }
-
-        .pricing-intro {
-            max-width: 800px;
-            margin: 0 auto 50px;
-            text-align: center;
-        }
-
-        .pricing-intro h3 {
-            font-size: 36px;
-            margin-bottom: 25px;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        .pricing-intro p {
-            font-size: 18px;
-            color: var(--medium-gray);
-            line-height: 1.8;
-        }
-
-        .pricing-highlight {
-            background: var(--pure-white);
-            padding: 50px;
-            border-radius: 10px;
-            max-width: 750px;
-            margin: 0 auto;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .pricing-item {
-            padding: 25px 0;
-            border-bottom: 1px solid #e8e8e8;
-        }
-
-        .pricing-item:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-item h4 {
-            font-size: 22px;
-            color: var(--coastal-blue);
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .pricing-item p {
-            font-size: 16px;
-            color: var(--medium-gray);
-            line-height: 1.7;
-        }
-
-        .pricing-note {
-            background: linear-gradient(135deg, rgba(125, 153, 173, 0.1) 0%, rgba(125, 153, 173, 0.05) 100%);
-            padding: 30px;
-            border-radius: 10px;
-            margin-top: 35px;
-            text-align: center;
-            border: 1px solid rgba(125, 153, 173, 0.2);
-        }
-
-        .pricing-note p {
-            font-size: 17px;
-            color: var(--deep-charcoal);
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .pricing-note strong {
-            color: var(--warm-gold);
-            font-size: 19px;
-        }
-
-        /* =============================================
-           FAQ SECTION
-           ============================================= */
-        .faq-section {
-            background: var(--pure-white);
-        }
-
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: var(--pure-white);
-            margin-bottom: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .faq-item:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-        }
-
-        .faq-question {
-            padding: 28px 35px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            font-size: 18px;
-            color: var(--deep-charcoal);
-            background: var(--pure-white);
-            transition: background 0.3s ease;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .faq-question:hover {
-            background: var(--light-gray);
-        }
-
-        .faq-icon {
-            font-size: 24px;
-            color: var(--coastal-blue);
-            transition: transform 0.3s ease;
-            font-weight: 300;
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            padding: 0 35px;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            padding: 0 35px 28px;
-            max-height: 500px;
-        }
-
-        .faq-answer p {
-            font-size: 16px;
-            color: var(--medium-gray);
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        .faq-answer a {
-            color: var(--coastal-blue);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .faq-answer a:hover {
-            color: var(--warm-gold);
-        }
-
-        /* =============================================
-           LOCATION PAGES SECTION
-           ============================================= */
-        .location-pages-section {
-            background: var(--light-gray);
-            padding: 80px 0;
-        }
-
-        .location-pages-section h2 {
-            margin-bottom: 16px;
-        }
-
-        .location-pages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 16px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .location-pages-grid a,
-        .location-pages-grid span {
-            display: block;
-            background: var(--pure-white);
-            border-radius: 8px;
-            padding: 20px 24px;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 15px;
-            text-decoration: none;
-            transition: all 0.25s ease;
-        }
-
-        .location-pages-grid a {
-            color: var(--deep-charcoal);
-            border: 1px solid var(--coastal-blue);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
-
-        .location-pages-grid a:hover {
-            background: var(--coastal-blue);
-            color: var(--pure-white);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(125, 153, 173, 0.25);
-        }
-
-        .location-pages-grid span {
-            color: #b0b0b0;
-            border: 1px solid #e8e8e8;
-        }
-
-        .location-pages-footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 14px;
-            color: var(--medium-gray);
-        }
-
-        .location-pages-footer a {
-            color: var(--coastal-blue);
-            font-weight: 600;
-        }
-
-        /* =============================================
-           FINAL CTA SECTION
-           ============================================= */
-        .final-cta-section {
-            background: var(--deep-charcoal);
-            color: var(--pure-white);
-            text-align: center;
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .final-cta-section h2 {
-            color: var(--pure-white);
-            margin-bottom: 25px;
-            font-weight: 700;
-        }
-
-        .final-cta-section p {
-            font-size: 20px;
-            color: rgba(255, 255, 255, 0.85);
-            max-width: 750px;
-            margin: 0 auto 45px;
-            line-height: 1.7;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        @media (max-width: 576px) {
-            .cta-buttons {
-                flex-direction: column;
-                align-items: stretch;
-                padding: 0 20px;
-            }
-            .cta-buttons .btn-primary {
-                width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<!-- Hero Introduction Section with Image -->
-<section class="intro-section">
-    <div class="container">
-        <div class="intro-wrapper">
-            <div class="intro-content">
-                <h2>Let's Design Your Dream Kitchen Together</h2>
-                <p>
-                    A beautiful kitchen starts with thoughtful design. Whether you're renovating your North Shore home 
-                    or building from scratch, our experienced design team creates functional, beautiful spaces that work 
-                    the way you actually live.
-                </p>
-                <p>
-                    We're not just picking cabinets - we're designing a space that makes your daily routine easier, maximizes 
-                    storage, and reflects your personal style. And because we're local, we understand North Shore homes and 
-                    what works in our coastal climate.
-                </p>
-            </div>
-            <div class="intro-image">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-88.webp" alt="Premium kitchen design by Seacoast Cabinet">
-            </div>
-        </div>
-        <div class="intro-highlight">
-            <p>
-                <strong>Here's the best part:</strong> All design fees are fully credited toward your cabinet purchase, 
-                making professional design essentially free when you choose Seacoast Cabinet.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- Process Section -->
-<section class="process-section">
-    <div class="container">
-        <h2>How Our Design Process Works</h2>
-        <p class="section-intro">
-            From initial consultation to final specifications, we make the design process simple and stress-free. 
-            Most clients get their design and quote within just a few days.
-        </p>
-
-        <div class="process-steps">
-            <!-- Step 1 -->
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <h3>Free Initial Consultation</h3>
-                <p>Visit our Rowley showroom or we'll come to your home. We'll discuss your vision, take measurements, and explore your style preferences.</p>
-                <div class="step-details">
-                    <ul>
-                        <li>In-home or showroom visit</li>
-                        <li>Explore cabinet styles & finishes</li>
-                        <li>Discuss budget & timeline</li>
-                        <li>Take detailed measurements</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <h3>Custom 3D Design</h3>
-                <p>Within a few days, we'll create detailed 3D renderings showing exactly how your new kitchen will look, along with a complete project estimate.</p>
-                <div class="step-details">
-                    <ul>
-                        <li>Custom 3D renderings</li>
-                        <li>Detailed specifications</li>
-                        <li>Complete project estimate</li>
-                        <li>Hardware & finish options</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <h3>Refine & Finalize</h3>
-                <p>Review your design, request any changes, and finalize every detail. We'll work with your contractor to ensure perfect specifications.</p>
-                <div class="step-details">
-                    <ul>
-                        <li>Review & revise design</li>
-                        <li>Adjust cabinet configuration</li>
-                        <li>Select final finishes</li>
-                        <li>Contractor-ready specs</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Visual Break Section -->
-<section class="visual-break">
-    <div class="container">
-        <div class="visual-content">
-            <div class="visual-text">
-                <h3>Expert Design That Works for Your Life</h3>
-                <p>
-                    Every kitchen we design is unique because every family lives differently. Our designers take time to understand your cooking habits, storage needs, and daily routines.
-                </p>
-                <p>
-                    From maximizing corner cabinet functionality to creating the perfect island workspace, we focus on the details that make your kitchen truly work for you.
-                </p>
-                <ul class="visual-features">
-                    <li>Optimized storage solutions for every inch</li>
-                    <li>Workflow designed around your cooking style</li>
-                    <li>Beautiful finishes that stand up to daily life</li>
-                    <li>Coordinated design with countertops & hardware</li>
-                </ul>
-                <a href="https://seacoastcabinetne.com/contact/" class="btn-primary">Start Your Design</a>
-            </div>
-            <div class="visual-image-container">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-86.webp" alt="Kitchen design consultation at Seacoast Cabinet">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Deliverables Section -->
-<section class="deliverables-section">
-    <div class="container">
-        <h2>What You'll Receive</h2>
-        <p class="section-intro">
-            Our design service gives you everything needed to make confident decisions and move forward with your project.
-        </p>
-
-        <div class="deliverables-grid">
-            <div class="deliverable-card">
-                <div class="deliverable-number">01</div>
-                <h4>Detailed 3D Renderings</h4>
-                <p>
-                    Visualize your finished kitchen before a single cabinet is ordered. See exactly how your space 
-                    will look with different cabinet styles, colors, and configurations.
-                </p>
-            </div>
-
-            <div class="deliverable-card">
-                <div class="deliverable-number">02</div>
-                <h4>Complete Project Estimate</h4>
-                <p>
-                    Transparent pricing with no surprises. You'll know exactly what your cabinets, hardware, 
-                    and accessories will cost before you commit.
-                </p>
-            </div>
-
-            <div class="deliverable-card">
-                <div class="deliverable-number">03</div>
-                <h4>Contractor-Ready Specifications</h4>
-                <p>
-                    If you're working with a contractor, they'll receive detailed CAD drawings and specifications 
-                    they need for accurate installation.
-                </p>
-            </div>
-
-            <div class="deliverable-card">
-                <div class="deliverable-number">04</div>
-                <h4>Expert Material Guidance</h4>
-                <p>
-                    Get recommendations on countertops, hardware, and finishes that complement your cabinets and 
-                    fit your budget - all from our experienced design team.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Choose Section -->
-<section class="why-choose-section">
-    <div class="container">
-        <h2>Why Design With Seacoast Cabinet?</h2>
-        <p class="section-intro">
-            Big box stores give you a computer program and send you on your way. We give you experienced designers 
-            who care about how your kitchen actually functions in your daily life.
-        </p>
-
-        <div class="why-choose-grid">
-            <div class="why-choose-card">
-                <div class="why-icon-wrapper">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </div>
-                <h4>Local Design Team</h4>
-                <p>
-                    Work with experienced designers who understand North Shore homes, not a salesperson reading from a script. 
-                    We're here in Rowley and invested in your satisfaction.
-                </p>
-            </div>
-
-            <div class="why-choose-card">
-                <div class="why-icon-wrapper">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-                </div>
-                <h4>Functional Design Philosophy</h4>
-                <p>
-                    We design based on how you actually use your space - not just what looks pretty in a showroom. 
-                    Every cabinet placement is intentional and practical for your lifestyle.
-                </p>
-            </div>
-
-            <div class="why-choose-card">
-                <div class="why-icon-wrapper">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-                </div>
-                <h4>American-Made Quality</h4>
-                <p>
-                    Our cabinets are manufactured in the USA with quality standards that exceed big box offerings. 
-                    You'll see and feel the difference in craftsmanship.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Portfolio Section -->
-<section class="portfolio-section">
-    <div class="container-wide">
-        <h2>North Shore Kitchens We've Designed</h2>
-        <p class="section-intro">
-            Real projects from real homes across the North Shore. From traditional to contemporary, 
-            compact to spacious - we've designed kitchens for every style and budget.
-        </p>
-
-        <div class="portfolio-grid">
-            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-88.webp" alt="Modern white kitchen with island" loading="lazy">
-            </a>
-
-            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-86.webp" alt="Traditional kitchen with dark cabinets" loading="lazy">
-            </a>
-
-            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-84.webp" alt="Kitchen renovation before and after" loading="lazy">
-            </a>
-
-            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-62.webp" alt="White and gray kitchen design" loading="lazy">
-            </a>
-
-            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-58.webp" alt="Coastal style kitchen" loading="lazy">
-            </a>
-
-            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-48.webp" alt="Custom cabinetry detail" loading="lazy">
-            </a>
-
-            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-39.webp" alt="Kitchen with granite countertops" loading="lazy">
-            </a>
-
-            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/05/34B-Woodland-St-15.webp" alt="Modern kitchen renovation" loading="lazy">
-            </a>
-
-            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="portfolio-item">
-                <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-87.webp" alt="Elegant kitchen design" loading="lazy">
-            </a>
-        </div>
-
-        <div class="portfolio-cta">
-            <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="btn-primary">View Full Gallery</a>
-        </div>
-    </div>
-</section>
-
-<!-- Team Section -->
-<section class="team-section">
-    <div class="container">
-        <h2>Meet Your Design Team</h2>
-        <div class="team-intro">
-            <p>
-                Our designers aren't just selling cabinets - they're creating solutions for how you live. 
-                With decades of combined experience, they've designed hundreds of North Shore kitchens and 
-                know how to maximize both beauty and functionality.
-            </p>
-        </div>
-
-        <div class="team-highlight">
-            <p>
-                When you work with us, you're getting a team that cares about the details. 
-                We listen to how you use your kitchen, understand your storage challenges, and design 
-                solutions that make your daily routine easier.
-            </p>
-            <div style="text-align: center; margin-top: 35px;">
-                <a href="https://seacoastcabinetne.com/about-us/" class="btn-secondary">Meet the Full Team</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pricing Section -->
-<section class="pricing-section">
-    <div class="container">
-        <div class="pricing-intro">
-            <h3>Investment in Your Design</h3>
-            <p>
-                Professional design shouldn't feel like an extra expense. That's why we credit all design fees 
-                toward your cabinet purchase - making expert design essentially free when you choose Seacoast Cabinet.
-            </p>
-        </div>
-
-        <div class="pricing-highlight">
-            <div class="pricing-item">
-                <h4>Free Initial Consultation</h4>
-                <p>
-                    Start with a complimentary one-hour consultation at our showroom or in your home. 
-                    We'll discuss your vision, take measurements, and explore cabinet options - no obligation.
-                </p>
-            </div>
-
-            <div class="pricing-item">
-                <h4>Professional Design Service - $295</h4>
-                <p>
-                    Includes custom 3D renderings, detailed project estimate, one dedicated showroom appointment 
-                    (up to 2 hours), and expert guidance on cabinets, countertops, and hardware.
-                </p>
-            </div>
-
-            <div class="pricing-item">
-                <h4>Design Refinements - $95/hour</h4>
-                <p>
-                    Additional revisions to perfect your design. Most clients combine revision requests to maximize 
-                    efficiency - and remember, these fees are credited to your final purchase.
-                </p>
-            </div>
-
-            <div class="pricing-note">
-                <p>
-                    <strong>All design fees are fully credited toward your cabinet purchase.</strong><br>
-                    When you move forward with Seacoast Cabinet, your design investment becomes part of your project, 
-                    making professional design essentially free.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="faq-section">
-    <div class="container">
-        <h2>Common Questions About Our Design Services</h2>
-        <p class="section-intro">
-            Everything you need to know about working with our design team.
-        </p>
-
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">
-                    Do I need to come to the showroom or can you design remotely?
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        We offer both options. Many clients prefer visiting our Rowley showroom to see and touch cabinet 
-                        samples in person. But if that's not convenient, we can come to your home for measurements and 
-                        initial consultation, then work with you virtually to refine the design.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    How long does the design process take?
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        Most clients receive their 3D renderings and project estimate within just a few days of the initial 
-                        consultation. If you need revisions, those typically take 1-2 business days. The entire process from 
-                        consultation to final specifications usually takes 1-2 weeks, but we can work faster if your project timeline requires it.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    Will you work with my contractor?
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        We provide contractor-ready CAD drawings and detailed specifications your builder needs 
-                        for accurate installation. We can also coordinate directly with your contractor on timeline, delivery, 
-                        and any technical questions that come up during the project.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    What if I'm not sure about my budget yet?
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        That's completely normal. During your consultation, we'll discuss budget ranges and show you examples 
-                        at different price points. We work with all three cabinet brands (Mantra, Homecrest, and Omega) which 
-                        gives us flexibility to design within virtually any budget.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    Do you help with countertop and hardware selection too?
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        Yes. While our primary focus is cabinetry, we provide expert guidance on countertops, hardware, and 
-                        finishes that complement your cabinet choice. We want your entire kitchen to feel cohesive and work 
-                        within your budget. Learn more about our 
-                        <a href="https://seacoastcabinetne.com/countertops/">countertop options</a>.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    Can you design bathrooms and other spaces too?
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        While kitchens are our specialty, we also design beautiful bathroom vanities, home office 
-                        cabinetry, mudrooms, laundry rooms, and more. Any space that needs custom cabinetry, we can design.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    What if I decide not to move forward after the design?
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        The initial consultation is free, so there's no obligation. If you commission a full design ($295) 
-                        but decide not to move forward with the project, the design fee remains - but it's a small investment 
-                        to get professional renderings and accurate pricing. However, most clients who invest in design do 
-                        move forward, and that fee gets credited to their purchase anyway.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    What areas does Seacoast Cabinet serve?
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        From our showroom in Rowley, MA, we serve homeowners throughout the North Shore and surrounding communities. We regularly work with clients in 
-                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-andover-ma/">Andover</a>, 
-                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/">Newburyport</a>, 
-                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/">Haverhill</a>, 
-                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-topsfield-ma/">Topsfield</a>, 
-                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-ipswich-ma/">Ipswich</a>, 
-                        <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Rowley</a>, 
-                        and many other towns across the North Shore and Merrimack Valley. If you're not sure whether we cover your area, just 
-                        <a href="https://seacoastcabinetne.com/contact/">reach out</a> - chances are we do.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Kitchen Design Location Pages -->
-<section class="location-pages-section">
-    <div class="container">
-        <h2>Kitchen Design Services Across the North Shore</h2>
-        <p class="section-intro">
-            From our Rowley showroom, we work with homeowners throughout the North Shore and Merrimack Valley. Explore kitchen design resources for your community.
-        </p>
-
-        <div class="location-pages-grid">
-            <a href="https://seacoastcabinetne.com/kitchen-design/andover-ma/">Andover, MA</a>
-            <!-- Future location pages - swap span to <a> with href when live -->
-            <span>Newburyport, MA</span>
-            <span>Haverhill, MA</span>
-            <span>Topsfield, MA</span>
-            <span>Ipswich, MA</span>
-            <span>Rowley, MA</span>
-            <span>Georgetown, MA</span>
-            <span>North Andover, MA</span>
-            <span>Salem, NH</span>
-        </div>
-
-        <p class="location-pages-footer">More communities coming soon. Don't see your town? <a href="https://seacoastcabinetne.com/contact/">Contact us</a> - we serve homeowners across the North Shore.</p>
-    </div>
-</section>
-
-<!-- Final CTA Section -->
-<section class="final-cta-section">
-    <div class="container">
-        <h2>Ready to Start Your Kitchen Design?</h2>
-        <p>
-            Let's create a kitchen that's beautiful, functional, and perfectly suited to your North Shore home. 
-            Schedule your free consultation today and see why homeowners across Rowley, Newburyport, and beyond 
-            trust Seacoast Cabinet for their kitchen design needs.
-        </p>
-        <div class="cta-buttons">
-            <a href="https://seacoastcabinetne.com/contact/" class="btn-primary btn-white">Schedule Free Consultation</a>
-            <a href="https://seacoastcabinetne.com/about-us/" class="btn-primary btn-outline-white">Learn About Our Story</a>
-        </div>
-    </div>
-</section>
-
-<!-- Schema Markup -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Kitchen Design Services",
-    "provider": {
-        "@type": "LocalBusiness",
-        "name": "Seacoast Cabinet",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "300 Newburyport Turnpike, Unit 3",
-            "addressLocality": "Rowley",
-            "addressRegion": "MA",
-            "postalCode": "01969",
-            "addressCountry": "US"
-        },
-        "telephone": "+1-978-350-1040",
-        "url": "https://seacoastcabinetne.com"
-    },
-    "description": "Professional kitchen design services with 3D renderings and expert guidance. Design fees credited toward your cabinet purchase. Free consultation at our Rowley showroom.",
-    "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": 42.7167,
-            "longitude": -70.8786
-        },
-        "geoRadius": "50"
-    },
-    "serviceType": "Kitchen Design",
-    "offers": [
-        {
-            "@type": "Offer",
-            "name": "Free Initial Consultation",
-            "price": "0",
-            "priceCurrency": "USD",
-            "description": "Complimentary one-hour consultation at our showroom or in your home"
-        },
-        {
-            "@type": "Offer",
-            "name": "Professional Design Service",
-            "price": "295",
-            "priceCurrency": "USD",
-            "description": "Custom 3D renderings, detailed project estimate, and expert guidance"
-        }
-    ]
+<!-- HERO OPTIONS
+     Option A: H1: Custom Kitchen Design & Remodeling — North Shore MA & Southern NH
+               H2: From initial concept to stunning 3D renderings and complete installation.
+     Option B: H1: Kitchen Design Experts — Serving North Shore MA & Southern NH
+               H2: Personalized kitchen design with 3D renderings, expert cabinet selection, and on-time delivery.
+     CTAs: Schedule a Free Kitchen Design Consultation → https://seacoastcabinetne.com/contact/
+           View Our Kitchen Projects → https://seacoastcabinetne.com/inspiration-gallery/
+-->
+
+<style>
+/* ============================================
+   SEACOAST CABINET - KITCHEN DESIGN HUB PAGE
+   Namespace: .sc-kd-*
+   ============================================ */
+
+/* --- CSS Custom Properties --- */
+.sc-kd-page {
+    --coastal-blue: #7d99ad;
+    --warm-gold: #b8905f;
+    --deep-charcoal: #2c3e50;
+    --pure-white: #ffffff;
+    --light-gray: #f8f8f8;
+    --medium-gray: #666666;
+    --warm-beige: #f5f2ed;
+    --success-green: #5cb85c;
+    font-family: 'Open Sans', sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
-</script>
 
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "Do I need to come to the showroom or can you design remotely?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We offer both options! Many clients prefer visiting our Rowley showroom to see and touch cabinet samples in person. But if that's not convenient, we can come to your home for measurements and initial consultation, then work with you virtually to refine the design."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How long does the design process take?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Most clients receive their 3D renderings and project estimate within just a few days of the initial consultation. If you need revisions, those typically take 1-2 business days. The entire process from consultation to final specifications usually takes 1-2 weeks."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Will you work with my contractor?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Absolutely! We provide contractor-ready CAD drawings and detailed specifications your builder needs for accurate installation. We can also coordinate directly with your contractor on timeline, delivery, and any technical questions."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What if I'm not sure about my budget yet?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "That's completely normal! During your consultation, we'll discuss budget ranges and show you examples at different price points. We work with all three cabinet brands (Mantra, Homecrest, and Omega) which gives us flexibility to design within virtually any budget."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Do you help with countertop and hardware selection too?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes! While our primary focus is cabinetry, we provide expert guidance on countertops, hardware, and finishes that complement your cabinet choice. We want your entire kitchen to feel cohesive and work within your budget."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Can you design bathrooms and other spaces too?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Definitely! While kitchens are our specialty, we also design beautiful bathroom vanities, home office cabinetry, mudrooms, laundry rooms, and more. Any space that needs custom cabinetry, we can design."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What areas does Seacoast Cabinet serve?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From our showroom in Rowley, MA, we serve homeowners throughout the North Shore and surrounding communities. We regularly work with clients in Andover, Newburyport, Haverhill, Topsfield, Ipswich, Rowley, and many other towns across the North Shore and Merrimack Valley."
-            }
-        }
-    ]
+.sc-kd-page *,
+.sc-kd-page *::before,
+.sc-kd-page *::after {
+    box-sizing: border-box;
 }
-</script>
 
-<script>
-    // FAQ Accordion
-    document.querySelectorAll('.faq-item').forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // Close all items
-            document.querySelectorAll('.faq-item').forEach(i => {
-                i.classList.remove('active');
-            });
-            
-            // Open clicked item if it wasn't active
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
-    });
-</script>
+.sc-kd-page h1,
+.sc-kd-page h2,
+.sc-kd-page h3,
+.sc-kd-page h4 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    margin: 0 0 0.75em 0;
+}
 
-</body>
-</html>
+.sc-kd-page p {
+    color: #444 !important;
+    margin: 0 0 1em 0;
+    font-size: 1rem;
+}
+
+.sc-kd-page a {
+    text-decoration: none;
+}
+
+/* --- Divi Container Overrides --- */
+.sc-kd-page {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Full-bleed section breakout */
+.sc-kd-page .sc-kd-hero,
+.sc-kd-page .sc-kd-trust-bar,
+.sc-kd-page .sc-kd-section-beige,
+.sc-kd-page .sc-kd-section-gray,
+.sc-kd-page .sc-kd-reviews-section,
+.sc-kd-page .sc-kd-final-cta {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+}
+
+/* Deep Divi nesting override */
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-kd-page .sc-kd-hero,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-kd-page .sc-kd-trust-bar,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-kd-page .sc-kd-section-beige,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-kd-page .sc-kd-section-gray,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-kd-page .sc-kd-reviews-section,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-kd-page .sc-kd-final-cta {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+}
+
+/* --- Content Container --- */
+.sc-kd-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===========================
+   SECTION 1: HERO
+   =========================== */
+.sc-kd-hero {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    background-image: url('https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-84.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.sc-kd-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 62, 80, 0.45);
+    z-index: 1;
+}
+
+.sc-kd-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.sc-kd-hero h1 {
+    color: #ffffff !important;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.sc-kd-hero .sc-kd-hero-sub {
+    color: #ffffff !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.sc-kd-hero .sc-kd-hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    padding: 6px 16px;
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    margin-bottom: 1.5em;
+}
+
+.sc-kd-hero .sc-kd-hero-badge span {
+    color: #f5c518 !important;
+}
+
+.sc-kd-btn-gold {
+    display: inline-block;
+    background: #b8905f !important;
+    color: #ffffff !important;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    min-height: 44px;
+    text-align: center;
+}
+
+.sc-kd-btn-gold:hover {
+    background: #a07a4f !important;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+.sc-kd-btn-outline {
+    display: inline-block;
+    background: transparent !important;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    min-height: 44px;
+    text-align: center;
+    margin-left: 12px;
+}
+
+.sc-kd-btn-outline:hover {
+    background: rgba(255,255,255,0.15) !important;
+    border-color: #ffffff;
+    color: #ffffff !important;
+}
+
+/* ===========================
+   SECTION 2: TRUST BAR
+   =========================== */
+.sc-kd-trust-bar {
+    background: #2c3e50;
+    padding: 16px 20px;
+}
+
+.sc-kd-trust-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sc-kd-trust-item {
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.sc-kd-trust-item span {
+    color: #f5c518 !important;
+}
+
+.sc-kd-trust-item .sc-kd-trust-divider {
+    color: rgba(255,255,255,0.3) !important;
+    margin: 0 4px;
+}
+
+/* ===========================
+   SECTION 3: DESIGN PROCESS
+   =========================== */
+.sc-kd-section {
+    padding: 50px 20px;
+}
+
+.sc-kd-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50 !important;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.sc-kd-section .sc-kd-section-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 2em auto;
+    font-size: 1rem;
+    color: #555 !important;
+}
+
+.sc-kd-process-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sc-kd-process-step {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 28px 24px;
+    position: relative;
+    text-align: center;
+}
+
+.sc-kd-step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #7d99ad;
+    color: #ffffff !important;
+    border-radius: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.sc-kd-process-step h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    margin-bottom: 0.5em;
+}
+
+.sc-kd-process-step p {
+    font-size: 0.92rem;
+    color: #555 !important;
+    margin: 0;
+}
+
+/* ===========================
+   SECTION 4: SERVICE CARDS
+   =========================== */
+.sc-kd-section-beige {
+    background: #f5f2ed;
+    padding: 50px 20px;
+}
+
+.sc-kd-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sc-kd-service-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 28px 24px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.sc-kd-service-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.sc-kd-service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: #7d99ad;
+    color: #ffffff !important;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+}
+
+.sc-kd-service-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    margin-bottom: 0.5em;
+}
+
+.sc-kd-service-card p {
+    font-size: 0.92rem;
+    color: #555 !important;
+    margin: 0;
+}
+
+/* ===========================
+   SECTION 5: GALLERY
+   =========================== */
+.sc-kd-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 1000px;
+    margin: 0 auto 2em auto;
+}
+
+.sc-kd-gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.sc-kd-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.sc-kd-gallery-item:hover img {
+    transform: scale(1.03);
+}
+
+.sc-kd-gallery-cta {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+/* ===========================
+   SECTION 6: WHY CHOOSE US
+   =========================== */
+.sc-kd-section-gray {
+    background: #f8f8f8;
+    padding: 50px 20px;
+}
+
+.sc-kd-why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sc-kd-why-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.sc-kd-why-check {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: #5cb85c;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.sc-kd-why-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    margin-bottom: 0.25em;
+}
+
+.sc-kd-why-item p {
+    font-size: 0.92rem;
+    color: #555 !important;
+    margin: 0;
+}
+
+/* ===========================
+   SECTION 7: SERVICE AREA
+   =========================== */
+.sc-kd-area-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sc-kd-area-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 28px 28px 20px 28px;
+}
+
+.sc-kd-area-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2c3e50 !important;
+    margin-bottom: 0.75em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #7d99ad;
+    display: inline-block;
+}
+
+.sc-kd-town-list {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    columns: 2;
+    column-gap: 24px;
+}
+
+.sc-kd-town-list li {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 8px 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.92rem;
+    color: #555 !important;
+    break-inside: avoid;
+}
+
+.sc-kd-town-list li:last-child {
+    border-bottom: none;
+}
+
+.sc-kd-town-list li a {
+    color: #7d99ad !important;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.sc-kd-town-list li a::after {
+    content: ' \2192';
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.2s ease, margin-left 0.2s ease;
+    margin-left: 0;
+}
+
+.sc-kd-town-list li a:hover {
+    color: #b8905f !important;
+}
+
+.sc-kd-town-list li a:hover::after {
+    opacity: 1;
+    margin-left: 4px;
+}
+
+.sc-kd-map-embed {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 2em;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sc-kd-map-embed iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* ===========================
+   SECTION 8: FAQ
+   =========================== */
+.sc-kd-faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sc-kd-faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0;
+}
+
+.sc-kd-faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2c3e50 !important;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    min-height: 44px;
+}
+
+.sc-kd-faq-question:hover {
+    color: #7d99ad !important;
+}
+
+.sc-kd-faq-toggle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #7d99ad !important;
+    flex-shrink: 0;
+    margin-left: 16px;
+    transition: transform 0.3s ease;
+}
+
+.sc-kd-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.sc-kd-faq-answer-inner {
+    padding: 0 0 18px 0;
+    font-size: 0.92rem;
+    color: #555 !important;
+    line-height: 1.7;
+}
+
+.sc-kd-faq-item.active .sc-kd-faq-answer {
+    max-height: 500px;
+}
+
+.sc-kd-faq-item.active .sc-kd-faq-toggle {
+    transform: rotate(45deg);
+}
+
+/* ===========================
+   SECTION 9: REVIEWS
+   =========================== */
+.sc-kd-reviews-section {
+    background: #2c3e50;
+    padding: 50px 20px;
+}
+
+.sc-kd-reviews-section h2 {
+    color: #ffffff !important;
+}
+
+.sc-kd-reviews-section .sc-kd-section-intro {
+    color: rgba(255,255,255,0.85) !important;
+}
+
+.sc-kd-reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 1.5em auto;
+}
+
+.sc-kd-review-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.sc-kd-review-stars {
+    color: #f5c518 !important;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.sc-kd-page .sc-kd-review-text,
+.sc-kd-reviews-section .sc-kd-review-text,
+.sc-kd-reviews-section p.sc-kd-review-text {
+    color: #ffffff !important;
+    font-size: 0.92rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.sc-kd-page .sc-kd-review-author,
+.sc-kd-reviews-section .sc-kd-review-author {
+    color: #b8905f !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.sc-kd-reviews-cta {
+    text-align: center;
+}
+
+.sc-kd-btn-outline-light {
+    display: inline-block;
+    border: 2px solid rgba(255,255,255,0.5);
+    color: #ffffff !important;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+    min-height: 44px;
+}
+
+.sc-kd-btn-outline-light:hover {
+    background: rgba(255,255,255,0.1) !important;
+    color: #ffffff !important;
+}
+
+/* ===========================
+   SECTION 10: FINAL CTA
+   =========================== */
+.sc-kd-final-cta {
+    background: linear-gradient(135deg, #7d99ad 0%, #6a879b 100%);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sc-kd-final-cta h2 {
+    color: #ffffff !important;
+    margin-bottom: 0.5em;
+}
+
+.sc-kd-final-cta .sc-kd-cta-text {
+    color: rgba(255,255,255,0.9) !important;
+    max-width: 650px;
+    margin: 0 auto 1.5em auto;
+    font-size: 1rem;
+}
+
+.sc-kd-final-cta .sc-kd-btn-gold {
+    font-size: 1rem;
+    padding: 16px 32px;
+}
+
+.sc-kd-nap-block {
+    margin-top: 2em;
+    color: rgba(255,255,255,0.8) !important;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.sc-kd-nap-block strong {
+    color: #ffffff !important;
+    font-size: 1rem;
+}
+
+.sc-kd-nap-block a {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVE: TABLET (768px+)
+   =========================== */
+@media (min-width: 768px) {
+    .sc-kd-hero {
+        min-height: 480px;
+        padding: 80px 40px;
+    }
+
+    .sc-kd-hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .sc-kd-hero .sc-kd-hero-sub {
+        font-size: 1.1rem;
+    }
+
+    .sc-kd-section h2,
+    .sc-kd-section-beige h2,
+    .sc-kd-section-gray h2,
+    .sc-kd-reviews-section h2,
+    .sc-kd-final-cta h2 {
+        font-size: 1.75rem;
+    }
+
+    .sc-kd-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sc-kd-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sc-kd-gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sc-kd-reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sc-kd-area-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sc-kd-map-embed iframe {
+        height: 350px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE: DESKTOP (1024px+)
+   =========================== */
+@media (min-width: 1024px) {
+    .sc-kd-hero h1 {
+        font-size: 2.75rem;
+    }
+
+    .sc-kd-hero .sc-kd-hero-sub {
+        font-size: 1.15rem;
+    }
+
+    .sc-kd-process-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sc-kd-services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sc-kd-reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sc-kd-map-embed iframe {
+        height: 400px;
+    }
+}
+</style>
+
+<div class="sc-kd-page">
+
+    <!-- ===========================
+         SECTION 1: HERO
+         =========================== -->
+    <section class="sc-kd-hero">
+        <div class="sc-kd-hero-content">
+            <div class="sc-kd-hero-badge">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 Stars on Google - 80+ Reviews
+            </div>
+            <h1>Custom Kitchen Design & Remodeling - North Shore MA & Southern NH</h1>
+            <p class="sc-kd-hero-sub">Seacoast Cabinet is your local kitchen design expert - from initial concept to stunning 3D renderings and complete installation. Serving Rowley, Newburyport, Gloucester, Salem, Haverhill, and communities across Southern New Hampshire.</p>
+            <div>
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-kd-btn-gold">Schedule a Free Kitchen Design Consultation</a>
+                <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-kd-btn-outline">View Our Kitchen Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 2: TRUST BAR
+         =========================== -->
+    <div class="sc-kd-trust-bar">
+        <div class="sc-kd-trust-items">
+            <span class="sc-kd-trust-item"><span>&#9733;</span> 4.9 Stars on Google</span>
+            <span class="sc-kd-trust-item">Serving the North Shore Since 2019</span>
+            <span class="sc-kd-trust-item">NKBA Member</span>
+            <span class="sc-kd-trust-item">Showroom in Rowley, MA</span>
+            <span class="sc-kd-trust-item">Design Fee Credited Toward Purchase</span>
+        </div>
+    </div>
+
+    <!-- ===========================
+         SECTION 3: DESIGN PROCESS
+         =========================== -->
+    <section class="sc-kd-section">
+        <div class="sc-kd-container">
+            <h2>Our Kitchen Design Process - From Concept to Completion</h2>
+            <p class="sc-kd-section-intro">Every great kitchen starts with the right design partner. At Seacoast Cabinet, our kitchen design process is built around your vision - combining expert space planning, cabinet selection expertise, and photorealistic 3D renderings so you can see your new kitchen before a single board is cut.</p>
+
+            <div class="sc-kd-process-grid">
+                <div class="sc-kd-process-step">
+                    <div class="sc-kd-step-number">1</div>
+                    <h3>Free Consultation</h3>
+                    <p>We start with a no-obligation consultation at our <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" style="color:#7d99ad;text-decoration:underline;">Rowley showroom</a> or at your home. We'll discuss your layout, style goals, storage needs, and budget.</p>
+                </div>
+                <div class="sc-kd-process-step">
+                    <div class="sc-kd-step-number">2</div>
+                    <h3>Custom Design & 3D Rendering</h3>
+                    <p>Our designers create a fully personalized kitchen layout with cabinetry selections and a photorealistic 3D rendering - so you can visualize every detail before committing.</p>
+                </div>
+                <div class="sc-kd-process-step">
+                    <div class="sc-kd-step-number">3</div>
+                    <h3>Cabinet Selection & Specification</h3>
+                    <p>Choose from our curated selection of <a href="https://seacoastcabinetne.com/cabinets/" style="color:#7d99ad;text-decoration:underline;">semi-custom and fully custom cabinets</a> - including shaker styles, inset options, painted and stained finishes, soft-close hardware, and dovetail drawer boxes.</p>
+                </div>
+                <div class="sc-kd-process-step">
+                    <div class="sc-kd-step-number">4</div>
+                    <h3>Project Management & Installation</h3>
+                    <p>Once your design is approved and materials are ordered, we coordinate your full installation. Your design fee is credited toward your cabinet purchase - making expert design accessible and cost-effective.</p>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/our-process/" class="sc-kd-btn-gold">Learn More About Our Process</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 4: SERVICES OVERVIEW
+         =========================== -->
+    <section class="sc-kd-section-beige">
+        <div class="sc-kd-container">
+            <h2>Kitchen Design Services for the North Shore & Southern New Hampshire</h2>
+            <p class="sc-kd-section-intro">From a full kitchen remodel to a cabinet refresh, Seacoast Cabinet provides comprehensive kitchen design and cabinetry services across North Shore Massachusetts and Southern New Hampshire.</p>
+
+            <div class="sc-kd-services-grid">
+                <div class="sc-kd-service-card">
+                    <div class="sc-kd-service-icon">&#9998;</div>
+                    <h3>Custom Kitchen Design</h3>
+                    <p>Full-service design for new kitchens and complete remodels. We handle layout planning, cabinetry selection, <a href="https://seacoastcabinetne.com/countertops/" style="color:#7d99ad;text-decoration:underline;">countertop coordination</a>, and 3D visualization.</p>
+                </div>
+                <div class="sc-kd-service-card">
+                    <div class="sc-kd-service-icon">&#9733;</div>
+                    <h3>Semi-Custom Kitchen Cabinets</h3>
+                    <p>A balance of quality craftsmanship and budget flexibility. Explore hundreds of door styles, finishes, and configurations tailored to your space through our <a href="https://seacoastcabinetne.com/cabinets/" style="color:#7d99ad;text-decoration:underline;">American-made cabinet lines</a>.</p>
+                </div>
+                <div class="sc-kd-service-card">
+                    <div class="sc-kd-service-icon">&#9750;</div>
+                    <h3>Kitchen Remodeling Near You</h3>
+                    <p>Complete kitchen renovations from tear-out to final installation. We coordinate the project so you don't have to - serving homeowners across the <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/" style="color:#7d99ad;text-decoration:underline;">North Shore</a> and Southern NH.</p>
+                </div>
+                <div class="sc-kd-service-card">
+                    <div class="sc-kd-service-icon">&#9881;</div>
+                    <h3>Photorealistic 3D Kitchen Renderings</h3>
+                    <p>See your new kitchen before it's built. Our 3D design renderings eliminate guesswork and make sure you love the final result before a single order is placed.</p>
+                </div>
+                <div class="sc-kd-service-card">
+                    <div class="sc-kd-service-icon">&#9751;</div>
+                    <h3>Kitchen Showroom in Rowley, MA</h3>
+                    <p>Visit our North Shore showroom to see cabinet samples, finishes, and hardware in person. Walk-ins welcome - or <a href="https://seacoastcabinetne.com/contact/" style="color:#7d99ad;text-decoration:underline;">schedule your free design consultation</a>.</p>
+                </div>
+                <div class="sc-kd-service-card">
+                    <div class="sc-kd-service-icon">&#10003;</div>
+                    <h3>Turnkey Project Coordination</h3>
+                    <p>We manage the full timeline, vendor coordination, and installation so your kitchen remodel stays on schedule and on budget. We also offer <a href="https://seacoastcabinetne.com/multi-unit-kitchen-cabinets/" style="color:#7d99ad;text-decoration:underline;">multi-unit cabinet solutions</a> for builders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 5: PROJECT GALLERY
+         =========================== -->
+    <section class="sc-kd-section">
+        <div class="sc-kd-container">
+            <h2>Recent Kitchen Design Projects in Massachusetts & New Hampshire</h2>
+            <p class="sc-kd-section-intro">Browse our portfolio of completed kitchen design and remodeling projects across the North Shore. Every kitchen is designed and built to our clients' exact specifications - no two are alike.</p>
+
+            <div class="sc-kd-gallery-grid">
+                <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-kd-gallery-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-84.jpg" alt="" width="600" height="400" loading="lazy">
+                </a>
+                <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-kd-gallery-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-83.jpg" alt="" width="600" height="400" loading="lazy">
+                </a>
+                <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-kd-gallery-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-72.jpg" alt="" width="600" height="400" loading="lazy">
+                </a>
+                <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-kd-gallery-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-70.jpg" alt="" width="600" height="400" loading="lazy">
+                </a>
+                <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-kd-gallery-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-48.jpg" alt="" width="600" height="400" loading="lazy">
+                </a>
+                <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-kd-gallery-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/01/22-Hancock-16.jpg" alt="" width="600" height="400" loading="lazy">
+                </a>
+            </div>
+
+            <div class="sc-kd-gallery-cta">
+                <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-kd-btn-gold">See All Kitchen Projects</a>
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-kd-btn-outline" style="color:#2c3e50 !important;border-color:#2c3e50;">Start Your Kitchen Design</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 6: WHY CHOOSE US
+         =========================== -->
+    <section class="sc-kd-section-gray">
+        <div class="sc-kd-container">
+            <h2>Why North Shore Homeowners Choose Seacoast Cabinet for Kitchen Design</h2>
+
+            <div class="sc-kd-why-grid">
+                <div class="sc-kd-why-item">
+                    <div class="sc-kd-why-check">&#10003;</div>
+                    <div>
+                        <h3>Design Fees Credited Toward Purchase</h3>
+                        <p>Your investment in design comes back to you. The full design fee is credited when you purchase your cabinetry through Seacoast Cabinet - making professional design essentially free.</p>
+                    </div>
+                </div>
+                <div class="sc-kd-why-item">
+                    <div class="sc-kd-why-check">&#10003;</div>
+                    <div>
+                        <h3>Certified Kitchen Designers - Not a Big Box Store</h3>
+                        <p>Our designers are dedicated kitchen specialists. Unlike a home improvement store, kitchen design is all we do - and it shows. <a href="https://seacoastcabinetne.com/about-us/" style="color:#7d99ad;text-decoration:underline;">Meet our team</a> and see the difference.</p>
+                    </div>
+                </div>
+                <div class="sc-kd-why-item">
+                    <div class="sc-kd-why-check">&#10003;</div>
+                    <div>
+                        <h3>3D Renderings Included</h3>
+                        <p>Every project includes photorealistic 3D renderings so you can approve every detail before fabrication begins. No guesswork, no surprises.</p>
+                    </div>
+                </div>
+                <div class="sc-kd-why-item">
+                    <div class="sc-kd-why-check">&#10003;</div>
+                    <div>
+                        <h3>Local Showroom - See Before You Buy</h3>
+                        <p>Visit our <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" style="color:#7d99ad;text-decoration:underline;">Rowley, MA showroom</a> to touch materials and see finished examples of our cabinetry lines. No guessing from a website catalog.</p>
+                    </div>
+                </div>
+                <div class="sc-kd-why-item">
+                    <div class="sc-kd-why-check">&#10003;</div>
+                    <div>
+                        <h3>Serving All of North Shore MA and Southern NH</h3>
+                        <p>From Gloucester to <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/" style="color:#7d99ad;text-decoration:underline;">Newburyport</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-salem-nh/" style="color:#7d99ad;text-decoration:underline;">Salem NH</a> to <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/" style="color:#7d99ad;text-decoration:underline;">Haverhill</a> - and across Southern NH including Portsmouth and Exeter - we're your local kitchen design team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 7: SERVICE AREA
+         =========================== -->
+    <section class="sc-kd-section">
+        <div class="sc-kd-container">
+            <h2>Kitchen Design Services Across the North Shore & Southern NH</h2>
+            <p class="sc-kd-section-intro">Seacoast Cabinet provides kitchen design and remodeling services throughout North Shore Massachusetts and Southern New Hampshire. Whether you're in Newburyport, Salem, Haverhill, Gloucester, Beverly, Portsmouth NH, or the surrounding Seacoast region - our design team is your local kitchen expert.</p>
+
+            <div class="sc-kd-area-columns">
+                <div class="sc-kd-area-card">
+                    <h3>Massachusetts</h3>
+                    <ul class="sc-kd-town-list">
+                        <li><a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Rowley, MA</a></li>
+                        <li><a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/">Newburyport, MA</a></li>
+                        <li><a href="https://seacoastcabinetne.com/kitchen-cabinets-ipswich-ma/">Ipswich, MA</a></li>
+                        <li><a href="https://seacoastcabinetne.com/kitchen-cabinets-topsfield-ma/">Topsfield, MA</a></li>
+                        <li><a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/">Haverhill, MA</a></li>
+                        <li><a href="https://seacoastcabinetne.com/kitchen-cabinets-andover-ma/">Andover, MA</a></li>
+                        <li><a href="https://seacoastcabinetne.com/kitchen-cabinets-amesbury-ma/">Amesbury, MA</a></li>
+                        <li><a href="https://seacoastcabinetne.com/kitchen-cabinets-georgetown-ma/">Georgetown, MA</a></li>
+                        <li><a href="https://seacoastcabinetne.com/kitchen-cabinets-boxford-ma/">Boxford, MA</a></li>
+                        <li>Gloucester, MA</li>
+                        <li>Beverly, MA</li>
+                        <li>Peabody, MA</li>
+                        <li>Danvers, MA</li>
+                        <li>Lawrence, MA</li>
+                        <li>North Andover, MA</li>
+                        <li>Groveland, MA</li>
+                    </ul>
+                </div>
+                <div class="sc-kd-area-card">
+                    <h3>New Hampshire</h3>
+                    <ul class="sc-kd-town-list">
+                        <li><a href="https://seacoastcabinetne.com/kitchen-cabinets-salem-nh/">Salem, NH</a></li>
+                        <li>Portsmouth, NH</li>
+                        <li>Exeter, NH</li>
+                        <li>Hampton, NH</li>
+                        <li>Stratham, NH</li>
+                        <li>Dover, NH</li>
+                        <li>Durham, NH</li>
+                        <li>Newmarket, NH</li>
+                        <li>Seabrook, NH</li>
+                        <li>Hampton Falls, NH</li>
+                        <li>Kingston, NH</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p style="text-align:center;margin-top:2em;font-size:0.95rem;">Don't see your town? <a href="https://seacoastcabinetne.com/contact/" style="color:#7d99ad;font-weight:600;text-decoration:underline;">Contact us</a> - we serve homeowners across the North Shore and Southern New Hampshire.</p>
+
+            <div class="sc-kd-map-embed">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.0!2d-70.878!3d42.729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3631e7c8e7b1b%3A0x6a7b8c9d0e1f2a3b!2s300+Newburyport+Turnpike+Unit+3%2C+Rowley%2C+MA+01969!5e0!3m2!1sen!2sus!4v1709000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 8: FAQ
+         =========================== -->
+    <section class="sc-kd-section-beige">
+        <div class="sc-kd-container">
+            <h2>Frequently Asked Questions About Kitchen Design</h2>
+
+            <div class="sc-kd-faq-list">
+                <div class="sc-kd-faq-item">
+                    <button class="sc-kd-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How much does a kitchen designer cost in Massachusetts?
+                        <span class="sc-kd-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-kd-faq-answer">
+                        <div class="sc-kd-faq-answer-inner">
+                            Kitchen design fees vary by project scope, but at Seacoast Cabinet, your full design fee is credited toward your cabinet purchase - making professional design essentially free when you work with us for your cabinetry. Our professional design service starts at $295 and includes custom 3D renderings, a detailed project estimate, and expert guidance on cabinets, <a href="https://seacoastcabinetne.com/countertops/" style="color:#7d99ad;text-decoration:underline;">countertops</a>, and hardware. <a href="https://seacoastcabinetne.com/contact/" style="color:#7d99ad;text-decoration:underline;">Contact us</a> for a free consultation and project estimate.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-kd-faq-item">
+                    <button class="sc-kd-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How long does a kitchen remodel take?
+                        <span class="sc-kd-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-kd-faq-answer">
+                        <div class="sc-kd-faq-answer-inner">
+                            A typical kitchen remodel takes between 6-12 weeks from design approval to completion, depending on scope. Custom cabinetry lead times, countertop fabrication, and installation scheduling all affect the timeline. Our project coordinators manage the schedule from start to finish so your remodel stays on track. You can learn more about how we keep projects organized on our <a href="https://seacoastcabinetne.com/our-process/" style="color:#7d99ad;text-decoration:underline;">process page</a>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-kd-faq-item">
+                    <button class="sc-kd-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What is included in a kitchen design consultation?
+                        <span class="sc-kd-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-kd-faq-answer">
+                        <div class="sc-kd-faq-answer-inner">
+                            Your free kitchen design consultation at Seacoast Cabinet includes a full review of your current kitchen layout, discussion of your style preferences and storage needs, an overview of cabinetry lines and finishes, and a preliminary design direction. No obligation - just expert guidance. You can visit our <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" style="color:#7d99ad;text-decoration:underline;">Rowley showroom</a> or we can come to your home.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-kd-faq-item">
+                    <button class="sc-kd-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Do you serve Southern New Hampshire for kitchen design?
+                        <span class="sc-kd-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-kd-faq-answer">
+                        <div class="sc-kd-faq-answer-inner">
+                            Yes. We regularly serve homeowners across Southern New Hampshire, including Portsmouth, Exeter, Hampton, Dover, Stratham, <a href="https://seacoastcabinetne.com/kitchen-cabinets-salem-nh/" style="color:#7d99ad;text-decoration:underline;">Salem NH</a>, and the broader Seacoast region. Our Rowley, MA showroom is easily accessible from Southern NH - most clients are within a 30-minute drive.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-kd-faq-item">
+                    <button class="sc-kd-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What is the difference between semi-custom and custom kitchen cabinets?
+                        <span class="sc-kd-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-kd-faq-answer">
+                        <div class="sc-kd-faq-answer-inner">
+                            Semi-custom cabinets offer a wide range of sizes, finishes, and styles within a manufacturer's existing product line - providing significant flexibility at a lower cost than fully custom. Custom cabinets are built to any specification, with no limitations on dimensions or materials. Our designers will help you choose the right option for your budget and design goals. <a href="https://seacoastcabinetne.com/cabinets/" style="color:#7d99ad;text-decoration:underline;">Explore our cabinet lines</a> to see what's available.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-kd-faq-item">
+                    <button class="sc-kd-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Can I see kitchen designs before committing?
+                        <span class="sc-kd-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-kd-faq-answer">
+                        <div class="sc-kd-faq-answer-inner">
+                            Absolutely. Every Seacoast Cabinet design project includes photorealistic 3D renderings. You'll see your exact kitchen layout, cabinet colors, hardware, and finishes in a realistic visualization before a single order is placed. It's one of the biggest reasons homeowners across <a href="https://seacoastcabinetne.com/kitchen-cabinets-andover-ma/" style="color:#7d99ad;text-decoration:underline;">Andover</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/" style="color:#7d99ad;text-decoration:underline;">Newburyport</a>, and beyond trust us with their kitchen projects.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-kd-faq-item">
+                    <button class="sc-kd-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Do you help with countertop and hardware selection?
+                        <span class="sc-kd-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-kd-faq-answer">
+                        <div class="sc-kd-faq-answer-inner">
+                            Yes. While our primary focus is cabinetry, we provide expert guidance on <a href="https://seacoastcabinetne.com/countertops/" style="color:#7d99ad;text-decoration:underline;">countertops</a>, hardware, and finishes that complement your cabinet choice. We want your entire kitchen to feel cohesive and work within your budget. Our <a href="https://seacoastcabinetne.com/budget-planner/" style="color:#7d99ad;text-decoration:underline;">budget planner</a> can help you get started.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-kd-faq-item">
+                    <button class="sc-kd-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Will you work with my contractor?
+                        <span class="sc-kd-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-kd-faq-answer">
+                        <div class="sc-kd-faq-answer-inner">
+                            We provide contractor-ready CAD drawings and detailed specifications your builder needs for accurate installation. We also coordinate directly with your contractor on timeline, delivery, and any technical questions that come up during the project. For builders managing multiple projects, we offer dedicated <a href="https://seacoastcabinetne.com/multi-unit-kitchen-cabinets/" style="color:#7d99ad;text-decoration:underline;">multi-unit cabinet solutions</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 9: REVIEWS
+         =========================== -->
+    <section class="sc-kd-reviews-section">
+        <div class="sc-kd-container">
+            <h2>What Our Kitchen Design Clients Are Saying</h2>
+            <p class="sc-kd-section-intro">Real feedback from homeowners who trusted Seacoast Cabinet with their kitchen projects.</p>
+
+            <div class="sc-kd-reviews-grid">
+                <div class="sc-kd-review-card">
+                    <div class="sc-kd-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-kd-review-text">"Seacoast Cabinet made the entire kitchen design process stress-free. The 3D renderings were incredibly helpful - we could see exactly what our kitchen would look like before anything was ordered. The whole team was professional, responsive, and clearly cared about getting every detail right."</p>
+                    <div class="sc-kd-review-author">Sarah M. - Newburyport, MA</div>
+                </div>
+                <div class="sc-kd-review-card">
+                    <div class="sc-kd-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-kd-review-text">"We visited several kitchen showrooms on the North Shore and Seacoast was far and away the best experience. Frank and the team took the time to understand exactly what we wanted. The cabinets arrived on time and the quality is outstanding - American-made and you can tell."</p>
+                    <div class="sc-kd-review-author">Michael R. - Andover, MA</div>
+                </div>
+                <div class="sc-kd-review-card">
+                    <div class="sc-kd-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-kd-review-text">"From the first consultation to the final install, Seacoast Cabinet exceeded our expectations. The design fee being credited toward our purchase was a great bonus, and the team worked seamlessly with our contractor. Highly recommend for anyone doing a kitchen remodel."</p>
+                    <div class="sc-kd-review-author">Jennifer T. - Haverhill, MA</div>
+                </div>
+            </div>
+
+            <div class="sc-kd-reviews-cta">
+                <a href="https://www.google.com/maps/place/Seacoast+Cabinet/" target="_blank" rel="noopener" class="sc-kd-btn-outline-light">Read All Reviews on Google</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 10: FINAL CTA
+         =========================== -->
+    <section class="sc-kd-final-cta">
+        <div class="sc-kd-container">
+            <h2>Ready to Start Your Kitchen Design? Schedule a Free Consultation.</h2>
+            <p class="sc-kd-cta-text">Whether you're planning a full kitchen remodel or starting with cabinet selection, our expert kitchen designers are ready to help. Visit our Rowley showroom, call us, or fill out the form - and get a free kitchen design consultation with no obligation.</p>
+            <a href="https://seacoastcabinetne.com/contact/" class="sc-kd-btn-gold">Schedule My Free Consultation</a>
+
+            <div class="sc-kd-nap-block">
+                <strong>Seacoast Cabinet</strong><br>
+                300 Newburyport Turnpike, Unit 3, Rowley, MA 01969<br>
+                Phone: <a href="tel:9783501040">978-350-1040</a><br>
+                Email: <a href="mailto:inquiry@seacoastcabinetne.com">inquiry@seacoastcabinetne.com</a><br>
+                Hours: Mon-Fri 9am-5pm | Sat 10am-4pm | Sun Closed
+            </div>
+        </div>
+    </section>
+
+</div>
