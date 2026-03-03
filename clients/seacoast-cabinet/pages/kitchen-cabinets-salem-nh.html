@@ -1,0 +1,1020 @@
+<style>
+/* ============================================
+   SALEM NH - Kitchen Cabinets Spoke Page
+   Namespace: .sc-salem
+   Brand: Seacoast Cabinet
+   ============================================ */
+
+/* ---- RESET & BASE ---- */
+.sc-salem-page *,
+.sc-salem-page *::before,
+.sc-salem-page *::after {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.sc-salem-page {
+    font-family: 'Open Sans', sans-serif !important;
+    color: #2c3e50 !important;
+    line-height: 1.6 !important;
+    overflow-x: hidden !important;
+}
+
+.sc-salem-page h1,
+.sc-salem-page h2,
+.sc-salem-page h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    line-height: 1.25 !important;
+}
+
+.sc-salem-page h2 {
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 16px !important;
+}
+
+.sc-salem-page h3 {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 8px !important;
+}
+
+.sc-salem-page p {
+    margin-bottom: 14px !important;
+    font-size: 1rem !important;
+    color: #444 !important;
+}
+
+.sc-salem-page a {
+    color: #7d99ad !important;
+    text-decoration: underline !important;
+}
+
+.sc-salem-page a:hover {
+    color: #b8905f !important;
+}
+
+/* Force white text on all button-style links */
+.sc-salem-page a.sc-salem-btn-primary,
+.sc-salem-page a.sc-salem-btn-primary:visited,
+.sc-salem-page a.sc-salem-btn-primary:link,
+.sc-salem-page a.sc-salem-btn-primary:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.sc-salem-page a.sc-salem-btn-secondary,
+.sc-salem-page a.sc-salem-btn-secondary:visited,
+.sc-salem-page a.sc-salem-btn-secondary:link,
+.sc-salem-page a.sc-salem-btn-secondary:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.sc-salem-page a.sc-salem-area-link,
+.sc-salem-page a.sc-salem-area-link:visited,
+.sc-salem-page a.sc-salem-area-link:link,
+.sc-salem-page a.sc-salem-area-link:active,
+.sc-salem-page a.sc-salem-area-link:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.sc-salem-page a.sc-salem-hub-link,
+.sc-salem-page a.sc-salem-hub-link:visited,
+.sc-salem-page a.sc-salem-hub-link:link,
+.sc-salem-page a.sc-salem-hub-link:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* ---- LAYOUT CONTAINERS ---- */
+.sc-salem-section {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 48px 20px !important;
+}
+
+.sc-salem-section-gray {
+    background-color: #f8f8f8 !important;
+}
+
+.sc-salem-section-beige {
+    background-color: #f5f2ed !important;
+}
+
+.sc-salem-section-dark {
+    background-color: #2c3e50 !important;
+}
+
+.sc-salem-section-image {
+    width: 100% !important;
+    max-width: 960px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 24px auto !important;
+    border-radius: 6px !important;
+}
+
+/* ---- DIVI CONTAINER OVERRIDES (Full-Width Hero) ---- */
+.sc-salem-page {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.sc-salem-page .sc-salem-hero {
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+}
+
+/* Force Divi wrappers to allow full-bleed */
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-salem-page .sc-salem-hero,
+.et_pb_code_inner .sc-salem-page .sc-salem-hero,
+.et_pb_text_inner .sc-salem-page .sc-salem-hero {
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Full-bleed for all edge-to-edge sections */
+.sc-salem-page .sc-salem-trust-bar,
+.sc-salem-page .sc-salem-banner-section,
+.sc-salem-page .sc-salem-section-beige,
+.sc-salem-page .sc-salem-section-gray,
+.sc-salem-page .sc-salem-reviews-dark,
+.sc-salem-page .sc-salem-final-cta {
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+}
+
+.sc-salem-page .sc-salem-map {
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    border-radius: 0 !important;
+}
+
+/* ---- HERO ---- */
+.sc-salem-hero {
+    position: relative !important;
+    background-image: url('https://seacoastcabinetne.com/wp-content/uploads/2026/02/2307-scaled.webp') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 60px 20px !important;
+    text-align: center !important;
+    min-height: 420px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+.sc-salem-hero::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important; left: 0 !important;
+    right: 0 !important; bottom: 0 !important;
+    background: rgba(44, 62, 80, 0.45) !important;
+    z-index: 1 !important;
+}
+
+.sc-salem-hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 800px !important;
+}
+
+.sc-salem-hero h1 {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin-bottom: 16px !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3) !important;
+}
+
+.sc-salem-hero h2 {
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+    color: #ffffff !important;
+    margin-bottom: 28px !important;
+    line-height: 1.5 !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2) !important;
+}
+
+.sc-salem-hero-ctas {
+    display: flex !important;
+    gap: 16px !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+}
+
+/* ---- BUTTONS ---- */
+.sc-salem-btn-primary {
+    display: inline-block !important;
+    background-color: #b8905f !important;
+    color: #ffffff !important;
+    padding: 14px 32px !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    transition: background-color 0.3s ease !important;
+    min-width: 200px !important;
+    text-align: center !important;
+}
+
+.sc-salem-btn-primary:hover {
+    background-color: #a07a4f !important;
+    color: #ffffff !important;
+}
+
+.sc-salem-btn-secondary {
+    display: inline-block !important;
+    background-color: #b8905f !important;
+    color: #ffffff !important;
+    padding: 14px 32px !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    transition: background-color 0.3s ease !important;
+    min-width: 200px !important;
+    text-align: center !important;
+}
+
+.sc-salem-btn-secondary:hover {
+    background-color: #a07a4f !important;
+    color: #ffffff !important;
+}
+
+/* ---- TRUST BAR (Warm Beige - Unique to Salem) ---- */
+.sc-salem-trust-bar {
+    background-color: #f5f2ed !important;
+    border-top: 3px solid #b8905f !important;
+    border-bottom: 1px solid #e8e0d5 !important;
+    padding: 16px 20px !important;
+}
+
+.sc-salem-trust-bar-inner {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+}
+
+.sc-salem-trust-item {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.sc-salem-trust-icon {
+    color: #b8905f !important;
+    font-size: 1.1rem !important;
+}
+
+/* ---- BANNER IMAGE SECTION (Unique to Salem) ---- */
+.sc-salem-banner-section {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.sc-salem-banner-img {
+    width: 100% !important;
+    height: 320px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.sc-salem-banner-overlay {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: linear-gradient(transparent, rgba(44,62,80,0.85)) !important;
+    padding: 40px 20px 24px !important;
+}
+
+.sc-salem-banner-overlay p {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    color: #ffffff !important;
+    font-size: 1.05rem !important;
+    text-align: center !important;
+    line-height: 1.6 !important;
+}
+
+/* ---- WHY CHOOSE (2x3 Icon Grid - Unique to Salem) ---- */
+.sc-salem-icon-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    margin: 32px 0 !important;
+}
+
+.sc-salem-icon-card {
+    text-align: center !important;
+    padding: 28px 20px !important;
+    background: #ffffff !important;
+    border-radius: 6px !important;
+    border: 1px solid #e8e0d5 !important;
+    transition: box-shadow 0.3s ease !important;
+}
+
+.sc-salem-icon-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important;
+}
+
+
+.sc-salem-icon-circle {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 50% !important;
+    background-color: #7d99ad !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 14px !important;
+}
+
+.sc-salem-icon-circle span {
+    color: #ffffff !important;
+    font-size: 1.4rem !important;
+    line-height: 1 !important;
+}
+
+.sc-salem-icon-emoji {
+    font-size: 2.2rem !important;
+    display: block !important;
+    margin-bottom: 12px !important;
+}
+
+.sc-salem-icon-card p {
+    font-size: 0.9rem !important;
+    color: #666 !important;
+    margin-bottom: 0 !important;
+}
+
+/* ---- HORIZONTAL CABINET CARDS (Unique to Salem) ---- */
+.sc-salem-hcard {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    margin-bottom: 24px !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.sc-salem-hcard-img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+}
+
+.sc-salem-hcard-content {
+    padding: 24px !important;
+}
+
+.sc-salem-hcard-label {
+    display: inline-block !important;
+    background-color: #7d99ad !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 4px 12px !important;
+    border-radius: 3px !important;
+    margin-bottom: 10px !important;
+}
+
+/* ---- VERTICAL TIMELINE PROCESS (Unique to Salem) ---- */
+.sc-salem-timeline {
+    position: relative !important;
+    padding-left: 48px !important;
+    margin: 32px 0 !important;
+}
+
+.sc-salem-timeline::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 16px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 3px !important;
+    background: #b8905f !important;
+    border-radius: 2px !important;
+}
+
+.sc-salem-timeline-step {
+    position: relative !important;
+    margin-bottom: 36px !important;
+    padding-left: 12px !important;
+}
+
+.sc-salem-timeline-step:last-child {
+    margin-bottom: 0 !important;
+}
+
+.sc-salem-timeline-dot {
+    position: absolute !important;
+    left: -44px !important;
+    top: 4px !important;
+    width: 32px !important;
+    height: 32px !important;
+    background: #b8905f !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+}
+
+/* ---- DARK REVIEWS SECTION (Unique to Salem) ---- */
+.sc-salem-reviews-dark {
+    background-color: #2c3e50 !important;
+    padding: 48px 20px !important;
+}
+
+.sc-salem-reviews-dark h2 {
+    color: #ffffff !important;
+    text-align: center !important;
+}
+
+.sc-salem-page .sc-salem-reviews-dark .sc-salem-reviews-intro,
+.sc-salem-reviews-dark p.sc-salem-reviews-intro {
+    color: rgba(255,255,255,0.85) !important;
+    text-align: center !important;
+    max-width: 700px !important;
+    margin: 0 auto 32px !important;
+}
+
+.sc-salem-review-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+}
+
+.sc-salem-review-card {
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+    border-radius: 6px !important;
+    padding: 24px !important;
+}
+
+.sc-salem-review-stars {
+    color: #b8905f !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 10px !important;
+}
+
+.sc-salem-page .sc-salem-review-text,
+.sc-salem-reviews-dark .sc-salem-review-text,
+.sc-salem-reviews-dark p.sc-salem-review-text {
+    color: #ffffff !important;
+    font-style: italic !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+}
+
+.sc-salem-page .sc-salem-review-author,
+.sc-salem-reviews-dark .sc-salem-review-author,
+.sc-salem-reviews-dark p.sc-salem-review-author {
+    color: #b8905f !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+.sc-salem-review-badge {
+    background: rgba(255,255,255,0.1) !important;
+    color: rgba(255,255,255,0.7) !important;
+    font-size: 0.75rem !important;
+    padding: 2px 8px !important;
+    border-radius: 3px !important;
+    margin-left: 8px !important;
+    font-weight: 400 !important;
+}
+
+/* ---- FAQ ACCORDION ---- */
+.sc-salem-faq-list {
+    margin: 24px 0 !important;
+}
+
+.sc-salem-faq-item {
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.sc-salem-faq-item summary {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    font-size: 1.05rem !important;
+    padding: 20px 40px 20px 0 !important;
+    cursor: pointer !important;
+    list-style: none !important;
+    position: relative !important;
+    line-height: 1.4 !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+}
+
+.sc-salem-faq-item summary::-webkit-details-marker {
+    display: none !important;
+}
+
+.sc-salem-faq-item summary::after {
+    content: '+' !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    font-size: 1.5rem !important;
+    font-weight: 300 !important;
+    color: #7d99ad !important;
+    line-height: 1 !important;
+}
+
+.sc-salem-faq-item[open] summary::after {
+    content: '\2212' !important;
+}
+
+.sc-salem-faq-item summary:hover {
+    color: #7d99ad !important;
+}
+
+.sc-salem-faq-answer {
+    color: #444 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+    padding: 0 0 20px !important;
+}
+
+.sc-salem-faq-answer p {
+    font-size: 0.95rem !important;
+}
+
+/* ---- AREA GRID ---- */
+.sc-salem-area-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    margin: 24px 0 !important;
+}
+
+.sc-salem-area-link {
+    display: block !important;
+    background-color: #7d99ad !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    padding: 12px 16px !important;
+    border-radius: 4px !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.sc-salem-area-link:hover {
+    background-color: #6a8a9e !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* ---- HUB LINK ---- */
+.sc-salem-hub-link {
+    display: inline-block !important;
+    background-color: #b8905f !important;
+    color: #ffffff !important;
+    padding: 14px 32px !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    margin-top: 16px !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.sc-salem-hub-link:hover {
+    background-color: #a07a4f !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* ---- MAP ---- */
+.sc-salem-map {
+    width: 100% !important;
+    max-width: 1100px !important;
+    height: 350px !important;
+    border: 0 !important;
+    border-radius: 6px !important;
+    margin: 24px auto !important;
+    display: block !important;
+}
+
+/* ---- FINAL CTA ---- */
+.sc-salem-final-cta {
+    background-color: #2c3e50 !important;
+    text-align: center !important;
+    padding: 56px 20px !important;
+}
+
+.sc-salem-final-cta h2 {
+    color: #ffffff !important;
+    margin-bottom: 16px !important;
+}
+
+.sc-salem-final-cta p {
+    color: rgba(255,255,255,0.85) !important;
+    max-width: 650px !important;
+    margin: 0 auto 28px !important;
+}
+
+.sc-salem-final-cta .sc-salem-contact-info {
+    color: rgba(255,255,255,0.85) !important;
+    margin-top: 20px !important;
+    font-size: 0.95rem !important;
+}
+
+.sc-salem-final-cta .sc-salem-contact-info a,
+.sc-salem-page .sc-salem-final-cta .sc-salem-contact-info a {
+    color: #b8905f !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+.sc-salem-final-cta .sc-salem-contact-info a:hover {
+    color: #d4a96a !important;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (min-width: 768px) {
+    .sc-salem-hero h1 {
+        font-size: 2.6rem !important;
+    }
+
+    .sc-salem-icon-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .sc-salem-hcard {
+        flex-direction: row !important;
+    }
+
+    .sc-salem-hcard-img {
+        width: 40% !important;
+        height: auto !important;
+        min-height: 240px !important;
+    }
+
+    .sc-salem-hcard-content {
+        width: 60% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    .sc-salem-review-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .sc-salem-area-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .sc-salem-banner-img {
+        height: 380px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sc-salem-hero {
+        min-height: 480px !important;
+    }
+
+    .sc-salem-hero h1 {
+        font-size: 2.8rem !important;
+    }
+
+    .sc-salem-section {
+        padding: 60px 20px !important;
+    }
+
+    .sc-salem-icon-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .sc-salem-area-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .sc-salem-banner-img {
+        height: 400px !important;
+    }
+}
+</style>
+
+<div class="sc-salem-page">
+
+    <!-- ============ HERO ============ -->
+    <div class="sc-salem-hero">
+        <div class="sc-salem-hero-content">
+            <h1>Kitchen Cabinets in Salem, NH</h1>
+            <h2>Custom cabinetry for Salem homeowners and Southern New Hampshire - personalized 3D kitchen design, American-made cabinet lines, and a dedicated showroom just across the Massachusetts border in Rowley.</h2>
+            <div class="sc-salem-hero-ctas">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-salem-btn-primary">Schedule Your Free Consultation</a>
+                <a href="https://seacoastcabinetne.com/design-services/" class="sc-salem-btn-secondary">View Design Services</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ TRUST BAR (Warm Beige + Gold Border - Unique to Salem) ============ -->
+    <div class="sc-salem-trust-bar">
+        <div class="sc-salem-trust-bar-inner">
+            <div class="sc-salem-trust-item"><span class="sc-salem-trust-icon">&#9733;</span> Family-Owned Showroom</div>
+            <div class="sc-salem-trust-item"><span class="sc-salem-trust-icon">&#9745;</span> American-Made Cabinetry</div>
+            <div class="sc-salem-trust-item"><span class="sc-salem-trust-icon">&#9202;</span> On-Time Project Delivery</div>
+            <div class="sc-salem-trust-item"><span class="sc-salem-trust-icon">&#9889;</span> Serving Southern NH &amp; North Shore MA</div>
+        </div>
+    </div>
+
+    <!-- ============ SECTION 1: INTRO ============ -->
+    <div class="sc-salem-section">
+        <h2>Your Trusted Kitchen Cabinet Company in Salem, NH</h2>
+        <p>Planning a kitchen remodel in Salem, NH? Whether you're building from the ground up or replacing dated cabinetry that no longer works for your family, Seacoast Cabinet is the locally trusted choice for <a href="https://seacoastcabinetne.com/cabinets/">custom kitchen cabinets</a> and professional <a href="https://seacoastcabinetne.com/kitchen-design/">kitchen design services</a>. We work directly with Salem homeowners to design cabinetry that fits both your space and your daily routine.</p>
+        <p>From initial measurements and layout planning through final delivery coordination, our team is with you at every stage. Our <a href="https://seacoastcabinetne.com/design-services/">design services</a> include photorealistic 3D renderings so you can see your new kitchen before a single cabinet is ordered. Pair your cabinetry with <a href="https://seacoastcabinetne.com/countertops/">quality countertops</a> and you've got a kitchen that's both beautiful and built to last.</p>
+        <p>Our Rowley, MA showroom is a quick drive south on I-93 and Route 1, putting Salem homeowners within easy reach of full-scale kitchen displays, cabinet finish samples, and one-on-one design consultations. Browse our <a href="https://seacoastcabinetne.com/inspiration-gallery/">inspiration gallery</a> online to start collecting ideas before your visit.</p>
+
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Rustic-Farmhouse.webp" alt="" width="960" height="640" loading="lazy" decoding="async" class="sc-salem-section-image">
+    </div>
+
+    <!-- ============ BANNER IMAGE SECTION (Unique to Salem) ============ -->
+    <div class="sc-salem-banner-section">
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2024/12/DSC07231.webp" alt="" width="1200" height="400" loading="lazy" decoding="async" class="sc-salem-banner-img">
+        <div class="sc-salem-banner-overlay">
+            <p>Every Salem kitchen project starts with a conversation about how you use your space, what frustrates you about your current layout, and where you want to end up. That's the foundation for a kitchen that works.</p>
+        </div>
+    </div>
+
+    <!-- ============ SECTION 2: WHY CHOOSE (2x3 Icon Grid - Unique to Salem) ============ -->
+    <div class="sc-salem-section-beige">
+        <div class="sc-salem-section">
+            <h2>Why Salem Homeowners Choose Seacoast Cabinet</h2>
+            <p>We've built our reputation across Southern New Hampshire and the North Shore on a few things that matter more than marketing claims - reliability, honest communication, and kitchen cabinets that hold up for decades.</p>
+
+            <div class="sc-salem-icon-grid">
+                <div class="sc-salem-icon-card">
+                    <div class="sc-salem-icon-circle"><span>&#9750;</span></div>
+                    <h3>Local to Southern NH</h3>
+                    <p>Our Rowley showroom is a short trip from Salem via I-93 and Route 1. We understand the homes, styles, and budgets common throughout Rockingham County and the Seacoast region.</p>
+                </div>
+                <div class="sc-salem-icon-card">
+                    <div class="sc-salem-icon-circle"><span>&#9998;</span></div>
+                    <h3>Custom Design, Not Cookie-Cutter</h3>
+                    <p>Every project is designed from scratch to fit your exact kitchen layout. No catalog picks, no guessing - just measured, rendered, and planned around how you actually cook and live.</p>
+                </div>
+                <div class="sc-salem-icon-card">
+                    <div class="sc-salem-icon-circle"><span>&#9733;</span></div>
+                    <h3>American-Made Quality</h3>
+                    <p>Homecrest, Mantra, and Omega are all manufactured domestically by MasterBrand Cabinets. Predictable lead times, no tariff surprises, and quality control you can trust.</p>
+                </div>
+                <div class="sc-salem-icon-card">
+                    <div class="sc-salem-icon-circle"><span>&#36;</span></div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Your detailed proposal includes every line item - cabinet specs, hardware, accessories, and delivery. No hidden fees, no surprises at the end. Use our <a href="https://seacoastcabinetne.com/budget-planner/">budget planner</a> to get a preliminary estimate.</p>
+                </div>
+                <div class="sc-salem-icon-card">
+                    <div class="sc-salem-icon-circle"><span>&#9654;</span></div>
+                    <h3>Contractor-Friendly Coordination</h3>
+                    <p>We work alongside your general contractor, builder, or interior designer - providing detailed specs, installation guides, and direct designer access so the project runs smoothly.</p>
+                </div>
+                <div class="sc-salem-icon-card">
+                    <div class="sc-salem-icon-circle"><span>&#10003;</span></div>
+                    <h3>On-Time, Every Time</h3>
+                    <p>Kitchen remodels have enough moving parts. We respect your schedule with reliable delivery timelines backed by domestic manufacturing and clear communication from order to install.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 16px;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-salem-btn-primary">Get a Free Consultation</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ SECTION 3: REVIEWS (Dark Background - Unique to Salem) ============ -->
+    <div class="sc-salem-reviews-dark">
+        <div class="sc-salem-section" style="padding-top: 0; padding-bottom: 0;">
+            <h2>What Homeowners and Contractors Say About Working with Us</h2>
+            <p class="sc-salem-reviews-intro">Our reviews come from homeowners planning their first remodel and contractors who have partnered with us on dozens of projects across Southern NH and the North Shore.</p>
+
+            <div class="sc-salem-review-grid">
+                <div class="sc-salem-review-card">
+                    <div class="sc-salem-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-salem-review-text">"I've have worked with the owner Frank Lablanc and his team on many projects, they are very professional and hard working and a pleasure to speak with, I highly recommended Seacoast Cabinets for all of your cabinet needs."</p>
+                    <p class="sc-salem-review-author">Brenden M. <span class="sc-salem-review-badge">Google Review</span></p>
+                </div>
+                <div class="sc-salem-review-card">
+                    <div class="sc-salem-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-salem-review-text">"Seacoast Cabinets is by far the best to work with out of any cabinet company we have done business with. Their customer service is amazing and are always quick to answer any questions we have. The line of cabinets they have are amazing and so are their prices compared to other companies."</p>
+                    <p class="sc-salem-review-author">Imperial Construction LLC <span class="sc-salem-review-badge">Google Review</span></p>
+                </div>
+                <div class="sc-salem-review-card">
+                    <div class="sc-salem-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-salem-review-text">"Kyle and Frank are absolutely fantastic to work with. The years of experience this company offers makes our job as contractors much easier. They're our go to company for any type of custom cabinet design or kitchen remodel."</p>
+                    <p class="sc-salem-review-author">Sam C. <span class="sc-salem-review-badge">Google Review</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ SECTION 4: CABINET COLLECTIONS (Horizontal Cards - Unique to Salem) ============ -->
+    <div class="sc-salem-section">
+        <h2>American-Made Kitchen Cabinet Lines for Salem, NH Projects</h2>
+        <p>We carry three tiers of <a href="https://seacoastcabinetne.com/cabinets/">American-made cabinetry</a> from MasterBrand, the largest residential cabinet manufacturer in the country. Each line is built domestically with options that range from budget-conscious to fully custom. Your designer will help you choose the right fit based on your kitchen layout, design goals, and budget.</p>
+
+        <!-- Homecrest -->
+        <div class="sc-salem-hcard">
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2024/12/DSC07197.webp" alt="" width="480" height="320" loading="lazy" decoding="async" class="sc-salem-hcard-img">
+            <div class="sc-salem-hcard-content">
+                <span class="sc-salem-hcard-label">Smart Value</span>
+                <h3>Homecrest Cabinetry</h3>
+                <p>A practical starting point for Salem homeowners who want clean, durable kitchen cabinets without overspending. Homecrest offers a strong selection of door styles, finishes, and storage accessories that hold up to daily use. A solid choice for kitchen remodels with a defined budget.</p>
+            </div>
+        </div>
+
+        <!-- Mantra -->
+        <div class="sc-salem-hcard">
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2024/12/DSC07193.webp" alt="" width="480" height="320" loading="lazy" decoding="async" class="sc-salem-hcard-img">
+            <div class="sc-salem-hcard-content">
+                <span class="sc-salem-hcard-label">Custom Fit</span>
+                <h3>Mantra Cabinetry</h3>
+                <p>Mantra bridges the gap between stock sizing and full custom. You get more door profiles, finish options, and interior accessories than a value line, with sizing flexibility that handles unusual kitchen layouts common in New Hampshire homes built across different decades.</p>
+            </div>
+        </div>
+
+        <!-- Omega -->
+        <div class="sc-salem-hcard">
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/seacoast-showroom-10.webp" alt="" width="480" height="320" loading="lazy" decoding="async" class="sc-salem-hcard-img">
+            <div class="sc-salem-hcard-content">
+                <span class="sc-salem-hcard-label">Premium Custom</span>
+                <h3>Omega Cabinetry</h3>
+                <p>Full custom, premium cabinetry for complete kitchen transformations. Inset, overlay, painted, stained - every detail built to your exact specifications. Omega is the choice when you want a kitchen that's truly one-of-a-kind, backed by a limited lifetime warranty.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ SECTION 5: PROCESS (Vertical Timeline - Unique to Salem) ============ -->
+    <div class="sc-salem-section-gray">
+        <div class="sc-salem-section">
+            <h2>How Your Salem Kitchen Cabinet Project Works</h2>
+            <p>We've streamlined <a href="https://seacoastcabinetne.com/our-process/">our process</a> so you know exactly what to expect from the first phone call through the final installed cabinet. No surprises, no guesswork - just clear steps and open communication at every stage.</p>
+
+            <div class="sc-salem-timeline">
+                <div class="sc-salem-timeline-step">
+                    <div class="sc-salem-timeline-dot">1</div>
+                    <h3>Free Phone Consultation</h3>
+                    <p>Call us at <a href="tel:978-350-1040">978-350-1040</a> or fill out the form on our <a href="https://seacoastcabinetne.com/contact/">contact page</a>. We'll discuss your project scope, timeline, and answer any initial questions about cabinet options and pricing before scheduling a showroom visit.</p>
+                </div>
+                <div class="sc-salem-timeline-step">
+                    <div class="sc-salem-timeline-dot">2</div>
+                    <h3>Showroom Visit and Design</h3>
+                    <p>Tour our Rowley showroom to see full-scale cabinet displays, touch finishes, and test drawer hardware in person. Your designer will take measurements and start building your custom kitchen layout with photorealistic 3D renderings you can review and revise.</p>
+                </div>
+                <div class="sc-salem-timeline-step">
+                    <div class="sc-salem-timeline-dot">3</div>
+                    <h3>Detailed Proposal and Review</h3>
+                    <p>You'll receive a complete cabinet specification with pricing, material details, and a timeline estimate. We walk through every line item together so there are no surprises. Revisions are included until you're confident in the plan.</p>
+                </div>
+                <div class="sc-salem-timeline-step">
+                    <div class="sc-salem-timeline-dot">4</div>
+                    <h3>Order, Delivery, and Installation Support</h3>
+                    <p>Once approved, your cabinets go into production at an American manufacturing facility. We coordinate delivery scheduling directly with you or your contractor and provide installation support to make sure everything fits exactly as designed.</p>
+                </div>
+            </div>
+
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2024/05/Specialty-Storage-Solutions-for-Organization-Kitchen-Remodel-scaled.webp" alt="" width="960" height="640" loading="lazy" decoding="async" class="sc-salem-section-image">
+        </div>
+    </div>
+
+    <!-- ============ SECTION 6: FAQ ACCORDION ============ -->
+    <div class="sc-salem-section">
+        <h2>Frequently Asked Questions - Kitchen Cabinets in Salem, NH</h2>
+
+        <div class="sc-salem-faq-list">
+            <details class="sc-salem-faq-item">
+                <summary>How far is the Seacoast Cabinet showroom from Salem, NH?</summary>
+                <div class="sc-salem-faq-answer">
+                    <p>Our <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Rowley showroom</a> is approximately 25-30 minutes south of Salem via I-93 and Route 1. We're located at 300 Newburyport Turnpike, Unit 3, Rowley, MA 01969. Walk-ins are welcome - appointments are recommended so a designer can give you dedicated time.</p>
+                </div>
+            </details>
+            <details class="sc-salem-faq-item">
+                <summary>How much do custom kitchen cabinets cost for a Salem, NH project?</summary>
+                <div class="sc-salem-faq-answer">
+                    <p>Kitchen cabinet costs vary depending on kitchen size, cabinet line, and finishes chosen. Homecrest projects start at a lower investment, while fully custom Omega kitchens run higher. We provide a detailed, line-item estimate during your design consultation so you know exactly what you're spending. Our <a href="https://seacoastcabinetne.com/budget-planner/">budget planner</a> can give you a preliminary range.</p>
+                </div>
+            </details>
+            <details class="sc-salem-faq-item">
+                <summary>What's the typical timeline for a kitchen cabinet project?</summary>
+                <div class="sc-salem-faq-answer">
+                    <p>Most projects take 4-8 weeks from order to delivery, depending on the cabinet line and level of customization. Homecrest orders tend to arrive on the faster end, while fully custom Omega orders may take closer to 8 weeks. We'll give you a clear timeline estimate during the proposal stage.</p>
+                </div>
+            </details>
+            <details class="sc-salem-faq-item">
+                <summary>Can you work with my contractor on a Salem kitchen project?</summary>
+                <div class="sc-salem-faq-answer">
+                    <p>Absolutely. We regularly coordinate with general contractors, builders, and interior designers on kitchen projects throughout Southern NH and the North Shore. We provide detailed cabinet specifications, installation guides, and direct designer communication so your contractor has everything they need. Learn more about our <a href="https://seacoastcabinetne.com/multi-unit-kitchen-cabinets/">contractor and multi-unit services</a>.</p>
+                </div>
+            </details>
+            <details class="sc-salem-faq-item">
+                <summary>Do you serve other areas near Salem, NH?</summary>
+                <div class="sc-salem-faq-answer">
+                    <p>Yes. We serve homeowners and contractors throughout Southern New Hampshire, including Derry, Londonderry, Windham, and Atkinson, as well as the entire North Shore Massachusetts region. Check our <a href="https://seacoastcabinetne.com/kitchen-design/">kitchen design services page</a> for our full service area.</p>
+                </div>
+            </details>
+            <details class="sc-salem-faq-item">
+                <summary>Are all your cabinet lines made in the United States?</summary>
+                <div class="sc-salem-faq-answer">
+                    <p>Yes. Homecrest, Mantra, and Omega are all manufactured domestically by MasterBrand Cabinets. This means more predictable lead times, no tariff-related price fluctuations, and direct quality control that imported cabinets can't match. Every cabinet we order for Salem homeowners is built in an American facility.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <!-- ============ SECTION 7: SERVICE AREA LINKS ============ -->
+    <div class="sc-salem-section-beige">
+        <div class="sc-salem-section">
+            <h2>Kitchen Cabinet Services Across Southern NH and the North Shore</h2>
+            <p>We serve homeowners and contractors throughout Southern New Hampshire, Rockingham County, and the North Shore of Massachusetts. Explore our kitchen cabinet services in communities near Salem.</p>
+
+            <div class="sc-salem-area-grid">
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" class="sc-salem-area-link">Rowley, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/" class="sc-salem-area-link">Newburyport, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/" class="sc-salem-area-link">Haverhill, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-amesbury-ma/" class="sc-salem-area-link">Amesbury, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-georgetown-ma/" class="sc-salem-area-link">Georgetown, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-topsfield-ma/" class="sc-salem-area-link">Topsfield, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-ipswich-ma/" class="sc-salem-area-link">Ipswich, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-boxford-ma/" class="sc-salem-area-link">Boxford, MA</a>
+                <a href="https://seacoastcabinetne.com/kitchen-cabinets-andover-ma/" class="sc-salem-area-link">Andover, MA</a>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-salem-hub-link">Explore All Kitchen Design Services</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ SECTION 8: SHOWROOM ============ -->
+    <div class="sc-salem-section">
+        <h2 style="text-align: center;">Visit Our Rowley Showroom</h2>
+        <p style="text-align: center;">Our showroom is open Monday through Friday, 9am-5pm, and Saturdays 10am-4pm. Browse full kitchen displays, compare cabinet finishes, and meet with a designer to talk through your Salem kitchen project. Walk-ins are welcome - appointments are recommended for dedicated design time.</p>
+
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/seacoast-showroom-11.webp" alt="" width="960" height="640" loading="lazy" decoding="async" class="sc-salem-section-image">
+
+        <p style="margin-top: 16px; text-align: center;"><strong>Seacoast Cabinet</strong> - 300 Newburyport Turnpike, Unit 3, Rowley, MA 01969<br>
+        <a href="tel:978-350-1040">978-350-1040</a> | <a href="https://seacoastcabinetne.com/contact/">Schedule a Visit</a></p>
+    </div>
+
+    <!-- ============ SECTION 9: FINAL CTA ============ -->
+    <div class="sc-salem-final-cta">
+        <h2>Start Your Salem, NH Kitchen Cabinet Project</h2>
+        <p>Whether you're planning a full kitchen remodel or replacing outdated cabinets, we'll help you find the right design, the right materials, and the right budget. Your free consultation starts with a simple call or form submission.</p>
+        <div class="sc-salem-hero-ctas">
+            <a href="https://seacoastcabinetne.com/contact/" class="sc-salem-btn-primary">Schedule Your Free Consultation</a>
+            <a href="tel:978-350-1040" class="sc-salem-btn-secondary">Call 978-350-1040</a>
+        </div>
+        <div class="sc-salem-contact-info">
+            <p><strong>Seacoast Cabinet</strong> - 300 Newburyport Turnpike, Unit 3, Rowley, MA 01969<br>
+            <a href="mailto:inquiry@seacoastcabinetne.com">inquiry@seacoastcabinetne.com</a></p>
+        </div>
+    </div>
+
+    <!-- ============ EMBEDDED MAP ============ -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93686.30878706175!2d-71.30785474162558!3d42.79475186127187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3aa58533cac19%3A0x8a27fe4fc103c4e3!2sSalem%2C%20NH%2003079!5e0!3m2!1sen!2sus!4v1772549173098!5m2!1sen!2sus" class="sc-salem-map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
