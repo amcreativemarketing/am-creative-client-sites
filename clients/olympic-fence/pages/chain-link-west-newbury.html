@@ -1,0 +1,1002 @@
+<style>
+/* ========================================
+   OLYMPIC FENCE - CHAIN LINK WEST NEWBURY
+   Namespace: .ofc-clwn-
+   ======================================== */
+
+:root {
+  --ofc-primary: #272262;
+  --ofc-primary-hover: #4a4494;
+  --ofc-text-dark: #333333;
+  --ofc-text-light: #666666;
+  --ofc-bg-light: #f8f9fa;
+  --ofc-border: #e9ecef;
+  --ofc-white: #ffffff;
+  --ofc-star: #ffc107;
+  --ofc-success: #28a745;
+}
+
+.ofc-clwn-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ofc-text-dark);
+  line-height: 1.6;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.ofc-clwn-wrapper * {
+  box-sizing: border-box;
+}
+
+.ofc-clwn-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === HERO === */
+.ofc-clwn-hero {
+  background: linear-gradient(rgba(39, 34, 98, 0.25), rgba(39, 34, 98, 0.35)),
+    url('https://olympicfencema.com/wp-content/uploads/2026/03/OFC_website-68.jpg') center/cover no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ofc-clwn-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ofc-clwn-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+  color: var(--ofc-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.ofc-clwn-hero p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 28px 0;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+.ofc-clwn-hero-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* === BUTTONS === */
+.ofc-clwn-btn-primary,
+a.ofc-clwn-btn-primary {
+  background: var(--ofc-white);
+  color: var(--ofc-primary) !important;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none !important;
+  display: inline-block;
+  border: 2px solid var(--ofc-white);
+  transition: background 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+
+.ofc-clwn-btn-primary:hover,
+a.ofc-clwn-btn-primary:hover {
+  background: #f0f0f0;
+  text-decoration: none !important;
+}
+
+.ofc-clwn-btn-secondary,
+a.ofc-clwn-btn-secondary {
+  background: var(--ofc-white);
+  color: var(--ofc-primary) !important;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none !important;
+  display: inline-block;
+  border: 2px solid var(--ofc-white);
+  transition: background 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+
+.ofc-clwn-btn-secondary:hover,
+a.ofc-clwn-btn-secondary:hover {
+  background: #f0f0f0;
+  text-decoration: none !important;
+}
+
+.ofc-clwn-btn-cta,
+a.ofc-clwn-btn-cta {
+  background: var(--ofc-primary);
+  color: var(--ofc-white) !important;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+
+.ofc-clwn-btn-cta:hover,
+a.ofc-clwn-btn-cta:hover {
+  background: var(--ofc-primary-hover);
+  text-decoration: none !important;
+}
+
+/* === TRUST BAR === */
+.ofc-clwn-trust-bar {
+  background: var(--ofc-primary);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+
+.ofc-clwn-trust-item {
+  color: var(--ofc-white);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 10px 16px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* === BREADCRUMBS === */
+.ofc-clwn-breadcrumbs {
+  padding: 12px 20px;
+  font-size: 0.85rem;
+  color: var(--ofc-text-light);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ofc-clwn-breadcrumbs a {
+  color: var(--ofc-primary);
+  text-decoration: none;
+}
+
+.ofc-clwn-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.ofc-clwn-breadcrumbs span {
+  margin: 0 6px;
+}
+
+/* === SECTIONS === */
+.ofc-clwn-section {
+  padding: 48px 20px;
+}
+
+.ofc-clwn-section-alt {
+  padding: 48px 20px;
+  background: var(--ofc-bg-light);
+}
+
+.ofc-clwn-section h2,
+.ofc-clwn-section-alt h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ofc-primary);
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.ofc-clwn-section h3,
+.ofc-clwn-section-alt h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ofc-primary);
+  margin: 24px 0 10px 0;
+}
+
+.ofc-clwn-section p,
+.ofc-clwn-section-alt p {
+  margin: 0 0 14px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* === TWO-COLUMN INTRO === */
+.ofc-clwn-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.ofc-clwn-intro-grid img {
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+}
+
+/* === PROCESS TIMELINE === */
+.ofc-clwn-timeline {
+  position: relative;
+  margin: 28px 0;
+  padding-left: 32px;
+}
+
+.ofc-clwn-timeline::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--ofc-primary);
+  border-radius: 2px;
+}
+
+.ofc-clwn-timeline-step {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+.ofc-clwn-timeline-step::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  background: var(--ofc-primary);
+  border-radius: 50%;
+  border: 3px solid var(--ofc-white);
+  box-shadow: 0 0 0 2px var(--ofc-primary);
+}
+
+.ofc-clwn-timeline-step h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ofc-primary);
+  margin: 0 0 4px 0;
+}
+
+.ofc-clwn-timeline-step p {
+  font-size: 0.93rem;
+  color: var(--ofc-text-light);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* === COMPARISON TABLE === */
+.ofc-clwn-comparison-wrap {
+  overflow-x: auto;
+  margin: 24px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ofc-clwn-comparison {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+  font-size: 0.93rem;
+}
+
+.ofc-clwn-comparison thead th {
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.ofc-clwn-comparison thead th:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+.ofc-clwn-comparison thead th:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+.ofc-clwn-comparison tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ofc-border);
+  vertical-align: top;
+}
+
+.ofc-clwn-comparison tbody tr:nth-child(even) {
+  background: var(--ofc-bg-light);
+}
+
+.ofc-clwn-comparison tbody td:first-child {
+  font-weight: 600;
+  color: var(--ofc-text-dark);
+}
+
+.ofc-clwn-highlight-col {
+  background: rgba(39, 34, 98, 0.04);
+  font-weight: 500;
+}
+
+.ofc-clwn-check {
+  color: var(--ofc-success);
+  font-weight: 700;
+}
+
+.ofc-clwn-x {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+/* === IMAGE GRID === */
+.ofc-clwn-img-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.ofc-clwn-img-grid img {
+  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* === REVIEWS === */
+.ofc-clwn-reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.ofc-clwn-review-card {
+  background: var(--ofc-white);
+  border: 1px solid var(--ofc-border);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.ofc-clwn-review-stars {
+  color: var(--ofc-star);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.ofc-clwn-review-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ofc-text-dark);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.ofc-clwn-review-author {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ofc-primary);
+}
+
+/* === NEARBY LINKS === */
+.ofc-clwn-nearby-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+  justify-content: center;
+}
+
+.ofc-clwn-nearby-link {
+  background: var(--ofc-primary);
+  color: var(--ofc-white) !important;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: background 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ofc-clwn-nearby-link:hover {
+  background: var(--ofc-primary-hover);
+  text-decoration: none !important;
+}
+
+/* === MAP === */
+.ofc-clwn-map-wrap {
+  margin-top: 24px;
+}
+
+.ofc-clwn-map-wrap iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* === FAQ === */
+.ofc-clwn-faq-item {
+  border-bottom: 1px solid var(--ofc-border);
+  margin-bottom: 0;
+}
+
+.ofc-clwn-faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 16px 40px 16px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ofc-primary);
+  cursor: pointer;
+  position: relative;
+  font-family: inherit;
+  line-height: 1.4;
+  min-height: 44px;
+}
+
+.ofc-clwn-faq-q::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--ofc-primary);
+  transition: transform 0.3s ease;
+}
+
+.ofc-clwn-faq-q[aria-expanded="true"]::after {
+  content: '-';
+}
+
+.ofc-clwn-faq-a {
+  display: none;
+  padding: 0 0 16px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ofc-text-dark);
+}
+
+/* === FINAL CTA === */
+.ofc-clwn-final-cta {
+  background: var(--ofc-primary);
+  padding: 48px 20px;
+  text-align: center;
+  color: var(--ofc-white);
+}
+
+.ofc-clwn-final-cta h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: var(--ofc-white);
+}
+
+.ofc-clwn-final-cta p {
+  font-size: 1rem;
+  margin: 0 0 24px 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ofc-clwn-final-cta-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.ofc-clwn-final-btn-white,
+a.ofc-clwn-final-btn-white {
+  background: var(--ofc-white);
+  color: var(--ofc-primary) !important;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+
+.ofc-clwn-final-btn-white:hover,
+a.ofc-clwn-final-btn-white:hover {
+  background: #f0f0f0;
+  text-decoration: none !important;
+}
+
+.ofc-clwn-final-btn-outline,
+a.ofc-clwn-final-btn-outline {
+  background: transparent;
+  color: var(--ofc-white) !important;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none !important;
+  display: inline-block;
+  border: 2px solid var(--ofc-white);
+  transition: background 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+
+.ofc-clwn-final-btn-outline:hover,
+a.ofc-clwn-final-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  text-decoration: none !important;
+}
+
+.ofc-clwn-nap-block {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.ofc-clwn-nap-block a {
+  color: var(--ofc-white);
+}
+
+/* === GALLERY COLUMNS === */
+.ofc-clwn-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.ofc-clwn-gallery-col {
+  text-align: center;
+}
+
+.ofc-clwn-gallery-col img {
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+}
+
+/* ========================================
+   TABLET BREAKPOINT (768px+)
+   ======================================== */
+@media (min-width: 768px) {
+  .ofc-clwn-hero {
+    padding: 80px 40px;
+    min-height: 480px;
+  }
+
+  .ofc-clwn-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .ofc-clwn-hero p {
+    font-size: 1.05rem;
+  }
+
+  .ofc-clwn-hero-ctas {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .ofc-clwn-trust-bar {
+    gap: 0;
+  }
+
+  .ofc-clwn-trust-item {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+
+  .ofc-clwn-section,
+  .ofc-clwn-section-alt {
+    padding: 60px 40px;
+  }
+
+  .ofc-clwn-intro-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .ofc-clwn-img-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ofc-clwn-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ofc-clwn-reviews-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .ofc-clwn-final-cta-btns {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .ofc-clwn-map-wrap iframe {
+    height: 400px;
+  }
+}
+
+/* ========================================
+   DESKTOP BREAKPOINT (1024px+)
+   ======================================== */
+@media (min-width: 1024px) {
+  .ofc-clwn-hero {
+    padding: 100px 40px;
+    min-height: 520px;
+  }
+
+  .ofc-clwn-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .ofc-clwn-section h2,
+  .ofc-clwn-section-alt h2 {
+    font-size: 2rem;
+  }
+
+  .ofc-clwn-img-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ofc-clwn-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ofc-clwn-reviews-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .ofc-clwn-map-wrap iframe {
+    height: 450px;
+  }
+}
+</style>
+
+<div class="ofc-clwn-wrapper">
+
+  <!-- HERO SECTION -->
+  <div class="ofc-clwn-hero">
+    <div class="ofc-clwn-hero-content">
+      <h1>Chain Link Fencing in West Newbury, MA</h1>
+      <p>Trusted chain link fence installers serving West Newbury and the Merrimack Valley. Olympic Fence Co. has been installing durable, professionally built chain link fencing for homes, businesses, and municipal properties from our West Newbury headquarters since 1985. Every project is backed by our lifetime workmanship warranty.</p>
+      <div class="ofc-clwn-hero-ctas">
+        <a href="https://olympicfencema.com/contact-us/" class="ofc-clwn-btn-primary">Get a Free Estimate</a>
+        <a href="tel:978-997-2302" class="ofc-clwn-btn-secondary">Call 978-997-2302</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST BAR -->
+  <div class="ofc-clwn-trust-bar">
+    <div class="ofc-clwn-trust-item">5.0 Google Rating</div>
+    <div class="ofc-clwn-trust-item">Lifetime Workmanship Warranty</div>
+    <div class="ofc-clwn-trust-item">Licensed & Insured</div>
+    <div class="ofc-clwn-trust-item">Family-Owned Since 1985</div>
+    <div class="ofc-clwn-trust-item">AFA Member 2025</div>
+  </div>
+
+  <!-- BREADCRUMBS -->
+  <div class="ofc-clwn-breadcrumbs">
+    <a href="https://olympicfencema.com/">Home</a>
+    <span>›</span>
+    <a href="https://olympicfencema.com/chain-link/">Chain Link Fencing</a>
+    <span>›</span>
+    West Newbury, MA
+  </div>
+
+  <!-- SECTION 1: WHY WEST NEWBURY HOMEOWNERS CHOOSE CHAIN LINK -->
+  <div class="ofc-clwn-section">
+    <div class="ofc-clwn-container">
+      <div class="ofc-clwn-intro-grid">
+        <div>
+          <h2>Why West Newbury Homeowners Choose Chain Link Fencing</h2>
+          <p>Chain link fencing remains one of the most practical and cost-effective options for West Newbury properties. It delivers the security and boundary definition homeowners need without the higher price tag of wood or <a href="https://olympicfencema.com/vinyl/">vinyl fencing</a>. For Essex County properties that deal with freeze-thaw cycles and coastal air, galvanized chain link holds up remarkably well with minimal upkeep.</p>
+          <p>Whether you need pet containment along the Artichoke River corridor, child safety around a pool, or clear property boundaries that don't block sightlines or natural light, chain link is a reliable choice. It's low maintenance, long-lasting, and available in a range of heights and finishes to suit any property.</p>
+        </div>
+        <div>
+          <img src="https://olympicfencema.com/wp-content/uploads/2025/09/OFC_website-66-1.webp" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <h3>Residential Chain Link Fencing in West Newbury</h3>
+      <p>For homeowners in West Newbury, chain link fencing provides an affordable way to secure backyards, contain pets, and meet local setback requirements. Standard residential heights of 4 feet for front yards and 6 feet for backyards keep your property compliant with West Newbury Building Department regulations while giving you the coverage you need. Our team handles the <a href="https://olympicfencema.com/contact-us/">permit research</a> so you don't have to.</p>
+
+      <h3>Chain Link Fencing for Commercial and Municipal Properties</h3>
+      <p>Olympic Fence Co. also serves <a href="https://olympicfencema.com/commercial-projects/">commercial and municipal clients</a> across the Merrimack Valley. From securing construction sites and storage yards to installing athletic field enclosures and playground perimeters, our crew handles large-scale chain link projects with the same attention to detail we bring to residential work.</p>
+
+      <div style="text-align: center; margin-top: 24px;">
+        <a href="https://olympicfencema.com/contact-us/" class="ofc-clwn-btn-cta">Request a Free Fence Estimate in West Newbury</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: CHAIN LINK OPTIONS -->
+  <div class="ofc-clwn-section-alt">
+    <div class="ofc-clwn-container">
+      <h2>Chain Link Fence Options Available in West Newbury</h2>
+      <p>We carry a full range of <a href="https://olympicfencema.com/chain-link/">chain link fencing products</a> to match your property's needs, budget, and aesthetic preferences. Every installation is customized to the terrain and layout of your West Newbury lot.</p>
+
+      <h3>Residential Heights and Styles</h3>
+      <p>Standard residential chain link is available in 3 ft, 4 ft, and 6 ft heights. Choose from galvanized steel for the most economical option, or upgrade to vinyl-coated chain link in black, green, or brown to blend with your landscaping. Privacy slats can be added for extra screening along property lines. Gate options include single walk gates for side yards and double drive gates for driveways and equipment access.</p>
+
+      <h3>Commercial and Security-Grade Options</h3>
+      <p>For commercial properties, we install 8 ft to 10 ft+ security-grade chain link with heavier wire gauge for maximum durability. Add barbed wire or razor ribbon for construction sites, storage facilities, and municipal properties that require enhanced security. All commercial installations meet Massachusetts building code requirements.</p>
+
+      <div class="ofc-clwn-img-grid">
+        <img src="https://olympicfencema.com/wp-content/uploads/2026/03/1209151058-scaled.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+        <img src="https://olympicfencema.com/wp-content/uploads/2026/03/IMG_20250909_125117-9.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+      </div>
+
+      <p style="margin-top: 20px;">Looking for something different? We also offer <a href="https://olympicfencema.com/ornamental-aluminum-and-steel-fencing/">ornamental aluminum and steel fencing</a>, <a href="https://olympicfencema.com/vinyl/">vinyl fencing</a>, and <a href="https://olympicfencema.com/privacy-fencing/">wood privacy fencing</a> for West Newbury properties. We install vinyl fencing across the area including <a href="https://olympicfencema.com/vinyl-fencing-newburyport/">Newburyport</a>, <a href="https://olympicfencema.com/vinyl-fencing-amesbury/">Amesbury</a>, and <a href="https://olympicfencema.com/vinyl-fencing-salisbury/">Salisbury</a>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 3: INSTALLATION PROCESS TIMELINE -->
+  <div class="ofc-clwn-section">
+    <div class="ofc-clwn-container">
+      <h2>The Olympic Fence Installation Process in West Newbury</h2>
+      <p>We make the fence installation process straightforward from start to finish. Here's what to expect when you work with our team:</p>
+
+      <div class="ofc-clwn-timeline">
+        <div class="ofc-clwn-timeline-step">
+          <h4>Step 1: Free On-Site Consultation</h4>
+          <p>We visit your West Newbury property to assess the layout, take measurements, and discuss your fencing goals. No pressure, no obligation.</p>
+        </div>
+        <div class="ofc-clwn-timeline-step">
+          <h4>Step 2: Custom Quote</h4>
+          <p>You'll receive a detailed, transparent quote with no hidden fees. We walk through material options, heights, and gate configurations so you know exactly what you're getting.</p>
+        </div>
+        <div class="ofc-clwn-timeline-step">
+          <h4>Step 3: Permit Research</h4>
+          <p>We research West Newbury zoning requirements and Essex County building codes on your behalf so your project stays compliant from day one.</p>
+        </div>
+        <div class="ofc-clwn-timeline-step">
+          <h4>Step 4: Professional Installation</h4>
+          <p>Our in-house crew handles the full installation - no subcontractors. Most residential chain link projects are completed in 1-2 days.</p>
+        </div>
+        <div class="ofc-clwn-timeline-step">
+          <h4>Step 5: Cleanup and Walkthrough</h4>
+          <p>We clean up the job site and do a final walkthrough with you to make sure everything meets your expectations and ours.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 24px;">
+        <a href="https://olympicfencema.com/contact-us/" class="ofc-clwn-btn-cta">Schedule Your Free Estimate Today</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: WHY CHOOSE OLYMPIC - COMPARISON TABLE -->
+  <div class="ofc-clwn-section-alt">
+    <div class="ofc-clwn-container">
+      <h2 style="text-align: center;">Why Choose Olympic Fence Co.?</h2>
+      <p style="text-align: center; max-width: 720px; margin: 0 auto 28px auto;">Not all fence contractors are the same. Here's how Olympic Fence Co. compares to the typical fencing company you'll find in the Merrimack Valley.</p>
+
+      <div class="ofc-clwn-comparison-wrap">
+        <table class="ofc-clwn-comparison">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th class="ofc-clwn-highlight-col">Olympic Fence Co.</th>
+              <th>Typical Competitor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Workmanship Warranty</td>
+              <td class="ofc-clwn-highlight-col"><span class="ofc-clwn-check">&#10003;</span> Lifetime</td>
+              <td>2-3 Years</td>
+            </tr>
+            <tr>
+              <td>Years in Business</td>
+              <td class="ofc-clwn-highlight-col">40+ Years (Est. 1985)</td>
+              <td>Varies</td>
+            </tr>
+            <tr>
+              <td>Own Crew (No Subcontractors)</td>
+              <td class="ofc-clwn-highlight-col"><span class="ofc-clwn-check">&#10003;</span> Yes - 8-person team</td>
+              <td><span class="ofc-clwn-x">&#10007;</span> Often subcontracted</td>
+            </tr>
+            <tr>
+              <td>Local to West Newbury</td>
+              <td class="ofc-clwn-highlight-col"><span class="ofc-clwn-check">&#10003;</span> HQ at 81 Garden St</td>
+              <td>May travel from outside area</td>
+            </tr>
+            <tr>
+              <td>Free On-Site Estimates</td>
+              <td class="ofc-clwn-highlight-col"><span class="ofc-clwn-check">&#10003;</span> Always free</td>
+              <td>Varies</td>
+            </tr>
+            <tr>
+              <td>Residential + Commercial</td>
+              <td class="ofc-clwn-highlight-col"><span class="ofc-clwn-check">&#10003;</span> Both</td>
+              <td>Often residential only</td>
+            </tr>
+            <tr>
+              <td>Licensed & Insured</td>
+              <td class="ofc-clwn-highlight-col"><span class="ofc-clwn-check">&#10003;</span> Fully</td>
+              <td>Not always verified</td>
+            </tr>
+            <tr>
+              <td>Permit Assistance</td>
+              <td class="ofc-clwn-highlight-col"><span class="ofc-clwn-check">&#10003;</span> We handle it</td>
+              <td><span class="ofc-clwn-x">&#10007;</span> Homeowner's responsibility</td>
+            </tr>
+            <tr>
+              <td>AFA Member</td>
+              <td class="ofc-clwn-highlight-col"><span class="ofc-clwn-check">&#10003;</span> 2025 Member</td>
+              <td><span class="ofc-clwn-x">&#10007;</span> Rarely</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="text-align: center; margin-top: 20px;">Learn more about our story, team, and approach on our <a href="https://olympicfencema.com/about-us/">About Us</a> page.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 5: REVIEWS -->
+  <div class="ofc-clwn-section">
+    <div class="ofc-clwn-container">
+      <h2 style="text-align: center;">What Our Customers Are Saying</h2>
+      <p style="text-align: center;">Real reviews from real customers across the Merrimack Valley and North Shore.</p>
+
+      <div class="ofc-clwn-reviews-grid">
+        <div class="ofc-clwn-review-card">
+          <div class="ofc-clwn-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="ofc-clwn-review-text">"I had a fence put in by another company quite a few years ago, but it has needed ongoing maintenance for several years. James and his company have been fantastic! Even though they didn't put in the original fence, they have responded promptly and effectively whenever I have called in need of repair. Very nice to deal with also."</div>
+          <div class="ofc-clwn-review-author">- Mel N.</div>
+        </div>
+
+        <div class="ofc-clwn-review-card">
+          <div class="ofc-clwn-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="ofc-clwn-review-text">"Highly recommend Olympic Fence Co!! Had a chain link fence installed at my child care center and I couldn't be happier. From start to finish I was pleased with everything. Will definitely be calling Olympic Fence for my next project!! Thank you again!!"</div>
+          <div class="ofc-clwn-review-author">- Colleen M.</div>
+        </div>
+
+        <div class="ofc-clwn-review-card">
+          <div class="ofc-clwn-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="ofc-clwn-review-text">"James was a true professional. He was always on time, transparent in time line and pricing. He was easy to work with and if you are looking for a fence you should look no further. The work was done really well and his crew kept the site clean as possible."</div>
+          <div class="ofc-clwn-review-author">- Eric T.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: SERVICE AREA + MAP -->
+  <div class="ofc-clwn-section-alt">
+    <div class="ofc-clwn-container">
+      <h2 style="text-align: center;">Serving West Newbury and Surrounding Communities</h2>
+      <p style="text-align: center;">Olympic Fence Co. is headquartered right here at 81 Garden Street in West Newbury - we're not a traveling contractor from out of the area. Our crew serves homeowners and businesses across Essex County and the Merrimack Valley, with easy access via Route 110 and the I-95 interchange.</p>
+
+      <h3 style="text-align: center;">Nearby Towns We Also Serve</h3>
+      <div class="ofc-clwn-nearby-links">
+        <a href="https://olympicfencema.com/newburyport-fence-company/" class="ofc-clwn-nearby-link">Newburyport</a>
+        <a href="https://olympicfencema.com/amesbury-fence-company/" class="ofc-clwn-nearby-link">Amesbury</a>
+        <a href="https://olympicfencema.com/salisbury-fence-company/" class="ofc-clwn-nearby-link">Salisbury</a>
+        <a href="https://olympicfencema.com/haverhill-fence-company/" class="ofc-clwn-nearby-link">Haverhill</a>
+        <a href="https://olympicfencema.com/groveland-fence-company/" class="ofc-clwn-nearby-link">Groveland</a>
+        <a href="https://olympicfencema.com/north-andover-fence-company/" class="ofc-clwn-nearby-link">North Andover</a>
+        <a href="https://olympicfencema.com/beverly-fence-company/" class="ofc-clwn-nearby-link">Beverly</a>
+      </div>
+      <p style="text-align: center; font-size: 0.95rem; color: var(--ofc-text-light);">Also serving Merrimac, Georgetown, Rowley, Byfield, Newbury, and Ipswich.</p>
+
+      <div class="ofc-clwn-map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93691.37775477015!2d-71.05128519180865!3d42.791403411538234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2e29d7f460f77%3A0xfea468102400dbc2!2sWest%20Newbury%2C%20MA!5e0!3m2!1sen!2sus!4v1772655036456!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7: PROJECT GALLERY -->
+  <div class="ofc-clwn-section">
+    <div class="ofc-clwn-container">
+      <h2 style="text-align: center;">Our Chain Link Fence Work</h2>
+
+      <div style="max-width: 600px; margin: 24px auto 0 auto; text-align: center;">
+        <img src="https://olympicfencema.com/wp-content/uploads/2025/09/IMG_20170428_121105912-1-scaled.webp" alt="" width="600" height="400" loading="lazy" decoding="async" style="border-radius: 8px; width: 100%; display: block;">
+        <div style="margin-top: 16px;">
+          <a href="https://olympicfencema.com/residential-projects/" class="ofc-clwn-btn-cta">View Our Projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 8: FAQ -->
+  <div class="ofc-clwn-section-alt">
+    <div class="ofc-clwn-container">
+      <h2 style="text-align: center;">Frequently Asked Questions About Chain Link Fencing in West Newbury</h2>
+
+      <div class="ofc-clwn-faq-item">
+        <button class="ofc-clwn-faq-q" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.style.display = this.getAttribute('aria-expanded') === 'true' ? 'block' : 'none';">How much does chain link fencing cost in West Newbury, MA?</button>
+        <div class="ofc-clwn-faq-a">Chain link fence installation in West Newbury typically ranges from $15 to $30 per linear foot installed, depending on fence height, wire gauge, vinyl coating, and gate additions. Factors like terrain, soil conditions near the Artichoke River, and total footage also affect pricing. <a href="https://olympicfencema.com/contact-us/">Contact us</a> for a free, no-obligation estimate specific to your property.</div>
+      </div>
+
+      <div class="ofc-clwn-faq-item">
+        <button class="ofc-clwn-faq-q" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.style.display = this.getAttribute('aria-expanded') === 'true' ? 'block' : 'none';">Do I need a permit to install a chain link fence in West Newbury?</button>
+        <div class="ofc-clwn-faq-a">West Newbury may require a building permit for fences that exceed a certain height or are installed in specific zones. The West Newbury Building Department can provide current requirements. Olympic Fence Co. helps navigate the local permit process as part of every project - just ask during your free estimate.</div>
+      </div>
+
+      <div class="ofc-clwn-faq-item">
+        <button class="ofc-clwn-faq-q" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.style.display = this.getAttribute('aria-expanded') === 'true' ? 'block' : 'none';">How long does chain link fence installation take?</button>
+        <div class="ofc-clwn-faq-a">Most residential chain link fence installations in West Newbury are completed in 1-2 days, depending on the total footage and terrain. Larger commercial projects may take 3-5 days. We'll provide a specific timeline during your on-site consultation.</div>
+      </div>
+
+      <div class="ofc-clwn-faq-item">
+        <button class="ofc-clwn-faq-q" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.style.display = this.getAttribute('aria-expanded') === 'true' ? 'block' : 'none';">What height chain link fence is allowed in West Newbury?</button>
+        <div class="ofc-clwn-faq-a">Residential zoning in West Newbury typically allows 4 ft chain link in front yards and up to 6 ft in backyards. Commercial properties may install taller fencing depending on the use case. Our team verifies local height restrictions before every installation to keep your project compliant.</div>
+      </div>
+
+      <div class="ofc-clwn-faq-item">
+        <button class="ofc-clwn-faq-q" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.style.display = this.getAttribute('aria-expanded') === 'true' ? 'block' : 'none';">Is chain link fencing good for dogs and pets?</button>
+        <div class="ofc-clwn-faq-a">Yes - chain link is one of the most popular choices for pet containment in West Newbury. The woven mesh is strong enough to withstand large dogs, and the fence can be installed with bottom tension wire or buried mesh to prevent digging. We also offer custom gate configurations to keep pets secure while giving you easy yard access.</div>
+      </div>
+
+      <div class="ofc-clwn-faq-item">
+        <button class="ofc-clwn-faq-q" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.style.display = this.getAttribute('aria-expanded') === 'true' ? 'block' : 'none';">How long does a chain link fence last?</button>
+        <div class="ofc-clwn-faq-a">A properly installed galvanized chain link fence typically lasts 15-20+ years in Massachusetts weather. Vinyl-coated chain link can last even longer since the coating adds an extra layer of protection against rust and corrosion. With Olympic Fence's professional installation and lifetime workmanship warranty, you can expect your fence to perform for decades. If your existing chain link fence needs attention, we also offer <a href="https://olympicfencema.com/fence-repairs/">fence repair services</a> across the area.</div>
+      </div>
+
+      <div class="ofc-clwn-faq-item">
+        <button class="ofc-clwn-faq-q" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.style.display = this.getAttribute('aria-expanded') === 'true' ? 'block' : 'none';">Does Olympic Fence Co. serve areas beyond West Newbury?</button>
+        <div class="ofc-clwn-faq-a">We serve residential customers within a 30-mile radius and commercial clients up to 70 miles from our West Newbury headquarters. This includes Newburyport, Groveland, Merrimac, Amesbury, Haverhill, Georgetown, Rowley, Byfield, and communities throughout Essex County and the greater Merrimack Valley. <a href="https://olympicfencema.com/contact-us/">Call us at 978-997-2302</a> to confirm service in your area.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING CTA -->
+  <div class="ofc-clwn-final-cta">
+    <div class="ofc-clwn-container">
+      <h2>Get Your Free Chain Link Fence Estimate</h2>
+      <p>Ready to get started on your chain link fence project in West Newbury? Our team is standing by to provide a free, no-pressure estimate. Call us today or fill out our online form - we'll get back to you promptly.</p>
+
+      <div class="ofc-clwn-final-cta-btns">
+        <a href="https://olympicfencema.com/contact-us/" class="ofc-clwn-final-btn-white">Request Your Free Estimate</a>
+        <a href="tel:978-997-2302" class="ofc-clwn-final-btn-outline">Call 978-997-2302</a>
+      </div>
+
+      <div class="ofc-clwn-nap-block">
+        <strong>Olympic Fence Company</strong><br>
+        81 Garden Street, West Newbury, MA 01985<br>
+        Phone: <a href="tel:978-997-2302">978-997-2302</a><br>
+        Email: <a href="mailto:jlapierre@olympicfencema.com">jlapierre@olympicfencema.com</a><br>
+        Monday - Friday: 7:00 AM - 5:00 PM | Saturday: By Appointment
+      </div>
+    </div>
+  </div>
+
+</div>
