@@ -384,12 +384,13 @@ a.ofc-clmr-btn-cta:hover,
 /* === BLOCKQUOTE REVIEWS === */
 .ofc-clmr-reviews {
   margin-top: 24px;
+  display: grid;
+  gap: 16px;
 }
 
 .ofc-clmr-review {
   border-left: 4px solid var(--ofc-primary);
   padding: 20px 24px;
-  margin-bottom: 20px;
   background: var(--ofc-white);
   border-radius: 0 8px 8px 0;
 }
@@ -631,6 +632,10 @@ a.ofc-clmr-btn-cta:hover,
 
   .ofc-clmr-checklist {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .ofc-clmr-reviews {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .ofc-clmr-final-cta-btns {
