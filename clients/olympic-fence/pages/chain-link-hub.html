@@ -1,0 +1,935 @@
+<!-- ================================================
+     PAGE: Chain Link Fencing Hub Page
+     URL: https://olympicfencema.com/chain-link/
+     CLIENT: Olympic Fence Company
+     BUILT: 2026-03-05
+     NAMESPACE: .ofc-clhub- (chain-link-hub)
+     TYPE: Hub Page (parent of all chain link spoke pages)
+
+     SEO (OTTO handles deployment):
+     Title Tag: Chain Link Fencing Massachusetts | Installation & Repair | Olympic Fence
+     Meta Description: Olympic Fence installs chain link fences across Massachusetts. Residential, commercial & industrial. Galvanized & vinyl-coated. Free estimates - call 978-997-2302.
+     ================================================ -->
+
+<style>
+/* ========================================
+   OLYMPIC FENCE - CHAIN LINK HUB
+   Namespace: .ofc-clhub-
+   ======================================== */
+
+:root {
+  --ofc-primary: #272262;
+  --ofc-primary-hover: #4a4494;
+  --ofc-text-dark: #333333;
+  --ofc-text-light: #666666;
+  --ofc-bg-light: #f8f9fa;
+  --ofc-border: #e9ecef;
+  --ofc-white: #ffffff;
+  --ofc-star: #ffc107;
+  --ofc-success: #28a745;
+}
+
+.ofc-clhub-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ofc-text-dark);
+  line-height: 1.6;
+  font-size: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.ofc-clhub-wrapper *,
+.ofc-clhub-wrapper *::before,
+.ofc-clhub-wrapper *::after {
+  box-sizing: border-box;
+}
+
+.ofc-clhub-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ofc-clhub-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === HERO === */
+.ofc-clhub-hero {
+  position: relative;
+  background: linear-gradient(rgba(39, 34, 98, 0.2), rgba(39, 34, 98, 0.4)),
+    url('https://olympicfencema.com/wp-content/uploads/2025/09/OFC_website-12-1.webp') center/cover no-repeat;
+  color: var(--ofc-white);
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ofc-clhub-hero-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.ofc-clhub-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  color: var(--ofc-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.ofc-clhub-hero p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.55;
+  margin: 0 0 28px 0;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.ofc-clhub-hero-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* === BUTTONS === */
+.ofc-clhub-btn-primary,
+a.ofc-clhub-btn-primary {
+  background: var(--ofc-white);
+  color: var(--ofc-primary) !important;
+  padding: 15px 32px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+
+.ofc-clhub-btn-primary:hover,
+a.ofc-clhub-btn-primary:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+  text-decoration: none !important;
+}
+
+.ofc-clhub-btn-secondary,
+a.ofc-clhub-btn-secondary {
+  background: transparent;
+  color: #ffffff !important;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none !important;
+  display: inline-block;
+  border: 2px solid var(--ofc-white);
+  transition: background 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+
+.ofc-clhub-btn-secondary:hover,
+a.ofc-clhub-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  text-decoration: none !important;
+}
+
+.ofc-clhub-btn-cta,
+a.ofc-clhub-btn-cta {
+  background: var(--ofc-primary);
+  color: #ffffff !important;
+  padding: 15px 32px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+
+.ofc-clhub-btn-cta:hover,
+a.ofc-clhub-btn-cta:hover {
+  background: var(--ofc-primary-hover);
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* === TRUST BAR === */
+.ofc-clhub-trust-bar {
+  background: var(--ofc-primary);
+  padding: 16px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ofc-clhub-trust-item {
+  color: var(--ofc-white);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  white-space: nowrap;
+}
+
+/* === SECTIONS === */
+.ofc-clhub-section {
+  padding: 50px 20px;
+}
+
+.ofc-clhub-section-alt {
+  padding: 50px 20px;
+  background: var(--ofc-bg-light);
+}
+
+.ofc-clhub-section h2,
+.ofc-clhub-section-alt h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--ofc-primary);
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+}
+
+.ofc-clhub-section h3,
+.ofc-clhub-section-alt h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ofc-primary);
+  margin: 24px 0 12px 0;
+  line-height: 1.4;
+}
+
+.ofc-clhub-section p,
+.ofc-clhub-section-alt p {
+  margin: 0 0 16px 0;
+  line-height: 1.7;
+  color: var(--ofc-text-dark);
+}
+
+.ofc-clhub-section a:not([class*="ofc-clhub-btn"]):not([class*="ofc-clhub-spoke"]),
+.ofc-clhub-section-alt a:not([class*="ofc-clhub-btn"]):not([class*="ofc-clhub-spoke"]) {
+  color: var(--ofc-primary);
+  text-decoration: underline;
+}
+
+.ofc-clhub-section a:not([class*="ofc-clhub-btn"]):not([class*="ofc-clhub-spoke"]):hover,
+.ofc-clhub-section-alt a:not([class*="ofc-clhub-btn"]):not([class*="ofc-clhub-spoke"]):hover {
+  color: var(--ofc-primary-hover);
+}
+
+/* === MATERIAL CARDS (3-col with images) === */
+.ofc-clhub-material-cards {
+  display: grid;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.ofc-clhub-material-card {
+  background: var(--ofc-white);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--ofc-border);
+  transition: box-shadow 0.3s ease;
+}
+
+.ofc-clhub-material-card:hover {
+  box-shadow: 0 4px 20px rgba(39, 34, 98, 0.1);
+}
+
+.ofc-clhub-material-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.ofc-clhub-material-card-body {
+  padding: 20px;
+}
+
+.ofc-clhub-material-card-body h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.ofc-clhub-material-card-body p {
+  margin-bottom: 0;
+  font-size: 0.93rem;
+}
+
+/* === SPLIT (image + text) === */
+.ofc-clhub-split {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.ofc-clhub-split img {
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+}
+
+.ofc-clhub-split h3 {
+  margin-top: 0;
+}
+
+/* === GAUGE TABLE === */
+.ofc-clhub-table-wrap {
+  margin-top: 24px;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--ofc-border);
+}
+
+.ofc-clhub-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+
+.ofc-clhub-table thead {
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
+}
+
+.ofc-clhub-table th {
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.ofc-clhub-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--ofc-border);
+}
+
+.ofc-clhub-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ofc-clhub-table tbody tr:nth-child(even) {
+  background: var(--ofc-bg-light);
+}
+
+/* === SPOKE GRID (service area links) === */
+.ofc-clhub-spoke-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.ofc-clhub-spoke-link {
+  display: block;
+  background: var(--ofc-white);
+  border: 2px solid var(--ofc-primary);
+  border-radius: 8px;
+  padding: 18px 20px;
+  text-decoration: none !important;
+  color: var(--ofc-primary) !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+  min-height: 44px;
+}
+
+.ofc-clhub-spoke-link:hover {
+  background: var(--ofc-primary);
+  color: var(--ofc-white) !important;
+}
+
+/* === REVIEWS (horizontal) === */
+.ofc-clhub-reviews {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.ofc-clhub-review {
+  background: var(--ofc-white);
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid var(--ofc-border);
+}
+
+.ofc-clhub-review-stars {
+  color: var(--ofc-star);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.ofc-clhub-review-text {
+  font-style: italic;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--ofc-text-dark);
+  margin-bottom: 10px;
+}
+
+.ofc-clhub-review-author {
+  font-weight: 700;
+  color: var(--ofc-primary);
+  font-size: 0.9rem;
+}
+
+/* === FAQ ACCORDION === */
+.ofc-clhub-faq-list {
+  margin-top: 24px;
+}
+
+.ofc-clhub-faq-item {
+  border: 1px solid var(--ofc-border);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.ofc-clhub-faq-question {
+  width: 100%;
+  background: var(--ofc-white);
+  border: none;
+  padding: 18px 50px 18px 20px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ofc-primary);
+  cursor: pointer;
+  position: relative;
+  font-family: inherit;
+  min-height: 44px;
+  line-height: 1.4;
+}
+
+.ofc-clhub-faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--ofc-primary);
+}
+
+.ofc-clhub-faq-question[aria-expanded="true"]::after {
+  content: '−';
+}
+
+.ofc-clhub-faq-answer {
+  padding: 0 20px 18px 20px;
+  display: none;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ofc-text-dark);
+}
+
+.ofc-clhub-faq-answer.ofc-clhub-open {
+  display: block;
+}
+
+/* === CTA INLINE === */
+.ofc-clhub-cta-inline {
+  text-align: center;
+  margin: 32px 0 0 0;
+  padding: 28px;
+  background: var(--ofc-bg-light);
+  border-radius: 8px;
+}
+
+.ofc-clhub-cta-inline p {
+  margin: 0 0 14px 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+/* === FINAL CTA === */
+.ofc-clhub-final-cta {
+  background: var(--ofc-primary);
+  color: var(--ofc-white);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.ofc-clhub-final-cta h2 {
+  color: var(--ofc-white);
+  font-size: 1.75rem;
+  margin: 0 0 14px 0;
+}
+
+.ofc-clhub-final-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 640px;
+  margin: 0 auto 28px auto;
+  font-size: 1.05rem;
+}
+
+.ofc-clhub-final-cta-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.ofc-clhub-final-cta .ofc-clhub-btn-primary,
+.ofc-clhub-final-cta a.ofc-clhub-btn-primary {
+  background: var(--ofc-white);
+  color: var(--ofc-primary) !important;
+}
+
+.ofc-clhub-final-cta .ofc-clhub-btn-secondary,
+.ofc-clhub-final-cta a.ofc-clhub-btn-secondary {
+  background: transparent;
+  color: #ffffff !important;
+  border: 2px solid var(--ofc-white);
+}
+
+.ofc-clhub-final-cta .ofc-clhub-btn-secondary:hover,
+.ofc-clhub-final-cta a.ofc-clhub-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff !important;
+}
+
+.ofc-clhub-nap {
+  margin-top: 24px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+.ofc-clhub-nap strong {
+  color: var(--ofc-white);
+}
+
+/* ========================================
+   TABLET (768px+)
+   ======================================== */
+@media (min-width: 768px) {
+  .ofc-clhub-hero {
+    padding: 80px 40px;
+    min-height: 500px;
+  }
+
+  .ofc-clhub-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .ofc-clhub-hero p {
+    font-size: 1.05rem;
+  }
+
+  .ofc-clhub-hero-ctas {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .ofc-clhub-trust-bar {
+    gap: 0;
+  }
+
+  .ofc-clhub-trust-item {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+
+  .ofc-clhub-section,
+  .ofc-clhub-section-alt {
+    padding: 60px 40px;
+  }
+
+  .ofc-clhub-material-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .ofc-clhub-split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ofc-clhub-spoke-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .ofc-clhub-reviews {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .ofc-clhub-final-cta-btns {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ========================================
+   DESKTOP (1024px+)
+   ======================================== */
+@media (min-width: 1024px) {
+  .ofc-clhub-hero {
+    padding: 100px 40px;
+    min-height: 540px;
+  }
+
+  .ofc-clhub-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .ofc-clhub-section h2,
+  .ofc-clhub-section-alt h2 {
+    font-size: 2rem;
+  }
+
+  .ofc-clhub-material-card img {
+    height: 220px;
+  }
+}
+</style>
+
+<div class="ofc-clhub-wrapper">
+
+  <!-- HERO -->
+  <div class="ofc-clhub-hero">
+    <div class="ofc-clhub-hero-content">
+      <h1>Chain Link Fencing Installation in Massachusetts</h1>
+      <p>Olympic Fence Co. is Massachusetts' trusted chain link fence contractor, installing galvanized and vinyl-coated chain link fencing for homeowners, businesses, and industrial facilities across Essex County and the greater Merrimack Valley. Whether you need a secure backyard fence for kids and pets, a commercial perimeter enclosure for your business, or a heavy-duty industrial security fence, our family-owned team brings 40+ years of local experience and a lifetime workmanship warranty to every project.</p>
+      <div class="ofc-clhub-hero-ctas">
+        <a href="https://olympicfencema.com/contact-us/" class="ofc-clhub-btn-primary">Get a Free Chain Link Fence Estimate</a>
+        <a href="tel:978-997-2302" class="ofc-clhub-btn-secondary">Call 978-997-2302</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST BAR -->
+  <div class="ofc-clhub-trust-bar">
+    <div class="ofc-clhub-trust-item">⭐ 5.0 Google Rating</div>
+    <div class="ofc-clhub-trust-item">🛡️ Lifetime Workmanship Warranty</div>
+    <div class="ofc-clhub-trust-item">✓ Licensed & Insured</div>
+    <div class="ofc-clhub-trust-item">🏠 Family-Owned Since 1985</div>
+    <div class="ofc-clhub-trust-item">🏅 AFA Member 2025</div>
+  </div>
+
+  <!-- SECTION 1: MATERIAL TYPES (3-card grid with images) -->
+  <div class="ofc-clhub-section">
+    <div class="ofc-clhub-container">
+      <h2>Types of Chain Link Fencing We Install</h2>
+      <p>Olympic Fence Co. installs a full range of chain link fencing systems across Massachusetts. Each material option is suited to different applications, budgets, and aesthetic preferences. Our team will recommend the right choice for your property during your free on-site estimate.</p>
+
+      <div class="ofc-clhub-material-cards">
+        <div class="ofc-clhub-material-card">
+          <img src="https://olympicfencema.com/wp-content/uploads/2026/02/durable-chain-link-fence-in-a-massachusetts-residential-setting-highlighting-its-appeal-and-functionality-48964fbb-06c6-4e13-a8a0-e09d17f47510.webp" alt="" width="600" height="400" loading="lazy">
+          <div class="ofc-clhub-material-card-body">
+            <h3>Galvanized Chain Link Fencing</h3>
+            <p>The most popular and affordable chain link option. Zinc-coated galvanized steel resists corrosion and performs well in Massachusetts' freeze-thaw climate. Best for perimeter fencing, commercial enclosures, sports facilities, and budget-conscious residential projects. Available in all standard heights and gauges.</p>
+          </div>
+        </div>
+
+        <div class="ofc-clhub-material-card">
+          <img src="https://olympicfencema.com/wp-content/uploads/2026/03/OFC_website-67.webp" alt="" width="600" height="400" loading="lazy">
+          <div class="ofc-clhub-material-card-body">
+            <h3>Vinyl-Coated Chain Link Fencing</h3>
+            <p>Black, green, or brown PVC coating gives vinyl-coated chain link a finished, polished look that blends with residential landscapes. Popular in Massachusetts neighborhoods where curb appeal matters. The vinyl layer adds extra corrosion protection beyond the galvanized steel core. Available in all heights and gauges.</p>
+          </div>
+        </div>
+
+        <div class="ofc-clhub-material-card">
+          <img src="https://olympicfencema.com/wp-content/uploads/2026/03/IMG_0131-1.jpg" alt="" width="600" height="400" loading="lazy">
+          <div class="ofc-clhub-material-card-body">
+            <h3>Privacy Slat Chain Link Fencing</h3>
+            <p>Woven <a href="https://olympicfencema.com/privacy-fencing/">privacy slats</a> thread through the chain link mesh to provide 75-85% visual screening - a cost-effective alternative to full privacy fencing. Available in green, brown, black, and beige. Popular for residential backyards, pool enclosures, and commercial screening applications.</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px;">Considering other fencing materials for your property? We also install <a href="https://olympicfencema.com/vinyl/">vinyl fencing</a>, <a href="https://olympicfencema.com/residential-cedar-fence-newburyport/">cedar fencing</a>, and <a href="https://olympicfencema.com/ornamental-aluminum-and-steel-fencing/">ornamental aluminum and steel fencing</a> across Massachusetts.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2: RESIDENTIAL -->
+  <div class="ofc-clhub-section-alt">
+    <div class="ofc-clhub-container">
+      <h2>Residential Chain Link Fence Installation</h2>
+      <p>Olympic Fence Co. installs <a href="https://olympicfencema.com/residential-projects/">residential chain link fencing</a> across Massachusetts for a wide range of applications. Chain link is one of the most versatile and cost-effective fencing options available - it defines property lines, keeps pets safe, protects gardens, and encloses pools at a fraction of the cost of wood or vinyl.</p>
+
+      <div class="ofc-clhub-split">
+        <div>
+          <h3>Backyard and Property Line Fencing</h3>
+          <p>Standard residential chain link is available in 3-foot to 6-foot heights. Four-foot fencing works well for yard definition and garden protection. Five-foot to six-foot heights provide security and pet containment. Vinyl-coated black chain link is the most popular residential finish in Massachusetts - it blends naturally with landscaping and provides a cleaner look than standard galvanized.</p>
+          <h3>Pet, Dog, and Child Safety Fencing</h3>
+          <p>Chain link is one of the most durable options for dog containment - it resists scratching and chewing that would damage wood fencing. We offer anti-dig bottom tension wire, self-closing spring-loaded gates, and custom dog runs sized to your yard. For pool areas, our chain link fencing meets Massachusetts pool safety codes with compliant heights and self-closing gate hardware.</p>
+        </div>
+        <div>
+          <img src="https://olympicfencema.com/wp-content/uploads/2026/03/OFC_website-67.webp" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <div class="ofc-clhub-cta-inline">
+        <p>Need a chain link fence for your home?</p>
+        <a href="https://olympicfencema.com/contact-us/" class="ofc-clhub-btn-cta">Request a Free Residential Estimate</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: COMMERCIAL -->
+  <div class="ofc-clhub-section">
+    <div class="ofc-clhub-container">
+      <h2>Commercial Chain Link Fence Installation</h2>
+
+      <div class="ofc-clhub-split">
+        <div>
+          <img src="https://olympicfencema.com/wp-content/uploads/2026/02/commercial-property-secured-with-chain-link-fencing-and-surveillance-features-6646e062-f379-4e71-977b-93a747396255.webp" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+        <div>
+          <h3>Business Perimeter and Property Security</h3>
+          <p>Olympic Fence Co. installs heavy-duty <a href="https://olympicfencema.com/commercial-projects/">commercial chain link fencing</a> for warehouses, parking lots, equipment yards, and storage facilities across Massachusetts. Commercial installations use heavier wire gauges (9-gauge and 6-gauge) for maximum impact resistance, with security upgrades including barbed wire toppers, razor ribbon, and privacy slats for screening.</p>
+          <h3>Construction Site and Temporary Fencing</h3>
+          <p>Secure temporary chain link fencing for active construction sites, demolition projects, and municipal work zones. Our construction-grade chain link provides jobsite security and public safety compliance for the duration of your project. We handle delivery, installation, and removal on your schedule.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: INDUSTRIAL & SECURITY -->
+  <div class="ofc-clhub-section-alt">
+    <div class="ofc-clhub-container">
+      <h2>Industrial and High-Security Chain Link Fencing</h2>
+
+      <div class="ofc-clhub-split">
+        <div>
+          <h3>Perimeter Security for Industrial Facilities</h3>
+          <p>Heavy-gauge, high-tensile chain link fencing for industrial sites, utility facilities, and secure storage areas. Available in 6-foot, 8-foot, and 10-foot+ heights for maximum perimeter security. All installations comply with OSHA and Massachusetts industrial fencing regulations.</p>
+          <h3>Barbed Wire and Razor Ribbon Toppers</h3>
+          <p>For facilities requiring enhanced deterrence, we install three-strand barbed wire and concertina razor ribbon on chain link fence systems. Common applications include storage facilities, utility substations, and restricted-access industrial properties.</p>
+        </div>
+        <div>
+          <img src="https://olympicfencema.com/wp-content/uploads/2026/03/IMG_0722-scaled.webp" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: GATES -->
+  <div class="ofc-clhub-section">
+    <div class="ofc-clhub-container">
+      <h2>Chain Link Fence Gates - Styles, Sizes, and Hardware</h2>
+      <p>Every chain link fence installation includes properly framed and hung gates sized for your property's access needs. Olympic Fence Co. installs all gate types for residential, commercial, and industrial applications.</p>
+
+      <h3>Walk Gates</h3>
+      <p>Single and double walk gates in 3-foot to 4-foot widths for pedestrian access to backyards, gardens, and side yards. Self-closing hinges and spring-loaded latches are available for pet enclosures and pool safety compliance.</p>
+
+      <h3>Drive Gates and Slide Gates</h3>
+      <p>Double drive gates in 10-foot to 16-foot widths for vehicle entry - common on commercial properties, farms, and large residential lots. Cantilever slide gates are available for driveways where swing clearance is limited. All gate hardware is galvanized or powder-coated for long-term durability.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 6: REPAIR -->
+  <div class="ofc-clhub-section-alt">
+    <div class="ofc-clhub-container">
+      <h2>Chain Link Fence Repair in Massachusetts</h2>
+      <p>Olympic Fence Co. provides full <a href="https://olympicfencema.com/fence-repairs/">chain link fence repair services</a> across Massachusetts. We repair all makes and ages of chain link fencing - not just fences we installed.</p>
+
+      <h3>Common Chain Link Fence Damage in New England</h3>
+      <p>Massachusetts freeze-thaw cycles are hard on fence posts - heaving, cracking, and leaning are common after harsh winters. Storm damage from fallen tree branches and vehicle strikes can bend framework and tear mesh. Rust and corrosion on older galvanized fencing can spread if left untreated.</p>
+
+      <h3>Repair vs. Replace</h3>
+      <p>In many cases, targeted repairs are faster and more cost-effective than a full fence replacement. Our repair work includes post straightening and replacement, fabric re-tensioning, gate realignment, section replacement, and hardware upgrades. We'll assess the damage and give you an honest recommendation on whether repair or replacement makes the most sense for your situation.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 7: GAUGE GUIDE (Table) -->
+  <div class="ofc-clhub-section">
+    <div class="ofc-clhub-container">
+      <h2>Chain Link Fence Wire Gauge - What's Right for Your Project?</h2>
+      <p>Wire gauge determines the thickness and strength of your chain link fence fabric. A lower gauge number means thicker, stronger wire. Olympic Fence stocks all standard gauges and will recommend the right option for your specific application and budget.</p>
+
+      <div class="ofc-clhub-table-wrap">
+        <table class="ofc-clhub-table">
+          <thead>
+            <tr>
+              <th>Gauge</th>
+              <th>Wire Diameter</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>6-gauge</strong></td>
+              <td>Thickest</td>
+              <td>Industrial facilities, high-security perimeters, restricted access areas</td>
+            </tr>
+            <tr>
+              <td><strong>9-gauge</strong></td>
+              <td>Heavy-duty</td>
+              <td>Commercial properties, business perimeters, equipment yards</td>
+            </tr>
+            <tr>
+              <td><strong>11-gauge</strong></td>
+              <td>Standard</td>
+              <td>Residential fencing, pet containment, general property enclosures</td>
+            </tr>
+            <tr>
+              <td><strong>11.5-gauge</strong></td>
+              <td>Light</td>
+              <td>Temporary fencing, construction site enclosures</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top: 16px;">For most Massachusetts residential projects, 11-gauge galvanized chain link is the standard. Commercial and business properties typically benefit from 9-gauge for extra strength. Industrial and high-security applications call for 6-gauge heavy-duty wire.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 8: SERVICE AREA SPOKE GRID -->
+  <div class="ofc-clhub-section-alt">
+    <div class="ofc-clhub-container" style="text-align: center;">
+      <h2>Chain Link Fencing Across Massachusetts - Our Service Areas</h2>
+      <p>Olympic Fence Co. installs chain link fencing throughout northeastern Massachusetts. Click your town below to see local information and services available in your area.</p>
+
+      <div class="ofc-clhub-spoke-grid">
+        <a href="https://olympicfencema.com/chain-link-fencing-amesbury/" class="ofc-clhub-spoke-link">Chain Link Fencing in Amesbury</a>
+        <a href="https://olympicfencema.com/chain-link-fencing-merrimac/" class="ofc-clhub-spoke-link">Chain Link Fencing in Merrimac</a>
+        <a href="https://olympicfencema.com/chain-link-fencing-newburyport/" class="ofc-clhub-spoke-link">Chain Link Fencing in Newburyport</a>
+        <a href="https://olympicfencema.com/chain-link-fencing-salisbury/" class="ofc-clhub-spoke-link">Chain Link Fencing in Salisbury</a>
+        <a href="https://olympicfencema.com/chain-link-fencing-west-newbury/" class="ofc-clhub-spoke-link">Chain Link Fencing in West Newbury</a>
+      </div>
+      <p style="margin-top: 16px; font-size: 0.93rem; color: var(--ofc-text-light);">Also serving Haverhill, Groveland, North Andover, Beverly, Georgetown, Newbury, Rowley, Ipswich, and southern New Hampshire.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 9: WHY OLYMPIC FENCE -->
+  <div class="ofc-clhub-section">
+    <div class="ofc-clhub-container">
+      <h2>Why Massachusetts Property Owners Choose Olympic Fence</h2>
+      <p>Olympic Fence Co. is a second-generation, <a href="https://olympicfencema.com/about-us/">family-owned business</a> headquartered at 81 Garden Street in West Newbury, MA. Founded in 1985 by David LaPierre and now led by James LaPierre, we bring over 40 years of hands-on fencing experience to every project across Essex County and the Merrimack Valley.</p>
+      <p>Our lifetime workmanship warranty exceeds the 2-3 year warranties offered by competitors. Our 8-person crew handles every project in-house with no subcontractors. We're fully licensed and insured in Massachusetts, and we're a member of the American Fence Association (2025). Whether you need a residential backyard fence or a large-scale commercial installation, we deliver quality results on time and on budget.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 10: CUSTOMER REVIEWS -->
+  <div class="ofc-clhub-section-alt">
+    <div class="ofc-clhub-container">
+      <h2>What Our Customers Say</h2>
+
+      <div class="ofc-clhub-reviews">
+        <div class="ofc-clhub-review">
+          <div class="ofc-clhub-review-stars">★★★★★</div>
+          <div class="ofc-clhub-review-text">"Olympic fence did a fantastic job installing the fence in back yard. The crew was very professional and did the job much quicker than expected. I would recommend them to any one looking to get a fence installed."</div>
+          <div class="ofc-clhub-review-author">- Tim F.</div>
+        </div>
+
+        <div class="ofc-clhub-review">
+          <div class="ofc-clhub-review-stars">★★★★★</div>
+          <div class="ofc-clhub-review-text">"I highly recommend Olympic Fence. Communication, installation and attention to detail were outstanding. They worked within my budget and were much more reasonable than two other quotes that I got."</div>
+          <div class="ofc-clhub-review-author">- Regina C.</div>
+        </div>
+
+        <div class="ofc-clhub-review">
+          <div class="ofc-clhub-review-stars">★★★★★</div>
+          <div class="ofc-clhub-review-text">"James and crew did a fantastic job. Will highly recommend."</div>
+          <div class="ofc-clhub-review-author">- Bob P.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 11: FAQ -->
+  <div class="ofc-clhub-section">
+    <div class="ofc-clhub-container">
+      <h2>Chain Link Fencing FAQs</h2>
+
+      <div class="ofc-clhub-faq-list">
+
+        <div class="ofc-clhub-faq-item">
+          <button class="ofc-clhub-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('ofc-clhub-open');">
+            How much does chain link fence installation cost in Massachusetts?
+          </button>
+          <div class="ofc-clhub-faq-answer">
+            <p>Chain link fencing costs vary based on linear footage, fence height, wire gauge, gate requirements, and material finish (galvanized vs. vinyl-coated). Privacy slat upgrades add additional cost per linear foot. Every property is different, so Olympic Fence Co. provides free, no-obligation estimates at your property. <a href="https://olympicfencema.com/contact-us/">Request your free estimate</a> or call 978-997-2302.</p>
+          </div>
+        </div>
+
+        <div class="ofc-clhub-faq-item">
+          <button class="ofc-clhub-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('ofc-clhub-open');">
+            What is the difference between galvanized and vinyl-coated chain link?
+          </button>
+          <div class="ofc-clhub-faq-answer">
+            <p>Galvanized chain link has a zinc coating for corrosion resistance and is the most affordable option - ideal for commercial, industrial, and utilitarian applications. Vinyl-coated chain link has an additional PVC layer available in black, green, or brown, providing better aesthetics for residential settings while adding an extra layer of corrosion protection. Both options perform well in the Massachusetts climate.</p>
+          </div>
+        </div>
+
+        <div class="ofc-clhub-faq-item">
+          <button class="ofc-clhub-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('ofc-clhub-open');">
+            What gauge chain link fence do I need?
+          </button>
+          <div class="ofc-clhub-faq-answer">
+            <p>For most residential uses, 11-gauge chain link is standard. Commercial properties benefit from 9-gauge for added strength and impact resistance. Industrial and high-security applications should use 6-gauge heavy-duty wire. Olympic Fence Co. stocks all gauges and will recommend the right option for your specific project during your free estimate.</p>
+          </div>
+        </div>
+
+        <div class="ofc-clhub-faq-item">
+          <button class="ofc-clhub-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('ofc-clhub-open');">
+            How long does chain link fence installation take?
+          </button>
+          <div class="ofc-clhub-faq-answer">
+            <p>Most residential chain link installations are completed in 1-2 days. Larger commercial or industrial projects typically take 3-5 days depending on the total perimeter, site conditions, and complexity. Olympic Fence Co. provides a detailed project timeline before work begins so you know exactly what to expect.</p>
+          </div>
+        </div>
+
+        <div class="ofc-clhub-faq-item">
+          <button class="ofc-clhub-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('ofc-clhub-open');">
+            Do you repair existing chain link fences in Massachusetts?
+          </button>
+          <div class="ofc-clhub-faq-answer">
+            <p>Yes. Olympic Fence Co. repairs chain link fences of all brands and ages throughout Massachusetts - including post replacement, mesh re-tensioning, gate repairs, and storm damage restoration. We'll assess the damage and recommend whether repair or replacement makes the most sense for your situation. <a href="https://olympicfencema.com/fence-repairs/">Learn more about our repair services</a>.</p>
+          </div>
+        </div>
+
+        <div class="ofc-clhub-faq-item">
+          <button class="ofc-clhub-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); this.nextElementSibling.classList.toggle('ofc-clhub-open');">
+            Can chain link fencing be used for dogs and pets?
+          </button>
+          <div class="ofc-clhub-faq-answer">
+            <p>Chain link is one of the most durable and secure fencing options for dog containment. We recommend 5-6 foot heights for large or athletic breeds, and offer anti-dig bottom extensions and self-closing spring-loaded gates for maximum pet security. Chain link also resists chewing and scratching damage that would compromise wood fencing.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 12: CLOSING CTA -->
+  <div class="ofc-clhub-final-cta">
+    <div class="ofc-clhub-container">
+      <h2>Get a Free Chain Link Fence Estimate Near You</h2>
+      <p>Olympic Fence Co. serves homeowners and businesses across northeastern Massachusetts. Whether you need a residential backyard fence, a commercial security enclosure, or a heavy-duty industrial perimeter, we bring the experience and quality your project deserves. Get your free, no-obligation estimate today.</p>
+      <div class="ofc-clhub-final-cta-btns">
+        <a href="https://olympicfencema.com/contact-us/" class="ofc-clhub-btn-primary">Request Your Free Estimate Online</a>
+        <a href="tel:978-997-2302" class="ofc-clhub-btn-secondary">Call 978-997-2302</a>
+      </div>
+      <div class="ofc-clhub-nap">
+        <strong>Olympic Fence Co.</strong><br>
+        81 Garden Street<br>
+        West Newbury, MA 01985<br>
+        <a href="tel:978-997-2302" style="color: rgba(255,255,255,0.9); text-decoration: none;">978-997-2302</a><br>
+        <a href="mailto:jlapierre@olympicfencema.com" style="color: rgba(255,255,255,0.9); text-decoration: none;">jlapierre@olympicfencema.com</a>
+      </div>
+    </div>
+  </div>
+
+</div>
