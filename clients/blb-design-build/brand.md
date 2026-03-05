@@ -25,6 +25,40 @@
 - **Avoid:** "Stress-free" language, "we do everything ourselves" claims (they coordinate with specialized trade partners)
 - Position BLB as **coordinators and project managers** rather than direct installers
 
+### Writing Style (from client editorial review, Feb 2026)
+
+**Punctuation preferences:**
+- Use commas instead of dashes for parenthetical phrases ("feel prepared, not overwhelmed, when" not "prepared - not overwhelmed - when")
+- Use periods between related sentences rather than dashes ("This phase often reveals surprises behind walls. Expect the unexpected." not "Often reveals surprises behind walls - expect the unexpected.")
+- Use semicolons for closely related independent clauses where appropriate
+- Use "+" instead of "&" in compound phase names and section headers ("Design, Planning, + Contract" / "Trim + Paint" / "Mechanical, Electrical, + Plumbing")
+
+**Tone and framing:**
+- Write in complete, confident sentences rather than shorthand ("This is when you make the big decisions" not "This is where you make decisions")
+- Use "since" and "as" for causal connections rather than dashes ("ideal time to upgrade since the walls are already open" not "ideal time to upgrade - the walls are already open")
+- Capitalize sentence-starting words in bullet lists
+- CTAs should be ALL CAPS text ("SCHEDULE A FREE CONSULTATION")
+
+**Things BLB avoids advising on directly:**
+- Specific electrical panel sizes (don't reference 100-amp or 200-amp specifics)
+- HVAC system evaluation or sizing recommendations
+- Specific deposit percentages or payment structure advice
+- Seasonal timing recommendations (don't tell homeowners when to start)
+- Sequencing guidance for choosing between project types (kitchen vs. bathroom first)
+- Subcontractor scheduling or availability patterns
+- Encouraging homeowners to gather technical info (panel size, HVAC type, blueprints) before calling
+
+**Numbers and ranges (use BLB's actual experience):**
+- Design phase: 4-8 weeks (not 2-8)
+- Contingency budget: 10-30% (not 10-15%)
+- Permit timeline for historic/coastal: add 4-8 weeks (not 2-4)
+
+**Terminology BLB uses:**
+- "Change orders" = problems found behind walls that must be addressed
+- "Work orders" = modifying the plan mid-project
+- "Design, Planning, + Contract" = Phase 1 (not just "Design & Planning")
+- "without pressure or obligations" (not "no pressure, no obligations")
+
 ---
 
 ## Colors & Typography
@@ -47,7 +81,18 @@
 | Headlines | Font-weight: 300 (light), negative letter-spacing (-1px on large) |
 | Body | Font-size: 16-18px, line-height: 1.6-1.8 |
 | Body Color | `#555` or `#666` |
-| H2 Override | `font-family: 'Messina Modern Light', sans-serif !important; font-weight: 400;` |
+| H2 Override | `font-family: 'Messina Modern', sans-serif !important; font-weight: 400;` |
+
+### Hosted Font Files (woff2, GHL media)
+| Font | Weight | URL |
+|------|--------|-----|
+| Messina Modern Light | 300 | `https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7fc9387e7b24.woff2` |
+| Messina Modern Semi Bold | 600 | `https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f200f69dbc0a.woff2` |
+| Messina Sans Bold | 700 | `https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f217169dbc09.woff2` |
+| Messina Sans Black | 900 | `https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7f0af27e7b25.woff2` |
+| Messina Serif Light Italic | 300 italic | `https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84036702ffa39f680c6.woff2` |
+
+**CSS usage:** Use `'Messina Modern'` as a single font-family with weight variants (300 for Light, 600 for Semi Bold). Use `'Messina Sans'` for buttons/CTAs (700 for Bold, 900 for Black). No Google Fonts fallback needed on new pages.
 
 ### Button Styles
 | Type | Specs |
@@ -402,4 +447,4 @@ Location-service combo pages (e.g., "Kitchen Remodeling Newburyport") make sense
 
 ---
 
-*Last updated: January 15, 2026*
+*Last updated: March 5, 2026*
