@@ -7,12 +7,36 @@
     <meta name="robots" content="noindex, nofollow">
     <title>The Complete Home Renovation Planning Guide: North Shore Edition | BLB Design/Build</title>
     
-    <!-- Fonts -->
+    <!-- Fonts: Replace URLs below with hosted Messina woff2 files -->
+    <!-- Fallback to Cormorant Garamond + Source Sans Pro via Google Fonts until Messina is hosted -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
+        /* TODO: Upload Messina font files to GHL media, then uncomment and add URLs
+        @font-face {
+            font-family: 'Messina Modern Light';
+            src: url('PASTE_MESSINA_MODERN_LIGHT_WOFF2_URL') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Messina Sans';
+            src: url('PASTE_MESSINA_SANS_WOFF2_URL') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Messina Sans Bold';
+            src: url('PASTE_MESSINA_SANS_BOLD_WOFF2_URL') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        */
         :root {
             --primary: #1a1a1a;
             --secondary: #666666;
@@ -36,7 +60,7 @@
         }
         
         body {
-            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Messina Modern Light', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
             font-weight: 300;
             font-size: 17px;
             line-height: 1.7;
@@ -45,7 +69,7 @@
         }
         
         h1, h2, h3, h4 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-family: 'Messina Modern Light', 'Cormorant Garamond', Georgia, serif;
             font-weight: 300;
             color: var(--primary);
             letter-spacing: 0.01em;
@@ -166,7 +190,7 @@
         
         .download-content h4 {
             color: var(--white);
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Messina Sans', 'Source Sans Pro', sans-serif;
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 0.35rem;
@@ -185,8 +209,8 @@
             color: var(--primary);
             padding: 0.75rem 1.5rem;
             text-decoration: none;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-weight: 600;
+            font-family: 'Messina Sans Bold', 'Messina Sans', 'Source Sans Pro', sans-serif;
+            font-weight: 700;
             font-size: 0.9rem;
             letter-spacing: 0.02em;
             transition: all 0.2s ease;
@@ -220,7 +244,7 @@
         
         .who-this-is-for h4 {
             font-size: 1rem;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Messina Sans', 'Source Sans Pro', sans-serif;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.08em;
@@ -265,7 +289,7 @@
         }
         
         .phase-number {
-            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-family: 'Messina Modern Light', 'Cormorant Garamond', Georgia, serif;
             font-size: 1.5rem;
             font-weight: 400;
             color: var(--header-bar);
@@ -273,7 +297,7 @@
         }
         
         .phase-content h4 {
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Messina Sans', 'Source Sans Pro', sans-serif;
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 0.35rem;
@@ -306,7 +330,7 @@
         }
         
         .planning-card h4 {
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Messina Sans', 'Source Sans Pro', sans-serif;
             font-size: 1.05rem;
             font-weight: 600;
             color: var(--primary);
@@ -351,7 +375,7 @@
         }
         
         .timeline-card .season {
-            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-family: 'Messina Modern Light', 'Cormorant Garamond', Georgia, serif;
             font-size: 1.3rem;
             color: var(--primary);
             margin-bottom: 0.5rem;
@@ -380,7 +404,7 @@
         
         .timeline-note h4 {
             color: var(--white);
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Messina Sans', 'Source Sans Pro', sans-serif;
             font-size: 0.9rem;
             font-weight: 600;
             text-transform: uppercase;
@@ -414,7 +438,7 @@
         .tier-label {
             flex-shrink: 0;
             width: 100px;
-            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-family: 'Messina Modern Light', 'Cormorant Garamond', Georgia, serif;
             font-size: 1.1rem;
             color: var(--primary);
         }
@@ -424,7 +448,7 @@
         }
         
         .tier-content h4 {
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Messina Sans', 'Source Sans Pro', sans-serif;
             font-size: 0.95rem;
             font-weight: 600;
             margin-bottom: 0.35rem;
@@ -472,7 +496,7 @@
         }
         
         .accordion-label h4 {
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Messina Sans', 'Source Sans Pro', sans-serif;
             font-size: 1rem;
             font-weight: 600;
             margin: 0;
@@ -598,7 +622,7 @@
         }
         
         .red-flags h4 {
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'Messina Sans', 'Source Sans Pro', sans-serif;
             font-size: 0.9rem;
             font-weight: 600;
             text-transform: uppercase;
@@ -642,10 +666,11 @@
             color: var(--primary);
             padding: 1rem 2.5rem;
             text-decoration: none;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-weight: 600;
+            font-family: 'Messina Sans Bold', 'Messina Sans', 'Source Sans Pro', sans-serif;
+            font-weight: 700;
             font-size: 0.95rem;
             letter-spacing: 0.04em;
+            text-transform: uppercase;
             transition: all 0.2s ease;
         }
         
@@ -778,7 +803,7 @@
     <!-- Featured Project Image -->
     <section class="featured-image-section">
         <div class="featured-image">
-            <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2025/04/BLB-84-copy.jpg?w=1080&ssl=1" alt="BLB Design Build kitchen renovation - North Shore MA">
+            <img src="https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9d9e3665b72284b7dce43.jpg" alt="">
         </div>
     </section>
 
@@ -1274,7 +1299,7 @@
     <!-- Featured Project Image 2 -->
     <section class="featured-image-section">
         <div class="featured-image">
-            <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2024/01/314Haverhill_FREEBIRD-115.jpg?w=1080&ssl=1" alt="BLB Design Build whole home renovation - North Shore MA">
+            <img src="https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9d9e370d7ae71e174f2f9.jpg" alt="">
         </div>
     </section>
 
