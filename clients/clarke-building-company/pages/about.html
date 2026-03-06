@@ -2,15 +2,17 @@
      Page: /about/
      Design: Craftsman Editorial (A+C Hybrid)
      Built: March 2026 by AM Creative
+     Updated: March 2026 - Content refresh per updated brief
      
-     HERO COPY OPTIONS:
-     Option A: "Built on Craft. Run by One Person Who Cares." (recommended - from SEO layout)
-     Option B: "One Contractor. Every Detail. Start to Finish."
-     Option C: "Meet the Builder Behind Your Project."
+     HERO COPY:
+     H1: "Meet Dave Clarke"
+     Sub: "Third-generation builder. One point of contact. Start to finish."
      
      INTERNAL LINKS: All links use production URLs.
      Domain: https://clarkebuildingcompany.com
      Links: /services/, /contact/, /why-clarke/
+     
+     NOTE: No Dave photo available yet. Build without and add later.
      
      SEO NOTE: No meta tags, schema, or alt text optimization in this file.
      OTTO handles all SEO markup post-deployment.
@@ -164,36 +166,24 @@
 .clarke-about-h1 {
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: 32px;
-  line-height: 1.15;
+  font-size: 36px;
+  line-height: 1.1;
   color: var(--color-text-inverse);
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   letter-spacing: -0.01em;
 }
 @media (min-width: 768px) {
-  .clarke-about-h1 { font-size: clamp(36px, 4.5vw, 50px); }
-}
-
-/* Hero H2 Display */
-.clarke-about-hero-h2 {
-  font-family: var(--font-heading);
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.25;
-  color: var(--color-accent);
-  margin-bottom: 20px;
-}
-@media (min-width: 768px) {
-  .clarke-about-hero-h2 { font-size: clamp(26px, 3vw, 32px); }
+  .clarke-about-h1 { font-size: clamp(40px, 5vw, 58px); }
 }
 
 /* Hero subheadline */
 .clarke-about-hero-sub {
-  font-size: 17px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.72);
-  margin-bottom: 28px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-accent);
+  margin-bottom: 24px;
   max-width: 560px;
+  font-family: var(--font-heading);
 }
 
 /* Hero CTA row */
@@ -204,7 +194,7 @@
   margin-top: 8px;
 }
 
-/* Hero image frame */
+/* Hero image grid (two images side by side) */
 .clarke-about-hero-img-wrap {
   position: relative;
   padding: 16px;
@@ -260,7 +250,7 @@
   }
 }
 
-/* Stat badge on hero image */
+/* Stat badge on hero */
 .clarke-about-stat-badge {
   position: absolute;
   bottom: 0;
@@ -291,7 +281,7 @@
 
 
 /* ========================================
-   SECTION: TRUST BAR (below hero)
+   SECTION: TRUST BAR
    ======================================== */
 .clarke-about-trust-bar {
   background: var(--color-bg-white);
@@ -329,45 +319,10 @@
 
 
 /* ========================================
-   SECTION: INTRO
-   ======================================== */
-.clarke-about-intro {
-  background: var(--color-bg-primary);
-  padding: 56px 0;
-  position: relative;
-}
-@media (min-width: 768px) {
-  .clarke-about-intro { padding: 72px 0; }
-}
-.clarke-about-intro-text {
-  max-width: 780px;
-  margin: 0 auto;
-  font-size: 17px;
-  line-height: 1.8;
-  color: var(--color-text-primary);
-}
-.clarke-about-intro-text p {
-  margin-bottom: 20px;
-}
-.clarke-about-intro-text p:last-child {
-  margin-bottom: 0;
-}
-.clarke-about-intro-text a {
-  color: var(--color-primary);
-  font-weight: 500;
-  border-bottom: 1px solid rgba(139,39,39,0.25);
-  transition: border-color 0.2s ease;
-}
-.clarke-about-intro-text a:hover {
-  border-color: var(--color-primary);
-}
-
-
-/* ========================================
    SECTION: DAVE'S STORY
    ======================================== */
 .clarke-about-story {
-  background: var(--color-bg-white);
+  background: var(--color-bg-primary);
   padding: 56px 0;
   position: relative;
 }
@@ -408,14 +363,9 @@
   margin-bottom: 18px;
 }
 .clarke-about-story-text p:last-child { margin-bottom: 0; }
-.clarke-about-story-text a {
-  color: var(--color-primary);
-  font-weight: 500;
-  border-bottom: 1px solid rgba(139,39,39,0.25);
-  transition: border-color 0.2s ease;
-}
-.clarke-about-story-text a:hover {
-  border-color: var(--color-primary);
+.clarke-about-story-text em {
+  font-style: italic;
+  color: var(--color-text-heading);
 }
 
 /* Story image stack */
@@ -433,19 +383,19 @@
 
 
 /* ========================================
-   SECTION: HOW DAVE WORKS (4-block grid)
+   SECTION: WHY CLIENTS TRUST DAVE (4 blocks)
    ======================================== */
-.clarke-about-works {
+.clarke-about-trust-section {
   background: var(--color-secondary);
   position: relative;
   overflow: hidden;
   padding: 56px 0;
 }
 @media (min-width: 768px) {
-  .clarke-about-works { padding: 80px 0; }
+  .clarke-about-trust-section { padding: 80px 0; }
 }
 /* Grain overlay */
-.clarke-about-works::after {
+.clarke-about-trust-section::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -453,31 +403,22 @@
   pointer-events: none;
   z-index: 0;
 }
-.clarke-about-works-inner {
+.clarke-about-trust-inner {
   position: relative;
   z-index: 1;
 }
 
-.clarke-about-works-h2 {
+.clarke-about-trust-h2 {
   font-family: var(--font-heading);
   font-weight: 400;
   font-size: 28px;
   line-height: 1.25;
   color: var(--color-text-inverse);
-  margin-bottom: 12px;
+  margin-bottom: 48px;
   text-align: center;
 }
 @media (min-width: 768px) {
-  .clarke-about-works-h2 { font-size: clamp(28px, 3.5vw, 36px); }
-}
-.clarke-about-works-sub {
-  text-align: center;
-  color: rgba(255,255,255,0.55);
-  font-size: 16px;
-  margin-bottom: 48px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  .clarke-about-trust-h2 { font-size: clamp(28px, 3.5vw, 36px); }
 }
 
 .clarke-about-blocks {
@@ -498,21 +439,6 @@
   border: 1px solid rgba(201,169,110,0.1);
   border-left: 3px solid var(--color-accent);
 }
-.clarke-about-block-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: rgba(201,169,110,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-.clarke-about-block-icon svg {
-  width: 20px;
-  height: 20px;
-  color: var(--color-accent);
-}
 .clarke-about-block h3 {
   font-family: var(--font-body);
   font-weight: 600;
@@ -527,107 +453,104 @@
   color: rgba(255,255,255,0.65);
 }
 
-/* CTA link below blocks */
-.clarke-about-works-cta {
-  text-align: center;
-  margin-top: 40px;
-}
-
 
 /* ========================================
-   SECTION: CREDENTIALS
+   SECTION: OUR SPECIALTY (services list)
    ======================================== */
-.clarke-about-credentials {
+.clarke-about-specialty {
   background: var(--color-bg-primary);
   padding: 56px 0;
   position: relative;
 }
 @media (min-width: 768px) {
-  .clarke-about-credentials { padding: 80px 0; }
+  .clarke-about-specialty { padding: 80px 0; }
 }
 /* Subtle diagonal hatching */
-.clarke-about-credentials::before {
+.clarke-about-specialty::before {
   content: '';
   position: absolute;
   inset: 0;
   background: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(28,36,52,0.015) 30px, rgba(28,36,52,0.015) 31px);
   pointer-events: none;
 }
-.clarke-about-credentials-inner {
+.clarke-about-specialty-inner {
   position: relative;
   z-index: 1;
 }
-.clarke-about-cred-h2 {
+.clarke-about-specialty-h2 {
   font-family: var(--font-heading);
   font-weight: 400;
   font-size: 28px;
   line-height: 1.25;
   color: var(--color-text-heading);
-  margin-bottom: 36px;
+  margin-bottom: 12px;
   text-align: center;
 }
 @media (min-width: 768px) {
-  .clarke-about-cred-h2 { font-size: clamp(28px, 3.5vw, 36px); }
+  .clarke-about-specialty-h2 { font-size: clamp(28px, 3.5vw, 36px); }
 }
-
-.clarke-about-cred-grid {
+.clarke-about-specialty-sub {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clarke-about-specialty-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 16px;
   max-width: 900px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .clarke-about-cred-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .clarke-about-specialty-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
 }
-.clarke-about-cred-card {
+.clarke-about-specialty-card {
   background: var(--color-bg-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 24px 26px;
-  display: flex;
-  gap: 16px;
-  align-items: start;
+  padding: 28px 26px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.clarke-about-cred-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: rgba(139,39,39,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.clarke-about-specialty-card:hover {
+  border-color: rgba(139,39,39,0.25);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
-.clarke-about-cred-icon svg {
-  width: 22px;
-  height: 22px;
-  color: var(--color-primary);
-}
-.clarke-about-cred-label {
+.clarke-about-specialty-card h3 {
+  font-family: var(--font-body);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 17px;
   color: var(--color-text-heading);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+  line-height: 1.3;
 }
-.clarke-about-cred-desc {
-  font-size: 14px;
-  line-height: 1.6;
+.clarke-about-specialty-card p {
+  font-size: 15px;
+  line-height: 1.7;
   color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+.clarke-about-specialty-cta {
+  text-align: center;
+  margin-top: 36px;
 }
 
 
 /* ========================================
-   SECTION: GALLERY (finished work)
+   SECTION: TESTIMONIALS (placeholder)
    ======================================== */
-.clarke-about-gallery {
+.clarke-about-testimonials {
   background: var(--color-bg-white);
   padding: 56px 0;
 }
 @media (min-width: 768px) {
-  .clarke-about-gallery { padding: 72px 0; }
+  .clarke-about-testimonials { padding: 72px 0; }
 }
-.clarke-about-gallery-h2 {
+.clarke-about-testimonials-h2 {
   font-family: var(--font-heading);
   font-weight: 400;
   font-size: 28px;
@@ -637,24 +560,102 @@
   text-align: center;
 }
 @media (min-width: 768px) {
-  .clarke-about-gallery-h2 { font-size: clamp(28px, 3.5vw, 36px); }
+  .clarke-about-testimonials-h2 { font-size: clamp(28px, 3.5vw, 36px); }
 }
-.clarke-about-gallery-grid {
+.clarke-about-testimonial-cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .clarke-about-gallery-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .clarke-about-testimonial-cards { grid-template-columns: 1fr 1fr; }
 }
-.clarke-about-gallery-img {
+.clarke-about-testimonial-card {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
   border-radius: var(--radius-lg);
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
+  padding: 28px 26px;
+}
+.clarke-about-testimonial-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+.clarke-about-testimonial-stars svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-accent);
+  fill: var(--color-accent);
+}
+.clarke-about-testimonial-card blockquote {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  font-style: italic;
+  margin-bottom: 14px;
+}
+.clarke-about-testimonial-attr {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+
+/* ========================================
+   SECTION: SERVICE AREA
+   ======================================== */
+.clarke-about-area {
+  background: var(--color-bg-primary);
+  padding: 56px 0;
 }
 @media (min-width: 768px) {
-  .clarke-about-gallery-img { height: 380px; }
+  .clarke-about-area { padding: 72px 0; }
+}
+.clarke-about-area-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.clarke-about-area-h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.25;
+  color: var(--color-text-heading);
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .clarke-about-area-h2 { font-size: clamp(28px, 3.5vw, 36px); }
+}
+.clarke-about-area-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 28px;
+}
+.clarke-about-area-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  margin-bottom: 32px;
+}
+.clarke-about-area-list li {
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+.clarke-about-area-cta {
+  text-align: center;
 }
 
 
@@ -677,24 +678,18 @@
   max-width: 720px;
   margin: 0 auto;
 }
-.clarke-about-cta-quote {
+.clarke-about-cta-h2 {
   font-family: var(--font-heading);
-  font-size: 22px;
-  line-height: 1.4;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.25;
   color: var(--color-text-inverse);
-  margin-bottom: 8px;
-  font-style: italic;
+  margin-bottom: 16px;
 }
 @media (min-width: 768px) {
-  .clarke-about-cta-quote { font-size: 26px; }
+  .clarke-about-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); }
 }
-.clarke-about-cta-attr {
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
-  margin-bottom: 28px;
-  font-weight: 500;
-}
-.clarke-about-cta-line {
+.clarke-about-cta-text {
   font-size: 17px;
   line-height: 1.7;
   color: rgba(255,255,255,0.85);
@@ -731,7 +726,6 @@
   background: var(--color-primary-hover);
   transform: translateY(-1px);
 }
-/* Primary button on dark bg */
 .clarke-about-hero .clarke-about-btn-primary {
   box-shadow: 0 4px 20px rgba(139,39,39,0.3);
 }
@@ -756,7 +750,6 @@
   background: var(--color-primary);
   color: #fff;
 }
-/* Secondary button on dark bg */
 .clarke-about-hero .clarke-about-btn-secondary {
   border-color: rgba(255,255,255,0.18);
   color: rgba(255,255,255,0.75);
@@ -806,18 +799,16 @@
             Owner-Operated &bull; West Newbury, MA
           </div>
 
-          <h1 class="clarke-about-h1 clarke-fade clarke-fade-d2">About Clarke Building Company &mdash; General Contractor in West Newbury, MA</h1>
+          <h1 class="clarke-about-h1 clarke-fade clarke-fade-d2">Meet Dave Clarke</h1>
 
-          <h2 class="clarke-about-hero-h2 clarke-fade clarke-fade-d3">Built on Craft. Run by One Person Who Cares.</h2>
+          <p class="clarke-about-hero-sub clarke-fade clarke-fade-d3">Third-generation builder. One point of contact. Start to finish.</p>
 
-          <p class="clarke-about-hero-sub clarke-fade clarke-fade-d4">Dave Clarke has been building and renovating homes across West Newbury and the North Shore for years. When you hire Clarke Building Company, you work directly with Dave - from the first call to the final punch list.</p>
-
-          <div class="clarke-about-hero-ctas clarke-fade clarke-fade-d5">
+          <div class="clarke-about-hero-ctas clarke-fade clarke-fade-d4">
             <a href="https://clarkebuildingcompany.com/contact/" class="clarke-about-btn-primary">
-              Get in Touch
+              Get a Free Quote
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
-            <a href="https://clarkebuildingcompany.com/services/" class="clarke-about-btn-secondary">Our Services</a>
+            <a href="https://clarkebuildingcompany.com/services/" class="clarke-about-btn-secondary">View Our Services</a>
           </div>
         </div>
 
@@ -828,8 +819,8 @@
             <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/new-siding-installation.webp" alt="" width="640" height="480" loading="eager">
           </div>
           <div class="clarke-about-stat-badge">
-            <span class="clarke-about-stat-num">15+</span>
-            <span class="clarke-about-stat-label">Years Experience</span>
+            <span class="clarke-about-stat-num">3rd</span>
+            <span class="clarke-about-stat-label">Generation Builder</span>
           </div>
         </div>
 
@@ -857,8 +848,8 @@
           5-Star Rated
         </div>
         <div class="clarke-about-trust-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          15+ Years Experience
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          3rd Generation
         </div>
         <div class="clarke-about-trust-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -870,25 +861,7 @@
 
 
   <!-- ============================================
-       INTRO SECTION
-       ============================================ -->
-  <section class="clarke-about-intro">
-    <div class="clarke-about-container">
-      <div class="clarke-about-intro-text">
-        <p>Clarke Building Company is a licensed, insured general contracting business based in West Newbury, Massachusetts. The company serves homeowners throughout the North Shore who want quality residential construction without the runaround that comes from larger firms.</p>
-
-        <p>Dave Clarke started this company on a straightforward premise: homeowners deserve a contractor who shows up, communicates clearly, and does the work right. No bait-and-switch on pricing. No strangers on your job site you've never been introduced to. No chasing someone down for an update.</p>
-
-        <p>If you're planning a custom home, an addition, a full renovation, or a structural project on an existing home, this is what working with Clarke Building Company looks like: you talk to Dave, you get an honest estimate, and Dave is on your job site from framing through finish work.</p>
-
-        <p>That's the model. It's worked well for a lot of West Newbury families, and it's not changing. <a href="https://clarkebuildingcompany.com/services/">See our residential building services</a></p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       DAVE'S STORY SECTION
+       SECTION 1: DAVE'S STORY - Building Runs in the Family
        ============================================ -->
   <section class="clarke-about-story">
     <div class="clarke-about-container">
@@ -896,17 +869,13 @@
 
         <!-- LEFT: Text -->
         <div>
-          <h2 class="clarke-about-section-h2">How Dave Clarke Got Into the Trade</h2>
+          <h2 class="clarke-about-section-h2">Building Runs in the Family</h2>
           <div class="clarke-about-story-text">
-            <p>Dave Clarke didn't stumble into construction - he grew up around it. From an early age he was drawn to the way a building comes together, the logic of framing, the problem-solving that happens before a single finish piece goes in. There's a satisfaction in that kind of work that's hard to explain to someone who hasn't done it: you can point at something solid and know it's there because you built it right.</p>
+            <p>Dave Clarke grew up around job sites. His grandfather was a contractor. His father spent over 40 years building homes across Ipswich and the North Shore. After years working alongside his dad, Dave started Clarke Building Company to carry on that same standard of work - quality craftsmanship, honest communication, and treating every home like his own.</p>
 
-            <p>He came up through the trades the old-fashioned way - working jobs, learning how different crews operate, figuring out what separates a project that runs smoothly from one that turns into a headache for everyone involved. Along the way he picked up a picture of what a general contractor should actually be: someone who manages the whole process with the homeowner's interests at the center, not just a scheduler who passes work off and hopes it comes together.</p>
+            <p>Today, Clarke Building Company is an owner-operated business based in West Newbury, MA. When you hire Dave, you get Dave. Not a rotating crew of project managers or salespeople you'll never see again. Dave is your single point of contact from the first phone call to the final walkthrough.</p>
 
-            <p>By the time Dave launched Clarke Building Company in West Newbury, he had a clear idea of the kind of contractor he wanted to be. Owner-operated. Personally accountable. The kind of builder where, if something's not right, you know exactly who to call - and that person is already on it.</p>
-
-            <p>Today, Clarke Building Company takes on custom homes, additions, renovations, and structural projects for homeowners across West Newbury and the surrounding North Shore communities. Every project is managed by Dave directly. He coordinates the subcontractors, he walks the job, he's the one who knows where the project stands on any given Wednesday morning.</p>
-
-            <p>That's not a selling point for the website. It's just how he runs things. <a href="https://clarkebuildingcompany.com/why-clarke/">Why homeowners choose Clarke</a></p>
+            <p><em>That's how his father did it. That's how he does it.</em></p>
           </div>
         </div>
 
@@ -922,57 +891,83 @@
 
 
   <!-- ============================================
-       HOW DAVE WORKS SECTION (4 blocks)
+       SECTION 2: WHY CLIENTS TRUST DAVE (4 blocks)
        ============================================ -->
-  <section class="clarke-about-works">
-    <div class="clarke-about-container clarke-about-works-inner">
+  <section class="clarke-about-trust-section">
+    <div class="clarke-about-container clarke-about-trust-inner">
 
-      <h2 class="clarke-about-works-h2">What Working With Dave Actually Looks Like</h2>
-      <p class="clarke-about-works-sub">Clear communication, honest pricing, and one person running your project from start to finish.</p>
+      <h2 class="clarke-about-trust-h2">Why Clients Trust Dave With Their Homes</h2>
 
       <div class="clarke-about-blocks">
 
         <!-- Block 1 -->
         <div class="clarke-about-block">
-          <div class="clarke-about-block-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h3>You'll Always Know Where Things Stand</h3>
-          <p>You won't be left wondering what's happening on your project. Dave checks in proactively - a quick text, a call, a note after a sub finishes a phase. If something changes, you hear about it before it shows up as a surprise. Construction involves decisions, and Dave makes sure homeowners are part of the ones that matter.</p>
+          <h3>One Point of Contact</h3>
+          <p>You'll talk to Dave. Not a receptionist, not a project coordinator - Dave. He's on your job site, managing every detail, and available when you have a question. Clients consistently praise the communication and organization that comes with working directly with the person in charge.</p>
         </div>
 
         <!-- Block 2 -->
         <div class="clarke-about-block">
-          <div class="clarke-about-block-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3>Transparent Pricing, No Surprises</h3>
-          <p>Dave puts together detailed, honest estimates. The goal isn't to win the job with a low number and work it back up - it's to give you a real picture of what the project costs so you can make an informed decision. If something comes up mid-project that affects the budget, you'll know why, and you'll know before it's committed.</p>
+          <h3>Honest and Straightforward</h3>
+          <p>Dave will tell you exactly what a project involves - the timeline, the costs, and the process. If something is outside his expertise, he'll say so and bring in the right professional. No surprises, no runaround.</p>
         </div>
 
         <!-- Block 3 -->
         <div class="clarke-about-block">
-          <div class="clarke-about-block-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <h3>One Person Running Your Job</h3>
-          <p>When you hire Clarke Building Company, Dave Clarke is your contractor - not an office contact who passes messages to a crew you've never met. He manages the subs, he's on site, he carries the project in his head. The person you talked to on the phone is the same person driving to your house on Monday morning.</p>
+          <h3>Deep Knowledge of How Homes Work</h3>
+          <p>Three generations of building experience means Dave understands how every system in your home connects. That knowledge shows up in the details - catching problems before they become expensive, explaining your options clearly, and making sure the finished product lasts.</p>
         </div>
 
         <!-- Block 4 -->
         <div class="clarke-about-block">
-          <div class="clarke-about-block-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3>Steady Hands When Things Get Complicated</h3>
-          <p>Construction projects hit snags. Lumber shows up wrong, a sub has a scheduling conflict, something unexpected opens up in a wall. Dave's been doing this long enough that surprises don't derail him. He works through problems methodically, keeps the project moving, and keeps homeowners out of the stress that can come with a renovation if the contractor isn't running a tight ship.</p>
+          <h3>Family Business Values</h3>
+          <p>Clarke Building Company is a family operation. Dave and his wife are raising three young kids while running the business. The people working on your home are professionals who care about doing things right - because their reputation is their livelihood.</p>
         </div>
 
       </div>
 
-      <div class="clarke-about-works-cta">
-        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-about-btn-primary" style="box-shadow: 0 4px 20px rgba(139,39,39,0.3);">
-          Start a Conversation
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 3: OUR SPECIALTY
+       ============================================ -->
+  <section class="clarke-about-specialty">
+    <div class="clarke-about-container clarke-about-specialty-inner">
+
+      <h2 class="clarke-about-specialty-h2">Our Specialty</h2>
+      <p class="clarke-about-specialty-sub">Dave and his team focus on the projects that make the biggest impact on how you live in your home.</p>
+
+      <div class="clarke-about-specialty-grid">
+
+        <div class="clarke-about-specialty-card">
+          <h3>Kitchen Remodels</h3>
+          <p>Full first-floor renovations from layout to final detail.</p>
+        </div>
+
+        <div class="clarke-about-specialty-card">
+          <h3>Home Renovations</h3>
+          <p>Thoughtful remodels that update your space without losing its character.</p>
+        </div>
+
+        <div class="clarke-about-specialty-card">
+          <h3>ADUs and In-Law Suites</h3>
+          <p>Additional living space designed and built to match your home.</p>
+        </div>
+
+        <div class="clarke-about-specialty-card">
+          <h3>Basement Remodels</h3>
+          <p>Turning unused square footage into functional living areas.</p>
+        </div>
+
+      </div>
+
+      <p class="clarke-about-specialty-sub" style="margin-top: 24px; margin-bottom: 0;">Every project starts with a conversation about what you need, and Dave walks you through the entire process before any work begins.</p>
+
+      <div class="clarke-about-specialty-cta">
+        <a href="https://clarkebuildingcompany.com/services/" class="clarke-about-btn-secondary">
+          View All Services
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
       </div>
@@ -982,96 +977,96 @@
 
 
   <!-- ============================================
-       CREDENTIALS SECTION
+       SECTION 4: TESTIMONIALS (placeholder)
        ============================================ -->
-  <section class="clarke-about-credentials">
-    <div class="clarke-about-container clarke-about-credentials-inner">
-
-      <h2 class="clarke-about-cred-h2">Licensed, Insured, and Accountable</h2>
-
-      <div class="clarke-about-cred-grid">
-
-        <!-- License -->
-        <div class="clarke-about-cred-card">
-          <div class="clarke-about-cred-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="7" y1="12" x2="13" y2="12"/></svg>
-          </div>
-          <div>
-            <div class="clarke-about-cred-label">Massachusetts Contractor License</div>
-            <div class="clarke-about-cred-desc">MA Construction Supervisor License (CSL) held. Licensed to operate residential construction projects throughout the Commonwealth.</div>
-          </div>
-        </div>
-
-        <!-- Insurance -->
-        <div class="clarke-about-cred-card">
-          <div class="clarke-about-cred-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div>
-            <div class="clarke-about-cred-label">General Liability Insurance</div>
-            <div class="clarke-about-cred-desc">Fully insured with general liability coverage in place on all projects. Protection for your home and your investment.</div>
-          </div>
-        </div>
-
-        <!-- Workers Comp -->
-        <div class="clarke-about-cred-card">
-          <div class="clarke-about-cred-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
-          </div>
-          <div>
-            <div class="clarke-about-cred-label">Workers' Compensation</div>
-            <div class="clarke-about-cred-desc">Workers' compensation coverage maintained for all on-site work. Every person on your job site is covered.</div>
-          </div>
-        </div>
-
-        <!-- Service Area -->
-        <div class="clarke-about-cred-card">
-          <div class="clarke-about-cred-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <div class="clarke-about-cred-label">Service Area</div>
-            <div class="clarke-about-cred-desc">West Newbury, MA and surrounding North Shore communities including Newburyport, Amesbury, Merrimac, Groveland, Georgetown, and Haverhill.</div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       GALLERY - FINISHED WORK
-       ============================================ -->
-  <section class="clarke-about-gallery">
+  <section class="clarke-about-testimonials">
     <div class="clarke-about-container">
-      <h2 class="clarke-about-gallery-h2">From Framing to Finish</h2>
-      <div class="clarke-about-gallery-grid">
-        <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-open-concept-wide-angle.webp" alt="" width="640" height="480" class="clarke-about-gallery-img" loading="lazy" decoding="async">
-        <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-built-in-shelving-barn-doors-wide.webp" alt="" width="640" height="480" class="clarke-about-gallery-img" loading="lazy" decoding="async">
+
+      <h2 class="clarke-about-testimonials-h2">What Clients Say</h2>
+
+      <div class="clarke-about-testimonial-cards">
+
+        <!-- PLACEHOLDER: Replace with actual reviews that mention Dave by name once GBP is verified -->
+        <div class="clarke-about-testimonial-card">
+          <div class="clarke-about-testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote>[Review placeholder - Pull review that mentions Dave by name from GBP once verified]</blockquote>
+          <div class="clarke-about-testimonial-attr">- Client Name, Location</div>
+        </div>
+
+        <div class="clarke-about-testimonial-card">
+          <div class="clarke-about-testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote>[Review placeholder - Pull review that mentions Dave by name from GBP once verified]</blockquote>
+          <div class="clarke-about-testimonial-attr">- Client Name, Location</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 5: SERVICE AREA
+       ============================================ -->
+  <section class="clarke-about-area">
+    <div class="clarke-about-container">
+      <div class="clarke-about-area-inner">
+
+        <h2 class="clarke-about-area-h2">Proudly Serving West Newbury and the North Shore</h2>
+
+        <p class="clarke-about-area-text">Dave grew up in Ipswich and recently moved to West Newbury. Clarke Building Company serves homeowners across the North Shore, including:</p>
+
+        <ul class="clarke-about-area-list">
+          <li>West Newbury</li>
+          <li>Ipswich</li>
+          <li>Newburyport</li>
+          <li>Hamilton</li>
+          <li>Topsfield</li>
+          <li>Amesbury</li>
+        </ul>
+
+        <p class="clarke-about-area-text">If you're planning a renovation in the area, Dave would be happy to take a look and talk through your options.</p>
+
+        <div class="clarke-about-area-cta">
+          <a href="https://clarkebuildingcompany.com/contact/" class="clarke-about-btn-primary">
+            Contact Dave
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- ============================================
-       CTA BAND
+       SECTION 6: CTA BAND
        ============================================ -->
   <section class="clarke-about-cta-band">
     <div class="clarke-about-container clarke-about-cta-inner">
 
-      <p class="clarke-about-cta-quote">"Every project I take on, I'm personally responsible for how it goes. That's not a liability I carry reluctantly - it's why I do it this way."</p>
-      <p class="clarke-about-cta-attr">- Dave Clarke, Clarke Building Company</p>
+      <h2 class="clarke-about-cta-h2">Ready to Talk About Your Project?</h2>
 
-      <p class="clarke-about-cta-line">If you're looking for a West Newbury general contractor who will be straight with you from the estimate through the final walkthrough, Clarke Building Company is worth a conversation.</p>
+      <p class="clarke-about-cta-text">No pressure, no sales pitch. Just an honest conversation about what your home needs and what it'll take to get there.</p>
 
       <div class="clarke-about-cta-buttons">
         <a href="https://clarkebuildingcompany.com/contact/" class="clarke-about-btn-primary">
-          Get in Touch
+          Schedule Your Free Estimate
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
-        <a href="https://clarkebuildingcompany.com/services/" class="clarke-about-btn-secondary">See What We Build</a>
+        <a href="https://clarkebuildingcompany.com/why-clarke/" class="clarke-about-btn-secondary">Why Clarke</a>
       </div>
 
     </div>
