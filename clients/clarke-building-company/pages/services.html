@@ -409,13 +409,13 @@
 @media (min-width: 768px) {
   .clarke-svc-card {
     display: grid;
-    grid-template-columns: 0.42fr 0.58fr;
+    grid-template-columns: 0.32fr 0.68fr;
     gap: 40px;
     align-items: center;
   }
   /* Alternate image side for visual variety */
   .clarke-svc-card--reverse {
-    grid-template-columns: 0.58fr 0.42fr;
+    grid-template-columns: 0.68fr 0.32fr;
   }
   .clarke-svc-card--reverse .clarke-svc-card-img-wrap {
     order: 2;
@@ -436,18 +436,18 @@
 }
 .clarke-svc-card-img {
   width: 100%;
-  height: 240px;
+  height: 200px;
   object-fit: cover;
   border-radius: var(--radius-lg);
 }
 @media (min-width: 768px) {
-  .clarke-svc-card-img { height: 280px; }
+  .clarke-svc-card-img { height: 220px; }
 }
 
 /* Card without image - icon placeholder */
 .clarke-svc-card-icon {
   width: 100%;
-  height: 200px;
+  height: 160px;
   background: var(--color-bg-primary);
   border-radius: var(--radius-lg);
   display: flex;
@@ -456,7 +456,7 @@
   margin-bottom: 24px;
 }
 @media (min-width: 768px) {
-  .clarke-svc-card-icon { height: 280px; margin-bottom: 0; }
+  .clarke-svc-card-icon { height: 220px; margin-bottom: 0; }
 }
 .clarke-svc-card-icon svg {
   width: 56px;
