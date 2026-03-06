@@ -1,0 +1,884 @@
+<!-- CLARKE BUILDING COMPANY - ADU SERVICE PAGE
+     Page: /adu/
+     Design: Craftsman Editorial (A+C Hybrid)
+     Built: March 2026 by AM Creative
+     
+     HERO COPY:
+     H1: "ADU Contractor Serving West Newbury & North Shore Massachusetts"
+     Sub: From SEO layout doc
+     
+     INTERNAL LINKS:
+     Domain: https://clarkebuildingcompany.com
+     Links: /contact/, /projects/, /additions/, /new-construction/, /services/
+     
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+     All img alt="" left empty per OTTO workflow.
+-->
+
+<style>
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+.clarke-adu-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-adu-wrap *, .clarke-adu-wrap *::before, .clarke-adu-wrap *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+.clarke-adu-wrap img { max-width: 100%; height: auto; display: block; }
+.clarke-adu-wrap a { text-decoration: none; }
+
+.clarke-adu-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+}
+@media (min-width: 768px) { .clarke-adu-container { padding: 0 32px; } }
+
+@keyframes clarkeFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-fade { animation: clarkeFadeUp 0.8s ease forwards; }
+.clarke-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+.clarke-fade-d4 { animation-delay: 0.55s; opacity: 0; }
+
+
+/* ======== HERO ======== */
+.clarke-adu-hero {
+  background: var(--color-secondary);
+  position: relative; overflow: hidden; padding: 60px 0 48px;
+}
+@media (min-width: 768px) { .clarke-adu-hero { padding: 80px 0 64px; } }
+.clarke-adu-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-adu-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.018) 100px, rgba(201,169,110,0.018) 101px);
+  pointer-events: none; z-index: 0;
+}
+.clarke-adu-hero-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 40px;
+}
+@media (min-width: 960px) {
+  .clarke-adu-hero-inner {
+    display: grid; grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px; align-items: center;
+  }
+}
+.clarke-adu-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent); margin-bottom: 20px; width: fit-content;
+}
+.clarke-adu-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.clarke-adu-h1 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 32px;
+  line-height: 1.12; color: var(--color-text-inverse);
+  margin-bottom: 16px; letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-adu-h1 { font-size: clamp(36px, 4.5vw, 50px); } }
+.clarke-adu-hero-sub {
+  font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
+  margin-bottom: 28px; max-width: 580px;
+}
+.clarke-adu-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Hero image */
+.clarke-adu-hero-img-wrap {
+  position: relative; padding: 16px;
+}
+.clarke-adu-hero-img-wrap::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: calc(100% - 16px); height: calc(100% - 16px);
+  border: 1.5px solid rgba(201,169,110,0.3);
+  border-radius: var(--radius-lg); z-index: 0;
+}
+.clarke-adu-hero-img {
+  position: relative; z-index: 1;
+  border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover;
+}
+.clarke-adu-hero-stat {
+  position: absolute; bottom: 0; left: 0;
+  background: var(--color-primary); color: #fff;
+  padding: 14px 18px; border-radius: var(--radius-lg);
+  box-shadow: 0 8px 28px rgba(139,39,39,0.35);
+  z-index: 2; text-align: center;
+}
+.clarke-adu-hero-stat-num {
+  font-family: var(--font-heading); font-size: 24px; line-height: 1; display: block;
+}
+.clarke-adu-hero-stat-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; opacity: 0.85; display: block; margin-top: 4px;
+}
+
+
+/* ======== TRUST BAR ======== */
+.clarke-adu-trust-bar {
+  background: var(--color-bg-white); border-bottom: 1px solid var(--color-border); padding: 20px 0;
+}
+.clarke-adu-trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 0;
+}
+.clarke-adu-trust-item {
+  display: flex; align-items: center; gap: 8px; padding: 6px 20px;
+  font-size: 13px; font-weight: 600; color: var(--color-text-secondary); letter-spacing: 0.02em;
+}
+.clarke-adu-trust-item svg { width: 18px; height: 18px; color: var(--color-accent); flex-shrink: 0; }
+@media (min-width: 768px) {
+  .clarke-adu-trust-item { border-right: 1px solid var(--color-border); }
+  .clarke-adu-trust-item:last-child { border-right: none; }
+}
+
+
+/* ======== SHARED SECTION STYLES ======== */
+.clarke-adu-section-light { background: var(--color-bg-primary); padding: 56px 0; }
+.clarke-adu-section-white { background: var(--color-bg-white); padding: 56px 0; }
+@media (min-width: 768px) {
+  .clarke-adu-section-light, .clarke-adu-section-white { padding: 80px 0; }
+}
+.clarke-adu-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-adu-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-adu-sub {
+  font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
+  margin-bottom: 32px; max-width: 780px;
+}
+.clarke-adu-body { font-size: 16px; line-height: 1.8; max-width: 780px; }
+.clarke-adu-body p { margin-bottom: 18px; }
+.clarke-adu-body p:last-child { margin-bottom: 0; }
+.clarke-adu-body a {
+  color: var(--color-primary); font-weight: 500;
+  border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
+}
+.clarke-adu-body a:hover { border-color: var(--color-primary); }
+.clarke-adu-body strong { color: var(--color-text-heading); }
+
+/* H3 items */
+.clarke-adu-h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 18px;
+  color: var(--color-text-heading); margin-bottom: 10px; margin-top: 28px; line-height: 1.3;
+}
+
+/* Benefit cards (3-col) */
+.clarke-adu-benefits {
+  display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px;
+}
+@media (min-width: 768px) { .clarke-adu-benefits { grid-template-columns: 1fr 1fr 1fr; gap: 20px; } }
+.clarke-adu-benefit {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 24px;
+}
+.clarke-adu-benefit h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 16px;
+  color: var(--color-text-heading); margin-bottom: 8px;
+}
+.clarke-adu-benefit p {
+  font-size: 14px; line-height: 1.7; color: var(--color-text-secondary);
+}
+
+/* Centered photo */
+.clarke-adu-photo {
+  display: block; margin: 36px auto; border-radius: var(--radius-lg);
+  max-width: 720px; height: auto;
+}
+
+/* Checklist */
+.clarke-adu-checklist {
+  list-style: none; margin: 20px 0; max-width: 780px;
+}
+.clarke-adu-checklist li {
+  padding: 10px 0 10px 32px; position: relative; font-size: 16px; line-height: 1.7;
+  border-bottom: 1px solid var(--color-border);
+}
+.clarke-adu-checklist li:last-child { border-bottom: none; }
+.clarke-adu-checklist li::before {
+  content: ''; position: absolute; left: 0; top: 14px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: rgba(139,39,39,0.08); border: 2px solid var(--color-primary);
+}
+
+/* Inline CTA link */
+.clarke-adu-inline-cta {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 20px;
+  color: var(--color-primary); font-weight: 600; font-size: 15px;
+}
+.clarke-adu-inline-cta:hover { gap: 12px; }
+.clarke-adu-inline-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+
+/* ======== ADU TYPES (dark section) ======== */
+.clarke-adu-types {
+  background: var(--color-secondary); position: relative; overflow: hidden; padding: 56px 0;
+}
+@media (min-width: 768px) { .clarke-adu-types { padding: 80px 0; } }
+.clarke-adu-types::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-adu-types-inner { position: relative; z-index: 1; }
+.clarke-adu-types-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 40px;
+}
+@media (min-width: 768px) { .clarke-adu-types-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+
+.clarke-adu-type-cards {
+  display: grid; grid-template-columns: 1fr; gap: 20px;
+}
+@media (min-width: 768px) { .clarke-adu-type-cards { grid-template-columns: 1fr 1fr; gap: 24px; } }
+.clarke-adu-type-card {
+  background: rgba(28,36,52,0.85); backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); padding: 28px 26px;
+  border-radius: var(--radius-lg); border: 1px solid rgba(201,169,110,0.1);
+  border-left: 3px solid var(--color-accent);
+}
+.clarke-adu-type-card h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 18px;
+  color: var(--color-text-inverse); margin-bottom: 10px; line-height: 1.3;
+}
+.clarke-adu-type-card p {
+  font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.65); margin-bottom: 12px;
+}
+.clarke-adu-type-card p:last-child { margin-bottom: 0; }
+.clarke-adu-type-ideal {
+  font-size: 13px; font-weight: 600; color: var(--color-accent);
+  letter-spacing: 0.02em;
+}
+
+/* Types section photo */
+.clarke-adu-types .clarke-adu-photo {
+  border: 1px solid rgba(201,169,110,0.15);
+}
+
+
+/* ======== PRICING (dark section) ======== */
+.clarke-adu-pricing {
+  background: var(--color-secondary); position: relative; overflow: hidden; padding: 56px 0;
+}
+@media (min-width: 768px) { .clarke-adu-pricing { padding: 80px 0; } }
+.clarke-adu-pricing::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-adu-pricing-inner { position: relative; z-index: 1; }
+.clarke-adu-pricing-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 12px;
+}
+@media (min-width: 768px) { .clarke-adu-pricing-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-adu-pricing-sub {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.68);
+  margin-bottom: 36px; max-width: 780px;
+}
+
+/* Pricing table */
+.clarke-adu-price-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  margin-bottom: 32px; border-radius: var(--radius-lg); overflow: hidden;
+}
+.clarke-adu-price-table th {
+  background: rgba(201,169,110,0.12); color: var(--color-accent);
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 14px 20px; text-align: left;
+}
+.clarke-adu-price-table td {
+  background: rgba(28,36,52,0.7); color: rgba(255,255,255,0.75);
+  font-size: 15px; padding: 16px 20px; border-bottom: 1px solid rgba(201,169,110,0.08);
+}
+.clarke-adu-price-table tr:last-child td { border-bottom: none; }
+.clarke-adu-price-table td:first-child { color: var(--color-text-inverse); font-weight: 500; }
+.clarke-adu-price-table td:nth-child(2) { color: var(--color-accent); font-family: var(--font-heading); font-size: 17px; }
+
+/* Pricing summary */
+.clarke-adu-pricing-note {
+  font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.6);
+  margin-bottom: 16px; max-width: 780px;
+}
+.clarke-adu-pricing-note strong { color: rgba(255,255,255,0.85); }
+
+/* Included list */
+.clarke-adu-included-h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-inverse); margin: 32px 0 16px;
+}
+.clarke-adu-included-list {
+  list-style: none; max-width: 780px; columns: 1; gap: 0;
+}
+@media (min-width: 600px) { .clarke-adu-included-list { columns: 2; } }
+.clarke-adu-included-list li {
+  font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.65);
+  padding: 6px 0 6px 24px; position: relative; break-inside: avoid;
+}
+.clarke-adu-included-list li::before {
+  content: ''; position: absolute; left: 0; top: 12px;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent);
+}
+
+.clarke-adu-pricing-philosophy {
+  margin-top: 28px; padding-top: 24px;
+  border-top: 1px solid rgba(201,169,110,0.12); max-width: 780px;
+}
+.clarke-adu-pricing-philosophy p {
+  font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.6);
+}
+
+
+/* ======== AUDIENCE / IS IT RIGHT ======== */
+.clarke-adu-audience-cards {
+  display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px;
+}
+@media (min-width: 768px) { .clarke-adu-audience-cards { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.clarke-adu-audience-card {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 28px 26px;
+}
+.clarke-adu-audience-card h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-heading); margin-bottom: 8px;
+}
+.clarke-adu-audience-card p {
+  font-size: 15px; line-height: 1.7; color: var(--color-text-secondary);
+}
+
+
+/* ======== FAQ ======== */
+/* FAQ accordion */
+.clarke-adu-faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+.clarke-adu-faq-item:last-child { border-bottom: none; }
+.clarke-adu-faq-item summary {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-heading); padding: 24px 40px 24px 0;
+  line-height: 1.4; cursor: pointer; list-style: none; position: relative;
+}
+.clarke-adu-faq-item summary::-webkit-details-marker { display: none; }
+.clarke-adu-faq-item summary::after {
+  content: '+'; position: absolute; right: 0; top: 24px;
+  font-size: 22px; font-weight: 400; color: var(--color-primary);
+  transition: transform 0.2s ease;
+}
+.clarke-adu-faq-item[open] summary::after {
+  content: '-';
+}
+.clarke-adu-faq-a {
+  font-size: 16px; line-height: 1.8; max-width: 780px;
+  padding: 0 0 24px; color: var(--color-text-primary);
+}
+
+
+/* ======== CTA BAND ======== */
+.clarke-adu-cta-band {
+  background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .clarke-adu-cta-band { padding: 72px 0; } }
+.clarke-adu-cta-inner {
+  position: relative; z-index: 1; max-width: 780px; margin: 0 auto; text-align: center;
+}
+.clarke-adu-cta-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-adu-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-adu-cta-text {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 16px;
+}
+.clarke-adu-cta-area {
+  font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 28px;
+}
+.clarke-adu-cta-buttons {
+  display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+}
+
+
+/* ======== BUTTONS ======== */
+.clarke-adu-btn-primary {
+  background: var(--color-primary); color: #fff; padding: 16px 36px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-adu-btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+.clarke-adu-hero .clarke-adu-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
+
+.clarke-adu-btn-secondary {
+  background: transparent; border: 2px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8); padding: 14px 32px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-adu-btn-secondary:hover {
+  border-color: var(--color-accent); color: var(--color-accent); background: rgba(201,169,110,0.06);
+}
+
+.clarke-adu-cta-band .clarke-adu-btn-primary {
+  background: var(--color-bg-white); color: var(--color-primary);
+}
+.clarke-adu-cta-band .clarke-adu-btn-primary:hover {
+  background: #fff; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.clarke-adu-cta-band .clarke-adu-btn-secondary {
+  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85);
+}
+.clarke-adu-cta-band .clarke-adu-btn-secondary:hover {
+  border-color: #fff; color: #fff; background: rgba(255,255,255,0.08);
+}
+
+/* Light section secondary button */
+.clarke-adu-btn-secondary-light {
+  background: transparent; border: 2px solid var(--color-primary);
+  color: var(--color-primary); padding: 14px 32px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-adu-btn-secondary-light:hover { background: var(--color-primary); color: #fff; }
+</style>
+
+
+<div class="clarke-adu-wrap">
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="clarke-adu-hero">
+    <div class="clarke-adu-container">
+      <div class="clarke-adu-hero-inner">
+
+        <div>
+          <div class="clarke-adu-badge clarke-fade clarke-fade-d1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            ADU Contractor &bull; North Shore, MA
+          </div>
+          <h1 class="clarke-adu-h1 clarke-fade clarke-fade-d2">ADU Contractor Serving West Newbury &amp; North Shore Massachusetts</h1>
+          <p class="clarke-adu-hero-sub clarke-fade clarke-fade-d3">Building in-law suites, garage conversions, and backyard cottages that add value and opportunity. With the MA Affordable Homes Act (2024), adding an ADU under 900 sq ft is now easier than ever - no special permits required in most municipalities. We handle everything from design through permitting and construction.</p>
+          <div class="clarke-adu-hero-ctas clarke-fade clarke-fade-d4">
+            <a href="https://clarkebuildingcompany.com/contact/" class="clarke-adu-btn-primary">
+              Schedule a Free ADU Consultation
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="https://clarkebuildingcompany.com/projects/" class="clarke-adu-btn-secondary">See Our Project Portfolio</a>
+          </div>
+        </div>
+
+        <div class="clarke-adu-hero-img-wrap clarke-fade clarke-fade-d3">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/engineer-pencil-and-ruler-resting-on-house-plans-2026-01-05-00-26-19-utc-scaled.jpg" alt="" width="640" height="480" class="clarke-adu-hero-img" loading="eager">
+          <div class="clarke-adu-hero-stat">
+            <span class="clarke-adu-hero-stat-num">900sf</span>
+            <span class="clarke-adu-hero-stat-label">By-Right Under MA Law</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       TRUST BAR
+       ============================================ -->
+  <section class="clarke-adu-trust-bar">
+    <div class="clarke-adu-container">
+      <div class="clarke-adu-trust-row">
+        <div class="clarke-adu-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          MA Licensed &amp; Insured
+        </div>
+        <div class="clarke-adu-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          North Shore ADU Specialists
+        </div>
+        <div class="clarke-adu-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="7" y1="12" x2="13" y2="12"/></svg>
+          Affordable Homes Act Compliant
+        </div>
+        <div class="clarke-adu-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Septic &amp; Title 5 Coordination
+        </div>
+        <div class="clarke-adu-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          Design-Build Process
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       WHAT IS AN ADU?
+       ============================================ -->
+  <section class="clarke-adu-section-light">
+    <div class="clarke-adu-container">
+      <h2 class="clarke-adu-h2">What Is an Accessory Dwelling Unit (ADU)?</h2>
+      <div class="clarke-adu-body">
+        <p>An accessory dwelling unit - or ADU - is a self-contained living space added to an existing single-family residential property. ADUs include a full kitchen or kitchenette, bathroom, and sleeping area, making them fully independent from the primary home. They're known by many names: in-law suites, granny flats, backyard cottages, carriage house apartments, and secondary suites.</p>
+      </div>
+
+      <h3 class="clarke-adu-h3">Why North Shore Homeowners Are Building ADUs</h3>
+      <div class="clarke-adu-benefits">
+        <div class="clarke-adu-benefit">
+          <h3>Rental Income</h3>
+          <p>Generate $1,500-$2,500/month in rental revenue on your existing property. Many clients recover their investment within 8-12 years through rental revenue alone.</p>
+        </div>
+        <div class="clarke-adu-benefit">
+          <h3>Multigenerational Living</h3>
+          <p>Keep family close while maintaining privacy and independence. An ADU eliminates assisted living costs and keeps family connected with a private, dignified space.</p>
+        </div>
+        <div class="clarke-adu-benefit">
+          <h3>Property Value</h3>
+          <p>Quality ADUs add measurable equity and buyer appeal. A well-built ADU in Essex County is one of the highest-ROI improvements you can make to a residential property.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       MA AFFORDABLE HOMES ACT
+       ============================================ -->
+  <section class="clarke-adu-section-white">
+    <div class="clarke-adu-container">
+      <h2 class="clarke-adu-h2">Massachusetts ADU Law Has Changed - Here's What It Means for You</h2>
+
+      <h3 class="clarke-adu-h3" style="margin-top: 0;">The MA Affordable Homes Act (2024): By-Right ADUs Under 900 Sq Ft</h3>
+      <div class="clarke-adu-body">
+        <p>In August 2024, Governor Healey signed the Massachusetts Affordable Homes Act, the most significant housing legislation in the Commonwealth in decades. One of its most impactful provisions: homeowners can now add an ADU of up to 900 square feet by right on any single-family lot - without needing a variance, special permit, or zoning board approval.</p>
+      </div>
+
+      <h3 class="clarke-adu-h3">What "By-Right" Means for You</h3>
+      <ul class="clarke-adu-checklist">
+        <li>No public hearings or neighborhood approval required</li>
+        <li>Applicable in most MA municipalities, including Essex County communities</li>
+        <li>Standard building permit process applies (structural, electrical, plumbing)</li>
+        <li>Must still meet local setbacks and lot coverage requirements</li>
+        <li>Owner-occupancy requirements vary by municipality - we help you navigate</li>
+      </ul>
+
+      <div class="clarke-adu-body">
+        <p>Clarke Building Company stays current on all ADU zoning updates across the North Shore. We've guided clients through compliant ADU projects in West Newbury, Georgetown, Boxford, Rowley, and Newburyport.</p>
+      </div>
+
+      <a href="https://clarkebuildingcompany.com/contact/" class="clarke-adu-inline-cta">
+        Ask Us About ADU Rules in Your Town
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       ADU TYPES (dark section)
+       ============================================ -->
+  <section class="clarke-adu-types">
+    <div class="clarke-adu-container clarke-adu-types-inner">
+      <h2 class="clarke-adu-types-h2">Types of ADUs We Build in Massachusetts</h2>
+
+      <div class="clarke-adu-type-cards">
+
+        <div class="clarke-adu-type-card">
+          <h3>Garage Conversion ADUs</h3>
+          <p>One of the most cost-effective ADU options, a garage conversion repurposes your existing attached or detached garage into a fully functional living unit. Clarke Building handles insulation, HVAC, electrical upgrades, egress windows, and bathroom addition - turning underused square footage into rentable or livable space.</p>
+          <p class="clarke-adu-type-ideal">Ideal for: Homeowners with a detached or oversized attached garage who want to minimize excavation or site work.</p>
+        </div>
+
+        <div class="clarke-adu-type-card">
+          <h3>Backyard Cottage / Detached ADU</h3>
+          <p>A detached backyard cottage is built as a standalone structure on your property - separate from the main house with its own entrance, utilities, and address. These offer maximum privacy for both the homeowner and ADU occupant.</p>
+          <p class="clarke-adu-type-ideal">Ideal for: Rental income generation or housing adult children or parents with complete independence.</p>
+        </div>
+
+        <div class="clarke-adu-type-card">
+          <h3>Basement Conversion ADUs</h3>
+          <p>Converting an existing basement into a legal ADU requires egress, ceiling height compliance, waterproofing, and proper HVAC. Clarke Building has extensive experience transforming underutilized basements into bright, code-compliant apartments - often the lowest-cost ADU path.</p>
+          <p class="clarke-adu-type-ideal">Ideal for: Homes with walkout basements or adequate ceiling height (7'+ preferred).</p>
+        </div>
+
+        <div class="clarke-adu-type-card">
+          <h3>Attached Addition ADUs</h3>
+          <p>An addition-based ADU expands the footprint of your home with a connected but separately accessed living unit. This approach gives you full design control over size, layout, and finishes.</p>
+          <p class="clarke-adu-type-ideal">Ideal for: Homeowners who want a larger ADU or whose lot doesn't support a detached structure.</p>
+          <a href="https://clarkebuildingcompany.com/additions/" style="color: var(--color-accent); font-weight: 500; font-size: 14px; border-bottom: 1px solid rgba(201,169,110,0.3); margin-top: 8px; display: inline-block;">See our addition work</a>
+        </div>
+
+      </div>
+
+      <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/Accessory-Dwelling-Unit-scaled.webp" alt="" width="720" height="480" class="clarke-adu-photo" loading="lazy" decoding="async">
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PERMITTING PROCESS
+       ============================================ -->
+  <section class="clarke-adu-section-light">
+    <div class="clarke-adu-container">
+      <h2 class="clarke-adu-h2">ADU Permitting in Massachusetts: What to Expect</h2>
+
+      <h3 class="clarke-adu-h3" style="margin-top: 0;">Navigating Permits in West Newbury, Newburyport &amp; Essex County</h3>
+      <div class="clarke-adu-body">
+        <p>The permitting process for ADUs in Massachusetts involves multiple departments. Clarke Building manages the full process on your behalf:</p>
+      </div>
+
+      <ul class="clarke-adu-checklist">
+        <li><strong>Zoning Review</strong> - Confirm by-right eligibility under the Affordable Homes Act or local bylaw</li>
+        <li><strong>Architectural Plans</strong> - Full construction drawings prepared for permit submission</li>
+        <li><strong>Building Permit</strong> - Filed with your local building department (West Newbury, Amesbury, etc.)</li>
+        <li><strong>Electrical &amp; Plumbing Permits</strong> - Coordinated with licensed subcontractors</li>
+        <li><strong>Septic / Title 5 Assessment</strong> - Required in non-sewered areas (see below)</li>
+        <li><strong>Inspections</strong> - Foundation, framing, insulation, electrical, plumbing, final</li>
+        <li><strong>Certificate of Occupancy</strong> - Required for legal rental or habitation</li>
+      </ul>
+
+      <div class="clarke-adu-body">
+        <p><strong>Typical permitting timeline:</strong> 6-12 weeks depending on municipality and plan complexity.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SEPTIC CONSIDERATIONS
+       ============================================ -->
+  <section class="clarke-adu-section-white">
+    <div class="clarke-adu-container">
+      <h2 class="clarke-adu-h2">ADU Septic Requirements: What West Newbury Homeowners Need to Know</h2>
+      <div class="clarke-adu-body">
+        <p>Many North Shore communities - including West Newbury, Boxford, Georgetown, and Rowley - rely on private septic systems rather than municipal sewer. Adding an ADU increases the number of bedrooms counted toward septic load, which may trigger a Title 5 review and potential septic upgrade.</p>
+
+        <p>Clarke Building coordinates directly with licensed septic engineers to assess your current system's capacity before any ADU design is finalized. In some cases, a shared or expanded system can accommodate the new unit without a full replacement. We factor this into your project budget from day one - no surprise costs mid-project.</p>
+
+        <p><strong>If you're in a non-sewered area, we recommend a septic assessment as one of the first steps in your ADU feasibility review.</strong></p>
+      </div>
+
+      <a href="https://clarkebuildingcompany.com/contact/" class="clarke-adu-inline-cta">
+        Let's Talk Septic &amp; ADU Feasibility
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PRICING
+       ============================================ -->
+  <section class="clarke-adu-pricing">
+    <div class="clarke-adu-container clarke-adu-pricing-inner">
+      <h2 class="clarke-adu-pricing-h2">How Much Does an ADU Cost in Massachusetts?</h2>
+      <p class="clarke-adu-pricing-sub">ADU costs vary based on type, size, finishes, and site conditions. Here's a transparent overview for quality construction in the Greater Newburyport / North Shore area:</p>
+
+      <table class="clarke-adu-price-table">
+        <thead>
+          <tr>
+            <th>ADU Type</th>
+            <th>Estimated Cost</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basement Conversion</td>
+            <td>$90K - $175K</td>
+            <td>Depends on egress, ceiling height, waterproofing</td>
+          </tr>
+          <tr>
+            <td>Garage Conversion</td>
+            <td>$110K - $200K</td>
+            <td>Includes HVAC, electrical, plumbing, finishes</td>
+          </tr>
+          <tr>
+            <td>Attached Addition ADU</td>
+            <td>$200K - $325K</td>
+            <td>Full addition with separate entrance and utilities</td>
+          </tr>
+          <tr>
+            <td>Detached Backyard Cottage</td>
+            <td>$225K - $350K</td>
+            <td>New construction; most design flexibility</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="clarke-adu-pricing-note"><strong>Starting construction cost:</strong> ~$275/sq ft for quality, well-detailed ADUs</p>
+      <p class="clarke-adu-pricing-note"><strong>Full turnkey range (design to CO):</strong> $225,000-$350,000 for a complete detached or addition ADU</p>
+
+      <h3 class="clarke-adu-included-h3">What's Included in Clarke Building's ADU Pricing</h3>
+      <ul class="clarke-adu-included-list">
+        <li>Design coordination and architectural drawings</li>
+        <li>Full permit coordination</li>
+        <li>Site work and foundation</li>
+        <li>Framing, roofing, windows and doors</li>
+        <li>Insulation and energy code compliance</li>
+        <li>Electrical, plumbing, HVAC</li>
+        <li>Interior finishes (flooring, cabinetry, fixtures)</li>
+        <li>Final walkthrough and punch list</li>
+      </ul>
+
+      <div class="clarke-adu-pricing-philosophy">
+        <p>We do not cut corners to hit a low number. Our ADU clients are investing in real estate - the quality of construction matters.</p>
+      </div>
+
+      <div style="margin-top: 28px;">
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-adu-btn-primary" style="box-shadow: 0 4px 20px rgba(139,39,39,0.3);">
+          Request an ADU Estimate
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       IS AN ADU RIGHT FOR YOU?
+       ============================================ -->
+  <section class="clarke-adu-section-light">
+    <div class="clarke-adu-container">
+      <h2 class="clarke-adu-h2">Is an ADU Right for You?</h2>
+
+      <div class="clarke-adu-audience-cards">
+        <div class="clarke-adu-audience-card">
+          <h3>In-Law Suite / Aging-in-Place</h3>
+          <p>Keep parents or in-laws close while maintaining privacy. An ADU eliminates assisted living costs and keeps family connected - with a private, dignified space designed for accessibility if needed.</p>
+        </div>
+        <div class="clarke-adu-audience-card">
+          <h3>Rental Income</h3>
+          <p>A well-built ADU in Essex County can generate $1,500-$2,500/month in rental income, providing long-term financial security. Many clients recover their investment within 8-12 years through rental revenue alone.</p>
+        </div>
+        <div class="clarke-adu-audience-card">
+          <h3>Adult Children / Boomerang Generation</h3>
+          <p>Give your adult children an affordable, private space on your property while they save for their own home - without sharing walls with the main house.</p>
+        </div>
+        <div class="clarke-adu-audience-card">
+          <h3>Multi-Generational Households</h3>
+          <p>Build for today's needs with a space that can shift roles over time: parent suite today, rental unit tomorrow, caretaker housing later.</p>
+        </div>
+      </div>
+
+      <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/Basement-Accessory-Dwelling-Unit-scaled.webp" alt="" width="720" height="480" class="clarke-adu-photo" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       RELATED SERVICES
+       ============================================ -->
+  <section class="clarke-adu-section-white">
+    <div class="clarke-adu-container">
+      <h2 class="clarke-adu-h2">Related Clarke Building Services</h2>
+      <div class="clarke-adu-body">
+        <p>Building an ADU often pairs naturally with other home improvement projects. Explore how we can help:</p>
+        <p><a href="https://clarkebuildingcompany.com/additions/">Room Additions</a> - Expand your home's footprint with a quality addition</p>
+        <p><a href="https://clarkebuildingcompany.com/new-construction/">New Construction</a> - Build a new home or structure from the ground up</p>
+        <p><a href="https://clarkebuildingcompany.com/projects/">Our Projects</a> - See ADUs and additions we've completed for North Shore homeowners</p>
+        <p><a href="https://clarkebuildingcompany.com/contact/">Contact Us</a> - Schedule your free ADU consultation</p>
+      </div>
+
+      <a href="https://clarkebuildingcompany.com/services/" class="clarke-adu-btn-secondary-light" style="margin-top: 20px;">
+        View All Services
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FAQ
+       ============================================ -->
+  <section class="clarke-adu-section-light" style="padding-top: 0;">
+    <div class="clarke-adu-container">
+      <h2 class="clarke-adu-h2">Frequently Asked Questions About ADUs in Massachusetts</h2>
+
+      <details class="clarke-adu-faq-item">
+        <summary>Is an ADU legal in West Newbury, MA?</summary>
+        <div class="clarke-adu-faq-a">Yes. Under the Massachusetts Affordable Homes Act (2024), ADUs under 900 sq ft are permitted by right on single-family lots statewide. Local setback and lot coverage rules still apply. Clarke Building will confirm your lot's eligibility before any design work begins.</div>
+      </details>
+
+      <details class="clarke-adu-faq-item">
+        <summary>Do I need a special permit to build an ADU in Massachusetts?</summary>
+        <div class="clarke-adu-faq-a">Not for units under 900 sq ft, thanks to the 2024 Affordable Homes Act. You will still need standard building, electrical, and plumbing permits, which we manage on your behalf.</div>
+      </details>
+
+      <details class="clarke-adu-faq-item">
+        <summary>How long does it take to build an ADU?</summary>
+        <div class="clarke-adu-faq-a">Most ADU projects take 6-12 months from initial consultation to certificate of occupancy, including design, permitting, and construction phases.</div>
+      </details>
+
+      <details class="clarke-adu-faq-item">
+        <summary>What's the ROI on an ADU in Massachusetts?</summary>
+        <div class="clarke-adu-faq-a">With North Shore rental demand strong, a well-built ADU can generate $1,500-$2,500/month. Many homeowners see full cost recovery within 8-12 years while also increasing property value.</div>
+      </details>
+
+      <details class="clarke-adu-faq-item">
+        <summary>What happens to my septic system if I add an ADU?</summary>
+        <div class="clarke-adu-faq-a">In non-sewered communities like West Newbury, adding an ADU counts as additional bedroom load. A Title 5 assessment may be required. We coordinate with licensed septic engineers early in the project so there are no surprises.</div>
+      </details>
+
+      <details class="clarke-adu-faq-item">
+        <summary>Can I rent my ADU on a short-term basis (Airbnb)?</summary>
+        <div class="clarke-adu-faq-a">Short-term rental rules vary by municipality. We recommend checking with your town before planning for STR use. Long-term rental is the most reliable and universally permissible option.</div>
+      </details>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CTA BAND
+       ============================================ -->
+  <section class="clarke-adu-cta-band">
+    <div class="clarke-adu-container clarke-adu-cta-inner">
+      <h2 class="clarke-adu-cta-h2">Ready to Build Your ADU? Let's Talk.</h2>
+      <p class="clarke-adu-cta-text">Clarke Building Company has been building quality homes and additions across the North Shore for years. We bring the same craftsmanship and transparency to every ADU project - from your first feasibility question to the day you hand over the keys.</p>
+      <p class="clarke-adu-cta-text">Call or email us today to schedule your free ADU consultation.</p>
+      <p class="clarke-adu-cta-area">We serve West Newbury, Newburyport, Amesbury, Salisbury, Georgetown, Boxford, Rowley, and surrounding Essex County communities.</p>
+      <div class="clarke-adu-cta-buttons">
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-adu-btn-primary">
+          Schedule a Free Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="https://clarkebuildingcompany.com/projects/" class="clarke-adu-btn-secondary">See Our Projects</a>
+      </div>
+    </div>
+  </section>
+
+</div>
