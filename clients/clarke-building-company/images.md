@@ -1,7 +1,7 @@
 # Clarke Building Company - Image Library
 
 **Source:** WordPress Media Library (lnao7zjp0y.wpdns.site)
-**Last Updated:** March 5, 2026
+**Last Updated:** March 6, 2026
 **Format:** All images are .webp unless noted
 
 ---
@@ -208,15 +208,28 @@
 
 ---
 
+## Stock / Lifestyle Exteriors
+
+| Description | URL |
+|-------------|-----|
+| Big home with cloudy sky | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/big-home-with-cloudy-sky-2026-01-11-10-26-53-utc-scaled.jpg |
+| Houses in suburb at summer - North America (v1) | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/houses-in-suburb-at-summer-in-the-north-america-l-2026-01-11-10-27-00-utc-scaled.jpg |
+| Houses in suburb at summer - North America (v2) | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/houses-in-suburb-at-summer-in-the-north-america-l-2026-01-11-10-25-55-utc-scaled.jpg |
+| Luxury house in Vancouver, Canada | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/luxury-house-in-vancouver-canada-2026-01-11-10-25-31-utc-scaled.jpg |
+| Garage door - luxury house in Vancouver, Canada | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/garage-door-in-luxury-house-in-vancouver-canada-2026-01-11-10-28-06-utc-scaled.webp |
+| Turning a house into a stylish and comfortable home | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/turning-a-house-into-a-stylish-and-comfortable-hom-2026-01-09-10-54-22-utc-scaled.webp |
+
+---
+
 ## Usage Notes
 
 - **All images alt="" empty** - OTTO handles SEO alt text post-deployment
 - **Always include** `width`, `height`, and `loading="lazy"` attributes (use `loading="eager"` for above-fold images only)
 - **Bathroom images available** but bathrooms are excluded from marketing per client direction - use only for portfolio/gallery pages if needed
-- **One .jpg file** in the collection (dark-kitchen-wide-view-with-dining.jpg) - all others are .webp
+- **One .jpg file** in the project photos (dark-kitchen-wide-view-with-dining.jpg) and **four .jpg files** in the stock exteriors section - all others are .webp
 - **Staging domain** (lnao7zjp0y.wpdns.site) - update URLs if production domain changes
 
 ---
 
 *Image Library - Clarke Building Company*
-*Sourced from WordPress Media Library, March 5, 2026*
+*Sourced from WordPress Media Library, March 6, 2026*
