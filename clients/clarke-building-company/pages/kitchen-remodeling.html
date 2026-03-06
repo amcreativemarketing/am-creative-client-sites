@@ -1,0 +1,679 @@
+<!-- CLARKE BUILDING COMPANY - KITCHEN REMODELING PAGE
+     Page: /kitchen-remodeling/
+     Design: Craftsman Editorial (A+C Hybrid)
+     Built: March 2026 by AM Creative
+     
+     REDIRECT NOTE: 301 from /service-kitchen-renovation/ to /kitchen-remodeling/
+     
+     INTERNAL LINKS:
+     Domain: https://clarkebuildingcompany.com
+     Links: /contact/, /projects/, /renovations/, /additions/, /adu/, /services/, /about-us/
+     
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+     All img alt="" left empty per OTTO workflow.
+-->
+
+<style>
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+.clarke-kit-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-kit-wrap *, .clarke-kit-wrap *::before, .clarke-kit-wrap *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+.clarke-kit-wrap img { max-width: 100%; height: auto; display: block; }
+.clarke-kit-wrap a { text-decoration: none; }
+
+.clarke-kit-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+}
+@media (min-width: 768px) { .clarke-kit-container { padding: 0 32px; } }
+
+@keyframes clarkeFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-fade { animation: clarkeFadeUp 0.8s ease forwards; }
+.clarke-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+.clarke-fade-d4 { animation-delay: 0.55s; opacity: 0; }
+
+
+/* ======== HERO (two-column, matches services hub) ======== */
+.clarke-kit-hero {
+  background: var(--color-secondary);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 48px;
+}
+@media (min-width: 768px) { .clarke-kit-hero { padding: 80px 0 64px; } }
+.clarke-kit-hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-kit-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.018) 100px, rgba(201,169,110,0.018) 101px);
+  pointer-events: none; z-index: 0;
+}
+.clarke-kit-hero-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 40px;
+}
+@media (min-width: 960px) {
+  .clarke-kit-hero-inner {
+    display: grid; grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px; align-items: center;
+  }
+}
+
+.clarke-kit-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent); margin-bottom: 20px; width: fit-content;
+}
+.clarke-kit-hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.clarke-kit-h1 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 32px;
+  line-height: 1.12; color: var(--color-text-inverse);
+  margin-bottom: 16px; letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-kit-h1 { font-size: clamp(36px, 4.5vw, 50px); } }
+.clarke-kit-hero-sub {
+  font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
+  margin-bottom: 28px; max-width: 560px;
+}
+.clarke-kit-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Hero image with brass offset frame */
+.clarke-kit-hero-img-wrap {
+  position: relative; padding: 16px;
+}
+.clarke-kit-hero-img-wrap::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: calc(100% - 16px); height: calc(100% - 16px);
+  border: 1.5px solid rgba(201,169,110,0.3);
+  border-radius: var(--radius-lg); z-index: 0;
+}
+.clarke-kit-hero-img {
+  position: relative; z-index: 1;
+  border-radius: var(--radius-lg);
+  width: 100%; height: auto; object-fit: cover;
+}
+.clarke-kit-stat-badge {
+  position: absolute; bottom: 0; left: 0;
+  background: var(--color-primary); color: #fff;
+  padding: 14px 18px; border-radius: var(--radius-lg);
+  box-shadow: 0 8px 28px rgba(139,39,39,0.35);
+  z-index: 2; text-align: center;
+}
+.clarke-kit-stat-num {
+  font-family: var(--font-heading); font-size: 28px; line-height: 1; display: block;
+}
+.clarke-kit-stat-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; opacity: 0.85; display: block; margin-top: 4px;
+}
+
+
+/* ======== TRUST BAR ======== */
+.clarke-kit-trust-bar {
+  background: var(--color-bg-white); border-bottom: 1px solid var(--color-border); padding: 20px 0;
+}
+.clarke-kit-trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 0;
+}
+.clarke-kit-trust-item {
+  display: flex; align-items: center; gap: 8px; padding: 6px 20px;
+  font-size: 13px; font-weight: 600; color: var(--color-text-secondary); letter-spacing: 0.02em;
+}
+.clarke-kit-trust-item svg { width: 18px; height: 18px; color: var(--color-accent); flex-shrink: 0; }
+@media (min-width: 768px) {
+  .clarke-kit-trust-item { border-right: 1px solid var(--color-border); }
+  .clarke-kit-trust-item:last-child { border-right: none; }
+}
+
+
+/* ======== INTRO ======== */
+.clarke-kit-intro { background: var(--color-bg-primary); padding: 56px 0; }
+@media (min-width: 768px) { .clarke-kit-intro { padding: 72px 0; } }
+.clarke-kit-intro-text { max-width: 780px; margin: 0 auto; font-size: 17px; line-height: 1.8; }
+.clarke-kit-intro-text p { margin-bottom: 20px; }
+.clarke-kit-intro-text p:last-child { margin-bottom: 0; }
+.clarke-kit-intro-text a {
+  color: var(--color-primary); font-weight: 500;
+  border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
+}
+.clarke-kit-intro-text a:hover { border-color: var(--color-primary); }
+
+
+/* ======== SECTION HEADINGS ======== */
+.clarke-kit-section-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-kit-section-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-kit-section-sub {
+  font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
+  margin-bottom: 36px; max-width: 780px;
+}
+
+
+/* ======== SCOPE OF WORK ======== */
+.clarke-kit-scope { background: var(--color-bg-white); padding: 56px 0; }
+@media (min-width: 768px) { .clarke-kit-scope { padding: 80px 0; } }
+
+.clarke-kit-scope-item { padding: 28px 0; border-bottom: 1px solid var(--color-border); }
+.clarke-kit-scope-item:last-child { border-bottom: none; }
+.clarke-kit-scope-item h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 18px;
+  color: var(--color-text-heading); margin-bottom: 10px; line-height: 1.3;
+}
+.clarke-kit-scope-item p { font-size: 16px; line-height: 1.8; max-width: 780px; }
+
+/* Inline image (centered as visual focal point) */
+.clarke-kit-inline-img {
+  display: block;
+  margin: 32px auto;
+  border-radius: var(--radius-lg);
+  max-width: 400px;
+  height: auto;
+}
+
+/* Process section images (side by side, centered) */
+.clarke-kit-process-images {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 36px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clarke-kit-process-img {
+  border-radius: var(--radius-lg);
+  width: calc(50% - 8px);
+  max-width: 270px;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* CTA band image (centered) */
+.clarke-kit-cta-band .clarke-kit-inline-img {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  margin: 24px auto;
+}
+
+
+/* ======== PRICING ======== */
+.clarke-kit-pricing {
+  background: var(--color-secondary); position: relative; overflow: hidden; padding: 56px 0;
+}
+@media (min-width: 768px) { .clarke-kit-pricing { padding: 80px 0; } }
+.clarke-kit-pricing::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-kit-pricing-inner { position: relative; z-index: 1; }
+.clarke-kit-pricing-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 12px;
+}
+@media (min-width: 768px) { .clarke-kit-pricing-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-kit-pricing-sub {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.68);
+  margin-bottom: 40px; max-width: 780px;
+}
+
+.clarke-kit-tiers { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 768px) { .clarke-kit-tiers { grid-template-columns: 1fr 1fr 1fr; gap: 24px; } }
+.clarke-kit-tier {
+  background: rgba(28, 36, 52, 0.85); backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); padding: 28px 26px;
+  border-radius: var(--radius-lg); border: 1px solid rgba(201,169,110,0.1);
+  border-top: 3px solid var(--color-accent);
+}
+.clarke-kit-tier-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px;
+}
+.clarke-kit-tier h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-inverse); margin-bottom: 6px; line-height: 1.3;
+}
+.clarke-kit-tier-price {
+  font-family: var(--font-heading); font-size: 24px; color: var(--color-accent);
+  margin-bottom: 14px; line-height: 1;
+}
+.clarke-kit-tier p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.6); }
+
+.clarke-kit-pricing-philosophy {
+  margin-top: 40px; padding-top: 32px;
+  border-top: 1px solid rgba(201,169,110,0.12); max-width: 780px;
+}
+.clarke-kit-pricing-philosophy h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-inverse); margin-bottom: 12px;
+}
+.clarke-kit-pricing-philosophy p {
+  font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.62); margin-bottom: 16px;
+}
+.clarke-kit-pricing-philosophy p:last-child { margin-bottom: 0; }
+.clarke-kit-pricing-philosophy a {
+  color: var(--color-accent); font-weight: 500;
+  border-bottom: 1px solid rgba(201,169,110,0.3); transition: border-color 0.2s ease;
+}
+.clarke-kit-pricing-philosophy a:hover { border-color: var(--color-accent); }
+
+
+/* ======== PROCESS ======== */
+.clarke-kit-process {
+  background: var(--color-bg-primary); padding: 56px 0; position: relative;
+}
+@media (min-width: 768px) { .clarke-kit-process { padding: 80px 0; } }
+.clarke-kit-process::before {
+  content: ''; position: absolute; inset: 0;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(28,36,52,0.015) 30px, rgba(28,36,52,0.015) 31px);
+  pointer-events: none;
+}
+.clarke-kit-process-inner { position: relative; z-index: 1; }
+
+.clarke-kit-testimonial {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent); border-radius: var(--radius-lg);
+  padding: 24px 28px; margin-bottom: 40px; max-width: 680px;
+}
+.clarke-kit-testimonial-stars { display: flex; gap: 3px; margin-bottom: 12px; }
+.clarke-kit-testimonial-stars svg {
+  width: 16px; height: 16px; color: var(--color-accent); fill: var(--color-accent);
+}
+.clarke-kit-testimonial blockquote {
+  font-size: 16px; line-height: 1.7; color: var(--color-text-primary);
+  font-style: italic; margin-bottom: 10px;
+}
+.clarke-kit-testimonial-attr {
+  font-size: 13px; font-weight: 600; color: var(--color-text-secondary);
+}
+
+.clarke-kit-steps { counter-reset: step; }
+.clarke-kit-step {
+  padding: 24px 0; border-bottom: 1px solid var(--color-border);
+  counter-increment: step; display: flex; gap: 20px; align-items: start;
+}
+.clarke-kit-step:last-child { border-bottom: none; }
+.clarke-kit-step-num {
+  width: 40px; height: 40px; min-width: 40px; border-radius: 50%;
+  background: var(--color-primary); color: var(--color-text-inverse);
+  font-family: var(--font-heading); font-size: 18px;
+  display: flex; align-items: center; justify-content: center; margin-top: 2px;
+}
+.clarke-kit-step h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-heading); margin-bottom: 8px; line-height: 1.3;
+}
+.clarke-kit-step p { font-size: 15px; line-height: 1.8; }
+
+
+/* ======== CTA BAND ======== */
+.clarke-kit-cta-band {
+  background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .clarke-kit-cta-band { padding: 72px 0; } }
+.clarke-kit-cta-inner { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; text-align: center; }
+.clarke-kit-cta-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-kit-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-kit-cta-text {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 16px;
+}
+.clarke-kit-cta-text a {
+  color: rgba(255,255,255,0.95); font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.35); transition: border-color 0.2s ease;
+}
+.clarke-kit-cta-text a:hover { border-color: #fff; }
+.clarke-kit-cta-testimonial {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  border-top: 3px solid var(--color-accent); border-radius: var(--radius-lg);
+  padding: 20px 24px; margin: 0 auto 28px; max-width: 560px; text-align: left;
+}
+.clarke-kit-cta-testimonial blockquote {
+  font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.82);
+  font-style: italic; margin-bottom: 8px;
+}
+.clarke-kit-cta-testimonial .clarke-kit-testimonial-attr { color: rgba(255,255,255,0.5); }
+.clarke-kit-cta-buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+
+/* ======== BUTTONS ======== */
+.clarke-kit-btn-primary {
+  background: var(--color-primary); color: #fff; padding: 16px 36px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-kit-btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+.clarke-kit-hero .clarke-kit-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
+
+.clarke-kit-btn-secondary {
+  background: transparent; border: 2px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.75); padding: 14px 32px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-kit-btn-secondary:hover {
+  border-color: var(--color-accent); color: var(--color-accent); background: rgba(201,169,110,0.06);
+}
+
+.clarke-kit-cta-band .clarke-kit-btn-primary {
+  background: var(--color-bg-white); color: var(--color-primary);
+}
+.clarke-kit-cta-band .clarke-kit-btn-primary:hover {
+  background: #fff; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.clarke-kit-cta-band .clarke-kit-btn-secondary {
+  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85);
+}
+.clarke-kit-cta-band .clarke-kit-btn-secondary:hover {
+  border-color: #fff; color: #fff; background: rgba(255,255,255,0.08);
+}
+</style>
+
+
+<div class="clarke-kit-wrap">
+
+  <!-- HERO (two-column, matches services hub) -->
+  <section class="clarke-kit-hero">
+    <div class="clarke-kit-container">
+      <div class="clarke-kit-hero-inner">
+
+        <!-- LEFT: Copy -->
+        <div>
+          <div class="clarke-kit-hero-badge clarke-fade clarke-fade-d1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Kitchen Remodeling &bull; North Shore, MA
+          </div>
+          <h1 class="clarke-kit-h1 clarke-fade clarke-fade-d2">Kitchen Remodeling in West Newbury and the North Shore</h1>
+          <p class="clarke-kit-hero-sub clarke-fade clarke-fade-d3">Custom kitchens built around how you actually cook and live - not a showroom template. Dave Clarke manages every project from the first conversation to the final walkthrough.</p>
+          <div class="clarke-kit-hero-ctas clarke-fade clarke-fade-d4">
+            <a href="https://clarkebuildingcompany.com/contact/" class="clarke-kit-btn-primary">
+              Request an Estimate
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="https://clarkebuildingcompany.com/projects/" class="clarke-kit-btn-secondary">See Recent Kitchen Projects</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Hero Image -->
+        <div class="clarke-kit-hero-img-wrap clarke-fade clarke-fade-d3">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-windows-starfish-ocean-view.webp" alt="" width="640" height="480" class="clarke-kit-hero-img" loading="eager">
+          <div class="clarke-kit-stat-badge">
+            <span class="clarke-kit-stat-num">$25K</span>
+            <span class="clarke-kit-stat-label">Starting From</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TRUST BAR -->
+  <section class="clarke-kit-trust-bar">
+    <div class="clarke-kit-container">
+      <div class="clarke-kit-trust-row">
+        <div class="clarke-kit-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="clarke-kit-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Owner-Operated
+        </div>
+        <div class="clarke-kit-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          5-Star Rated
+        </div>
+        <div class="clarke-kit-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Transparent Pricing
+        </div>
+        <div class="clarke-kit-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          North Shore, MA
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="clarke-kit-intro">
+    <div class="clarke-kit-container">
+      <div class="clarke-kit-intro-text">
+        <p>Most kitchens on the North Shore were designed decades ago for how people used to cook. The layout is wrong, the storage is in the wrong places, and the countertops have seen better days. Clarke Building Company works with homeowners in West Newbury and across the North Shore to fix that - not with a catalog approach, but with a real conversation about how you use the space.</p>
+        <p>Dave Clarke handles kitchen remodeling personally. He'll walk your kitchen before anything gets scoped, ask the right questions, and put together an estimate that reflects the actual work - no lowball number to win the job, no surprises when the bill comes. Whether you're replacing countertops or tearing everything down to the studs, the process stays the same: straight talk, solid work, and a kitchen that fits your home.</p>
+        <p>This work is part of Clarke Building's broader <a href="https://clarkebuildingcompany.com/renovations/">home renovations and remodeling</a> focus on the North Shore. <a href="https://clarkebuildingcompany.com/services/">View all of our residential construction services</a> or <a href="https://clarkebuildingcompany.com/about-us/">meet Dave Clarke</a> to learn more about the company.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SCOPE OF WORK -->
+  <section class="clarke-kit-scope">
+    <div class="clarke-kit-container">
+      <h2 class="clarke-kit-section-h2">What a Kitchen Remodel with Clarke Building Actually Includes</h2>
+      <p class="clarke-kit-section-sub">Every kitchen project is different. Some homeowners need a complete tear-out and rebuild. Others are happy with the bones and just need updated surfaces. Clarke Building handles the full range - here's what each type of work involves.</p>
+
+      <div class="clarke-kit-scope-item">
+        <h3>Full Gut Renovation</h3>
+        <p>A full gut renovation means stripping the kitchen back to the studs and starting over. Everything comes out - cabinets, countertops, flooring, drywall, electrical, plumbing - and goes back in to a new plan built around your layout preferences and how the space connects to the rest of your home. This is the right choice when the current kitchen is beyond cosmetic improvement, when you're changing the footprint, or when systems like wiring and plumbing need to be brought up to code. Clarke Building coordinates all trades under one roof and manages the sequence so nothing gets out of order.</p>
+      </div>
+
+      <div class="clarke-kit-scope-item">
+        <h3>Cabinet Refacing</h3>
+        <p>If your cabinet boxes are structurally sound and the layout works, refacing is a practical way to modernize the kitchen without the cost or disruption of a full replacement. Clarke Building replaces the door fronts, drawer fronts, and hardware, and applies new veneer or solid wood to the exposed cabinet frames. The result looks like new cabinetry at a fraction of the full replacement cost. This works well for homeowners who are happy with their storage layout but want the kitchen to look and feel current.</p>
+      </div>
+
+      <div class="clarke-kit-scope-item">
+        <h3>Countertop Replacement</h3>
+        <p>Countertops take more abuse than any other surface in the kitchen, and replacing them is one of the highest-impact upgrades you can make. Clarke Building installs quartz, granite, quartzite, butcher block, and solid surface countertops, and works with your preferred fabricator or can recommend one. The process includes removal of the existing top, any necessary substrate repairs, templating, and final installation with tight seams and proper overhang. Countertop replacement is often paired with a backsplash update and new sink or faucet - Clarke can coordinate all of it.</p>
+      </div>
+
+      <div class="clarke-kit-scope-item">
+        <h3>Layout Changes and Structural Work</h3>
+        <p>A kitchen that doesn't flow right isn't fixed by new cabinets - it's fixed by changing the layout. Clarke Building handles wall removals, beam installations, island additions and relocations, and other structural changes that open up a kitchen and make it work better. This type of work requires permits, engineering in some cases, and careful coordination with mechanical trades. Dave scopes this work accurately from the start so there are no discoveries mid-project that change the budget.</p>
+      </div>
+
+      <div class="clarke-kit-scope-item">
+        <h3>Appliance Upgrades and Coordination</h3>
+        <p>New appliances often drive a kitchen remodel - a range that requires a new gas line, a hood that needs custom framing, a refrigerator that changes the cabinet configuration. Clarke Building coordinates appliance selection with the rest of the design so rough-in locations, electrical circuits, and cabinet sizing are all planned together before demo starts. Clarke handles the rough-in coordination with licensed plumbers and electricians and manages the final appliance installation. You don't have to figure out which contractor does what - that's already handled.</p>
+      </div>
+
+      <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-toward-fridge-living-room.webp" alt="" width="400" height="300" class="clarke-kit-inline-img" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+
+  <!-- PRICING -->
+  <section class="clarke-kit-pricing">
+    <div class="clarke-kit-container clarke-kit-pricing-inner">
+      <h2 class="clarke-kit-pricing-h2">What Does a Kitchen Remodel Cost on the North Shore?</h2>
+      <p class="clarke-kit-pricing-sub">Pricing is the first thing most homeowners want to know, and it's a fair question. Kitchen remodeling on the North Shore typically ranges from $25,000 to $80,000 depending on the scope of work, the materials selected, and whether any structural or mechanical changes are involved.</p>
+
+      <div class="clarke-kit-tiers">
+        <div class="clarke-kit-tier">
+          <div class="clarke-kit-tier-label">Tier 1</div>
+          <h3>Cabinet Refacing and Countertop Refresh</h3>
+          <div class="clarke-kit-tier-price">$25K - $35K</div>
+          <p>Surface-level upgrades: new cabinet doors and hardware, a countertop replacement, a new backsplash, and possibly a new sink or faucet. The layout stays the same, no walls move, and the major appliances are not replaced. A meaningful improvement without the disruption of a full renovation.</p>
+        </div>
+        <div class="clarke-kit-tier">
+          <div class="clarke-kit-tier-label">Tier 2</div>
+          <h3>New Cabinets, Countertops, and Layout Adjustments</h3>
+          <div class="clarke-kit-tier-price">$35K - $60K</div>
+          <p>Full cabinet replacement, new countertops and backsplash, updated lighting, and minor layout adjustments - moving a non-load-bearing wall, adding or resizing an island, or reconfiguring the pantry. Mechanical trades are typically involved for updated electrical and plumbing rough-ins.</p>
+        </div>
+        <div class="clarke-kit-tier">
+          <div class="clarke-kit-tier-label">Tier 3</div>
+          <h3>Full Gut Renovation with Layout Changes</h3>
+          <div class="clarke-kit-tier-price">$60K - $80K+</div>
+          <p>Complete demo, structural changes, new layout, custom or semi-custom cabinetry, premium countertop materials, a full appliance package, new flooring, and updated mechanical systems. These are significant projects that transform how the kitchen functions and connects to the rest of the home.</p>
+        </div>
+      </div>
+
+      <div class="clarke-kit-pricing-philosophy">
+        <h3>Pricing Philosophy</h3>
+        <p>These ranges reflect real North Shore project costs - not a number designed to get you to sign, with the real price revealed later. Clarke Building does not submit lowball bids. The estimate Dave puts together after walking your kitchen is based on the actual scope of work. If something changes during the project, you'll hear about it before it happens, not when you get the bill.</p>
+        <p>The only way to get an accurate number for your kitchen is to have Dave walk the space. Every kitchen is different, and a pricing formula won't account for what's behind your walls, the materials you want, or what you're trying to accomplish.</p>
+        <p><a href="https://clarkebuildingcompany.com/contact/">Ready to get a real number? Get in touch to schedule a walkthrough.</a></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROCESS -->
+  <section class="clarke-kit-process">
+    <div class="clarke-kit-container clarke-kit-process-inner">
+      <h2 class="clarke-kit-section-h2">How a Kitchen Remodel Works with Clarke Building</h2>
+      <p class="clarke-kit-section-sub">Kitchen remodeling has a lot of moving parts - trades, materials, lead times, permits. Here's exactly how Clarke Building runs a project from the first call to the last punch list item.</p>
+
+      <!-- Testimonial 1 - Kathy M. -->
+      <div class="clarke-kit-testimonial">
+        <div class="clarke-kit-testimonial-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"Dave went over all our options thoroughly. We knew exactly what we were getting before anything started."</blockquote>
+        <div class="clarke-kit-testimonial-attr">- Kathy M., West Newbury, MA</div>
+      </div>
+
+      <div class="clarke-kit-process-images">
+        <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-open-concept-wide-angle.webp" alt="" width="400" height="300" class="clarke-kit-process-img" loading="lazy" decoding="async">
+        <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-ocean-view-starfish-decor.webp" alt="" width="400" height="300" class="clarke-kit-process-img" loading="lazy" decoding="async">
+      </div>
+
+      <div class="clarke-kit-steps">
+        <div class="clarke-kit-step">
+          <div class="clarke-kit-step-num">1</div>
+          <div>
+            <h3>Initial Walkthrough and Conversation</h3>
+            <p>Before any numbers get discussed, Dave walks your kitchen in person. He's looking at the existing layout, the condition of the cabinets and surfaces, what the mechanical situation looks like, and how the kitchen connects to adjacent spaces. More importantly, he's listening - to what's not working, what you actually need, and what success looks like for this project.</p>
+          </div>
+        </div>
+        <div class="clarke-kit-step">
+          <div class="clarke-kit-step-num">2</div>
+          <div>
+            <h3>Scope Definition and Estimate</h3>
+            <p>After the walkthrough, Dave puts together a written scope and estimate that reflects what you discussed. This is not a preliminary ballpark - it's a detailed account of the work to be done, organized by phase. If there are options to consider (cabinet refacing vs. replacement, for example), those are presented with separate pricing so you can make an informed decision. You'll know what you're agreeing to before anything is signed.</p>
+          </div>
+        </div>
+        <div class="clarke-kit-step">
+          <div class="clarke-kit-step-num">3</div>
+          <div>
+            <h3>Design Coordination and Material Selection</h3>
+            <p>Once scope and budget are agreed on, the focus shifts to materials and design decisions. Cabinetry, countertop material and edge profile, backsplash, hardware, fixtures, flooring - all of these get locked in before demo starts. Clarke Building can coordinate with your designer or work directly with you on selections. Lead times on custom cabinetry and specialty materials are factored into the schedule, so nothing stalls the project mid-stream.</p>
+          </div>
+        </div>
+        <div class="clarke-kit-step">
+          <div class="clarke-kit-step-num">4</div>
+          <div>
+            <h3>Demo and Rough-In Trades</h3>
+            <p>Demo day is exactly what it sounds like: the existing kitchen comes out. Clarke Building manages the full demo and disposal, then brings in licensed plumbers and electricians for rough-in work - new drain and supply locations, updated electrical circuits, gas rough-in if applicable. This phase also includes any structural work: wall openings, beam installation, subfloor repairs. Inspections are scheduled and completed before the project moves to the next phase.</p>
+          </div>
+        </div>
+        <div class="clarke-kit-step">
+          <div class="clarke-kit-step-num">5</div>
+          <div>
+            <h3>Cabinet and Countertop Installation</h3>
+            <p>With rough-ins inspected and walls closed, cabinetry goes in first - set level, shimmed, and secured to the wall framing. Countertop templating happens after cabinets are installed and confirmed in final position. The fabricated tops come back for installation, followed by backsplash tile, undermount sink setting, and any trim or filler work that completes the cabinet layout. Clarke Building handles the installation directly - this is not handed off to a subcontractor.</p>
+          </div>
+        </div>
+        <div class="clarke-kit-step">
+          <div class="clarke-kit-step-num">6</div>
+          <div>
+            <h3>Appliance Install and Finish Work</h3>
+            <p>With cabinets and countertops in place, appliances are installed and connected. Finish electrical (outlet covers, under-cabinet lighting, fixture installation) and finish plumbing (faucet, disposal, dishwasher) are completed by the licensed trades. Paint or finish work on walls, trim, and ceiling happens during this phase as well. This is when the kitchen starts to look finished, and Clarke Building stays on-site to coordinate the sequencing.</p>
+          </div>
+        </div>
+        <div class="clarke-kit-step">
+          <div class="clarke-kit-step-num">7</div>
+          <div>
+            <h3>Punch List and Final Walkthrough</h3>
+            <p>Before the project closes, Dave walks the kitchen with you and a punch list in hand. Every item that needs to be addressed - a door that doesn't close quite right, a gap that needs caulk, a drawer that needs adjustment - gets noted and corrected before the final invoice is issued. The final walkthrough is not a formality. It's the standard that determines when the project is actually done.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA BAND -->
+  <section class="clarke-kit-cta-band">
+    <div class="clarke-kit-container clarke-kit-cta-inner">
+      <h2 class="clarke-kit-cta-h2">Start Your Kitchen Remodel</h2>
+      <p class="clarke-kit-cta-text">If your kitchen isn't working for you, Clarke Building can change that. Dave will walk the space, talk through what's possible within your budget, and put together an estimate that tells you exactly what the project will cost. No pressure, no surprises - just a straight conversation about your kitchen and what it takes to fix it.</p>
+      <p class="clarke-kit-cta-text">Clarke Building also handles <a href="https://clarkebuildingcompany.com/additions/">house additions</a> and <a href="https://clarkebuildingcompany.com/adu/">ADU construction</a> for homeowners looking to expand beyond the kitchen. If you want to see the kind of work we do before picking up the phone, <a href="https://clarkebuildingcompany.com/projects/">see our recent work</a>.</p>
+
+      <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-island-ovens-living-area.webp" alt="" width="400" height="300" class="clarke-kit-inline-img" loading="lazy" decoding="async">
+
+      <!-- Testimonial 2 placeholder -->
+      <div class="clarke-kit-cta-testimonial">
+        <blockquote>[Placeholder - Pull kitchen remodel review from homepage hero before launch]</blockquote>
+        <div class="clarke-kit-testimonial-attr">- Client Name, Location</div>
+      </div>
+
+      <div class="clarke-kit-cta-buttons">
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-kit-btn-primary">
+          Request an Estimate
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="https://clarkebuildingcompany.com/projects/" class="clarke-kit-btn-secondary">See Recent Projects</a>
+      </div>
+    </div>
+  </section>
+
+</div>
