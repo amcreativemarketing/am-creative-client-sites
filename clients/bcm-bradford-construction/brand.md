@@ -149,13 +149,24 @@ Maintain clear space around the logo equal to the height of the "B" in Bradford.
 | Property | Value |
 | --- | --- |
 | Background | #FFCD57 (BCM Gold) |
-| Text Color | #1E293B (Dark Slate) |
+| Text Color | #060097 (BCM Navy) |
 | Font | Inter, 600 weight |
-| Padding | 20px 40px |
+| Padding | 16px 34px |
 | Border Radius | 9999px (pill) |
-| Hover | Scale to 95% or darken to #E5B84E |
+| Box Shadow | 0 4px 16px rgba(255, 205, 87, 0.3) |
+| Hover | Darken to #E5B84E, translateY(-2px), stronger shadow |
 
-### Secondary Button (Outline)
+### Secondary Button (Outline - on dark backgrounds)
+
+| Property | Value |
+| --- | --- |
+| Background | rgba(255, 255, 255, 0.15) |
+| Border | 2px solid rgba(255, 255, 255, 0.6) |
+| Text Color | #FFFFFF (White) |
+| Backdrop Filter | blur(6px) |
+| Hover | Fill white, text #060097 (Navy) |
+
+### Navy Outline (on light backgrounds)
 
 | Property | Value |
 | --- | --- |
@@ -163,6 +174,19 @@ Maintain clear space around the logo equal to the height of the "B" in Bradford.
 | Border | 2px solid #060097 |
 | Text Color | #060097 (BCM Navy) |
 | Hover | Fill with #060097, text white |
+
+### Navy Solid
+
+| Property | Value |
+| --- | --- |
+| Background | #060097 (BCM Navy) |
+| Text Color | #FFFFFF (White) |
+| Box Shadow | 0 2px 10px rgba(6, 0, 151, 0.2) |
+| Hover | Darken to #04006B, stronger shadow |
+
+### Button Specificity Note (WordPress)
+
+All button color rules must use `.bcm-[page] a.bcm-[page]-cta--variant` selector pattern to beat the global `a` color rule and prevent WordPress/Elementor link styles from overriding button text colors. The global `a:hover` rule should exclude CTAs with `:not(.bcm-[page]-cta)`.
 
 ---
 
@@ -262,6 +286,107 @@ Use this embed code for consultation/contact forms on BCM pages:
 
 ---
 
-*Brand Kit v1.4 | December 2025*
+## Premium Page Design System (v2 - March 2026)
+
+Design patterns established on the Portsmouth and Exeter NH ADU location pages. Use as the standard for all new BCM pages.
+
+### CSS Custom Properties
+
+```css
+:root {
+  --bcm-navy: #060097;
+  --bcm-navy-deep: #04006B;
+  --bcm-gold: #FFCD57;
+  --bcm-gold-hover: #E5B84E;
+  --bcm-gold-soft: rgba(255, 205, 87, 0.10);
+  --bcm-dark-slate: #1E293B;
+  --bcm-medium-gray: #67768E;
+  --bcm-light-gray: #F2F5F7;
+  --bcm-off-white: #F9FAFB;
+  --bcm-white: #FFFFFF;
+  --bcm-shadow-sm: 0 1px 3px rgba(30, 41, 59, 0.06), 0 1px 2px rgba(30, 41, 59, 0.03);
+  --bcm-shadow-md: 0 4px 20px rgba(30, 41, 59, 0.07), 0 2px 6px rgba(30, 41, 59, 0.04);
+  --bcm-shadow-lg: 0 12px 36px rgba(30, 41, 59, 0.09), 0 4px 12px rgba(30, 41, 59, 0.04);
+  --bcm-shadow-gold: 0 4px 16px rgba(255, 205, 87, 0.3);
+  --bcm-radius: 10px;
+  --bcm-radius-lg: 14px;
+}
+```
+
+### Typography Enhancements
+
+- H1: letter-spacing -0.025em
+- H2: letter-spacing -0.02em
+- Links: text-underline-offset 3px, text-decoration-thickness 1px
+- Font smoothing: -webkit-font-smoothing antialiased on root wrapper
+- Lead paragraph: 1.08rem, dark-slate color; subsequent body: 1.02rem, medium-gray
+
+### Hero Treatment
+
+- Multi-stop gradient overlay: `linear-gradient(170deg, rgba(4, 0, 107, 0.88) 0%, rgba(6, 0, 151, 0.6) 50%, rgba(30, 41, 59, 0.65) 100%)`
+- Hero badge: frosted glass pill above H1 (gold text, uppercase, letter-spacing 0.04em, backdrop-filter blur)
+- Sub-heading max-width 600px, centered within content area
+- Min-height 520px mobile, 580px tablet+
+
+### Trust Bar
+
+- Navy background with thin vertical dividers between items (rgba white 15%)
+- Uppercase, 0.82rem, 600 weight, letter-spacing 0.02em
+- Gold accent line underneath: `linear-gradient(90deg, navy, gold, navy)` or `(gold, white, gold)`
+- No pill badges - clean horizontal layout
+
+### Section Patterns
+
+- Padding: 72px mobile, 88px desktop
+- Section headers always centered, max-width 720px
+- Gold accent dash (48px wide, 3px, border-radius 2px) via h2::after on centered headers, left-aligned on split layouts
+- Alternate between white and off-white (#F9FAFB) backgrounds
+- Navy sections: gradient (170deg navy to navy-deep), radial gold glow in corner (0.07 opacity)
+
+### Card Design
+
+- Border: 1px solid light-gray with shadow-sm default
+- Hover: shadow-md + translateY(-2px) for standard cards, shadow-lg + translateY(-3px) for feature cards
+- Border-radius: 10px standard, 14px for larger cards
+- Image cards: overflow hidden with scale(1.04) transition on hover (0.6s ease)
+
+### Icon Boxes (Proof/Why Cards)
+
+- 44x44px, navy background, 10px border-radius
+- SVG icons: 20px, gold stroke
+- Paired with text in horizontal flex layout (gap 20px)
+
+### FAQ/Accordion Toggle
+
+- Circular indicator: 30x30px, gold-soft background, navy text
+- Expanded state: navy background, gold text
+- Active item: shadow-md + subtle navy border tint
+
+### Review Cards
+
+- Navy gradient header bar (stars left, author right, white text)
+- Body: italic text with 3px gold left border + 20px padding-left
+- Equal-height flex on desktop, balanced text lengths
+
+### Pricing Disclaimer Standard
+
+All pricing sections must include: "Ranges shown are general estimates - actual pricing and timelines vary by project scope, site conditions, and finish level. You'll receive detailed, transparent pricing as part of your initial consultation and project quote."
+
+### Location Page Differentiation
+
+When building multiple location pages, vary the layout structures to avoid duplicate content signals. Maintain the same design system (shadows, colors, typography, button styles) but use different component arrangements per page. Examples from current pages:
+
+| Component | Portsmouth Pattern | Exeter Pattern |
+| --- | --- | --- |
+| ADU Types | Zigzag (alternating rows) | 3-column card grid |
+| Pricing | Side-by-side cost cards | Table with rows |
+| Process | Vertical timeline | Horizontal numbered step cards |
+| Zoning | Visible list with markers | Accordion (collapsed) |
+| Trust Bar | White bg, gradient accent | Navy bg, subtle accent |
+
+---
+
+*Brand Kit v2.0 | March 2026*
+
 
 
