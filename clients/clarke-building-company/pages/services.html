@@ -1,0 +1,857 @@
+<!-- CLARKE BUILDING COMPANY - SERVICES HUB PAGE
+     Page: /services/
+     Design: Craftsman Editorial (A+C Hybrid)
+     Built: March 2026 by AM Creative
+     
+     HERO COPY OPTIONS:
+     Option A: "Residential Construction Services in West Newbury and the North Shore" (SEO layout)
+     Option B: "Full-Service Residential Construction on the North Shore"
+     Option C: "Building, Renovating, and Remodeling Across the North Shore"
+     
+     INTERNAL LINKS: All links use production URLs.
+     Domain: https://clarkebuildingcompany.com
+     Links: /about/, /contact/, /projects/, /kitchen-remodeling/, /renovations/,
+             /adu/, /additions/, /new-construction/, /deck-construction/
+     
+     NOTE: User specified /about-us/ but existing about page built at /about/.
+     Using /about/ to match SEO layout doc and existing page. Confirm with client.
+     
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+     All img alt="" left empty per OTTO workflow.
+-->
+
+<style>
+/* ========================================
+   CLARKE BUILDING CO. - SERVICES PAGE STYLES
+   Namespace: .clarke-svc-*
+   Mobile-first, min-width breakpoints
+   ======================================== */
+
+/* --- CSS Custom Properties --- */
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+/* --- Reset & Base --- */
+.clarke-svc-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-svc-wrap *, .clarke-svc-wrap *::before, .clarke-svc-wrap *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.clarke-svc-wrap img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.clarke-svc-wrap a { text-decoration: none; }
+
+/* --- Utility --- */
+.clarke-svc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .clarke-svc-container { padding: 0 32px; }
+}
+
+/* --- Animations --- */
+@keyframes clarkeFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-fade { animation: clarkeFadeUp 0.8s ease forwards; }
+.clarke-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+.clarke-fade-d4 { animation-delay: 0.55s; opacity: 0; }
+.clarke-fade-d5 { animation-delay: 0.7s; opacity: 0; }
+
+
+/* ========================================
+   SECTION: HERO
+   ======================================== */
+.clarke-svc-hero {
+  background: var(--color-secondary);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 48px;
+}
+@media (min-width: 768px) {
+  .clarke-svc-hero { padding: 80px 0 64px; }
+}
+/* Grain texture */
+.clarke-svc-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+/* Brass grid + warm glow */
+.clarke-svc-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.018) 100px, rgba(201,169,110,0.018) 101px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.clarke-svc-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (min-width: 960px) {
+  .clarke-svc-hero-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+  }
+}
+
+/* Hero Badge */
+.clarke-svc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: rgba(201,169,110,0.1);
+  border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent);
+  margin-bottom: 20px;
+  width: fit-content;
+}
+.clarke-svc-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* Hero H1 */
+.clarke-svc-h1 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--color-text-inverse);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) {
+  .clarke-svc-h1 { font-size: clamp(36px, 4.5vw, 50px); }
+}
+
+/* Hero H2 Display */
+.clarke-svc-hero-h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--color-accent);
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .clarke-svc-hero-h2 { font-size: clamp(24px, 3vw, 30px); }
+}
+
+/* Hero subheadline */
+.clarke-svc-hero-sub {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 28px;
+  max-width: 560px;
+}
+
+/* Hero CTA row */
+.clarke-svc-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+/* Hero image grid (two images side by side) */
+.clarke-svc-hero-img-wrap {
+  position: relative;
+  padding: 16px;
+}
+.clarke-svc-hero-img-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border: 1.5px solid rgba(201,169,110,0.3);
+  border-radius: var(--radius-lg);
+  z-index: 0;
+}
+.clarke-svc-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  .clarke-svc-hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.clarke-svc-hero-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+@media (min-width: 600px) {
+  .clarke-svc-hero-grid img {
+    height: 100%;
+    min-height: 320px;
+  }
+  .clarke-svc-hero-grid img:first-child {
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  }
+  .clarke-svc-hero-grid img:last-child {
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  }
+}
+@media (max-width: 599px) {
+  .clarke-svc-hero-grid img:first-child {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  .clarke-svc-hero-grid img:last-child {
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
+}
+
+/* Stat badge on hero */
+.clarke-svc-stat-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 28px rgba(139,39,39,0.35);
+  z-index: 2;
+  text-align: center;
+}
+.clarke-svc-stat-num {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  line-height: 1;
+  display: block;
+}
+.clarke-svc-stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  display: block;
+  margin-top: 4px;
+}
+
+
+/* ========================================
+   SECTION: TRUST BAR
+   ======================================== */
+.clarke-svc-trust-bar {
+  background: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border);
+  padding: 20px 0;
+}
+.clarke-svc-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 0;
+}
+.clarke-svc-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.02em;
+}
+.clarke-svc-trust-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .clarke-svc-trust-item {
+    border-right: 1px solid var(--color-border);
+  }
+  .clarke-svc-trust-item:last-child { border-right: none; }
+}
+
+
+/* ========================================
+   SECTION: INTRO
+   ======================================== */
+.clarke-svc-intro {
+  background: var(--color-bg-primary);
+  padding: 56px 0;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .clarke-svc-intro { padding: 72px 0; }
+}
+.clarke-svc-intro-text {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+}
+.clarke-svc-intro-text p {
+  margin-bottom: 20px;
+}
+.clarke-svc-intro-text p:last-child { margin-bottom: 0; }
+.clarke-svc-intro-text a {
+  color: var(--color-primary);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(139,39,39,0.25);
+  transition: border-color 0.2s ease;
+}
+.clarke-svc-intro-text a:hover {
+  border-color: var(--color-primary);
+}
+
+
+/* ========================================
+   SECTION: SERVICE BLOCKS
+   ======================================== */
+.clarke-svc-blocks {
+  background: var(--color-bg-white);
+  padding: 56px 0 0;
+}
+@media (min-width: 768px) {
+  .clarke-svc-blocks { padding: 80px 0 0; }
+}
+
+.clarke-svc-blocks-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.clarke-svc-blocks-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 100px;
+  background: rgba(139,39,39,0.08);
+  border: 1px solid rgba(139,39,39,0.15);
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+/* Individual service card */
+.clarke-svc-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-bottom: 1px solid var(--color-border);
+  padding: 48px 0;
+}
+.clarke-svc-card:last-child { border-bottom: none; }
+
+@media (min-width: 768px) {
+  .clarke-svc-card {
+    display: grid;
+    grid-template-columns: 0.42fr 0.58fr;
+    gap: 40px;
+    align-items: center;
+  }
+  /* Alternate image side for visual variety */
+  .clarke-svc-card--reverse {
+    grid-template-columns: 0.58fr 0.42fr;
+  }
+  .clarke-svc-card--reverse .clarke-svc-card-img-wrap {
+    order: 2;
+  }
+  .clarke-svc-card--reverse .clarke-svc-card-content {
+    order: 1;
+  }
+}
+
+/* Card image */
+.clarke-svc-card-img-wrap {
+  margin-bottom: 24px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .clarke-svc-card-img-wrap { margin-bottom: 0; }
+}
+.clarke-svc-card-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+@media (min-width: 768px) {
+  .clarke-svc-card-img { height: 280px; }
+}
+
+/* Card without image - icon placeholder */
+.clarke-svc-card-icon {
+  width: 100%;
+  height: 200px;
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .clarke-svc-card-icon { height: 280px; margin-bottom: 0; }
+}
+.clarke-svc-card-icon svg {
+  width: 56px;
+  height: 56px;
+  color: var(--color-accent);
+  opacity: 0.5;
+}
+
+/* Card content */
+.clarke-svc-card-content h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.25;
+  color: var(--color-text-heading);
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .clarke-svc-card-content h2 { font-size: clamp(26px, 3vw, 32px); }
+}
+.clarke-svc-card-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+}
+.clarke-svc-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 15px;
+  transition: gap 0.2s ease;
+}
+.clarke-svc-card-link:hover { gap: 12px; }
+.clarke-svc-card-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+
+/* ========================================
+   SECTION: CTA BAND
+   ======================================== */
+.clarke-svc-cta-band {
+  background: var(--color-primary);
+  padding: 56px 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: 48px;
+}
+@media (min-width: 768px) {
+  .clarke-svc-cta-band { padding: 72px 0; margin-top: 80px; }
+}
+.clarke-svc-cta-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.clarke-svc-cta-h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.25;
+  color: var(--color-text-inverse);
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .clarke-svc-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); }
+}
+.clarke-svc-cta-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 32px;
+}
+.clarke-svc-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+
+/* ========================================
+   BUTTONS (shared)
+   ======================================== */
+.clarke-svc-btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 16px 36px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.clarke-svc-btn-primary:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+.clarke-svc-hero .clarke-svc-btn-primary {
+  box-shadow: 0 4px 20px rgba(139,39,39,0.3);
+}
+
+.clarke-svc-btn-secondary {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 14px 32px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.clarke-svc-btn-secondary:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+.clarke-svc-hero .clarke-svc-btn-secondary {
+  border-color: rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.75);
+}
+.clarke-svc-hero .clarke-svc-btn-secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(201,169,110,0.06);
+}
+
+/* CTA band button overrides */
+.clarke-svc-cta-band .clarke-svc-btn-primary {
+  background: var(--color-bg-white);
+  color: var(--color-primary);
+}
+.clarke-svc-cta-band .clarke-svc-btn-primary:hover {
+  background: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.clarke-svc-cta-band .clarke-svc-btn-secondary {
+  border-color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.85);
+}
+.clarke-svc-cta-band .clarke-svc-btn-secondary:hover {
+  border-color: #fff;
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+</style>
+
+
+<!-- ============================================
+     HERO SECTION
+     ============================================ -->
+<div class="clarke-svc-wrap">
+
+  <section class="clarke-svc-hero">
+    <div class="clarke-svc-container">
+      <div class="clarke-svc-hero-inner">
+
+        <!-- LEFT: Copy -->
+        <div>
+          <div class="clarke-svc-badge clarke-fade clarke-fade-d1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Full-Service Residential General Contractor
+          </div>
+
+          <h1 class="clarke-svc-h1 clarke-fade clarke-fade-d2">Residential Construction Services in West Newbury and the North Shore</h1>
+
+          <h2 class="clarke-svc-hero-h2 clarke-fade clarke-fade-d3">Every Option. Every Cost. No Surprises.</h2>
+
+          <p class="clarke-svc-hero-sub clarke-fade clarke-fade-d4">Kitchen remodels, home renovations, ADUs, additions, new construction, and decks. One contractor, one point of contact, start to finish.</p>
+
+          <div class="clarke-svc-hero-ctas clarke-fade clarke-fade-d5">
+            <a href="https://clarkebuildingcompany.com/contact/" class="clarke-svc-btn-primary">
+              Start a Project
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="https://clarkebuildingcompany.com/about/" class="clarke-svc-btn-secondary">Meet Dave Clarke</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Hero Image Grid -->
+        <div class="clarke-svc-hero-img-wrap clarke-fade clarke-fade-d3">
+          <div class="clarke-svc-hero-grid">
+            <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/interior-framing-worker.webp" alt="" width="640" height="480" loading="eager">
+            <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/gray-shingled-house-side-view.webp" alt="" width="640" height="480" loading="eager">
+          </div>
+          <div class="clarke-svc-stat-badge">
+            <span class="clarke-svc-stat-num">15+</span>
+            <span class="clarke-svc-stat-label">Years Experience</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       TRUST BAR
+       ============================================ -->
+  <section class="clarke-svc-trust-bar">
+    <div class="clarke-svc-container">
+      <div class="clarke-svc-trust-row">
+        <div class="clarke-svc-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="clarke-svc-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Owner-Operated
+        </div>
+        <div class="clarke-svc-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          5-Star Rated
+        </div>
+        <div class="clarke-svc-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          15+ Years Experience
+        </div>
+        <div class="clarke-svc-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          North Shore, MA
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       INTRO SECTION
+       ============================================ -->
+  <section class="clarke-svc-intro">
+    <div class="clarke-svc-container">
+      <div class="clarke-svc-intro-text">
+        <p>Clarke Building Company provides full-service residential general contracting across West Newbury and the North Shore. From complete kitchen overhauls to new home construction, every project is handled with the same direct approach: clear communication, honest pricing, and work that holds up.</p>
+
+        <p>Dave Clarke runs the company personally. He's on the job - not managing from a distance - which means homeowners get a contractor who knows every phase of their project, from the first walkthrough through the final punch list. That kind of hands-on ownership is what separates Clarke Building from the crews that show up, subcontract everything out, and disappear.</p>
+
+        <p>Whether you're renovating an older home in West Newbury, adding space for a growing family, or building new on the North Shore, Clarke Building brings the experience and the accountability to get it done right. <a href="https://clarkebuildingcompany.com/about/">Meet Dave Clarke</a> to learn more about the company.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SERVICE BLOCKS
+       ============================================ -->
+  <section class="clarke-svc-blocks">
+    <div class="clarke-svc-container">
+
+      <div class="clarke-svc-blocks-header">
+        <div class="clarke-svc-blocks-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          What We Build
+        </div>
+      </div>
+
+
+      <!-- SERVICE 1: Kitchen Remodeling -->
+      <div class="clarke-svc-card">
+        <div class="clarke-svc-card-img-wrap">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-open-concept-wide-angle.webp" alt="" width="640" height="480" class="clarke-svc-card-img" loading="lazy" decoding="async">
+        </div>
+        <div class="clarke-svc-card-content">
+          <h2>Kitchen Remodeling in West Newbury and the North Shore</h2>
+          <p>A kitchen remodel is one of the highest-impact investments a homeowner can make - and one of the most complex to execute well. Clarke Building Company handles the full scope: layout reconfiguration, custom cabinetry coordination, countertop installation, tile work, lighting, and all rough-in trades. The result is a kitchen that functions the way you actually live, built to last.</p>
+          <a href="https://clarkebuildingcompany.com/kitchen-remodeling/" class="clarke-svc-card-link">
+            Learn more about Kitchen Remodeling
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- SERVICE 2: Home Renovations -->
+      <div class="clarke-svc-card clarke-svc-card--reverse">
+        <div class="clarke-svc-card-img-wrap">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/granite-island-kitchen-white-cabinets.webp" alt="" width="640" height="480" class="clarke-svc-card-img" loading="lazy" decoding="async">
+        </div>
+        <div class="clarke-svc-card-content">
+          <h2>Home Renovations and Remodeling</h2>
+          <p>Not every project starts from scratch, and not every home needs a full gut renovation. Clarke Building handles targeted renovations - updating living spaces, finishing basements, opening floor plans, upgrading systems, and refreshing interiors - with the same level of craft applied to larger builds. If it's in your home and it needs to be better, this is where that work gets done.</p>
+          <a href="https://clarkebuildingcompany.com/renovations/" class="clarke-svc-card-link">
+            Learn more about Home Renovations
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- SERVICE 3: ADU Construction -->
+      <div class="clarke-svc-card">
+        <div class="clarke-svc-card-img-wrap">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/charcoal-kitchen-wide-view-dining-area.webp" alt="" width="640" height="480" class="clarke-svc-card-img" loading="lazy" decoding="async">
+        </div>
+        <div class="clarke-svc-card-content">
+          <h2>ADU Construction - Accessory Dwelling Units on the North Shore</h2>
+          <p>Accessory Dwelling Units are one of the most practical ways North Shore homeowners are adding value and flexibility to their properties. Clarke Building Company manages ADU projects from permitting through completion - whether that means converting an existing garage, finishing an above-garage space, or constructing a detached unit on an existing lot. These projects require experience navigating local zoning, and Clarke Building has that experience.</p>
+          <a href="https://clarkebuildingcompany.com/adu/" class="clarke-svc-card-link">
+            Learn more about ADU Construction
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- SERVICE 4: House Additions -->
+      <div class="clarke-svc-card clarke-svc-card--reverse">
+        <div class="clarke-svc-card-img-wrap">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/gray-shingled-house-rear-hot-tub-2.webp" alt="" width="640" height="480" class="clarke-svc-card-img" loading="lazy" decoding="async">
+        </div>
+        <div class="clarke-svc-card-content">
+          <h2>House Additions - Expanding Your North Shore Home</h2>
+          <p>When you need more space but moving isn't the answer, a house addition is often the most cost-effective path forward. Clarke Building Company designs and builds additions that integrate seamlessly with the existing structure - whether that's a first-floor family room, a primary suite above the garage, or a full second-story addition. Every addition is engineered to match the original home in both form and function.</p>
+          <a href="https://clarkebuildingcompany.com/additions/" class="clarke-svc-card-link">
+            Learn more about House Additions
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- SERVICE 5: New Home Construction -->
+      <div class="clarke-svc-card">
+        <div class="clarke-svc-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="clarke-svc-card-content">
+          <h2>New Home Construction on the North Shore</h2>
+          <p>Building a home from the ground up requires a general contractor who can manage every phase of the process - site work, foundation, framing, mechanicals, insulation, finish carpentry, and everything in between. Clarke Building Company takes on new residential construction projects across the North Shore, bringing the same owner-operated attention to detail that defines every project, from slab to certificate of occupancy.</p>
+          <a href="https://clarkebuildingcompany.com/new-construction/" class="clarke-svc-card-link">
+            Learn more about New Home Construction
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- SERVICE 6: Deck Construction -->
+      <div class="clarke-svc-card clarke-svc-card--reverse">
+        <div class="clarke-svc-card-img-wrap">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/covered-porch-white-railing-composite-deck.webp" alt="" width="640" height="480" class="clarke-svc-card-img" loading="lazy" decoding="async">
+        </div>
+        <div class="clarke-svc-card-content">
+          <h2>Deck Construction in West Newbury and the North Shore</h2>
+          <p>A well-built deck extends your living space and adds lasting value to your home. Clarke Building Company builds decks to code with proper ledger attachment, structural footings, and materials chosen to perform in New England weather - whether that's pressure-treated lumber, hardwood, or composite. This is not framing-and-walking-away work; it's built to be used, year after year.</p>
+          <a href="https://clarkebuildingcompany.com/deck-construction/" class="clarke-svc-card-link">
+            Learn more about Deck Construction
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CTA BAND
+       ============================================ -->
+  <section class="clarke-svc-cta-band">
+    <div class="clarke-svc-container clarke-svc-cta-inner">
+
+      <h2 class="clarke-svc-cta-h2">Ready to Start a Project?</h2>
+
+      <p class="clarke-svc-cta-text">Clarke Building Company works with North Shore homeowners who know what they want and want a contractor they can count on. If you've got a project in mind - or you're still in the planning stages - reach out. Dave will get back to you directly.</p>
+
+      <div class="clarke-svc-cta-buttons">
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-svc-btn-primary">
+          Start a Project
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="https://clarkebuildingcompany.com/projects/" class="clarke-svc-btn-secondary">See Our Recent Work</a>
+      </div>
+
+    </div>
+  </section>
+
+</div>
