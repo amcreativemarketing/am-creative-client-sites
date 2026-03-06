@@ -1,0 +1,791 @@
+<!-- CLARKE BUILDING COMPANY - HOUSE ADDITIONS PAGE
+     Page: /house-additions/
+     Design: Craftsman Editorial (A+C Hybrid)
+     Built: March 2026 by AM Creative
+     
+     REDIRECT NOTE: 301 from /service-house-additions to /house-additions/
+     
+     INTERNAL LINKS:
+     Domain: https://clarkebuildingcompany.com
+     Links: /contact/, /projects/, /services/, /adu/, /new-construction/,
+             /renovations/, /west-newbury-ma/, /newburyport-ma/, /ipswich-ma/,
+             /hamilton-ma/, /topsfield-ma/
+     
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+     All img alt="" left empty per OTTO workflow.
+-->
+
+<style>
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+.clarke-add-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-add-wrap *, .clarke-add-wrap *::before, .clarke-add-wrap *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+.clarke-add-wrap img { max-width: 100%; height: auto; display: block; }
+.clarke-add-wrap a { text-decoration: none; }
+
+.clarke-add-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+}
+@media (min-width: 768px) { .clarke-add-container { padding: 0 32px; } }
+
+@keyframes clarkeFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-fade { animation: clarkeFadeUp 0.8s ease forwards; }
+.clarke-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+.clarke-fade-d4 { animation-delay: 0.55s; opacity: 0; }
+
+
+/* ======== HERO ======== */
+.clarke-add-hero {
+  background: var(--color-secondary);
+  position: relative; overflow: hidden; padding: 60px 0 48px;
+}
+@media (min-width: 768px) { .clarke-add-hero { padding: 80px 0 64px; } }
+.clarke-add-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-add-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.018) 100px, rgba(201,169,110,0.018) 101px);
+  pointer-events: none; z-index: 0;
+}
+.clarke-add-hero-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 40px;
+}
+@media (min-width: 960px) {
+  .clarke-add-hero-inner {
+    display: grid; grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px; align-items: center;
+  }
+}
+.clarke-add-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent); margin-bottom: 20px; width: fit-content;
+}
+.clarke-add-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.clarke-add-h1 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 32px;
+  line-height: 1.12; color: var(--color-text-inverse);
+  margin-bottom: 16px; letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-add-h1 { font-size: clamp(36px, 4.5vw, 50px); } }
+.clarke-add-hero-sub {
+  font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
+  margin-bottom: 28px; max-width: 580px;
+}
+.clarke-add-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Hero image */
+.clarke-add-hero-img-wrap {
+  position: relative; padding: 16px;
+}
+.clarke-add-hero-img-wrap::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: calc(100% - 16px); height: calc(100% - 16px);
+  border: 1.5px solid rgba(201,169,110,0.3);
+  border-radius: var(--radius-lg); z-index: 0;
+}
+.clarke-add-hero-img {
+  position: relative; z-index: 1;
+  border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover;
+}
+.clarke-add-hero-stat {
+  position: absolute; bottom: 0; left: 0;
+  background: var(--color-primary); color: #fff;
+  padding: 14px 18px; border-radius: var(--radius-lg);
+  box-shadow: 0 8px 28px rgba(139,39,39,0.35);
+  z-index: 2; text-align: center;
+}
+.clarke-add-hero-stat-num {
+  font-family: var(--font-heading); font-size: 24px; line-height: 1; display: block;
+}
+.clarke-add-hero-stat-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; opacity: 0.85; display: block; margin-top: 4px;
+}
+
+
+/* ======== TRUST BAR ======== */
+.clarke-add-trust-bar {
+  background: var(--color-bg-white); border-bottom: 1px solid var(--color-border); padding: 20px 0;
+}
+.clarke-add-trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 0;
+}
+.clarke-add-trust-item {
+  display: flex; align-items: center; gap: 8px; padding: 6px 20px;
+  font-size: 13px; font-weight: 600; color: var(--color-text-secondary); letter-spacing: 0.02em;
+}
+.clarke-add-trust-item svg { width: 18px; height: 18px; color: var(--color-accent); flex-shrink: 0; }
+@media (min-width: 768px) {
+  .clarke-add-trust-item { border-right: 1px solid var(--color-border); }
+  .clarke-add-trust-item:last-child { border-right: none; }
+}
+
+
+/* ======== SHARED SECTION STYLES ======== */
+.clarke-add-section-light { background: var(--color-bg-primary); padding: 56px 0; }
+.clarke-add-section-white { background: var(--color-bg-white); padding: 56px 0; }
+@media (min-width: 768px) {
+  .clarke-add-section-light, .clarke-add-section-white { padding: 80px 0; }
+}
+.clarke-add-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+  text-align: center;
+}
+@media (min-width: 768px) { .clarke-add-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-add-body { font-size: 16px; line-height: 1.8; max-width: 780px; margin-left: auto; margin-right: auto; }
+.clarke-add-body p { margin-bottom: 18px; }
+.clarke-add-body p:last-child { margin-bottom: 0; }
+.clarke-add-body a {
+  color: var(--color-primary); font-weight: 500;
+  border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
+}
+.clarke-add-body a:hover { border-color: var(--color-primary); }
+.clarke-add-body strong { color: var(--color-text-heading); }
+
+/* Bullet list */
+.clarke-add-bullet-list {
+  list-style: none; max-width: 780px; margin: 20px auto;
+}
+.clarke-add-bullet-list li {
+  font-size: 16px; line-height: 1.7; padding: 8px 0 8px 28px; position: relative;
+}
+.clarke-add-bullet-list li::before {
+  content: ''; position: absolute; left: 0; top: 15px;
+  width: 10px; height: 10px; border-radius: 50%; background: var(--color-accent);
+}
+
+/* Centered photo */
+.clarke-add-photo {
+  display: block; margin: 36px auto; border-radius: var(--radius-lg);
+  max-width: 720px; height: auto;
+}
+
+/* Inline CTA */
+.clarke-add-inline-cta {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 20px;
+  color: var(--color-primary); font-weight: 600; font-size: 15px;
+}
+.clarke-add-inline-cta-wrap { text-align: center; }
+.clarke-add-inline-cta:hover { gap: 12px; }
+.clarke-add-inline-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+
+/* ======== SERVICE TYPE CARDS (dark section) ======== */
+.clarke-add-services-dark {
+  background: var(--color-secondary); position: relative; overflow: hidden; padding: 56px 0;
+}
+@media (min-width: 768px) { .clarke-add-services-dark { padding: 80px 0; } }
+.clarke-add-services-dark::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-add-services-inner { position: relative; z-index: 1; }
+.clarke-add-services-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 40px;
+  text-align: center;
+}
+@media (min-width: 768px) { .clarke-add-services-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+
+.clarke-add-svc-cards {
+  display: grid; grid-template-columns: 1fr; gap: 20px;
+}
+@media (min-width: 768px) { .clarke-add-svc-cards { grid-template-columns: 1fr 1fr; gap: 24px; } }
+.clarke-add-svc-card {
+  background: rgba(28,36,52,0.85); backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); padding: 28px 26px;
+  border-radius: var(--radius-lg); border: 1px solid rgba(201,169,110,0.1);
+  border-left: 3px solid var(--color-accent);
+}
+.clarke-add-svc-card h2 {
+  font-family: var(--font-body); font-weight: 600; font-size: 18px;
+  color: var(--color-text-inverse); margin-bottom: 12px; line-height: 1.3;
+}
+.clarke-add-svc-card p {
+  font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.65);
+}
+.clarke-add-svc-card a {
+  color: var(--color-accent); font-weight: 500; font-size: 14px;
+  border-bottom: 1px solid rgba(201,169,110,0.3); margin-top: 12px; display: inline-block;
+}
+
+/* Dark section photo */
+.clarke-add-services-dark .clarke-add-photo {
+  border: 1px solid rgba(201,169,110,0.15); margin-top: 40px;
+}
+
+
+/* ======== PROCESS STEPS ======== */
+.clarke-add-steps { counter-reset: step; max-width: 780px; margin: 0 auto; }
+.clarke-add-step {
+  padding: 24px 0; border-bottom: 1px solid var(--color-border);
+  display: flex; gap: 20px; align-items: start;
+}
+.clarke-add-step:last-child { border-bottom: none; }
+.clarke-add-step-num {
+  width: 40px; height: 40px; min-width: 40px; border-radius: 50%;
+  background: var(--color-primary); color: var(--color-text-inverse);
+  font-family: var(--font-heading); font-size: 18px;
+  display: flex; align-items: center; justify-content: center; margin-top: 2px;
+}
+.clarke-add-step h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-heading); margin-bottom: 8px; line-height: 1.3;
+}
+.clarke-add-step p { font-size: 15px; line-height: 1.8; }
+
+
+/* ======== TESTIMONIAL ======== */
+.clarke-add-testimonial {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent); border-radius: var(--radius-lg);
+  padding: 24px 28px; margin: 36px auto; max-width: 680px;
+}
+.clarke-add-testimonial-stars { display: flex; gap: 3px; margin-bottom: 12px; }
+.clarke-add-testimonial-stars svg {
+  width: 16px; height: 16px; color: var(--color-accent); fill: var(--color-accent);
+}
+.clarke-add-testimonial blockquote {
+  font-size: 16px; line-height: 1.7; color: var(--color-text-primary);
+  font-style: italic; margin-bottom: 10px;
+}
+.clarke-add-testimonial-attr {
+  font-size: 13px; font-weight: 600; color: var(--color-text-secondary);
+}
+
+
+/* ======== FAQ ======== */
+.clarke-add-faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+.clarke-add-faq-item:last-child { border-bottom: none; }
+.clarke-add-faq-item summary {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-heading); padding: 24px 40px 24px 0;
+  line-height: 1.4; cursor: pointer; list-style: none; position: relative;
+}
+.clarke-add-faq-item summary::-webkit-details-marker { display: none; }
+.clarke-add-faq-item summary::after {
+  content: '+'; position: absolute; right: 0; top: 24px;
+  font-size: 22px; font-weight: 400; color: var(--color-primary);
+}
+.clarke-add-faq-item[open] summary::after { content: '-'; }
+.clarke-add-faq-a {
+  font-size: 16px; line-height: 1.8; max-width: 780px;
+  padding: 0 0 24px; color: var(--color-text-primary);
+}
+
+
+/* ======== SERVICE AREA ======== */
+.clarke-add-area-list {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  list-style: none; margin: 28px 0;
+}
+.clarke-add-area-list li {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: 100px; padding: 10px 20px; font-size: 14px; font-weight: 500;
+  color: var(--color-text-heading);
+}
+.clarke-add-area-list li a {
+  color: var(--color-primary); font-weight: 600;
+  transition: color 0.2s ease;
+}
+.clarke-add-area-list li a:hover { color: var(--color-primary-hover); }
+.clarke-add-area-list li:has(a) {
+  border-color: rgba(139,39,39,0.2);
+}
+.clarke-add-area-list li:has(a):hover {
+  border-color: var(--color-primary); background: rgba(139,39,39,0.03);
+}
+
+/* Related service cards */
+.clarke-add-related-grid {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
+  max-width: 900px; margin: 0 auto;
+}
+@media (min-width: 768px) { .clarke-add-related-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.clarke-add-related-card {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 28px 26px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+.clarke-add-related-card:hover {
+  border-color: rgba(139,39,39,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.clarke-add-related-card h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-primary); margin-bottom: 6px; line-height: 1.3;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.clarke-add-related-card h3 svg {
+  width: 16px; height: 16px; color: var(--color-primary); flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.clarke-add-related-card:hover h3 svg { transform: translateX(4px); }
+.clarke-add-related-card p {
+  font-size: 14px; line-height: 1.6; color: var(--color-text-secondary);
+}
+
+
+/* ======== CTA BAND ======== */
+.clarke-add-cta-band {
+  background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .clarke-add-cta-band { padding: 72px 0; } }
+.clarke-add-cta-inner {
+  position: relative; z-index: 1; max-width: 780px; margin: 0 auto; text-align: center;
+}
+.clarke-add-cta-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-add-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-add-cta-text {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 28px;
+}
+.clarke-add-cta-buttons {
+  display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+}
+
+
+/* ======== BUTTONS ======== */
+.clarke-add-btn-primary {
+  background: var(--color-primary); color: #fff; padding: 16px 36px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-add-btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+.clarke-add-hero .clarke-add-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
+
+.clarke-add-btn-secondary {
+  background: transparent; border: 2px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8); padding: 14px 32px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-add-btn-secondary:hover {
+  border-color: var(--color-accent); color: var(--color-accent); background: rgba(201,169,110,0.06);
+}
+
+.clarke-add-cta-band .clarke-add-btn-primary {
+  background: var(--color-bg-white); color: var(--color-primary);
+}
+.clarke-add-cta-band .clarke-add-btn-primary:hover {
+  background: #fff; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.clarke-add-cta-band .clarke-add-btn-secondary {
+  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85);
+}
+.clarke-add-cta-band .clarke-add-btn-secondary:hover {
+  border-color: #fff; color: #fff; background: rgba(255,255,255,0.08);
+}
+
+.clarke-add-btn-secondary-light {
+  background: transparent; border: 2px solid var(--color-primary);
+  color: var(--color-primary); padding: 14px 32px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-add-btn-secondary-light:hover { background: var(--color-primary); color: #fff; }
+</style>
+
+
+<div class="clarke-add-wrap">
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="clarke-add-hero">
+    <div class="clarke-add-container">
+      <div class="clarke-add-hero-inner">
+
+        <div>
+          <div class="clarke-add-badge clarke-fade clarke-fade-d1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Home Addition Contractor &bull; North Shore, MA
+          </div>
+          <h1 class="clarke-add-h1 clarke-fade clarke-fade-d2">Home Addition Contractor Serving West Newbury MA and the North Shore</h1>
+          <p class="clarke-add-hero-sub clarke-fade clarke-fade-d3">Seamlessly expand your home with a custom addition that matches your existing architecture - built by a trusted North Shore contractor with full permit management and expert foundation work.</p>
+          <div class="clarke-add-hero-ctas clarke-fade clarke-fade-d4">
+            <a href="https://clarkebuildingcompany.com/contact/" class="clarke-add-btn-primary">
+              Get a Free Estimate
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="https://clarkebuildingcompany.com/projects/" class="clarke-add-btn-secondary">View Our Projects</a>
+          </div>
+        </div>
+
+        <div class="clarke-add-hero-img-wrap clarke-fade clarke-fade-d3">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/a-new-stick-built-home-under-construction-the-new-2026-01-09-09-26-50-utc-scaled.webp" alt="" width="640" height="480" class="clarke-add-hero-img" loading="eager">
+          <div class="clarke-add-hero-stat">
+            <span class="clarke-add-hero-stat-num">3-6 Mo</span>
+            <span class="clarke-add-hero-stat-label">Typical Timeline</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       TRUST BAR
+       ============================================ -->
+  <section class="clarke-add-trust-bar">
+    <div class="clarke-add-container">
+      <div class="clarke-add-trust-row">
+        <div class="clarke-add-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured in MA
+        </div>
+        <div class="clarke-add-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="7" y1="12" x2="13" y2="12"/></svg>
+          Full Permit Management
+        </div>
+        <div class="clarke-add-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Foundation-to-Finish Additions
+        </div>
+        <div class="clarke-add-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          5-Star Rated
+        </div>
+        <div class="clarke-add-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          North Shore, MA
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       INTRO / BRAND PROMISE
+       ============================================ -->
+  <section class="clarke-add-section-light">
+    <div class="clarke-add-container">
+      <h2 class="clarke-add-h2">Custom House Additions Built to Blend - Not Just Bolt On</h2>
+      <div class="clarke-add-body">
+        <p>Adding square footage to your home is one of the most impactful investments you can make - but only when it's done right. At Clarke Building Company, our house additions in West Newbury MA and across the North Shore are designed from the ground up to integrate seamlessly with your existing home's character, roofline, siding profile, and interior flow.</p>
+
+        <p>From the permit application through foundation excavation, framing, and final trim work, we manage every phase of your home addition project. No subcontractor confusion. No permitting headaches. One team, one point of contact, and a finished addition that looks like it was always there.</p>
+      </div>
+
+      <ul class="clarke-add-bullet-list">
+        <li>We handle Massachusetts building permit applications and town approval processes</li>
+        <li>All additions begin with proper foundation planning - no shortcuts on structural work</li>
+        <li>We match your existing materials: siding, trim profiles, window styles, and rooflines</li>
+        <li>Projects typically complete in 3-6 months depending on scope</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       ADDITION TYPES (dark section)
+       ============================================ -->
+  <section class="clarke-add-services-dark">
+    <div class="clarke-add-container clarke-add-services-inner">
+      <h2 class="clarke-add-services-h2">Types of Home Additions We Build</h2>
+
+      <div class="clarke-add-svc-cards">
+
+        <div class="clarke-add-svc-card">
+          <h2>Room Additions</h2>
+          <p>Need more living space? Our room additions in West Newbury MA and surrounding North Shore communities give you the square footage you need without sacrificing the character of your existing home. Whether it's a new family room, home office, playroom, or extra bedroom, we design and build additions that feel like original architecture - not a tacked-on afterthought.</p>
+          <a href="https://clarkebuildingcompany.com/renovations/">See our renovations for reconfiguring existing space</a>
+        </div>
+
+        <div class="clarke-add-svc-card">
+          <h2>Master Suite Expansions</h2>
+          <p>Transform your master bedroom into the retreat it was always meant to be. Clarke Building Company specializes in master suite additions that expand your footprint to accommodate walk-in closets, spa bathrooms, sitting areas, and private access - all crafted to blend with your home's existing layout and exterior.</p>
+        </div>
+
+        <div class="clarke-add-svc-card">
+          <h2>Sunrooms &amp; 3-Season Rooms</h2>
+          <p>Bring the beauty of the North Shore indoors - year-round or seasonally - with a custom sunroom or 3-season room addition. We build both fully insulated, conditioned sunrooms for four-season use and traditional 3-season rooms that maximize the warm-weather months with panoramic views and natural light. Every sunroom starts with a proper structural foundation, quality glazing, and materials selected to match your home's exterior.</p>
+        </div>
+
+        <div class="clarke-add-svc-card">
+          <h2>Structural Bump-Outs</h2>
+          <p>When a full addition isn't required but you need targeted extra space - a larger kitchen, an expanded bathroom, a widened entryway - a structural bump-out may be the ideal solution. Clarke Building designs and builds bump-out additions that are fully integrated into your home's structure, including proper foundation support and exterior finishing that blends seamlessly.</p>
+        </div>
+
+        <div class="clarke-add-svc-card" style="grid-column: 1 / -1;">
+          <h2>Foundation Work for Home Additions</h2>
+          <p>Every home addition we build starts with the right foundation. Whether your project calls for a full perimeter foundation, a crawl space extension, or a slab, Clarke Building Company handles all foundation work in-house. We coordinate with your municipality's requirements and ensure every addition starts on solid, code-compliant footing - literally.</p>
+        </div>
+
+      </div>
+
+      <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/garage-door-in-luxury-house-in-vancouver-canada-2026-01-11-10-28-06-utc-scaled.webp" alt="" width="720" height="480" class="clarke-add-photo" loading="lazy" decoding="async">
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PROCESS
+       ============================================ -->
+  <section class="clarke-add-section-light">
+    <div class="clarke-add-container">
+      <h2 class="clarke-add-h2">How We Build Your Home Addition - Start to Finish</h2>
+      <div class="clarke-add-body" style="margin-bottom: 32px;">
+        <p>Adding on to your home involves more moving parts than most homeowners expect. Here's how Clarke Building Company manages your project from first conversation to final walkthrough.</p>
+      </div>
+
+      <div class="clarke-add-steps">
+        <div class="clarke-add-step">
+          <div class="clarke-add-step-num">1</div>
+          <div>
+            <h3>Discovery &amp; Design Consultation</h3>
+            <p>We walk your property, discuss your vision, and evaluate structural and site conditions. We talk through options, timelines, and realistic budgets so you can make an informed decision.</p>
+          </div>
+        </div>
+        <div class="clarke-add-step">
+          <div class="clarke-add-step-num">2</div>
+          <div>
+            <h3>Permit Management &amp; Town Approvals</h3>
+            <p>We prepare and submit all permit applications to your town's building department, manage any zoning board requirements, and coordinate inspections. You don't have to navigate Massachusetts permitting on your own.</p>
+          </div>
+        </div>
+        <div class="clarke-add-step">
+          <div class="clarke-add-step-num">3</div>
+          <div>
+            <h3>Foundation &amp; Site Work</h3>
+            <p>All additions begin with proper foundation work. We excavate, form, and pour a foundation matched to your home's existing conditions and your local building code requirements.</p>
+          </div>
+        </div>
+        <div class="clarke-add-step">
+          <div class="clarke-add-step-num">4</div>
+          <div>
+            <h3>Framing, Roofline Integration &amp; Weathertight Envelope</h3>
+            <p>Our framing crews tie new construction into your existing structure, matching rooflines and creating a weathertight building envelope before any finish work begins.</p>
+          </div>
+        </div>
+        <div class="clarke-add-step">
+          <div class="clarke-add-step-num">5</div>
+          <div>
+            <h3>Exterior Matching</h3>
+            <p>Siding, trim, windows, and roofing are selected to blend with your existing home. We do not cut corners here - a seamless exterior is as important to your home's value as the interior finish.</p>
+          </div>
+        </div>
+        <div class="clarke-add-step">
+          <div class="clarke-add-step-num">6</div>
+          <div>
+            <h3>Interior Finish Work</h3>
+            <p>Flooring, paint, millwork, electrical, and plumbing finish out the interior to match or intentionally complement your existing home's character.</p>
+          </div>
+        </div>
+        <div class="clarke-add-step">
+          <div class="clarke-add-step-num">7</div>
+          <div>
+            <h3>Final Inspection &amp; Walkthrough</h3>
+            <p>We manage all final town inspections and walk the completed addition with you to confirm every detail meets your expectations.</p>
+          </div>
+        </div>
+      </div>
+
+      <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-island-built-in-ovens.webp" alt="" width="720" height="480" class="clarke-add-photo" loading="lazy" decoding="async">
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       TESTIMONIAL
+       ============================================ -->
+  <section class="clarke-add-section-white">
+    <div class="clarke-add-container">
+      <h2 class="clarke-add-h2">What Our Clients Say About Their Home Additions</h2>
+
+      <div class="clarke-add-testimonial">
+        <div class="clarke-add-testimonial-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"Phenomenal job on the addition. Clarke Building Company expanded our master bedroom, added a walk-in closet, and built us a 3-season room - and they knocked it out of the park on all three. The new spaces look like they were always part of the house. We couldn't be happier."</blockquote>
+        <div class="clarke-add-testimonial-attr">- [Placeholder - Confirm homeowner name/location before launch]</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FAQ
+       ============================================ -->
+  <section class="clarke-add-section-light">
+    <div class="clarke-add-container">
+      <h2 class="clarke-add-h2">Frequently Asked Questions About Home Additions in Massachusetts</h2>
+
+      <div style="max-width: 780px; margin: 0 auto;">
+      <details class="clarke-add-faq-item">
+        <summary>How long does a home addition take?</summary>
+        <div class="clarke-add-faq-a">Most home additions with Clarke Building Company take 3-6 months from permit approval to final walkthrough, depending on size and complexity. A structural bump-out may complete in 6-8 weeks; a full master suite or sunroom addition typically runs 3-5 months. We provide a detailed project timeline before work begins.</div>
+      </details>
+
+      <details class="clarke-add-faq-item">
+        <summary>Do I need a permit for a home addition in Massachusetts?</summary>
+        <div class="clarke-add-faq-a">Yes. Virtually all home additions in Massachusetts - including bump-outs, sunrooms, and room additions - require a building permit from your local town. Clarke Building Company handles the full permit application and inspection process for every project we build.</div>
+      </details>
+
+      <details class="clarke-add-faq-item">
+        <summary>What is the difference between a sunroom and a 3-season room?</summary>
+        <div class="clarke-add-faq-a">A sunroom is fully insulated and conditioned for four-season use, functioning as an extension of your heated and cooled living space. A 3-season room is designed for spring, summer, and fall use and typically uses screened or single-pane glazing without HVAC conditioning. Both add significant livability and value to your home.</div>
+      </details>
+
+      <details class="clarke-add-faq-item">
+        <summary>How much does a home addition cost in Massachusetts?</summary>
+        <div class="clarke-add-faq-a">Home addition costs in Massachusetts vary based on size, foundation requirements, complexity, and finish level. Master suite additions, sunrooms, and structural bump-outs each carry different cost profiles. We provide detailed, itemized estimates during our consultation process so you have full transparency on your investment.</div>
+      </details>
+
+      <details class="clarke-add-faq-item">
+        <summary>Will the addition match my existing home?</summary>
+        <div class="clarke-add-faq-a">Matching existing architecture is a core priority for Clarke Building Company. We carefully select siding, trim, windows, roofing, and interior finishes to blend with your existing home's character - whether you're adding onto a colonial, cape, craftsman, or contemporary home on the North Shore.</div>
+      </details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SERVICE AREA
+       ============================================ -->
+  <section class="clarke-add-section-white">
+    <div class="clarke-add-container">
+      <h2 class="clarke-add-h2">Serving West Newbury MA and the North Shore</h2>
+      <div class="clarke-add-body" style="text-align: center; margin: 0 auto;">
+        <p>Clarke Building Company builds home additions throughout Essex County and the Greater North Shore. Our primary service area includes:</p>
+      </div>
+
+      <ul class="clarke-add-area-list">
+        <li><a href="https://clarkebuildingcompany.com/west-newbury-ma/">West Newbury</a></li>
+        <li><a href="https://clarkebuildingcompany.com/newburyport-ma/">Newburyport</a></li>
+        <li><a href="https://clarkebuildingcompany.com/ipswich-ma/">Ipswich</a></li>
+        <li><a href="https://clarkebuildingcompany.com/hamilton-ma/">Hamilton</a></li>
+        <li><a href="https://clarkebuildingcompany.com/topsfield-ma/">Topsfield</a></li>
+        <li>Amesbury</li>
+        <li>Merrimac</li>
+        <li>Haverhill</li>
+        <li>Georgetown</li>
+        <li>Rowley</li>
+        <li>Groveland</li>
+      </ul>
+
+      <div class="clarke-add-body" style="text-align: center; margin: 0 auto;">
+        <p>Not sure if we serve your town? <a href="https://clarkebuildingcompany.com/contact/">Contact us</a> - we'll let you know right away.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       RELATED SERVICES
+       ============================================ -->
+  <section class="clarke-add-section-light">
+    <div class="clarke-add-container">
+      <h2 class="clarke-add-h2">Related Services from Clarke Building Company</h2>
+      <div class="clarke-add-body" style="text-align: center; margin: 0 auto 32px;">
+        <p>Our home additions often work in conjunction with other projects.</p>
+      </div>
+
+      <div class="clarke-add-related-grid">
+        <a href="https://clarkebuildingcompany.com/adu/" class="clarke-add-related-card">
+          <h3>ADU Construction <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Add an accessory dwelling unit, in-law suite, or rental unit to your property.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/new-construction/" class="clarke-add-related-card">
+          <h3>New Construction <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Build a new home or structure from the ground up on the North Shore.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/renovations/" class="clarke-add-related-card">
+          <h3>Home Renovations <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Reconfigure and upgrade your existing living space with targeted remodels.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/projects/" class="clarke-add-related-card">
+          <h3>Our Projects <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>See additions and builds we've completed for North Shore homeowners.</p>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 28px;">
+        <a href="https://clarkebuildingcompany.com/services/" class="clarke-add-btn-secondary-light">
+          View All Services
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CTA BAND
+       ============================================ -->
+  <section class="clarke-add-cta-band">
+    <div class="clarke-add-container clarke-add-cta-inner">
+      <h2 class="clarke-add-cta-h2">Ready to Start Your Home Addition?</h2>
+      <p class="clarke-add-cta-text">Whether you're expanding a master suite, enclosing a sunroom, or adding a room for a growing family, Clarke Building Company brings the experience, craftsmanship, and project management to make it happen - on time, on budget, and exactly as planned. Contact us today for a free consultation on your home addition project.</p>
+      <div class="clarke-add-cta-buttons">
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-add-btn-primary">
+          Get a Free Estimate
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="https://clarkebuildingcompany.com/projects/" class="clarke-add-btn-secondary">View Our Projects</a>
+      </div>
+    </div>
+  </section>
+
+</div>
