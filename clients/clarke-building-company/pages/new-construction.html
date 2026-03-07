@@ -51,7 +51,8 @@
   box-sizing: border-box; margin: 0; padding: 0;
 }
 .clarke-nc-wrap img { max-width: 100%; height: auto; display: block; }
-.clarke-nc-wrap a { text-decoration: none; }
+.clarke-nc-wrap a { text-decoration: none; color: inherit; }
+.clarke-nc-wrap a:visited { color: inherit; }
 
 .clarke-nc-container {
   max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
@@ -175,13 +176,14 @@
 .clarke-nc-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-nc-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
 .clarke-nc-sub {
   font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
-  margin-bottom: 32px; max-width: 780px;
+  margin-bottom: 32px; max-width: 780px; margin-left: auto; margin-right: auto;
 }
-.clarke-nc-body { font-size: 16px; line-height: 1.8; max-width: 780px; }
+.clarke-nc-body { font-size: 16px; line-height: 1.8; max-width: 780px; margin-left: auto; margin-right: auto; }
 .clarke-nc-body p { margin-bottom: 18px; }
 .clarke-nc-body p:last-child { margin-bottom: 0; }
 .clarke-nc-body a {
@@ -238,6 +240,7 @@
 .clarke-nc-process-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 40px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-nc-process-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
 
@@ -350,9 +353,74 @@
 }
 .clarke-nc-faq-item[open] summary::after { content: '-'; }
 .clarke-nc-faq-a {
-  font-size: 16px; line-height: 1.8; max-width: 780px;
+  font-size: 16px; line-height: 1.8;
   padding: 0 0 24px; color: var(--color-text-primary);
 }
+
+
+/* Related service cards */
+.clarke-nc-related-grid {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
+  max-width: 900px; margin: 0 auto;
+}
+@media (min-width: 768px) { .clarke-nc-related-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.clarke-nc-related-card {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 28px 26px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease; display: block;
+}
+.clarke-nc-related-card:hover {
+  border-color: rgba(139,39,39,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.clarke-nc-related-card h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-primary); margin-bottom: 6px; line-height: 1.3;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.clarke-nc-related-card h3 svg {
+  width: 16px; height: 16px; color: var(--color-primary); flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.clarke-nc-related-card:hover h3 svg { transform: translateX(4px); }
+.clarke-nc-related-card p {
+  font-size: 14px; line-height: 1.6; color: var(--color-text-secondary);
+}
+
+/* Comparison cards (Why Build Custom) */
+.clarke-nc-compare-grid {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
+  max-width: 900px; margin: 0 auto;
+}
+@media (min-width: 768px) { .clarke-nc-compare-grid { grid-template-columns: 1fr 1fr; gap: 24px; } }
+.clarke-nc-compare-card {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 32px 28px;
+}
+.clarke-nc-compare-card h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 18px;
+  color: var(--color-text-heading); margin-bottom: 20px; text-align: center;
+}
+.clarke-nc-compare-card--highlight {
+  border-color: rgba(139,39,39,0.25); border-top: 3px solid var(--color-primary);
+}
+.clarke-nc-compare-item {
+  display: flex; gap: 12px; padding: 10px 0;
+  border-bottom: 1px solid var(--color-border); font-size: 15px; line-height: 1.6;
+  align-items: start;
+}
+.clarke-nc-compare-item:last-child { border-bottom: none; }
+.clarke-nc-compare-icon {
+  width: 22px; min-width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 1px; flex-shrink: 0;
+}
+.clarke-nc-compare-icon--yes {
+  background: rgba(139,39,39,0.1); color: var(--color-primary);
+}
+.clarke-nc-compare-icon--no {
+  background: rgba(107,114,128,0.1); color: var(--color-text-secondary);
+}
+.clarke-nc-compare-icon svg { width: 12px; height: 12px; }
 
 
 /* ======== CTA BAND ======== */
@@ -381,46 +449,64 @@
 
 /* ======== BUTTONS ======== */
 .clarke-nc-btn-primary {
-  background: var(--color-primary); color: #fff; padding: 16px 36px;
+  background: var(--color-primary); color: #FFFFFF !important; padding: 16px 36px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
   text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
-.clarke-nc-btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+.clarke-nc-btn-primary svg { color: #FFFFFF !important; }
+.clarke-nc-btn-primary:hover {
+  background: var(--color-accent); color: var(--color-secondary) !important;
+  transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+}
+.clarke-nc-btn-primary:hover svg { color: var(--color-secondary) !important; }
 .clarke-nc-hero .clarke-nc-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
 
 .clarke-nc-btn-secondary {
   background: transparent; border: 2px solid rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.8); padding: 14px 32px;
+  color: rgba(255,255,255,0.8) !important; padding: 14px 32px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border-radius: var(--radius-md); transition: all 0.3s ease;
   text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
 .clarke-nc-btn-secondary:hover {
-  border-color: var(--color-accent); color: var(--color-accent); background: rgba(201,169,110,0.06);
+  background: #fff; color: var(--color-secondary) !important; border-color: #fff;
+  transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.15);
 }
 
 .clarke-nc-cta-band .clarke-nc-btn-primary {
-  background: var(--color-bg-white); color: var(--color-primary);
+  background: var(--color-bg-white); color: var(--color-primary) !important;
 }
+.clarke-nc-cta-band .clarke-nc-btn-primary svg { color: var(--color-primary) !important; }
 .clarke-nc-cta-band .clarke-nc-btn-primary:hover {
-  background: #fff; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  background: var(--color-secondary); color: #FFFFFF !important;
+  transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.25);
 }
+.clarke-nc-cta-band .clarke-nc-btn-primary:hover svg { color: #FFFFFF !important; }
 .clarke-nc-cta-band .clarke-nc-btn-secondary {
-  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85);
+  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85) !important;
 }
 .clarke-nc-cta-band .clarke-nc-btn-secondary:hover {
-  border-color: #fff; color: #fff; background: rgba(255,255,255,0.08);
+  background: #fff; color: var(--color-primary) !important; border-color: #fff;
+  transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.15);
 }
 
 .clarke-nc-btn-secondary-light {
   background: transparent; border: 2px solid var(--color-primary);
-  color: var(--color-primary); padding: 14px 32px;
+  color: var(--color-primary) !important; padding: 14px 32px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border-radius: var(--radius-md); transition: all 0.3s ease;
   text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
-.clarke-nc-btn-secondary-light:hover { background: var(--color-primary); color: #fff; }
+.clarke-nc-btn-secondary-light svg { color: var(--color-primary) !important; }
+.clarke-nc-btn-secondary-light:hover,
+.clarke-nc-btn-secondary-light:hover:visited,
+.clarke-nc-btn-secondary-light:active,
+a.clarke-nc-btn-secondary-light:hover {
+  background: var(--color-primary); color: #FFFFFF !important;
+  transform: translateY(-2px); box-shadow: 0 6px 24px rgba(139,39,39,0.25);
+}
+.clarke-nc-btn-secondary-light:hover svg { color: #FFFFFF !important; }
 </style>
 
 
@@ -436,25 +522,20 @@
         <div>
           <div class="clarke-nc-badge clarke-fade clarke-fade-d1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            Custom Home Builder &bull; North Shore, MA
+            Custom Home Builder &bull; North Shore MA &amp; Southern NH
           </div>
           <h1 class="clarke-nc-h1 clarke-fade clarke-fade-d2">Custom Home Builder Serving West Newbury &amp; North Shore Massachusetts</h1>
-          <p class="clarke-nc-hero-sub clarke-fade clarke-fade-d3">Building a custom home from the ground up is one of the most significant investments you'll make. Clarke Building Company manages every phase - from site preparation and foundation through framing, mechanical systems, and final finishes - so your project stays on schedule, on budget, and true to your vision.</p>
+          <p class="clarke-nc-hero-sub clarke-fade clarke-fade-d3">One contractor managing your entire build - from foundation to final walkthrough. No handoffs, no confusion, no surprises. <a href="https://clarkebuildingcompany.com/about-us/" style="color: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(255,255,255,0.3);">Meet Dave Clarke</a>, the builder behind every project.</p>
           <div class="clarke-nc-hero-ctas clarke-fade clarke-fade-d4">
             <a href="https://clarkebuildingcompany.com/contact/" class="clarke-nc-btn-primary">
               Schedule a Consultation
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
-            <a href="https://clarkebuildingcompany.com/projects/" class="clarke-nc-btn-secondary">See Completed Projects</a>
           </div>
         </div>
 
         <div class="clarke-nc-hero-img-wrap clarke-fade clarke-fade-d3">
           <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/construction-new-home-under-construction-2026-01-08-05-49-26-utc-scaled.jpg" alt="" width="640" height="480" class="clarke-nc-hero-img" loading="eager">
-          <div class="clarke-nc-hero-stat">
-            <span class="clarke-nc-hero-stat-num">$275+</span>
-            <span class="clarke-nc-hero-stat-label">Per Sq Ft Starting</span>
-          </div>
         </div>
 
       </div>
@@ -481,10 +562,6 @@
           Architect Collaboration
         </div>
         <div class="clarke-nc-trust-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="7" y1="12" x2="13" y2="12"/></svg>
-          Complete Permit Management
-        </div>
-        <div class="clarke-nc-trust-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           North Shore Licensed &amp; Insured
         </div>
@@ -499,22 +576,53 @@
   <section class="clarke-nc-section-light">
     <div class="clarke-nc-container">
       <h2 class="clarke-nc-h2">Why Build a Custom Home on the North Shore?</h2>
-      <div class="clarke-nc-body">
-        <p>Buying an existing home means inheriting someone else's decisions - their layout, their finishes, their compromises. A custom home is built around your family, your lot, and how you actually want to live. For homeowners in West Newbury, Newburyport, Georgetown, and surrounding Essex County communities, custom new construction is often the only path to getting exactly what you want - on the land you already own or a lot you've chosen.</p>
+      <div class="clarke-nc-body" style="text-align: center; margin: 0 auto 36px;">
+        <p>Buying an existing home means inheriting someone else's decisions. A custom home is built around your family, your lot, and how you actually want to live. For homeowners across the North Shore and Southern New Hampshire, custom new construction is often the only path to getting exactly what you want.</p>
       </div>
 
-      <h3 class="clarke-nc-h3">Custom Build vs. Buying Existing - The North Shore Reality</h3>
-      <div class="clarke-nc-body">
-        <p>With inventory tight and older homes often requiring significant updates, many North Shore homeowners are finding that a carefully managed custom build offers more value than purchasing and renovating an aging property. Building new means:</p>
-      </div>
+      <div class="clarke-nc-compare-grid">
 
-      <ul class="clarke-nc-benefit-list">
-        <li><strong>No compromise</strong> - every detail designed to your specifications</li>
-        <li><strong>Modern systems</strong> - new electrical, plumbing, HVAC, and insulation from day one</li>
-        <li><strong>Energy efficiency</strong> - built to current energy code with lower operating costs</li>
-        <li><strong>No hidden surprises</strong> - everything is new, so there are no aging systems or unknown problems behind the walls</li>
-        <li><strong>Equity from day one</strong> - quality craftsmanship in a desirable market</li>
-      </ul>
+        <div class="clarke-nc-compare-card">
+          <h3>Buying an Existing Home</h3>
+          <div class="clarke-nc-compare-item">
+            <div class="clarke-nc-compare-icon clarke-nc-compare-icon--no"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+            <span>Someone else's layout, finishes, and compromises</span>
+          </div>
+          <div class="clarke-nc-compare-item">
+            <div class="clarke-nc-compare-icon clarke-nc-compare-icon--no"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+            <span>Aging electrical, plumbing, HVAC, and insulation</span>
+          </div>
+          <div class="clarke-nc-compare-item">
+            <div class="clarke-nc-compare-icon clarke-nc-compare-icon--no"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+            <span>Potential for unknown problems behind the walls</span>
+          </div>
+          <div class="clarke-nc-compare-item">
+            <div class="clarke-nc-compare-icon clarke-nc-compare-icon--no"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+            <span>Higher energy costs from outdated building standards</span>
+          </div>
+        </div>
+
+        <div class="clarke-nc-compare-card clarke-nc-compare-card--highlight">
+          <h3>Building a Custom Home</h3>
+          <div class="clarke-nc-compare-item">
+            <div class="clarke-nc-compare-icon clarke-nc-compare-icon--yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Every detail designed to your specifications</span>
+          </div>
+          <div class="clarke-nc-compare-item">
+            <div class="clarke-nc-compare-icon clarke-nc-compare-icon--yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Brand new systems - electrical, plumbing, HVAC, insulation</span>
+          </div>
+          <div class="clarke-nc-compare-item">
+            <div class="clarke-nc-compare-icon clarke-nc-compare-icon--yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Everything is new - nothing unknown behind the walls</span>
+          </div>
+          <div class="clarke-nc-compare-item">
+            <div class="clarke-nc-compare-icon clarke-nc-compare-icon--yes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Built to current energy code with lower operating costs</span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -592,7 +700,7 @@
         </div>
         <div class="clarke-nc-diff-card">
           <h3>Complete Permit Management</h3>
-          <p>In Massachusetts, new construction permitting involves multiple departments, multiple inspections, and coordination with state energy code compliance. Clarke Building handles the full permit process - building, electrical, plumbing, mechanical, and septic - so you don't have to navigate municipal bureaucracy on your own.</p>
+          <p>New construction permitting involves multiple departments, multiple inspections, and coordination with state energy code compliance. Clarke Building handles the full permit process - building, electrical, plumbing, mechanical, and septic - across both Massachusetts and Southern New Hampshire, so you don't have to navigate municipal bureaucracy on your own.</p>
         </div>
         <div class="clarke-nc-diff-card">
           <h3>Subcontractor Coordination</h3>
@@ -600,8 +708,25 @@
         </div>
         <div class="clarke-nc-diff-card">
           <h3>Transparent Budgeting</h3>
-          <p>New construction budgets are a common source of stress. We build detailed project budgets at the start, revisit them at each phase, and never surprise our clients with late-stage change orders that weren't discussed. You always know where you stand.</p>
+          <p>New construction budgets are a common source of stress. We build detailed project budgets at the start, revisit them at each phase, and work hard to make sure late-stage change orders don't catch our clients off guard. You always know where you stand.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       INVESTMENT OVERVIEW
+       ============================================ -->
+  <section class="clarke-nc-section-white">
+    <div class="clarke-nc-container">
+      <h2 class="clarke-nc-h2">Understanding the Investment</h2>
+      <div class="clarke-nc-body" style="max-width: 780px; margin: 0 auto;">
+        <p>Custom home costs on the North Shore and Southern New Hampshire vary significantly based on size, complexity, site conditions, and finish level. Every project is different, and a square footage estimate without understanding the full scope doesn't tell the real story.</p>
+
+        <p>Clarke Building develops detailed, itemized project budgets after reviewing your plans or design intent. We walk through every line item with you so there are no surprises - and we revisit the budget at each phase to make sure you always know where things stand.</p>
+
+        <p>The best way to understand what your project will cost is to have a conversation about what you're trying to build. Dave will give you a straight answer.</p>
       </div>
 
       <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/engineer-pencil-ruler-and-keys-resting-on-house-p-2026-01-05-00-26-28-utc-scaled.webp" alt="" width="720" height="480" class="clarke-nc-photo" loading="lazy" decoding="async">
@@ -610,66 +735,15 @@
 
 
   <!-- ============================================
-       PRICING
-       ============================================ -->
-  <section class="clarke-nc-pricing">
-    <div class="clarke-nc-container clarke-nc-pricing-inner">
-      <h2 class="clarke-nc-pricing-h2">What Does It Cost to Build a Custom Home in Massachusetts?</h2>
-      <p class="clarke-nc-pricing-sub">New construction costs in the Greater Newburyport and Essex County market vary based on size, complexity, site conditions, and finish level. Here's a realistic overview:</p>
-
-      <table class="clarke-nc-price-table">
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Range</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Construction cost per sq ft (quality build)</td>
-            <td>$275 - $375/sf</td>
-          </tr>
-          <tr>
-            <td>Typical 2,000 sq ft custom home</td>
-            <td>$550K - $750K+</td>
-          </tr>
-          <tr>
-            <td>Typical 2,500 sq ft custom home</td>
-            <td>$690K - $940K+</td>
-          </tr>
-          <tr>
-            <td>Septic &amp; well (non-sewered lots)</td>
-            <td>$25K - $80K+</td>
-          </tr>
-          <tr>
-            <td>Architecture &amp; engineering fees</td>
-            <td>8 - 12% of construction</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p class="clarke-nc-pricing-note">These figures reflect quality construction with real materials, skilled labor, and full project management - not production-builder pricing. On the North Shore, custom homes command a premium at resale that reflects the craftsmanship invested.</p>
-
-      <div style="margin-top: 28px;">
-        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-nc-btn-primary" style="box-shadow: 0 4px 20px rgba(139,39,39,0.3);">
-          Request a Consultation
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================
        SEPTIC / RURAL LOT
        ============================================ -->
-  <section class="clarke-nc-section-white">
+  <section class="clarke-nc-section-light">
     <div class="clarke-nc-container">
-      <h2 class="clarke-nc-h2">Building on a Private Lot in Essex County? Septic &amp; Well Planning Matters</h2>
+      <h2 class="clarke-nc-h2">Building on a Private Lot? Septic &amp; Well Planning Matters</h2>
       <div class="clarke-nc-body">
-        <p>Many of the most desirable building lots in West Newbury, Boxford, Georgetown, and Rowley are not served by municipal sewer or water. For these sites, septic system design and well installation are critical early steps - not afterthoughts.</p>
+        <p>Many of the most desirable building lots across the North Shore and Southern New Hampshire are not served by municipal sewer or water. For these sites, septic system design and well installation are critical early steps - not afterthoughts.</p>
 
-        <p>Clarke Building coordinates with licensed septic engineers and well drillers early in pre-construction to ensure your lot is suitable, your system is properly sized, and your timeline accounts for these components. We've built on non-sewered lots across Essex County and understand the Title 5 process inside and out.</p>
+        <p>Clarke Building can help guide you through the septic and well planning process, connecting you with licensed engineers and well drillers early in pre-construction so your lot's suitability, system sizing, and project timeline are all accounted for before design work is finalized. If a Title 5 assessment is needed, we'll make sure it's factored into your project plan from the start - no surprise costs down the road.</p>
       </div>
     </div>
   </section>
@@ -678,24 +752,46 @@
   <!-- ============================================
        RELATED SERVICES
        ============================================ -->
-  <section class="clarke-nc-section-light">
+  <section class="clarke-nc-section-white">
     <div class="clarke-nc-container">
       <h2 class="clarke-nc-h2">Related Clarke Building Services</h2>
-      <div class="clarke-nc-body">
-        <p>Many clients begin with a new construction conversation and discover that an addition, ADU, or major renovation is the right fit for their goals. Explore how we can help:</p>
-        <p><a href="https://clarkebuildingcompany.com/additions/">Room Additions</a> - Add space to an existing home with quality construction</p>
-        <p><a href="https://clarkebuildingcompany.com/adu/">ADU / Accessory Dwelling Units</a> - Add a rental unit or in-law suite to your property</p>
-        <p><a href="https://clarkebuildingcompany.com/kitchen-remodeling/">Kitchen Remodeling</a> - Transform your home's most-used space</p>
-        <p><a href="https://clarkebuildingcompany.com/renovations/">Home Renovations</a> - Targeted remodels that update your space</p>
-        <p><a href="https://clarkebuildingcompany.com/deck-construction/">Deck Construction</a> - Extend your living space outdoors</p>
-        <p><a href="https://clarkebuildingcompany.com/projects/">Our Projects</a> - See completed builds across the North Shore</p>
-        <p><a href="https://clarkebuildingcompany.com/about-us/">Meet Dave Clarke</a> - Learn about the builder behind every project</p>
+      <div class="clarke-nc-body" style="text-align: center; margin: 0 auto 32px;">
+        <p>Many clients begin with a new construction conversation and discover that an addition, ADU, or major renovation is the right fit for their goals.</p>
       </div>
 
-      <a href="https://clarkebuildingcompany.com/services/" class="clarke-nc-btn-secondary-light" style="margin-top: 20px;">
-        View All Services
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
+      <div class="clarke-nc-related-grid">
+        <a href="https://clarkebuildingcompany.com/additions/" class="clarke-nc-related-card">
+          <h3>Room Additions <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Add space to an existing home with quality construction.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/adu/" class="clarke-nc-related-card">
+          <h3>ADU Construction <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Add a rental unit or in-law suite to your property.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/kitchen-remodeling/" class="clarke-nc-related-card">
+          <h3>Kitchen Remodeling <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Transform your home's most-used space.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/renovations/" class="clarke-nc-related-card">
+          <h3>Home Renovations <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Targeted remodels that update your space.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/deck-construction/" class="clarke-nc-related-card">
+          <h3>Deck Construction <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Extend your living space outdoors.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/projects/" class="clarke-nc-related-card">
+          <h3>Our Projects <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>See completed builds across the North Shore.</p>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 28px;">
+        <a href="https://clarkebuildingcompany.com/services/" class="clarke-nc-btn-secondary-light">
+          View All Services
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -703,13 +799,13 @@
   <!-- ============================================
        FAQ
        ============================================ -->
-  <section class="clarke-nc-section-white">
+  <section class="clarke-nc-section-light">
     <div class="clarke-nc-container">
-      <h2 class="clarke-nc-h2">Frequently Asked Questions - Custom Home Building in Massachusetts</h2>
+      <h2 class="clarke-nc-h2">Frequently Asked Questions - Custom Home Building</h2>
 
       <details class="clarke-nc-faq-item">
-        <summary>How long does it take to build a custom home in Massachusetts?</summary>
-        <div class="clarke-nc-faq-a">A typical custom home in the North Shore area takes 12-18 months from pre-construction through certificate of occupancy. Complex projects or those requiring extensive permitting or septic work may take longer. We establish a project schedule at the start and keep you updated throughout.</div>
+        <summary>How long does it take to build a custom home?</summary>
+        <div class="clarke-nc-faq-a">A typical custom home in the North Shore and Southern New Hampshire area takes 12-18 months from pre-construction through certificate of occupancy. Complex projects or those requiring extensive permitting or septic work may take longer. We establish a project schedule at the start and keep you updated throughout.</div>
       </details>
 
       <details class="clarke-nc-faq-item">
@@ -719,7 +815,7 @@
 
       <details class="clarke-nc-faq-item">
         <summary>Do you work with my existing architect?</summary>
-        <div class="clarke-nc-faq-a">Yes. We regularly collaborate with clients' architects throughout the design and construction phases. We can also recommend architectural partners we've worked with on North Shore projects.</div>
+        <div class="clarke-nc-faq-a">Yes. We regularly collaborate with clients' architects throughout the design and construction phases. We can also recommend architectural partners we've worked with on North Shore and Southern NH projects.</div>
       </details>
 
       <details class="clarke-nc-faq-item">
@@ -729,12 +825,22 @@
 
       <details class="clarke-nc-faq-item">
         <summary>Can you build on a lot with no utilities?</summary>
-        <div class="clarke-nc-faq-a">Yes. We have extensive experience building on raw land in Essex County - coordinating utility connections, well drilling, septic design and installation, and site access. These components are factored into your project scope and budget from the beginning.</div>
+        <div class="clarke-nc-faq-a">Yes. We have extensive experience building on raw land in Essex County and Southern New Hampshire - coordinating utility connections, well drilling, septic design and installation, and site access. These components are factored into your project scope and budget from the beginning.</div>
       </details>
 
       <details class="clarke-nc-faq-item">
         <summary>How is a custom home priced?</summary>
         <div class="clarke-nc-faq-a">Custom homes are typically priced through a detailed scope-of-work estimate developed after reviewing your plans or design intent. We don't provide square footage pricing without understanding the full scope - finishes, structural complexity, and site conditions all affect cost significantly.</div>
+      </details>
+
+      <details class="clarke-nc-faq-item">
+        <summary>Do you build custom homes in Southern New Hampshire?</summary>
+        <div class="clarke-nc-faq-a">Yes. Clarke Building serves homeowners on both sides of the MA/NH border. We're familiar with permitting requirements in Southern New Hampshire communities and can manage the full process for NH builds just as we do on the North Shore.</div>
+      </details>
+
+      <details class="clarke-nc-faq-item">
+        <summary>Are there differences between building in MA vs. NH?</summary>
+        <div class="clarke-nc-faq-a">Each state has its own building codes, energy requirements, and permitting processes. New Hampshire generally has a different inspection structure than Massachusetts, and zoning rules vary by municipality in both states. Clarke Building handles the permitting and compliance details regardless of which side of the border your lot is on.</div>
       </details>
     </div>
   </section>
@@ -750,13 +856,12 @@
 
       <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/new-siding-installation.webp" alt="" width="320" height="240" class="clarke-nc-photo" loading="lazy" decoding="async" style="border: 1px solid rgba(255,255,255,0.1); max-width: 320px;">
 
-      <p class="clarke-nc-cta-area">Serving West Newbury, Newburyport, Amesbury, Georgetown, Boxford, Rowley, Salisbury, Merrimac, and surrounding Essex County communities.</p>
+      <p class="clarke-nc-cta-area">Serving West Newbury, Newburyport, Amesbury, Georgetown, Boxford, Rowley, Salisbury, Merrimac, and surrounding communities across Essex County, MA and Southern New Hampshire.</p>
       <div class="clarke-nc-cta-buttons">
         <a href="https://clarkebuildingcompany.com/contact/" class="clarke-nc-btn-primary">
           Schedule a Consultation
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
-        <a href="https://clarkebuildingcompany.com/projects/" class="clarke-nc-btn-secondary">See Our Work</a>
       </div>
     </div>
   </section>
