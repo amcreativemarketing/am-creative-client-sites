@@ -185,6 +185,13 @@ font-family: 'Inter', sans-serif;         /* Everything else */
 - Use VOC language: "reliable," "trustworthy," "go over all options," "constant communication," "honest," "on time," "on budget"
 - Test: Would Dave say this in a conversation with a homeowner? If not, rewrite.
 
+### Content Integrity Rules
+
+- **No placeholder content.** Never use placeholder text for reviews, testimonials, client names, stats, or any content that implies real data. If verified content is not available, leave it out entirely. Placeholder content risks going live unnoticed and damages credibility.
+- **No unverified claims.** Do not attribute quotes, reviews, or testimonials unless the exact text has been verified from a real source (Houzz, Facebook, Google, etc.). Generated quotes attributed to real or fictional clients are never acceptable.
+- **No unconfirmed pricing or service claims.** Only include pricing ranges, service details, or capability claims that have been confirmed by the client. When in doubt, leave it out or flag it for confirmation.
+- **SEO content vs. brand content.** Use SEO keyword research for general topic guidance and natural keyword placement, but rely on VOC, brand voice, and Notion ClientOS for actual messaging, service descriptions, and positioning. Pages should read like a real business wrote them, not like an SEO checklist.
+
 ---
 
 ## Key Messages & Taglines
@@ -556,7 +563,7 @@ Use staggered fade-up animations on hero and key sections. Keep it subtle on inn
 
 **Primary:** West Newbury, MA
 
-**Full Service Area:** West Newbury, Newburyport, Ipswich, Amesbury, Hamilton, Topsfield
+**Full Service Area:** West Newbury, Newburyport, Ipswich, Amesbury, Hamilton, Topsfield, Georgetown, Boxford, Rowley, Salisbury, and surrounding Massachusetts and Southern New Hampshire communities
 
 ---
 
@@ -587,3 +594,4 @@ Use staggered fade-up animations on hero and key sections. Keep it subtle on inn
 
 *Brand Identity & Build Guide - Clarke Building Company*
 *Prepared by AM Creative | March 2026*
+
