@@ -1,0 +1,712 @@
+<!-- CLARKE BUILDING COMPANY - DECK CONSTRUCTION PAGE
+     Page: /deck-construction/
+     Design: Craftsman Editorial (A+C Hybrid)
+     Built: March 2026 by AM Creative
+     
+     REDIRECT NOTE: 301 from /service-deck-patio-installation/ to /deck-construction/
+     
+     INTERNAL LINKS:
+     Domain: https://clarkebuildingcompany.com
+     Links: /, /services/, /additions/, /renovations/, /projects/, /contact/
+     
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+     All img alt="" left empty per OTTO workflow.
+-->
+
+<style>
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+.clarke-deck-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-deck-wrap *, .clarke-deck-wrap *::before, .clarke-deck-wrap *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+.clarke-deck-wrap img { max-width: 100%; height: auto; display: block; }
+.clarke-deck-wrap a { text-decoration: none; }
+
+.clarke-deck-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+}
+@media (min-width: 768px) { .clarke-deck-container { padding: 0 32px; } }
+
+@keyframes clarkeFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-fade { animation: clarkeFadeUp 0.8s ease forwards; }
+.clarke-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+.clarke-fade-d4 { animation-delay: 0.55s; opacity: 0; }
+
+
+/* ======== HERO ======== */
+.clarke-deck-hero {
+  background: var(--color-secondary);
+  position: relative; overflow: hidden; padding: 60px 0 48px;
+}
+@media (min-width: 768px) { .clarke-deck-hero { padding: 80px 0 64px; } }
+.clarke-deck-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-deck-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.018) 100px, rgba(201,169,110,0.018) 101px);
+  pointer-events: none; z-index: 0;
+}
+.clarke-deck-hero-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 40px;
+}
+@media (min-width: 960px) {
+  .clarke-deck-hero-inner {
+    display: grid; grid-template-columns: 1.2fr 0.8fr;
+    gap: 56px; align-items: center;
+  }
+}
+.clarke-deck-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent); margin-bottom: 20px; width: fit-content;
+}
+.clarke-deck-hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.clarke-deck-h1 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 32px;
+  line-height: 1.12; color: var(--color-text-inverse);
+  margin-bottom: 16px; letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-deck-h1 { font-size: clamp(36px, 4.5vw, 50px); } }
+.clarke-deck-hero-sub {
+  font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
+  margin-bottom: 28px; max-width: 560px;
+}
+.clarke-deck-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+.clarke-deck-hero-img-wrap { position: relative; padding: 14px; max-width: 460px; margin-left: auto; }
+.clarke-deck-hero-img-wrap::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: calc(100% - 14px); height: calc(100% - 14px);
+  border: 1.5px solid rgba(201,169,110,0.3);
+  border-radius: var(--radius-lg); z-index: 0;
+}
+.clarke-deck-hero-img {
+  position: relative; z-index: 1;
+  border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover;
+}
+
+
+/* ======== TRUST BAR ======== */
+.clarke-deck-trust-bar {
+  background: var(--color-bg-white); border-bottom: 1px solid var(--color-border); padding: 20px 0;
+}
+.clarke-deck-trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 0;
+}
+.clarke-deck-trust-item {
+  display: flex; align-items: center; gap: 8px; padding: 6px 20px;
+  font-size: 13px; font-weight: 600; color: var(--color-text-secondary); letter-spacing: 0.02em;
+}
+.clarke-deck-trust-item svg { width: 18px; height: 18px; color: var(--color-accent); flex-shrink: 0; }
+@media (min-width: 768px) {
+  .clarke-deck-trust-item { border-right: 1px solid var(--color-border); }
+  .clarke-deck-trust-item:last-child { border-right: none; }
+}
+
+
+/* ======== SHARED SECTION STYLES ======== */
+.clarke-deck-section-light { background: var(--color-bg-primary); padding: 56px 0; }
+.clarke-deck-section-white { background: var(--color-bg-white); padding: 56px 0; }
+@media (min-width: 768px) {
+  .clarke-deck-section-light, .clarke-deck-section-white { padding: 80px 0; }
+}
+.clarke-deck-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-deck-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-deck-sub {
+  font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
+  margin-bottom: 32px; max-width: 780px;
+}
+.clarke-deck-body { font-size: 16px; line-height: 1.8; max-width: 780px; }
+.clarke-deck-body p { margin-bottom: 18px; }
+.clarke-deck-body p:last-child { margin-bottom: 0; }
+.clarke-deck-body a {
+  color: var(--color-primary) !important; font-weight: 500;
+  border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
+  text-decoration: none !important;
+}
+.clarke-deck-body a:visited { color: var(--color-primary) !important; }
+.clarke-deck-body a:hover { border-color: var(--color-primary); color: var(--color-primary-hover) !important; }
+.clarke-deck-body strong { color: var(--color-text-heading); }
+
+.clarke-deck-h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 18px;
+  color: var(--color-text-heading); margin-bottom: 10px; margin-top: 28px; line-height: 1.3;
+}
+
+/* Checklist */
+.clarke-deck-checklist {
+  list-style: none; margin: 20px 0; max-width: 780px;
+}
+.clarke-deck-checklist li {
+  padding: 10px 0 10px 32px; position: relative; font-size: 16px; line-height: 1.7;
+  border-bottom: 1px solid var(--color-border);
+}
+.clarke-deck-checklist li:last-child { border-bottom: none; }
+.clarke-deck-checklist li::before {
+  content: ''; position: absolute; left: 0; top: 14px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: rgba(139,39,39,0.08); border: 2px solid var(--color-primary);
+}
+
+/* Inline CTA link */
+.clarke-deck-inline-cta {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 20px;
+  color: var(--color-primary) !important; font-weight: 600; font-size: 15px;
+  text-decoration: none !important;
+}
+.clarke-deck-inline-cta:hover { gap: 12px; color: var(--color-primary-hover) !important; }
+.clarke-deck-inline-cta:visited { color: var(--color-primary) !important; }
+.clarke-deck-inline-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* Small inline photos */
+.clarke-deck-photo-row {
+  display: flex; justify-content: center; gap: 20px;
+  margin: 36px auto; max-width: 600px; flex-wrap: wrap;
+}
+.clarke-deck-photo-sm {
+  border-radius: var(--radius-lg); width: calc(50% - 10px);
+  max-width: 280px; height: 190px; object-fit: cover;
+}
+@media (max-width: 600px) {
+  .clarke-deck-photo-sm { width: 100%; max-width: 320px; height: 200px; }
+}
+
+
+/* ======== DARK SECTION ======== */
+.clarke-deck-dark {
+  background: var(--color-secondary); position: relative; overflow: hidden; padding: 56px 0;
+}
+@media (min-width: 768px) { .clarke-deck-dark { padding: 80px 0; } }
+.clarke-deck-dark::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-deck-dark-inner { position: relative; z-index: 1; }
+.clarke-deck-dark-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-deck-dark-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-deck-dark-body { font-size: 16px; line-height: 1.8; max-width: 780px; color: rgba(255,255,255,0.68); }
+.clarke-deck-dark-body p { margin-bottom: 18px; }
+.clarke-deck-dark-body p:last-child { margin-bottom: 0; }
+.clarke-deck-dark-body strong { color: rgba(255,255,255,0.9); }
+.clarke-deck-dark-body a {
+  color: var(--color-accent) !important; font-weight: 500;
+  border-bottom: 1px solid rgba(201,169,110,0.3); text-decoration: none !important;
+}
+.clarke-deck-dark-body a:visited { color: var(--color-accent) !important; }
+.clarke-deck-dark-body a:hover { border-color: var(--color-accent); }
+
+.clarke-deck-dark-checklist {
+  list-style: none; margin: 20px 0; max-width: 780px;
+}
+.clarke-deck-dark-checklist li {
+  padding: 10px 0 10px 32px; position: relative; font-size: 16px; line-height: 1.7;
+  color: rgba(255,255,255,0.68); border-bottom: 1px solid rgba(201,169,110,0.08);
+}
+.clarke-deck-dark-checklist li:last-child { border-bottom: none; }
+.clarke-deck-dark-checklist li strong { color: rgba(255,255,255,0.9); }
+.clarke-deck-dark-checklist li::before {
+  content: ''; position: absolute; left: 0; top: 14px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: rgba(201,169,110,0.1); border: 2px solid var(--color-accent);
+}
+
+
+/* ======== COMPARISON TABLE ======== */
+.clarke-deck-table-wrap { overflow-x: auto; margin: 28px 0; max-width: 780px; }
+.clarke-deck-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  border-radius: var(--radius-lg); overflow: hidden;
+}
+.clarke-deck-table th {
+  background: var(--color-secondary); color: var(--color-accent);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 14px 18px; text-align: left;
+}
+.clarke-deck-table td {
+  background: var(--color-bg-white); color: var(--color-text-primary);
+  font-size: 15px; padding: 14px 18px; border-bottom: 1px solid var(--color-border);
+}
+.clarke-deck-table tr:last-child td { border-bottom: none; }
+.clarke-deck-table td:first-child { font-weight: 600; color: var(--color-text-heading); }
+
+
+/* ======== DECK TYPE CARDS ======== */
+.clarke-deck-type-cards {
+  display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px;
+}
+@media (min-width: 768px) { .clarke-deck-type-cards { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.clarke-deck-type-card {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 28px 26px;
+}
+.clarke-deck-type-card h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-heading); margin-bottom: 10px; line-height: 1.3;
+}
+.clarke-deck-type-card p {
+  font-size: 15px; line-height: 1.7; color: var(--color-text-secondary);
+}
+
+
+/* ======== RELATED SERVICES ======== */
+.clarke-deck-related-grid {
+  display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px;
+}
+@media (min-width: 600px) { .clarke-deck-related-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+@media (min-width: 960px) { .clarke-deck-related-grid { grid-template-columns: 1fr 1fr 1fr; gap: 20px; } }
+.clarke-deck-related-card {
+  display: flex; flex-direction: column; gap: 8px;
+  background: var(--color-bg-primary); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 28px 24px;
+  text-decoration: none !important; transition: all 0.3s ease; cursor: pointer;
+}
+.clarke-deck-related-card:visited { text-decoration: none !important; }
+.clarke-deck-related-card:visited h3 { color: var(--color-text-heading) !important; }
+.clarke-deck-related-card:visited p { color: var(--color-text-secondary) !important; }
+.clarke-deck-related-card:visited .clarke-deck-related-link { color: var(--color-primary) !important; }
+.clarke-deck-related-card:hover {
+  border-color: var(--color-primary); box-shadow: 0 4px 20px rgba(139,39,39,0.08);
+  transform: translateY(-3px);
+}
+.clarke-deck-related-card h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-heading) !important; line-height: 1.3;
+}
+.clarke-deck-related-card p {
+  font-size: 14px; line-height: 1.7; color: var(--color-text-secondary) !important; flex: 1;
+}
+.clarke-deck-related-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; font-weight: 600; color: var(--color-primary) !important;
+  margin-top: 4px; transition: gap 0.2s ease;
+}
+.clarke-deck-related-card:hover .clarke-deck-related-link { gap: 10px; }
+
+
+/* ======== CTA BAND ======== */
+.clarke-deck-cta-band {
+  background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .clarke-deck-cta-band { padding: 72px 0; } }
+.clarke-deck-cta-inner {
+  position: relative; z-index: 1; max-width: 780px; margin: 0 auto; text-align: center;
+}
+.clarke-deck-cta-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-deck-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-deck-cta-text {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 16px;
+}
+.clarke-deck-cta-area {
+  font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 28px;
+}
+.clarke-deck-cta-buttons {
+  display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+}
+
+
+/* ======== BUTTONS ======== */
+.clarke-deck-btn-primary {
+  background: var(--color-primary); color: #fff !important; padding: 16px 36px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-deck-btn-primary:hover { background: var(--color-primary-hover); color: #fff !important; transform: translateY(-1px); }
+.clarke-deck-btn-primary:visited { color: #fff !important; }
+.clarke-deck-btn-primary:active { color: #fff !important; }
+.clarke-deck-hero .clarke-deck-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
+.clarke-deck-hero .clarke-deck-btn-primary:hover { background: var(--color-accent); color: var(--color-secondary) !important; box-shadow: 0 6px 24px rgba(201,169,110,0.4); }
+.clarke-deck-hero .clarke-deck-btn-primary:visited { color: #fff !important; }
+
+.clarke-deck-btn-secondary-light {
+  background: transparent; border: 2px solid var(--color-primary);
+  color: var(--color-primary) !important; padding: 14px 32px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-deck-btn-secondary-light:hover { background: var(--color-primary); color: #fff !important; }
+.clarke-deck-btn-secondary-light:visited { color: var(--color-primary) !important; }
+.clarke-deck-btn-secondary-light:visited:hover { color: #fff !important; }
+
+.clarke-deck-cta-band .clarke-deck-btn-primary {
+  background: var(--color-bg-white); color: var(--color-primary) !important;
+}
+.clarke-deck-cta-band .clarke-deck-btn-primary:visited { color: var(--color-primary) !important; }
+.clarke-deck-cta-band .clarke-deck-btn-primary:hover {
+  background: #fff; color: var(--color-primary) !important; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+</style>
+
+
+<div class="clarke-deck-wrap">
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="clarke-deck-hero">
+    <div class="clarke-deck-container">
+      <div class="clarke-deck-hero-inner">
+
+        <div>
+          <div class="clarke-deck-hero-badge clarke-fade clarke-fade-d1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            Deck Construction &bull; Massachusetts &amp; Southern NH
+          </div>
+          <h1 class="clarke-deck-h1 clarke-fade clarke-fade-d2">Custom Deck Construction on the North Shore of Massachusetts</h1>
+          <p class="clarke-deck-hero-sub clarke-fade clarke-fade-d3">Composite and wood decks engineered for New England weather and built to last. Dave Clarke personally manages every build from design through final walkthrough.</p>
+          <div class="clarke-deck-hero-ctas clarke-fade clarke-fade-d4">
+            <a href="https://clarkebuildingcompany.com/contact/" class="clarke-deck-btn-primary">
+              Schedule a Free Consultation
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="clarke-deck-hero-img-wrap clarke-fade clarke-fade-d3">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/deck-construction-work-in-garden-with-some-torx-ci-2026-01-09-11-30-54-utc-scaled.jpg" alt="" width="640" height="480" class="clarke-deck-hero-img" loading="eager">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       TRUST BAR
+       ============================================ -->
+  <section class="clarke-deck-trust-bar">
+    <div class="clarke-deck-container">
+      <div class="clarke-deck-trust-row">
+        <div class="clarke-deck-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="clarke-deck-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Owner-Operated
+        </div>
+        <div class="clarke-deck-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          Structural Expertise
+        </div>
+        <div class="clarke-deck-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Transparent Pricing
+        </div>
+        <div class="clarke-deck-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          North Shore, MA &amp; Southern NH
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       INTRO
+       ============================================ -->
+  <section class="clarke-deck-section-light">
+    <div class="clarke-deck-container">
+      <h2 class="clarke-deck-h2">Decks Built for North Shore Living</h2>
+      <div class="clarke-deck-body">
+        <p>Clarke Building Company is a licensed and insured deck contractor based in West Newbury, MA. We design and build custom decks for homes throughout the North Shore and Southern New Hampshire, engineered to handle harsh winters and built to look great for decades. Whether you're planning a simple ground-level platform or a multi-level deck with a covered porch, every project gets the same hands-on attention: direct communication, no subcontracting surprises, and structural work done right the first time.</p>
+        <p>Deck construction is part of Clarke Building's broader <a href="https://clarkebuildingcompany.com/services/">residential construction services</a>. We also handle <a href="https://clarkebuildingcompany.com/renovations/">home renovations</a> and <a href="https://clarkebuildingcompany.com/additions/">additions</a>, so if your deck project is part of a bigger vision for your home, we can see the full picture and plan accordingly.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       MATERIALS: COMPOSITE VS WOOD
+       ============================================ -->
+  <section class="clarke-deck-section-white">
+    <div class="clarke-deck-container">
+      <h2 class="clarke-deck-h2">Composite Decking vs. Natural Wood</h2>
+      <div class="clarke-deck-body">
+        <p>One of the first questions homeowners ask is whether to go with composite or natural wood. Both are excellent options, and the right choice depends on your budget, how much maintenance you want to do, and the look you're going for.</p>
+      </div>
+
+      <h3 class="clarke-deck-h3" style="margin-top: 0;">Composite Decking (Trex, Azek, TimberTech)</h3>
+      <div class="clarke-deck-body">
+        <p>Composite decking is engineered from a blend of wood fiber and recycled plastic. It won't rot, warp, splinter, or require annual staining. Today's boards come in a wide range of colors, textures, and finishes that closely mimic natural wood. Best for homeowners who want low maintenance, a longer product lifespan, and a consistent appearance.</p>
+      </div>
+
+      <h3 class="clarke-deck-h3">Pressure-Treated and Hardwood Decking</h3>
+      <div class="clarke-deck-body">
+        <p>Pressure-treated lumber remains a proven, cost-effective choice for deck construction. When properly maintained, it holds up well in coastal New England climates and accepts stain and paint for flexibility over the finished look. For homeowners who want a premium natural aesthetic, hardwood options like ipe, mahogany, and tigerwood offer exceptional durability and a rich appearance, though they require periodic oiling.</p>
+      </div>
+
+      <h3 class="clarke-deck-h3">Comparison at a Glance</h3>
+      <div class="clarke-deck-table-wrap">
+        <table class="clarke-deck-table">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Composite</th>
+              <th>Pressure-Treated</th>
+              <th>Hardwood</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Upfront Cost</td>
+              <td>Moderate to high</td>
+              <td>Low to moderate</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>Annual Maintenance</td>
+              <td>Very low</td>
+              <td>Moderate (stain/seal)</td>
+              <td>Low to moderate (oiling)</td>
+            </tr>
+            <tr>
+              <td>Lifespan</td>
+              <td>25 to 30 years</td>
+              <td>15 to 20 years</td>
+              <td>25+ years</td>
+            </tr>
+            <tr>
+              <td>Appearance</td>
+              <td>Consistent, modern</td>
+              <td>Natural, paintable</td>
+              <td>Premium, natural</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="clarke-deck-body">
+        <p>We walk every client through this comparison during the consultation so you can make an informed decision based on your goals and your home.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       STRUCTURAL ENGINEERING (dark)
+       ============================================ -->
+  <section class="clarke-deck-dark">
+    <div class="clarke-deck-container clarke-deck-dark-inner">
+      <h2 class="clarke-deck-dark-h2">Built for New England: Structural Engineering That Holds Up</h2>
+      <div class="clarke-deck-dark-body">
+        <p>A deck is only as good as what's underneath it. North Shore Massachusetts has specific structural demands that require real engineering knowledge, not just a frame and some boards.</p>
+      </div>
+
+      <ul class="clarke-deck-dark-checklist">
+        <li><strong>Frost depth:</strong> Massachusetts frost depth runs to 48 inches in most of the North Shore region. Every footing we pour goes below the frost line to prevent heaving and settling.</li>
+        <li><strong>Footings:</strong> We size footings based on the structural load of your specific deck, including span, height, materials, and live/dead load calculations. Concrete tube footings or helical piers are selected based on soil conditions and site access.</li>
+        <li><strong>Snow load:</strong> A loaded deck can carry significant weight in a heavy winter. Framing, beam sizing, and post spacing all need to account for that from the start.</li>
+        <li><strong>Ledger attachment:</strong> How the deck connects to your house is critical, particularly on older homes with balloon framing, brick veneer, or legacy sheathing. Improper ledger attachment is the leading cause of deck failures nationally. We assess the existing structure before pulling a permit.</li>
+      </ul>
+
+      <div class="clarke-deck-dark-body">
+        <p>This level of structural deck engineering is part of every project we build, not an upgrade. We coordinate with structural engineers when required and pull all necessary permits.</p>
+      </div>
+
+      <div class="clarke-deck-photo-row">
+        <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/deck-under-construction-2026-01-07-23-03-28-utc-scaled.jpg" alt="" width="280" height="190" class="clarke-deck-photo-sm" loading="lazy" decoding="async" style="border: 1px solid rgba(201,169,110,0.15);">
+        <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/a-new-wooden-timber-deck-being-constructed-it-is-2026-01-09-08-29-54-utc-scaled.webp" alt="" width="280" height="190" class="clarke-deck-photo-sm" loading="lazy" decoding="async" style="border: 1px solid rgba(201,169,110,0.15);">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       DECK TYPES
+       ============================================ -->
+  <section class="clarke-deck-section-light">
+    <div class="clarke-deck-container">
+      <h2 class="clarke-deck-h2">Deck Types and Configurations</h2>
+      <p class="clarke-deck-sub">Every yard and every home is different. We build across the full range of deck types and can help you figure out what configuration makes the most sense for your outdoor space, your lot, and your home's architecture.</p>
+
+      <div class="clarke-deck-type-cards">
+        <div class="clarke-deck-type-card">
+          <h3>Ground-Level and Elevated Decks</h3>
+          <p>Ground-level decks are ideal for yards with minimal grade change, creating a seamless transition from indoors to outdoors. Elevated decks are common on colonial and split-level homes throughout the North Shore, engineered with full attention to post height, lateral bracing, and safe stair access.</p>
+        </div>
+        <div class="clarke-deck-type-card">
+          <h3>Multi-Level Decks</h3>
+          <p>A multi-level approach works well on sloped lots and larger properties where a single flat platform wouldn't take full advantage of the space. Multiple levels can define separate zones for dining, lounging, or a fire pit while following the natural grade of the yard.</p>
+        </div>
+        <div class="clarke-deck-type-card">
+          <h3>Covered Porches and Pergolas</h3>
+          <p>A covered porch extends your outdoor season significantly. Whether it's a simple pergola for filtered shade or a full shed-roof porch tied into the roofline of the house, we design and build these as part of the deck or as standalone structures. A covered porch can also be the first step toward a larger <a href="https://clarkebuildingcompany.com/additions/" style="color: var(--color-primary) !important; font-weight: 500; border-bottom: 1px solid rgba(139,39,39,0.25); text-decoration: none !important;">enclosed addition</a> down the road.</p>
+        </div>
+        <div class="clarke-deck-type-card">
+          <h3>Wraparound and Custom Designs</h3>
+          <p>Wraparound decks, L-shaped configurations, and decks that incorporate existing landscape features all require custom design and careful planning. We work from a measured site plan and design the deck to fit your home and yard, not the other way around.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       RAILING SYSTEMS
+       ============================================ -->
+  <section class="clarke-deck-section-white">
+    <div class="clarke-deck-container">
+      <h2 class="clarke-deck-h2">Railing Systems and Code Requirements</h2>
+      <div class="clarke-deck-body">
+        <p>Railing is where the visual character of a deck really comes together, but it's also a code-governed component. Massachusetts building code requires guardrails on decks 30 inches or more above grade, with specific requirements for height and baluster spacing. We walk you through code-compliant options at every price point during the design conversation.</p>
+      </div>
+
+      <ul class="clarke-deck-checklist">
+        <li><strong>Cable railing:</strong> Horizontal stainless cable runs between wood or metal posts, giving you an open, coastal feel while preserving sightlines. Requires periodic tensioning but is extremely durable.</li>
+        <li><strong>Glass panel railing:</strong> Maximum transparency and a modern, clean aesthetic. Works well on elevated decks where views matter.</li>
+        <li><strong>Composite railing:</strong> Low-maintenance systems from Trex and Azek that pair cleanly with composite decking. Available in a range of colors and styles.</li>
+        <li><strong>Aluminum railing:</strong> Durable, powder-coated for weather resistance, and works well with both wood and composite decking.</li>
+        <li><strong>Wood railing:</strong> Painted or stained for a traditional, classic look that suits many colonial and Cape Cod style homes. Requires periodic maintenance.</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PERMITS
+       ============================================ -->
+  <section class="clarke-deck-section-light">
+    <div class="clarke-deck-container">
+      <h2 class="clarke-deck-h2">Deck Permits in Massachusetts</h2>
+      <div class="clarke-deck-body">
+        <p>Most decks in Massachusetts require a building permit. As a general rule, if your deck is attached to the house, over 200 square feet, or elevated more than 30 inches off the ground, you'll need a permit. The process involves a structural review, footing inspection, framing inspection, and final inspection.</p>
+        <p>Skipping the permit is not worth the risk. Unpermitted decks can create complications when you sell your home, may not be covered by homeowner's insurance, and may not meet the structural standards that keep your family safe.</p>
+        <p><strong>Clarke Building pulls all required permits on your behalf as part of every project.</strong> We're familiar with the permitting offices in West Newbury, Newburyport, Amesbury, Georgetown, and surrounding towns. You don't need to navigate town hall. We handle the application, schedule the inspections, and coordinate with the building inspector at each required stage. By the time your deck is done, it has a clean inspection record and a closed permit.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       WHY CLARKE
+       ============================================ -->
+  <section class="clarke-deck-section-white">
+    <div class="clarke-deck-container">
+      <h2 class="clarke-deck-h2">Why Homeowners Choose Clarke Building for Their Deck</h2>
+      <div class="clarke-deck-body">
+        <p><strong>Local knowledge, genuinely.</strong> We're based in West Newbury and build throughout the North Shore and Southern New Hampshire. We know the local frost depths, the building departments, the soil conditions, and the architectural character of homes in this region.</p>
+        <p><strong>Structural expertise.</strong> We treat deck construction as structural work because it is. Proper footings, correct ledger attachment, engineered beam sizing, and snow load consideration are built into every project.</p>
+        <p><strong>Experience with older homes.</strong> A significant portion of North Shore housing stock is older, with legacy framing that requires careful assessment before any structural attachment. We have the experience to evaluate what's behind your walls before we start.</p>
+        <p><strong>Direct communication.</strong> You work directly with the team, not a sales rep or a project manager you've never met. One point of contact from estimate through final walkthrough.</p>
+        <p><strong>Full-service capability.</strong> Decks often go hand in hand with larger projects. We also handle <a href="https://clarkebuildingcompany.com/renovations/">whole-home renovations</a> and <a href="https://clarkebuildingcompany.com/additions/">home additions</a>, so if your deck is part of a bigger vision, we can plan accordingly. <a href="https://clarkebuildingcompany.com/projects/">Browse our project portfolio</a> to see examples of our work.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       RELATED SERVICES
+       ============================================ -->
+  <section class="clarke-deck-section-light">
+    <div class="clarke-deck-container">
+      <h2 class="clarke-deck-h2">Related Clarke Building Services</h2>
+      <p class="clarke-deck-sub">Deck projects often connect to other work on the home. Explore how we can help:</p>
+
+      <div class="clarke-deck-related-grid">
+        <a href="https://clarkebuildingcompany.com/additions/" class="clarke-deck-related-card">
+          <h3>Home Additions</h3>
+          <p>Expand your home's footprint with a quality addition built to match your existing structure.</p>
+          <span class="clarke-deck-related-link">Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/renovations/" class="clarke-deck-related-card">
+          <h3>Home Renovations</h3>
+          <p>Interior remodeling, structural work, hardwood floors, and whole-home updates for aging homes.</p>
+          <span class="clarke-deck-related-link">Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/" class="clarke-deck-related-card">
+          <h3>Clarke Building Company</h3>
+          <p>Learn more about our owner-operated approach to residential construction on the North Shore.</p>
+          <span class="clarke-deck-related-link">Visit Homepage
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 28px;">
+        <a href="https://clarkebuildingcompany.com/services/" class="clarke-deck-btn-secondary-light">
+          View All Services
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CTA BAND
+       ============================================ -->
+  <section class="clarke-deck-cta-band">
+    <div class="clarke-deck-container clarke-deck-cta-inner">
+      <h2 class="clarke-deck-cta-h2">Ready to Start Your Deck Project?</h2>
+      <p class="clarke-deck-cta-text">Spring and summer project slots fill up early on the North Shore. If you're thinking about adding a deck, replacing an aging structure, or expanding your outdoor living space, now is the right time to get on the schedule. Dave will visit your site, listen to what you have in mind, and give you a straight, detailed estimate.</p>
+      <p class="clarke-deck-cta-area">Serving West Newbury, Newburyport, Amesbury, Ipswich, Hamilton, Topsfield, Georgetown, Boxford, Rowley, Salisbury, and surrounding Massachusetts and Southern New Hampshire communities.</p>
+      <div class="clarke-deck-cta-buttons">
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-deck-btn-primary">
+          Schedule a Free Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
