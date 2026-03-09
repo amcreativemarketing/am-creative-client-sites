@@ -1,0 +1,579 @@
+<!-- CLARKE BUILDING COMPANY - WEST NEWBURY, MA LOCATION PAGE
+     Page: /west-newbury-ma/
+     Design: Craftsman Editorial (A+C Hybrid)
+     Built: March 2026 by AM Creative
+     
+     INTERNAL LINKS:
+     Domain: https://clarkebuildingcompany.com
+     Links: /kitchen-remodeling/, /renovations/, /additions/, /adu/, /deck-construction/,
+            /new-construction/, /projects/, /contact/
+     Sibling locations: /newburyport-ma/, /amesbury-ma/, /ipswich-ma/, /topsfield-ma/, /hamilton-ma/
+     
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+     All img alt="" left empty per OTTO workflow.
+-->
+
+<style>
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+.clarke-wn-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-wn-wrap *, .clarke-wn-wrap *::before, .clarke-wn-wrap *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+.clarke-wn-wrap img { max-width: 100%; height: auto; display: block; }
+.clarke-wn-wrap a { text-decoration: none; }
+
+.clarke-wn-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+}
+@media (min-width: 768px) { .clarke-wn-container { padding: 0 32px; } }
+
+@keyframes clarkeFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-fade { animation: clarkeFadeUp 0.8s ease forwards; }
+.clarke-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+.clarke-fade-d4 { animation-delay: 0.55s; opacity: 0; }
+
+
+/* ======== HERO ======== */
+.clarke-wn-hero {
+  background: var(--color-secondary);
+  position: relative; overflow: hidden; padding: 60px 0 48px;
+}
+@media (min-width: 768px) { .clarke-wn-hero { padding: 80px 0 64px; } }
+.clarke-wn-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-wn-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.018) 100px, rgba(201,169,110,0.018) 101px);
+  pointer-events: none; z-index: 0;
+}
+.clarke-wn-hero-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 40px;
+}
+@media (min-width: 960px) {
+  .clarke-wn-hero-inner {
+    display: grid; grid-template-columns: 1.2fr 0.8fr;
+    gap: 56px; align-items: center;
+  }
+}
+.clarke-wn-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent); margin-bottom: 20px; width: fit-content;
+}
+.clarke-wn-hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.clarke-wn-h1 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 32px;
+  line-height: 1.12; color: var(--color-text-inverse);
+  margin-bottom: 16px; letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-wn-h1 { font-size: clamp(36px, 4.5vw, 50px); } }
+.clarke-wn-hero-sub {
+  font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
+  margin-bottom: 28px; max-width: 560px;
+}
+.clarke-wn-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+.clarke-wn-hero-img-wrap { position: relative; padding: 14px; max-width: 460px; margin-left: auto; }
+.clarke-wn-hero-img-wrap::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: calc(100% - 14px); height: calc(100% - 14px);
+  border: 1.5px solid rgba(201,169,110,0.3);
+  border-radius: var(--radius-lg); z-index: 0;
+}
+.clarke-wn-hero-img {
+  position: relative; z-index: 1;
+  border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover;
+}
+
+
+/* ======== TRUST BAR ======== */
+.clarke-wn-trust-bar {
+  background: var(--color-bg-white); border-bottom: 1px solid var(--color-border); padding: 20px 0;
+}
+.clarke-wn-trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 0;
+}
+.clarke-wn-trust-item {
+  display: flex; align-items: center; gap: 8px; padding: 6px 20px;
+  font-size: 13px; font-weight: 600; color: var(--color-text-secondary); letter-spacing: 0.02em;
+}
+.clarke-wn-trust-item svg { width: 18px; height: 18px; color: var(--color-accent); flex-shrink: 0; }
+@media (min-width: 768px) {
+  .clarke-wn-trust-item { border-right: 1px solid var(--color-border); }
+  .clarke-wn-trust-item:last-child { border-right: none; }
+}
+
+
+/* ======== SHARED SECTION STYLES ======== */
+.clarke-wn-section-light { background: var(--color-bg-primary); padding: 56px 0; }
+.clarke-wn-section-white { background: var(--color-bg-white); padding: 56px 0; }
+@media (min-width: 768px) {
+  .clarke-wn-section-light, .clarke-wn-section-white { padding: 80px 0; }
+}
+.clarke-wn-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-wn-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-wn-sub {
+  font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
+  margin-bottom: 32px; max-width: 780px;
+}
+.clarke-wn-body { font-size: 16px; line-height: 1.8; max-width: 780px; }
+.clarke-wn-body p { margin-bottom: 18px; }
+.clarke-wn-body p:last-child { margin-bottom: 0; }
+.clarke-wn-body a {
+  color: var(--color-primary) !important; font-weight: 500;
+  border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
+  text-decoration: none !important;
+}
+.clarke-wn-body a:visited { color: var(--color-primary) !important; }
+.clarke-wn-body a:hover { border-color: var(--color-primary); color: var(--color-primary-hover) !important; }
+.clarke-wn-body strong { color: var(--color-text-heading); }
+
+/* Inline CTA */
+.clarke-wn-inline-cta {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 20px;
+  color: var(--color-primary) !important; font-weight: 600; font-size: 15px;
+  text-decoration: none !important;
+}
+.clarke-wn-inline-cta:hover { gap: 12px; color: var(--color-primary-hover) !important; }
+.clarke-wn-inline-cta:visited { color: var(--color-primary) !important; }
+.clarke-wn-inline-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* Small photos */
+.clarke-wn-photo-sm {
+  border-radius: var(--radius-lg); max-width: 280px; height: 190px;
+  object-fit: cover; display: block; margin: 36px auto 0;
+}
+
+
+/* ======== SERVICE CARDS ======== */
+.clarke-wn-service-grid {
+  display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px;
+}
+@media (min-width: 600px) { .clarke-wn-service-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+@media (min-width: 960px) { .clarke-wn-service-grid { grid-template-columns: 1fr 1fr 1fr; gap: 20px; } }
+.clarke-wn-service-card {
+  display: flex; flex-direction: column; gap: 8px;
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 28px 24px;
+  text-decoration: none !important; transition: all 0.3s ease; cursor: pointer;
+}
+.clarke-wn-service-card:visited { text-decoration: none !important; }
+.clarke-wn-service-card:visited h3 { color: var(--color-text-heading) !important; }
+.clarke-wn-service-card:visited p { color: var(--color-text-secondary) !important; }
+.clarke-wn-service-card:visited .clarke-wn-card-link { color: var(--color-primary) !important; }
+.clarke-wn-service-card:hover {
+  border-color: var(--color-primary); box-shadow: 0 4px 20px rgba(139,39,39,0.08);
+  transform: translateY(-3px);
+}
+.clarke-wn-service-card h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-heading) !important; line-height: 1.3;
+}
+.clarke-wn-service-card p {
+  font-size: 14px; line-height: 1.7; color: var(--color-text-secondary) !important; flex: 1;
+}
+.clarke-wn-card-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; font-weight: 600; color: var(--color-primary) !important;
+  margin-top: 4px; transition: gap 0.2s ease;
+}
+.clarke-wn-service-card:hover .clarke-wn-card-link { gap: 10px; }
+
+
+/* ======== DARK SECTION ======== */
+.clarke-wn-dark {
+  background: var(--color-secondary); position: relative; overflow: hidden; padding: 56px 0;
+}
+@media (min-width: 768px) { .clarke-wn-dark { padding: 80px 0; } }
+.clarke-wn-dark::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-wn-dark-inner { position: relative; z-index: 1; }
+.clarke-wn-dark-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-wn-dark-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-wn-dark-body { font-size: 16px; line-height: 1.8; max-width: 780px; color: rgba(255,255,255,0.68); }
+.clarke-wn-dark-body p { margin-bottom: 18px; }
+.clarke-wn-dark-body p:last-child { margin-bottom: 0; }
+.clarke-wn-dark-body strong { color: rgba(255,255,255,0.9); }
+.clarke-wn-dark-body a {
+  color: var(--color-accent) !important; font-weight: 500;
+  border-bottom: 1px solid rgba(201,169,110,0.3); text-decoration: none !important;
+}
+.clarke-wn-dark-body a:visited { color: var(--color-accent) !important; }
+.clarke-wn-dark-body a:hover { border-color: var(--color-accent); }
+
+
+/* ======== WHY CLARKE CHECKLIST ======== */
+.clarke-wn-why-list {
+  list-style: none; margin: 24px 0; max-width: 780px;
+}
+.clarke-wn-why-list li {
+  padding: 14px 0 14px 32px; position: relative; font-size: 16px; line-height: 1.7;
+  border-bottom: 1px solid var(--color-border);
+}
+.clarke-wn-why-list li:last-child { border-bottom: none; }
+.clarke-wn-why-list li strong { color: var(--color-text-heading); }
+.clarke-wn-why-list li::before {
+  content: ''; position: absolute; left: 0; top: 18px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: rgba(139,39,39,0.08); border: 2px solid var(--color-primary);
+}
+
+
+/* ======== SIBLING LOCATIONS ======== */
+.clarke-wn-locations {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;
+}
+.clarke-wn-location-tag {
+  display: inline-block; padding: 10px 20px;
+  background: var(--color-bg-primary); border: 1px solid var(--color-border);
+  border-radius: var(--radius-md); font-size: 14px; font-weight: 600;
+  color: var(--color-text-heading) !important; transition: all 0.2s ease;
+  text-decoration: none !important;
+}
+.clarke-wn-location-tag:visited { color: var(--color-text-heading) !important; }
+.clarke-wn-location-tag:hover {
+  border-color: var(--color-primary); color: var(--color-primary) !important;
+  background: rgba(139,39,39,0.04);
+}
+
+
+/* ======== CTA BAND ======== */
+.clarke-wn-cta-band {
+  background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .clarke-wn-cta-band { padding: 72px 0; } }
+.clarke-wn-cta-inner {
+  position: relative; z-index: 1; max-width: 780px; margin: 0 auto; text-align: center;
+}
+.clarke-wn-cta-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-wn-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-wn-cta-text {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 16px;
+}
+.clarke-wn-cta-address {
+  font-size: 15px; color: rgba(255,255,255,0.65); margin-bottom: 28px;
+}
+.clarke-wn-cta-buttons {
+  display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+}
+
+
+/* ======== BUTTONS ======== */
+.clarke-wn-btn-primary {
+  background: var(--color-primary); color: #fff !important; padding: 16px 36px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-wn-btn-primary:hover { background: var(--color-primary-hover); color: #fff !important; transform: translateY(-1px); }
+.clarke-wn-btn-primary:visited { color: #fff !important; }
+.clarke-wn-btn-primary:active { color: #fff !important; }
+.clarke-wn-hero .clarke-wn-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
+.clarke-wn-hero .clarke-wn-btn-primary:hover { background: var(--color-accent); color: var(--color-secondary) !important; box-shadow: 0 6px 24px rgba(201,169,110,0.4); }
+.clarke-wn-hero .clarke-wn-btn-primary:visited { color: #fff !important; }
+
+.clarke-wn-cta-band .clarke-wn-btn-primary {
+  background: var(--color-bg-white); color: var(--color-primary) !important;
+}
+.clarke-wn-cta-band .clarke-wn-btn-primary:visited { color: var(--color-primary) !important; }
+.clarke-wn-cta-band .clarke-wn-btn-primary:hover {
+  background: #fff; color: var(--color-primary) !important; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+</style>
+
+
+<div class="clarke-wn-wrap">
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="clarke-wn-hero">
+    <div class="clarke-wn-container">
+      <div class="clarke-wn-hero-inner">
+
+        <div>
+          <div class="clarke-wn-hero-badge clarke-fade clarke-fade-d1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            West Newbury, MA &bull; General Contractor
+          </div>
+          <h1 class="clarke-wn-h1 clarke-fade clarke-fade-d2">General Contractor in West Newbury, MA</h1>
+          <p class="clarke-wn-hero-sub clarke-fade clarke-fade-d3">Clarke Building Company is based right here at 51 Pleasant St in West Newbury. Kitchen remodeling, home additions, ADUs, renovations, decks, and new construction for the homes we know best.</p>
+          <div class="clarke-wn-hero-ctas clarke-fade clarke-fade-d4">
+            <a href="https://clarkebuildingcompany.com/contact/" class="clarke-wn-btn-primary">
+              Schedule a Consultation
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="clarke-wn-hero-img-wrap clarke-fade clarke-fade-d3">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-island-ovens-living-area.webp" alt="" width="640" height="480" class="clarke-wn-hero-img" loading="eager">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       TRUST BAR
+       ============================================ -->
+  <section class="clarke-wn-trust-bar">
+    <div class="clarke-wn-container">
+      <div class="clarke-wn-trust-row">
+        <div class="clarke-wn-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="clarke-wn-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Owner-Operated
+        </div>
+        <div class="clarke-wn-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Based in West Newbury
+        </div>
+        <div class="clarke-wn-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Transparent Pricing
+        </div>
+        <div class="clarke-wn-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          Older Home Specialists
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       INTRO
+       ============================================ -->
+  <section class="clarke-wn-section-light">
+    <div class="clarke-wn-container">
+      <h2 class="clarke-wn-h2">Your Local Contractor in West Newbury</h2>
+      <div class="clarke-wn-body">
+        <p>Clarke Building Company is based right here at 51 Pleasant St in West Newbury, MA. This is our town, and these are the homes we know best. As a full-service general contractor in West Newbury, we work with the older colonials, capes, saltboxes, and antique homes that define this community, bringing genuine craftsmanship and local knowledge to every project.</p>
+        <p>Whether you're planning a kitchen remodel, a new home addition, or a complete renovation, we handle it all from the first consultation through the final inspection. Home remodeling in West Newbury starts with understanding what these houses actually need, and that's where a locally rooted contractor makes all the difference.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SERVICES IN WEST NEWBURY
+       ============================================ -->
+  <section class="clarke-wn-section-white">
+    <div class="clarke-wn-container">
+      <h2 class="clarke-wn-h2">Home Remodeling Services in West Newbury</h2>
+      <p class="clarke-wn-sub">We offer the full range of residential construction and remodeling services, managed by one team that knows the area.</p>
+
+      <div class="clarke-wn-service-grid">
+        <a href="https://clarkebuildingcompany.com/kitchen-remodeling/" class="clarke-wn-service-card">
+          <h3>Kitchen Remodeling</h3>
+          <p>Layout, cabinetry, countertops, plumbing rough-ins, and electrical, all coordinated so the project moves efficiently and finishes right.</p>
+          <span class="clarke-wn-card-link">Explore Kitchen Remodeling
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/renovations/" class="clarke-wn-service-card">
+          <h3>Renovations</h3>
+          <p>Interior renovations, finish carpentry, flooring, and whole-room updates. Whether you're refreshing a single room or updating an entire floor.</p>
+          <span class="clarke-wn-card-link">View Renovation Services
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/additions/" class="clarke-wn-service-card">
+          <h3>Home Additions</h3>
+          <p>Adding a bedroom suite, sunroom, or mudroom. Full scope including engineering, permitting through West Newbury's building department, and finish work.</p>
+          <span class="clarke-wn-card-link">Learn About Additions
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/adu/" class="clarke-wn-service-card">
+          <h3>ADU Construction</h3>
+          <p>Detached studios, garage conversions, and in-law suites, increasingly popular on West Newbury's larger lots. We manage the entire ADU process including all required local permits.</p>
+          <span class="clarke-wn-card-link">Explore ADU Construction
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/deck-construction/" class="clarke-wn-service-card">
+          <h3>Deck Construction</h3>
+          <p>Custom decks designed to match the scale and character of West Newbury homes, using quality materials that hold up to New England winters. All projects include proper permitting.</p>
+          <span class="clarke-wn-card-link">View Deck Construction
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/new-construction/" class="clarke-wn-service-card">
+          <h3>New Construction</h3>
+          <p>Complete new construction services for clients building from the ground up on a West Newbury lot, from site work and foundation through finish.</p>
+          <span class="clarke-wn-card-link">Learn About New Construction
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-toward-fridge-living-room.webp" alt="" width="280" height="190" class="clarke-wn-photo-sm" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       OLDER HOMES (dark section)
+       ============================================ -->
+  <section class="clarke-wn-dark">
+    <div class="clarke-wn-container clarke-wn-dark-inner">
+      <h2 class="clarke-wn-dark-h2">Older Homes and Renovation Expertise on the North Shore</h2>
+      <div class="clarke-wn-dark-body">
+        <p>West Newbury's housing stock reflects the town's history. A significant portion of homes here were built before 1980. Many are pre-1960 colonials, antique capes, and saltboxes that carry tremendous character but also present challenges that newer construction simply doesn't have.</p>
+        <p>Older North Shore homes frequently involve balloon framing, knob-and-tube or aluminum branch wiring, older plumbing configurations, and foundation conditions that require assessment before any structural work begins. A contractor who hasn't worked on this type of housing stock can create expensive problems downstream.</p>
+        <p>We have worked extensively on older Essex County homes. We know how to assess these structures, how to preserve their architectural character while bringing them up to modern performance standards, and when to bring in the right specialists (structural engineers, electricians, or mechanical contractors) to handle what's behind the walls before we close them back up.</p>
+        <p>If you have a 1940s cape that needs a full gut renovation, or an antique colonial where you want to add a dormer without compromising the roofline, we've done that work. <a href="https://clarkebuildingcompany.com/renovations/">Explore our renovation services</a> to learn more.</p>
+      </div>
+
+      <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-stainless-fridge-island.webp" alt="" width="280" height="190" class="clarke-wn-photo-sm" loading="lazy" decoding="async" style="border: 1px solid rgba(201,169,110,0.15);">
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PERMITTING
+       ============================================ -->
+  <section class="clarke-wn-section-light">
+    <div class="clarke-wn-container">
+      <h2 class="clarke-wn-h2">Local Building Codes and Permitting in West Newbury</h2>
+      <div class="clarke-wn-body">
+        <p>West Newbury has its own building department, and the town requires permits for most significant residential work. This includes additions, decks, ADUs, structural renovations, window replacements in certain configurations, and all new construction.</p>
+        <p>The permitting process involves submitting plans, meeting state building code and local zoning requirements, scheduling inspections at key milestones, and obtaining a certificate of occupancy for applicable projects. Skipping permits is not a shortcut worth taking. Unpermitted work creates title problems, can void homeowner's insurance coverage, and in some cases requires removal and reconstruction at the owner's expense.</p>
+        <p><strong>As a local contractor based in West Newbury, we handle all permitting on behalf of our clients.</strong> We know what West Newbury's building department requires, how to prepare submittal packages that move through review efficiently, and how to schedule inspections so projects don't stall mid-construction. The permitting timeline is something we factor into every project schedule from day one.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       WHY CLARKE IN WEST NEWBURY
+       ============================================ -->
+  <section class="clarke-wn-section-white">
+    <div class="clarke-wn-container">
+      <h2 class="clarke-wn-h2">Why Choose Clarke Building Company in West Newbury</h2>
+      <div class="clarke-wn-body">
+        <p>A lot of contractors will tell you they "serve" West Newbury. We live and work here. Our office is at 51 Pleasant St, a few minutes from most neighborhoods in town. That proximity matters in practical ways:</p>
+      </div>
+
+      <ul class="clarke-wn-why-list">
+        <li><strong>Fast site visits.</strong> We can be at your property quickly for initial assessments, site checks during active projects, and post-work walkthroughs.</li>
+        <li><strong>We know the local inspectors and the permitting office.</strong> Years of working through West Newbury's building department means we've built relationships that help projects move without unnecessary delays.</li>
+        <li><strong>Our subcontractor network is local.</strong> The electricians, plumbers, HVAC contractors, and specialty tradespeople we work with are based in this area. They know North Shore conditions, and they're accountable to us because we work together repeatedly.</li>
+        <li><strong>Local references.</strong> We can connect you with West Newbury and North Shore homeowners who have gone through projects with us. Real references from real neighbors.</li>
+        <li><strong>Owner-operated.</strong> You're not dealing with a franchise or a regional office. The people running the projects are the people running the company.</li>
+      </ul>
+
+      <a href="https://clarkebuildingcompany.com/projects/" class="clarke-wn-inline-cta">
+        Browse Our Project Portfolio
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+
+      <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-open-concept-wide-angle.webp" alt="" width="280" height="190" class="clarke-wn-photo-sm" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SERVING SURROUNDING COMMUNITIES
+       ============================================ -->
+  <section class="clarke-wn-section-light">
+    <div class="clarke-wn-container">
+      <h2 class="clarke-wn-h2">Serving West Newbury and the Surrounding North Shore</h2>
+      <div class="clarke-wn-body">
+        <p>Clarke Building Company is based in West Newbury and serves the surrounding communities across the North Shore and Merrimack Valley. We bring the same local knowledge and hands-on approach to every town we work in.</p>
+      </div>
+
+      <div class="clarke-wn-locations">
+        <a href="https://clarkebuildingcompany.com/newburyport-ma/" class="clarke-wn-location-tag">Newburyport, MA</a>
+        <a href="https://clarkebuildingcompany.com/amesbury-ma/" class="clarke-wn-location-tag">Amesbury, MA</a>
+        <a href="https://clarkebuildingcompany.com/ipswich-ma/" class="clarke-wn-location-tag">Ipswich, MA</a>
+        <a href="https://clarkebuildingcompany.com/topsfield-ma/" class="clarke-wn-location-tag">Topsfield, MA</a>
+        <a href="https://clarkebuildingcompany.com/hamilton-ma/" class="clarke-wn-location-tag">Hamilton, MA</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CTA BAND
+       ============================================ -->
+  <section class="clarke-wn-cta-band">
+    <div class="clarke-wn-container clarke-wn-cta-inner">
+      <h2 class="clarke-wn-cta-h2">Schedule Your Consultation</h2>
+      <p class="clarke-wn-cta-text">If you're a West Newbury homeowner thinking about a remodel, addition, ADU, or new build, we'd like to hear about your project. We're local, we're available, and we can visit your site quickly to give you an informed, honest assessment of what your project involves and what it's likely to cost.</p>
+      <p class="clarke-wn-cta-address">Clarke Building Company &bull; 51 Pleasant St, West Newbury, MA 01985 &bull; (978) 257-5331</p>
+      <div class="clarke-wn-cta-buttons">
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-wn-btn-primary">
+          Contact Clarke Building
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
