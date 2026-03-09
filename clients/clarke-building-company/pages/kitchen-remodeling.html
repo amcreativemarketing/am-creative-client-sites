@@ -7,7 +7,7 @@
      
      INTERNAL LINKS:
      Domain: https://clarkebuildingcompany.com
-     Links: /contact/, /projects/, /renovations/, /additions/, /adu/, /services/, /about-us/
+     Links: /contact/, /renovations/, /additions/, /adu/, /services/, /about/
      
      SEO NOTE: No meta tags, schema, or alt text optimization in this file.
      OTTO handles all SEO markup post-deployment.
@@ -173,14 +173,16 @@
 /* ======== INTRO ======== */
 .clarke-kit-intro { background: var(--color-bg-primary); padding: 56px 0; }
 @media (min-width: 768px) { .clarke-kit-intro { padding: 72px 0; } }
-.clarke-kit-intro-text { max-width: 780px; margin: 0 auto; font-size: 17px; line-height: 1.8; }
+.clarke-kit-intro-text { max-width: 780px; font-size: 17px; line-height: 1.8; }
 .clarke-kit-intro-text p { margin-bottom: 20px; }
 .clarke-kit-intro-text p:last-child { margin-bottom: 0; }
 .clarke-kit-intro-text a {
-  color: var(--color-primary); font-weight: 500;
+  color: var(--color-primary) !important; font-weight: 500;
   border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
+  text-decoration: none !important;
 }
-.clarke-kit-intro-text a:hover { border-color: var(--color-primary); }
+.clarke-kit-intro-text a:visited { color: var(--color-primary) !important; }
+.clarke-kit-intro-text a:hover { border-color: var(--color-primary); color: var(--color-primary-hover) !important; }
 
 
 /* ======== SECTION HEADINGS ======== */
@@ -299,9 +301,11 @@
 }
 .clarke-kit-pricing-philosophy p:last-child { margin-bottom: 0; }
 .clarke-kit-pricing-philosophy a {
-  color: var(--color-accent); font-weight: 500;
+  color: var(--color-accent) !important; font-weight: 500;
   border-bottom: 1px solid rgba(201,169,110,0.3); transition: border-color 0.2s ease;
+  text-decoration: none !important;
 }
+.clarke-kit-pricing-philosophy a:visited { color: var(--color-accent) !important; }
 .clarke-kit-pricing-philosophy a:hover { border-color: var(--color-accent); }
 
 
@@ -332,6 +336,27 @@
 }
 .clarke-kit-testimonial-attr {
   font-size: 13px; font-weight: 600; color: var(--color-text-secondary);
+}
+
+/* ======== REVIEWS GRID ======== */
+.clarke-kit-reviews { background: var(--color-bg-white); padding: 56px 0; }
+@media (min-width: 768px) { .clarke-kit-reviews { padding: 80px 0; } }
+.clarke-kit-reviews-grid {
+  display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 28px;
+}
+@media (min-width: 768px) { .clarke-kit-reviews-grid { grid-template-columns: 1fr 1fr; gap: 24px; } }
+.clarke-kit-review-card {
+  background: var(--color-bg-primary); border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent); border-radius: var(--radius-lg);
+  padding: 28px 26px;
+}
+.clarke-kit-review-card .clarke-kit-testimonial-stars { margin-bottom: 14px; }
+.clarke-kit-review-card blockquote {
+  font-size: 16px; line-height: 1.7; color: var(--color-text-primary);
+  font-style: italic; margin-bottom: 14px;
+}
+.clarke-kit-review-card .clarke-kit-testimonial-attr {
+  font-size: 14px; font-weight: 600; color: var(--color-text-heading);
 }
 
 .clarke-kit-steps { counter-reset: step; }
@@ -368,10 +393,12 @@
   font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 16px;
 }
 .clarke-kit-cta-text a {
-  color: rgba(255,255,255,0.95); font-weight: 500;
+  color: rgba(255,255,255,0.95) !important; font-weight: 500;
   border-bottom: 1px solid rgba(255,255,255,0.35); transition: border-color 0.2s ease;
+  text-decoration: none !important;
 }
-.clarke-kit-cta-text a:hover { border-color: #fff; }
+.clarke-kit-cta-text a:visited { color: rgba(255,255,255,0.95) !important; }
+.clarke-kit-cta-text a:hover { border-color: #fff; color: #fff !important; }
 .clarke-kit-cta-testimonial {
   background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
   border-top: 3px solid var(--color-accent); border-radius: var(--radius-lg);
@@ -387,36 +414,43 @@
 
 /* ======== BUTTONS ======== */
 .clarke-kit-btn-primary {
-  background: var(--color-primary); color: #fff; padding: 16px 36px;
+  background: var(--color-primary); color: #fff !important; padding: 16px 36px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
-  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
-.clarke-kit-btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+.clarke-kit-btn-primary:hover { background: var(--color-primary-hover); color: #fff !important; transform: translateY(-1px); }
+.clarke-kit-btn-primary:visited { color: #fff !important; }
+.clarke-kit-btn-primary:active { color: #fff !important; }
 .clarke-kit-hero .clarke-kit-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
+.clarke-kit-hero .clarke-kit-btn-primary:hover { background: var(--color-accent); color: var(--color-secondary) !important; box-shadow: 0 6px 24px rgba(201,169,110,0.4); }
+.clarke-kit-hero .clarke-kit-btn-primary:visited { color: #fff !important; }
 
 .clarke-kit-btn-secondary {
   background: transparent; border: 2px solid rgba(255,255,255,0.18);
-  color: rgba(255,255,255,0.75); padding: 14px 32px;
+  color: rgba(255,255,255,0.75) !important; padding: 14px 32px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border-radius: var(--radius-md); transition: all 0.3s ease;
-  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
 .clarke-kit-btn-secondary:hover {
-  border-color: var(--color-accent); color: var(--color-accent); background: rgba(201,169,110,0.06);
+  border-color: var(--color-accent); color: var(--color-accent) !important; background: rgba(201,169,110,0.06);
 }
+.clarke-kit-btn-secondary:visited { color: rgba(255,255,255,0.75) !important; }
 
 .clarke-kit-cta-band .clarke-kit-btn-primary {
-  background: var(--color-bg-white); color: var(--color-primary);
+  background: var(--color-bg-white); color: var(--color-primary) !important;
 }
+.clarke-kit-cta-band .clarke-kit-btn-primary:visited { color: var(--color-primary) !important; }
 .clarke-kit-cta-band .clarke-kit-btn-primary:hover {
-  background: #fff; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  background: #fff; color: var(--color-primary) !important; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 .clarke-kit-cta-band .clarke-kit-btn-secondary {
-  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85);
+  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85) !important;
 }
+.clarke-kit-cta-band .clarke-kit-btn-secondary:visited { color: rgba(255,255,255,0.85) !important; }
 .clarke-kit-cta-band .clarke-kit-btn-secondary:hover {
-  border-color: #fff; color: #fff; background: rgba(255,255,255,0.08);
+  border-color: #fff; color: #fff !important; background: rgba(255,255,255,0.08);
 }
 </style>
 
@@ -432,26 +466,21 @@
         <div>
           <div class="clarke-kit-hero-badge clarke-fade clarke-fade-d1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            Kitchen Remodeling &bull; North Shore, MA
+            Kitchen Remodeling &bull; Massachusetts &amp; Southern NH
           </div>
-          <h1 class="clarke-kit-h1 clarke-fade clarke-fade-d2">Kitchen Remodeling in West Newbury and the North Shore</h1>
-          <p class="clarke-kit-hero-sub clarke-fade clarke-fade-d3">Custom kitchens built around how you actually cook and live - not a showroom template. Dave Clarke manages every project from the first conversation to the final walkthrough.</p>
+          <h1 class="clarke-kit-h1 clarke-fade clarke-fade-d2">Kitchen Remodeling Across the North Shore &amp; Southern New Hampshire</h1>
+          <p class="clarke-kit-hero-sub clarke-fade clarke-fade-d3">Custom kitchens built around how you actually cook and live, not a showroom template. Dave Clarke manages every project from the first conversation to the final walkthrough.</p>
           <div class="clarke-kit-hero-ctas clarke-fade clarke-fade-d4">
             <a href="https://clarkebuildingcompany.com/contact/" class="clarke-kit-btn-primary">
               Request an Estimate
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
-            <a href="https://clarkebuildingcompany.com/projects/" class="clarke-kit-btn-secondary">See Recent Kitchen Projects</a>
           </div>
         </div>
 
         <!-- RIGHT: Hero Image -->
         <div class="clarke-kit-hero-img-wrap clarke-fade clarke-fade-d3">
           <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-windows-starfish-ocean-view.webp" alt="" width="640" height="480" class="clarke-kit-hero-img" loading="eager">
-          <div class="clarke-kit-stat-badge">
-            <span class="clarke-kit-stat-num">$25K</span>
-            <span class="clarke-kit-stat-label">Starting From</span>
-          </div>
         </div>
 
       </div>
@@ -481,7 +510,7 @@
         </div>
         <div class="clarke-kit-trust-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          North Shore, MA
+          North Shore, MA &amp; Southern NH
         </div>
       </div>
     </div>
@@ -491,10 +520,11 @@
   <!-- INTRO -->
   <section class="clarke-kit-intro">
     <div class="clarke-kit-container">
+      <h2 class="clarke-kit-section-h2">A Kitchen That Works the Way You Do</h2>
       <div class="clarke-kit-intro-text">
-        <p>Most kitchens on the North Shore were designed decades ago for how people used to cook. The layout is wrong, the storage is in the wrong places, and the countertops have seen better days. Clarke Building Company works with homeowners in West Newbury and across the North Shore to fix that - not with a catalog approach, but with a real conversation about how you use the space.</p>
-        <p>Dave Clarke handles kitchen remodeling personally. He'll walk your kitchen before anything gets scoped, ask the right questions, and put together an estimate that reflects the actual work - no lowball number to win the job, no surprises when the bill comes. Whether you're replacing countertops or tearing everything down to the studs, the process stays the same: straight talk, solid work, and a kitchen that fits your home.</p>
-        <p>This work is part of Clarke Building's broader <a href="https://clarkebuildingcompany.com/renovations/">home renovations and remodeling</a> focus on the North Shore. <a href="https://clarkebuildingcompany.com/services/">View all of our residential construction services</a> or <a href="https://clarkebuildingcompany.com/about-us/">meet Dave Clarke</a> to learn more about the company.</p>
+        <p>Most kitchens were designed decades ago for a different way of living. The layout doesn't flow, the storage is in the wrong places, and the surfaces have seen better days. Clarke Building works with homeowners across the North Shore and Southern New Hampshire to change that, starting with a real conversation about how you use the space.</p>
+        <p>Dave Clarke handles kitchen remodeling personally. He walks your kitchen before anything gets scoped, asks the right questions, and puts together an estimate that reflects the actual work. Whether you're updating surfaces or taking the room down to the studs, the process stays the same: straight talk, solid craftsmanship, and a kitchen built for your home.</p>
+        <p>Kitchen remodeling is part of Clarke Building's broader <a href="https://clarkebuildingcompany.com/renovations/">home renovation and remodeling</a> services. <a href="https://clarkebuildingcompany.com/services/">View all services</a> or <a href="https://clarkebuildingcompany.com/about/">meet Dave Clarke</a> to learn more.</p>
       </div>
     </div>
   </section>
@@ -504,16 +534,11 @@
   <section class="clarke-kit-scope">
     <div class="clarke-kit-container">
       <h2 class="clarke-kit-section-h2">What a Kitchen Remodel with Clarke Building Actually Includes</h2>
-      <p class="clarke-kit-section-sub">Every kitchen project is different. Some homeowners need a complete tear-out and rebuild. Others are happy with the bones and just need updated surfaces. Clarke Building handles the full range - here's what each type of work involves.</p>
+      <p class="clarke-kit-section-sub">Every kitchen project is different. Some homeowners need a complete tear-out and rebuild. Others are happy with the bones and just need updated surfaces. Clarke Building handles the full range, and here's what each type of work involves.</p>
 
       <div class="clarke-kit-scope-item">
         <h3>Full Gut Renovation</h3>
-        <p>A full gut renovation means stripping the kitchen back to the studs and starting over. Everything comes out - cabinets, countertops, flooring, drywall, electrical, plumbing - and goes back in to a new plan built around your layout preferences and how the space connects to the rest of your home. This is the right choice when the current kitchen is beyond cosmetic improvement, when you're changing the footprint, or when systems like wiring and plumbing need to be brought up to code. Clarke Building coordinates all trades under one roof and manages the sequence so nothing gets out of order.</p>
-      </div>
-
-      <div class="clarke-kit-scope-item">
-        <h3>Cabinet Refacing</h3>
-        <p>If your cabinet boxes are structurally sound and the layout works, refacing is a practical way to modernize the kitchen without the cost or disruption of a full replacement. Clarke Building replaces the door fronts, drawer fronts, and hardware, and applies new veneer or solid wood to the exposed cabinet frames. The result looks like new cabinetry at a fraction of the full replacement cost. This works well for homeowners who are happy with their storage layout but want the kitchen to look and feel current.</p>
+        <p>A full gut renovation means stripping the kitchen back to the studs and starting over. Everything comes out (cabinets, countertops, flooring, drywall, electrical, plumbing) and goes back in to a new plan built around your layout preferences and how the space connects to the rest of your home. This is the right choice when the current kitchen is beyond cosmetic improvement, when you're changing the footprint, or when systems like wiring and plumbing need to be brought up to code. Clarke Building coordinates all trades under one roof and manages the sequence so nothing gets out of order.</p>
       </div>
 
       <div class="clarke-kit-scope-item">
@@ -523,12 +548,12 @@
 
       <div class="clarke-kit-scope-item">
         <h3>Layout Changes and Structural Work</h3>
-        <p>A kitchen that doesn't flow right isn't fixed by new cabinets - it's fixed by changing the layout. Clarke Building handles wall removals, beam installations, island additions and relocations, and other structural changes that open up a kitchen and make it work better. This type of work requires permits, engineering in some cases, and careful coordination with mechanical trades. Dave scopes this work accurately from the start so there are no discoveries mid-project that change the budget.</p>
+        <p>A kitchen that doesn't flow right isn't fixed by new cabinets. It's fixed by changing the layout. Clarke Building handles wall removals, beam installations, island additions and relocations, and other structural changes that open up a kitchen and make it work better. This type of work requires permits, engineering in some cases, and careful coordination with mechanical trades. Dave scopes this work accurately from the start so there are no discoveries mid-project that change the budget.</p>
       </div>
 
       <div class="clarke-kit-scope-item">
         <h3>Appliance Upgrades and Coordination</h3>
-        <p>New appliances often drive a kitchen remodel - a range that requires a new gas line, a hood that needs custom framing, a refrigerator that changes the cabinet configuration. Clarke Building coordinates appliance selection with the rest of the design so rough-in locations, electrical circuits, and cabinet sizing are all planned together before demo starts. Clarke handles the rough-in coordination with licensed plumbers and electricians and manages the final appliance installation. You don't have to figure out which contractor does what - that's already handled.</p>
+        <p>New appliances often drive a kitchen remodel: a range that requires a new gas line, a hood that needs custom framing, a refrigerator that changes the cabinet configuration. Clarke Building coordinates appliance selection with the rest of the design so rough-in locations, electrical circuits, and cabinet sizing are all planned together before demo starts. Clarke handles the rough-in coordination with licensed plumbers and electricians and manages the final appliance installation. You don't have to figure out which contractor does what because that's already handled.</p>
       </div>
 
       <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-toward-fridge-living-room.webp" alt="" width="400" height="300" class="clarke-kit-inline-img" loading="lazy" decoding="async">
@@ -539,35 +564,33 @@
   <!-- PRICING -->
   <section class="clarke-kit-pricing">
     <div class="clarke-kit-container clarke-kit-pricing-inner">
-      <h2 class="clarke-kit-pricing-h2">What Does a Kitchen Remodel Cost on the North Shore?</h2>
-      <p class="clarke-kit-pricing-sub">Pricing is the first thing most homeowners want to know, and it's a fair question. Kitchen remodeling on the North Shore typically ranges from $25,000 to $80,000 depending on the scope of work, the materials selected, and whether any structural or mechanical changes are involved.</p>
+      <h2 class="clarke-kit-pricing-h2">What to Expect: Kitchen Renovation Budget Levels</h2>
+      <p class="clarke-kit-pricing-sub">Kitchen budgets vary widely based on scope. Here's a general framework to help you think about where your project might fall.</p>
 
       <div class="clarke-kit-tiers">
         <div class="clarke-kit-tier">
-          <div class="clarke-kit-tier-label">Tier 1</div>
-          <h3>Cabinet Refacing and Countertop Refresh</h3>
-          <div class="clarke-kit-tier-price">$25K - $35K</div>
-          <p>Surface-level upgrades: new cabinet doors and hardware, a countertop replacement, a new backsplash, and possibly a new sink or faucet. The layout stays the same, no walls move, and the major appliances are not replaced. A meaningful improvement without the disruption of a full renovation.</p>
+          <div class="clarke-kit-tier-label">Surface Updates</div>
+          <h3>New Cabinets and Countertops</h3>
+          <div class="clarke-kit-tier-price">$25K - $45K+</div>
+          <p>Replace cabinetry and countertops while keeping the existing layout and footprint. Typically includes new backsplash, hardware, and possibly a new sink or faucet. No walls move, no structural changes.</p>
         </div>
         <div class="clarke-kit-tier">
-          <div class="clarke-kit-tier-label">Tier 2</div>
-          <h3>New Cabinets, Countertops, and Layout Adjustments</h3>
-          <div class="clarke-kit-tier-price">$35K - $60K</div>
-          <p>Full cabinet replacement, new countertops and backsplash, updated lighting, and minor layout adjustments - moving a non-load-bearing wall, adding or resizing an island, or reconfiguring the pantry. Mechanical trades are typically involved for updated electrical and plumbing rough-ins.</p>
+          <div class="clarke-kit-tier-label">Layout Changes</div>
+          <h3>Reconfigured Kitchen with Structural Work</h3>
+          <div class="clarke-kit-tier-price">$50K - $75K+</div>
+          <p>New cabinets and countertops plus layout adjustments. May include removing or opening a wall, adding or relocating an island, and updating electrical and plumbing to support the new configuration.</p>
         </div>
         <div class="clarke-kit-tier">
-          <div class="clarke-kit-tier-label">Tier 3</div>
-          <h3>Full Gut Renovation with Layout Changes</h3>
-          <div class="clarke-kit-tier-price">$60K - $80K+</div>
-          <p>Complete demo, structural changes, new layout, custom or semi-custom cabinetry, premium countertop materials, a full appliance package, new flooring, and updated mechanical systems. These are significant projects that transform how the kitchen functions and connects to the rest of the home.</p>
+          <div class="clarke-kit-tier-label">Full Renovation</div>
+          <h3>Complete Gut and Rebuild</h3>
+          <div class="clarke-kit-tier-price">$75K - $100K+</div>
+          <p>Everything comes out and goes back in new. Structural changes, premium materials, full appliance package, new flooring, and updated mechanical systems. A project that transforms how the kitchen functions and connects to the rest of the home.</p>
         </div>
       </div>
 
       <div class="clarke-kit-pricing-philosophy">
-        <h3>Pricing Philosophy</h3>
-        <p>These ranges reflect real North Shore project costs - not a number designed to get you to sign, with the real price revealed later. Clarke Building does not submit lowball bids. The estimate Dave puts together after walking your kitchen is based on the actual scope of work. If something changes during the project, you'll hear about it before it happens, not when you get the bill.</p>
-        <p>The only way to get an accurate number for your kitchen is to have Dave walk the space. Every kitchen is different, and a pricing formula won't account for what's behind your walls, the materials you want, or what you're trying to accomplish.</p>
-        <p><a href="https://clarkebuildingcompany.com/contact/">Ready to get a real number? Get in touch to schedule a walkthrough.</a></p>
+        <p><strong>Note:</strong> These are general budget ranges to help you plan, not project quotes. Every kitchen is different, and factors like material selections, structural complexity, and existing conditions all affect final cost. The only way to get an accurate number for your kitchen is to have Dave walk the space.</p>
+        <p><a href="https://clarkebuildingcompany.com/contact/">Get in touch to schedule a walkthrough and get a real estimate.</a></p>
       </div>
     </div>
   </section>
@@ -577,20 +600,7 @@
   <section class="clarke-kit-process">
     <div class="clarke-kit-container clarke-kit-process-inner">
       <h2 class="clarke-kit-section-h2">How a Kitchen Remodel Works with Clarke Building</h2>
-      <p class="clarke-kit-section-sub">Kitchen remodeling has a lot of moving parts - trades, materials, lead times, permits. Here's exactly how Clarke Building runs a project from the first call to the last punch list item.</p>
-
-      <!-- Testimonial 1 - Kathy M. -->
-      <div class="clarke-kit-testimonial">
-        <div class="clarke-kit-testimonial-stars">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <blockquote>"Dave went over all our options thoroughly. We knew exactly what we were getting before anything started."</blockquote>
-        <div class="clarke-kit-testimonial-attr">- Kathy M., West Newbury, MA</div>
-      </div>
+      <p class="clarke-kit-section-sub">Kitchen remodeling has a lot of moving parts: trades, materials, lead times, permits. Here's exactly how Clarke Building runs a project from the first call to the last punch list item.</p>
 
       <div class="clarke-kit-process-images">
         <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-open-concept-wide-angle.webp" alt="" width="400" height="300" class="clarke-kit-process-img" loading="lazy" decoding="async">
@@ -602,14 +612,14 @@
           <div class="clarke-kit-step-num">1</div>
           <div>
             <h3>Initial Walkthrough and Conversation</h3>
-            <p>Before any numbers get discussed, Dave walks your kitchen in person. He's looking at the existing layout, the condition of the cabinets and surfaces, what the mechanical situation looks like, and how the kitchen connects to adjacent spaces. More importantly, he's listening - to what's not working, what you actually need, and what success looks like for this project.</p>
+            <p>Before any numbers get discussed, Dave walks your kitchen in person. He's looking at the existing layout, the condition of the cabinets and surfaces, what the mechanical situation looks like, and how the kitchen connects to adjacent spaces. More importantly, he's listening to what's not working, what you actually need, and what success looks like for this project.</p>
           </div>
         </div>
         <div class="clarke-kit-step">
           <div class="clarke-kit-step-num">2</div>
           <div>
             <h3>Scope Definition and Estimate</h3>
-            <p>After the walkthrough, Dave puts together a written scope and estimate that reflects what you discussed. This is not a preliminary ballpark - it's a detailed account of the work to be done, organized by phase. If there are options to consider (cabinet refacing vs. replacement, for example), those are presented with separate pricing so you can make an informed decision. You'll know what you're agreeing to before anything is signed.</p>
+            <p>After the walkthrough, Dave puts together a written scope and estimate that reflects what you discussed. This is not a preliminary ballpark. It's a detailed account of the work to be done, organized by phase. If there are options to consider (new cabinets vs. replacement, for example), those are presented with separate pricing so you can make an informed decision. You'll know what you're agreeing to before anything is signed.</p>
           </div>
         </div>
         <div class="clarke-kit-step">
@@ -623,7 +633,7 @@
           <div class="clarke-kit-step-num">4</div>
           <div>
             <h3>Demo and Rough-In Trades</h3>
-            <p>Demo day is exactly what it sounds like: the existing kitchen comes out. Clarke Building manages the full demo and disposal, then brings in licensed plumbers and electricians for rough-in work - new drain and supply locations, updated electrical circuits, gas rough-in if applicable. This phase also includes any structural work: wall openings, beam installation, subfloor repairs. Inspections are scheduled and completed before the project moves to the next phase.</p>
+            <p>Demo day is exactly what it sounds like: the existing kitchen comes out. Clarke Building manages the full demo and disposal, then brings in licensed plumbers and electricians for rough-in work including new drain and supply locations, updated electrical circuits, and gas rough-in if applicable. This phase also includes any structural work: wall openings, beam installation, subfloor repairs. Inspections are scheduled and completed before the project moves to the next phase.</p>
           </div>
         </div>
         <div class="clarke-kit-step">
@@ -652,29 +662,55 @@
   </section>
 
 
+  <!-- REVIEWS -->
+  <section class="clarke-kit-reviews">
+    <div class="clarke-kit-container">
+      <h2 class="clarke-kit-section-h2">What Our Clients Say</h2>
+      <div class="clarke-kit-reviews-grid">
+        <div class="clarke-kit-review-card">
+          <div class="clarke-kit-testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote>"Great experience. Very nice crew and trustworthy. They are reliable and they always go over all options thoroughly. Would highly recommend them and will have them back for any renovations we do."</blockquote>
+          <div class="clarke-kit-testimonial-attr">Kathy M.</div>
+        </div>
+        <div class="clarke-kit-review-card">
+          <div class="clarke-kit-testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote>"Wonderful crew. Always on time. Constant communication. Honest and really care about your needs. Will go the extra mile for safety. Strongly recommend their crew and would use them time and time again."</blockquote>
+          <div class="clarke-kit-testimonial-attr">Laura A.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- CTA BAND -->
   <section class="clarke-kit-cta-band">
     <div class="clarke-kit-container clarke-kit-cta-inner">
       <h2 class="clarke-kit-cta-h2">Start Your Kitchen Remodel</h2>
-      <p class="clarke-kit-cta-text">If your kitchen isn't working for you, Clarke Building can change that. Dave will walk the space, talk through what's possible within your budget, and put together an estimate that tells you exactly what the project will cost. No pressure, no surprises - just a straight conversation about your kitchen and what it takes to fix it.</p>
-      <p class="clarke-kit-cta-text">Clarke Building also handles <a href="https://clarkebuildingcompany.com/additions/">house additions</a> and <a href="https://clarkebuildingcompany.com/adu/">ADU construction</a> for homeowners looking to expand beyond the kitchen. If you want to see the kind of work we do before picking up the phone, <a href="https://clarkebuildingcompany.com/projects/">see our recent work</a>.</p>
+      <p class="clarke-kit-cta-text">If your kitchen isn't working for you, Clarke Building can change that. Dave will walk the space, talk through what's possible within your budget, and put together an estimate that tells you exactly what the project will cost. No pressure, no surprises, just a straight conversation about your kitchen and what it takes to make it right.</p>
+      <p class="clarke-kit-cta-text">Clarke Building also handles <a href="https://clarkebuildingcompany.com/additions/">house additions</a> and <a href="https://clarkebuildingcompany.com/adu/">ADU construction</a> for homeowners looking to expand beyond the kitchen.</p>
 
       <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-island-ovens-living-area.webp" alt="" width="400" height="300" class="clarke-kit-inline-img" loading="lazy" decoding="async">
-
-      <!-- Testimonial 2 placeholder -->
-      <div class="clarke-kit-cta-testimonial">
-        <blockquote>[Placeholder - Pull kitchen remodel review from homepage hero before launch]</blockquote>
-        <div class="clarke-kit-testimonial-attr">- Client Name, Location</div>
-      </div>
 
       <div class="clarke-kit-cta-buttons">
         <a href="https://clarkebuildingcompany.com/contact/" class="clarke-kit-btn-primary">
           Request an Estimate
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
-        <a href="https://clarkebuildingcompany.com/projects/" class="clarke-kit-btn-secondary">See Recent Projects</a>
       </div>
     </div>
   </section>
 
 </div>
+
