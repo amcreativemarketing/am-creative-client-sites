@@ -1,0 +1,228 @@
+<!-- ================================================
+     SECTION: The Right Fence for Your Home & Budget
+     H2 already exists in Elementor - this is the content below it.
+     Namespace: .ofc-hp- (homepage)
+     
+     Layout: 4 cards top row, 3 cards centered bottom row
+     Brand: Purple #272262, Accent #4a4494, system font stack
+     ================================================ -->
+
+<style>
+  /* === Homepage Fencing Materials Cards === */
+  .ofc-hp-materials-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .ofc-hp-materials-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 36px !important;
+    color: #333333 !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    font-weight: 400 !important;
+  }
+
+  .ofc-hp-materials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 0;
+  }
+
+  .ofc-hp-mat-card {
+    flex: 0 0 calc(25% - 18px);
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-top: 3px solid #272262;
+    border-radius: 6px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    min-height: 195px;
+  }
+
+  .ofc-hp-mat-card:hover {
+    box-shadow: 0 6px 20px rgba(39, 34, 98, 0.1);
+    transform: translateY(-2px);
+  }
+
+  h3.ofc-hp-mat-title,
+  .ofc-hp-mat-card h3.ofc-hp-mat-title {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #272262 !important;
+    margin: 0 0 8px !important;
+    padding: 0 !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0.01em !important;
+    text-transform: none !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  }
+
+  h3.ofc-hp-mat-title a,
+  .ofc-hp-mat-card h3.ofc-hp-mat-title a {
+    color: #272262 !important;
+    text-decoration: none !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+  }
+
+  h3.ofc-hp-mat-title a:hover,
+  .ofc-hp-mat-card h3.ofc-hp-mat-title a:hover {
+    color: #4a4494 !important;
+    text-decoration: none !important;
+  }
+
+  .ofc-hp-mat-desc {
+    color: #333333;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 0 0 14px !important;
+    flex-grow: 1;
+    font-weight: 400 !important;
+  }
+
+  .ofc-hp-mat-link {
+    color: #272262 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease, gap 0.2s ease;
+    margin-top: auto;
+  }
+
+  .ofc-hp-mat-link:hover {
+    color: #4a4494 !important;
+    text-decoration: none !important;
+    gap: 8px;
+  }
+
+  .ofc-hp-mat-link svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+  }
+
+  /* === Responsive === */
+
+  /* Tablet: 2 columns, bottom row centered */
+  @media (max-width: 1024px) {
+    .ofc-hp-mat-card {
+      flex: 0 0 calc(50% - 12px);
+      min-height: auto;
+    }
+  }
+
+  /* Mobile: single column */
+  @media (max-width: 600px) {
+    .ofc-hp-materials-section {
+      padding: 0 16px 32px;
+    }
+
+    .ofc-hp-materials-grid {
+      gap: 16px;
+    }
+
+    .ofc-hp-mat-card {
+      flex: 0 0 100%;
+      padding: 20px 18px;
+      min-height: auto;
+    }
+  }
+</style>
+
+<div class="ofc-hp-materials-section">
+
+  <p class="ofc-hp-materials-intro">
+    From classic New England cedar to low-maintenance vinyl and budget-friendly chain link, we install every major fencing material - each backed by our lifetime workmanship warranty.
+  </p>
+
+  <div class="ofc-hp-materials-grid">
+
+    <!-- Row 1: 4 cards -->
+
+    <!-- Cedar Fencing -->
+    <div class="ofc-hp-mat-card">
+      <h3 class="ofc-hp-mat-title"><a href="https://olympicfencema.com/residential-cedar-fence-newburyport/">Cedar Fencing</a></h3>
+      <p class="ofc-hp-mat-desc">Natural beauty that weathers gracefully. Traditional post-and-rail or our signature no-dig wood-on-steel system built for New England conditions.</p>
+      <a href="https://olympicfencema.com/residential-cedar-fence-newburyport/" class="ofc-hp-mat-link">
+        View cedar options
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Vinyl Fencing -->
+    <div class="ofc-hp-mat-card">
+      <h3 class="ofc-hp-mat-title"><a href="https://olympicfencema.com/vinyl/">Vinyl Fencing</a></h3>
+      <p class="ofc-hp-mat-desc">Zero maintenance and built to last. Won't rot, warp, or need painting - a smart long-term investment for homeowners who want durability without upkeep.</p>
+      <a href="https://olympicfencema.com/vinyl/" class="ofc-hp-mat-link">
+        View vinyl options
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Chain-Link Fencing -->
+    <div class="ofc-hp-mat-card">
+      <h3 class="ofc-hp-mat-title"><a href="https://olympicfencema.com/chain-link/">Chain-Link Fencing</a></h3>
+      <p class="ofc-hp-mat-desc">Affordable, durable, and versatile. Works for yards, pet areas, sports fields, and commercial properties. Galvanized or vinyl-coated options available.</p>
+      <a href="https://olympicfencema.com/chain-link/" class="ofc-hp-mat-link">
+        View chain-link options
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Privacy Fencing -->
+    <div class="ofc-hp-mat-card">
+      <h3 class="ofc-hp-mat-title"><a href="https://olympicfencema.com/privacy-fencing/">Privacy Fencing</a></h3>
+      <p class="ofc-hp-mat-desc">Block views, reduce noise, and define your space. Solid-board cedar and vinyl privacy fences designed for maximum coverage and a clean finished look.</p>
+      <a href="https://olympicfencema.com/privacy-fencing/" class="ofc-hp-mat-link">
+        View privacy options
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Row 2: 3 cards (centered via justify-content: center) -->
+
+    <!-- Ornamental Aluminum & Steel -->
+    <div class="ofc-hp-mat-card">
+      <h3 class="ofc-hp-mat-title"><a href="https://olympicfencema.com/ornamental-aluminum-and-steel-fencing/">Ornamental Aluminum &amp; Steel</a></h3>
+      <p class="ofc-hp-mat-desc">Classic iron-look fencing without the rust or maintenance. Adds curb appeal to front yards, pool enclosures, and garden areas.</p>
+      <a href="https://olympicfencema.com/ornamental-aluminum-and-steel-fencing/" class="ofc-hp-mat-link">
+        View ornamental options
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Pool Fencing -->
+    <div class="ofc-hp-mat-card">
+      <h3 class="ofc-hp-mat-title"><a href="https://olympicfencema.com/pool-fencing/">Pool Fencing</a></h3>
+      <p class="ofc-hp-mat-desc">Code-compliant pool enclosures that meet Massachusetts safety requirements. We handle permits and install self-closing, self-latching gate systems.</p>
+      <a href="https://olympicfencema.com/pool-fencing/" class="ofc-hp-mat-link">
+        View pool fencing options
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Dog Fencing -->
+    <div class="ofc-hp-mat-card">
+      <h3 class="ofc-hp-mat-title"><a href="https://olympicfencema.com/dog-fencing/">Dog Fencing</a></h3>
+      <p class="ofc-hp-mat-desc">Fencing designed to prevent jumping, digging, and escaping. We help choose the right height, material, and gate setup for your breed and yard.</p>
+      <a href="https://olympicfencema.com/dog-fencing/" class="ofc-hp-mat-link">
+        View dog fencing options
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+
+</div>
