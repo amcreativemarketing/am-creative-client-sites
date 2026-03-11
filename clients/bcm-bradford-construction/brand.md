@@ -386,7 +386,34 @@ When building multiple location pages, vary the layout structures to avoid dupli
 
 ---
 
-*Brand Kit v2.0 | March 2026*
+## Brand Evolution Notes (March 2026)
+
+### Direction
+Rick approved evolving the Bradford Construction brand to better align with luxury/high-end custom home positioning. This is an evolution, not a rebrand - name stays the same, core identity stays, but the visual presentation levels up.
+
+### What's Changing
+- **Logo graphic:** The house graphic can be updated. The "Bradford Construction Management" text stays.
+- **Colors:** Current purple and green were chosen intentionally (color psychology research). Can evolve but Rick wants to stay in that family. Note: the current brand.md already moved to Navy/Gold - confirm with Rick if he's referring to the original purple/green or the current Navy/Gold.
+- **Yard signs:** Upgrading from corrugated plastic to premium materials (metal/wood, A-frame style). Adding QR codes.
+- **Phone number:** Removing the 888/833 number from all materials - switching to local 978-945-9771 only.
+
+### What's NOT Changing
+- Business name: Bradford Construction Management
+- Brand positioning: luxury design-build, custom homes, ADUs
+- Primary tagline: "Your Builder for Life"
+
+### Timeline
+- Jennifer developing 2-3 concepts
+- Professional designer for final assets ($100-200 budget, Rick paying at cost)
+- Steve Tag handles print production (yard signs, materials)
+- Test one premium yard sign on next big job before full rollout
+
+### Print Contact
+- **Steve Tag** - handles all print marketing materials for BCM
+
+---
+
+*Brand Kit v2.1 | March 2026 - Brand evolution in progress*
 
 
 
