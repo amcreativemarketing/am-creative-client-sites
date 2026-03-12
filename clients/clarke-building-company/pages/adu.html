@@ -432,37 +432,44 @@
 
 /* ======== BUTTONS ======== */
 .clarke-adu-btn-primary {
-  background: var(--color-primary); color: #fff; padding: 16px 36px;
+  background: var(--color-primary); color: #fff !important; padding: 16px 36px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
-  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
-.clarke-adu-btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+.clarke-adu-btn-primary:hover { background: var(--color-primary-hover); color: #fff !important; transform: translateY(-1px); }
+.clarke-adu-btn-primary:visited { color: #fff !important; }
+.clarke-adu-btn-primary:active { color: #fff !important; }
 .clarke-adu-hero .clarke-adu-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
+.clarke-adu-hero .clarke-adu-btn-primary:hover { background: var(--color-accent); color: var(--color-secondary) !important; box-shadow: 0 6px 24px rgba(201,169,110,0.4); }
+.clarke-adu-hero .clarke-adu-btn-primary:visited { color: #fff !important; }
 
 .clarke-adu-btn-secondary {
   background: transparent; border: 2px solid rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.8); padding: 14px 32px;
+  color: rgba(255,255,255,0.8) !important; padding: 14px 32px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border-radius: var(--radius-md); transition: all 0.3s ease;
-  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
 .clarke-adu-btn-secondary:hover {
-  border-color: var(--color-accent); color: var(--color-accent); background: rgba(201,169,110,0.06);
+  border-color: var(--color-accent); color: var(--color-accent) !important; background: rgba(201,169,110,0.06);
 }
+.clarke-adu-btn-secondary:visited { color: rgba(255,255,255,0.8) !important; }
 
 .clarke-adu-cta-band .clarke-adu-btn-primary {
-  background: var(--color-bg-white); color: var(--color-primary);
+  background: var(--color-bg-white); color: var(--color-primary) !important;
 }
 .clarke-adu-cta-band .clarke-adu-btn-primary:hover {
-  background: #fff; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  background: #fff; color: var(--color-primary) !important; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
+.clarke-adu-cta-band .clarke-adu-btn-primary:visited { color: var(--color-primary) !important; }
 .clarke-adu-cta-band .clarke-adu-btn-secondary {
-  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85);
+  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85) !important;
 }
 .clarke-adu-cta-band .clarke-adu-btn-secondary:hover {
-  border-color: #fff; color: #fff; background: rgba(255,255,255,0.08);
+  border-color: #fff; color: #fff !important; background: rgba(255,255,255,0.08);
 }
+.clarke-adu-cta-band .clarke-adu-btn-secondary:visited { color: rgba(255,255,255,0.85) !important; }
 
 /* Light section secondary button */
 .clarke-adu-btn-secondary-light {
