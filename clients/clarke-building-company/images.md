@@ -176,20 +176,20 @@
 |-------------|-----|
 | Kitchen - dark cabinetry, stainless appliances, holiday decor | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-1.webp |
 | Kitchen - white/gray marble countertop, clean lines | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-2.jpg |
-| Kitchen - white shaker cabinetry, modern faucet, hardware detail | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-3.jpg |
+| Kitchen - white shaker cabinetry, modern faucet, hardware detail | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-3.webp |
 | Kitchen - dark cabinetry, professional stove, contrasting countertops | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-4.jpg |
-| Kitchen - island, pendant lights, plant accents | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-5.jpg |
-| Kitchen/dining - white cabinetry, dining area, bright natural light | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-6.jpg |
-| Kitchen - cabinetry and countertop detail | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-8.jpg |
-| Kitchen - full cabinetry layout, wide angle | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-9.jpg |
+| Kitchen - island, pendant lights, plant accents | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-5.webp |
+| Kitchen/dining - white cabinetry, dining area, bright natural light | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-6.webp |
+| Kitchen - cabinetry and countertop detail | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-8.webp |
+| Kitchen - full cabinetry layout, wide angle | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-9.webp |
 | Interior renovation detail - cabinetry/living area | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-11-scaled.jpg |
-| Kitchen/living - updated finishes | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-12-scaled.jpg |
-| Interior renovation - cabinetry/living space detail | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-13-scaled.jpg |
+| Kitchen/living - updated finishes | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-12-scaled.webp |
+| Interior renovation - cabinetry/living space detail | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-13-scaled.webp |
 | Renovated room - updated fixtures and finishes | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-14-scaled.jpg |
-| Interior - finished room | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-15-scaled.jpg |
-| Renovation detail view | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-16-scaled.jpg |
-| Completed interior - final renovation result | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-17-scaled.jpg |
-| Final interior - completed 16 Greens Point project | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-18-scaled.jpg |
+| Interior - finished room | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-15-scaled.webp |
+| Renovation detail view | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-16-scaled.webp |
+| Completed interior - final renovation result | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-17-scaled.webp |
+| Final interior - completed 16 Greens Point project | https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-18-scaled.webp |
 
 ---
 
