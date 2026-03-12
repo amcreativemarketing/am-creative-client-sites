@@ -155,13 +155,15 @@
 .clarke-nbpt-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-nbpt-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
 .clarke-nbpt-sub {
   font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
-  margin-bottom: 32px; max-width: 780px;
+  margin-bottom: 32px; max-width: 780px; margin-left: auto; margin-right: auto;
+  text-align: center;
 }
-.clarke-nbpt-body { font-size: 16px; line-height: 1.8; max-width: 780px; }
+.clarke-nbpt-body { font-size: 16px; line-height: 1.8; max-width: 780px; margin-left: auto; margin-right: auto; }
 .clarke-nbpt-body p { margin-bottom: 18px; }
 .clarke-nbpt-body p:last-child { margin-bottom: 0; }
 .clarke-nbpt-body a {
@@ -188,6 +190,44 @@
 }
 @media (max-width: 600px) {
   .clarke-nbpt-photo-row img { width: 100%; max-width: 320px; height: 200px; }
+}
+
+
+/* ======== INTRO BENEFIT CARDS ======== */
+.clarke-nbpt-benefits {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
+  max-width: 880px; margin: 32px auto 0;
+}
+@media (min-width: 768px) { .clarke-nbpt-benefits { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.clarke-nbpt-benefit {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent); border-radius: var(--radius-lg);
+  padding: 24px 26px;
+}
+.clarke-nbpt-benefit h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 16px;
+  color: var(--color-text-heading); margin-bottom: 8px; line-height: 1.3;
+}
+.clarke-nbpt-benefit p {
+  font-size: 15px; line-height: 1.7; color: var(--color-text-primary); margin: 0;
+}
+
+/* ======== NEWBURYPORT-SPECIFIC FEATURE LIST ======== */
+.clarke-nbpt-feature-list {
+  display: grid; grid-template-columns: 1fr; gap: 20px;
+  max-width: 780px; margin: 28px auto 0;
+}
+@media (min-width: 600px) { .clarke-nbpt-feature-list { grid-template-columns: 1fr 1fr; } }
+.clarke-nbpt-feature {
+  padding: 0 0 0 20px;
+  border-left: 2px solid rgba(201,169,110,0.3);
+}
+.clarke-nbpt-feature h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  color: rgba(255,255,255,0.9); margin-bottom: 6px; line-height: 1.3;
+}
+.clarke-nbpt-feature p {
+  font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.6); margin: 0;
 }
 
 
@@ -240,9 +280,10 @@
 .clarke-nbpt-dark-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-nbpt-dark-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
-.clarke-nbpt-dark-body { font-size: 16px; line-height: 1.8; max-width: 780px; color: rgba(255,255,255,0.68); }
+.clarke-nbpt-dark-body { font-size: 16px; line-height: 1.8; max-width: 780px; color: rgba(255,255,255,0.68); margin-left: auto; margin-right: auto; }
 .clarke-nbpt-dark-body p { margin-bottom: 18px; }
 .clarke-nbpt-dark-body p:last-child { margin-bottom: 0; }
 .clarke-nbpt-dark-body strong { color: rgba(255,255,255,0.9); }
@@ -364,7 +405,7 @@
           <p class="clarke-nbpt-hero-sub clarke-fade clarke-fade-d3">Home remodeling, kitchen renovations, additions, ADUs, and deck construction for Newburyport homeowners. Based in West Newbury, minutes away, and familiar with the homes in this area.</p>
           <div class="clarke-nbpt-hero-ctas clarke-fade clarke-fade-d4">
             <a href="https://clarkebuildingcompany.com/contact/" class="clarke-nbpt-btn-primary">
-              Schedule a Consultation
+              Get a Free Estimate
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
@@ -416,9 +457,30 @@
   <section class="clarke-nbpt-section-light">
     <div class="clarke-nbpt-container">
       <h2 class="clarke-nbpt-h2">Home Remodeling in Newburyport</h2>
-      <div class="clarke-nbpt-body">
-        <p>Clarke Building Company is a licensed, insured general contractor based in West Newbury, just minutes from Newburyport. We serve homeowners across Newburyport with kitchen remodeling, whole-home renovations, additions, ADU construction, decks, and new builds. Whether you're updating a Federal-era colonial downtown or renovating a family home in one of the surrounding neighborhoods, we bring careful planning and honest communication to every project.</p>
-        <p>Newburyport's housing stock includes some of the most distinctive homes on the North Shore. Many were built well before modern building codes, which means renovation work here often involves conditions that newer construction simply doesn't have. We take the time to understand what we're working with before we start, and Dave Clarke personally manages every project from first walkthrough through final detail.</p>
+      <div class="clarke-nbpt-body" style="text-align: center;">
+        <p>Clarke Building Company is a licensed, insured general contractor based in West Newbury, just minutes from Newburyport. We work with homeowners throughout the area on kitchen remodeling, renovations, additions, ADU construction, decks, and new builds.</p>
+      </div>
+
+      <div class="clarke-nbpt-benefits">
+        <div class="clarke-nbpt-benefit">
+          <h3>We Know Newburyport Homes</h3>
+          <p>From Federal-era colonials downtown to family homes in surrounding neighborhoods, we understand the conditions and character of the housing stock in this area.</p>
+        </div>
+        <div class="clarke-nbpt-benefit">
+          <h3>One Team, One Point of Contact</h3>
+          <p>No handoffs, no communication gaps. Clarke Building manages every project from initial walkthrough through final detail with a single point of contact.</p>
+        </div>
+        <div class="clarke-nbpt-benefit">
+          <h3>Based Minutes Away</h3>
+          <p>Our West Newbury office is a short drive from Newburyport, which means faster site visits, tighter coordination, and a crew that knows the local building department.</p>
+        </div>
+        <div class="clarke-nbpt-benefit">
+          <h3>Full Permitting, Including Historic District</h3>
+          <p>We handle all permit applications and coordinate with Newburyport's Historic District Commission when required. You don't have to navigate it alone.</p>
+        </div>
+      </div>
+
+      <div class="clarke-nbpt-body" style="text-align: center; margin-top: 28px;">
         <p>Learn more <a href="https://clarkebuildingcompany.com/about/">about Clarke Building Company</a> or explore our full <a href="https://clarkebuildingcompany.com/services/">residential construction services</a>.</p>
       </div>
     </div>
@@ -431,7 +493,7 @@
   <section class="clarke-nbpt-section-white">
     <div class="clarke-nbpt-container">
       <h2 class="clarke-nbpt-h2">Services Available in Newburyport</h2>
-      <p class="clarke-nbpt-sub">We offer the full range of residential construction and remodeling services, managed by one team that knows this area.</p>
+      <p class="clarke-nbpt-sub" style="text-align: center;">We offer the full range of residential construction and remodeling services, managed by one team that knows this area.</p>
 
       <div class="clarke-nbpt-service-grid">
         <a href="https://clarkebuildingcompany.com/kitchen-remodeling/" class="clarke-nbpt-service-card">
@@ -494,10 +556,30 @@
   <section class="clarke-nbpt-dark">
     <div class="clarke-nbpt-container clarke-nbpt-dark-inner">
       <h2 class="clarke-nbpt-dark-h2">What Renovation in Newburyport Involves</h2>
-      <div class="clarke-nbpt-dark-body">
-        <p>Newburyport is one of the most architecturally distinctive cities on the North Shore. Many homes downtown and along the High Street corridor date to the 18th and 19th centuries. For homeowners, that history is part of what makes the real estate valuable. It's also what makes renovation more complex than it would be in a newer suburb.</p>
-        <p>Older homes in Newburyport can involve framing techniques, foundation types, and material conditions that differ significantly from modern construction. The coastal environment adds another layer, as salt air, wind exposure, and moisture cycling all affect how materials perform over time. Exterior work on properties in the historic district may also require review through Newburyport's Historic District Commission before a building permit can be issued.</p>
-        <p>We approach these projects carefully. We assess the existing conditions before scoping the work, choose materials appropriate for the environment, and coordinate with engineers and specialty trades when needed. The goal is work that respects what's already there while bringing the home up to the standard you're looking for.</p>
+      <div class="clarke-nbpt-dark-body" style="text-align: center;">
+        <p>Newburyport is one of the most architecturally distinctive cities in our service area. Many homes date to the 18th and 19th centuries. That history is part of what makes them valuable, and it's also what makes renovation more involved than it would be in a newer community.</p>
+      </div>
+
+      <div class="clarke-nbpt-feature-list">
+        <div class="clarke-nbpt-feature">
+          <h3>Older Framing and Foundations</h3>
+          <p>Construction techniques, foundation types, and material conditions that differ significantly from modern builds require careful assessment before scoping any work.</p>
+        </div>
+        <div class="clarke-nbpt-feature">
+          <h3>Coastal Environment</h3>
+          <p>Salt air, wind exposure, and moisture cycling all affect how materials perform over time. We choose materials appropriate for these conditions.</p>
+        </div>
+        <div class="clarke-nbpt-feature">
+          <h3>Historic District Requirements</h3>
+          <p>Exterior work on properties in the historic district may require review through Newburyport's Historic District Commission before a building permit can be issued.</p>
+        </div>
+        <div class="clarke-nbpt-feature">
+          <h3>Careful Scope Planning</h3>
+          <p>We assess existing conditions before scoping the work and coordinate with engineers and specialty trades when needed. The goal is work that respects what's already there.</p>
+        </div>
+      </div>
+
+      <div class="clarke-nbpt-dark-body" style="text-align: center; margin-top: 28px;">
         <p>Learn more about our <a href="https://clarkebuildingcompany.com/renovations/">renovation services</a> or <a href="https://clarkebuildingcompany.com/additions/">home additions</a> approach.</p>
       </div>
 
@@ -516,7 +598,7 @@
   <section class="clarke-nbpt-section-light">
     <div class="clarke-nbpt-container">
       <h2 class="clarke-nbpt-h2">Building Permits in Newburyport</h2>
-      <div class="clarke-nbpt-body">
+      <div class="clarke-nbpt-body" style="text-align: center;">
         <p>All structural renovations, additions, ADUs, and deck construction in Newburyport require permits through the City of Newburyport Building Department. For properties in the historic district, permitting can involve a two-step process: Historic District Commission approval first, building permit second.</p>
         <p><strong>Clarke Building handles both steps as part of our project workflow.</strong> Homeowners don't need to navigate the permitting process independently. We manage applications, coordinate with the building department and HDC as needed, and handle the inspection schedule through project completion.</p>
       </div>
@@ -530,7 +612,7 @@
   <section class="clarke-nbpt-section-white">
     <div class="clarke-nbpt-container">
       <h2 class="clarke-nbpt-h2">Why Clarke Building Company for Your Newburyport Project</h2>
-      <div class="clarke-nbpt-body">
+      <div class="clarke-nbpt-body" style="text-align: center;">
         <p>Clarke Building Company is based in West Newbury, less than ten minutes from Newburyport. Our team works regularly in this area, and that proximity shows in how we run projects:</p>
       </div>
 
@@ -551,7 +633,7 @@
   <section class="clarke-nbpt-section-light">
     <div class="clarke-nbpt-container">
       <h2 class="clarke-nbpt-h2">Serving Newburyport and the Surrounding North Shore</h2>
-      <div class="clarke-nbpt-body">
+      <div class="clarke-nbpt-body" style="text-align: center;">
         <p>Clarke Building Company serves Newburyport as part of a broader North Shore service area. Most of our project sites are a short drive from our office, which means faster site visits, tighter coordination with local building departments, and a subcontractor network that knows this region well.</p>
       </div>
 
@@ -588,7 +670,7 @@
       <p class="clarke-nbpt-cta-text">If you're planning a remodel, addition, ADU, or new build in Newburyport, we'd like to hear about your project. We can be on-site quickly for an initial walkthrough and scope conversation. No vague estimates, no unclear timelines.</p>
       <div class="clarke-nbpt-cta-buttons">
         <a href="https://clarkebuildingcompany.com/contact/" class="clarke-nbpt-btn-primary">
-          Contact Clarke Building
+          Get a Free Estimate
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
       </div>
