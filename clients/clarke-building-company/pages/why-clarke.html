@@ -1,0 +1,466 @@
+<!-- CLARKE BUILDING COMPANY - WHY CLARKE PAGE
+     Page: /why-clarke/
+     Design: Craftsman Editorial (A+C Hybrid)
+     Built: March 2026 by AM Creative
+     
+     INTERNAL LINKS:
+     Domain: https://clarkebuildingcompany.com
+     Links: /about/, /projects/, /services/, /contact/
+     
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+     All img alt="" left empty per OTTO workflow.
+     No blog links on this page.
+-->
+
+<style>
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+.clarke-why-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-why-wrap *, .clarke-why-wrap *::before, .clarke-why-wrap *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+.clarke-why-wrap img { max-width: 100%; height: auto; display: block; }
+.clarke-why-wrap a { text-decoration: none; }
+
+.clarke-why-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+}
+@media (min-width: 768px) { .clarke-why-container { padding: 0 32px; } }
+
+@keyframes clarkeWhyFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-why-fade { animation: clarkeWhyFadeUp 0.8s ease forwards; }
+.clarke-why-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-why-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-why-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+.clarke-why-fade-d4 { animation-delay: 0.55s; opacity: 0; }
+
+
+/* ======== HERO (two-column, matches other Clarke pages) ======== */
+.clarke-why-hero {
+  background: var(--color-secondary);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 48px;
+}
+@media (min-width: 768px) { .clarke-why-hero { padding: 80px 0 64px; } }
+.clarke-why-hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-why-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.018) 100px, rgba(201,169,110,0.018) 101px);
+  pointer-events: none; z-index: 0;
+}
+.clarke-why-hero-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 40px;
+}
+@media (min-width: 960px) {
+  .clarke-why-hero-inner {
+    display: grid; grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px; align-items: center;
+  }
+}
+
+.clarke-why-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent); margin-bottom: 20px; width: fit-content;
+}
+.clarke-why-hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.clarke-why-h1 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 32px;
+  line-height: 1.12; color: var(--color-text-inverse);
+  margin-bottom: 16px; letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-why-h1 { font-size: clamp(36px, 4.5vw, 50px); } }
+.clarke-why-hero-sub {
+  font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
+  margin-bottom: 28px; max-width: 560px;
+}
+.clarke-why-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Hero image with brass offset frame */
+.clarke-why-hero-img-wrap {
+  position: relative; padding: 16px;
+}
+.clarke-why-hero-img-wrap::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: calc(100% - 16px); height: calc(100% - 16px);
+  border: 1.5px solid rgba(201,169,110,0.3);
+  border-radius: var(--radius-lg); z-index: 0;
+}
+.clarke-why-hero-img {
+  position: relative; z-index: 1;
+  border-radius: var(--radius-lg);
+  width: 100%; height: auto; object-fit: cover;
+}
+
+
+/* ======== TRUST BAR ======== */
+.clarke-why-trust-bar {
+  background: var(--color-bg-white); border-bottom: 1px solid var(--color-border); padding: 20px 0;
+}
+.clarke-why-trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 0;
+}
+.clarke-why-trust-item {
+  display: flex; align-items: center; gap: 8px; padding: 6px 20px;
+  font-size: 13px; font-weight: 600; color: var(--color-text-secondary); letter-spacing: 0.02em;
+}
+.clarke-why-trust-item svg { width: 18px; height: 18px; color: var(--color-accent); flex-shrink: 0; }
+@media (min-width: 768px) {
+  .clarke-why-trust-item { border-right: 1px solid var(--color-border); }
+  .clarke-why-trust-item:last-child { border-right: none; }
+}
+
+
+/* ======== SHARED SECTION STYLES ======== */
+.clarke-why-section-light { background: var(--color-bg-primary); padding: 56px 0; }
+.clarke-why-section-white { background: var(--color-bg-white); padding: 56px 0; }
+@media (min-width: 768px) {
+  .clarke-why-section-light, .clarke-why-section-white { padding: 80px 0; }
+}
+.clarke-why-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-heading); margin-bottom: 8px;
+  text-align: center;
+}
+@media (min-width: 768px) { .clarke-why-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-why-h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 16px;
+  color: var(--color-text-secondary); text-align: center;
+  margin-bottom: 24px; letter-spacing: 0.01em;
+}
+.clarke-why-body {
+  font-size: 16px; line-height: 1.8; max-width: 780px;
+  margin-left: auto; margin-right: auto; text-align: center;
+}
+.clarke-why-body p { margin-bottom: 18px; }
+.clarke-why-body p:last-child { margin-bottom: 0; }
+.clarke-why-body a {
+  color: var(--color-primary) !important; font-weight: 500;
+  border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
+  text-decoration: none !important;
+}
+.clarke-why-body a:visited { color: var(--color-primary) !important; }
+.clarke-why-body a:hover { border-color: var(--color-primary); color: var(--color-primary-hover) !important; }
+.clarke-why-body strong { color: var(--color-text-heading); }
+
+/* Section number badge */
+.clarke-why-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--color-primary); color: #fff;
+  font-family: var(--font-heading); font-size: 18px; line-height: 1;
+  margin: 0 auto 16px; display: block; text-align: center;
+}
+.clarke-why-num span {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+}
+
+/* Photos */
+.clarke-why-photo {
+  border-radius: var(--radius-lg); max-width: 720px; width: 100%;
+  height: auto; object-fit: cover; display: block; margin: 36px auto 0;
+}
+
+/* Photo row */
+.clarke-why-photo-row {
+  display: flex; justify-content: center; gap: 16px;
+  margin: 36px auto 0; max-width: 880px; flex-wrap: wrap;
+}
+.clarke-why-photo-row img {
+  border-radius: var(--radius-lg); width: calc(33.33% - 12px);
+  max-width: 280px; height: 200px; object-fit: cover;
+}
+@media (max-width: 600px) {
+  .clarke-why-photo-row img { width: 100%; max-width: 360px; height: 220px; }
+}
+
+
+/* ======== DARK SECTION ======== */
+.clarke-why-dark {
+  background: var(--color-secondary); position: relative; overflow: hidden; padding: 56px 0;
+}
+@media (min-width: 768px) { .clarke-why-dark { padding: 80px 0; } }
+.clarke-why-dark::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-why-dark-inner { position: relative; z-index: 1; }
+.clarke-why-dark-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 8px;
+  text-align: center;
+}
+@media (min-width: 768px) { .clarke-why-dark-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-why-dark-h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 16px;
+  color: rgba(255,255,255,0.5); text-align: center;
+  margin-bottom: 24px; letter-spacing: 0.01em;
+}
+.clarke-why-dark-body {
+  font-size: 16px; line-height: 1.8; max-width: 780px; color: rgba(255,255,255,0.68);
+  margin-left: auto; margin-right: auto; text-align: center;
+}
+.clarke-why-dark-body p { margin-bottom: 18px; }
+.clarke-why-dark-body p:last-child { margin-bottom: 0; }
+.clarke-why-dark-body strong { color: rgba(255,255,255,0.9); }
+.clarke-why-dark-body a {
+  color: var(--color-accent) !important; font-weight: 500;
+  border-bottom: 1px solid rgba(201,169,110,0.3); transition: border-color 0.2s ease;
+  text-decoration: none !important;
+}
+.clarke-why-dark-body a:visited { color: var(--color-accent) !important; }
+.clarke-why-dark-body a:hover { border-color: var(--color-accent); }
+
+.clarke-why-dark-num {
+  display: block; text-align: center; margin: 0 auto 16px;
+}
+.clarke-why-dark-num span {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(201,169,110,0.15); border: 1px solid rgba(201,169,110,0.3);
+  color: var(--color-accent);
+  font-family: var(--font-heading); font-size: 18px; line-height: 1;
+}
+
+
+/* ======== CTA BAND ======== */
+.clarke-why-cta-band {
+  background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .clarke-why-cta-band { padding: 72px 0; } }
+.clarke-why-cta-inner { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; text-align: center; }
+.clarke-why-cta-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-why-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-why-cta-text {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 28px;
+}
+
+
+/* ======== BUTTONS ======== */
+.clarke-why-btn-primary {
+  background: var(--color-primary); color: #fff !important; padding: 16px 36px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-why-btn-primary:hover { background: var(--color-primary-hover); color: #fff !important; transform: translateY(-1px); }
+.clarke-why-btn-primary:visited { color: #fff !important; }
+.clarke-why-btn-primary:active { color: #fff !important; }
+.clarke-why-hero .clarke-why-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
+.clarke-why-hero .clarke-why-btn-primary:hover { background: var(--color-accent); color: var(--color-secondary) !important; box-shadow: 0 6px 24px rgba(201,169,110,0.4); }
+.clarke-why-hero .clarke-why-btn-primary:visited { color: #fff !important; }
+
+.clarke-why-cta-band .clarke-why-btn-primary {
+  background: var(--color-bg-white); color: var(--color-primary) !important;
+}
+.clarke-why-cta-band .clarke-why-btn-primary:visited { color: var(--color-primary) !important; }
+.clarke-why-cta-band .clarke-why-btn-primary:hover {
+  background: #fff; color: var(--color-primary) !important; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+</style>
+
+
+<div class="clarke-why-wrap">
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="clarke-why-hero">
+    <div class="clarke-why-container">
+      <div class="clarke-why-hero-inner">
+
+        <div>
+          <div class="clarke-why-hero-badge clarke-why-fade clarke-why-fade-d1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Why Clarke Building Company
+          </div>
+          <h1 class="clarke-why-h1 clarke-why-fade clarke-why-fade-d2">What Sets Clarke Building Company Apart</h1>
+          <p class="clarke-why-hero-sub clarke-why-fade clarke-why-fade-d3">You've heard the contractor horror stories: budgets that balloon without warning, projects that stall for weeks, and nobody accountable when things go sideways. Clarke Building was built specifically to fix that. Here's what makes working with us different.</p>
+          <div class="clarke-why-hero-ctas clarke-why-fade clarke-why-fade-d4">
+            <a href="https://clarkebuildingcompany.com/contact/" class="clarke-why-btn-primary">
+              Get a Free Estimate
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="clarke-why-hero-img-wrap clarke-why-fade clarke-why-fade-d3">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-16-scaled.webp" alt="" width="640" height="480" class="clarke-why-hero-img" loading="eager">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       TRUST BAR
+       ============================================ -->
+  <section class="clarke-why-trust-bar">
+    <div class="clarke-why-container">
+      <div class="clarke-why-trust-row">
+        <div class="clarke-why-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured in MA
+        </div>
+        <div class="clarke-why-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Owner-Operated
+        </div>
+        <div class="clarke-why-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Established Local Builder
+        </div>
+        <div class="clarke-why-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Transparent Pricing
+        </div>
+        <div class="clarke-why-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Massachusetts &amp; Southern NH
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 01: ONE POINT OF CONTACT
+       ============================================ -->
+  <section class="clarke-why-section-light">
+    <div class="clarke-why-container">
+      <div class="clarke-why-num"><span>1</span></div>
+      <h2 class="clarke-why-h2">You Have One Person to Call. Always.</h2>
+      <p class="clarke-why-h3">No handoffs. No middlemen.</p>
+      <div class="clarke-why-body">
+        <p>Most contractors assign you a project manager you've never met. At Clarke Building, Dave Clarke is the owner, general contractor, and your direct point of contact from estimate through final walkthrough. He's the person who answers your call, shows up on your job site, and makes decisions in real time. You won't be passed around between office staff or left wondering who's actually running your project.</p>
+        <p>That single point of contact means faster answers, fewer miscommunications, and a level of accountability that's hard to find in this industry. The person you shook hands with at the start is the same person managing your project at the end.</p>
+        <p><a href="https://clarkebuildingcompany.com/about/">Learn more about how Dave works</a>.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 02: ON TIME, ON BUDGET
+       ============================================ -->
+  <section class="clarke-why-section-white">
+    <div class="clarke-why-container">
+      <div class="clarke-why-num"><span>2</span></div>
+      <h2 class="clarke-why-h2">On Time, On Budget, No Surprises</h2>
+      <p class="clarke-why-h3">Transparent pricing from day one. Proactive updates, not reactive excuses.</p>
+      <div class="clarke-why-body">
+        <p>The number one fear homeowners have about renovation is unexpected costs. Clarke Building addresses that upfront. Every project starts with a detailed, written estimate that breaks down the work by phase. There are no hidden line items, no vague allowances, and no surprises at the end. If something changes mid-project, we talk about it before the cost changes, not after.</p>
+        <p>Communication works the same way. You'll get regular project updates without having to chase us down. We call you before you have to call us. That's not a tagline, it's how we run every job.</p>
+        <p><a href="https://clarkebuildingcompany.com/projects/">See completed projects</a>.</p>
+      </div>
+
+      <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-3.webp" alt="" width="520" height="360" class="clarke-why-photo" loading="lazy" decoding="async" style="max-width: 480px;">
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 03: FULL SERVICE (dark)
+       ============================================ -->
+  <section class="clarke-why-dark">
+    <div class="clarke-why-container clarke-why-dark-inner">
+      <div class="clarke-why-dark-num"><span>3</span></div>
+      <h2 class="clarke-why-dark-h2">We Handle Everything. You Handle Nothing.</h2>
+      <p class="clarke-why-dark-h3">Permits, subs, materials, and finishes, fully managed.</p>
+      <div class="clarke-why-dark-body">
+        <p>"Full service" gets thrown around a lot in this industry. At Clarke Building, it means something specific: we pull the permits, schedule and manage every licensed subcontractor (electricians, plumbers, HVAC), source materials, guide finish selections, and coordinate inspections. You don't have to hire an electrician separately or figure out the permitting process on your own.</p>
+        <p>Clarke Building is licensed and insured in Massachusetts with a Home Improvement Contractor (HIC) license, General Liability insurance, and Workers' Compensation coverage. Every trade partner we bring onto your project is held to the same standard, because they work with us repeatedly and their reputation depends on it.</p>
+        <p><a href="https://clarkebuildingcompany.com/services/">Explore our full range of services</a>.</p>
+      </div>
+
+      <div class="clarke-why-photo-row">
+        <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-built-in-shelving-barn-doors-wide.webp" alt="" width="280" height="200" loading="lazy" decoding="async" style="border: 1px solid rgba(201,169,110,0.15);">
+        <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-open-concept-wide-angle.webp" alt="" width="280" height="200" loading="lazy" decoding="async" style="border: 1px solid rgba(201,169,110,0.15);">
+        <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-4.webp" alt="" width="280" height="200" loading="lazy" decoding="async" style="border: 1px solid rgba(201,169,110,0.15);">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 04: LOCAL ROOTS
+       ============================================ -->
+  <section class="clarke-why-section-light">
+    <div class="clarke-why-container">
+      <div class="clarke-why-num"><span>4</span></div>
+      <h2 class="clarke-why-h2">This Is Our Backyard. We Know It Like You Do.</h2>
+      <p class="clarke-why-h3">Deep roots in Massachusetts and Southern New Hampshire.</p>
+      <div class="clarke-why-body">
+        <p>Clarke Building Company is based in West Newbury and has built a reputation across this region through consistent, quality work. That shows up in long-standing relationships with local building departments, a trusted subcontractor network, and supplier partnerships built on repeat business. When your project needs to clear a permit or pass an inspection, we know the people and the process.</p>
+        <p>We work regularly in West Newbury, Newburyport, Ipswich, Amesbury, Hamilton, Topsfield, Georgetown, Boxford, Rowley, Salisbury, and surrounding Massachusetts and Southern New Hampshire communities. Homeowners in our area want someone who's invested in the community, not a crew that drives in from three counties away.</p>
+        <p><a href="https://clarkebuildingcompany.com/about/">Meet Clarke Building Company</a>.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CTA BAND
+       ============================================ -->
+  <section class="clarke-why-cta-band">
+    <div class="clarke-why-container clarke-why-cta-inner">
+      <h2 class="clarke-why-cta-h2">Ready to Talk to Someone Who Actually Picks Up the Phone?</h2>
+      <p class="clarke-why-cta-text">No sales pitch. No pressure. Just a real conversation about your project and what it takes to get it done right. Reach out and you'll hear back from the same person who'll be managing your build.</p>
+      <a href="https://clarkebuildingcompany.com/contact/" class="clarke-why-btn-primary">
+        Get a Free Estimate
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+</div>
