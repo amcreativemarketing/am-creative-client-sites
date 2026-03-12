@@ -205,6 +205,25 @@
   max-width: 720px; height: auto;
 }
 
+/* Benefits grid */
+.clarke-add-benefits {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
+  max-width: 880px; margin: 32px auto 0;
+}
+@media (min-width: 768px) { .clarke-add-benefits { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.clarke-add-benefit {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent); border-radius: var(--radius-lg);
+  padding: 24px 26px;
+}
+.clarke-add-benefit h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 16px;
+  color: var(--color-text-heading); margin-bottom: 8px; line-height: 1.3;
+}
+.clarke-add-benefit p {
+  font-size: 15px; line-height: 1.7; color: var(--color-text-primary); margin: 0;
+}
+
 /* Inline CTA */
 .clarke-add-inline-cta {
   display: inline-flex; align-items: center; gap: 8px; margin-top: 20px;
@@ -452,10 +471,10 @@
         <div>
           <div class="clarke-add-badge clarke-fade clarke-fade-d1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            Home Addition Contractor &bull; North Shore, MA
+            Home Addition Contractor &bull; Massachusetts &amp; Southern NH
           </div>
-          <h1 class="clarke-add-h1 clarke-fade clarke-fade-d2">Home Addition Contractor Serving West Newbury MA and the North Shore</h1>
-          <p class="clarke-add-hero-sub clarke-fade clarke-fade-d3">Seamlessly expand your home with a custom addition that matches your existing architecture - built by a trusted North Shore contractor with full permit management and expert foundation work.</p>
+          <h1 class="clarke-add-h1 clarke-fade clarke-fade-d2">Home Addition Contractor Serving Massachusetts &amp; Southern New Hampshire</h1>
+          <p class="clarke-add-hero-sub clarke-fade clarke-fade-d3">When your family outgrows your home, you shouldn't have to move to get the space you deserve. Clarke Building Company designs and builds custom additions that match your existing architecture, managed start to finish by Dave Clarke.</p>
           <div class="clarke-add-hero-ctas clarke-fade clarke-fade-d4">
             <a href="https://clarkebuildingcompany.com/contact/" class="clarke-add-btn-primary">
               Get a Free Estimate
@@ -467,10 +486,6 @@
 
         <div class="clarke-add-hero-img-wrap clarke-fade clarke-fade-d3">
           <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/a-new-stick-built-home-under-construction-the-new-2026-01-09-09-26-50-utc-scaled.webp" alt="" width="640" height="480" class="clarke-add-hero-img" loading="eager">
-          <div class="clarke-add-hero-stat">
-            <span class="clarke-add-hero-stat-num">3-6 Mo</span>
-            <span class="clarke-add-hero-stat-label">Typical Timeline</span>
-          </div>
         </div>
 
       </div>
@@ -502,7 +517,7 @@
         </div>
         <div class="clarke-add-trust-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          North Shore, MA
+          North Shore, MA &amp; Southern NH
         </div>
       </div>
     </div>
@@ -514,19 +529,29 @@
        ============================================ -->
   <section class="clarke-add-section-light">
     <div class="clarke-add-container">
-      <h2 class="clarke-add-h2">Custom House Additions Built to Blend - Not Just Bolt On</h2>
+      <h2 class="clarke-add-h2">Custom House Additions Built to Blend, Not Just Bolt On</h2>
       <div class="clarke-add-body">
-        <p>Adding square footage to your home is one of the most impactful investments you can make - but only when it's done right. At Clarke Building Company, our house additions in West Newbury MA and across the North Shore are designed from the ground up to integrate seamlessly with your existing home's character, roofline, siding profile, and interior flow.</p>
-
-        <p>From the permit application through foundation excavation, framing, and final trim work, we manage every phase of your home addition project. No subcontractor confusion. No permitting headaches. One team, one point of contact, and a finished addition that looks like it was always there.</p>
+        <p>Your home should grow with your family. Clarke Building Company designs and builds house additions across Massachusetts and Southern New Hampshire that integrate with your existing architecture, roofline, and interior flow, so the new space looks and feels like it was always part of the house.</p>
       </div>
 
-      <ul class="clarke-add-bullet-list">
-        <li>We handle Massachusetts building permit applications and town approval processes</li>
-        <li>All additions begin with proper foundation planning - no shortcuts on structural work</li>
-        <li>We match your existing materials: siding, trim profiles, window styles, and rooflines</li>
-        <li>Projects typically complete in 3-6 months depending on scope</li>
-      </ul>
+      <div class="clarke-add-benefits">
+        <div class="clarke-add-benefit">
+          <h3>One Point of Contact, Start to Finish</h3>
+          <p>Dave Clarke manages every phase of your addition personally. No subcontractor confusion, no communication gaps, no getting handed off to someone you've never met.</p>
+        </div>
+        <div class="clarke-add-benefit">
+          <h3>Full Permit Management</h3>
+          <p>We prepare and submit all permit applications, coordinate with your town's building department, and schedule every required inspection so you don't have to navigate it alone.</p>
+        </div>
+        <div class="clarke-add-benefit">
+          <h3>Matched Materials and Architecture</h3>
+          <p>Siding, trim profiles, window styles, and rooflines are selected to match your existing home. The addition should look original, not like an afterthought.</p>
+        </div>
+        <div class="clarke-add-benefit">
+          <h3>Transparent Estimates, No Surprises</h3>
+          <p>Dave walks your property, discusses every option, and puts together a written estimate that reflects the actual scope. You'll know exactly what the project costs before anything starts.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -542,23 +567,23 @@
 
         <div class="clarke-add-svc-card">
           <h2>Room Additions</h2>
-          <p>Need more living space? Our room additions in West Newbury MA and surrounding North Shore communities give you the square footage you need without sacrificing the character of your existing home. Whether it's a new family room, home office, playroom, or extra bedroom, we design and build additions that feel like original architecture - not a tacked-on afterthought.</p>
+          <p>Need more living space? Our room additions give Massachusetts and Southern New Hampshire homeowners the square footage they need without sacrificing the character of their existing home. Whether it's a new family room, home office, playroom, or extra bedroom, we design and build additions that feel like original architecture, not a tacked-on afterthought.</p>
           <a href="https://clarkebuildingcompany.com/renovations/">See our renovations for reconfiguring existing space</a>
         </div>
 
         <div class="clarke-add-svc-card">
           <h2>Master Suite Expansions</h2>
-          <p>Transform your master bedroom into the retreat it was always meant to be. Clarke Building Company specializes in master suite additions that expand your footprint to accommodate walk-in closets, spa bathrooms, sitting areas, and private access - all crafted to blend with your home's existing layout and exterior.</p>
+          <p>Transform your master bedroom into the retreat it was always meant to be. Clarke Building Company specializes in master suite additions that expand your footprint to accommodate walk-in closets, sitting areas, and private access, all crafted to blend with your home's existing layout and exterior.</p>
         </div>
 
         <div class="clarke-add-svc-card">
           <h2>Sunrooms &amp; 3-Season Rooms</h2>
-          <p>Bring the beauty of the North Shore indoors - year-round or seasonally - with a custom sunroom or 3-season room addition. We build both fully insulated, conditioned sunrooms for four-season use and traditional 3-season rooms that maximize the warm-weather months with panoramic views and natural light. Every sunroom starts with a proper structural foundation, quality glazing, and materials selected to match your home's exterior.</p>
+          <p>Bring the outdoors in, year-round or seasonally, with a custom sunroom or 3-season room addition. We build both fully insulated, conditioned sunrooms for four-season use and traditional 3-season rooms that maximize the warm-weather months with panoramic views and natural light. Every sunroom starts with a proper structural foundation, quality glazing, and materials selected to match your home's exterior.</p>
         </div>
 
         <div class="clarke-add-svc-card">
           <h2>Structural Bump-Outs</h2>
-          <p>When a full addition isn't required but you need targeted extra space - a larger kitchen, an expanded bathroom, a widened entryway - a structural bump-out may be the ideal solution. Clarke Building designs and builds bump-out additions that are fully integrated into your home's structure, including proper foundation support and exterior finishing that blends seamlessly.</p>
+          <p>When a full addition isn't required but you need targeted extra space, a larger kitchen, an expanded entryway, a wider dining area, a structural bump-out may be the right solution. Clarke Building designs and builds bump-out additions that are fully integrated into your home's structure, including proper foundation support and exterior finishing that matches your existing home.</p>
         </div>
 
         <div class="clarke-add-svc-card" style="grid-column: 1 / -1;">
@@ -617,7 +642,7 @@
           <div class="clarke-add-step-num">5</div>
           <div>
             <h3>Exterior Matching</h3>
-            <p>Siding, trim, windows, and roofing are selected to blend with your existing home. We do not cut corners here - a seamless exterior is as important to your home's value as the interior finish.</p>
+            <p>Siding, trim, windows, and roofing are selected to blend with your existing home. We do not cut corners here, because the exterior match is as important to your home's value as the interior finish.</p>
           </div>
         </div>
         <div class="clarke-add-step">
@@ -641,27 +666,6 @@
     </div>
   </section>
 
-
-  <!-- ============================================
-       TESTIMONIAL
-       ============================================ -->
-  <section class="clarke-add-section-white">
-    <div class="clarke-add-container">
-      <h2 class="clarke-add-h2">What Our Clients Say About Their Home Additions</h2>
-
-      <div class="clarke-add-testimonial">
-        <div class="clarke-add-testimonial-stars">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <blockquote>"Phenomenal job on the addition. Clarke Building Company expanded our master bedroom, added a walk-in closet, and built us a 3-season room - and they knocked it out of the park on all three. The new spaces look like they were always part of the house. We couldn't be happier."</blockquote>
-        <div class="clarke-add-testimonial-attr">- [Placeholder - Confirm homeowner name/location before launch]</div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- ============================================
@@ -694,7 +698,7 @@
 
       <details class="clarke-add-faq-item">
         <summary>Will the addition match my existing home?</summary>
-        <div class="clarke-add-faq-a">Matching existing architecture is a core priority for Clarke Building Company. We carefully select siding, trim, windows, roofing, and interior finishes to blend with your existing home's character - whether you're adding onto a colonial, cape, craftsman, or contemporary home on the North Shore.</div>
+        <div class="clarke-add-faq-a">Matching existing architecture is a core priority for Clarke Building Company. We carefully select siding, trim, windows, roofing, and interior finishes to blend with your existing home's character, whether you're adding onto a colonial, cape, craftsman, or contemporary home.</div>
       </details>
       </div>
     </div>
@@ -706,9 +710,9 @@
        ============================================ -->
   <section class="clarke-add-section-white">
     <div class="clarke-add-container">
-      <h2 class="clarke-add-h2">Serving West Newbury MA and the North Shore</h2>
+      <h2 class="clarke-add-h2">Serving Massachusetts &amp; Southern New Hampshire</h2>
       <div class="clarke-add-body" style="text-align: center; margin: 0 auto;">
-        <p>Clarke Building Company builds home additions throughout Essex County and the Greater North Shore. Our primary service area includes:</p>
+        <p>Clarke Building Company builds home additions throughout Essex County, the North Shore, and Southern New Hampshire. Our primary service area includes:</p>
       </div>
 
       <ul class="clarke-add-area-list">
@@ -749,7 +753,7 @@
         </a>
         <a href="https://clarkebuildingcompany.com/new-construction/" class="clarke-add-related-card">
           <h3>New Construction <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
-          <p>Build a new home or structure from the ground up on the North Shore.</p>
+          <p>Build a new home or structure from the ground up in Massachusetts or Southern NH.</p>
         </a>
         <a href="https://clarkebuildingcompany.com/renovations/" class="clarke-add-related-card">
           <h3>Home Renovations <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
@@ -757,7 +761,7 @@
         </a>
         <a href="https://clarkebuildingcompany.com/projects/" class="clarke-add-related-card">
           <h3>Our Projects <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
-          <p>See additions and builds we've completed for North Shore homeowners.</p>
+          <p>See additions and builds we've completed for homeowners in our area.</p>
         </a>
       </div>
 
@@ -789,3 +793,4 @@
   </section>
 
 </div>
+
