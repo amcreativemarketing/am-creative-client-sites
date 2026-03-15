@@ -1,0 +1,1007 @@
+<!-- CLARKE BUILDING COMPANY - HAMILTON, MA LOCATION PAGE
+     Page: /hamilton-ma/
+     Design: Craftsman Editorial - Centered Narrative Variant
+     Built: March 2026 by AM Creative
+     
+     INTERNAL LINKS:
+     Domain: https://clarkebuildingcompany.com
+     Services: /kitchen-remodeling/, /renovations/, /additions/, /adu/,
+               /deck-construction/, /new-construction/, /services/
+     Locations: /newburyport-ma/, /west-newbury-ma/, /ipswich-ma/, /amesbury-ma/
+     Other: /contact/
+     
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+     All img alt="" left empty per OTTO workflow.
+-->
+
+<style>
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+}
+
+/* ======== BASE ======== */
+.clarke-hm-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-hm-wrap *, .clarke-hm-wrap *::before, .clarke-hm-wrap *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+.clarke-hm-wrap img { max-width: 100%; height: auto; display: block; }
+.clarke-hm-wrap a { text-decoration: none; }
+
+.clarke-hm-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+}
+@media (min-width: 768px) { .clarke-hm-container { padding: 0 32px; } }
+
+@keyframes clarkeHmFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-hm-fade { animation: clarkeHmFadeUp 0.8s ease forwards; }
+.clarke-hm-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-hm-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-hm-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+.clarke-hm-fade-d4 { animation-delay: 0.55s; opacity: 0; }
+
+
+/* ======== HERO ======== */
+.clarke-hm-hero {
+  background: var(--color-secondary);
+  position: relative; overflow: hidden; padding: 60px 0 48px;
+}
+@media (min-width: 768px) { .clarke-hm-hero { padding: 80px 0 64px; } }
+.clarke-hm-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-hm-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.018) 100px, rgba(201,169,110,0.018) 101px);
+  pointer-events: none; z-index: 0;
+}
+.clarke-hm-hero-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 40px;
+}
+@media (min-width: 960px) {
+  .clarke-hm-hero-inner {
+    display: grid; grid-template-columns: 1.2fr 0.8fr;
+    gap: 56px; align-items: center;
+  }
+}
+.clarke-hm-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent); margin-bottom: 20px; width: fit-content;
+}
+.clarke-hm-hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.clarke-hm-h1 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 32px;
+  line-height: 1.12; color: var(--color-text-inverse);
+  margin-bottom: 16px; letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-hm-h1 { font-size: clamp(36px, 4.5vw, 50px); } }
+.clarke-hm-hero-sub {
+  font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
+  margin-bottom: 28px; max-width: 560px;
+}
+.clarke-hm-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+.clarke-hm-hero-img-wrap { position: relative; padding: 14px; max-width: 460px; margin-left: auto; }
+.clarke-hm-hero-img-wrap::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: calc(100% - 14px); height: calc(100% - 14px);
+  border: 1.5px solid rgba(201,169,110,0.3);
+  border-radius: var(--radius-lg); z-index: 0;
+}
+.clarke-hm-hero-img {
+  position: relative; z-index: 1;
+  border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover;
+}
+
+/* Buttons */
+.clarke-hm-btn-primary {
+  background: var(--color-primary); color: #fff;
+  padding: 16px 36px; font-family: var(--font-body);
+  font-weight: 600; font-size: 15px; border: none;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex;
+  align-items: center; gap: 10px;
+  box-shadow: 0 4px 20px rgba(139,39,39,0.3);
+}
+.clarke-hm-btn-primary:hover {
+  background: var(--color-primary-hover) !important;
+  color: #fff !important; transform: translateY(-1px);
+}
+.clarke-hm-btn-secondary {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.75);
+  padding: 14px 32px; font-family: var(--font-body);
+  font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex;
+  align-items: center; gap: 10px;
+}
+.clarke-hm-btn-secondary:hover {
+  border-color: var(--color-accent) !important;
+  color: var(--color-accent) !important;
+  background: rgba(201,169,110,0.06) !important;
+}
+.clarke-hm-btn-primary-light {
+  background: var(--color-primary); color: #fff;
+  padding: 16px 36px; font-family: var(--font-body);
+  font-weight: 600; font-size: 15px; border: none;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex;
+  align-items: center; gap: 10px;
+}
+.clarke-hm-btn-primary-light:hover {
+  background: var(--color-primary-hover) !important;
+  color: #fff !important; transform: translateY(-1px);
+}
+
+
+/* ======== TRUST BAR ======== */
+.clarke-hm-trust-bar {
+  background: var(--color-secondary);
+  position: relative; overflow: hidden;
+  border-top: 1px solid rgba(201,169,110,0.12);
+}
+.clarke-hm-trust-bar::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-hm-trust-bar-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 0; padding: 20px 0;
+}
+.clarke-hm-trust-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 24px; font-size: 13px; font-weight: 500;
+  color: rgba(255,255,255,0.55); white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .clarke-hm-trust-item {
+    border-right: 1px solid rgba(201,169,110,0.12);
+  }
+  .clarke-hm-trust-item:last-child { border-right: none; }
+}
+.clarke-hm-trust-item svg {
+  color: var(--color-accent); width: 18px; height: 18px; flex-shrink: 0;
+}
+
+
+/* ======== SECTION: COMMUNITY INTRO (Full-Width Centered) ======== */
+.clarke-hm-intro {
+  background: var(--color-bg-white);
+  padding: 64px 0;
+  text-align: center;
+}
+@media (min-width: 768px) { .clarke-hm-intro { padding: 88px 0; } }
+.clarke-hm-intro-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.clarke-hm-section-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 18px; border-radius: 100px;
+  background: rgba(139,39,39,0.08); border: 1px solid rgba(139,39,39,0.15);
+  color: var(--color-primary); margin-bottom: 20px;
+}
+.clarke-hm-section-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.clarke-hm-intro h2 {
+  font-family: var(--font-heading); font-weight: 400;
+  font-size: clamp(26px, 4vw, 36px); line-height: 1.25;
+  color: var(--color-text-heading); margin-bottom: 24px;
+}
+.clarke-hm-intro p {
+  font-size: 17px; line-height: 1.8;
+  color: var(--color-text-primary); margin-bottom: 20px;
+}
+.clarke-hm-intro p:last-child { margin-bottom: 0; }
+.clarke-hm-intro-divider {
+  width: 60px; height: 2px;
+  background: var(--color-accent);
+  margin: 32px auto;
+  border-radius: 2px;
+}
+
+
+/* ======== SECTION: LARGER PROPERTIES (Numbered Steps) ======== */
+.clarke-hm-properties {
+  background: var(--color-bg-primary);
+  padding: 64px 0;
+  position: relative;
+}
+@media (min-width: 768px) { .clarke-hm-properties { padding: 88px 0; } }
+.clarke-hm-properties::before {
+  content: ''; position: absolute; inset: 0;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(28,36,52,0.015) 30px, rgba(28,36,52,0.015) 31px);
+  pointer-events: none;
+}
+.clarke-hm-properties-header {
+  text-align: center; margin-bottom: 48px;
+  position: relative; z-index: 1;
+}
+.clarke-hm-properties h2 {
+  font-family: var(--font-heading); font-weight: 400;
+  font-size: clamp(26px, 4vw, 36px); line-height: 1.25;
+  color: var(--color-text-heading); margin-bottom: 16px;
+}
+.clarke-hm-properties-header p {
+  font-size: 17px; color: var(--color-text-secondary);
+  max-width: 620px; margin: 0 auto; line-height: 1.6;
+}
+.clarke-hm-properties-grid {
+  display: grid; gap: 24px;
+  position: relative; z-index: 1;
+}
+@media (min-width: 768px) {
+  .clarke-hm-properties-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+}
+.clarke-hm-prop-card {
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.clarke-hm-prop-num {
+  font-family: var(--font-heading);
+  font-size: 36px; line-height: 1;
+  color: var(--color-accent);
+  flex-shrink: 0; min-width: 40px;
+  opacity: 0.6;
+}
+.clarke-hm-prop-card h3 {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 17px; color: var(--color-text-heading);
+  margin-bottom: 8px;
+}
+.clarke-hm-prop-card p {
+  font-size: 15px; line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+
+/* ======== SECTION: IMAGE + TEXT FEATURE BLOCKS ======== */
+.clarke-hm-feature {
+  padding: 64px 0;
+}
+@media (min-width: 768px) { .clarke-hm-feature { padding: 88px 0; } }
+.clarke-hm-feature-bg-white { background: var(--color-bg-white); }
+.clarke-hm-feature-bg-dark {
+  background: var(--color-secondary);
+  position: relative; overflow: hidden;
+}
+.clarke-hm-feature-bg-dark::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-hm-feature-bg-dark::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(139,39,39,0.05) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.02) 100px, rgba(201,169,110,0.02) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.015) 100px, rgba(201,169,110,0.015) 101px);
+  pointer-events: none; z-index: 0;
+}
+.clarke-hm-feature-grid {
+  display: grid; gap: 40px;
+  position: relative; z-index: 1;
+}
+@media (min-width: 960px) {
+  .clarke-hm-feature-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px; align-items: center;
+  }
+}
+.clarke-hm-feature-img-wrap {
+  border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+.clarke-hm-feature-bg-dark .clarke-hm-feature-img-wrap {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+.clarke-hm-feature-img-wrap img { border-radius: var(--radius-lg); }
+.clarke-hm-feature-text { text-align: center; }
+.clarke-hm-feature-text h2 {
+  font-family: var(--font-heading); font-weight: 400;
+  font-size: clamp(26px, 4vw, 36px); line-height: 1.25;
+  color: var(--color-text-heading); margin-bottom: 20px;
+}
+.clarke-hm-feature-bg-dark .clarke-hm-feature-text h2 {
+  color: var(--color-text-inverse);
+}
+.clarke-hm-feature-text p {
+  font-size: 16px; line-height: 1.7; margin-bottom: 16px;
+}
+.clarke-hm-feature-bg-dark .clarke-hm-feature-text p {
+  color: rgba(255,255,255,0.72);
+}
+.clarke-hm-feature-text p:last-of-type { margin-bottom: 28px; }
+.clarke-hm-feature-img-col { order: 2; }
+@media (min-width: 960px) {
+  .clarke-hm-feature-reverse .clarke-hm-feature-img-col { order: 1; }
+  .clarke-hm-feature-reverse .clarke-hm-feature-text { order: 2; }
+}
+.clarke-hm-section-badge-dark {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 18px; border-radius: 100px;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent); margin-bottom: 20px;
+}
+.clarke-hm-section-badge-dark svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+
+/* ======== SECTION: SERVICES (Horizontal Cards) ======== */
+.clarke-hm-services {
+  background: var(--color-bg-primary);
+  padding: 64px 0;
+  position: relative;
+}
+@media (min-width: 768px) { .clarke-hm-services { padding: 88px 0; } }
+.clarke-hm-services::before {
+  content: ''; position: absolute; inset: 0;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(28,36,52,0.015) 30px, rgba(28,36,52,0.015) 31px);
+  pointer-events: none;
+}
+.clarke-hm-services-header {
+  text-align: center; margin-bottom: 48px;
+  position: relative; z-index: 1;
+}
+.clarke-hm-services h2 {
+  font-family: var(--font-heading); font-weight: 400;
+  font-size: clamp(26px, 4vw, 36px); line-height: 1.25;
+  color: var(--color-text-heading); margin-bottom: 16px;
+}
+.clarke-hm-services-header p {
+  font-size: 17px; color: var(--color-text-secondary);
+  max-width: 620px; margin: 0 auto; line-height: 1.6;
+}
+.clarke-hm-services-list {
+  display: grid; gap: 16px;
+  position: relative; z-index: 1;
+  max-width: 900px; margin: 0 auto;
+}
+.clarke-hm-service-row {
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  display: flex; align-items: center; gap: 20px;
+  text-decoration: none; transition: all 0.3s ease;
+}
+.clarke-hm-service-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+  border-color: var(--color-accent);
+}
+.clarke-hm-service-row-icon {
+  width: 48px; height: 48px; flex-shrink: 0;
+  background: rgba(139,39,39,0.08);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+}
+.clarke-hm-service-row-icon svg {
+  width: 24px; height: 24px; color: var(--color-primary);
+}
+.clarke-hm-service-row-content { flex: 1; }
+.clarke-hm-service-row h3 {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 16px; color: var(--color-text-heading);
+  margin-bottom: 4px;
+}
+.clarke-hm-service-row p {
+  font-size: 14px; line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+.clarke-hm-service-row-arrow {
+  flex-shrink: 0; color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+.clarke-hm-service-row:hover .clarke-hm-service-row-arrow {
+  transform: translateX(4px);
+}
+.clarke-hm-services-cta {
+  text-align: center; margin-top: 36px;
+  position: relative; z-index: 1;
+}
+.clarke-hm-services-cta p {
+  font-size: 16px; color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+
+/* ======== SECTION: OUR APPROACH (Process Steps) ======== */
+.clarke-hm-approach {
+  background: var(--color-bg-white);
+  padding: 64px 0;
+}
+@media (min-width: 768px) { .clarke-hm-approach { padding: 88px 0; } }
+.clarke-hm-approach-header {
+  text-align: center; margin-bottom: 48px;
+}
+.clarke-hm-approach h2 {
+  font-family: var(--font-heading); font-weight: 400;
+  font-size: clamp(26px, 4vw, 36px); line-height: 1.25;
+  color: var(--color-text-heading); margin-bottom: 16px;
+}
+.clarke-hm-approach-header p {
+  font-size: 17px; color: var(--color-text-secondary);
+  max-width: 600px; margin: 0 auto; line-height: 1.6;
+}
+.clarke-hm-steps {
+  display: grid; gap: 0;
+  max-width: 700px; margin: 0 auto;
+  position: relative;
+}
+.clarke-hm-steps::before {
+  content: ''; position: absolute;
+  left: 24px; top: 36px; bottom: 36px;
+  width: 2px; background: var(--color-border);
+}
+@media (min-width: 768px) {
+  .clarke-hm-steps::before { left: 28px; }
+}
+.clarke-hm-step {
+  display: flex; gap: 24px; align-items: flex-start;
+  padding: 20px 0; position: relative;
+}
+.clarke-hm-step-num {
+  width: 50px; height: 50px; flex-shrink: 0;
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 20px; color: var(--color-accent);
+  position: relative; z-index: 1;
+}
+@media (min-width: 768px) {
+  .clarke-hm-step-num { width: 56px; height: 56px; font-size: 22px; }
+}
+.clarke-hm-step-content { padding-top: 8px; text-align: center; flex: 1; }
+.clarke-hm-step h3 {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 17px; color: var(--color-text-heading);
+  margin-bottom: 6px;
+}
+.clarke-hm-step p {
+  font-size: 15px; line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+
+/* ======== SECTION: SIBLING LOCATIONS ======== */
+.clarke-hm-locations {
+  background: var(--color-bg-primary);
+  padding: 64px 0;
+  text-align: center;
+}
+@media (min-width: 768px) { .clarke-hm-locations { padding: 72px 0; } }
+.clarke-hm-locations h2 {
+  font-family: var(--font-heading); font-weight: 400;
+  font-size: clamp(24px, 3.5vw, 32px); line-height: 1.25;
+  color: var(--color-text-heading); margin-bottom: 12px;
+}
+.clarke-hm-locations-lead {
+  font-size: 16px; color: var(--color-text-secondary);
+  max-width: 540px; margin: 0 auto 32px;
+}
+.clarke-hm-locations-grid {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+}
+.clarke-hm-location-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 20px; border: 1px solid var(--color-border);
+  border-radius: 100px; font-size: 14px; font-weight: 500;
+  color: var(--color-text-primary); transition: all 0.3s ease;
+  text-decoration: none;
+}
+.clarke-hm-location-link:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: rgba(139,39,39,0.04);
+}
+.clarke-hm-location-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+
+/* ======== SECTION: MAP ======== */
+.clarke-hm-map {
+  background: var(--color-bg-white);
+  padding: 64px 0;
+  text-align: center;
+}
+@media (min-width: 768px) { .clarke-hm-map { padding: 72px 0; } }
+.clarke-hm-map h2 {
+  font-family: var(--font-heading); font-weight: 400;
+  font-size: clamp(24px, 3.5vw, 32px); line-height: 1.25;
+  color: var(--color-text-heading); margin-bottom: 12px;
+}
+.clarke-hm-map-lead {
+  font-size: 16px; color: var(--color-text-secondary);
+  max-width: 500px; margin: 0 auto 32px;
+}
+.clarke-hm-map-wrap {
+  border-radius: var(--radius-lg); overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.clarke-hm-map-wrap iframe {
+  width: 100%; height: 400px; display: block;
+}
+@media (min-width: 768px) {
+  .clarke-hm-map-wrap iframe { height: 450px; }
+}
+
+
+/* ======== CTA BAND ======== */
+.clarke-hm-cta-band {
+  background: var(--color-primary);
+  padding: 56px 0; text-align: center;
+  position: relative; overflow: hidden;
+}
+.clarke-hm-cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-hm-cta-band-inner { position: relative; z-index: 1; }
+.clarke-hm-cta-band h2 {
+  font-family: var(--font-heading); font-weight: 400;
+  font-size: clamp(26px, 4vw, 36px); line-height: 1.25;
+  color: var(--color-text-inverse); margin-bottom: 16px;
+}
+.clarke-hm-cta-band p {
+  font-size: 17px; color: rgba(255,255,255,0.85);
+  max-width: 560px; margin: 0 auto 32px; line-height: 1.6;
+}
+.clarke-hm-cta-band-btns {
+  display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+}
+.clarke-hm-cta-band .clarke-hm-btn-cta-white {
+  background: var(--color-bg-white); color: var(--color-primary);
+  padding: 16px 36px; font-family: var(--font-body);
+  font-weight: 600; font-size: 15px; border: none;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex;
+  align-items: center; gap: 10px;
+}
+.clarke-hm-cta-band .clarke-hm-btn-cta-white:hover {
+  background: var(--color-bg-primary) !important;
+  color: var(--color-primary-hover) !important;
+  transform: translateY(-1px);
+}
+.clarke-hm-cta-band .clarke-hm-btn-cta-outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.9);
+  padding: 14px 32px; font-family: var(--font-body);
+  font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex;
+  align-items: center; gap: 10px;
+}
+.clarke-hm-cta-band .clarke-hm-btn-cta-outline:hover {
+  background: rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.5) !important;
+  color: #fff !important;
+}
+</style>
+
+<div class="clarke-hm-wrap">
+
+  <!-- ======== HERO ======== -->
+  <section class="clarke-hm-hero">
+    <div class="clarke-hm-container">
+      <div class="clarke-hm-hero-inner">
+
+        <div>
+          <div class="clarke-hm-hero-badge clarke-hm-fade clarke-hm-fade-d1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Hamilton, MA &bull; General Contractor
+          </div>
+          <h1 class="clarke-hm-h1 clarke-hm-fade clarke-hm-fade-d2">General Contractor in Hamilton, MA</h1>
+          <p class="clarke-hm-hero-sub clarke-hm-fade clarke-hm-fade-d3">Kitchen remodeling, home renovations, additions, ADUs, decks, and new construction for Hamilton homeowners. Owner-operated, quality-focused, and built for the properties and character of this community.</p>
+          <div class="clarke-hm-hero-ctas clarke-hm-fade clarke-hm-fade-d4">
+            <a href="https://clarkebuildingcompany.com/contact/" class="clarke-hm-btn-primary">
+              Get Your Free Estimate
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="https://clarkebuildingcompany.com/services/" class="clarke-hm-btn-secondary">View Our Services</a>
+          </div>
+        </div>
+
+        <div class="clarke-hm-hero-img-wrap clarke-hm-fade clarke-hm-fade-d3">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/houses-in-suburb-at-summer-in-the-north-america-l-2026-01-11-10-25-55-utc-scaled.webp" alt="" width="640" height="480" class="clarke-hm-hero-img" loading="eager">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== TRUST BAR ======== -->
+  <div class="clarke-hm-trust-bar">
+    <div class="clarke-hm-container">
+      <div class="clarke-hm-trust-bar-inner">
+        <div class="clarke-hm-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="clarke-hm-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+          Owner-Operated
+        </div>
+        <div class="clarke-hm-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          5-Star Rated
+        </div>
+        <div class="clarke-hm-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          15+ Years Experience
+        </div>
+        <div class="clarke-hm-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          North Shore, MA
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======== COMMUNITY INTRO ======== -->
+  <section class="clarke-hm-intro">
+    <div class="clarke-hm-container">
+      <div class="clarke-hm-intro-inner">
+<h2>A Rural Community with Room to Build</h2>
+        <p>Hamilton is a town defined by space. Settled in 1638 and incorporated in 1793, it remains one of the most rural communities on the North Shore, with no industrial zoning, pastoral landscapes, stone walls along winding roads, and a strong equestrian heritage rooted in the Myopia Hunt Club and local horse farms.</p>
+        <p>For homeowners here, that character matters. Renovations and additions need to respect the scale of larger properties, match the architectural traditions of the area, and stand up to the New England climate. Clarke Building Company understands this balance. We are based in West Newbury, just a few miles away, and we bring the same care and attention to Hamilton properties that we bring to our own community.</p>
+        <div class="clarke-hm-intro-divider"></div>
+        <p>Whether you are remodeling a kitchen in a Colonial farmhouse, adding living space to a family estate, or building a new home on a larger lot, we approach every Hamilton project with honest communication, transparent pricing, and craftsmanship you can see in the finished work.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== BUILT FOR LARGER PROPERTIES ======== -->
+  <section class="clarke-hm-properties">
+    <div class="clarke-hm-container">
+      <div class="clarke-hm-properties-header">
+<h2>Built for the Scale of Hamilton Homes</h2>
+        <p>Hamilton properties tend to be larger, with more acreage, outbuildings, and architectural detail. That changes how we plan, scope, and build.</p>
+      </div>
+
+      <div class="clarke-hm-properties-grid">
+        <div class="clarke-hm-prop-card">
+          <div class="clarke-hm-prop-num">01</div>
+          <div>
+            <h3>Additions That Match the Property</h3>
+            <p><a href="https://clarkebuildingcompany.com/additions/" style="color: var(--color-primary); font-weight: 500;">Home additions</a> on larger lots give us more flexibility with design and placement. We plan additions that complement your home's existing footprint and the surrounding landscape, not just bolt on extra square footage.</p>
+          </div>
+        </div>
+        <div class="clarke-hm-prop-card">
+          <div class="clarke-hm-prop-num">02</div>
+          <div>
+            <h3>ADUs for Multi-Generational Living</h3>
+            <p>Hamilton's larger lots are well suited for <a href="https://clarkebuildingcompany.com/adu/" style="color: var(--color-primary); font-weight: 500;">accessory dwelling units</a>. Whether for an in-law suite, rental income, or a home office, we handle design, permitting, and construction from start to finish.</p>
+          </div>
+        </div>
+        <div class="clarke-hm-prop-card">
+          <div class="clarke-hm-prop-num">03</div>
+          <div>
+            <h3>Outdoor Living and Deck Construction</h3>
+            <p>Properties with acreage deserve outdoor spaces that take advantage of the setting. Our <a href="https://clarkebuildingcompany.com/deck-construction/" style="color: var(--color-primary); font-weight: 500;">deck construction</a> uses materials selected for durability in the New England climate, built to complement the scale of your home and property.</p>
+          </div>
+        </div>
+        <div class="clarke-hm-prop-card">
+          <div class="clarke-hm-prop-num">04</div>
+          <div>
+            <h3>New Construction on Hamilton Lots</h3>
+            <p><a href="https://clarkebuildingcompany.com/new-construction/" style="color: var(--color-primary); font-weight: 500;">New construction</a> in Hamilton means working with larger sites, setback requirements, and the rural character that defines this town. We manage every phase from site planning through final walkthrough.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== FEATURE: KITCHEN RENOVATIONS ======== -->
+  <section class="clarke-hm-feature clarke-hm-feature-bg-white">
+    <div class="clarke-hm-container">
+      <div class="clarke-hm-feature-grid">
+        <div class="clarke-hm-feature-text">
+<h2>Kitchen Renovations for Hamilton Homes</h2>
+          <p>The kitchen is where most renovation projects begin. In Hamilton, that often means working with older layouts, updating cabinetry and countertops, and opening up floor plans while respecting the home's original character.</p>
+          <p>Clarke Building Company handles <a href="https://clarkebuildingcompany.com/kitchen-remodeling/" style="color: var(--color-primary); font-weight: 500;">full kitchen remodels</a> from planning through completion. We walk you through every option, from materials and finishes to how each decision affects cost and timeline, so there are no surprises along the way.</p>
+          <a href="https://clarkebuildingcompany.com/kitchen-remodeling/" class="clarke-hm-btn-primary-light">View Kitchen Remodeling
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="clarke-hm-feature-img-col">
+          <div class="clarke-hm-feature-img-wrap">
+            <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-15-scaled.webp" alt="" width="800" height="600" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== FEATURE: HOME RENOVATIONS (Dark, Image Left) ======== -->
+  <section class="clarke-hm-feature clarke-hm-feature-bg-dark">
+    <div class="clarke-hm-container">
+      <div class="clarke-hm-feature-grid clarke-hm-feature-reverse">
+        <div class="clarke-hm-feature-text">
+<h2>Whole-Home Renovations in Hamilton</h2>
+          <p>Hamilton homes range from early Colonial farmhouses to mid-century builds to newer construction. Whatever you are working with, <a href="https://clarkebuildingcompany.com/renovations/" style="color: var(--color-accent);">our renovation services</a> are designed to improve how your home functions while maintaining the qualities that make it yours.</p>
+          <p>We handle everything from structural updates and layout changes to finish carpentry and final details. Every project gets the same level of planning and communication, whether it is a single room or a full home renovation.</p>
+          <a href="https://clarkebuildingcompany.com/contact/" class="clarke-hm-btn-primary">Discuss Your Renovation
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="clarke-hm-feature-img-col">
+          <div class="clarke-hm-feature-img-wrap">
+            <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/16-Greens-Point-2.webp" alt="" width="800" height="600" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== SERVICES LIST ======== -->
+  <section class="clarke-hm-services">
+    <div class="clarke-hm-container">
+      <div class="clarke-hm-services-header">
+<h2>Residential Contracting Services in Hamilton, MA</h2>
+        <p>Full-service home remodeling and construction for Hamilton homeowners. Every project is managed directly by the team that builds it.</p>
+      </div>
+
+      <div class="clarke-hm-services-list">
+        <a href="https://clarkebuildingcompany.com/kitchen-remodeling/" class="clarke-hm-service-row">
+          <div class="clarke-hm-service-row-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+          </div>
+          <div class="clarke-hm-service-row-content">
+            <h3>Kitchen Remodeling</h3>
+            <p>Complete kitchen renovations from layout planning through final installation.</p>
+          </div>
+          <svg class="clarke-hm-service-row-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/renovations/" class="clarke-hm-service-row">
+          <div class="clarke-hm-service-row-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="clarke-hm-service-row-content">
+            <h3>Home Renovations</h3>
+            <p>Room-level and whole-home renovations that improve function and livability.</p>
+          </div>
+          <svg class="clarke-hm-service-row-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/additions/" class="clarke-hm-service-row">
+          <div class="clarke-hm-service-row-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+          <div class="clarke-hm-service-row-content">
+            <h3>Home Additions</h3>
+            <p>Add the space your family needs with additions designed to match your property.</p>
+          </div>
+          <svg class="clarke-hm-service-row-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/adu/" class="clarke-hm-service-row">
+          <div class="clarke-hm-service-row-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><rect x="9" y="14" width="6" height="8"/></svg>
+          </div>
+          <div class="clarke-hm-service-row-content">
+            <h3>ADU Construction</h3>
+            <p>Accessory dwelling units for in-law suites, rental income, or flexible living.</p>
+          </div>
+          <svg class="clarke-hm-service-row-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/deck-construction/" class="clarke-hm-service-row">
+          <div class="clarke-hm-service-row-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="18" x2="22" y2="18"/><line x1="2" y1="14" x2="22" y2="14"/><line x1="4" y1="14" x2="4" y2="22"/><line x1="12" y1="14" x2="12" y2="22"/><line x1="20" y1="14" x2="20" y2="22"/><path d="M2 10l10-8 10 8"/></svg>
+          </div>
+          <div class="clarke-hm-service-row-content">
+            <h3>Deck Construction</h3>
+            <p>Custom decks built with climate-appropriate materials for the North Shore.</p>
+          </div>
+          <svg class="clarke-hm-service-row-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <a href="https://clarkebuildingcompany.com/new-construction/" class="clarke-hm-service-row">
+          <div class="clarke-hm-service-row-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/><line x1="6" y1="6" x2="6" y2="2"/><line x1="18" y1="6" x2="18" y2="2"/></svg>
+          </div>
+          <div class="clarke-hm-service-row-content">
+            <h3>New Construction</h3>
+            <p>Ground-up residential builds with owner-level oversight at every phase.</p>
+          </div>
+          <svg class="clarke-hm-service-row-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="clarke-hm-services-cta">
+        <p>Not sure where to start? We will walk you through your options.</p>
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-hm-btn-primary-light">Schedule a Free Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== OUR APPROACH ======== -->
+  <section class="clarke-hm-approach">
+    <div class="clarke-hm-container">
+      <div class="clarke-hm-approach-header">
+<h2>What to Expect When You Work With Clarke</h2>
+        <p>Every project follows the same straightforward process, so you always know where things stand and what comes next.</p>
+      </div>
+
+      <div class="clarke-hm-steps">
+        <div class="clarke-hm-step">
+          <div class="clarke-hm-step-num">1</div>
+          <div class="clarke-hm-step-content">
+            <h3>Initial Conversation</h3>
+            <p>We start with a phone call or site visit to understand your goals, your home, and what you are working with. No pressure, no sales pitch.</p>
+          </div>
+        </div>
+        <div class="clarke-hm-step">
+          <div class="clarke-hm-step-num">2</div>
+          <div class="clarke-hm-step-content">
+            <h3>Options and Pricing</h3>
+            <p>We walk you through every option and how each decision affects cost and timeline. You see the full picture before any work begins.</p>
+          </div>
+        </div>
+        <div class="clarke-hm-step">
+          <div class="clarke-hm-step-num">3</div>
+          <div class="clarke-hm-step-content">
+            <h3>Permitting and Planning</h3>
+            <p>We handle the full permitting process with the Town of Hamilton Building Department and coordinate any required inspections along the way.</p>
+          </div>
+        </div>
+        <div class="clarke-hm-step">
+          <div class="clarke-hm-step-num">4</div>
+          <div class="clarke-hm-step-content">
+            <h3>Construction and Communication</h3>
+            <p>Your project is managed by the same team from start to finish. You get regular updates, honest timelines, and direct access to the people doing the work.</p>
+          </div>
+        </div>
+        <div class="clarke-hm-step">
+          <div class="clarke-hm-step-num">5</div>
+          <div class="clarke-hm-step-content">
+            <h3>Final Walkthrough</h3>
+            <p>We walk through the completed project together, address any details, and make sure everything meets your expectations before we consider the job done.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== FEATURE: THIRD IMAGE ======== -->
+  <section class="clarke-hm-feature clarke-hm-feature-bg-white" style="padding-top: 0;">
+    <div class="clarke-hm-container">
+      <div class="clarke-hm-feature-grid clarke-hm-feature-reverse">
+        <div class="clarke-hm-feature-text">
+<h2>Based in West Newbury, Minutes From Hamilton</h2>
+          <p>Clarke Building Company is based at 51 Pleasant St. in West Newbury, just a short drive from Hamilton. We are familiar with local building codes, permitting requirements, and the types of homes found throughout the area.</p>
+          <p>When you work with us, you are working with a neighbor who understands the North Shore. We show up on time, communicate clearly, and treat your home the way we would treat our own.</p>
+          <a href="https://clarkebuildingcompany.com/contact/" class="clarke-hm-btn-primary-light">Get in Touch
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="clarke-hm-feature-img-col">
+          <div class="clarke-hm-feature-img-wrap">
+            <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-windows-starfish-ocean-view.webp" alt="" width="800" height="600" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== SIBLING LOCATIONS ======== -->
+  <section class="clarke-hm-locations">
+    <div class="clarke-hm-container">
+      <h2>Also Serving These North Shore Communities</h2>
+      <p class="clarke-hm-locations-lead">Clarke Building Company proudly serves homeowners throughout Essex County and the North Shore of Massachusetts.</p>
+      <div class="clarke-hm-locations-grid">
+        <a href="https://clarkebuildingcompany.com/west-newbury-ma/" class="clarke-hm-location-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          West Newbury, MA
+        </a>
+        <a href="https://clarkebuildingcompany.com/newburyport-ma/" class="clarke-hm-location-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Newburyport, MA
+        </a>
+        <a href="https://clarkebuildingcompany.com/ipswich-ma/" class="clarke-hm-location-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ipswich, MA
+        </a>
+        <a href="https://clarkebuildingcompany.com/amesbury-ma/" class="clarke-hm-location-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Amesbury, MA
+        </a>
+        <a href="https://clarkebuildingcompany.com/topsfield-ma/" class="clarke-hm-location-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Topsfield, MA
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== MAP ======== -->
+  <section class="clarke-hm-map">
+    <div class="clarke-hm-container">
+      <h2>Serving the Hamilton, MA Area</h2>
+      <p class="clarke-hm-map-lead">Based in West Newbury, just minutes from Hamilton and the surrounding North Shore communities.</p>
+      <div class="clarke-hm-map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93940.08912365284!2d-70.94277320079163!3d42.6268494251255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e33d31e9dcbd6d%3A0x557c0b5213b91c1b!2sHamilton%2C%20MA!5e0!3m2!1sen!2sus!4v1773531926716!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== CTA BAND ======== -->
+  <section class="clarke-hm-cta-band">
+    <div class="clarke-hm-container clarke-hm-cta-band-inner">
+      <h2>Ready to Start Your Hamilton Home Project?</h2>
+      <p>From kitchen remodels in Colonial farmhouses to new construction on larger lots, Clarke Building Company has the experience and craftsmanship to bring your project to life. Let's talk about what you have in mind.</p>
+      <div class="clarke-hm-cta-band-btns">
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-hm-btn-cta-white">Request a Free Estimate
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+19782575331" class="clarke-hm-btn-cta-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (978) 257-5331
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
