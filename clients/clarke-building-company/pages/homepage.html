@@ -824,6 +824,27 @@
 }
 
 
+/* Service area pills */
+.clarke-home-area-list {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  list-style: none; margin: 28px auto; max-width: 760px;
+}
+.clarke-home-area-list li {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: 100px; padding: 10px 20px; font-size: 14px; font-weight: 500;
+  color: var(--color-text-heading);
+}
+.clarke-home-area-list li a {
+  color: var(--color-primary); font-weight: 600;
+  transition: color 0.2s ease; text-decoration: none;
+}
+.clarke-home-area-list li a:hover { color: var(--color-primary-hover); }
+.clarke-home-area-list li:has(a) { border-color: rgba(139,39,39,0.2); }
+.clarke-home-area-list li:has(a):hover {
+  border-color: var(--color-primary); background: rgba(139,39,39,0.03);
+}
+
+
 /* ========================================
    SECTION: FAQ
    ======================================== */
@@ -1163,6 +1184,14 @@
       </div>
 
     </div>
+
+    <div style="text-align: center; margin-top: 40px; position: relative; z-index: 1;">
+      <a href="https://clarkebuildingcompany.com/why-clarke/" class="clarke-home-text-link" style="color: var(--color-accent);">
+        Learn More About Why Homeowners Choose Clarke
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -1197,37 +1226,37 @@
 
     <div class="clarke-home-projects-grid">
 
-      <div class="clarke-home-project-card">
+      <a href="https://clarkebuildingcompany.com/projects/" class="clarke-home-project-card">
         <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-island-ocean-view-windows.webp" alt="" width="400" height="260" loading="lazy">
         <div class="clarke-home-project-card-overlay">
           <h3>Kitchen Renovation</h3>
           <span>North Shore, MA</span>
         </div>
-      </div>
+      </a>
 
-      <div class="clarke-home-project-card">
+      <a href="https://clarkebuildingcompany.com/projects/" class="clarke-home-project-card">
         <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/charcoal-kitchen-wide-view-dining-area.webp" alt="" width="400" height="260" loading="lazy">
         <div class="clarke-home-project-card-overlay">
           <h3>Kitchen Remodel</h3>
           <span>North Shore, MA</span>
         </div>
-      </div>
+      </a>
 
-      <div class="clarke-home-project-card">
+      <a href="https://clarkebuildingcompany.com/projects/" class="clarke-home-project-card">
         <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/family-room-built-in-entertainment-center.webp" alt="" width="400" height="260" loading="lazy">
         <div class="clarke-home-project-card-overlay">
           <h3>Living Space Renovation</h3>
           <span>North Shore, MA</span>
         </div>
-      </div>
+      </a>
 
-      <div class="clarke-home-project-card">
+      <a href="https://clarkebuildingcompany.com/projects/" class="clarke-home-project-card">
         <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/gray-shingled-house-rear-deck-low-angle.webp" alt="" width="400" height="260" loading="lazy">
         <div class="clarke-home-project-card-overlay">
           <h3>Exterior &amp; Deck Build</h3>
           <span>North Shore, MA</span>
         </div>
-      </div>
+      </a>
 
     </div>
 
@@ -1275,7 +1304,26 @@
   <div class="clarke-home-container">
     <div class="clarke-home-area-inner">
       <h2 class="clarke-home-h2">Serving the North Shore and Beyond</h2>
-      <p>Clarke Building Company is based in West Newbury, Massachusetts and serves homeowners across the North Shore, including Newburyport, Amesbury, Haverhill, Georgetown, Groveland, Merrimac, Salisbury, Ipswich, Hamilton, Topsfield, and surrounding communities in Essex County. Whether it's a kitchen remodel in Newburyport or an ADU in Amesbury, Clarke Building Company brings the same hands-on approach to every project across the region.</p>
+      <p>Clarke Building Company is based in West Newbury, Massachusetts and serves homeowners across the North Shore and Southern New Hampshire. Whether it's a kitchen remodel in Newburyport or an ADU in Amesbury, Clarke Building Company brings the same hands-on approach to every project across the region.</p>
+    </div>
+
+    <ul class="clarke-home-area-list">
+      <li><a href="https://clarkebuildingcompany.com/west-newbury-ma/">West Newbury</a></li>
+      <li><a href="https://clarkebuildingcompany.com/newburyport-ma/">Newburyport</a></li>
+      <li><a href="https://clarkebuildingcompany.com/ipswich-ma/">Ipswich</a></li>
+      <li><a href="https://clarkebuildingcompany.com/hamilton-ma/">Hamilton</a></li>
+      <li><a href="https://clarkebuildingcompany.com/topsfield-ma/">Topsfield</a></li>
+      <li><a href="https://clarkebuildingcompany.com/amesbury-ma/">Amesbury</a></li>
+      <li>Haverhill</li>
+      <li>Georgetown</li>
+      <li>Groveland</li>
+      <li>Merrimac</li>
+      <li>Salisbury</li>
+      <li>Rowley</li>
+    </ul>
+
+    <div class="clarke-home-area-inner">
+      <p>Not sure if we serve your area? <a href="https://clarkebuildingcompany.com/contact/" style="color: var(--color-primary); font-weight: 500;">Contact us</a> - we'll let you know right away.</p>
     </div>
   </div>
 </section>
@@ -1296,7 +1344,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="clarke-home-faq-a">
-          <p>Clarke Building Company is based in West Newbury, Massachusetts and serves homeowners across the North Shore, including Newburyport, Amesbury, Haverhill, Georgetown, Groveland, Merrimac, Salisbury, and surrounding communities in Essex County.</p>
+          <p>Clarke Building Company is based in <a href="https://clarkebuildingcompany.com/west-newbury-ma/" style="color: var(--color-primary); font-weight: 500;">West Newbury</a>, Massachusetts and serves homeowners across the North Shore, including <a href="https://clarkebuildingcompany.com/newburyport-ma/" style="color: var(--color-primary); font-weight: 500;">Newburyport</a>, <a href="https://clarkebuildingcompany.com/amesbury-ma/" style="color: var(--color-primary); font-weight: 500;">Amesbury</a>, <a href="https://clarkebuildingcompany.com/ipswich-ma/" style="color: var(--color-primary); font-weight: 500;">Ipswich</a>, <a href="https://clarkebuildingcompany.com/hamilton-ma/" style="color: var(--color-primary); font-weight: 500;">Hamilton</a>, <a href="https://clarkebuildingcompany.com/topsfield-ma/" style="color: var(--color-primary); font-weight: 500;">Topsfield</a>, Haverhill, Georgetown, Groveland, Merrimac, Salisbury, and surrounding communities in Essex County.</p>
         </div>
       </div>
 
@@ -1316,7 +1364,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="clarke-home-faq-a">
-          <p>Clarke Building Company handles kitchen remodeling, home renovations, house additions, ADU construction, new home builds, and deck construction across the North Shore of Massachusetts.</p>
+          <p>Clarke Building Company handles <a href="https://clarkebuildingcompany.com/kitchen-remodeling/" style="color: var(--color-primary); font-weight: 500;">kitchen remodeling</a>, <a href="https://clarkebuildingcompany.com/renovations/" style="color: var(--color-primary); font-weight: 500;">home renovations</a>, <a href="https://clarkebuildingcompany.com/additions/" style="color: var(--color-primary); font-weight: 500;">house additions</a>, <a href="https://clarkebuildingcompany.com/adu/" style="color: var(--color-primary); font-weight: 500;">ADU construction</a>, <a href="https://clarkebuildingcompany.com/new-construction/" style="color: var(--color-primary); font-weight: 500;">new home builds</a>, and <a href="https://clarkebuildingcompany.com/deck-construction/" style="color: var(--color-primary); font-weight: 500;">deck construction</a> across the North Shore of Massachusetts.</p>
         </div>
       </div>
 
