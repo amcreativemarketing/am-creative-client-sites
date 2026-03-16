@@ -2,17 +2,16 @@
      Page: /faq/
      Design: Craftsman Editorial (A+C Hybrid)
      Built: March 2026 by AM Creative
-     
+
      INTERNAL LINKS:
      Domain: https://clarkebuildingcompany.com
-     Links: /contact/, /services/, /kitchen-remodeling/, /renovations/, /additions/,
-            /adu/, /new-construction/, /deck-construction/, /west-newbury-ma/,
-            /newburyport-ma/, /projects/, /about/, /why-clarke/
-     
+     Links: /contact/, /kitchen-remodeling/, /renovations/, /adu/, /additions/,
+            /new-construction/, /deck-construction/, /services/, /about/, /why-clarke/,
+            /projects/
+
      SEO NOTE: No meta tags, schema, or alt text optimization in this file.
-     OTTO handles all SEO markup post-deployment (including FAQPage schema).
+     OTTO handles all SEO markup post-deployment.
      All img alt="" left empty per OTTO workflow.
-     No blog links on this page.
 -->
 
 <style>
@@ -56,34 +55,30 @@
 }
 @media (min-width: 768px) { .clarke-faq-container { padding: 0 32px; } }
 
-@keyframes clarkeFaqFadeUp {
+@keyframes clarkeFadeUp {
   from { opacity: 0; transform: translateY(28px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.clarke-faq-fade { animation: clarkeFaqFadeUp 0.8s ease forwards; }
+.clarke-faq-fade { animation: clarkeFadeUp 0.8s ease forwards; }
 .clarke-faq-fade-d1 { animation-delay: 0.1s; opacity: 0; }
 .clarke-faq-fade-d2 { animation-delay: 0.25s; opacity: 0; }
 .clarke-faq-fade-d3 { animation-delay: 0.4s; opacity: 0; }
 .clarke-faq-fade-d4 { animation-delay: 0.55s; opacity: 0; }
 
 
-/* ======== HERO (two-column, matches other Clarke pages) ======== */
+/* ======== HERO ======== */
 .clarke-faq-hero {
   background: var(--color-secondary);
-  position: relative;
-  overflow: hidden;
-  padding: 60px 0 48px;
+  position: relative; overflow: hidden; padding: 60px 0 48px;
 }
 @media (min-width: 768px) { .clarke-faq-hero { padding: 80px 0 64px; } }
 .clarke-faq-hero::after {
-  content: '';
-  position: absolute; inset: 0;
+  content: ''; position: absolute; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
   pointer-events: none; z-index: 0;
 }
 .clarke-faq-hero::before {
-  content: '';
-  position: absolute; inset: 0;
+  content: ''; position: absolute; inset: 0;
   background:
     radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
     repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
@@ -100,48 +95,54 @@
     gap: 56px; align-items: center;
   }
 }
-
-.clarke-faq-hero-badge {
+.clarke-faq-badge {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
   text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
   background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
   color: var(--color-accent); margin-bottom: 20px; width: fit-content;
 }
-.clarke-faq-hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
-.clarke-faq-h1 {
+.clarke-faq-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.clarke-faq-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 32px;
   line-height: 1.12; color: var(--color-text-inverse);
   margin-bottom: 16px; letter-spacing: -0.01em;
 }
-@media (min-width: 768px) { .clarke-faq-h1 { font-size: clamp(36px, 4.5vw, 50px); } }
+@media (min-width: 768px) { .clarke-faq-h2 { font-size: clamp(36px, 4.5vw, 50px); } }
 .clarke-faq-hero-sub {
   font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
-  margin-bottom: 28px; max-width: 560px;
+  margin-bottom: 28px; max-width: 580px;
 }
 .clarke-faq-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
 
-/* Hero image with brass offset frame */
+/* Hero image */
 .clarke-faq-hero-img-wrap {
   position: relative; padding: 16px;
 }
 .clarke-faq-hero-img-wrap::before {
-  content: '';
-  position: absolute; top: 0; right: 0;
+  content: ''; position: absolute; top: 0; right: 0;
   width: calc(100% - 16px); height: calc(100% - 16px);
   border: 1.5px solid rgba(201,169,110,0.3);
   border-radius: var(--radius-lg); z-index: 0;
 }
 .clarke-faq-hero-img {
   position: relative; z-index: 1;
-  border-radius: var(--radius-lg);
-  width: 100%; height: auto; object-fit: cover;
+  border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover;
 }
-
-/* Hero button overrides */
-.clarke-faq-hero .clarke-faq-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
-.clarke-faq-hero .clarke-faq-btn-primary:hover { background: var(--color-accent); color: var(--color-secondary) !important; box-shadow: 0 6px 24px rgba(201,169,110,0.4); }
-.clarke-faq-hero .clarke-faq-btn-primary:visited { color: #fff !important; }
+.clarke-faq-hero-stat {
+  position: absolute; bottom: 0; left: 0;
+  background: var(--color-primary); color: #fff;
+  padding: 14px 18px; border-radius: var(--radius-lg);
+  box-shadow: 0 8px 28px rgba(139,39,39,0.35);
+  z-index: 2; text-align: center;
+}
+.clarke-faq-hero-stat-num {
+  font-family: var(--font-heading); font-size: 24px; line-height: 1; display: block;
+}
+.clarke-faq-hero-stat-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; opacity: 0.85; display: block; margin-top: 4px;
+}
 
 
 /* ======== TRUST BAR ======== */
@@ -162,109 +163,97 @@
 }
 
 
-/* ======== UNIFIED FAQ BODY ======== */
-.clarke-faq-body {
-  background: var(--color-bg-primary); padding: 56px 0 0;
-  position: relative;
+/* ======== SHARED SECTION STYLES ======== */
+.clarke-faq-section-light { background: var(--color-bg-primary); padding: 56px 0; }
+.clarke-faq-section-white { background: var(--color-bg-white); padding: 56px 0; }
+@media (min-width: 768px) {
+  .clarke-faq-section-light, .clarke-faq-section-white { padding: 80px 0; }
 }
-@media (min-width: 768px) { .clarke-faq-body { padding: 72px 0 0; } }
-
-.clarke-faq-intro-text { max-width: 780px; font-size: 17px; line-height: 1.8; margin-bottom: 48px; }
-.clarke-faq-intro-text p { margin-bottom: 20px; }
-.clarke-faq-intro-text p:last-child { margin-bottom: 0; }
-.clarke-faq-intro-text a {
-  color: var(--color-primary) !important; font-weight: 500;
+.clarke-faq-section-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-heading); margin-bottom: 40px;
+  text-align: center;
+}
+@media (min-width: 768px) { .clarke-faq-section-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-faq-body { font-size: 16px; line-height: 1.8; max-width: 880px; margin: 0 auto; }
+.clarke-faq-body p { margin-bottom: 18px; }
+.clarke-faq-body p:last-child { margin-bottom: 0; }
+.clarke-faq-body a {
+  color: var(--color-primary); font-weight: 500;
   border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
-  text-decoration: none !important;
 }
-.clarke-faq-intro-text a:visited { color: var(--color-primary) !important; }
-.clarke-faq-intro-text a:hover { border-color: var(--color-primary); color: var(--color-primary-hover) !important; }
+.clarke-faq-body a:hover { border-color: var(--color-primary); }
+.clarke-faq-body strong { color: var(--color-text-heading); }
 
-/* FAQ container card */
-.clarke-faq-card {
+
+/* ======== FAQ CATEGORIES & ITEMS ======== */
+.clarke-faq-category {
+  margin-bottom: 56px;
+}
+@media (min-width: 768px) { .clarke-faq-category { margin-bottom: 72px; } }
+.clarke-faq-category-title {
+  font-family: var(--font-heading); font-weight: 400; font-size: 22px;
+  line-height: 1.2; color: var(--color-text-heading); margin-bottom: 28px;
+  padding-bottom: 16px; border-bottom: 2px solid var(--color-accent);
+}
+@media (min-width: 768px) { .clarke-faq-category-title { font-size: 26px; } }
+
+.clarke-faq-items-list {
+  list-style: none;
   background: var(--color-bg-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  max-width: 880px;
-  padding: 0 28px;
-  margin-bottom: 56px;
+  overflow: hidden;
 }
-@media (min-width: 768px) { .clarke-faq-card { padding: 0 40px; margin-bottom: 72px; } }
 
-/* Category dividers */
-.clarke-faq-category {
-  padding: 32px 0 0;
-}
-.clarke-faq-category:first-child { padding-top: 8px; }
-.clarke-faq-category-header {
-  display: flex; align-items: center; gap: 14px;
-  padding: 20px 0 4px; margin-bottom: 0;
-}
-.clarke-faq-category-line {
-  flex: 1; height: 1px;
-  background: linear-gradient(90deg, var(--color-accent), rgba(201,169,110,0.1));
-}
-.clarke-faq-category-label {
-  font-family: var(--font-heading); font-weight: 400; font-size: 22px;
-  line-height: 1.3; color: var(--color-text-heading); white-space: nowrap;
-}
-@media (min-width: 768px) { .clarke-faq-category-label { font-size: 24px; } }
-
-
-/* ======== ACCORDION ======== */
 .clarke-faq-item {
   border-bottom: 1px solid var(--color-border);
 }
 .clarke-faq-item:last-child { border-bottom: none; }
+.clarke-faq-item.open .clarke-faq-question::after { transform: rotate(180deg); }
+
 .clarke-faq-question {
-  width: 100%; background: none; border: none; cursor: pointer;
-  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
-  padding: 20px 16px; margin: 0 -16px; text-align: left;
-  font-family: var(--font-body); font-weight: 600; font-size: 16px;
-  line-height: 1.45; color: var(--color-text-heading) !important;
-  border-radius: var(--radius-md);
-  transition: background 0.25s ease;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;
+  width: 100%; padding: 24px 28px; background: none; border: none;
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-text-heading); cursor: pointer;
+  line-height: 1.4; text-align: left; transition: background-color 0.2s ease;
 }
-@media (min-width: 768px) { .clarke-faq-question { font-size: 17px; padding: 20px 20px; margin: 0 -20px; } }
-.clarke-faq-question:hover { background: rgba(229,224,218,0.45); color: var(--color-text-heading) !important; }
-.clarke-faq-question:focus, .clarke-faq-question:active { color: var(--color-text-heading) !important; outline: none; }
-.clarke-faq-question svg {
-  width: 20px; height: 20px; min-width: 20px; margin-top: 2px;
-  color: var(--color-accent) !important; transition: transform 0.3s ease, translate 0.25s ease;
+@media (min-width: 768px) { .clarke-faq-question { padding: 28px 32px; } }
+.clarke-faq-question:hover { background: rgba(139,39,39,0.03); }
+.clarke-faq-question::after {
+  content: '▼'; font-size: 14px; color: var(--color-primary);
+  flex-shrink: 0; margin-top: 4px; transition: transform 0.3s ease;
 }
-.clarke-faq-question:hover svg { translate: 0 -1px; color: var(--color-accent) !important; }
-.clarke-faq-item.active .clarke-faq-question svg { transform: rotate(45deg); }
+
 .clarke-faq-answer {
-  max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease;
-  padding: 0 0 0 0;
+  max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+  padding: 0 28px; font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
 }
-.clarke-faq-item.active .clarke-faq-answer {
-  max-height: 800px; padding: 0 0 22px 0;
+@media (min-width: 768px) { .clarke-faq-answer { padding: 0 32px; } }
+.clarke-faq-item.open .clarke-faq-answer {
+  max-height: 2000px; padding-bottom: 24px;
 }
-.clarke-faq-answer p {
-  font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
-  margin-bottom: 14px;
-}
+@media (min-width: 768px) { .clarke-faq-item.open .clarke-faq-answer { padding-bottom: 28px; } }
+
+.clarke-faq-answer p { margin-bottom: 16px; }
 .clarke-faq-answer p:last-child { margin-bottom: 0; }
+.clarke-faq-answer strong { color: var(--color-text-heading); }
 .clarke-faq-answer a {
-  color: var(--color-primary) !important; font-weight: 500;
+  color: var(--color-primary); font-weight: 500;
   border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
-  text-decoration: none !important;
 }
-.clarke-faq-answer a:visited { color: var(--color-primary) !important; }
-.clarke-faq-answer a:hover { border-color: var(--color-primary); color: var(--color-primary-hover) !important; }
+.clarke-faq-answer a:hover { border-color: var(--color-primary); }
 .clarke-faq-answer ul {
-  list-style: none; padding: 0; margin: 0 0 14px 0;
+  list-style: none; margin: 12px 0 16px; padding-left: 0;
 }
-.clarke-faq-answer ul li {
-  padding: 6px 0 6px 24px; position: relative;
-  font-size: 16px; line-height: 1.7;
+.clarke-faq-answer li {
+  padding: 8px 0 8px 24px; position: relative;
+  font-size: 15px; line-height: 1.6;
 }
-.clarke-faq-answer ul li::before {
-  content: '';
-  position: absolute; left: 0; top: 14px;
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--color-accent);
+.clarke-faq-answer li::before {
+  content: ''; position: absolute; left: 0; top: 14px;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent);
 }
 
 
@@ -273,7 +262,9 @@
   background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
 }
 @media (min-width: 768px) { .clarke-faq-cta-band { padding: 72px 0; } }
-.clarke-faq-cta-inner { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; text-align: center; }
+.clarke-faq-cta-inner {
+  position: relative; z-index: 1; max-width: 780px; margin: 0 auto; text-align: center;
+}
 .clarke-faq-cta-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
@@ -282,82 +273,124 @@
 .clarke-faq-cta-text {
   font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 28px;
 }
-.clarke-faq-cta-text a {
-  color: rgba(255,255,255,0.95) !important; font-weight: 500;
-  border-bottom: 1px solid rgba(255,255,255,0.35); transition: border-color 0.2s ease;
-  text-decoration: none !important;
+.clarke-faq-cta-buttons {
+  display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
 }
-.clarke-faq-cta-text a:visited { color: rgba(255,255,255,0.95) !important; }
-.clarke-faq-cta-text a:hover { border-color: #fff; color: #fff !important; }
-.clarke-faq-cta-buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+
+/* ======== RELATED SERVICES ======== */
+.clarke-faq-related-grid {
+  display: grid; grid-template-columns: 1fr; gap: 16px;
+  max-width: 900px; margin: 0 auto;
+}
+@media (min-width: 768px) { .clarke-faq-related-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.clarke-faq-related-card {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 28px 26px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+.clarke-faq-related-card:hover {
+  border-color: rgba(139,39,39,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.clarke-faq-related-card h3 {
+  font-family: var(--font-body); font-weight: 600; font-size: 17px;
+  color: var(--color-primary); margin-bottom: 6px; line-height: 1.3;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.clarke-faq-related-card h3 svg {
+  width: 16px; height: 16px; color: var(--color-primary); flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.clarke-faq-related-card:hover h3 svg { transform: translateX(4px); }
+.clarke-faq-related-card p {
+  font-size: 14px; line-height: 1.6; color: var(--color-text-secondary);
+}
 
 
 /* ======== BUTTONS ======== */
 .clarke-faq-btn-primary {
-  background: var(--color-primary); color: #fff !important; padding: 16px 36px;
+  background: var(--color-primary); color: #fff; padding: 16px 36px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
-  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
-.clarke-faq-btn-primary:hover { background: var(--color-primary-hover); color: #fff !important; transform: translateY(-1px); }
-.clarke-faq-btn-primary:visited { color: #fff !important; }
+.clarke-faq-btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+.clarke-faq-hero .clarke-faq-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
 
 .clarke-faq-btn-secondary {
-  background: transparent; border: 2px solid rgba(255,255,255,0.18);
-  color: rgba(255,255,255,0.75) !important; padding: 14px 32px;
+  background: transparent; border: 2px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8); padding: 14px 32px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border-radius: var(--radius-md); transition: all 0.3s ease;
-  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
 .clarke-faq-btn-secondary:hover {
-  border-color: var(--color-accent); color: var(--color-accent) !important; background: rgba(201,169,110,0.06);
+  border-color: var(--color-accent); color: var(--color-accent); background: rgba(201,169,110,0.06);
 }
-.clarke-faq-btn-secondary:visited { color: rgba(255,255,255,0.75) !important; }
 
-/* CTA band button overrides */
 .clarke-faq-cta-band .clarke-faq-btn-primary {
-  background: var(--color-bg-white); color: var(--color-primary) !important;
+  background: var(--color-bg-white); color: var(--color-primary);
 }
-.clarke-faq-cta-band .clarke-faq-btn-primary:visited { color: var(--color-primary) !important; }
 .clarke-faq-cta-band .clarke-faq-btn-primary:hover {
-  background: #fff; color: var(--color-primary) !important; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  background: #fff; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 .clarke-faq-cta-band .clarke-faq-btn-secondary {
-  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85) !important;
+  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85);
 }
-.clarke-faq-cta-band .clarke-faq-btn-secondary:visited { color: rgba(255,255,255,0.85) !important; }
 .clarke-faq-cta-band .clarke-faq-btn-secondary:hover {
-  border-color: #fff; color: #fff !important; background: rgba(255,255,255,0.08);
+  border-color: #fff; color: #fff; background: rgba(255,255,255,0.08);
+}
+
+.clarke-faq-btn-secondary-light {
+  background: transparent; border: 2px solid var(--color-primary);
+  color: var(--color-primary); padding: 14px 32px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-faq-btn-secondary-light:hover { background: var(--color-primary); color: #fff; }
+
+.clarke-faq-section-center {
+  text-align: center;
+}
+.clarke-faq-section-center-button {
+  display: inline-block;
 }
 </style>
 
 
 <div class="clarke-faq-wrap">
 
-  <!-- HERO (two-column, matches other Clarke pages) -->
+  <!-- ============================================
+       HERO
+       ============================================ -->
   <section class="clarke-faq-hero">
     <div class="clarke-faq-container">
       <div class="clarke-faq-hero-inner">
 
-        <!-- LEFT: Copy -->
         <div>
-          <div class="clarke-faq-hero-badge clarke-faq-fade clarke-faq-fade-d1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            Home Renovation FAQ &bull; Massachusetts
+          <div class="clarke-faq-badge clarke-faq-fade clarke-faq-fade-d1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            20+ Questions Answered
           </div>
-          <h1 class="clarke-faq-h1 clarke-faq-fade clarke-faq-fade-d2">Frequently Asked Questions About Home Renovation in Massachusetts</h1>
-          <p class="clarke-faq-hero-sub clarke-faq-fade clarke-faq-fade-d3">From permits and pricing to timelines and what to expect during construction, Clarke Building Company answers the questions Massachusetts homeowners ask most before starting a renovation project.</p>
+          <h2 class="clarke-faq-h2 clarke-faq-fade clarke-faq-fade-d2">Your Home Project Questions, Answered</h2>
+          <p class="clarke-faq-hero-sub clarke-faq-fade clarke-faq-fade-d3">Dave Clarke answers the most common questions about kitchen remodeling, home additions, ADUs, renovations, decks, permits, and costs in Massachusetts and Southern New Hampshire. Get honest, straightforward answers from someone who's been in the business for over 30 years.</p>
           <div class="clarke-faq-hero-ctas clarke-faq-fade clarke-faq-fade-d4">
             <a href="https://clarkebuildingcompany.com/contact/" class="clarke-faq-btn-primary">
-              Request a Consultation
+              Get a Free Consultation
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
+            <a href="https://clarkebuildingcompany.com/projects/" class="clarke-faq-btn-secondary">View Our Projects</a>
           </div>
         </div>
 
-        <!-- RIGHT: Hero Image with brass offset frame -->
         <div class="clarke-faq-hero-img-wrap clarke-faq-fade clarke-faq-fade-d3">
-          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/skytop-kitchen-countertop-closeup-flowers.webp" alt="" width="640" height="480" class="clarke-faq-hero-img" loading="eager">
+          <img src="https://lnao7zjp0y.wpdns.site/wp-content/uploads/2026/03/a-new-stick-built-home-under-construction-the-new-2026-01-09-09-26-50-utc-scaled.webp" alt="" width="640" height="480" class="clarke-faq-hero-img" loading="eager">
+          <div class="clarke-faq-hero-stat">
+            <span class="clarke-faq-hero-stat-num">30+</span>
+            <span class="clarke-faq-hero-stat-label">Years Building</span>
+          </div>
         </div>
 
       </div>
@@ -365,382 +398,508 @@
   </section>
 
 
-  <!-- TRUST BAR -->
+  <!-- ============================================
+       TRUST BAR
+       ============================================ -->
   <section class="clarke-faq-trust-bar">
     <div class="clarke-faq-container">
       <div class="clarke-faq-trust-row">
         <div class="clarke-faq-trust-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Licensed &amp; Insured
+          Licensed &amp; Insured in MA
         </div>
         <div class="clarke-faq-trust-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Owner-Operated
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Full Permit Management
         </div>
         <div class="clarke-faq-trust-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           5-Star Rated
         </div>
         <div class="clarke-faq-trust-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          15+ Years Experience
-        </div>
-        <div class="clarke-faq-trust-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          Transparent Pricing
-        </div>
-        <div class="clarke-faq-trust-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          North Shore, MA &amp; Southern NH
+          North Shore &amp; Southern NH
         </div>
       </div>
     </div>
   </section>
 
 
-  <!-- UNIFIED FAQ BODY -->
-  <section class="clarke-faq-body">
+  <!-- ============================================
+       FAQ SECTIONS
+       ============================================ -->
+  <section class="clarke-faq-section-light">
     <div class="clarke-faq-container">
 
-      <div class="clarke-faq-intro-text">
-        <p>Whether you're planning a <a href="https://clarkebuildingcompany.com/kitchen-remodeling/">kitchen remodel</a>, adding an <a href="https://clarkebuildingcompany.com/adu/">accessory dwelling unit</a>, or starting a full <a href="https://clarkebuildingcompany.com/renovations/">home renovation</a>, you probably have questions. Clarke Building Company has put together answers to the most common questions Massachusetts homeowners ask before, during, and after their projects. From permits and pricing to timelines and licensing, the answers are organized by topic below.</p>
-        <p>Can't find what you're looking for? <a href="https://clarkebuildingcompany.com/contact/">Reach out directly</a> and Dave Clarke will get back to you personally.</p>
+      <!-- ===== GENERAL / GETTING STARTED ===== -->
+      <div class="clarke-faq-category">
+        <h3 class="clarke-faq-category-title">General &amp; Getting Started</h3>
+        <ul class="clarke-faq-items-list">
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Does Clarke Building Company serve my town?
+              <span></span>
+            </button>
+            <div class="clarke-faq-answer">
+              <p>We work throughout Essex County, the North Shore, and Southern New Hampshire - West Newbury, Newburyport, Ipswich, Hamilton, Topsfield, Amesbury, Merrimac, Haverhill, Georgetown, Rowley, Groveland, and surrounding communities. Not sure if we serve your area? <a href="https://clarkebuildingcompany.com/contact/">Contact us</a> and we'll let you know right away.</p>
+            </div>
+          </li>
+
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              How do I get a quote or consultation with Dave?
+              <span></span>
+            </button>
+            <div class="clarke-faq-answer">
+              <p>Reach out through our <a href="https://clarkebuildingcompany.com/contact/">contact page</a> or call <strong>(978) 257-5331</strong>. Dave will walk your property, discuss your vision and budget, answer all your questions, and provide a detailed written estimate - at no charge. There's no pressure, no sales pitch. Just a conversation about what it takes to make your project happen right.</p>
+            </div>
+          </li>
+
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              What types of projects does Clarke Building Company handle?
+              <span></span>
+            </button>
+            <div class="clarke-faq-answer">
+              <p>We specialize in custom home construction and renovations across Massachusetts and Southern New Hampshire, including:</p>
+              <ul>
+                <li><a href="https://clarkebuildingcompany.com/kitchen-remodeling/">Kitchen remodeling</a></li>
+                <li><a href="https://clarkebuildingcompany.com/renovations/">Home renovations</a> and interior reconfiguring</li>
+                <li><a href="https://clarkebuildingcompany.com/additions/">House additions</a> - room additions, sunrooms, master suites</li>
+                <li><a href="https://clarkebuildingcompany.com/adu/">ADU construction</a> - accessory dwelling units and in-law suites</li>
+                <li><a href="https://clarkebuildingcompany.com/deck-construction/">Deck construction</a></li>
+                <li><a href="https://clarkebuildingcompany.com/new-construction/">New home construction</a> from the ground up</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Is Clarke Building Company licensed and insured?
+              <span></span>
+            </button>
+            <div class="clarke-faq-answer">
+              <p>Yes. We hold a current Massachusetts HIC (Home Improvement Contractor) license and carry comprehensive General Liability and Workers' Compensation insurance. We're happy to provide copies of our licenses and insurance certificates as part of any project discussion.</p>
+            </div>
+          </li>
+        </ul>
       </div>
 
-      <div class="clarke-faq-card">
 
-        <!-- About Clarke Building Company -->
-        <div class="clarke-faq-category">
-          <div class="clarke-faq-category-header">
-            <h2 class="clarke-faq-category-label">About Clarke Building Company</h2>
-            <div class="clarke-faq-category-line"></div>
-          </div>
-
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              What makes Clarke Building Company different from other contractors?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      <!-- ===== KITCHEN REMODELING ===== -->
+      <div class="clarke-faq-category">
+        <h3 class="clarke-faq-category-title">Kitchen Remodeling</h3>
+        <ul class="clarke-faq-items-list">
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              How much does a kitchen remodel cost in Massachusetts?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Clarke Building Company is owner-operated, which means Dave Clarke is your direct point of contact from the first phone call through the final walkthrough. There is no sales team, no project manager handoff, and no runaround. Dave personally walks every job site, puts together every estimate, and manages every project. He goes over all your options, explains how each decision affects cost and outcome, and keeps communication consistent throughout the build. That level of involvement is rare in this industry, and it shows up in the quality of the finished work.</p>
-              <p><a href="https://clarkebuildingcompany.com/about/">Learn more about Dave Clarke and the company</a>, or read about <a href="https://clarkebuildingcompany.com/why-clarke/">why homeowners choose Clarke Building</a>.</p>
+              <p>Kitchen remodel costs vary based on your scope - whether you're refreshing cabinets and counters or doing a full gut renovation with new layout, appliances, and finishes. A mid-range kitchen remodel typically runs $50,000 to $150,000+. A high-end custom kitchen can exceed $200,000. Dave will walk you through options at every price point during the consultation so you understand where your money goes.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              Is Clarke Building Company licensed and insured in Massachusetts?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              How long does a kitchen remodel take?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Yes. Clarke Building Company holds a Massachusetts Home Improvement Contractor (HIC) license and carries both General Liability insurance and Workers' Compensation coverage. This matters because if a contractor working on your home is not properly licensed and insured, you could be held financially responsible for injuries or damage that occur during the project. Always verify these credentials before signing a contract with any contractor.</p>
-              <p><a href="https://clarkebuildingcompany.com/about/">Visit our About page</a> for more details on Clarke Building's credentials.</p>
+              <p>Most kitchen remodels take 6-12 weeks from demolition to final walkthrough, depending on the scope. A simple refresh might be 4-6 weeks. A full gut renovation with custom cabinetry, structural changes, or permit work can stretch to 12-16 weeks. Dave provides a detailed timeline upfront so you know exactly what to expect.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              What areas does Clarke Building Company serve?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Can you work with the kitchen we're living with during the remodel?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Clarke Building Company is based in <a href="https://clarkebuildingcompany.com/west-newbury-ma/">West Newbury, MA</a> and serves homeowners throughout the North Shore and surrounding areas. Our service area includes <a href="https://clarkebuildingcompany.com/newburyport-ma/">Newburyport</a>, Ipswich, Amesbury, Hamilton, Topsfield, Georgetown, Boxford, Rowley, Salisbury, and surrounding Massachusetts and Southern New Hampshire communities.</p>
-              <p>If you're not sure whether your town falls within our service area, <a href="https://clarkebuildingcompany.com/contact/">give us a call</a> and we'll let you know.</p>
+              <p>We understand you need to eat during a remodel. We can set up a temporary work area, protect your home from dust, and coordinate our schedule to minimize disruption. Every project is different, but we discuss phasing and living arrangements during the planning phase. Our goal is to get the work done efficiently while respecting your daily life.</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
+      </div>
+
+      <div style="margin: 56px 0; text-align: center;">
+        <a href="https://clarkebuildingcompany.com/kitchen-remodeling/" class="clarke-faq-btn-secondary-light">
+          Learn More About Kitchen Remodeling
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
 
 
-        <!-- Project Types We Handle -->
-        <div class="clarke-faq-category">
-          <div class="clarke-faq-category-header">
-            <h2 class="clarke-faq-category-label">Project Types We Handle</h2>
-            <div class="clarke-faq-category-line"></div>
-          </div>
-
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              What types of renovation projects does Clarke Building specialize in?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      <!-- ===== RENOVATIONS & ADDITIONS ===== -->
+      <div class="clarke-faq-category">
+        <h3 class="clarke-faq-category-title">Renovations &amp; Additions</h3>
+        <ul class="clarke-faq-items-list">
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              What's the difference between a renovation and an addition?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Clarke Building Company handles a range of residential construction and remodeling projects, including:</p>
-              <ul>
-                <li><a href="https://clarkebuildingcompany.com/kitchen-remodeling/">Kitchen remodeling</a>, from surface updates to full gut renovations</li>
-                <li><a href="https://clarkebuildingcompany.com/renovations/">Home renovations</a> and whole-house remodeling</li>
-                <li><a href="https://clarkebuildingcompany.com/adu/">Accessory dwelling units (ADUs)</a>, including detached, attached, and conversion projects</li>
-                <li><a href="https://clarkebuildingcompany.com/additions/">House additions</a> for more living space</li>
-                <li><a href="https://clarkebuildingcompany.com/new-construction/">New construction</a> from the ground up</li>
-                <li><a href="https://clarkebuildingcompany.com/deck-construction/">Deck construction</a> with composite and pressure-treated materials</li>
-              </ul>
-              <p><a href="https://clarkebuildingcompany.com/services/">View all services</a> to see the full scope of what Clarke Building offers.</p>
+              <p>A <strong>renovation</strong> upgrades or reconfigures your existing living space - think kitchen remodel, bathroom refresh, or reconfiguring a floor plan. An <strong>addition</strong> expands your footprint - a new room, sunroom, master suite, or bump-out. Renovations typically don't need significant structural or foundation work. <a href="https://clarkebuildingcompany.com/additions/">Additions</a> involve new construction with foundation, framing, and exterior finishing.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              Do you build accessory dwelling units (ADUs) in Massachusetts?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              How much does a home addition cost?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Yes. ADU construction is one of Clarke Building's core services. We build detached ADUs (standalone cottage-style units), attached additions with separate entrances, garage conversions, and basement conversions. Each type has different structural, plumbing, and permitting requirements, and Dave will walk you through which approach makes the most sense for your property and budget.</p>
-              <p>With Massachusetts now allowing ADUs by right statewide under the Affordable Homes Act, the permitting process is more straightforward than it used to be. <a href="https://clarkebuildingcompany.com/adu/">Learn more about our ADU construction services</a>.</p>
+              <p>Home addition costs depend on size, foundation type, finish level, and complexity. A structural bump-out might run $15,000-$40,000. A 200-square-foot room addition typically costs $30,000-$80,000. A full master suite or sunroom addition can range from $60,000 to $150,000+. Dave provides itemized estimates that break down every cost so you know exactly where your investment goes.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              Can you handle a full home addition or new construction?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Will an addition match my existing home?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Absolutely. <a href="https://clarkebuildingcompany.com/additions/">Home additions</a> and <a href="https://clarkebuildingcompany.com/new-construction/">new construction</a> are both core parts of what Clarke Building does. For additions, the scope typically involves expanding your existing home, which requires tying into the current foundation, roof, and mechanical systems. New construction starts from the ground up and follows a different sequence, from site work and foundation through framing, systems, and finish.</p>
-              <p>Both project types require permits, engineering, and careful coordination between trades. Dave manages this process directly and can work alongside your architect or handle design-build coordination depending on the project.</p>
+              <p>Matching existing architecture is fundamental to how we work. We carefully select siding, trim, windows, roofing, and interior finishes to blend with your home's character - whether it's colonial, cape, craftsman, or contemporary. The addition should feel original, not tacked on. We pull actual samples and photos during the design phase so you see exactly what the match will look like.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              Do you build decks and outdoor living spaces?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              How long does a home addition take?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Yes. Clarke Building constructs custom decks using composite and pressure-treated materials. We handle everything from layout and permitting through framing, decking installation, and railings. Decks in Massachusetts require a building permit and must meet structural, railing, and ledger board attachment codes. Dave handles the permit process and makes sure the deck is built to meet or exceed local requirements.</p>
-              <p><a href="https://clarkebuildingcompany.com/deck-construction/">Learn more about our deck construction services</a>.</p>
+              <p>Most additions take 3-6 months from permit approval to final walkthrough. Structural bump-outs might complete in 6-8 weeks. Full sunrooms, master suites, or complex additions can run 4-6 months. Timeline depends on weather, town inspection schedules, and whether you're making changes during construction. Dave provides a detailed project timeline upfront.</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
+      </div>
+
+      <div style="margin: 56px 0; text-align: center;">
+        <a href="https://clarkebuildingcompany.com/renovations/" class="clarke-faq-btn-secondary-light">
+          Explore Home Renovations
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
 
 
-        <!-- ADU Law in Massachusetts -->
-        <div class="clarke-faq-category">
-          <div class="clarke-faq-category-header">
-            <h2 class="clarke-faq-category-label">ADU Law in Massachusetts</h2>
-            <div class="clarke-faq-category-line"></div>
-          </div>
-
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              What is the Massachusetts ADU law and how does it affect homeowners?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      <!-- ===== ADUs ===== -->
+      <div class="clarke-faq-category">
+        <h3 class="clarke-faq-category-title">ADUs &amp; In-Law Suites</h3>
+        <ul class="clarke-faq-items-list">
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Can I build an ADU in Massachusetts? What's the Affordable Homes Act?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>In August 2024, Governor Healey signed the Affordable Homes Act into law. Section 8 of this legislation changed the Massachusetts Zoning Act to allow accessory dwelling units up to 900 square feet (or half the gross floor area of the primary home, whichever is smaller) to be built by right in single-family zoning districts statewide. The ADU provisions took full effect on February 2, 2025.</p>
-              <p>What "by right" means in practice: municipalities can no longer require special permits or discretionary zoning approvals to deny you from building a qualifying ADU on your property. Towns can still apply reasonable requirements like setbacks, building height limits, and site plan review, but they cannot block the construction of a first ADU that meets the size and definition requirements.</p>
-              <p>This is a significant change. Before this law, many Massachusetts towns either prohibited ADUs entirely or made them extremely difficult to get approved. If you've been thinking about adding a unit for rental income, aging parents, or an adult child, the path to getting it built is now much clearer. <a href="https://clarkebuildingcompany.com/adu/">Learn about Clarke Building's ADU construction services</a>.</p>
+              <p>Yes. Massachusetts' Affordable Homes Act (2024) allows homeowners to build accessory dwelling units (ADUs) on their property under certain conditions. Single-family homes can now add an ADU up to 900 square feet by-right - meaning no special permit or variance is required. ADUs larger than 900 square feet or in multi-unit buildings may require local approval. Local zoning still applies, and you'll need building permits. Dave stays current on all Massachusetts housing law changes and can explain your options.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              Do I need a permit to build an ADU in Massachusetts?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              How much does an ADU cost to build?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Yes, always. While the new law removes the need for special zoning permits, you still need a standard building permit for any ADU construction. The permit process ensures the unit meets Massachusetts building code, Title V septic requirements (if applicable), electrical and plumbing codes, and local dimensional requirements like setbacks and height limits.</p>
-              <p>Clarke Building handles the entire permitting process. Dave prepares the application, coordinates with your town's building department, and schedules all required inspections throughout construction. You don't have to figure out which forms to file or who to call. <a href="https://clarkebuildingcompany.com/contact/">Contact us to discuss your ADU project</a>.</p>
+              <p>ADU costs range from $150,000 for a small, efficient studio to $300,000+ for a full 900-square-foot unit with all utilities and finishes. Foundation type, utility connections, and finish level drive the cost. We provide detailed estimates that show where money goes - site prep, foundation, framing, mechanical, finishes, and connections to existing utilities.</p>
             </div>
-          </div>
-        </div>
+          </li>
 
-
-        <!-- Permits & Compliance -->
-        <div class="clarke-faq-category">
-          <div class="clarke-faq-category-header">
-            <h2 class="clarke-faq-category-label">Permits &amp; Compliance</h2>
-            <div class="clarke-faq-category-line"></div>
-          </div>
-
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              Do I need a permit for my renovation project?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Can an ADU help pay for itself with rental income?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>In most cases, yes. In Massachusetts, any project that involves structural changes, electrical work, plumbing modifications, or changes to the building envelope requires a permit. That includes kitchen remodels with new plumbing or electrical, home additions, ADUs, deck construction, and new builds. Even interior renovations that move walls or change load paths require permits.</p>
-              <p>Unpermitted work creates serious problems down the road. If you sell your home, unpermitted work can stall a closing, lower your sale price, or require costly corrections. Clarke Building pulls all necessary permits and schedules every required inspection. Homeowners should never skip this step.</p>
+              <p>Many homeowners use ADU rental income to offset mortgage, construction loan payments, or home costs. Rental rates depend on your location, size, and finish level. Dave can discuss realistic income scenarios during consultation, but we don't provide financial or investment advice. The decision to build an ADU is personal - some homeowners build them for family members, others for rental income. Both are valid.</p>
             </div>
-          </div>
+          </li>
+        </ul>
+      </div>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              Who pulls the permits, me or the contractor?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      <div style="margin: 56px 0; text-align: center;">
+        <a href="https://clarkebuildingcompany.com/adu/" class="clarke-faq-btn-secondary-light">
+          Learn About ADU Construction
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+
+      <!-- ===== DECKS ===== -->
+      <div class="clarke-faq-category">
+        <h3 class="clarke-faq-category-title">Decks &amp; Outdoor Spaces</h3>
+        <ul class="clarke-faq-items-list">
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Do I need a permit for a deck in Massachusetts?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Clarke Building handles all permit applications as the licensed contractor. In Massachusetts, the licensed contractor listed on the permit is responsible for ensuring the work meets code. You, as the homeowner, are typically listed as the property owner on the permit application. Dave prepares the paperwork, submits it to your local building department, and coordinates any plan reviews or zoning questions that come up. Once the permit is issued, Clarke manages the inspection schedule throughout the project so nothing gets missed.</p>
+              <p>Most decks in Massachusetts require a building permit, especially if they're elevated or larger than a certain size (varies by town). We always pull the required permits upfront. A deck built without permits can create problems when you sell your home, and it won't be inspected to code. We handle all permitting so you're protected.</p>
             </div>
-          </div>
-        </div>
+          </li>
 
-
-        <!-- Project Process & Timeline -->
-        <div class="clarke-faq-category">
-          <div class="clarke-faq-category-header">
-            <h2 class="clarke-faq-category-label">Project Process &amp; Timeline</h2>
-            <div class="clarke-faq-category-line"></div>
-          </div>
-
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              What does the renovation process look like from start to finish?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              What's the difference between a deck and a porch?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Every Clarke Building project follows the same basic sequence: initial consultation, where Dave walks the space and listens to what you need. Then comes scope definition and a written estimate that spells out exactly what the project includes. After you approve the plan, materials and design decisions are finalized before any work begins. Construction follows a structured sequence of demolition, rough-in trades (electrical, plumbing, HVAC), inspections, finish work, and a final walkthrough with a punch list to confirm everything meets your expectations.</p>
-              <p>Dave stays involved at every step. You won't be handed off to someone you've never met or left guessing about what's happening next. <a href="https://clarkebuildingcompany.com/contact/">Schedule a consultation</a> to get started.</p>
+              <p>A <strong>deck</strong> is an open-air outdoor platform, typically elevated, built on posts and footings. A <strong>porch</strong> can be either a covered or screened structure attached to your house, often at ground level. A <strong>sunroom</strong> or <strong>screened porch</strong> encloses the space for year-round use. <a href="https://clarkebuildingcompany.com/deck-construction/">Deck construction</a> is one of many outdoor spaces we build - each serves different purposes and comes with different code requirements.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              How long does a typical renovation take?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              How long does a deck last, and what maintenance is required?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Timelines vary based on scope, permitting, and material lead times. As a general guideline, here's what homeowners can expect:</p>
-              <ul>
-                <li><a href="https://clarkebuildingcompany.com/kitchen-remodeling/">Kitchen remodel</a>: 6 to 12 weeks</li>
-                <li><a href="https://clarkebuildingcompany.com/additions/">Home addition</a>: 3 to 6 months</li>
-                <li><a href="https://clarkebuildingcompany.com/adu/">ADU construction</a>: 4 to 8 months</li>
-                <li><a href="https://clarkebuildingcompany.com/new-construction/">New construction</a>: 8 to 14+ months</li>
-                <li><a href="https://clarkebuildingcompany.com/deck-construction/">Deck construction</a>: 2 to 6 weeks</li>
-              </ul>
-              <p>These are ranges, not guarantees. Custom material lead times, permit processing, and weather can all affect the schedule. Dave gives you a realistic timeline during the planning phase and communicates updates if anything changes.</p>
+              <p>A pressure-treated wood deck typically lasts 15-20 years with regular maintenance - annual cleaning, staining, and inspection for rot or loose fasteners. Composite decking lasts 25-30+ years with less maintenance (no staining, but occasional cleaning). We discuss material options during consultation so you understand longevity and upkeep before committing.</p>
             </div>
-          </div>
+          </li>
+        </ul>
+      </div>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              What should I expect to happen to my home during construction?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      <div style="margin: 56px 0; text-align: center;">
+        <a href="https://clarkebuildingcompany.com/deck-construction/" class="clarke-faq-btn-secondary-light">
+          View Our Deck Work
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+
+      <!-- ===== PERMITS & PROCESS ===== -->
+      <div class="clarke-faq-category">
+        <h3 class="clarke-faq-category-title">Permits &amp; Process</h3>
+        <ul class="clarke-faq-items-list">
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Do I really need a permit for my project?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Construction is disruptive, and Clarke Building is upfront about that. Depending on the scope, you should expect dust, noise, and certain areas of your home being temporarily unavailable. For kitchen remodels, that means no access to the kitchen for a period of time. For additions or ADUs, exterior work brings equipment, materials staging, and trade activity around the property.</p>
-              <p>Here's what Clarke Building does to manage it: unaffected areas are protected with plastic barriers and floor coverings. The site is cleaned daily. You'll know in advance which spaces will be impacted and for how long. Dave maintains constant communication so there are no surprises about what's happening on any given day. If you need to plan meals, set up a temporary kitchen, or arrange alternative access, those conversations happen before demo starts.</p>
+              <p>Yes, and I always pull permits. I know it adds time upfront, but it protects you and your home's value down the road. A permitted project means the work has been inspected to code, it's on record with your town, and you won't run into problems when you sell. An unpermitted renovation might hide code violations, structural issues, or unsafe electrical/plumbing work. I always do the right thing, even when it takes longer.</p>
             </div>
-          </div>
-        </div>
+          </li>
 
-
-        <!-- Getting a Quote & Costs -->
-        <div class="clarke-faq-category">
-          <div class="clarke-faq-category-header">
-            <h2 class="clarke-faq-category-label">Getting a Quote &amp; Costs</h2>
-            <div class="clarke-faq-category-line"></div>
-          </div>
-
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              How do I get a quote or estimate from Clarke Building Company?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              How long does the permit process take?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Start by reaching out through our <a href="https://clarkebuildingcompany.com/contact/">contact page</a> or by calling <a href="tel:9782575331">(978) 257-5331</a>. Dave will schedule an initial consultation, which typically involves an in-person site visit so he can see the space, understand what you're looking for, and assess existing conditions. After the walkthrough, he puts together a written proposal that includes a detailed scope of work and an estimate. You'll see exactly what the project covers and what it costs before you commit to anything.</p>
+              <p>Permit timelines vary by town. Most take 2-4 weeks for initial review, though some towns take longer depending on workload. Once a project is permitted, inspections are scheduled at key stages - foundation, framing, rough utilities, final. We coordinate with your town's building department and manage the full inspection schedule so you don't have to.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              How much does a home renovation cost in Massachusetts?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              What inspections will my project need?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Renovation costs vary significantly based on scope, materials, and the condition of the existing structure. Here are general budget ranges for common project types in our area:</p>
-              <ul>
-                <li><a href="https://clarkebuildingcompany.com/kitchen-remodeling/">Kitchen remodel</a>: $40,000 to $120,000+</li>
-                <li><a href="https://clarkebuildingcompany.com/additions/">Home addition</a>: $150,000 to $350,000+</li>
-                <li><a href="https://clarkebuildingcompany.com/adu/">ADU construction</a>: $120,000 to $300,000+</li>
-                <li><a href="https://clarkebuildingcompany.com/deck-construction/">Deck construction</a>: $15,000 to $60,000+</li>
-                <li><a href="https://clarkebuildingcompany.com/renovations/">Whole-home renovation</a>: Varies widely depending on scope</li>
-              </ul>
-              <p>These are planning ranges, not project quotes. The only way to get an accurate number for your specific project is to have Dave walk the space and put together a real estimate. <a href="https://clarkebuildingcompany.com/contact/">Request a free consultation</a> to get started.</p>
+              <p>Required inspections depend on your project scope. Most renovations and additions require foundation, framing, rough mechanical (electrical/plumbing/HVAC), and final inspections. Some towns require additional inspections for energy code compliance, accessibility, or local requirements. Dave knows each town's requirements and prepares the work so inspections pass on schedule.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              Do you offer financing for home renovation projects?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Can you work with my architect or designer if I have plans already?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Clarke Building Company does not directly provide financing, but many homeowners fund their renovation projects through home equity lines of credit (HELOCs), home equity loans, or construction loans through their bank or credit union. Some Massachusetts homeowners also take advantage of programs through MassHousing or local housing assistance programs. Dave is happy to discuss payment scheduling and how the project can be structured to align with your financing timeline. <a href="https://clarkebuildingcompany.com/contact/">Get in touch</a> to start planning.</p>
+              <p>Absolutely. If you've already worked with an architect or designer, we'll work from those plans. We can also recommend local architects or designers if you need help developing your vision. Either way, we review designs for constructability, budget, and code compliance before work starts so there are no surprises.</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
+      </div>
 
 
-        <!-- Working With a Massachusetts Contractor -->
-        <div class="clarke-faq-category">
-          <div class="clarke-faq-category-header">
-            <h2 class="clarke-faq-category-label">Working With a MA Contractor</h2>
-            <div class="clarke-faq-category-line"></div>
-          </div>
+      <!-- ===== COST & TIMELINE ===== -->
+      <div class="clarke-faq-category">
+        <h3 class="clarke-faq-category-title">Cost &amp; Timeline</h3>
+        <ul class="clarke-faq-items-list">
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              How do you price projects - is it a fixed bid, cost-plus, or time and materials?
+              <span></span>
+            </button>
+            <div class="clarke-faq-answer">
+              <p>We typically provide fixed-price bids based on detailed scope and specifications. This means you know the cost before work starts - no surprises. We're transparent about what's included in the estimate and what might change the price (site conditions, unforeseen damage, or changes you request). We discuss payment schedules tied to project milestones, not upfront lump sums.</p>
+            </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              What questions should I ask before hiring a contractor in Massachusetts?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              What is your payment schedule?
+              <span></span>
+            </button>
+            <div class="clarke-faq-answer">
+              <p>Payment is typically tied to project milestones - a percentage at start, progress payments as work advances, and a final payment at completion. We don't ask for large upfront deposits. Everything is detailed in writing in your contract so you know exactly when payments are due and what's been completed at each stage.</p>
+            </div>
+          </li>
+
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              What happens if the project costs more than the estimate?
+              <span></span>
+            </button>
+            <div class="clarke-faq-answer">
+              <p>We do thorough site inspections and write detailed estimates to avoid surprises. If we discover something during the project that changes costs - like hidden structural damage, unexpected foundation issues, or a change you request - we'll discuss it with you first. Any change to the estimate is documented in writing before work proceeds. No surprise bills.</p>
+            </div>
+          </li>
+
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Will my project stay on schedule?
+              <span></span>
+            </button>
+            <div class="clarke-faq-answer">
+              <p>We manage projects to stay on schedule. Weather, permit delays, or town inspection scheduling can affect timelines, and we'll keep you informed. We discuss realistic timelines upfront and build in contingency where needed. Your project's timeline is tied to mine - if we're late, you know, and we adjust accordingly.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- ===== CONTRACTOR SELECTION ===== -->
+      <div class="clarke-faq-category">
+        <h3 class="clarke-faq-category-title">Choosing a Contractor</h3>
+        <ul class="clarke-faq-items-list">
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              What questions should I ask before hiring a contractor?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
               <p>Before you hire any contractor in Massachusetts, ask these questions and verify the answers:</p>
               <ul>
-                <li>Do you hold a current Massachusetts HIC (Home Improvement Contractor) license? Ask for the number and verify it.</li>
+                <li>Do you hold a current Massachusetts HIC (Home Improvement Contractor) license? Ask for the number and verify it with the state.</li>
                 <li>Do you carry General Liability insurance and Workers' Compensation coverage? Ask for certificates of insurance.</li>
-                <li>Can you provide references from recent local projects?</li>
-                <li>Will you provide a written contract with a detailed scope of work?</li>
+                <li>Can you provide references from recent local projects? Call them and ask about quality, communication, and timeliness.</li>
+                <li>Will you provide a written contract with a detailed scope of work, timeline, and cost breakdown?</li>
                 <li>What is the payment schedule, and how is it tied to project milestones?</li>
                 <li>Who pulls the permits, and who manages the inspection schedule?</li>
-                <li>Do you offer a warranty on workmanship?</li>
+                <li>Do you offer a warranty on workmanship, and for how long?</li>
               </ul>
-              <p>A trustworthy contractor will answer all of these without hesitation. <a href="https://clarkebuildingcompany.com/why-clarke/">See why homeowners choose Clarke Building</a>.</p>
+              <p>A trustworthy contractor will answer all of these without hesitation. <a href="https://clarkebuildingcompany.com/why-clarke/">See why homeowners choose Clarke Building.</a></p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
               What red flags should I watch out for when hiring a contractor?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Some warning signs that a contractor may not be the right fit:</p>
+              <p>Watch out for these warning signs:</p>
               <ul>
                 <li>Requesting a large upfront cash deposit before work begins</li>
-                <li>No written contract or a contract that lacks detail on scope, timeline, and payment</li>
+                <li>No written contract, or a contract that lacks detail on scope, timeline, and payment</li>
                 <li>Cannot provide a valid HIC license number or proof of insurance</li>
                 <li>Pressure to sign immediately or claims the price is only good "today"</li>
-                <li>An estimate that comes in far below everyone else's, which usually means corners will be cut</li>
+                <li>An estimate far below everyone else's - usually means corners will be cut</li>
                 <li>Reluctance to pull permits or suggestions to skip the permit process</li>
                 <li>No references or unwillingness to share past project examples</li>
               </ul>
-              <p>Clarke Building operates the opposite way. Dave walks you through every detail, answers every question, and provides a written scope before any work starts. <a href="https://clarkebuildingcompany.com/projects/">View our project portfolio</a>.</p>
+              <p>Clarke Building operates the opposite way. Dave walks you through every detail, answers every question, and provides a written scope before any work starts. <a href="https://clarkebuildingcompany.com/projects/">View our project portfolio.</a></p>
             </div>
-          </div>
+          </li>
 
-          <div class="clarke-faq-item">
-            <button class="clarke-faq-question" aria-expanded="false">
-              Does Clarke Building Company offer a warranty on their work?
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <li class="clarke-faq-item">
+            <button class="clarke-faq-question">
+              Does Clarke Building Company offer a warranty?
+              <span></span>
             </button>
             <div class="clarke-faq-answer">
-              <p>Yes. Clarke Building stands behind its workmanship. Specific warranty terms are discussed as part of every project contract. It's worth noting that workmanship warranties and manufacturer warranties are two different things. Clarke's warranty covers the quality of the work performed by the crew. Manufacturer warranties cover the materials and products installed (cabinets, countertops, appliances, roofing materials, etc.). Dave will explain both types and what they cover for your specific project. <a href="https://clarkebuildingcompany.com/contact/">Contact us</a> with any warranty questions.</p>
+              <p>Yes. We stand behind our workmanship. Warranty terms are discussed and included in your project contract. Workmanship warranties cover the quality of work we perform. Manufacturer warranties cover materials and products we install (cabinets, countertops, appliances, roofing materials, etc.). Dave explains both types and what they cover for your specific project. <a href="https://clarkebuildingcompany.com/contact/">Contact us</a> with any warranty questions.</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
+      </div>
 
-      </div><!-- end .clarke-faq-card -->
     </div>
   </section>
 
 
-  <!-- CTA BAND -->
+  <!-- ============================================
+       CTA BAND - MID PAGE
+       ============================================ -->
   <section class="clarke-faq-cta-band">
     <div class="clarke-faq-container clarke-faq-cta-inner">
-      <h2 class="clarke-faq-cta-h2">Ready to Start Your Project?</h2>
-      <p class="clarke-faq-cta-text">Clarke Building Company makes home renovation straightforward and honest. Whether you're adding an ADU, remodeling your kitchen, or building an addition, Dave Clarke is ready to walk you through every option, every cost, and every step of the process. No pressure, no runaround, just a real conversation about your home and what it takes to get it right.</p>
+      <h2 class="clarke-faq-cta-h2">Still Have Questions?</h2>
+      <p class="clarke-faq-cta-text">Dave Clarke is ready to answer any question about your specific project. Call or reach out through our contact page for a free consultation - no obligation, no pressure, just a straightforward conversation about what your home needs and how to get it done right.</p>
       <div class="clarke-faq-cta-buttons">
         <a href="https://clarkebuildingcompany.com/contact/" class="clarke-faq-btn-primary">
           Request a Free Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:(978) 257-5331" class="clarke-faq-btn-secondary">
+          Call (978) 257-5331
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       RELATED SERVICES
+       ============================================ -->
+  <section class="clarke-faq-section-light">
+    <div class="clarke-faq-container">
+      <h2 class="clarke-faq-section-h2">Clarke Building Company Services</h2>
+
+      <div class="clarke-faq-related-grid">
+        <a href="https://clarkebuildingcompany.com/kitchen-remodeling/" class="clarke-faq-related-card">
+          <h3>Kitchen Remodeling <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Complete kitchen renovations from layout to finishes, managed start to finish.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/renovations/" class="clarke-faq-related-card">
+          <h3>Home Renovations <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Bathroom upgrades, interior reconfiguring, and targeted home improvements.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/additions/" class="clarke-faq-related-card">
+          <h3>Home Additions <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Room additions, sunrooms, master suite expansions that match your home.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/adu/" class="clarke-faq-related-card">
+          <h3>ADU Construction <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Accessory dwelling units and in-law suites under Massachusetts housing law.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/deck-construction/" class="clarke-faq-related-card">
+          <h3>Deck Construction <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Custom decks and outdoor spaces that expand your living area.</p>
+        </a>
+        <a href="https://clarkebuildingcompany.com/new-construction/" class="clarke-faq-related-card">
+          <h3>New Construction <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></h3>
+          <p>Build from the ground up - new homes designed and built by Dave Clarke.</p>
+        </a>
+      </div>
+
+      <div class="clarke-faq-section-center" style="margin-top: 40px;">
+        <a href="https://clarkebuildingcompany.com/services/" class="clarke-faq-btn-secondary-light">
+          View All Services
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FINAL CTA BAND
+       ============================================ -->
+  <section class="clarke-faq-cta-band">
+    <div class="clarke-faq-container clarke-faq-cta-inner">
+      <h2 class="clarke-faq-cta-h2">Ready to Start Your Project?</h2>
+      <p class="clarke-faq-cta-text">Clarke Building Company makes home renovation straightforward and honest. Whether you're adding an ADU, remodeling your kitchen, building an addition, or tackling a full renovation, Dave Clarke is ready to walk you through every option, every cost, and every step of the process. No pressure, no runaround, just a real conversation about your home and what it takes to get it right.</p>
+      <div class="clarke-faq-cta-buttons">
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-faq-btn-primary">
+          Get a Free Consultation
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
         <a href="https://clarkebuildingcompany.com/projects/" class="clarke-faq-btn-secondary">
@@ -761,17 +920,17 @@ document.addEventListener('DOMContentLoaded', function() {
   questions.forEach(function(btn) {
     btn.addEventListener('click', function() {
       var item = this.closest('.clarke-faq-item');
-      var isActive = item.classList.contains('active');
-      // Close all in same category
+      var isOpen = item.classList.contains('open');
+
+      // Close all items in same category
       var category = this.closest('.clarke-faq-category');
-      category.querySelectorAll('.clarke-faq-item.active').forEach(function(openItem) {
-        openItem.classList.remove('active');
-        openItem.querySelector('.clarke-faq-question').setAttribute('aria-expanded', 'false');
+      category.querySelectorAll('.clarke-faq-item.open').forEach(function(openItem) {
+        openItem.classList.remove('open');
       });
-      // Toggle clicked
-      if (!isActive) {
-        item.classList.add('active');
-        this.setAttribute('aria-expanded', 'true');
+
+      // Toggle clicked item
+      if (!isOpen) {
+        item.classList.add('open');
       }
     });
   });

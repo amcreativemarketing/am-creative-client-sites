@@ -1,0 +1,378 @@
+<!-- CLARKE BUILDING COMPANY - CONTACT PAGE
+     Page: /contact/
+     Design: Contact - Clean & Minimal
+     Built: March 2026 by AM Creative
+
+     INTERNAL LINKS:
+     Domain: https://clarkebuildingcompany.com
+     Links: /services/, /about/
+
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+     All img alt="" left empty per OTTO workflow.
+-->
+
+<style>
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+.clarke-contact-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-contact-wrap *, .clarke-contact-wrap *::before, .clarke-contact-wrap *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+.clarke-contact-wrap img { max-width: 100%; height: auto; display: block; }
+.clarke-contact-wrap a { text-decoration: none; }
+
+.clarke-contact-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+}
+@media (min-width: 768px) { .clarke-contact-container { padding: 0 32px; } }
+
+@keyframes clarkeFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-fade { animation: clarkeFadeUp 0.8s ease forwards; }
+.clarke-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+.clarke-fade-d4 { animation-delay: 0.55s; opacity: 0; }
+
+
+/* ======== HERO ======== */
+.clarke-contact-hero {
+  background: var(--color-secondary);
+  position: relative; overflow: hidden; padding: 60px 0 48px;
+}
+@media (min-width: 768px) { .clarke-contact-hero { padding: 80px 0 64px; } }
+.clarke-contact-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-contact-hero-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 28px;
+  max-width: 720px;
+}
+.clarke-contact-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent); width: fit-content;
+}
+.clarke-contact-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.clarke-contact-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 32px;
+  line-height: 1.12; color: var(--color-text-inverse);
+  margin-bottom: 12px; letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-contact-h2 { font-size: clamp(36px, 4.5vw, 48px); } }
+.clarke-contact-hero-sub {
+  font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
+  margin-bottom: 0; max-width: 580px;
+}
+
+
+/* ======== TRUST BAR ======== */
+.clarke-contact-trust-bar {
+  background: var(--color-bg-white); border-bottom: 1px solid var(--color-border); padding: 20px 0;
+}
+.clarke-contact-trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 0;
+}
+.clarke-contact-trust-item {
+  display: flex; align-items: center; gap: 8px; padding: 6px 20px;
+  font-size: 13px; font-weight: 600; color: var(--color-text-secondary); letter-spacing: 0.02em;
+}
+.clarke-contact-trust-item svg { width: 18px; height: 18px; color: var(--color-accent); flex-shrink: 0; }
+@media (min-width: 768px) {
+  .clarke-contact-trust-item { border-right: 1px solid var(--color-border); }
+  .clarke-contact-trust-item:last-child { border-right: none; }
+}
+
+
+/* ======== MAIN FORM SECTION ======== */
+.clarke-contact-form-section {
+  background: var(--color-bg-primary); padding: 56px 0;
+}
+@media (min-width: 768px) { .clarke-contact-form-section { padding: 80px 0; } }
+
+.clarke-contact-form-grid {
+  display: grid; grid-template-columns: 1fr; gap: 40px;
+}
+@media (min-width: 1024px) {
+  .clarke-contact-form-grid { grid-template-columns: 1.2fr 1fr; gap: 56px; }
+}
+
+/* Form Column */
+.clarke-contact-form-col {
+  display: flex; flex-direction: column;
+}
+
+/* Contact Info Column */
+.clarke-contact-info-col {
+  display: flex; flex-direction: column; gap: 32px;
+}
+
+.clarke-contact-info-block {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.clarke-contact-info-label {
+  font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--color-text-secondary); margin-bottom: 4px;
+}
+.clarke-contact-info-value {
+  font-size: 16px; line-height: 1.6; color: var(--color-text-primary);
+}
+.clarke-contact-info-value a {
+  color: var(--color-primary); font-weight: 500;
+  border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
+}
+.clarke-contact-info-value a:hover { border-color: var(--color-primary); }
+
+/* Map */
+.clarke-contact-map-wrap {
+  margin-top: 20px; border-radius: var(--radius-lg); overflow: hidden;
+  border: 1px solid var(--color-border); height: 280px;
+}
+.clarke-contact-map-wrap iframe {
+  width: 100%; height: 100%; border: none;
+}
+
+
+/* ======== IFRAME STYLES ======== */
+.clarke-contact-form-iframe-wrap {
+  background: var(--color-bg-white); border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border); padding: 0; overflow: hidden;
+  min-height: 800px;
+}
+.clarke-contact-form-iframe-wrap iframe {
+  display: block; width: 100%; height: 100%;
+}
+
+
+/* ======== CTA BAND ======== */
+.clarke-contact-cta-band {
+  background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .clarke-contact-cta-band { padding: 72px 0; } }
+.clarke-contact-cta-inner {
+  position: relative; z-index: 1; max-width: 780px; margin: 0 auto; text-align: center;
+}
+.clarke-contact-cta-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-contact-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-contact-cta-text {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 28px;
+}
+.clarke-contact-cta-buttons {
+  display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+}
+
+
+/* ======== BUTTONS ======== */
+.clarke-contact-btn-primary {
+  background: var(--color-primary); color: #fff; padding: 16px 36px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-contact-btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+
+.clarke-contact-cta-band .clarke-contact-btn-primary {
+  background: var(--color-bg-white); color: var(--color-primary);
+}
+.clarke-contact-cta-band .clarke-contact-btn-primary:hover {
+  background: #fff; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.clarke-contact-btn-secondary-light {
+  background: transparent; border: 2px solid var(--color-primary);
+  color: var(--color-primary); padding: 14px 32px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-contact-btn-secondary-light:hover { background: var(--color-primary); color: #fff; }
+
+.clarke-contact-cta-band .clarke-contact-btn-secondary-light {
+  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85);
+}
+.clarke-contact-cta-band .clarke-contact-btn-secondary-light:hover {
+  border-color: #fff; color: #fff; background: rgba(255,255,255,0.08);
+}
+</style>
+
+
+<div class="clarke-contact-wrap">
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="clarke-contact-hero">
+    <div class="clarke-contact-container">
+      <div class="clarke-contact-hero-inner">
+        <div class="clarke-contact-badge clarke-fade clarke-fade-d1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Get in Touch
+        </div>
+        <h2 class="clarke-contact-h2 clarke-fade clarke-fade-d2">Start a Conversation About Your Project</h2>
+        <p class="clarke-contact-hero-sub clarke-fade clarke-fade-d3">Dave Clarke personally responds to every inquiry. Fill out the form below or call anytime during business hours.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       TRUST BAR
+       ============================================ -->
+  <section class="clarke-contact-trust-bar">
+    <div class="clarke-contact-container">
+      <div class="clarke-contact-trust-row">
+        <div class="clarke-contact-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="clarke-contact-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Owner-Operated
+        </div>
+        <div class="clarke-contact-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          5-Star Rated
+        </div>
+        <div class="clarke-contact-trust-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Same-Week Responses
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FORM + INFO SECTION
+       ============================================ -->
+  <section class="clarke-contact-form-section">
+    <div class="clarke-contact-container">
+      <div class="clarke-contact-form-grid">
+
+        <!-- Left: Form -->
+        <div class="clarke-contact-form-col">
+          <div class="clarke-contact-form-iframe-wrap">
+            <iframe
+                src="https://link.amconnect.io/widget/form/8LWC3joUHTLGOiwPJR0i"
+                style="width:100%;height:100%;border:none;border-radius:4px"
+                id="inline-8LWC3joUHTLGOiwPJR0i"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="* Website  form"
+                data-height="763"
+                data-layout-iframe-id="inline-8LWC3joUHTLGOiwPJR0i"
+                data-form-id="8LWC3joUHTLGOiwPJR0i"
+                title="* Website  form"
+                >
+            </iframe>
+            <script src="https://link.amconnect.io/js/form_embed.js"></script>
+          </div>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="clarke-contact-info-col">
+
+          <!-- Phone -->
+          <div class="clarke-contact-info-block">
+            <div class="clarke-contact-info-label">Phone</div>
+            <div class="clarke-contact-info-value">
+              <a href="tel:+19782575331">(978) 257-5331</a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="clarke-contact-info-block">
+            <div class="clarke-contact-info-label">Email</div>
+            <div class="clarke-contact-info-value">
+              <a href="mailto:dave@clarkebuildingcompany.com">dave@clarkebuildingcompany.com</a>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="clarke-contact-info-block">
+            <div class="clarke-contact-info-label">Address</div>
+            <div class="clarke-contact-info-value">
+              51 Pleasant St.<br>West Newbury, MA 01985
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="clarke-contact-info-block">
+            <div class="clarke-contact-info-label">Hours</div>
+            <div class="clarke-contact-info-value">
+              Monday - Friday<br>8:00am - 5:00pm
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="clarke-contact-map-wrap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2983.9945697097936!2d-71.10395!3d42.80589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e30e8e8e8e8e8d%3A0x8e8e8e8e8e8e8e8e!2s51%20Pleasant%20St%2C%20West%20Newbury%2C%20MA%2001985!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CTA BAND
+       ============================================ -->
+  <section class="clarke-contact-cta-band">
+    <div class="clarke-contact-container clarke-contact-cta-inner">
+      <h2 class="clarke-contact-cta-h2">Ready to Get Started?</h2>
+      <p class="clarke-contact-cta-text">Whether you need a free estimate, have questions about your project, or just want to explore your options, reach out. Dave will walk you through everything, no pressure, no surprises.</p>
+      <div class="clarke-contact-cta-buttons">
+        <a href="https://clarkebuildingcompany.com/services/" class="clarke-contact-btn-primary">
+          Explore Our Services
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="https://clarkebuildingcompany.com/about/" class="clarke-contact-btn-secondary-light">Learn About Dave</a>
+      </div>
+    </div>
+  </section>
+
+</div>

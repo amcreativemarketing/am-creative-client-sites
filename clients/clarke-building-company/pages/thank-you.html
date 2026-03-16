@@ -1,0 +1,340 @@
+<!-- CLARKE BUILDING COMPANY - THANK YOU PAGE
+     Page: /thank-you/
+     Purpose: Form submission confirmation page
+     Design: Craftsman Editorial (A+C Hybrid)
+     Built: March 2026 by AM Creative
+
+     INTERNAL LINKS:
+     Domain: https://clarkebuildingcompany.com
+     Links: /, /services/, /projects/, /contact/
+
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+-->
+
+<style>
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+.clarke-thankyou-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-thankyou-wrap *, .clarke-thankyou-wrap *::before, .clarke-thankyou-wrap *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+.clarke-thankyou-wrap img { max-width: 100%; height: auto; display: block; }
+.clarke-thankyou-wrap a { text-decoration: none; }
+
+.clarke-thankyou-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+}
+@media (min-width: 768px) { .clarke-thankyou-container { padding: 0 32px; } }
+
+@keyframes clarkeFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-fade { animation: clarkeFadeUp 0.8s ease forwards; }
+.clarke-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+
+
+/* ======== HERO ======== */
+.clarke-thankyou-hero {
+  background: var(--color-secondary);
+  position: relative; overflow: hidden; padding: 80px 0 64px;
+}
+@media (min-width: 768px) { .clarke-thankyou-hero { padding: 120px 0 96px; } }
+.clarke-thankyou-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-thankyou-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.018) 100px, rgba(201,169,110,0.018) 101px);
+  pointer-events: none; z-index: 0;
+}
+.clarke-thankyou-hero-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 0; align-items: center; text-align: center;
+  max-width: 720px; margin: 0 auto;
+}
+
+.clarke-thankyou-checkmark {
+  width: 80px; height: 80px; margin-bottom: 28px;
+  background: rgba(201,169,110,0.15); border: 2px solid var(--color-accent);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+.clarke-thankyou-checkmark svg {
+  width: 48px; height: 48px; color: var(--color-accent); stroke-width: 2;
+}
+
+.clarke-thankyou-h1 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 32px;
+  line-height: 1.12; color: var(--color-text-inverse);
+  margin-bottom: 20px; letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-thankyou-h1 { font-size: clamp(36px, 4.5vw, 50px); } }
+
+.clarke-thankyou-hero-sub {
+  font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
+  margin-bottom: 32px;
+}
+
+.clarke-thankyou-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+
+/* ======== MAIN CONTENT SECTION ======== */
+.clarke-thankyou-section {
+  background: var(--color-bg-white); padding: 56px 0;
+}
+@media (min-width: 768px) { .clarke-thankyou-section { padding: 80px 0; } }
+
+.clarke-thankyou-section-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 0; align-items: center; text-align: center;
+  max-width: 640px; margin: 0 auto;
+}
+
+.clarke-thankyou-content-card {
+  background: var(--color-bg-primary); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 40px 32px; margin: 28px 0;
+}
+@media (min-width: 768px) { .clarke-thankyou-content-card { padding: 48px 42px; margin: 36px 0; } }
+
+.clarke-thankyou-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-thankyou-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+
+.clarke-thankyou-body {
+  font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
+  margin-bottom: 0;
+}
+.clarke-thankyou-body p {
+  margin-bottom: 16px;
+}
+.clarke-thankyou-body p:last-child {
+  margin-bottom: 0;
+}
+
+.clarke-thankyou-highlight {
+  color: var(--color-primary); font-weight: 600;
+}
+
+.clarke-thankyou-phone {
+  font-size: 18px; font-weight: 600; color: var(--color-primary);
+  margin-top: 20px; letter-spacing: 0.5px;
+}
+
+.clarke-thankyou-divider {
+  width: 60px; height: 2px; background: var(--color-accent);
+  margin: 28px auto;
+}
+
+
+/* ======== NEXT STEPS ======== */
+.clarke-thankyou-next-steps {
+  margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--color-border);
+}
+.clarke-thankyou-next-steps-title {
+  font-family: var(--font-body); font-weight: 600; font-size: 16px;
+  color: var(--color-text-heading); margin-bottom: 20px; text-transform: uppercase;
+  letter-spacing: 0.08em; font-size: 12px;
+}
+.clarke-thankyou-next-steps-list {
+  list-style: none; margin: 0;
+}
+.clarke-thankyou-next-steps-list li {
+  padding: 12px 0; font-size: 15px; line-height: 1.6;
+  color: var(--color-text-primary); position: relative; padding-left: 28px;
+}
+.clarke-thankyou-next-steps-list li::before {
+  content: ''; position: absolute; left: 0; top: 16px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--color-accent); opacity: 0.3;
+}
+
+
+/* ======== CTA BAND ======== */
+.clarke-thankyou-cta-band {
+  background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .clarke-thankyou-cta-band { padding: 72px 0; } }
+.clarke-thankyou-cta-inner {
+  position: relative; z-index: 1; max-width: 720px; margin: 0 auto; text-align: center;
+}
+.clarke-thankyou-cta-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-thankyou-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-thankyou-cta-text {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 28px;
+}
+.clarke-thankyou-cta-buttons {
+  display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+}
+
+
+/* ======== BUTTONS ======== */
+.clarke-thankyou-btn-primary {
+  background: var(--color-primary); color: #fff !important; padding: 16px 36px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  box-shadow: 0 4px 20px rgba(139,39,39,0.3);
+}
+.clarke-thankyou-btn-primary:hover {
+  background: var(--color-accent); color: var(--color-secondary) !important;
+  box-shadow: 0 6px 24px rgba(201,169,110,0.4); transform: translateY(-1px);
+}
+.clarke-thankyou-btn-primary:visited { color: #fff !important; }
+.clarke-thankyou-btn-primary:active { color: #fff !important; }
+
+.clarke-thankyou-cta-band .clarke-thankyou-btn-primary {
+  background: var(--color-bg-white); color: var(--color-primary) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.clarke-thankyou-cta-band .clarke-thankyou-btn-primary:visited { color: var(--color-primary) !important; }
+.clarke-thankyou-cta-band .clarke-thankyou-btn-primary:hover {
+  background: #fff; color: var(--color-primary) !important;
+  transform: translateY(-1px); box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+}
+
+.clarke-thankyou-btn-secondary {
+  background: transparent; border: 2px solid var(--color-accent);
+  color: var(--color-accent) !important; padding: 14px 32px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.clarke-thankyou-btn-secondary:hover {
+  background: var(--color-accent); color: var(--color-secondary) !important;
+}
+.clarke-thankyou-btn-secondary:visited { color: var(--color-accent) !important; }
+.clarke-thankyou-btn-secondary:visited:hover { color: var(--color-secondary) !important; }
+
+/* Link styles */
+.clarke-thankyou-body a {
+  color: var(--color-primary) !important; font-weight: 500;
+  border-bottom: 1px solid rgba(139,39,39,0.25); transition: border-color 0.2s ease;
+  text-decoration: none !important;
+}
+.clarke-thankyou-body a:visited { color: var(--color-primary) !important; }
+.clarke-thankyou-body a:hover { border-color: var(--color-primary); color: var(--color-primary-hover) !important; }
+</style>
+
+
+<div class="clarke-thankyou-wrap">
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="clarke-thankyou-hero">
+    <div class="clarke-thankyou-container">
+      <div class="clarke-thankyou-hero-inner">
+
+        <div class="clarke-thankyou-checkmark clarke-fade clarke-fade-d1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+
+        <h1 class="clarke-thankyou-h1 clarke-fade clarke-fade-d2">Thank You!</h1>
+        <p class="clarke-thankyou-hero-sub clarke-fade clarke-fade-d3">We received your message. Dave will personally review your project and follow up within one business day.</p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       MAIN CONTENT
+       ============================================ -->
+  <section class="clarke-thankyou-section">
+    <div class="clarke-thankyou-container">
+      <div class="clarke-thankyou-section-inner clarke-fade clarke-fade-d1">
+
+        <div class="clarke-thankyou-content-card">
+          <h2 class="clarke-thankyou-h2">What Happens Next</h2>
+          <div class="clarke-thankyou-body">
+            <p>Dave reviews all inquiries personally, not through a sales team. You'll hear back about your project <span class="clarke-thankyou-highlight">within one business day</span> — usually much sooner — with thoughts on scope, approach, and next steps.</p>
+          </div>
+
+          <div class="clarke-thankyou-divider"></div>
+
+          <div class="clarke-thankyou-next-steps">
+            <div class="clarke-thankyou-next-steps-title">Typical Timeline</div>
+            <ul class="clarke-thankyou-next-steps-list">
+              <li><strong>Day 1:</strong> Initial email response or phone call</li>
+              <li><strong>Day 2–3:</strong> Site visit scheduled at your convenience</li>
+              <li><strong>Within 1 week:</strong> Detailed estimate and design conversation</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 28px; padding-top: 28px; border-top: 1px solid rgba(139,39,39,0.1);">
+            <p class="clarke-thankyou-body" style="margin-bottom: 12px;">If you need immediate assistance:</p>
+            <p class="clarke-thankyou-phone">
+              <a href="tel:+19782575331" style="color: var(--color-primary); text-decoration: none; border: none;">
+                (978) 257-5331
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <p class="clarke-thankyou-body" style="margin-top: 40px; max-width: 600px;">
+          In the meantime, feel free to explore our <a href="https://clarkebuildingcompany.com/projects/">project portfolio</a> to see examples of our work, or browse our <a href="https://clarkebuildingcompany.com/services/">services</a> for more details on deck construction, renovations, and additions.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CTA BAND
+       ============================================ -->
+  <section class="clarke-thankyou-cta-band">
+    <div class="clarke-thankyou-container clarke-thankyou-cta-inner">
+      <h2 class="clarke-thankyou-cta-h2">Questions Before We Connect?</h2>
+      <p class="clarke-thankyou-cta-text">Call us anytime at (978) 257-5331, or explore our site for more information about the services we offer and how we work with homeowners on the North Shore.</p>
+      <div class="clarke-thankyou-cta-buttons">
+        <a href="https://clarkebuildingcompany.com/services/" class="clarke-thankyou-btn-primary">
+          View Our Services
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>

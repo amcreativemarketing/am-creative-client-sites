@@ -1,0 +1,653 @@
+<!-- CLARKE BUILDING COMPANY - REVIEWS PAGE
+     Page: /reviews/
+     Purpose: Client reviews and testimonials page
+     Design: Craftsman Editorial (A+C Hybrid)
+     Built: March 2026 by AM Creative
+
+     INTERNAL LINKS:
+     Domain: https://clarkebuildingcompany.com
+     Links: /, /services/, /projects/, /contact/
+
+     SEO NOTE: No meta tags, schema, or alt text optimization in this file.
+     OTTO handles all SEO markup post-deployment.
+-->
+
+<style>
+:root {
+  --color-primary: #8B2727;
+  --color-primary-hover: #722020;
+  --color-secondary: #1C2434;
+  --color-secondary-hover: #151C2B;
+  --color-accent: #C9A96E;
+  --color-accent-hover: #B8944F;
+  --color-bg-primary: #F8F6F3;
+  --color-bg-white: #FFFFFF;
+  --color-border: #E5E0DA;
+  --color-text-primary: #374151;
+  --color-text-heading: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+.clarke-reviews-wrap {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.clarke-reviews-wrap *, .clarke-reviews-wrap *::before, .clarke-reviews-wrap *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+.clarke-reviews-wrap img { max-width: 100%; height: auto; display: block; }
+.clarke-reviews-wrap a { text-decoration: none; }
+
+.clarke-reviews-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;
+}
+@media (min-width: 768px) { .clarke-reviews-container { padding: 0 32px; } }
+
+@keyframes clarkeFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarke-fade { animation: clarkeFadeUp 0.8s ease forwards; }
+.clarke-fade-d1 { animation-delay: 0.1s; opacity: 0; }
+.clarke-fade-d2 { animation-delay: 0.25s; opacity: 0; }
+.clarke-fade-d3 { animation-delay: 0.4s; opacity: 0; }
+.clarke-fade-d4 { animation-delay: 0.55s; opacity: 0; }
+
+
+/* ======== HERO ======== */
+.clarke-reviews-hero {
+  background: var(--color-secondary);
+  position: relative; overflow: hidden; padding: 60px 0 48px;
+}
+@media (min-width: 768px) { .clarke-reviews-hero { padding: 80px 0 64px; } }
+.clarke-reviews-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+.clarke-reviews-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(139,39,39,0.06) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,169,110,0.025) 100px, rgba(201,169,110,0.025) 101px),
+    repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(201,169,110,0.018) 100px, rgba(201,169,110,0.018) 101px);
+  pointer-events: none; z-index: 0;
+}
+.clarke-reviews-hero-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 0; align-items: center; text-align: center;
+}
+
+.clarke-reviews-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.22);
+  color: var(--color-accent); margin-bottom: 20px;
+}
+.clarke-reviews-hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+.clarke-reviews-h1 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 32px;
+  line-height: 1.12; color: var(--color-text-inverse);
+  margin-bottom: 16px; letter-spacing: -0.01em;
+}
+@media (min-width: 768px) { .clarke-reviews-h1 { font-size: clamp(36px, 4.5vw, 50px); } }
+
+.clarke-reviews-hero-sub {
+  font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.72);
+  margin-bottom: 0; max-width: 600px;
+}
+
+
+/* ======== STATS BAR ======== */
+.clarke-reviews-stats-bar {
+  background: var(--color-bg-white); border-bottom: 1px solid var(--color-border); padding: 28px 0;
+}
+.clarke-reviews-stats-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 28px;
+}
+.clarke-reviews-stat-item {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.clarke-reviews-stat-value {
+  font-family: var(--font-heading); font-size: 28px; font-weight: 400;
+  color: var(--color-text-heading);
+}
+.clarke-reviews-stat-label {
+  font-size: 13px; font-weight: 600; color: var(--color-text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.clarke-reviews-star {
+  display: inline-flex; align-items: center; gap: 2px;
+}
+.clarke-reviews-star svg {
+  width: 16px; height: 16px; color: var(--color-accent); fill: var(--color-accent);
+}
+
+
+/* ======== SECTION STYLES ======== */
+.clarke-reviews-section-light { background: var(--color-bg-primary); padding: 56px 0; }
+.clarke-reviews-section-white { background: var(--color-bg-white); padding: 56px 0; }
+@media (min-width: 768px) {
+  .clarke-reviews-section-light, .clarke-reviews-section-white { padding: 80px 0; }
+}
+
+.clarke-reviews-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-reviews-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+
+.clarke-reviews-sub {
+  font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
+  margin-bottom: 32px; max-width: 780px;
+}
+
+
+/* ======== FEATURED REVIEWS ======== */
+.clarke-reviews-featured-grid {
+  display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 40px;
+}
+@media (min-width: 768px) { .clarke-reviews-featured-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+@media (min-width: 960px) { .clarke-reviews-featured-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+
+.clarke-reviews-featured-card {
+  background: var(--color-bg-white); border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg); padding: 28px 24px; position: relative;
+}
+.clarke-reviews-featured-card::before {
+  content: '"'; position: absolute; top: 16px; left: 18px;
+  font-family: var(--font-heading); font-size: 48px; color: var(--color-accent);
+  opacity: 0.4; line-height: 0.8;
+}
+
+.clarke-reviews-quote {
+  font-size: 15px; line-height: 1.7; color: var(--color-text-primary);
+  margin-bottom: 16px; position: relative; z-index: 1; padding-top: 8px;
+  min-height: 100px; display: flex; flex-direction: column; justify-content: center;
+}
+
+.clarke-reviews-card-meta {
+  display: flex; flex-direction: column; gap: 8px; padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.clarke-reviews-reviewer-name {
+  font-weight: 600; color: var(--color-text-heading); font-size: 15px;
+}
+
+.clarke-reviews-card-footer {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+
+.clarke-reviews-rating {
+  display: flex; align-items: center; gap: 4px;
+}
+.clarke-reviews-rating svg {
+  width: 14px; height: 14px; color: var(--color-accent); fill: var(--color-accent);
+}
+
+.clarke-reviews-platform-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 600; padding: 4px 10px;
+  background: rgba(201,169,110,0.1); border-radius: 100px;
+  color: var(--color-accent); letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+/* ======== ALL REVIEWS GRID ======== */
+.clarke-reviews-all-grid {
+  display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 40px;
+}
+@media (min-width: 768px) { .clarke-reviews-all-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+
+.clarke-reviews-card {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 24px 22px;
+}
+
+.clarke-reviews-card-stars {
+  display: flex; gap: 3px; margin-bottom: 14px;
+}
+.clarke-reviews-card-stars svg {
+  width: 14px; height: 14px; color: var(--color-accent); fill: var(--color-accent);
+}
+
+.clarke-reviews-card-quote {
+  font-size: 15px; line-height: 1.7; color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.clarke-reviews-card-author {
+  font-weight: 600; color: var(--color-text-heading); font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.clarke-reviews-card-meta-small {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  font-size: 12px; color: var(--color-text-secondary);
+}
+.clarke-reviews-card-badge {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: 10px; font-weight: 600; padding: 3px 8px;
+  background: rgba(201,169,110,0.08); border-radius: 100px;
+  color: var(--color-accent); letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+
+/* ======== CTA BAND ======== */
+.clarke-reviews-cta-band {
+  background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
+}
+@media (min-width: 768px) { .clarke-reviews-cta-band { padding: 72px 0; } }
+.clarke-reviews-cta-inner {
+  position: relative; z-index: 1; max-width: 720px; margin: 0 auto; text-align: center;
+}
+.clarke-reviews-cta-h2 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 28px;
+  line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+}
+@media (min-width: 768px) { .clarke-reviews-cta-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
+.clarke-reviews-cta-text {
+  font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 28px;
+}
+.clarke-reviews-cta-buttons {
+  display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+}
+
+
+/* ======== BUTTONS ======== */
+.clarke-reviews-btn-primary {
+  background: var(--color-primary); color: #fff !important; padding: 16px 36px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
+  text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  box-shadow: 0 4px 20px rgba(139,39,39,0.3);
+}
+.clarke-reviews-btn-primary:hover { background: var(--color-accent); color: var(--color-secondary) !important; box-shadow: 0 6px 24px rgba(201,169,110,0.4); }
+.clarke-reviews-btn-primary:visited { color: #fff !important; }
+.clarke-reviews-btn-primary:active { color: #fff !important; }
+
+.clarke-reviews-cta-band .clarke-reviews-btn-primary {
+  background: var(--color-bg-white); color: var(--color-primary) !important;
+}
+.clarke-reviews-cta-band .clarke-reviews-btn-primary:visited { color: var(--color-primary) !important; }
+.clarke-reviews-cta-band .clarke-reviews-btn-primary:hover {
+  background: #fff; color: var(--color-primary) !important; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+</style>
+
+
+<div class="clarke-reviews-wrap">
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="clarke-reviews-hero">
+    <div class="clarke-reviews-container">
+      <div class="clarke-reviews-hero-inner">
+
+        <div class="clarke-reviews-hero-badge clarke-fade clarke-fade-d1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Client Reviews &amp; Testimonials
+        </div>
+
+        <h1 class="clarke-reviews-h1 clarke-fade clarke-fade-d2">What Our Clients Say</h1>
+        <p class="clarke-reviews-hero-sub clarke-fade clarke-fade-d3">Over 15 verified reviews across Houzz and Facebook from homeowners who worked with Clarke Building Company.</p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       STATS BAR
+       ============================================ -->
+  <section class="clarke-reviews-stats-bar">
+    <div class="clarke-reviews-container">
+      <div class="clarke-reviews-stats-row">
+
+        <div class="clarke-reviews-stat-item clarke-fade clarke-fade-d1">
+          <div class="clarke-reviews-star">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span style="font-family: var(--font-heading); font-size: 24px; font-weight: 400; color: var(--color-text-heading);">5.0</span>
+          </div>
+          <div class="clarke-reviews-stat-label">Star Rating</div>
+        </div>
+
+        <div class="clarke-reviews-stat-item clarke-fade clarke-fade-d2">
+          <div class="clarke-reviews-stat-value">15+</div>
+          <div class="clarke-reviews-stat-label">Total Reviews</div>
+        </div>
+
+        <div class="clarke-reviews-stat-item clarke-fade clarke-fade-d3">
+          <div class="clarke-reviews-stat-value">12</div>
+          <div class="clarke-reviews-stat-label">Houzz Reviews</div>
+        </div>
+
+        <div class="clarke-reviews-stat-item clarke-fade clarke-fade-d4">
+          <div class="clarke-reviews-stat-value">3</div>
+          <div class="clarke-reviews-stat-label">Facebook Reviews</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FEATURED REVIEWS
+       ============================================ -->
+  <section class="clarke-reviews-section-light">
+    <div class="clarke-reviews-container">
+      <h2 class="clarke-reviews-h2">Featured Reviews</h2>
+      <p class="clarke-reviews-sub">Our top-rated projects and client feedback:</p>
+
+      <div class="clarke-reviews-featured-grid">
+
+        <div class="clarke-reviews-featured-card clarke-fade clarke-fade-d1">
+          <div class="clarke-reviews-quote">
+            "David and his crew replaced a sliding door and extended a second floor deck over the garage. They also replaced a second floor window. The project was completed on time and came in on budget. I would definitely recommend Clarke Building Company to anyone looking for an honest and reliable contractor."
+          </div>
+          <div class="clarke-reviews-card-meta">
+            <div class="clarke-reviews-reviewer-name">Douglas Bender</div>
+            <div class="clarke-reviews-card-footer">
+              <div class="clarke-reviews-rating">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="clarke-reviews-platform-badge">Houzz</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-featured-card clarke-fade clarke-fade-d2">
+          <div class="clarke-reviews-quote">
+            "Dave and his crew did an outstanding job under circumstances that were far from ideal. Great communication, stellar work, and costs that were catered to the scope of the project and our budget. I would not hesitate to recommend them for home projects large or small."
+          </div>
+          <div class="clarke-reviews-card-meta">
+            <div class="clarke-reviews-reviewer-name">Lisa Trudeau</div>
+            <div class="clarke-reviews-card-footer">
+              <div class="clarke-reviews-rating">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="clarke-reviews-platform-badge">Houzz</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-featured-card clarke-fade clarke-fade-d3">
+          <div class="clarke-reviews-quote">
+            "Dave and his entire crew are professional, skilled at their work, keep the project on schedule and all a pleasure to work with. A kitchen remodel is one of the hardest to live through. I think it speaks volumes that even after a remodel that leaves you washing dishes in a bathroom sink and cooking in a toaster oven, Dave and his crew still had me laughing."
+          </div>
+          <div class="clarke-reviews-card-meta">
+            <div class="clarke-reviews-reviewer-name">HU-198447343</div>
+            <div class="clarke-reviews-card-footer">
+              <div class="clarke-reviews-rating">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="clarke-reviews-platform-badge">Houzz</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       ALL REVIEWS
+       ============================================ -->
+  <section class="clarke-reviews-section-white">
+    <div class="clarke-reviews-container">
+      <h2 class="clarke-reviews-h2">All Client Reviews</h2>
+      <p class="clarke-reviews-sub">Every review shown here is verified and unedited from the original source.</p>
+
+      <div class="clarke-reviews-all-grid">
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d1">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "Dave and his team at Clarke Building Company were reliable, knowledgeable, thorough, and very competent. While the work they completed on my parents' house to prepare it for sale was minor in scope for them, they always treated me and my requests with prompt, kind, and thoughtful attention."
+          </div>
+          <div class="clarke-reviews-card-author">Allison Bechill</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>May 2024</span>
+            <div class="clarke-reviews-card-badge">Houzz</div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d2">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "Clarke Building Company did a terrific job on our office renovation after major water damage due to frozen pipes. They were knowledgeable, careful and left everything neat and clean after each day's construction. They were willing to work with our office schedule to accommodate our needs to keep the business running during the renovation."
+          </div>
+          <div class="clarke-reviews-card-author">sharonbarrettmd</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>Aug 2023</span>
+            <div class="clarke-reviews-card-badge">Houzz</div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d3">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "Fantastic work and honest man, can't say enough great things about Dave and his crew! We did a full kitchen, bathroom, master bedroom do over and he is a true artist and great to work with."
+          </div>
+          <div class="clarke-reviews-card-author">Curt Dalton</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>Jul 2023</span>
+            <div class="clarke-reviews-card-badge">Houzz</div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d4">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "David and his crew care about the work they do and the results that you are looking for. They did a phenomenal job on our addition project which included expanding our master bedroom, adding a master bathroom and walk-in closet, and constructing a 3-season room. I highly recommend them. Great company, great people."
+          </div>
+          <div class="clarke-reviews-card-author">tolios80</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>Feb 2023</span>
+            <div class="clarke-reviews-card-badge">Houzz</div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d1">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "Excellent!! Qualified with great customer service and talented carpentry. Can't go wrong with Clarke Building. They take care of all your carpentry needs."
+          </div>
+          <div class="clarke-reviews-card-author">Gloria</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>Feb 2023</span>
+            <div class="clarke-reviews-card-badge">Houzz</div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d2">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "I was doubtful my vision for this house could be realized because of the many years of neglect and abuse. Dave convinced me and did not disappoint. He completed the project not only on time but within budget! I'd highly recommend Dave and his crew!"
+          </div>
+          <div class="clarke-reviews-card-author">Patricia Gray</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>Feb 2023</span>
+            <div class="clarke-reviews-card-badge">Houzz</div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d3">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "CBC has done several projects for my wife and I. The quality of their work is of the highest caliber, but the best part is they have taken my suggestions and offered really fantastic options I didn't know existed. I recommend them without reservation."
+          </div>
+          <div class="clarke-reviews-card-author">Clint Dalton</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>Feb 2023</span>
+            <div class="clarke-reviews-card-badge">Houzz</div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d4">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "Clarke Building Company completed a residing of our entire Ipswich home with James Hardy Cedar Impressions. The project was on schedule despite uncertain weather conditions. We are very happy with the final product and have neighbors complementing the outcome. The crew was professional, arrived on time, responsive to suggestions and polite."
+          </div>
+          <div class="clarke-reviews-card-author">Tom</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>Feb 2023</span>
+            <div class="clarke-reviews-card-badge">Houzz</div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d1">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "Great experience. Very nice crew and trustworthy. They are reliable and they always go over all options through. Would highly recommend them"
+          </div>
+          <div class="clarke-reviews-card-author">Kathy Mclain</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>Facebook</span>
+            <div class="clarke-reviews-card-badge">Facebook</div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d2">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "Wonderful crew. Always on time. Constant communication. Honest and really care about your needs. Will go the extra mile for safety."
+          </div>
+          <div class="clarke-reviews-card-author">Laura Ann</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>Facebook</span>
+            <div class="clarke-reviews-card-badge">Facebook</div>
+          </div>
+        </div>
+
+        <div class="clarke-reviews-card clarke-fade clarke-fade-d3">
+          <div class="clarke-reviews-card-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="clarke-reviews-card-quote">
+            "Great construction company, he made the house I live in very nice guy"
+          </div>
+          <div class="clarke-reviews-card-author">Kobe Robinson</div>
+          <div class="clarke-reviews-card-meta-small">
+            <span>Facebook</span>
+            <div class="clarke-reviews-card-badge">Facebook</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CTA BAND
+       ============================================ -->
+  <section class="clarke-reviews-cta-band">
+    <div class="clarke-reviews-container clarke-reviews-cta-inner">
+      <h2 class="clarke-reviews-cta-h2">Ready to Become Our Next Success Story?</h2>
+      <p class="clarke-reviews-cta-text">Let's talk about your project. Schedule a free consultation with Dave to discuss your vision, timeline, and how Clarke Building Company can help bring it to life.</p>
+      <div class="clarke-reviews-cta-buttons">
+        <a href="https://clarkebuildingcompany.com/contact/" class="clarke-reviews-btn-primary">
+          Schedule a Free Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
