@@ -248,49 +248,32 @@
 .clarke-tf-dark-body a:hover { border-color: var(--color-accent); }
 
 
-/* ======== COMPARISON TABLE ======== */
-.clarke-tf-compare-section {
+/* ======== WHAT YOU GET ======== */
+.clarke-tf-whatyouget-section {
   background: var(--color-bg-white); padding: 56px 0;
 }
-@media (min-width: 768px) { .clarke-tf-compare-section { padding: 80px 0; } }
-.clarke-tf-compare-wrap {
-  overflow-x: auto; margin: 32px auto; max-width: 900px;
+@media (min-width: 768px) { .clarke-tf-whatyouget-section { padding: 80px 0; } }
+.clarke-tf-whatyouget-grid {
+  display: grid; grid-template-columns: 1fr; gap: 20px;
+  margin-top: 32px; max-width: 900px; margin-left: auto; margin-right: auto;
 }
-.clarke-tf-compare {
-  width: 100%; border-collapse: separate; border-spacing: 0; min-width: 560px;
-  font-size: 15px; line-height: 1.6;
-  border-radius: var(--radius-lg); overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+@media (min-width: 768px) { .clarke-tf-whatyouget-grid { grid-template-columns: 1fr 1fr; } }
+.clarke-tf-whatyouget-card {
+  background: var(--color-bg-primary); border-radius: var(--radius-lg);
+  padding: 28px 24px; border: 1px solid var(--color-border);
 }
-.clarke-tf-compare thead th {
-  padding: 18px 20px; text-align: left; font-weight: 600; font-size: 14px;
-  letter-spacing: 0.03em;
+.clarke-tf-whatyouget-card h3 {
+  font-family: var(--font-heading); font-weight: 400; font-size: 18px;
+  color: var(--color-text-heading); margin-bottom: 8px;
 }
-.clarke-tf-compare thead th:first-child {
-  background: var(--color-secondary); color: var(--color-text-inverse);
+.clarke-tf-whatyouget-card p {
+  font-size: 15px; line-height: 1.7; color: var(--color-text-primary);
 }
-.clarke-tf-compare thead th:nth-child(2) {
-  background: var(--color-primary); color: #fff;
+.clarke-tf-whatyouget-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%; background: rgba(139,39,39,0.08);
+  color: var(--color-primary); margin-bottom: 12px; font-size: 18px;
 }
-.clarke-tf-compare thead th:last-child {
-  background: #6B7280; color: #fff;
-}
-.clarke-tf-compare tbody td {
-  padding: 14px 20px; vertical-align: top;
-  border-bottom: 1px solid var(--color-border);
-}
-.clarke-tf-compare tbody tr:last-child td { border-bottom: none; }
-.clarke-tf-compare tbody td:first-child {
-  font-weight: 600; color: var(--color-text-heading); background: var(--color-bg-primary);
-}
-.clarke-tf-compare tbody td:nth-child(2) {
-  background: rgba(139,39,39,0.03); color: var(--color-text-primary);
-}
-.clarke-tf-compare tbody td:last-child {
-  background: rgba(107,114,128,0.04); color: var(--color-text-secondary);
-}
-.clarke-tf-check { color: #16a34a; font-weight: 700; margin-right: 4px; }
-.clarke-tf-x { color: #dc2626; font-weight: 700; margin-right: 4px; opacity: 0.6; }
 
 
 /* ======== FAQ ACCORDION ======== */
@@ -619,60 +602,44 @@
 
 
   <!-- ============================================
-       COMPARISON TABLE
+       WHAT YOU GET
        ============================================ -->
-  <section class="clarke-tf-compare-section">
+  <section class="clarke-tf-whatyouget-section">
     <div class="clarke-tf-container">
-      <h2 class="clarke-tf-h2">Why Hiring Clarke Building Company Makes a Difference</h2>
-      <p class="clarke-tf-sub">Not all contractors work the same way. Here's what sets Clarke Building apart from the typical experience Topsfield homeowners run into:</p>
+      <h2 class="clarke-tf-h2">What You Get Working with Clarke Building</h2>
+      <p class="clarke-tf-sub">Here's what Topsfield homeowners can expect when they hire Clarke Building Company for their project:</p>
 
-      <div class="clarke-tf-compare-wrap">
-        <table class="clarke-tf-compare">
-          <thead>
-            <tr>
-              <th style="width: 36%;">What Matters</th>
-              <th style="width: 32%;">Clarke Building Company</th>
-              <th style="width: 32%;">Typical Contractor</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Point of Contact</td>
-              <td><span class="clarke-tf-check">&#10003;</span> Dave Clarke, owner, from start to finish</td>
-              <td><span class="clarke-tf-x">&#10007;</span> Sales rep hands off to a crew you've never met</td>
-            </tr>
-            <tr>
-              <td>Pricing Transparency</td>
-              <td><span class="clarke-tf-check">&#10003;</span> Every option and cost explained upfront</td>
-              <td><span class="clarke-tf-x">&#10007;</span> Vague estimate that grows after work starts</td>
-            </tr>
-            <tr>
-              <td>Communication</td>
-              <td><span class="clarke-tf-check">&#10003;</span> Constant updates at every stage</td>
-              <td><span class="clarke-tf-x">&#10007;</span> Hard to reach after the deposit clears</td>
-            </tr>
-            <tr>
-              <td>Older Home Experience</td>
-              <td><span class="clarke-tf-check">&#10003;</span> Understands plaster walls, original framing, and antique character</td>
-              <td><span class="clarke-tf-x">&#10007;</span> Treats every home like new construction</td>
-            </tr>
-            <tr>
-              <td>Permits &amp; Code</td>
-              <td><span class="clarke-tf-check">&#10003;</span> Fully permitted, proper engineering when needed</td>
-              <td><span class="clarke-tf-x">&#10007;</span> Cuts corners to save time</td>
-            </tr>
-            <tr>
-              <td>Worksite Standards</td>
-              <td><span class="clarke-tf-check">&#10003;</span> Clean, organized, respectful of your home</td>
-              <td><span class="clarke-tf-x">&#10007;</span> Messy job site, minimal cleanup</td>
-            </tr>
-            <tr>
-              <td>Licensed &amp; Insured</td>
-              <td><span class="clarke-tf-check">&#10003;</span> Full liability and workers' comp coverage</td>
-              <td><span class="clarke-tf-x">&#10007;</span> May not carry proper insurance</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="clarke-tf-whatyouget-grid">
+        <div class="clarke-tf-whatyouget-card">
+          <div class="clarke-tf-whatyouget-icon">&#9758;</div>
+          <h3>One Point of Contact</h3>
+          <p>Dave Clarke is your single point of contact from the first conversation through final walkthrough. You always know who to call, and you're never handed off to someone you haven't met.</p>
+        </div>
+        <div class="clarke-tf-whatyouget-card">
+          <div class="clarke-tf-whatyouget-icon">&#9745;</div>
+          <h3>Transparent Pricing</h3>
+          <p>Every option and cost is explained upfront before work begins. Dave walks you through what affects the price and helps you make informed decisions that fit your budget.</p>
+        </div>
+        <div class="clarke-tf-whatyouget-card">
+          <div class="clarke-tf-whatyouget-icon">&#9742;</div>
+          <h3>Constant Communication</h3>
+          <p>You'll get regular updates at every stage of the project. Dave is accessible and responsive, so you always know where things stand and what's coming next.</p>
+        </div>
+        <div class="clarke-tf-whatyouget-card">
+          <div class="clarke-tf-whatyouget-icon">&#9963;</div>
+          <h3>Older Home Experience</h3>
+          <p>Many Topsfield homes have original framing, plaster walls, and antique character worth preserving. Clarke Building understands how to work with these materials rather than against them.</p>
+        </div>
+        <div class="clarke-tf-whatyouget-card">
+          <div class="clarke-tf-whatyouget-icon">&#9881;</div>
+          <h3>Fully Permitted Work</h3>
+          <p>Every project is properly permitted and inspected. We coordinate with the local building department, schedule inspections, and make sure your project has a clean record when it's done.</p>
+        </div>
+        <div class="clarke-tf-whatyouget-card">
+          <div class="clarke-tf-whatyouget-icon">&#9733;</div>
+          <h3>Clean, Respectful Worksite</h3>
+          <p>Your home is treated with care throughout the project. We keep the worksite organized, protect finished areas, and clean up at every stage. Licensed and fully insured.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -747,7 +714,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="clarke-tf-faq-a">
-            <p>A typical kitchen remodel in Topsfield takes 4 to 8 weeks depending on scope. Layout changes, custom cabinetry, and structural work can extend the timeline. During your initial consultation, Dave will walk you through a realistic project schedule and keep you informed at every stage so there are no surprises.</p>
+            <p>Kitchen remodel timelines depend on the scope of your project. Layout changes, custom cabinetry, and structural work take longer than a cosmetic refresh. During your initial consultation, Dave will walk you through a realistic project schedule based on your specific plans and keep you informed at every stage so there are no surprises.</p>
           </div>
         </div>
 
