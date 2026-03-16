@@ -277,6 +277,29 @@
 .clarke-nc-service-card a svg { width: 16px; height: 16px; }
 
 
+/* ======== SERVICE AREA ======== */
+.clarke-nc-area-list {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  list-style: none; margin: 28px 0;
+}
+.clarke-nc-area-list li {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: 100px; padding: 10px 20px; font-size: 14px; font-weight: 500;
+  color: var(--color-text-heading);
+}
+.clarke-nc-area-list li a {
+  color: var(--color-primary); font-weight: 600;
+  transition: color 0.2s ease;
+}
+.clarke-nc-area-list li a:hover { color: var(--color-primary-hover); }
+.clarke-nc-area-list li:has(a) {
+  border-color: rgba(139,39,39,0.2);
+}
+.clarke-nc-area-list li:has(a):hover {
+  border-color: var(--color-primary); background: rgba(139,39,39,0.03);
+}
+
+
 /* ======== CTA BAND ======== */
 .clarke-nc-cta-band {
   background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
@@ -466,6 +489,33 @@
   </section>
 
 
+  <!-- SERVICE AREA -->
+  <section class="clarke-nc-section-white">
+    <div class="clarke-nc-container">
+      <h2 class="clarke-nc-section-h2">Serving Massachusetts &amp; Southern New Hampshire</h2>
+      <div class="clarke-nc-intro-text" style="text-align: center; margin: 0 auto;">
+        <p>Clarke Building Company builds new homes throughout Essex County, the North Shore, and Southern New Hampshire. Our primary service area includes:</p>
+      </div>
+      <ul class="clarke-nc-area-list">
+        <li><a href="https://clarkebuildingcompany.com/west-newbury-ma/">West Newbury</a></li>
+        <li><a href="https://clarkebuildingcompany.com/newburyport-ma/">Newburyport</a></li>
+        <li><a href="https://clarkebuildingcompany.com/ipswich-ma/">Ipswich</a></li>
+        <li><a href="https://clarkebuildingcompany.com/hamilton-ma/">Hamilton</a></li>
+        <li><a href="https://clarkebuildingcompany.com/topsfield-ma/">Topsfield</a></li>
+        <li><a href="https://clarkebuildingcompany.com/amesbury-ma/">Amesbury</a></li>
+        <li>Merrimac</li>
+        <li>Haverhill</li>
+        <li>Georgetown</li>
+        <li>Rowley</li>
+        <li>Groveland</li>
+      </ul>
+      <div class="clarke-nc-intro-text" style="text-align: center; margin: 0 auto;">
+        <p>Not sure if we serve your town? <a href="https://clarkebuildingcompany.com/contact/">Contact us</a> - we'll let you know right away.</p>
+      </div>
+    </div>
+  </section>
+
+
   <!-- RELATED SERVICES -->
   <section class="clarke-nc-related">
     <div class="clarke-nc-container">
@@ -517,6 +567,15 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
         </div>
+
+        <div class="clarke-nc-service-card">
+          <h3>View Our Projects</h3>
+          <p>Explore completed new construction builds and home additions from Clarke Building Company. See the quality and attention to detail we bring to every project.</p>
+          <a href="https://clarkebuildingcompany.com/projects/">
+            See Our Work
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -527,7 +586,7 @@
     <div class="clarke-nc-container clarke-nc-cta-inner">
       <h2 class="clarke-nc-cta-h2">Ready to Build Your Custom Home?</h2>
       <p class="clarke-nc-cta-text">Building a new home is a big decision, and you deserve a contractor you can trust. I'll walk your land, talk through your vision, and put together an honest estimate that reflects the actual work. We'll build your home on time, on budget, and with the attention to detail that only comes from treating it like my own.</p>
-      <p class="clarke-nc-cta-text">Let's talk about your project. <a href="https://clarkebuildingcompany.com/contact/">Get in touch to schedule a site visit.</a></p>
+      <p class="clarke-nc-cta-text">Let's talk about your project. <a href="https://clarkebuildingcompany.com/contact/">Get in touch to schedule a site visit.</a> Have questions? Check our <a href="https://clarkebuildingcompany.com/faq/">frequently asked questions</a>.</p>
 
       <div class="clarke-nc-cta-buttons">
         <a href="https://clarkebuildingcompany.com/contact/" class="clarke-nc-btn-primary">

@@ -309,6 +309,28 @@
 .clarke-ren-related-card:hover .clarke-ren-related-link { gap: 10px; }
 
 
+/* ======== SERVICE AREA ======== */
+.clarke-ren-area-list {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  list-style: none; margin: 28px 0;
+}
+.clarke-ren-area-list li {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: 100px; padding: 10px 20px; font-size: 14px; font-weight: 500;
+  color: var(--color-text-heading);
+}
+.clarke-ren-area-list li a {
+  color: var(--color-primary); font-weight: 600;
+  transition: color 0.2s ease;
+}
+.clarke-ren-area-list li a:hover { color: var(--color-primary-hover); }
+.clarke-ren-area-list li:has(a) {
+  border-color: rgba(139,39,39,0.2);
+}
+.clarke-ren-area-list li:has(a):hover {
+  border-color: var(--color-primary); background: rgba(139,39,39,0.03);
+}
+
 /* ======== CTA BAND ======== */
 .clarke-ren-cta-band {
   background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
@@ -599,12 +621,40 @@
 
 
   <!-- ============================================
+       SERVICE AREA
+       ============================================ -->
+  <section class="clarke-ren-section-white">
+    <div class="clarke-ren-container">
+      <h2 class="clarke-ren-h2">Serving Massachusetts &amp; Southern New Hampshire</h2>
+      <div class="clarke-ren-body" style="text-align: center; margin: 0 auto;">
+        <p>Clarke Building Company handles home renovations throughout Essex County, the North Shore, and Southern New Hampshire. Our primary service area includes:</p>
+      </div>
+      <ul class="clarke-ren-area-list">
+        <li><a href="https://clarkebuildingcompany.com/west-newbury-ma/">West Newbury</a></li>
+        <li><a href="https://clarkebuildingcompany.com/newburyport-ma/">Newburyport</a></li>
+        <li><a href="https://clarkebuildingcompany.com/ipswich-ma/">Ipswich</a></li>
+        <li><a href="https://clarkebuildingcompany.com/hamilton-ma/">Hamilton</a></li>
+        <li><a href="https://clarkebuildingcompany.com/topsfield-ma/">Topsfield</a></li>
+        <li><a href="https://clarkebuildingcompany.com/amesbury-ma/">Amesbury</a></li>
+        <li>Merrimac</li>
+        <li>Haverhill</li>
+        <li>Georgetown</li>
+        <li>Rowley</li>
+        <li>Groveland</li>
+      </ul>
+      <div class="clarke-ren-body" style="text-align: center; margin: 0 auto;">
+        <p>Not sure if we serve your town? <a href="https://clarkebuildingcompany.com/contact/">Contact us</a> - we'll let you know right away.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
        CTA BAND
        ============================================ -->
   <section class="clarke-ren-cta-band">
     <div class="clarke-ren-container clarke-ren-cta-inner">
       <h2 class="clarke-ren-cta-h2">Ready to Talk About Your Home Renovation?</h2>
-      <p class="clarke-ren-cta-text">Whether it's a structural change, new floors, a refreshed interior, or a full whole-home update, Clarke Building Company is a straightforward conversation away. Dave will walk your home, listen to what you need, and put together a scope and estimate that reflects the actual work.</p>
+      <p class="clarke-ren-cta-text">Whether it's a structural change, new floors, a refreshed interior, or a full whole-home update, Clarke Building Company is a straightforward conversation away. Dave will walk your home, listen to what you need, and put together a scope and estimate that reflects the actual work. Have questions? Check our <a href="https://clarkebuildingcompany.com/faq/" style="color: rgba(255,255,255,0.95); border-bottom: 1px solid rgba(255,255,255,0.4);">frequently asked questions</a>.</p>
       <p class="clarke-ren-cta-area">Serving West Newbury, Newburyport, Amesbury, Ipswich, Hamilton, Topsfield, Georgetown, Boxford, Rowley, Salisbury, and surrounding Massachusetts and Southern New Hampshire communities.</p>
       <div class="clarke-ren-cta-buttons">
         <a href="https://clarkebuildingcompany.com/contact/" class="clarke-ren-btn-primary">

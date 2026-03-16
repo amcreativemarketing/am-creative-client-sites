@@ -406,6 +406,28 @@
 }
 
 
+/* ======== SERVICE AREA ======== */
+.clarke-adu-area-list {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  list-style: none; margin: 28px 0;
+}
+.clarke-adu-area-list li {
+  background: var(--color-bg-white); border: 1px solid var(--color-border);
+  border-radius: 100px; padding: 10px 20px; font-size: 14px; font-weight: 500;
+  color: var(--color-text-heading);
+}
+.clarke-adu-area-list li a {
+  color: var(--color-primary); font-weight: 600;
+  transition: color 0.2s ease;
+}
+.clarke-adu-area-list li a:hover { color: var(--color-primary-hover); }
+.clarke-adu-area-list li:has(a) {
+  border-color: rgba(139,39,39,0.2);
+}
+.clarke-adu-area-list li:has(a):hover {
+  border-color: var(--color-primary); background: rgba(139,39,39,0.03);
+}
+
 /* ======== CTA BAND ======== */
 .clarke-adu-cta-band {
   background: var(--color-primary); padding: 56px 0; position: relative; overflow: hidden;
@@ -869,13 +891,41 @@
 
 
   <!-- ============================================
+       SERVICE AREA
+       ============================================ -->
+  <section class="clarke-adu-section-white">
+    <div class="clarke-adu-container">
+      <h2 class="clarke-adu-h2">Serving Massachusetts &amp; Southern New Hampshire</h2>
+      <div class="clarke-adu-body" style="text-align: center; margin: 0 auto;">
+        <p>Clarke Building Company designs and builds accessory dwelling units throughout Essex County, the North Shore, and Southern New Hampshire. Our primary service area includes:</p>
+      </div>
+      <ul class="clarke-adu-area-list">
+        <li><a href="https://clarkebuildingcompany.com/west-newbury-ma/">West Newbury</a></li>
+        <li><a href="https://clarkebuildingcompany.com/newburyport-ma/">Newburyport</a></li>
+        <li><a href="https://clarkebuildingcompany.com/ipswich-ma/">Ipswich</a></li>
+        <li><a href="https://clarkebuildingcompany.com/hamilton-ma/">Hamilton</a></li>
+        <li><a href="https://clarkebuildingcompany.com/topsfield-ma/">Topsfield</a></li>
+        <li><a href="https://clarkebuildingcompany.com/amesbury-ma/">Amesbury</a></li>
+        <li>Merrimac</li>
+        <li>Haverhill</li>
+        <li>Georgetown</li>
+        <li>Rowley</li>
+        <li>Groveland</li>
+      </ul>
+      <div class="clarke-adu-body" style="text-align: center; margin: 0 auto;">
+        <p>Not sure if we serve your town? <a href="https://clarkebuildingcompany.com/contact/">Contact us</a> - we'll let you know right away.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
        CTA BAND
        ============================================ -->
   <section class="clarke-adu-cta-band">
     <div class="clarke-adu-container clarke-adu-cta-inner">
       <h2 class="clarke-adu-cta-h2">Ready to Build Your ADU? Let's Talk.</h2>
       <p class="clarke-adu-cta-text">Clarke Building Company has been building quality homes and additions across Massachusetts and Southern New Hampshire for over 15 years. We bring the same craftsmanship and transparency to every ADU project, from your first feasibility question to the day you hand over the keys.</p>
-      <p class="clarke-adu-cta-text">Call or email us today to schedule your free ADU consultation.</p>
+      <p class="clarke-adu-cta-text">Call or email us today to schedule your free ADU consultation. Have questions? Check our <a href="https://clarkebuildingcompany.com/faq/" style="color: rgba(255,255,255,0.95); border-bottom: 1px solid rgba(255,255,255,0.4);">frequently asked questions</a>.</p>
       <p class="clarke-adu-cta-area">We serve West Newbury, Newburyport, Amesbury, Salisbury, Georgetown, Boxford, Rowley, and surrounding Essex County communities.</p>
       <div class="clarke-adu-cta-buttons">
         <a href="https://clarkebuildingcompany.com/contact/" class="clarke-adu-btn-primary">
