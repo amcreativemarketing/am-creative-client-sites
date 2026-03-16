@@ -155,13 +155,15 @@
 .clarke-wn-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-wn-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
 .clarke-wn-sub {
   font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
-  margin-bottom: 32px; max-width: 780px;
+  margin-bottom: 32px; max-width: 780px; margin-left: auto; margin-right: auto;
+  text-align: center;
 }
-.clarke-wn-body { font-size: 16px; line-height: 1.8; max-width: 780px; }
+.clarke-wn-body { font-size: 16px; line-height: 1.8; max-width: 780px; margin-left: auto; margin-right: auto; }
 .clarke-wn-body p { margin-bottom: 18px; }
 .clarke-wn-body p:last-child { margin-bottom: 0; }
 .clarke-wn-body a {
@@ -239,9 +241,10 @@
 .clarke-wn-dark-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-wn-dark-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
-.clarke-wn-dark-body { font-size: 16px; line-height: 1.8; max-width: 780px; color: rgba(255,255,255,0.68); }
+.clarke-wn-dark-body { font-size: 16px; line-height: 1.8; max-width: 780px; margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.68); }
 .clarke-wn-dark-body p { margin-bottom: 18px; }
 .clarke-wn-dark-body p:last-child { margin-bottom: 0; }
 .clarke-wn-dark-body strong { color: rgba(255,255,255,0.9); }
@@ -255,7 +258,7 @@
 
 /* ======== WHY CLARKE CHECKLIST ======== */
 .clarke-wn-why-list {
-  list-style: none; margin: 24px 0; max-width: 780px;
+  list-style: none; margin: 24px auto; max-width: 780px;
 }
 .clarke-wn-why-list li {
   padding: 14px 0 14px 32px; position: relative; font-size: 16px; line-height: 1.7;
@@ -559,7 +562,7 @@
   <section class="clarke-wn-section-white">
     <div class="clarke-wn-container">
       <h2 class="clarke-wn-h2">Find Us in West Newbury</h2>
-      <div style="border-radius: var(--radius-lg); overflow: hidden; margin-top: 20px; max-width: 780px;">
+      <div style="border-radius: var(--radius-lg); overflow: hidden; margin: 20px auto 0; max-width: 780px;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93691.37775477015!2d-71.05128519180865!3d42.791403411538234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2e29d7f460f77%3A0xfea468102400dbc2!2sWest%20Newbury%2C%20MA!5e0!3m2!1sen!2sus!4v1773076837207!5m2!1sen!2sus" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
