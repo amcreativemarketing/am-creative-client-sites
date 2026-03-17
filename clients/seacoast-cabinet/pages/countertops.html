@@ -1,0 +1,1269 @@
+<!-- HERO OPTIONS
+     Option A: H1: Kitchen & Bathroom Countertops Near You — Rowley, MA Showroom
+               P: Explore quartz, granite, marble, and more at our North Shore countertop showroom. Free consultations, expert material guidance, and coordinated cabinet-to-countertop design.
+     Option B: H1: Quartz & Granite Countertops — North Shore MA Showroom
+               P: See countertop samples in person at Seacoast Cabinet in Rowley. From Cambria quartz to natural granite, our design team helps you choose the right material for your kitchen or bathroom.
+     CTAs: Schedule a Free Consultation → https://seacoastcabinetne.com/contact/
+           View Our Kitchen Projects → https://seacoastcabinetne.com/inspiration-gallery/
+-->
+
+<style>
+/* ============================================
+   SEACOAST CABINET - COUNTERTOPS PAGE
+   Namespace: .sc-ct-*
+   ============================================ */
+
+.sc-ct-page {
+    --coastal-blue: #7d99ad;
+    --warm-gold: #b8905f;
+    --deep-charcoal: #2c3e50;
+    --pure-white: #ffffff;
+    --light-gray: #f8f8f8;
+    --medium-gray: #666666;
+    --warm-beige: #f5f2ed;
+    --success-green: #5cb85c;
+    font-family: 'Open Sans', sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.sc-ct-page *,
+.sc-ct-page *::before,
+.sc-ct-page *::after {
+    box-sizing: border-box;
+}
+
+.sc-ct-page h1,
+.sc-ct-page h2,
+.sc-ct-page h3,
+.sc-ct-page h4 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    margin: 0 0 0.75em 0;
+}
+
+.sc-ct-page p {
+    color: #444 !important;
+    margin: 0 0 1em 0;
+    font-size: 1rem;
+}
+
+.sc-ct-page a {
+    text-decoration: none;
+}
+
+.sc-ct-page {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.sc-ct-page .sc-ct-hero,
+.sc-ct-page .sc-ct-trust-bar,
+.sc-ct-page .sc-ct-section-beige,
+.sc-ct-page .sc-ct-section-gray,
+.sc-ct-page .sc-ct-callout,
+.sc-ct-page .sc-ct-reviews-section,
+.sc-ct-page .sc-ct-final-cta {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+}
+
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-ct-page .sc-ct-hero,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-ct-page .sc-ct-trust-bar,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-ct-page .sc-ct-section-beige,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-ct-page .sc-ct-section-gray,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-ct-page .sc-ct-callout,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-ct-page .sc-ct-reviews-section,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-ct-page .sc-ct-final-cta {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+}
+
+.sc-ct-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===========================
+   HERO
+   =========================== */
+.sc-ct-hero {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    background-image: url('https://seacoastcabinetne.com/wp-content/uploads/2021/08/Seacoast-Cabinet3-scaled.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.sc-ct-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(44, 62, 80, 0.45);
+    z-index: 1;
+}
+
+.sc-ct-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.sc-ct-hero h1 {
+    color: #ffffff !important;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.sc-ct-hero .sc-ct-hero-sub {
+    color: #ffffff !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.sc-ct-hero .sc-ct-hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    padding: 6px 16px;
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    margin-bottom: 1.5em;
+}
+
+.sc-ct-hero .sc-ct-hero-badge span {
+    color: #f5c518 !important;
+}
+
+/* --- Buttons --- */
+.sc-ct-btn-gold {
+    display: inline-block;
+    background: #b8905f !important;
+    color: #ffffff !important;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    min-height: 44px;
+    text-align: center;
+}
+
+.sc-ct-btn-gold:hover {
+    background: #a07a4f !important;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+.sc-ct-btn-outline {
+    display: inline-block;
+    background: transparent !important;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    min-height: 44px;
+    text-align: center;
+    margin-left: 12px;
+}
+
+.sc-ct-btn-outline:hover {
+    background: rgba(255,255,255,0.15) !important;
+    border-color: #ffffff;
+    color: #ffffff !important;
+}
+
+.sc-ct-btn-blue {
+    display: inline-block;
+    background: #7d99ad !important;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    min-height: 44px;
+    text-align: center;
+}
+
+.sc-ct-btn-blue:hover {
+    background: #6a879b !important;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+/* ===========================
+   TRUST BAR
+   =========================== */
+.sc-ct-trust-bar {
+    background: #2c3e50;
+    padding: 16px 20px;
+}
+
+.sc-ct-trust-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sc-ct-trust-item {
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.sc-ct-trust-item span {
+    color: #f5c518 !important;
+}
+
+/* ===========================
+   SECTIONS
+   =========================== */
+.sc-ct-section {
+    padding: 50px 20px;
+}
+
+.sc-ct-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50 !important;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.sc-ct-section .sc-ct-section-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 2em auto;
+    font-size: 1rem;
+    color: #555 !important;
+}
+
+.sc-ct-section-beige {
+    background: #f5f2ed;
+    padding: 50px 20px;
+}
+
+.sc-ct-section-gray {
+    background: #f8f8f8;
+    padding: 50px 20px;
+}
+
+/* --- Badges --- */
+.sc-ct-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 700px;
+    margin: 0 auto 2.5em auto;
+}
+
+.sc-ct-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.sc-ct-badge-item img {
+    height: 44px;
+    width: auto;
+}
+
+.sc-ct-badge-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    line-height: 1.3;
+}
+
+.sc-ct-badge-text small {
+    display: block;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #888 !important;
+}
+
+.sc-ct-content-link {
+    color: #7d99ad !important;
+    font-weight: 600;
+    text-decoration: underline !important;
+    transition: color 0.2s ease;
+}
+
+.sc-ct-content-link:hover {
+    color: #b8905f !important;
+}
+
+/* ===========================
+   CONTENT GRID
+   =========================== */
+.sc-ct-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.sc-ct-content-image {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sc-ct-content-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.sc-ct-content-text h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #2c3e50 !important;
+}
+
+.sc-ct-content-text h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    margin-top: 1.25em;
+    margin-bottom: 0.4em;
+}
+
+.sc-ct-content-text p {
+    font-size: 0.95rem;
+    color: #555 !important;
+    line-height: 1.7;
+}
+
+/* ===========================
+   MATERIAL SAMPLE CARDS
+   =========================== */
+.sc-ct-samples-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sc-ct-sample-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.sc-ct-sample-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.sc-ct-sample-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sc-ct-sample-label {
+    padding: 12px 16px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+}
+
+.sc-ct-sample-label small {
+    display: block;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #888 !important;
+    margin-top: 2px;
+}
+
+/* ===========================
+   MATERIAL SHOWCASE (3-photo layout)
+   =========================== */
+.sc-ct-material-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sc-ct-material-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    align-items: center;
+}
+
+.sc-ct-material-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.sc-ct-material-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2c3e50 !important;
+    margin-bottom: 0.4em;
+}
+
+.sc-ct-material-card p {
+    font-size: 0.92rem;
+    color: #555 !important;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===========================
+   CABINETS + COUNTERTOPS CALLOUT
+   =========================== */
+.sc-ct-callout {
+    background: #2c3e50;
+    padding: 50px 20px;
+}
+
+.sc-ct-callout-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.sc-ct-callout-badge {
+    display: inline-block;
+    background: rgba(184,144,95,0.2);
+    border: 1px solid rgba(184,144,95,0.4);
+    color: #b8905f !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 0.75em;
+}
+
+.sc-ct-callout h2 {
+    color: #ffffff !important;
+    text-align: left;
+    font-size: 1.4rem;
+    margin-bottom: 0.5em;
+}
+
+.sc-ct-callout p {
+    color: rgba(255,255,255,0.85) !important;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.sc-ct-callout .sc-ct-btn-gold {
+    margin-top: 0.5em;
+}
+
+/* ===========================
+   INSTALLATION WITH IMAGE
+   =========================== */
+.sc-ct-install-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.sc-ct-install-image {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sc-ct-install-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* ===========================
+   PRICING TABLE
+   =========================== */
+.sc-ct-pricing-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sc-ct-pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.sc-ct-pricing-table thead th {
+    background: #2c3e50;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 14px 16px;
+    text-align: left;
+}
+
+.sc-ct-pricing-table thead th:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+.sc-ct-pricing-table thead th:last-child {
+    border-radius: 0 8px 0 0;
+}
+
+.sc-ct-pricing-table tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8e8e8;
+    color: #444 !important;
+}
+
+.sc-ct-pricing-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.sc-ct-pricing-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.sc-ct-pricing-table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 8px;
+}
+
+.sc-ct-pricing-table tbody tr:last-child td:last-child {
+    border-radius: 0 0 8px 0;
+}
+
+/* ===========================
+   FAQ
+   =========================== */
+.sc-ct-faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sc-ct-faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sc-ct-faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2c3e50 !important;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    min-height: 44px;
+}
+
+.sc-ct-faq-question:hover {
+    color: #7d99ad !important;
+}
+
+.sc-ct-faq-toggle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #7d99ad !important;
+    flex-shrink: 0;
+    margin-left: 16px;
+    transition: transform 0.3s ease;
+}
+
+.sc-ct-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.sc-ct-faq-answer-inner {
+    padding: 0 0 18px 0;
+    font-size: 0.92rem;
+    color: #555 !important;
+    line-height: 1.7;
+}
+
+.sc-ct-faq-item.active .sc-ct-faq-answer {
+    max-height: 500px;
+}
+
+.sc-ct-faq-item.active .sc-ct-faq-toggle {
+    transform: rotate(45deg);
+}
+
+/* ===========================
+   REVIEWS
+   =========================== */
+.sc-ct-reviews-section {
+    background: #2c3e50;
+    padding: 50px 20px;
+}
+
+.sc-ct-reviews-section h2 {
+    color: #ffffff !important;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+.sc-ct-reviews-section .sc-ct-section-intro {
+    color: rgba(255,255,255,0.85) !important;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2em auto;
+}
+
+.sc-ct-reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sc-ct-review-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.sc-ct-review-stars {
+    color: #f5c518 !important;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.sc-ct-page .sc-ct-review-text,
+.sc-ct-reviews-section .sc-ct-review-text,
+.sc-ct-reviews-section p.sc-ct-review-text {
+    color: #ffffff !important;
+    font-size: 0.92rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.sc-ct-page .sc-ct-review-author,
+.sc-ct-reviews-section .sc-ct-review-author {
+    color: #b8905f !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* ===========================
+   FINAL CTA
+   =========================== */
+.sc-ct-final-cta {
+    background: linear-gradient(135deg, #7d99ad 0%, #6a879b 100%);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sc-ct-final-cta h2 {
+    color: #ffffff !important;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+.sc-ct-final-cta .sc-ct-cta-text {
+    color: rgba(255,255,255,0.9) !important;
+    max-width: 650px;
+    margin: 0 auto 1.5em auto;
+    font-size: 1rem;
+}
+
+.sc-ct-final-cta .sc-ct-btn-gold {
+    font-size: 1rem;
+    padding: 16px 32px;
+}
+
+.sc-ct-btn-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1.5em;
+}
+
+/* ===========================
+   RESPONSIVE: TABLET (768px+)
+   =========================== */
+@media (min-width: 768px) {
+    .sc-ct-hero {
+        min-height: 480px;
+        padding: 80px 40px;
+    }
+
+    .sc-ct-hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .sc-ct-hero .sc-ct-hero-sub {
+        font-size: 1.1rem;
+    }
+
+    .sc-ct-section h2,
+    .sc-ct-section-beige h2,
+    .sc-ct-section-gray h2,
+    .sc-ct-content-text h2,
+    .sc-ct-reviews-section h2,
+    .sc-ct-final-cta h2 {
+        font-size: 1.75rem;
+    }
+
+    .sc-ct-content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .sc-ct-content-grid.sc-ct-reverse {
+        direction: rtl;
+    }
+
+    .sc-ct-content-grid.sc-ct-reverse > * {
+        direction: ltr;
+    }
+
+    .sc-ct-samples-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sc-ct-material-card {
+        grid-template-columns: 260px 1fr;
+        padding: 24px;
+    }
+
+    .sc-ct-callout-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .sc-ct-callout h2 {
+        font-size: 1.6rem;
+    }
+
+    .sc-ct-install-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .sc-ct-reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===========================
+   RESPONSIVE: DESKTOP (1024px+)
+   =========================== */
+@media (min-width: 1024px) {
+    .sc-ct-hero h1 {
+        font-size: 2.75rem;
+    }
+
+    .sc-ct-hero .sc-ct-hero-sub {
+        font-size: 1.15rem;
+    }
+
+    .sc-ct-reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+</style>
+
+<div class="sc-ct-page">
+
+    <!-- ===========================
+         SECTION 1: HERO
+         =========================== -->
+    <section class="sc-ct-hero">
+        <div class="sc-ct-hero-content">
+            <div class="sc-ct-hero-badge">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 Stars on Google - 80+ Reviews
+            </div>
+            <h1>Kitchen & Bathroom Countertops - North Shore MA & Southern NH Showroom</h1>
+            <p class="sc-ct-hero-sub">Explore quartz, granite, marble, quartzite, and butcher block countertops at our North Shore showroom. Free consultations, expert material guidance, and coordinated cabinet-to-countertop design - all from one local team serving Newburyport, Haverhill, Ipswich, Andover, Salem NH, and communities across the North Shore.</p>
+            <div>
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-btn-gold">Schedule a Free Consultation</a>
+                <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-ct-btn-outline">View Our Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 2: TRUST BAR
+         =========================== -->
+    <div class="sc-ct-trust-bar">
+        <div class="sc-ct-trust-items">
+            <span class="sc-ct-trust-item"><span>&#9733;</span> 4.9 Stars on Google</span>
+            <span class="sc-ct-trust-item">Countertop Showroom in Rowley, MA</span>
+            <span class="sc-ct-trust-item">NKBA Member</span>
+            <span class="sc-ct-trust-item">Cabinets + Countertops From One Source</span>
+            <span class="sc-ct-trust-item">Free Design Consultations</span>
+        </div>
+    </div>
+
+    <!-- ===========================
+         SECTION 3: INTRO + BADGES (white)
+         =========================== -->
+    <section class="sc-ct-section">
+        <div class="sc-ct-container">
+
+            <div class="sc-ct-badge-row">
+                <div class="sc-ct-badge-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/08/best-of-nbpt-badge.png" alt="" width="60" height="60" loading="lazy">
+                    <div class="sc-ct-badge-text">Best of Newburyport<small>2025 Award Winner</small></div>
+                </div>
+                <div class="sc-ct-badge-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/01/National-Kitchen-and-Bath-Association-Member-Logo.png.webp" alt="" width="60" height="60" loading="lazy">
+                    <div class="sc-ct-badge-text">NKBA Member<small>National Kitchen & Bath Association</small></div>
+                </div>
+            </div>
+
+            <div style="max-width:800px;margin:0 auto;">
+                <p style="font-size:1.05rem;color:#444 !important;line-height:1.8;">Seacoast Cabinet isn't just a cabinet showroom - we're also the North Shore's countertop resource. Our <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" class="sc-ct-content-link">Rowley showroom</a> features countertop samples you can see and touch, from engineered quartz and natural granite to marble, quartzite, and butcher block. Whether you're pairing countertops with a full <a href="https://seacoastcabinetne.com/cabinets/" class="sc-ct-content-link">cabinet project</a> or upgrading your surfaces on their own, our <a href="https://seacoastcabinetne.com/design-services/" class="sc-ct-content-link">design team</a> helps you choose the right material for your space, your lifestyle, and your budget.</p>
+            </div>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-btn-gold">Schedule a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 4: QUARTZ (beige)
+         =========================== -->
+    <section class="sc-ct-section-beige">
+        <div class="sc-ct-container">
+            <div class="sc-ct-content-grid">
+                <div class="sc-ct-content-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/08/20200803_142540-scaled.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+                </div>
+                <div class="sc-ct-content-text">
+                    <h2>Quartz Countertops</h2>
+
+                    <h3>Why Quartz Is the Top Choice for North Shore Kitchens</h3>
+                    <p>Quartz countertops are engineered stone - ground natural quartz combined with resins and pigments to create a surface that's stain-resistant, scratch-resistant, and requires zero sealing. For busy North Shore families who want a surface that looks great and holds up to daily use without constant maintenance, quartz is the most practical premium option available.</p>
+
+                    <h3>Quartz Brands Available at Our Rowley Showroom</h3>
+                    <p>We carry Cambria, Silestone, and Caesarstone quartz at our showroom - each with distinct color palettes, patterns, and edge profiles. Whether you want a clean white surface, a marble-look alternative, or a bold statement color, our designers can walk you through the options and show you how each material pairs with your <a href="https://seacoastcabinetne.com/cabinets/omega-cabinetry/" class="sc-ct-content-link">cabinet selections</a>.</p>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-btn-gold">See Quartz Samples in Our Showroom</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 5: GRANITE (gray)
+         =========================== -->
+    <section class="sc-ct-section-gray">
+        <div class="sc-ct-container">
+            <div class="sc-ct-content-grid sc-ct-reverse">
+                <div class="sc-ct-content-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Mantra-Cabinets-3.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+                </div>
+                <div class="sc-ct-content-text">
+                    <h2>Granite Countertops</h2>
+
+                    <h3>The Benefits of Natural Granite for Kitchen Remodels</h3>
+                    <p>Granite is a natural stone quarried from the earth, which means every slab has unique veining, color variation, and character that engineered materials can't replicate. It's heat-resistant, scratch-resistant, and with periodic sealing, it holds up beautifully in high-use kitchens and bathrooms. For homeowners in <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/" class="sc-ct-content-link">Newburyport</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/" class="sc-ct-content-link">Haverhill</a>, and across the North Shore, granite remains one of the most popular countertop choices - especially in traditional and transitional kitchen designs.</p>
+
+                    <h3>Granite vs. Quartz - Which Is Right for Your Kitchen?</h3>
+                    <p>Granite offers natural beauty and heat resistance that quartz can't fully match, while quartz offers zero-maintenance durability and more consistent patterns. The right choice depends on your priorities. Our <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-ct-content-link">design consultations</a> include side-by-side comparisons so you can see and feel both materials before deciding.</p>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-btn-gold">Compare Granite and Quartz in Our Showroom</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 6: MARBLE, QUARTZITE & BUTCHER BLOCK (white)
+         =========================== -->
+    <section class="sc-ct-section">
+        <div class="sc-ct-container">
+            <h2>Marble, Quartzite & Butcher Block Countertops</h2>
+            <p class="sc-ct-section-intro">Beyond quartz and granite, we offer premium and specialty countertop materials for homeowners looking for something distinctive.</p>
+
+            <div class="sc-ct-material-cards">
+
+                <div class="sc-ct-material-card">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-67.webp" alt="" width="520" height="390" loading="lazy" decoding="async">
+                    <div>
+                        <h3>Marble Countertops</h3>
+                        <p>Marble brings timeless elegance that no other material can replicate - the soft veining, the cool touch, the visual depth. Marble does require sealing and is more prone to etching from acidic foods, which is why many homeowners choose it for bathroom vanities, pastry stations, or lower-traffic surfaces rather than primary kitchen countertops.</p>
+                    </div>
+                </div>
+
+                <div class="sc-ct-material-card">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2026/03/Screenshot-2026-03-17-at-9.54.03-AM.png" alt="" width="520" height="390" loading="lazy" decoding="async">
+                    <div>
+                        <h3>Quartzite Countertops</h3>
+                        <p>Quartzite is a natural stone that's often confused with quartz, but they're completely different materials. Quartzite is quarried stone that's harder than granite, naturally heat-resistant, and available in stunning white and gray tones that rival marble's look with significantly better durability.</p>
+                    </div>
+                </div>
+
+                <div class="sc-ct-material-card">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Berry-kitchen.webp" alt="" width="520" height="390" loading="lazy" decoding="async">
+                    <div>
+                        <h3>Butcher Block & Budget-Friendly Options</h3>
+                        <p>Butcher block countertops add warmth and texture that stone surfaces can't provide. They're refinishable, food-safe with proper oiling, and work especially well on islands or as accent sections. For homeowners exploring budget-friendly alternatives, we also offer laminate and solid surface options that deliver a clean, modern look without the premium price point. Use our <a href="https://seacoastcabinetne.com/budget-planner/" class="sc-ct-content-link">budget planner</a> to start estimating your project.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 7: MATERIAL SAMPLES (beige) - moved here as visual recap
+         =========================== -->
+    <section class="sc-ct-section-beige">
+        <div class="sc-ct-container">
+            <h2>Countertop Materials at Seacoast Cabinet</h2>
+            <p class="sc-ct-section-intro">See samples in person at our Rowley showroom. Our designers will help you compare materials, colors, and finishes side by side.</p>
+
+            <div class="sc-ct-samples-grid">
+                <div class="sc-ct-sample-card">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Camrbia-Berwyn-400x200-1.webp" alt="" width="400" height="200" loading="lazy" decoding="async">
+                    <div class="sc-ct-sample-label">Cambria Quartz<small>Berwyn Collection</small></div>
+                </div>
+                <div class="sc-ct-sample-card">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Quartz-Plus-400x200-1.webp" alt="" width="400" height="200" loading="lazy" decoding="async">
+                    <div class="sc-ct-sample-label">Quartz Plus<small>Engineered Quartz</small></div>
+                </div>
+                <div class="sc-ct-sample-card">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Granite-400x200-1.webp" alt="" width="400" height="200" loading="lazy" decoding="async">
+                    <div class="sc-ct-sample-label">Granite<small>Natural Stone</small></div>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-btn-gold">Visit Our Showroom to See All Samples</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 8: CABINETS + COUNTERTOPS CALLOUT (dark, standalone)
+         =========================== -->
+    <section class="sc-ct-callout">
+        <div class="sc-ct-container">
+            <div class="sc-ct-callout-inner">
+                <div>
+                    <div class="sc-ct-callout-badge">One Source Advantage</div>
+                    <h2>Kitchen Countertops and Cabinets - From One Team</h2>
+                    <p>Most countertop showrooms sell surfaces. Most cabinet showrooms sell cabinets. Seacoast Cabinet does both - and that's a real advantage. When you bundle your <a href="https://seacoastcabinetne.com/cabinets/" style="color:#b8905f !important;text-decoration:underline;">kitchen cabinets</a> and countertops through one team, you get coordinated colors, materials, and timelines. No miscommunication between vendors, no finger-pointing if something doesn't line up. One design team managing the whole project.</p>
+                    <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-ct-btn-gold">Start Your Combined Project</a>
+                </div>
+                <div>
+                    <p>What bundling gets you:</p>
+                    <p style="color:rgba(255,255,255,0.9) !important;padding-left:16px;border-left:3px solid #b8905f;margin-bottom:0.75em;">Matched cabinet and countertop colors and materials</p>
+                    <p style="color:rgba(255,255,255,0.9) !important;padding-left:16px;border-left:3px solid #b8905f;margin-bottom:0.75em;">Coordinated project timelines with no vendor gaps</p>
+                    <p style="color:rgba(255,255,255,0.9) !important;padding-left:16px;border-left:3px solid #b8905f;margin-bottom:0.75em;">A single point of contact from design through delivery</p>
+                    <p style="color:rgba(255,255,255,0.9) !important;padding-left:16px;border-left:3px solid #b8905f;margin-bottom:0;">3D renderings showing cabinets and countertops together</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 9: INSTALLATION (gray) with showroom photo
+         =========================== -->
+    <section class="sc-ct-section-gray">
+        <div class="sc-ct-container">
+            <h2>Countertop Installation on the North Shore</h2>
+            <p class="sc-ct-section-intro">From material selection to templating, fabrication, and installation - we coordinate the full countertop process so you don't have to.</p>
+
+            <div class="sc-ct-install-grid">
+                <div class="sc-ct-install-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/seacoast-showroom-12.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+                </div>
+                <div>
+                    <h3 style="font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:600;color:#2c3e50 !important;margin-bottom:0.4em;">What to Expect During Your Countertop Installation</h3>
+                    <p style="font-size:0.95rem;color:#555 !important;line-height:1.7;">The countertop process starts with a visit to our <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" class="sc-ct-content-link">Rowley showroom</a> where you'll compare materials in person. Once you've selected your surface, a professional templater measures your space to the millimeter. Fabrication typically takes 2-3 weeks depending on material and complexity, followed by installation that usually wraps in a single day. We serve homeowners across the North Shore and Southern New Hampshire, including <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/" class="sc-ct-content-link">Newburyport</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-ipswich-ma/" class="sc-ct-content-link">Ipswich</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-amesbury-ma/" class="sc-ct-content-link">Amesbury</a>, <a href="https://seacoastcabinetne.com/kitchen-designs-andover-ma/" class="sc-ct-content-link">Andover</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-topsfield-ma/" class="sc-ct-content-link">Topsfield</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-georgetown-ma/" class="sc-ct-content-link">Georgetown</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-boxford-ma/" class="sc-ct-content-link">Boxford</a>, and <a href="https://seacoastcabinetne.com/kitchen-cabinets-salem-nh/" class="sc-ct-content-link">Salem, NH</a>. Learn more about <a href="https://seacoastcabinetne.com/our-process/" class="sc-ct-content-link">our process</a> or book a <a href="https://seacoastcabinetne.com/virtual-design/" class="sc-ct-content-link">virtual design session</a> if you can't visit in person.</p>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-btn-gold">Get a Free Countertop Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 10: PRICING (white)
+         =========================== -->
+    <section class="sc-ct-section">
+        <div class="sc-ct-container">
+            <h2>Countertop Pricing & Investment Guide</h2>
+            <p class="sc-ct-section-intro">Countertop pricing varies based on material, edge profile, cutouts, and installation complexity. Here's a general guide to help you plan your budget.</p>
+
+            <div class="sc-ct-pricing-wrap">
+                <table class="sc-ct-pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Investment Level</th>
+                            <th>Best For</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Laminate</strong></td>
+                            <td>Budget-Friendly</td>
+                            <td>Rentals, guest spaces, budget renovations</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Solid Surface / Corian</strong></td>
+                            <td>Budget to Mid-Range</td>
+                            <td>Seamless look, easy repairs, modern kitchens</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Butcher Block</strong></td>
+                            <td>Mid-Range</td>
+                            <td>Islands, accent sections, farmhouse kitchens</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quartz</strong></td>
+                            <td>Mid-Range to Premium</td>
+                            <td>Busy kitchens, zero-maintenance durability</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Granite</strong></td>
+                            <td>Mid-Range to Premium</td>
+                            <td>Natural stone beauty, heat resistance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Marble / Quartzite</strong></td>
+                            <td>Premium</td>
+                            <td>Luxury kitchens, statement surfaces, bathrooms</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="text-align:center;max-width:700px;margin:1.5em auto 0 auto;font-size:0.88rem;color:#888 !important;">Final pricing depends on material selection, edge profile, cutouts, and installation complexity. <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-content-link">Request a free quote</a> for an estimate specific to your project.</p>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-btn-gold">Request a Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 11: REVIEWS (dark) - moved above FAQ
+         =========================== -->
+    <section class="sc-ct-reviews-section">
+        <div class="sc-ct-container">
+            <h2>What Our Customers Say</h2>
+            <p class="sc-ct-section-intro">Real reviews from homeowners who trusted Seacoast Cabinet with their kitchen and countertop projects.</p>
+
+            <div class="sc-ct-reviews-grid">
+                <div class="sc-ct-review-card">
+                    <div class="sc-ct-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-ct-review-text">"Seacoast Cabinets provided exceptional service and quality customer service. I'm very pleased with the outcome of my kitchen."</p>
+                    <div class="sc-ct-review-author">- Maria A., Google Review</div>
+                </div>
+                <div class="sc-ct-review-card">
+                    <div class="sc-ct-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-ct-review-text">"Frank is an absolute pleasure to work with and is a master at his craft. People make the process and Frank has no shortcomings in delivering top tier products and service."</p>
+                    <div class="sc-ct-review-author">- Rob T., Google Review</div>
+                </div>
+                <div class="sc-ct-review-card">
+                    <div class="sc-ct-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-ct-review-text">"An immediate confidence that you're in good hands. Their installation process efficient and organized."</p>
+                    <div class="sc-ct-review-author">- Randell M., Google Review</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 12: FAQ (beige) - moved below reviews
+         =========================== -->
+    <section class="sc-ct-section-beige">
+        <div class="sc-ct-container">
+            <h2>Frequently Asked Questions About Countertops</h2>
+            <p class="sc-ct-section-intro">Common questions from homeowners exploring countertop options for their kitchen or bathroom project.</p>
+
+            <div class="sc-ct-faq-list">
+
+                <div class="sc-ct-faq-item">
+                    <button class="sc-ct-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What is the most durable countertop material?
+                        <span class="sc-ct-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-ct-faq-answer">
+                        <div class="sc-ct-faq-answer-inner">
+                            Quartz and quartzite are the most durable countertop materials for everyday kitchen use. Quartz is engineered stone that resists stains, scratches, and chips without requiring sealing. Quartzite is a natural stone that's harder than granite and heat-resistant. Both are excellent choices for busy North Shore kitchens - visit our showroom to compare them side by side.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-ct-faq-item">
+                    <button class="sc-ct-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How much do countertops cost in Massachusetts?
+                        <span class="sc-ct-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-ct-faq-answer">
+                        <div class="sc-ct-faq-answer-inner">
+                            Countertop pricing in Massachusetts varies widely by material, edge profile, cutouts, and installation complexity. Laminate is the most budget-friendly option, quartz and granite sit in the mid-range to premium tier, and marble and quartzite are at the premium end. The best way to get an accurate number is to <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-content-link">request a free quote</a> - we'll walk through your specific project and give you a detailed estimate with no surprises.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-ct-faq-item">
+                    <button class="sc-ct-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How long does countertop installation take?
+                        <span class="sc-ct-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-ct-faq-answer">
+                        <div class="sc-ct-faq-answer-inner">
+                            From material selection to completed installation, the typical countertop project takes 3-5 weeks. That includes an in-showroom selection visit, professional templating, 2-3 weeks of fabrication, and installation that usually completes in a single day. Timelines can vary based on material availability and project complexity.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-ct-faq-item">
+                    <button class="sc-ct-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Can I see countertop samples before ordering?
+                        <span class="sc-ct-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-ct-faq-answer">
+                        <div class="sc-ct-faq-answer-inner">
+                            Yes. Our Rowley showroom at 300 Newburyport Turnpike has physical countertop samples you can see and touch - including quartz, granite, marble, and more. Walk-ins are welcome, or <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-content-link">schedule a design appointment</a> for focused one-on-one time with our team.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-ct-faq-item">
+                    <button class="sc-ct-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Do you install countertops with cabinets?
+                        <span class="sc-ct-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-ct-faq-answer">
+                        <div class="sc-ct-faq-answer-inner">
+                            Yes - and that's one of the biggest advantages of working with Seacoast Cabinet. When you bundle <a href="https://seacoastcabinetne.com/cabinets/" class="sc-ct-content-link">kitchen cabinets</a> and countertops through one team, you get coordinated timelines, matched materials, and a single point of contact for the entire project. No miscommunication between separate vendors.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-ct-faq-item">
+                    <button class="sc-ct-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What is the difference between quartz and quartzite?
+                        <span class="sc-ct-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-ct-faq-answer">
+                        <div class="sc-ct-faq-answer-inner">
+                            Quartz is an engineered stone made from ground natural quartz mixed with resins and pigments. It's manufactured for consistency and requires no sealing. Quartzite is a natural stone quarried from the earth - it's harder than granite, naturally heat-resistant, and features unique veining similar to marble. Both are excellent choices, but they look and feel quite different in person. Come compare them at our showroom.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-ct-faq-item">
+                    <button class="sc-ct-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Where can I find a countertop showroom near me?
+                        <span class="sc-ct-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-ct-faq-answer">
+                        <div class="sc-ct-faq-answer-inner">
+                            Seacoast Cabinet's countertop showroom is located at 300 Newburyport Turnpike in Rowley, MA - serving homeowners across the North Shore and Southern New Hampshire. We're open Monday-Friday 9am-5pm and Saturdays by appointment. Our showroom features countertop samples alongside full kitchen displays, so you can see how different materials pair with cabinet styles and finishes.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 13: FINAL CTA
+         =========================== -->
+    <section class="sc-ct-final-cta">
+        <div class="sc-ct-container">
+            <h2>Ready to Choose Your Countertops?</h2>
+            <p class="sc-ct-cta-text">Visit our Rowley showroom to compare quartz, granite, marble, and more in person. Whether you're bundling countertops with a cabinet project or upgrading your surfaces on their own, our design team is here to help.</p>
+            <div class="sc-ct-btn-cta-row">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-ct-btn-gold">Schedule a Consultation</a>
+                <a href="tel:9783501040" class="sc-ct-btn-gold" style="background:#2c3e50 !important;">Call 978-350-1040</a>
+            </div>
+        </div>
+    </section>
+
+</div>
