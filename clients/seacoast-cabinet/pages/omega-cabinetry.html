@@ -1,0 +1,1123 @@
+<!-- HERO OPTIONS
+     Option A: H1: Omega Cabinetry: Semi-Custom & Custom Cabinets on the North Shore
+               P: Explore Omega's full line of American-made kitchen cabinets at our Rowley showroom - with personalized design, 3D renderings, and expert guidance from your local authorized dealer.
+     Option B: H1: Omega Cabinetry - American-Made Semi-Custom Cabinets
+               P: See Omega's full range of door styles, finishes, and custom options in person at Seacoast Cabinet. Serving North Shore MA and Southern New Hampshire.
+     CTAs: Schedule Your Free Design Consultation → https://seacoastcabinetne.com/kitchen-design/
+           Visit Our Rowley Showroom → https://seacoastcabinetne.com/contact/
+-->
+
+<style>
+/* ============================================
+   SEACOAST CABINET - OMEGA CABINETRY PAGE
+   Namespace: .sc-oc-*
+   ============================================ */
+
+.sc-oc-page {
+    --coastal-blue: #7d99ad;
+    --warm-gold: #b8905f;
+    --deep-charcoal: #2c3e50;
+    --pure-white: #ffffff;
+    --light-gray: #f8f8f8;
+    --medium-gray: #666666;
+    --warm-beige: #f5f2ed;
+    --success-green: #5cb85c;
+    font-family: 'Open Sans', sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.sc-oc-page *,
+.sc-oc-page *::before,
+.sc-oc-page *::after {
+    box-sizing: border-box;
+}
+
+.sc-oc-page h1,
+.sc-oc-page h2,
+.sc-oc-page h3,
+.sc-oc-page h4 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    margin: 0 0 0.75em 0;
+}
+
+.sc-oc-page p {
+    color: #444 !important;
+    margin: 0 0 1em 0;
+    font-size: 1rem;
+}
+
+.sc-oc-page a {
+    text-decoration: none;
+}
+
+/* --- Divi Container Overrides --- */
+.sc-oc-page {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.sc-oc-page .sc-oc-hero,
+.sc-oc-page .sc-oc-trust-bar,
+.sc-oc-page .sc-oc-section-beige,
+.sc-oc-page .sc-oc-section-gray,
+.sc-oc-page .sc-oc-reviews-section,
+.sc-oc-page .sc-oc-final-cta {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+}
+
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-oc-page .sc-oc-hero,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-oc-page .sc-oc-trust-bar,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-oc-page .sc-oc-section-beige,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-oc-page .sc-oc-section-gray,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-oc-page .sc-oc-reviews-section,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-oc-page .sc-oc-final-cta {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+}
+
+.sc-oc-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===========================
+   HERO
+   =========================== */
+.sc-oc-hero {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    background-image: url('https://seacoastcabinetne.com/wp-content/uploads/2025/08/Seacoast-Photos-95.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.sc-oc-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(44, 62, 80, 0.45);
+    z-index: 1;
+}
+
+.sc-oc-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.sc-oc-hero h1 {
+    color: #ffffff !important;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.sc-oc-hero .sc-oc-hero-sub {
+    color: #ffffff !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.sc-oc-hero .sc-oc-hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    padding: 6px 16px;
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    margin-bottom: 1.5em;
+}
+
+.sc-oc-hero .sc-oc-hero-badge span {
+    color: #f5c518 !important;
+}
+
+/* --- Buttons --- */
+.sc-oc-btn-gold {
+    display: inline-block;
+    background: #b8905f !important;
+    color: #ffffff !important;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    min-height: 44px;
+    text-align: center;
+}
+
+.sc-oc-btn-gold:hover {
+    background: #a07a4f !important;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+.sc-oc-btn-outline {
+    display: inline-block;
+    background: transparent !important;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    min-height: 44px;
+    text-align: center;
+    margin-left: 12px;
+}
+
+.sc-oc-btn-outline:hover {
+    background: rgba(255,255,255,0.15) !important;
+    border-color: #ffffff;
+    color: #ffffff !important;
+}
+
+.sc-oc-btn-blue {
+    display: inline-block;
+    background: #7d99ad !important;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    min-height: 44px;
+    text-align: center;
+}
+
+.sc-oc-btn-blue:hover {
+    background: #6a879b !important;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+/* ===========================
+   TRUST BAR
+   =========================== */
+.sc-oc-trust-bar {
+    background: #2c3e50;
+    padding: 16px 20px;
+}
+
+.sc-oc-trust-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sc-oc-trust-item {
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.sc-oc-trust-item span {
+    color: #f5c518 !important;
+}
+
+/* ===========================
+   SECTIONS
+   =========================== */
+.sc-oc-section {
+    padding: 50px 20px;
+}
+
+.sc-oc-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50 !important;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.sc-oc-section .sc-oc-section-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 2em auto;
+    font-size: 1rem;
+    color: #555 !important;
+}
+
+.sc-oc-section-beige {
+    background: #f5f2ed;
+    padding: 50px 20px;
+}
+
+.sc-oc-section-gray {
+    background: #f8f8f8;
+    padding: 50px 20px;
+}
+
+/* --- Trust Badges --- */
+.sc-oc-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 700px;
+    margin: 0 auto 2.5em auto;
+}
+
+.sc-oc-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.sc-oc-badge-item img {
+    height: 44px;
+    width: auto;
+}
+
+.sc-oc-badge-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    line-height: 1.3;
+}
+
+.sc-oc-badge-text small {
+    display: block;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #888 !important;
+}
+
+.sc-oc-content-link {
+    color: #7d99ad !important;
+    font-weight: 600;
+    text-decoration: underline !important;
+    transition: color 0.2s ease;
+}
+
+.sc-oc-content-link:hover {
+    color: #b8905f !important;
+}
+
+/* ===========================
+   CONTENT GRID (Image + Text)
+   =========================== */
+.sc-oc-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.sc-oc-content-image {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sc-oc-content-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.sc-oc-content-text h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #2c3e50 !important;
+}
+
+.sc-oc-content-text h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    margin-top: 1.25em;
+    margin-bottom: 0.4em;
+}
+
+.sc-oc-content-text p {
+    font-size: 0.95rem;
+    color: #555 !important;
+    line-height: 1.7;
+}
+
+/* ===========================
+   FEATURE CARDS
+   =========================== */
+.sc-oc-features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sc-oc-feature-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.sc-oc-feature-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+}
+
+.sc-oc-feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(125,153,173,0.1);
+    color: #7d99ad !important;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+}
+
+.sc-oc-feature-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    margin-bottom: 0.4em;
+}
+
+.sc-oc-feature-card p {
+    font-size: 0.9rem;
+    color: #555 !important;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ===========================
+   DOOR STYLE SAMPLES GALLERY
+   =========================== */
+.sc-oc-samples-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 1000px;
+    margin: 2.5em auto 0 auto;
+}
+
+.sc-oc-sample-card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.sc-oc-sample-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.sc-oc-sample-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sc-oc-sample-label {
+    padding: 10px 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.sc-oc-sample-label small {
+    display: block;
+    font-weight: 400;
+    font-size: 0.72rem;
+    color: #888 !important;
+    margin-top: 2px;
+}
+
+.sc-oc-showroom-banner {
+    grid-column: 1 / -1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.sc-oc-showroom-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* ===========================
+   WHY CHOOSE US
+   =========================== */
+.sc-oc-why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sc-oc-why-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.sc-oc-why-check {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: #5cb85c;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.sc-oc-why-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50 !important;
+    margin-bottom: 0.25em;
+}
+
+.sc-oc-why-item p {
+    font-size: 0.92rem;
+    color: #555 !important;
+    margin: 0;
+}
+
+/* ===========================
+   FAQ ACCORDION
+   =========================== */
+.sc-oc-faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sc-oc-faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sc-oc-faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2c3e50 !important;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    min-height: 44px;
+}
+
+.sc-oc-faq-question:hover {
+    color: #7d99ad !important;
+}
+
+.sc-oc-faq-toggle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #7d99ad !important;
+    flex-shrink: 0;
+    margin-left: 16px;
+    transition: transform 0.3s ease;
+}
+
+.sc-oc-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.sc-oc-faq-answer-inner {
+    padding: 0 0 18px 0;
+    font-size: 0.92rem;
+    color: #555 !important;
+    line-height: 1.7;
+}
+
+.sc-oc-faq-item.active .sc-oc-faq-answer {
+    max-height: 500px;
+}
+
+.sc-oc-faq-item.active .sc-oc-faq-toggle {
+    transform: rotate(45deg);
+}
+
+/* ===========================
+   REVIEWS
+   =========================== */
+.sc-oc-reviews-section {
+    background: #2c3e50;
+    padding: 50px 20px;
+}
+
+.sc-oc-reviews-section h2 {
+    color: #ffffff !important;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+.sc-oc-reviews-section .sc-oc-section-intro {
+    color: rgba(255,255,255,0.85) !important;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2em auto;
+}
+
+.sc-oc-reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sc-oc-review-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.sc-oc-review-stars {
+    color: #f5c518 !important;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.sc-oc-page .sc-oc-review-text,
+.sc-oc-reviews-section .sc-oc-review-text,
+.sc-oc-reviews-section p.sc-oc-review-text {
+    color: #ffffff !important;
+    font-size: 0.92rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.sc-oc-page .sc-oc-review-author,
+.sc-oc-reviews-section .sc-oc-review-author {
+    color: #b8905f !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* ===========================
+   FINAL CTA
+   =========================== */
+.sc-oc-final-cta {
+    background: linear-gradient(135deg, #7d99ad 0%, #6a879b 100%);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sc-oc-final-cta h2 {
+    color: #ffffff !important;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+.sc-oc-final-cta .sc-oc-cta-text {
+    color: rgba(255,255,255,0.9) !important;
+    max-width: 650px;
+    margin: 0 auto 1.5em auto;
+    font-size: 1rem;
+}
+
+.sc-oc-final-cta .sc-oc-btn-gold {
+    font-size: 1rem;
+    padding: 16px 32px;
+}
+
+.sc-oc-btn-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1.5em;
+}
+
+/* ===========================
+   RESPONSIVE: TABLET (768px+)
+   =========================== */
+@media (min-width: 768px) {
+    .sc-oc-hero {
+        min-height: 480px;
+        padding: 80px 40px;
+    }
+
+    .sc-oc-hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .sc-oc-hero .sc-oc-hero-sub {
+        font-size: 1.1rem;
+    }
+
+    .sc-oc-section h2,
+    .sc-oc-section-beige h2,
+    .sc-oc-section-gray h2,
+    .sc-oc-content-text h2,
+    .sc-oc-reviews-section h2,
+    .sc-oc-final-cta h2 {
+        font-size: 1.75rem;
+    }
+
+    .sc-oc-content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .sc-oc-content-grid.sc-oc-reverse {
+        direction: rtl;
+    }
+
+    .sc-oc-content-grid.sc-oc-reverse > * {
+        direction: ltr;
+    }
+
+    .sc-oc-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sc-oc-samples-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sc-oc-reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===========================
+   RESPONSIVE: DESKTOP (1024px+)
+   =========================== */
+@media (min-width: 1024px) {
+    .sc-oc-hero h1 {
+        font-size: 2.75rem;
+    }
+
+    .sc-oc-hero .sc-oc-hero-sub {
+        font-size: 1.15rem;
+    }
+
+    .sc-oc-features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sc-oc-reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+</style>
+
+<div class="sc-oc-page">
+
+    <!-- ===========================
+         SECTION 1: HERO
+         =========================== -->
+    <section class="sc-oc-hero">
+        <div class="sc-oc-hero-content">
+            <div class="sc-oc-hero-badge">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 Stars on Google - 80+ Reviews
+            </div>
+            <h1>Omega Cabinetry: Semi-Custom & Custom Cabinets on the North Shore</h1>
+            <p class="sc-oc-hero-sub">Explore Omega Cabinetry's full line of American-made kitchen and bath cabinets at our Rowley showroom. Personalized design, 3D renderings, and expert guidance from your local authorized dealer - serving Newburyport, Haverhill, Ipswich, Salem NH, and communities across North Shore Massachusetts.</p>
+            <div>
+                <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-oc-btn-gold">Schedule Your Free Design Consultation</a>
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-oc-btn-outline">Visit Our Rowley Showroom</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 2: TRUST BAR
+         =========================== -->
+    <div class="sc-oc-trust-bar">
+        <div class="sc-oc-trust-items">
+            <span class="sc-oc-trust-item"><span>&#9733;</span> 4.9 Stars on Google</span>
+            <span class="sc-oc-trust-item">Authorized Omega Cabinetry Dealer</span>
+            <span class="sc-oc-trust-item">NKBA Member</span>
+            <span class="sc-oc-trust-item">Showroom in Rowley, MA</span>
+            <span class="sc-oc-trust-item">American-Made Cabinets</span>
+        </div>
+    </div>
+
+    <!-- ===========================
+         SECTION 3: INTRO + TRUST BADGES
+         =========================== -->
+    <section class="sc-oc-section">
+        <div class="sc-oc-container">
+
+            <div class="sc-oc-badge-row">
+                <div class="sc-oc-badge-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/08/best-of-nbpt-badge.png" alt="" width="60" height="60" loading="lazy">
+                    <div class="sc-oc-badge-text">Best of Newburyport<small>2025 Award Winner</small></div>
+                </div>
+                <div class="sc-oc-badge-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/01/National-Kitchen-and-Bath-Association-Member-Logo.png.webp" alt="" width="60" height="60" loading="lazy">
+                    <div class="sc-oc-badge-text">NKBA Member<small>National Kitchen & Bath Association</small></div>
+                </div>
+            </div>
+
+            <div style="max-width:800px;margin:0 auto;">
+                <p style="font-size:1.05rem;color:#444 !important;line-height:1.8;">Seacoast Cabinet is your authorized Omega Cabinetry dealer on the North Shore. Our <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" class="sc-oc-content-link">Rowley showroom</a> features working Omega displays where you can open drawers, feel finish quality, and explore the full range of door styles and configurations in person. Whether you're planning a complete kitchen renovation in <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/" class="sc-oc-content-link">Newburyport</a>, updating a bathroom in <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/" class="sc-oc-content-link">Haverhill</a>, or building from scratch in <a href="https://seacoastcabinetne.com/kitchen-cabinets-salem-nh/" class="sc-oc-content-link">Salem, NH</a>, our <a href="https://seacoastcabinetne.com/design-services/" class="sc-oc-content-link">design team</a> will help you find the right Omega line for your space, style, and budget.</p>
+            </div>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-oc-btn-gold">Schedule Your Free Design Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 4: ABOUT OMEGA CABINETRY
+         =========================== -->
+    <section class="sc-oc-section-beige">
+        <div class="sc-oc-container">
+            <div class="sc-oc-content-grid">
+                <div class="sc-oc-content-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Omega-Blair.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+                </div>
+                <div class="sc-oc-content-text">
+                    <h2>About Omega Cabinetry</h2>
+
+                    <h3>Semi-Custom vs. Custom: Understanding Omega's Product Lines</h3>
+                    <p>Omega Cabinetry occupies a space that most cabinet brands don't - offering genuine semi-custom flexibility with custom-grade construction quality. Manufactured domestically by MasterBrand Cabinets (the same parent company behind <a href="https://seacoastcabinetne.com/cabinets/" class="sc-oc-content-link">Homecrest and Mantra</a>), Omega gives homeowners access to hundreds of door styles, finish combinations, and cabinet modifications without the lead times or pricing of a fully bespoke line. The result is a cabinet that looks and feels custom, but orders and delivers on a semi-custom timeline.</p>
+
+                    <h3>American-Made Quality and Craftsmanship</h3>
+                    <p>Every Omega cabinet is built domestically, which means predictable lead times, consistent quality control, and no tariff-related cost surprises. Dovetail drawer boxes, soft-close hardware, and premium finish options come standard - not as upgrades. For North Shore homeowners who value quality construction and want to support American manufacturing, Omega is one of the strongest options on the market.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 5: DOOR STYLES & FINISHES
+         =========================== -->
+    <section class="sc-oc-section">
+        <div class="sc-oc-container">
+            <h2>Omega Cabinetry Door Styles and Finishes</h2>
+            <p class="sc-oc-section-intro">From classic Shaker profiles to full-access European construction, Omega offers one of the widest door style selections in the semi-custom category. Visit our showroom to see and touch samples before making your selection.</p>
+
+            <div class="sc-oc-features-grid">
+                <div class="sc-oc-feature-card">
+                    <div class="sc-oc-feature-icon">&#9645;</div>
+                    <h3>Shaker & Transitional</h3>
+                    <p>Clean-line Shaker profiles in dozens of painted and stained finishes. The most versatile option for New England homes.</p>
+                </div>
+                <div class="sc-oc-feature-card">
+                    <div class="sc-oc-feature-icon">&#9635;</div>
+                    <h3>Inset Cabinetry</h3>
+                    <p>Traditional inset construction where the door sits flush within the face frame. A hallmark of high-end, furniture-quality kitchen design.</p>
+                </div>
+                <div class="sc-oc-feature-card">
+                    <div class="sc-oc-feature-icon">&#9632;</div>
+                    <h3>Full-Access / Slab</h3>
+                    <p>Frameless European-style construction for modern kitchens. Maximizes interior storage space with clean, minimalist lines.</p>
+                </div>
+                <div class="sc-oc-feature-card">
+                    <div class="sc-oc-feature-icon">&#9733;</div>
+                    <h3>Specialty Finishes</h3>
+                    <p>Painted, stained, glazed, and distressed options. Omega's finish library goes well beyond what most semi-custom brands offer.</p>
+                </div>
+            </div>
+
+            <div class="sc-oc-samples-grid">
+                <div class="sc-oc-sample-card">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Omega-Blair-Cherry-Dessert-300x490-1.webp" alt="" width="300" height="490" loading="lazy" decoding="async">
+                    <div class="sc-oc-sample-label">Omega Blair<small>Cherry Desert</small></div>
+                </div>
+                <div class="sc-oc-sample-card">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Omega-Blair-Maple-Desert-300x490-1.webp" alt="" width="300" height="490" loading="lazy" decoding="async">
+                    <div class="sc-oc-sample-label">Omega Blair<small>Maple Desert</small></div>
+                </div>
+                <div class="sc-oc-sample-card">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Omega-Kentwood-Maple-Dessert-300x490-1.webp" alt="" width="300" height="490" loading="lazy" decoding="async">
+                    <div class="sc-oc-sample-label">Omega Kentwood<small>Maple Desert</small></div>
+                </div>
+                <div class="sc-oc-sample-card">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Omega-Kentwood-Walnut-Desert-300x490-1.webp" alt="" width="300" height="490" loading="lazy" decoding="async">
+                    <div class="sc-oc-sample-label">Omega Kentwood<small>Walnut Desert</small></div>
+                </div>
+                <div class="sc-oc-showroom-banner">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/08/Showroom2-scaled.webp" alt="" width="1200" height="600" loading="lazy" decoding="async">
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:2.5em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-oc-btn-gold">Visit Our Rowley Showroom to See Omega Samples</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 6: OMEGA FOR KITCHEN REMODELS
+         =========================== -->
+    <section class="sc-oc-section-gray">
+        <div class="sc-oc-container">
+            <div class="sc-oc-content-grid sc-oc-reverse">
+                <div class="sc-oc-content-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/08/Blue-Island.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+                </div>
+                <div class="sc-oc-content-text">
+                    <h2>Omega Cabinetry for Kitchen Remodels on the North Shore</h2>
+
+                    <h3>Omega Cabinetry for Kitchen Renovations</h3>
+                    <p>Whether you're gutting a galley kitchen in a 1920s Newburyport colonial or designing a new open-concept layout in a <a href="https://seacoastcabinetne.com/kitchen-cabinets-boxford-ma/" class="sc-oc-content-link">Boxford</a> new build, Omega's semi-custom flexibility makes it the right fit for a wide range of North Shore projects. Modifications like reduced-depth cabinets, custom drawer inserts, and built-in organizers let your <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-oc-content-link">kitchen design</a> work around your home's quirks rather than forcing a standard solution.</p>
+
+                    <h3>Working With Our Design Team to Choose the Right Line</h3>
+                    <p>Not sure whether Omega is the right fit compared to Homecrest or Mantra? That's exactly what our <a href="https://seacoastcabinetne.com/design-services/" class="sc-oc-content-link">design consultation</a> is for. We'll walk through your layout, your priorities, and your budget - then show you how each line compares using <a href="https://seacoastcabinetne.com/our-process/" class="sc-oc-content-link">photorealistic 3D renderings</a> of your actual kitchen. Use our <a href="https://seacoastcabinetne.com/budget-planner/" class="sc-oc-content-link">budget planner</a> to get started, or book a <a href="https://seacoastcabinetne.com/virtual-design/" class="sc-oc-content-link">virtual design session</a> if you can't make it to the showroom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 7: WHY CHOOSE SEACOAST FOR OMEGA
+         =========================== -->
+    <section class="sc-oc-section">
+        <div class="sc-oc-container">
+            <h2>Why North Shore Homeowners Choose Seacoast Cabinet for Omega</h2>
+            <p class="sc-oc-section-intro">There are other places to order Omega Cabinetry. Here's why local homeowners and contractors choose to work with us.</p>
+
+            <div class="sc-oc-why-grid">
+                <div class="sc-oc-why-item">
+                    <div class="sc-oc-why-check">&#10003;</div>
+                    <div>
+                        <h3>Authorized Omega Cabinetry Dealer</h3>
+                        <p>We carry the full Omega line with direct manufacturer support, warranty coverage, and access to the complete catalog of styles, modifications, and finishes.</p>
+                    </div>
+                </div>
+                <div class="sc-oc-why-item">
+                    <div class="sc-oc-why-check">&#10003;</div>
+                    <div>
+                        <h3>Physical Showroom With Working Displays</h3>
+                        <p>Open drawers, test soft-close hardware, and compare finishes side by side at our <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" class="sc-oc-content-link">Rowley showroom</a>. No guessing from a screen.</p>
+                    </div>
+                </div>
+                <div class="sc-oc-why-item">
+                    <div class="sc-oc-why-check">&#10003;</div>
+                    <div>
+                        <h3>Dedicated Design Staff</h3>
+                        <p>Our designers specialize in Omega's product lines and know which modifications, accessories, and configurations work best for North Shore home layouts - from historic <a href="https://seacoastcabinetne.com/kitchen-cabinets-ipswich-ma/" class="sc-oc-content-link">Ipswich</a> colonials to newer construction in <a href="https://seacoastcabinetne.com/kitchen-designs-andover-ma/" class="sc-oc-content-link">Andover</a>.</p>
+                    </div>
+                </div>
+                <div class="sc-oc-why-item">
+                    <div class="sc-oc-why-check">&#10003;</div>
+                    <div>
+                        <h3>Local Delivery and Project Coordination</h3>
+                        <p>We manage delivery logistics across the North Shore and Southern New Hampshire. Your cabinets arrive on schedule, inspected and ready for installation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-oc-btn-gold">See Omega Cabinetry at Our Showroom</a>
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-oc-btn-blue" style="margin-left:12px;">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 8: OMEGA FOR BATHROOMS
+         =========================== -->
+    <section class="sc-oc-section-beige">
+        <div class="sc-oc-container">
+            <div class="sc-oc-content-grid">
+                <div class="sc-oc-content-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/08/Bath-1440x960-1.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+                </div>
+                <div class="sc-oc-content-text">
+                    <h2>Omega Cabinetry for Bathrooms</h2>
+                    <p>Omega isn't just for kitchens. The same construction quality, finish options, and semi-custom flexibility that make Omega a top kitchen cabinet brand translate directly to bathroom vanities, linen cabinets, and built-in storage. From floating vanities to full-height linen towers, Omega's bath line gives you the same level of customization you'd expect in a kitchen - without the kitchen price tag.</p>
+                    <p>Our design team can help you coordinate bathroom cabinetry with your <a href="https://seacoastcabinetne.com/countertops/" class="sc-oc-content-link">countertop selections</a> for a cohesive look across your entire home. Browse completed projects in our <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-oc-content-link">inspiration gallery</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 9: FAQ
+         =========================== -->
+    <section class="sc-oc-section">
+        <div class="sc-oc-container">
+            <h2>Frequently Asked Questions About Omega Cabinetry</h2>
+            <p class="sc-oc-section-intro">Common questions from homeowners exploring Omega Cabinetry for their kitchen or bath project.</p>
+
+            <div class="sc-oc-faq-list">
+
+                <div class="sc-oc-faq-item">
+                    <button class="sc-oc-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Is Omega Cabinetry a good brand?
+                        <span class="sc-oc-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-oc-faq-answer">
+                        <div class="sc-oc-faq-answer-inner">
+                            Omega is consistently rated as one of the best semi-custom cabinet brands in America. Manufactured domestically by MasterBrand Cabinets, Omega combines custom-grade construction - dovetail drawer boxes, soft-close hardware, premium finishes - with the ordering efficiency and pricing of a semi-custom line. For North Shore homeowners who want quality without the lead times of a fully bespoke cabinet, Omega is a strong choice.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-oc-faq-item">
+                    <button class="sc-oc-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What is the difference between Omega Dynasty and Omega Cabinetry?
+                        <span class="sc-oc-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-oc-faq-answer">
+                        <div class="sc-oc-faq-answer-inner">
+                            Omega Dynasty was the previous branding for what is now simply called Omega Cabinetry. The product line, manufacturing facility, and quality standards are the same - MasterBrand consolidated the naming to simplify the brand. If you've seen "Omega Dynasty" referenced online, you're looking at the same cabinets we carry at Seacoast Cabinet today.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-oc-faq-item">
+                    <button class="sc-oc-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How long does it take to get Omega Cabinetry?
+                        <span class="sc-oc-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-oc-faq-answer">
+                        <div class="sc-oc-faq-answer-inner">
+                            Omega Cabinetry lead times typically range from 6 to 10 weeks from order to delivery, depending on the complexity of your project and any custom modifications. Because Omega is manufactured domestically, lead times are more predictable than imported alternatives. Our team provides a specific timeline estimate during your <a href="https://seacoastcabinetne.com/our-process/" class="sc-oc-content-link">design consultation</a>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-oc-faq-item">
+                    <button class="sc-oc-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Can I see Omega Cabinetry in person near me?
+                        <span class="sc-oc-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-oc-faq-answer">
+                        <div class="sc-oc-faq-answer-inner">
+                            Yes. Seacoast Cabinet's showroom at 300 Newburyport Turnpike in Rowley, MA has multiple Omega displays with working drawers, doors, and finish samples. Walk-ins are welcome during business hours (Monday-Friday 9am-5pm, Saturday by appointment), or you can <a href="https://seacoastcabinetne.com/contact/" class="sc-oc-content-link">schedule a dedicated design appointment</a> for focused one-on-one time with our team.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-oc-faq-item">
+                    <button class="sc-oc-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Does Seacoast Cabinet install Omega Cabinetry?
+                        <span class="sc-oc-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-oc-faq-answer">
+                        <div class="sc-oc-faq-answer-inner">
+                            Seacoast Cabinet specializes in cabinet design, specification, and supply. We coordinate directly with experienced local installers and contractors to ensure your Omega cabinets are installed to manufacturer specifications. We also work with homeowners who already have a contractor lined up - providing detailed installation specs and white-glove delivery.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-oc-faq-item">
+                    <button class="sc-oc-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How does Omega Cabinetry compare to KraftMaid?
+                        <span class="sc-oc-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-oc-faq-answer">
+                        <div class="sc-oc-faq-answer-inner">
+                            Both Omega and KraftMaid sit in the semi-custom category, but they differ in construction quality and customization depth. Omega offers dovetail drawer boxes and soft-close hardware as standard features, while KraftMaid treats some of these as upgrades. Omega also provides a wider range of door styles, finish options, and modification capabilities. For homeowners comparing the two, the best approach is to see both in person - <a href="https://seacoastcabinetne.com/contact/" class="sc-oc-content-link">schedule a showroom visit</a> and our team can walk you through the differences.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 10: REVIEWS
+         =========================== -->
+    <section class="sc-oc-reviews-section">
+        <div class="sc-oc-container">
+            <h2>What Our Customers Say</h2>
+            <p class="sc-oc-section-intro">Real reviews from homeowners who trusted Seacoast Cabinet with their kitchen project.</p>
+
+            <div class="sc-oc-reviews-grid">
+                <div class="sc-oc-review-card">
+                    <div class="sc-oc-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-oc-review-text">"They were nothing but accommodating and professional throughout the whole process. The entire process with Frank and Dee was exceptional from start to finish, to include the install team, Tim and Ray. A huge thank you to the whole team from Seacoast Cabinet! We highly recommend them and appreciate everything they did for us."</p>
+                    <div class="sc-oc-review-author">- Pete S., Google Review</div>
+                </div>
+                <div class="sc-oc-review-card">
+                    <div class="sc-oc-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-oc-review-text">"We recently had our kitchen remodeled. Deondre was my designer and go to person. From start to finish Dee was knowledgeable, patient and incredibly helpful. I received a personalized assistance that exceeded all expectations. I handed over the reins to her. She dealt with my contractor as well as the company's I used for my countertops and appliances. The product line Seacoast Cabinets use is exceptional. I highly recommend."</p>
+                    <div class="sc-oc-review-author">- RR H., Google Review</div>
+                </div>
+                <div class="sc-oc-review-card">
+                    <div class="sc-oc-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-oc-review-text">"Seacoast Cabinets designs and layouts are beautiful and timeless. Their beautiful store layout gives you an immediate confidence that you're in good hands. Their installation process efficient and organized. Frank and his team are complete pro's from start to finish. I highly recommend them for all your remolding and new construction cabinet needs."</p>
+                    <div class="sc-oc-review-author">- Randell M., Google Review</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SECTION 11: FINAL CTA
+         =========================== -->
+    <section class="sc-oc-final-cta">
+        <div class="sc-oc-container">
+            <h2>Ready to Explore Omega Cabinetry?</h2>
+            <p class="sc-oc-cta-text">Visit our Rowley showroom to see Omega's full range of door styles, finishes, and hardware in person. Your design fee is credited toward your cabinet purchase - making expert kitchen design accessible and cost-effective.</p>
+            <div class="sc-oc-btn-cta-row">
+                <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-oc-btn-gold">Schedule a Design Consultation</a>
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-oc-btn-gold" style="background:#2c3e50 !important;">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+</div>
