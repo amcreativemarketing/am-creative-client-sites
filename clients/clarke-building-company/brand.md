@@ -25,7 +25,7 @@ Dave Clarke is the owner, general contractor, and primary point of contact from 
 | **Legal Entity** | David A Clarke Jr. (LLC) |
 | **Owner / GC** | Dave Clarke |
 | **Website** | https://clarkebuildingcompany.com/ |
-| **Phone** | (978) 257-5331 |
+| **Phone** | (978) 693-5706 |
 | **Email** | dave@clarkebuildingcompany.com |
 | **Address** | 51 Pleasant St., West Newbury, MA 01985 |
 | **Hours** | Monday - Friday, 8:00am - 5:00pm |
@@ -542,7 +542,7 @@ Use staggered fade-up animations on hero and key sections. Keep it subtle on inn
 
 | Field | Value |
 |-------|-------|
-| **Phone** | (978) 257-5331 |
+| **Phone** | (978) 693-5706 |
 | **Email** | dave@clarkebuildingcompany.com |
 | **Address** | 51 Pleasant St., West Newbury, MA 01985 |
 | **Website** | https://clarkebuildingcompany.com/ |
