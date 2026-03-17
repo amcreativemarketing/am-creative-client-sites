@@ -1,0 +1,689 @@
+<!-- HERO OPTIONS
+     Option A: H1: Custom Kitchen & Bathroom Cabinets - North Shore MA Showroom
+               P: Explore Mantra, Homecrest, and Omega cabinetry at our Rowley showroom. Semi-custom and custom options, 3D design, and expert guidance for homeowners across North Shore Massachusetts and Southern New Hampshire.
+     Option B: H1: Kitchen Cabinets Near You - Seacoast Cabinet Rowley, MA
+               P: American-made custom and semi-custom cabinets from three trusted brands. Visit our North Shore showroom to see door styles, finishes, and hardware in person.
+     CTAs: Schedule a Free Design Consultation → https://seacoastcabinetne.com/contact/
+           View Our Kitchen Projects → https://seacoastcabinetne.com/inspiration-gallery/
+-->
+
+<style>
+/* ============================================
+   SEACOAST CABINET - CABINETS HUB PAGE
+   Namespace: .sc-cb-*
+   ============================================ */
+
+.sc-cb-page {
+    --coastal-blue: #7d99ad;
+    --warm-gold: #b8905f;
+    --deep-charcoal: #2c3e50;
+    --pure-white: #ffffff;
+    --light-gray: #f8f8f8;
+    --medium-gray: #666666;
+    --warm-beige: #f5f2ed;
+    --success-green: #5cb85c;
+    font-family: 'Open Sans', sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.sc-cb-page *, .sc-cb-page *::before, .sc-cb-page *::after { box-sizing: border-box; }
+.sc-cb-page h1, .sc-cb-page h2, .sc-cb-page h3, .sc-cb-page h4 { font-family: 'Montserrat', sans-serif; line-height: 1.2; margin: 0 0 0.75em 0; }
+.sc-cb-page p { color: #444 !important; margin: 0 0 1em 0; font-size: 1rem; }
+.sc-cb-page a { text-decoration: none; }
+
+.sc-cb-page { margin: 0 !important; padding: 0 !important; max-width: 100% !important; width: 100% !important; }
+
+.sc-cb-page .sc-cb-hero, .sc-cb-page .sc-cb-trust-bar, .sc-cb-page .sc-cb-section-beige,
+.sc-cb-page .sc-cb-section-gray, .sc-cb-page .sc-cb-callout, .sc-cb-page .sc-cb-reviews-section,
+.sc-cb-page .sc-cb-final-cta {
+    width: 100vw !important; margin-left: calc(-50vw + 50%) !important; margin-right: calc(-50vw + 50%) !important;
+}
+
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-cb-page .sc-cb-hero,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-cb-page .sc-cb-trust-bar,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-cb-page .sc-cb-section-beige,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-cb-page .sc-cb-section-gray,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-cb-page .sc-cb-callout,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-cb-page .sc-cb-reviews-section,
+.et_pb_section .et_pb_row .et_pb_column .et_pb_code .et_pb_code_inner .sc-cb-page .sc-cb-final-cta {
+    width: 100vw !important; margin-left: calc(-50vw + 50%) !important; margin-right: calc(-50vw + 50%) !important;
+}
+
+.sc-cb-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* HERO */
+.sc-cb-hero {
+    position: relative; width: 100%; min-height: 420px;
+    background-image: url('https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-33.webp');
+    background-size: cover; background-position: center; background-repeat: no-repeat;
+    display: flex; align-items: center; justify-content: center; text-align: center; padding: 60px 20px;
+}
+.sc-cb-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(44,62,80,0.45); z-index: 1; }
+.sc-cb-hero-content { position: relative; z-index: 2; max-width: 800px; }
+.sc-cb-hero h1 { color: #ffffff !important; font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5em; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.sc-cb-hero .sc-cb-hero-sub { color: #ffffff !important; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5em; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+.sc-cb-hero .sc-cb-hero-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; padding: 6px 16px; color: #ffffff !important; font-size: 0.85rem; margin-bottom: 1.5em; }
+.sc-cb-hero .sc-cb-hero-badge span { color: #f5c518 !important; }
+
+/* BUTTONS */
+.sc-cb-btn-gold { display: inline-block; background: #b8905f !important; color: #ffffff !important; padding: 14px 28px; border-radius: 6px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.95rem; transition: background 0.3s ease, transform 0.2s ease; min-height: 44px; text-align: center; }
+.sc-cb-btn-gold:hover { background: #a07a4f !important; transform: translateY(-1px); color: #ffffff !important; }
+.sc-cb-btn-outline { display: inline-block; background: transparent !important; color: #ffffff !important; padding: 12px 24px; border: 2px solid rgba(255,255,255,0.6); border-radius: 6px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.9rem; transition: background 0.3s ease, border-color 0.3s ease; min-height: 44px; text-align: center; margin-left: 12px; }
+.sc-cb-btn-outline:hover { background: rgba(255,255,255,0.15) !important; border-color: #ffffff; color: #ffffff !important; }
+.sc-cb-btn-blue { display: inline-block; background: #7d99ad !important; color: #ffffff !important; padding: 12px 24px; border-radius: 6px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.9rem; transition: background 0.3s ease, transform 0.2s ease; min-height: 44px; text-align: center; }
+.sc-cb-btn-blue:hover { background: #6a879b !important; transform: translateY(-1px); color: #ffffff !important; }
+
+/* TRUST BAR */
+.sc-cb-trust-bar { background: #2c3e50; padding: 16px 20px; }
+.sc-cb-trust-items { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 24px; max-width: 1100px; margin: 0 auto; }
+.sc-cb-trust-item { color: rgba(255,255,255,0.9) !important; font-size: 0.85rem; white-space: nowrap; }
+.sc-cb-trust-item span { color: #f5c518 !important; }
+
+/* SECTIONS */
+.sc-cb-section { padding: 50px 20px; }
+.sc-cb-section h2 { font-size: 1.5rem; font-weight: 700; color: #2c3e50 !important; text-align: center; margin-bottom: 0.5em; }
+.sc-cb-section .sc-cb-section-intro { text-align: center; max-width: 750px; margin: 0 auto 2em auto; font-size: 1rem; color: #555 !important; }
+.sc-cb-section-beige { background: #f5f2ed; padding: 50px 20px; }
+.sc-cb-section-gray { background: #f8f8f8; padding: 50px 20px; }
+
+/* BADGES */
+.sc-cb-badge-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 24px; max-width: 700px; margin: 0 auto 2.5em auto; }
+.sc-cb-badge-item { display: flex; align-items: center; gap: 10px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.sc-cb-badge-item img { height: 44px; width: auto; }
+.sc-cb-badge-text { font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 600; color: #2c3e50 !important; line-height: 1.3; }
+.sc-cb-badge-text small { display: block; font-weight: 400; font-size: 0.75rem; color: #888 !important; }
+.sc-cb-content-link { color: #7d99ad !important; font-weight: 600; text-decoration: underline !important; transition: color 0.2s ease; }
+.sc-cb-content-link:hover { color: #b8905f !important; }
+
+/* CONTENT GRID */
+.sc-cb-content-grid { display: grid; grid-template-columns: 1fr; gap: 32px; max-width: 1000px; margin: 0 auto; align-items: center; }
+.sc-cb-content-image { border-radius: 10px; overflow: hidden; }
+.sc-cb-content-image img { width: 100%; height: auto; display: block; border-radius: 10px; }
+.sc-cb-content-text h2 { text-align: left; font-size: 1.5rem; color: #2c3e50 !important; }
+.sc-cb-content-text h3 { font-size: 1.05rem; font-weight: 600; color: #2c3e50 !important; margin-top: 1.25em; margin-bottom: 0.4em; }
+.sc-cb-content-text p { font-size: 0.95rem; color: #555 !important; line-height: 1.7; }
+
+/* BRAND SHOWCASE */
+.sc-cb-brand-showcase { display: grid; grid-template-columns: 1fr; gap: 32px; max-width: 1000px; margin: 0 auto; align-items: start; }
+
+.sc-cb-brand-hero { border-radius: 10px; overflow: hidden; }
+.sc-cb-brand-hero img { width: 100%; height: auto; display: block; border-radius: 10px; }
+
+.sc-cb-brand-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 1.5em; }
+.sc-cb-brand-gallery img { width: 100%; height: 160px; object-fit: cover; display: block; border-radius: 8px; }
+
+.sc-cb-brand-tag { display: inline-block; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; margin-bottom: 0.75em; color: #ffffff !important; }
+.sc-cb-tag-premium { background: #b8905f; }
+.sc-cb-tag-midrange { background: #7d99ad; }
+.sc-cb-tag-value { background: #5cb85c; }
+
+.sc-cb-brand-content h2 { text-align: left; font-size: 1.5rem; }
+.sc-cb-brand-content p { font-size: 0.95rem; color: #555 !important; line-height: 1.7; }
+
+.sc-cb-brand-specs {
+    margin: 1.25em 0 0 0;
+    padding: 16px 20px;
+    background: rgba(0,0,0,0.03);
+    border-radius: 8px;
+    border-left: 3px solid #e0e0e0;
+}
+
+.sc-cb-brand-omega .sc-cb-brand-specs { border-left-color: #b8905f; }
+.sc-cb-brand-homecrest .sc-cb-brand-specs { border-left-color: #7d99ad; }
+.sc-cb-brand-mantra .sc-cb-brand-specs { border-left-color: #5cb85c; }
+
+.sc-cb-specs-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #2c3e50 !important;
+    margin-bottom: 0.75em;
+}
+
+.sc-cb-specs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+}
+
+.sc-cb-spec-item {
+    font-size: 0.85rem;
+    color: #555 !important;
+    line-height: 1.5;
+    padding-left: 20px;
+    position: relative;
+}
+
+.sc-cb-spec-item::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: #5cb85c !important;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.sc-cb-spec-highlight {
+    font-weight: 600;
+    color: #2c3e50 !important;
+}
+
+/* CALLOUT */
+.sc-cb-callout { background: #2c3e50; padding: 50px 20px; }
+.sc-cb-callout-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
+.sc-cb-callout-badge { display: inline-block; background: rgba(184,144,95,0.2); border: 1px solid rgba(184,144,95,0.4); color: #b8905f !important; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 4px; margin-bottom: 0.75em; }
+.sc-cb-callout h2 { color: #ffffff !important; text-align: left; font-size: 1.4rem; margin-bottom: 0.5em; }
+.sc-cb-callout p { color: rgba(255,255,255,0.85) !important; font-size: 0.95rem; line-height: 1.7; }
+
+/* INSTALL GRID */
+.sc-cb-install-grid { display: grid; grid-template-columns: 1fr; gap: 32px; max-width: 1000px; margin: 0 auto; align-items: center; }
+.sc-cb-install-image { border-radius: 10px; overflow: hidden; }
+.sc-cb-install-image img { width: 100%; height: auto; display: block; border-radius: 10px; }
+
+/* PRICING */
+.sc-cb-pricing-wrap { max-width: 800px; margin: 0 auto; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.sc-cb-pricing-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.sc-cb-pricing-table thead th { background: #2c3e50; color: #ffffff !important; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.88rem; padding: 14px 16px; text-align: left; }
+.sc-cb-pricing-table thead th:first-child { border-radius: 8px 0 0 0; }
+.sc-cb-pricing-table thead th:last-child { border-radius: 0 8px 0 0; }
+.sc-cb-pricing-table tbody td { padding: 12px 16px; border-bottom: 1px solid #e8e8e8; color: #444 !important; }
+.sc-cb-pricing-table tbody tr:nth-child(even) { background: #fafafa; }
+.sc-cb-pricing-table tbody tr:last-child td { border-bottom: none; }
+
+/* FAQ */
+.sc-cb-faq-list { max-width: 800px; margin: 0 auto; }
+.sc-cb-faq-item { border-bottom: 1px solid #e0e0e0; }
+.sc-cb-faq-question { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; cursor: pointer; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.95rem; color: #2c3e50 !important; background: none; border: none; width: 100%; text-align: left; min-height: 44px; }
+.sc-cb-faq-question:hover { color: #7d99ad !important; }
+.sc-cb-faq-toggle { font-size: 1.2rem; font-weight: 700; color: #7d99ad !important; flex-shrink: 0; margin-left: 16px; transition: transform 0.3s ease; }
+.sc-cb-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+.sc-cb-faq-answer-inner { padding: 0 0 18px 0; font-size: 0.92rem; color: #555 !important; line-height: 1.7; }
+.sc-cb-faq-item.active .sc-cb-faq-answer { max-height: 500px; }
+.sc-cb-faq-item.active .sc-cb-faq-toggle { transform: rotate(45deg); }
+
+/* REVIEWS */
+.sc-cb-reviews-section { background: #2c3e50; padding: 50px 20px; }
+.sc-cb-reviews-section h2 { color: #ffffff !important; text-align: center; font-size: 1.5rem; margin-bottom: 0.5em; }
+.sc-cb-reviews-section .sc-cb-section-intro { color: rgba(255,255,255,0.85) !important; text-align: center; max-width: 700px; margin: 0 auto 2em auto; }
+.sc-cb-reviews-grid { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; }
+.sc-cb-review-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 24px; }
+.sc-cb-review-stars { color: #f5c518 !important; font-size: 1.1rem; margin-bottom: 10px; }
+.sc-cb-page .sc-cb-review-text, .sc-cb-reviews-section p.sc-cb-review-text { color: #ffffff !important; font-size: 0.92rem; font-style: italic; line-height: 1.7; margin-bottom: 12px; }
+.sc-cb-page .sc-cb-review-author, .sc-cb-reviews-section .sc-cb-review-author { color: #b8905f !important; font-weight: 600; font-size: 0.85rem; }
+
+/* FINAL CTA */
+.sc-cb-final-cta { background: linear-gradient(135deg, #7d99ad 0%, #6a879b 100%); padding: 50px 20px; text-align: center; }
+.sc-cb-final-cta h2 { color: #ffffff !important; font-size: 1.5rem; margin-bottom: 0.5em; }
+.sc-cb-final-cta .sc-cb-cta-text { color: rgba(255,255,255,0.9) !important; max-width: 650px; margin: 0 auto 1.5em auto; font-size: 1rem; }
+.sc-cb-final-cta .sc-cb-btn-gold { font-size: 1rem; padding: 16px 32px; }
+.sc-cb-btn-cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 1.5em; }
+
+/* RESPONSIVE: TABLET */
+@media (min-width: 768px) {
+    .sc-cb-hero { min-height: 480px; padding: 80px 40px; }
+    .sc-cb-hero h1 { font-size: 2.25rem; }
+    .sc-cb-hero .sc-cb-hero-sub { font-size: 1.1rem; }
+    .sc-cb-section h2, .sc-cb-section-beige h2, .sc-cb-section-gray h2, .sc-cb-content-text h2, .sc-cb-brand-content h2, .sc-cb-reviews-section h2, .sc-cb-final-cta h2 { font-size: 1.75rem; }
+    .sc-cb-content-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .sc-cb-content-grid.sc-cb-reverse { direction: rtl; }
+    .sc-cb-content-grid.sc-cb-reverse > * { direction: ltr; }
+    .sc-cb-brand-showcase { grid-template-columns: 420px 1fr; gap: 40px; }
+    .sc-cb-brand-showcase.sc-cb-brand-flip { direction: rtl; }
+    .sc-cb-brand-showcase.sc-cb-brand-flip > * { direction: ltr; }
+    .sc-cb-brand-gallery img { height: 180px; }
+    .sc-cb-specs-grid { grid-template-columns: 1fr 1fr; }
+    .sc-cb-callout-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .sc-cb-callout h2 { font-size: 1.6rem; }
+    .sc-cb-install-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .sc-cb-reviews-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .sc-cb-hero h1 { font-size: 2.75rem; }
+    .sc-cb-hero .sc-cb-hero-sub { font-size: 1.15rem; }
+    .sc-cb-brand-gallery img { height: 200px; }
+}
+</style>
+
+<div class="sc-cb-page">
+
+    <!-- SECTION 1: HERO -->
+    <section class="sc-cb-hero">
+        <div class="sc-cb-hero-content">
+            <div class="sc-cb-hero-badge">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 Stars on Google - 80+ Reviews
+            </div>
+            <h1>Custom Kitchen & Bathroom Cabinets - North Shore MA Showroom</h1>
+            <p class="sc-cb-hero-sub">Explore Mantra, Homecrest, and Omega cabinetry at our Rowley showroom. Semi-custom and custom options, 3D design renderings, and expert guidance for homeowners and contractors across North Shore Massachusetts and Southern New Hampshire.</p>
+            <div>
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-cb-btn-gold">Schedule a Free Design Consultation</a>
+                <a href="https://seacoastcabinetne.com/inspiration-gallery/" class="sc-cb-btn-outline">View Our Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: TRUST BAR -->
+    <div class="sc-cb-trust-bar">
+        <div class="sc-cb-trust-items">
+            <span class="sc-cb-trust-item"><span>&#9733;</span> 4.9 Stars on Google</span>
+            <span class="sc-cb-trust-item">Cabinet Showroom in Rowley, MA</span>
+            <span class="sc-cb-trust-item">NKBA Member</span>
+            <span class="sc-cb-trust-item">3 American-Made Cabinet Brands</span>
+            <span class="sc-cb-trust-item">Free Design Consultations</span>
+        </div>
+    </div>
+
+    <!-- SECTION 3: INTRO + BADGES (white) -->
+    <section class="sc-cb-section">
+        <div class="sc-cb-container">
+            <div class="sc-cb-badge-row">
+                <div class="sc-cb-badge-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/08/best-of-nbpt-badge.png" alt="" width="60" height="60" loading="lazy">
+                    <div class="sc-cb-badge-text">Best of Newburyport<small>2025 Award Winner</small></div>
+                </div>
+                <div class="sc-cb-badge-item">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/01/National-Kitchen-and-Bath-Association-Member-Logo.png.webp" alt="" width="60" height="60" loading="lazy">
+                    <div class="sc-cb-badge-text">NKBA Member<small>National Kitchen & Bath Association</small></div>
+                </div>
+            </div>
+
+            <div style="max-width:800px;margin:0 auto;">
+                <p style="font-size:1.05rem;color:#444 !important;line-height:1.8;">Seacoast Cabinet is the North Shore's custom kitchen and bathroom cabinet showroom. Located in <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" class="sc-cb-content-link">Rowley, MA</a>, we carry three American-made cabinet brands: Mantra, Homecrest, and Omega, each offering a different balance of price, customization, and lead time. Whether you're planning a full kitchen remodel in <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/" class="sc-cb-content-link">Newburyport</a> or updating a bathroom vanity in <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/" class="sc-cb-content-link">Haverhill</a>, our <a href="https://seacoastcabinetne.com/design-services/" class="sc-cb-content-link">design team</a> will help you find the right cabinets for your space, style, and budget.</p>
+            </div>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-cb-btn-gold">Schedule a Free Design Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: STYLES & CONSTRUCTION (beige) -->
+    <section class="sc-cb-section-beige">
+        <div class="sc-cb-container">
+            <div class="sc-cb-content-grid">
+                <div class="sc-cb-content-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Omega-Cabinets-5.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+                </div>
+                <div class="sc-cb-content-text">
+                    <h2>Kitchen Cabinets - Styles, Materials & Finishes</h2>
+
+                    <h3>Shaker Cabinet Styles for North Shore Kitchens</h3>
+                    <p>Shaker cabinets remain the most requested door style in our showroom, and across the North Shore. The clean, recessed-panel profile works in traditional colonials, transitional homes, and contemporary open-concept layouts. We carry shaker doors in painted, stained, and specialty finishes across all three of our cabinet lines. Explore all styles on our <a href="https://seacoastcabinetne.com/cabinet-styles/" class="sc-cb-content-link">cabinet styles page</a>.</p>
+
+                    <h3>Custom vs. Semi-Custom: What's Right for Your Remodel?</h3>
+                    <p>Semi-custom cabinets give you hundreds of door styles, finishes, and modifications at a predictable price point. Fully custom options open up unlimited sizing and specialty features. Our <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-cb-content-link">design consultations</a> help you determine which level of customization your project actually needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: OMEGA CABINETRY (gray) -->
+    <section class="sc-cb-section-gray">
+        <div class="sc-cb-container">
+            <div class="sc-cb-brand-showcase">
+                <div>
+                    <div class="sc-cb-brand-hero">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Omega-Blair.webp" alt="" width="420" height="315" loading="lazy" decoding="async">
+                    </div>
+                    <div class="sc-cb-brand-gallery">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/08/Blue-Island-1440x960-2.webp" alt="" width="300" height="200" loading="lazy" decoding="async">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Omega-Cabinets-5.webp" alt="" width="300" height="200" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="sc-cb-brand-content">
+                    <div class="sc-cb-brand-tag sc-cb-tag-premium">Premium / Luxury</div>
+                    <h2>Omega Cabinetry</h2>
+                    <p>Semi-custom flexibility with custom-grade construction. Dovetail drawer boxes, soft-close hardware, and the widest finish library in the MasterBrand family come standard, not as upgrades. Omega is the right choice for homeowners who want furniture-quality cabinets with extensive customization, including inset construction, full-access frameless options, and specialty door profiles.</p>
+                    <p>Manufactured domestically by MasterBrand Cabinets, Omega delivers predictable lead times and consistent quality. From shaker doors to European slab profiles, the range covers virtually any kitchen or bathroom design direction.</p>
+
+                    <div class="sc-cb-brand-specs">
+                        <div class="sc-cb-specs-title">Omega at a Glance</div>
+                        <div class="sc-cb-specs-grid">
+                            <div class="sc-cb-spec-item"><span class="sc-cb-spec-highlight">Fully customizable</span> - built to order</div>
+                            <div class="sc-cb-spec-item"><span class="sc-cb-spec-highlight">Lifetime warranty</span></div>
+                            <div class="sc-cb-spec-item">Premium, hand-selected lumber</div>
+                            <div class="sc-cb-spec-item">Premium plywood construction</div>
+                            <div class="sc-cb-spec-item">Dovetail drawer boxes (exotic hardwood options available)</div>
+                            <div class="sc-cb-spec-item">Soft-close doors and drawers</div>
+                            <div class="sc-cb-spec-item">Available in inset, full overlay, and partial overlay</div>
+                            <div class="sc-cb-spec-item">Framed or full-access/frameless construction</div>
+                            <div class="sc-cb-spec-item">Hundreds of paint colors, stains, glazes, and custom color matching</div>
+                            <div class="sc-cb-spec-item">Specialty doors and embellishments</div>
+                            <div class="sc-cb-spec-item">Extensive storage and utility options</div>
+                            <div class="sc-cb-spec-item"><span class="sc-cb-spec-highlight">Ships in 6-8 weeks</span> (may vary)</div>
+                        </div>
+                    </div>
+                    <div style="margin-top:1em;">
+                        <a href="https://seacoastcabinetne.com/cabinets/omega-cabinetry/" class="sc-cb-btn-gold">Explore Omega Cabinetry</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: HOMECREST CABINETS (white) -->
+    <section class="sc-cb-section">
+        <div class="sc-cb-container">
+            <div class="sc-cb-brand-showcase sc-cb-brand-flip">
+                <div>
+                    <div class="sc-cb-brand-hero">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Homecrest-Sedona.webp" alt="" width="420" height="315" loading="lazy" decoding="async">
+                    </div>
+                    <div class="sc-cb-brand-gallery">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Homecrest-Cabinets-2.webp" alt="" width="300" height="200" loading="lazy" decoding="async">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Homecrest-Cabinets-4.webp" alt="" width="300" height="200" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="sc-cb-brand-content">
+                    <div class="sc-cb-brand-tag sc-cb-tag-midrange">Mid-Range</div>
+                    <h2>Homecrest Cabinets</h2>
+                    <p>The sweet spot for most North Shore kitchen remodels. Homecrest delivers solid construction, a wide range of door styles and finishes, and semi-custom modifications at a mid-range price point. Quality craftsmanship without the premium price tag, and the brand that covers the most common kitchen and bathroom layouts our clients request.</p>
+                    <p>Homecrest is a great fit for homeowners who want more options than a stock cabinet but don't need the full depth of Omega's customization. Available in dozens of painted, stained, and specialty finishes with soft-close hardware included.</p>
+
+                    <div class="sc-cb-brand-specs">
+                        <div class="sc-cb-specs-title">Homecrest at a Glance</div>
+                        <div class="sc-cb-specs-grid">
+                            <div class="sc-cb-spec-item"><span class="sc-cb-spec-highlight">Semi-custom</span> - built to order</div>
+                            <div class="sc-cb-spec-item"><span class="sc-cb-spec-highlight">Lifetime warranty</span></div>
+                            <div class="sc-cb-spec-item">Plywood construction with solid doors and drawers</div>
+                            <div class="sc-cb-spec-item">Dovetail drawer boxes</div>
+                            <div class="sc-cb-spec-item">Soft-close doors and drawers</div>
+                            <div class="sc-cb-spec-item">Over 25 door styles</div>
+                            <div class="sc-cb-spec-item">Over 50 finishes and colors</div>
+                            <div class="sc-cb-spec-item">Available in full and partial overlay</div>
+                            <div class="sc-cb-spec-item">Specialty doors and embellishments</div>
+                            <div class="sc-cb-spec-item">KCMA Environmental Stewardship Program certified</div>
+                            <div class="sc-cb-spec-item"><span class="sc-cb-spec-highlight">Ships in 3-5 weeks</span> (may vary)</div>
+                        </div>
+                    </div>
+                    <div style="margin-top:1em;">
+                        <a href="https://seacoastcabinetne.com/cabinet-brands/" class="sc-cb-btn-gold">Explore Homecrest Cabinets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: MANTRA CABINETS (beige) -->
+    <section class="sc-cb-section-beige">
+        <div class="sc-cb-container">
+            <div class="sc-cb-brand-showcase">
+                <div>
+                    <div class="sc-cb-brand-hero">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/12/Mantra-Classic.webp" alt="" width="420" height="315" loading="lazy" decoding="async">
+                    </div>
+                    <div class="sc-cb-brand-gallery">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Mantra-Cabinets-2.webp" alt="" width="300" height="200" loading="lazy" decoding="async">
+                        <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Mantra-Cabinets-3.webp" alt="" width="300" height="200" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="sc-cb-brand-content">
+                    <div class="sc-cb-brand-tag sc-cb-tag-value">Value</div>
+                    <h2>Mantra Cabinets</h2>
+                    <p>Quality American-made cabinets at the most accessible price point in our lineup. Mantra is built for budget-conscious homeowners, rental properties, and contractor multi-unit projects. Shorter lead times and straightforward configurations make Mantra the fastest path from design to installation.</p>
+                    <p>Mantra offers clean, modern door styles in a curated selection of painted and laminate finishes. It's proof that budget-friendly doesn't have to mean low quality. These cabinets are built by the same MasterBrand manufacturing network behind Omega and Homecrest.</p>
+
+                    <div class="sc-cb-brand-specs">
+                        <div class="sc-cb-specs-title">Mantra at a Glance</div>
+                        <div class="sc-cb-specs-grid">
+                            <div class="sc-cb-spec-item"><span class="sc-cb-spec-highlight">Stock cabinetry</span> - ships fully assembled</div>
+                            <div class="sc-cb-spec-item"><span class="sc-cb-spec-highlight">5-year limited warranty</span></div>
+                            <div class="sc-cb-spec-item">All-plywood construction (standard)</div>
+                            <div class="sc-cb-spec-item">Hardwood frame, doors, and drawer fronts</div>
+                            <div class="sc-cb-spec-item">Solid wood dovetail drawer boxes</div>
+                            <div class="sc-cb-spec-item">Soft-close doors and drawers</div>
+                            <div class="sc-cb-spec-item">Under-mount, full-extension drawer guides</div>
+                            <div class="sc-cb-spec-item">Adjustable hinges and plywood shelves</div>
+                            <div class="sc-cb-spec-item">Curated on-trend door styles and finishes</div>
+                            <div class="sc-cb-spec-item"><span class="sc-cb-spec-highlight">Ships in 2-3 weeks</span> (may vary)</div>
+                        </div>
+                    </div>
+                    <div style="margin-top:1em;">
+                        <a href="https://seacoastcabinetne.com/cabinet-brands/" class="sc-cb-btn-gold">Explore Mantra Cabinets</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:2.5em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-cb-btn-gold">See All Cabinet Brands in Our Showroom</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: BATHROOM CABINETS (gray) -->
+    <section class="sc-cb-section-gray">
+        <div class="sc-cb-container">
+            <div class="sc-cb-content-grid sc-cb-reverse">
+                <div class="sc-cb-content-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Mantra-Cabinets-3.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+                </div>
+                <div class="sc-cb-content-text">
+                    <h2>Bathroom Cabinets & Vanities</h2>
+
+                    <h3>Custom Bathroom Vanities for North Shore Homes</h3>
+                    <p>All three brands, Mantra, Homecrest, and Omega, offer bathroom vanities, linen cabinets, and built-in storage with the same construction quality and finish options as their kitchen lines. From floating vanities and single-sink configurations to double-sink layouts and full-height linen towers, our <a href="https://seacoastcabinetne.com/design-services/" class="sc-cb-content-link">design team</a> will help you maximize storage and style in any size bathroom.</p>
+                    <p>Pair your bathroom cabinetry with <a href="https://seacoastcabinetne.com/countertops/" class="sc-cb-content-link">countertop selections</a> from our showroom for a coordinated look.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: CABINETS + COUNTERTOPS CALLOUT (dark) -->
+    <section class="sc-cb-callout">
+        <div class="sc-cb-container">
+            <div class="sc-cb-callout-inner">
+                <div>
+                    <div class="sc-cb-callout-badge">One Source Advantage</div>
+                    <h2>Cabinets and Countertops From One Team</h2>
+                    <p>When you bundle your cabinets and <a href="https://seacoastcabinetne.com/countertops/" style="color:#b8905f !important;text-decoration:underline;">countertops</a> through one team, you get matched materials, coordinated timelines, and a single point of contact from design through delivery. No miscommunication between vendors.</p>
+                    <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-cb-btn-gold" style="margin-top:0.5em;">Start Your Combined Project</a>
+                </div>
+                <div>
+                    <p style="color:rgba(255,255,255,0.7) !important;font-size:0.85rem;margin-bottom:0.75em;">What bundling gets you:</p>
+                    <p style="color:rgba(255,255,255,0.9) !important;padding-left:16px;border-left:3px solid #b8905f;margin-bottom:0.75em;">Coordinated cabinet and countertop colors and materials</p>
+                    <p style="color:rgba(255,255,255,0.9) !important;padding-left:16px;border-left:3px solid #b8905f;margin-bottom:0.75em;">Synchronized project timelines with no vendor gaps</p>
+                    <p style="color:rgba(255,255,255,0.9) !important;padding-left:16px;border-left:3px solid #b8905f;margin-bottom:0.75em;">A single design team managing the whole project</p>
+                    <p style="color:rgba(255,255,255,0.9) !important;padding-left:16px;border-left:3px solid #b8905f;margin-bottom:0;">3D renderings showing cabinets and countertops together</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: INSTALLATION (white) with showroom photo + all location links -->
+    <section class="sc-cb-section">
+        <div class="sc-cb-container">
+            <h2>Cabinet Installation on the North Shore</h2>
+            <p class="sc-cb-section-intro">From showroom selection to final installation, our team coordinates every step of your cabinet project.</p>
+
+            <div class="sc-cb-install-grid">
+                <div class="sc-cb-install-image">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/seacoast-showroom-13.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+                </div>
+                <div>
+                    <h3 style="font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:600;color:#2c3e50 !important;margin-bottom:0.4em;">Our Cabinet Installation Process</h3>
+                    <p style="font-size:0.95rem;color:#555 !important;line-height:1.7;">Your project starts with a <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-cb-content-link">design consultation</a> at our Rowley showroom or in your home. We measure your space, discuss your layout goals, and walk you through cabinet options with photorealistic 3D renderings. Once your design is approved, we order your cabinets, coordinate delivery, and work with experienced local installers to complete the project on schedule. Book a <a href="https://seacoastcabinetne.com/virtual-design/" class="sc-cb-content-link">virtual design session</a> if you can't visit in person.</p>
+
+                    <h3 style="font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:600;color:#2c3e50 !important;margin-top:1.25em;margin-bottom:0.4em;">Communities We Serve</h3>
+                    <p style="font-size:0.95rem;color:#555 !important;line-height:1.7;">We serve homeowners and contractors across the North Shore and Southern New Hampshire: <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/" class="sc-cb-content-link">Rowley</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/" class="sc-cb-content-link">Newburyport</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-andover-ma/" class="sc-cb-content-link">Andover</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/" class="sc-cb-content-link">Haverhill</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-amesbury-ma/" class="sc-cb-content-link">Amesbury</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-georgetown-ma/" class="sc-cb-content-link">Georgetown</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-boxford-ma/" class="sc-cb-content-link">Boxford</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-ipswich-ma/" class="sc-cb-content-link">Ipswich</a>, <a href="https://seacoastcabinetne.com/kitchen-cabinets-topsfield-ma/" class="sc-cb-content-link">Topsfield</a>, and <a href="https://seacoastcabinetne.com/kitchen-cabinets-salem-nh/" class="sc-cb-content-link">Salem, NH</a>.</p>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-cb-btn-gold">Check if We Serve Your Area</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11: PRICING (beige) -->
+    <section class="sc-cb-section-beige">
+        <div class="sc-cb-container">
+            <h2>Cabinet Investment - Pricing Guide</h2>
+            <p class="sc-cb-section-intro">Cabinet pricing depends on your brand selection, kitchen size, configuration, and chosen options. Here's a general guide to help you plan your budget.</p>
+
+            <div class="sc-cb-pricing-wrap">
+                <table class="sc-cb-pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Cabinet Line</th>
+                            <th>Investment Level</th>
+                            <th>Best For</th>
+                            <th>Typical Lead Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mantra</strong></td>
+                            <td>Value</td>
+                            <td>Budget-conscious, rentals, multi-unit</td>
+                            <td>2-3 weeks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Homecrest</strong></td>
+                            <td>Mid-Range</td>
+                            <td>Most kitchen and bath remodels</td>
+                            <td>3-5 weeks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Omega</strong></td>
+                            <td>Premium</td>
+                            <td>Custom designs, inset, full-access</td>
+                            <td>6-8 weeks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="text-align:center;max-width:700px;margin:1.5em auto 0 auto;font-size:0.88rem;color:#888 !important;">Pricing varies based on kitchen size, configuration, and selected options. <a href="https://seacoastcabinetne.com/contact/" class="sc-cb-content-link">Request a free quote</a> for an estimate specific to your project. Use our <a href="https://seacoastcabinetne.com/budget-planner/" class="sc-cb-content-link">budget planner</a> to get started.</p>
+
+            <div style="text-align:center;margin-top:2em;">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-cb-btn-gold">Get a Free Cabinet Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 12: REVIEWS (dark) -->
+    <section class="sc-cb-reviews-section">
+        <div class="sc-cb-container">
+            <h2>What Our Customers Say</h2>
+            <p class="sc-cb-section-intro">Real reviews from homeowners who trusted Seacoast Cabinet with their kitchen and bathroom projects.</p>
+
+            <div class="sc-cb-reviews-grid">
+                <div class="sc-cb-review-card">
+                    <div class="sc-cb-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-cb-review-text">"We've done lots of projects around our house, but none have been as smooth and worry-free as the kitchen we did with Frank and his team. They have a perfect combination of product line, design talent and customer focus to ensure that our project came out perfectly. A great company!"</p>
+                    <div class="sc-cb-review-author">- Ed K., Google Review</div>
+                </div>
+                <div class="sc-cb-review-card">
+                    <div class="sc-cb-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-cb-review-text">"They were nothing but accommodating and professional throughout the whole process. The entire process with Frank and Dee was exceptional from start to finish, to include the install team, Tim and Ray. A huge thank you to the whole team from Seacoast Cabinet! We highly recommend them and appreciate everything they did for us."</p>
+                    <div class="sc-cb-review-author">- Pete S., Google Review</div>
+                </div>
+                <div class="sc-cb-review-card">
+                    <div class="sc-cb-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="sc-cb-review-text">"We recently had our kitchen remodeled. Deondre was my designer and go to person. From start to finish Dee was knowledgeable, patient and incredibly helpful. I received a personalized assistance that exceeded all expectations. The product line Seacoast Cabinets use is exceptional. I highly recommend."</p>
+                    <div class="sc-cb-review-author">- RR H., Google Review</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 13: FAQ (gray) -->
+    <section class="sc-cb-section-gray">
+        <div class="sc-cb-container">
+            <h2>Frequently Asked Questions About Cabinets</h2>
+            <p class="sc-cb-section-intro">Common questions from homeowners exploring cabinet options for their kitchen or bathroom project.</p>
+
+            <div class="sc-cb-faq-list">
+
+                <div class="sc-cb-faq-item">
+                    <button class="sc-cb-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How much do custom kitchen cabinets cost?
+                        <span class="sc-cb-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-cb-faq-answer">
+                        <div class="sc-cb-faq-answer-inner">Custom and semi-custom kitchen cabinet pricing depends on the brand, kitchen size, configuration, door style, and finish selections. At Seacoast Cabinet, we carry three tiers: Mantra (value), Homecrest (mid-range), and Omega (premium), so there's an option for most budgets. The best way to get an accurate number is to <a href="https://seacoastcabinetne.com/contact/" class="sc-cb-content-link">request a free quote</a> after a design consultation where we can review your specific layout.</div>
+                    </div>
+                </div>
+
+                <div class="sc-cb-faq-item">
+                    <button class="sc-cb-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What is the difference between custom and semi-custom cabinets?
+                        <span class="sc-cb-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-cb-faq-answer">
+                        <div class="sc-cb-faq-answer-inner">Semi-custom cabinets start with standard sizes and offer a wide range of modifications including door styles, finishes, hardware, interior accessories, and sizing adjustments. Custom cabinets are built from scratch to your exact dimensions with unlimited design options. <a href="https://seacoastcabinetne.com/cabinets/omega-cabinetry/" class="sc-cb-content-link">Omega Cabinetry</a> offers both levels, while Homecrest and Mantra focus on semi-custom configurations. For most North Shore kitchen remodels, semi-custom delivers everything needed without the fully custom timeline and cost.</div>
+                    </div>
+                </div>
+
+                <div class="sc-cb-faq-item">
+                    <button class="sc-cb-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How long does it take to get new kitchen cabinets installed?
+                        <span class="sc-cb-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-cb-faq-answer">
+                        <div class="sc-cb-faq-answer-inner">From design consultation to completed installation, most kitchen cabinet projects take 6-14 weeks total depending on the brand and complexity. Mantra cabinets have the shortest lead times (2-3 weeks from order), Homecrest runs 3-5 weeks, and Omega typically takes 6-8 weeks. Add 1-3 weeks for design, and 1-2 days for installation itself.</div>
+                    </div>
+                </div>
+
+                <div class="sc-cb-faq-item">
+                    <button class="sc-cb-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Can I see cabinet samples in person near me?
+                        <span class="sc-cb-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-cb-faq-answer">
+                        <div class="sc-cb-faq-answer-inner">Yes. Our cabinet showroom at 300 Newburyport Turnpike in Rowley, MA has full-size kitchen displays with working drawers, doors, and finish samples from all three brands. Walk-ins are welcome during business hours (Monday-Friday 9am-5pm, Saturdays by appointment), or <a href="https://seacoastcabinetne.com/contact/" class="sc-cb-content-link">schedule a design appointment</a> for dedicated one-on-one time with our team.</div>
+                    </div>
+                </div>
+
+                <div class="sc-cb-faq-item">
+                    <button class="sc-cb-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        What cabinet brands does Seacoast Cabinet carry?
+                        <span class="sc-cb-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-cb-faq-answer">
+                        <div class="sc-cb-faq-answer-inner">We carry three American-made cabinet brands from the MasterBrand family: <a href="https://seacoastcabinetne.com/cabinets/omega-cabinetry/" class="sc-cb-content-link">Omega Cabinetry</a> (premium/luxury tier), Homecrest (mid-range), and Mantra (value tier). All three are manufactured domestically and available for kitchen, bathroom, and built-in cabinetry projects.</div>
+                    </div>
+                </div>
+
+                <div class="sc-cb-faq-item">
+                    <button class="sc-cb-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Do you offer cabinet installation in addition to cabinet sales?
+                        <span class="sc-cb-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-cb-faq-answer">
+                        <div class="sc-cb-faq-answer-inner">Yes. Seacoast Cabinet handles the complete process: design, specification, ordering, delivery coordination, and installation through our network of experienced local installers. We also work with homeowners who already have a contractor, providing detailed installation specs and white-glove delivery directly to the job site.</div>
+                    </div>
+                </div>
+
+                <div class="sc-cb-faq-item">
+                    <button class="sc-cb-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How do I get a quote for kitchen cabinets?
+                        <span class="sc-cb-faq-toggle">+</span>
+                    </button>
+                    <div class="sc-cb-faq-answer">
+                        <div class="sc-cb-faq-answer-inner">The fastest way to get a kitchen cabinet quote is to <a href="https://seacoastcabinetne.com/contact/" class="sc-cb-content-link">schedule a free design consultation</a>. We'll discuss your layout, style preferences, and budget, then provide a detailed proposal with line-item pricing, no surprises. You can also use our <a href="https://seacoastcabinetne.com/budget-planner/" class="sc-cb-content-link">budget planner</a> to start estimating before your visit.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 14: FINAL CTA -->
+    <section class="sc-cb-final-cta">
+        <div class="sc-cb-container">
+            <h2>Ready to Explore Your Cabinet Options?</h2>
+            <p class="sc-cb-cta-text">Visit our Rowley showroom to see Mantra, Homecrest, and Omega cabinets in person. Your design fee is credited toward your cabinet purchase.</p>
+            <div class="sc-cb-btn-cta-row">
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-cb-btn-gold">Schedule a Consultation</a>
+                <a href="tel:9783501040" class="sc-cb-btn-gold" style="background:#2c3e50 !important;">Call 978-350-1040</a>
+            </div>
+        </div>
+    </section>
+
+</div>
