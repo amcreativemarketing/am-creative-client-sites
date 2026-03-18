@@ -570,67 +570,6 @@
 /* ========================================
    SECTION: TESTIMONIALS (placeholder)
    ======================================== */
-.clarke-about-testimonials {
-  background: var(--color-bg-white);
-  padding: 56px 0;
-}
-@media (min-width: 768px) {
-  .clarke-about-testimonials { padding: 72px 0; }
-}
-.clarke-about-testimonials-h2 {
-  font-family: var(--font-heading);
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 1.25;
-  color: var(--color-text-heading);
-  margin-bottom: 32px;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .clarke-about-testimonials-h2 { font-size: clamp(28px, 3.5vw, 36px); }
-}
-.clarke-about-testimonial-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .clarke-about-testimonial-cards { grid-template-columns: 1fr 1fr; }
-}
-.clarke-about-testimonial-card {
-  background: var(--color-bg-primary);
-  border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-accent);
-  border-radius: var(--radius-lg);
-  padding: 28px 26px;
-}
-.clarke-about-testimonial-stars {
-  display: flex;
-  gap: 3px;
-  margin-bottom: 14px;
-}
-.clarke-about-testimonial-stars svg {
-  width: 16px;
-  height: 16px;
-  color: var(--color-accent);
-  fill: var(--color-accent);
-}
-.clarke-about-testimonial-card blockquote {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--color-text-primary);
-  font-style: italic;
-  margin-bottom: 14px;
-}
-.clarke-about-testimonial-attr {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-text-secondary);
-}
-
-
 /* ========================================
    SECTION: SERVICE AREA
    ======================================== */
@@ -675,11 +614,20 @@
 .clarke-about-area-list li {
   background: var(--color-bg-white);
   border: 1px solid var(--color-border);
-  border-radius: 100px;
+  border-radius: var(--radius-md);
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 500;
   color: var(--color-text-heading);
+}
+.clarke-about-area-list li a {
+  color: var(--color-primary); font-weight: 600;
+  transition: color 0.2s ease; text-decoration: none;
+}
+.clarke-about-area-list li a:hover { color: var(--color-primary-hover); }
+.clarke-about-area-list li:has(a) { border-color: rgba(139,39,39,0.2); }
+.clarke-about-area-list li:has(a):hover {
+  border-color: var(--color-primary); background: rgba(139,39,39,0.03);
 }
 .clarke-about-area-cta {
   text-align: center;
@@ -734,13 +682,13 @@
    BUTTONS (shared)
    ======================================== */
 .clarke-about-btn-primary {
-  background: var(--color-primary);
-  color: #fff;
-  padding: 16px 36px;
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  padding: 14px 34px;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 15px;
-  border: none;
+  border: 2px solid var(--color-primary) !important;
   border-radius: var(--radius-md);
   transition: all 0.3s ease;
   text-decoration: none;
@@ -750,17 +698,30 @@
   cursor: pointer;
 }
 .clarke-about-btn-primary:hover {
-  background: var(--color-primary-hover);
+  background: var(--color-secondary) !important;
+  color: #FFFFFF !important;
+  border: 2px solid var(--color-accent) !important;
   transform: translateY(-1px);
+}
+.clarke-about-btn-primary:visited {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  border: 2px solid var(--color-primary) !important;
+}
+.clarke-about-btn-primary:active,
+.clarke-about-btn-primary:focus {
+  background: var(--color-secondary) !important;
+  color: #FFFFFF !important;
+  border: 2px solid var(--color-accent) !important;
 }
 .clarke-about-hero .clarke-about-btn-primary {
   box-shadow: 0 4px 20px rgba(139,39,39,0.3);
 }
 
 .clarke-about-btn-secondary {
-  background: transparent;
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
+  background: transparent !important;
+  border: 2px solid var(--color-primary) !important;
+  color: var(--color-primary) !important;
   padding: 14px 32px;
   font-family: var(--font-body);
   font-weight: 600;
@@ -774,37 +735,85 @@
   cursor: pointer;
 }
 .clarke-about-btn-secondary:hover {
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  border: 2px solid var(--color-primary) !important;
+}
+.clarke-about-btn-secondary:visited {
+  background: transparent !important;
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important;
+}
+.clarke-about-btn-secondary:active,
+.clarke-about-btn-secondary:focus {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  border: 2px solid var(--color-primary) !important;
 }
 .clarke-about-hero .clarke-about-btn-secondary {
-  border-color: rgba(255,255,255,0.18);
-  color: rgba(255,255,255,0.75);
+  border-color: rgba(255,255,255,0.18) !important;
+  color: rgba(255,255,255,0.75) !important;
 }
 .clarke-about-hero .clarke-about-btn-secondary:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-  background: rgba(201,169,110,0.06);
+  border-color: var(--color-accent) !important;
+  color: #FFFFFF !important;
+  background: var(--color-secondary-hover) !important;
+}
+.clarke-about-hero .clarke-about-btn-secondary:visited {
+  border-color: rgba(255,255,255,0.18) !important;
+  color: rgba(255,255,255,0.75) !important;
+  background: transparent !important;
+}
+.clarke-about-hero .clarke-about-btn-secondary:active,
+.clarke-about-hero .clarke-about-btn-secondary:focus {
+  border-color: var(--color-accent) !important;
+  color: #FFFFFF !important;
+  background: var(--color-secondary-hover) !important;
 }
 
 /* CTA band button overrides */
 .clarke-about-cta-band .clarke-about-btn-primary {
-  background: var(--color-bg-white);
-  color: var(--color-primary);
+  background: #fff !important;
+  color: var(--color-primary) !important;
+  border: 2px solid #fff !important;
 }
 .clarke-about-cta-band .clarke-about-btn-primary:hover {
-  background: #fff;
+  background: var(--color-bg-primary) !important;
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-accent) !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+}
+.clarke-about-cta-band .clarke-about-btn-primary:visited {
+  background: #fff !important;
+  color: var(--color-primary) !important;
+  border: 2px solid #fff !important;
+}
+.clarke-about-cta-band .clarke-about-btn-primary:active,
+.clarke-about-cta-band .clarke-about-btn-primary:focus {
+  background: var(--color-bg-primary) !important;
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-accent) !important;
 }
 .clarke-about-cta-band .clarke-about-btn-secondary {
-  border-color: rgba(255,255,255,0.3);
-  color: rgba(255,255,255,0.85);
+  border-color: rgba(255,255,255,0.3) !important;
+  color: rgba(255,255,255,0.85) !important;
 }
 .clarke-about-cta-band .clarke-about-btn-secondary:hover {
-  border-color: #fff;
-  color: #fff;
-  background: rgba(255,255,255,0.08);
+  border-color: var(--color-accent) !important;
+  color: #fff !important;
+  background: rgba(255,255,255,0.08) !important;
+}
+.clarke-about-cta-band .clarke-about-btn-secondary:visited {
+  border-color: rgba(255,255,255,0.3) !important;
+  color: rgba(255,255,255,0.85) !important;
+  background: transparent !important;
+}
+.clarke-about-cta-band .clarke-about-btn-secondary:active,
+.clarke-about-cta-band .clarke-about-btn-secondary:focus {
+  border-color: var(--color-accent) !important;
+  color: #fff !important;
+  background: rgba(255,255,255,0.08) !important;
 }
 
 </style>
@@ -1009,47 +1018,6 @@
 
 
   <!-- ============================================
-       SECTION 4: TESTIMONIALS (placeholder)
-       ============================================ -->
-  <section class="clarke-about-testimonials">
-    <div class="clarke-about-container">
-
-      <h2 class="clarke-about-testimonials-h2">What Clients Say</h2>
-
-      <div class="clarke-about-testimonial-cards">
-
-        <!-- PLACEHOLDER: Replace with actual reviews that mention Dave by name once GBP is verified -->
-        <div class="clarke-about-testimonial-card">
-          <div class="clarke-about-testimonial-stars">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <blockquote>[Review placeholder - Pull review that mentions Dave by name from GBP once verified]</blockquote>
-          <div class="clarke-about-testimonial-attr">- Client Name, Location</div>
-        </div>
-
-        <div class="clarke-about-testimonial-card">
-          <div class="clarke-about-testimonial-stars">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <blockquote>[Review placeholder - Pull review that mentions Dave by name from GBP once verified]</blockquote>
-          <div class="clarke-about-testimonial-attr">- Client Name, Location</div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================
        SECTION 5: SERVICE AREA
        ============================================ -->
   <section class="clarke-about-area">
@@ -1061,12 +1029,12 @@
         <p class="clarke-about-area-text">Dave grew up in Ipswich and recently moved to West Newbury. Clarke Building Company serves homeowners across the North Shore, including:</p>
 
         <ul class="clarke-about-area-list">
-          <li>West Newbury</li>
-          <li>Ipswich</li>
-          <li>Newburyport</li>
-          <li>Hamilton</li>
-          <li>Topsfield</li>
-          <li>Amesbury</li>
+          <li><a href="https://clarkebuildingcompany.com/west-newbury-ma/">West Newbury</a></li>
+          <li><a href="https://clarkebuildingcompany.com/ipswich-ma/">Ipswich</a></li>
+          <li><a href="https://clarkebuildingcompany.com/newburyport-ma/">Newburyport</a></li>
+          <li><a href="https://clarkebuildingcompany.com/hamilton-ma/">Hamilton</a></li>
+          <li><a href="https://clarkebuildingcompany.com/topsfield-ma/">Topsfield</a></li>
+          <li><a href="https://clarkebuildingcompany.com/amesbury-ma/">Amesbury</a></li>
         </ul>
 
         <p class="clarke-about-area-text">If you're planning a renovation in the area, Dave would be happy to take a look and talk through your options.</p>
@@ -1105,3 +1073,4 @@
   </section>
 
 </div>
+
