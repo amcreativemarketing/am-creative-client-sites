@@ -174,13 +174,14 @@
 .clarke-adu-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-adu-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
 .clarke-adu-sub {
   font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
-  margin-bottom: 32px; max-width: 780px;
+  margin-bottom: 32px; max-width: 780px; text-align: center; margin-left: auto; margin-right: auto;
 }
-.clarke-adu-body { font-size: 16px; line-height: 1.8; max-width: 780px; }
+.clarke-adu-body { font-size: 16px; line-height: 1.8; max-width: 780px; margin-left: auto; margin-right: auto; }
 .clarke-adu-body p { margin-bottom: 18px; }
 .clarke-adu-body p:last-child { margin-bottom: 0; }
 .clarke-adu-body a {
@@ -194,11 +195,13 @@
 .clarke-adu-h3 {
   font-family: var(--font-body); font-weight: 600; font-size: 18px;
   color: var(--color-text-heading); margin-bottom: 10px; margin-top: 28px; line-height: 1.3;
+  text-align: center; max-width: 780px; margin-left: auto; margin-right: auto;
 }
 
 /* Benefit cards (3-col) */
 .clarke-adu-benefits {
   display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px;
+  max-width: 960px; margin-left: auto; margin-right: auto;
 }
 @media (min-width: 768px) { .clarke-adu-benefits { grid-template-columns: 1fr 1fr 1fr; gap: 20px; } }
 .clarke-adu-benefit {
@@ -221,7 +224,7 @@
 
 /* Checklist */
 .clarke-adu-checklist {
-  list-style: none; margin: 20px 0; max-width: 780px;
+  list-style: none; margin: 20px auto; max-width: 780px;
 }
 .clarke-adu-checklist li {
   padding: 10px 0 10px 32px; position: relative; font-size: 16px; line-height: 1.7;
@@ -257,11 +260,13 @@
 .clarke-adu-types-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 40px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-adu-types-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
 
 .clarke-adu-type-cards {
   display: grid; grid-template-columns: 1fr; gap: 20px;
+  max-width: 900px; margin-left: auto; margin-right: auto;
 }
 @media (min-width: 768px) { .clarke-adu-type-cards { grid-template-columns: 1fr 1fr; gap: 24px; } }
 .clarke-adu-type-card {
@@ -303,11 +308,12 @@
 .clarke-adu-pricing-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 12px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-adu-pricing-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
 .clarke-adu-pricing-sub {
   font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.68);
-  margin-bottom: 36px; max-width: 780px;
+  margin-bottom: 36px; max-width: 780px; margin-left: auto; margin-right: auto; text-align: center;
 }
 
 /* Pricing table */
@@ -331,17 +337,17 @@
 /* Pricing summary */
 .clarke-adu-pricing-note {
   font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.6);
-  margin-bottom: 16px; max-width: 780px;
+  margin-bottom: 16px; max-width: 780px; margin-left: auto; margin-right: auto;
 }
 .clarke-adu-pricing-note strong { color: rgba(255,255,255,0.85); }
 
 /* Included list */
 .clarke-adu-included-h3 {
   font-family: var(--font-body); font-weight: 600; font-size: 17px;
-  color: var(--color-text-inverse); margin: 32px 0 16px;
+  color: var(--color-text-inverse); margin: 32px auto 16px; max-width: 780px; text-align: center;
 }
 .clarke-adu-included-list {
-  list-style: none; max-width: 780px; columns: 1; gap: 0;
+  list-style: none; max-width: 780px; columns: 1; gap: 0; margin-left: auto; margin-right: auto;
 }
 @media (min-width: 600px) { .clarke-adu-included-list { columns: 2; } }
 .clarke-adu-included-list li {
@@ -355,7 +361,7 @@
 
 .clarke-adu-pricing-philosophy {
   margin-top: 28px; padding-top: 24px;
-  border-top: 1px solid rgba(201,169,110,0.12); max-width: 780px;
+  border-top: 1px solid rgba(201,169,110,0.12); max-width: 780px; margin-left: auto; margin-right: auto;
 }
 .clarke-adu-pricing-philosophy p {
   font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.6);
@@ -365,6 +371,7 @@
 /* ======== AUDIENCE / IS IT RIGHT ======== */
 .clarke-adu-audience-cards {
   display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px;
+  max-width: 900px; margin-left: auto; margin-right: auto;
 }
 @media (min-width: 768px) { .clarke-adu-audience-cards { grid-template-columns: 1fr 1fr; gap: 20px; } }
 .clarke-adu-audience-card {
@@ -402,7 +409,7 @@
 }
 .clarke-adu-faq-a {
   font-size: 16px; line-height: 1.8; max-width: 780px;
-  padding: 0 0 24px; color: var(--color-text-primary);
+  padding: 0 0 24px; color: var(--color-text-primary); margin-left: auto; margin-right: auto;
 }
 
 
@@ -413,7 +420,7 @@
 }
 .clarke-adu-area-list li {
   background: var(--color-bg-white); border: 1px solid var(--color-border);
-  border-radius: 100px; padding: 10px 20px; font-size: 14px; font-weight: 500;
+  border-radius: var(--radius-md); padding: 10px 20px; font-size: 14px; font-weight: 500;
   color: var(--color-text-heading);
 }
 .clarke-adu-area-list li a {
@@ -454,54 +461,103 @@
 
 /* ======== BUTTONS ======== */
 .clarke-adu-btn-primary {
-  background: var(--color-primary); color: #fff !important; padding: 16px 36px;
+  background: var(--color-primary) !important; color: #fff !important; padding: 14px 34px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
-  border: none; border-radius: var(--radius-md); transition: all 0.3s ease;
+  border: 2px solid var(--color-primary) !important; border-radius: var(--radius-md); transition: all 0.3s ease;
   text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
-.clarke-adu-btn-primary:hover { background: var(--color-primary-hover); color: #fff !important; transform: translateY(-1px); }
-.clarke-adu-btn-primary:visited { color: #fff !important; }
-.clarke-adu-btn-primary:active { color: #fff !important; }
+.clarke-adu-btn-primary:hover {
+  background: var(--color-secondary) !important; color: #FFFFFF !important;
+  border: 2px solid var(--color-accent) !important; transform: translateY(-1px);
+}
+.clarke-adu-btn-primary:visited {
+  background: var(--color-primary) !important; color: #fff !important;
+  border: 2px solid var(--color-primary) !important;
+}
+.clarke-adu-btn-primary:active,
+.clarke-adu-btn-primary:focus {
+  background: var(--color-secondary) !important; color: #FFFFFF !important;
+  border: 2px solid var(--color-accent) !important;
+}
 .clarke-adu-hero .clarke-adu-btn-primary { box-shadow: 0 4px 20px rgba(139,39,39,0.3); }
-.clarke-adu-hero .clarke-adu-btn-primary:hover { background: var(--color-accent); color: var(--color-secondary) !important; box-shadow: 0 6px 24px rgba(201,169,110,0.4); }
-.clarke-adu-hero .clarke-adu-btn-primary:visited { color: #fff !important; }
 
 .clarke-adu-btn-secondary {
-  background: transparent; border: 2px solid rgba(255,255,255,0.2);
+  background: transparent !important; border: 2px solid rgba(255,255,255,0.2) !important;
   color: rgba(255,255,255,0.8) !important; padding: 14px 32px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border-radius: var(--radius-md); transition: all 0.3s ease;
   text-decoration: none !important; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
 .clarke-adu-btn-secondary:hover {
-  border-color: var(--color-accent); color: var(--color-accent) !important; background: rgba(201,169,110,0.06);
+  border-color: var(--color-accent) !important; color: #FFFFFF !important;
+  background: var(--color-secondary-hover) !important;
 }
-.clarke-adu-btn-secondary:visited { color: rgba(255,255,255,0.8) !important; }
+.clarke-adu-btn-secondary:visited {
+  background: transparent !important; color: rgba(255,255,255,0.8) !important;
+  border-color: rgba(255,255,255,0.2) !important;
+}
+.clarke-adu-btn-secondary:active,
+.clarke-adu-btn-secondary:focus {
+  border-color: var(--color-accent) !important; color: #FFFFFF !important;
+  background: var(--color-secondary-hover) !important;
+}
 
 .clarke-adu-cta-band .clarke-adu-btn-primary {
-  background: var(--color-bg-white); color: var(--color-primary) !important;
+  background: #fff !important; color: var(--color-primary) !important;
+  border: 2px solid #fff !important;
 }
 .clarke-adu-cta-band .clarke-adu-btn-primary:hover {
-  background: #fff; color: var(--color-primary) !important; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  background: var(--color-bg-primary) !important; color: var(--color-primary) !important;
+  border: 2px solid var(--color-accent) !important;
+  transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
 }
-.clarke-adu-cta-band .clarke-adu-btn-primary:visited { color: var(--color-primary) !important; }
+.clarke-adu-cta-band .clarke-adu-btn-primary:visited {
+  background: #fff !important; color: var(--color-primary) !important;
+  border: 2px solid #fff !important;
+}
+.clarke-adu-cta-band .clarke-adu-btn-primary:active,
+.clarke-adu-cta-band .clarke-adu-btn-primary:focus {
+  background: var(--color-bg-primary) !important; color: var(--color-primary) !important;
+  border: 2px solid var(--color-accent) !important;
+}
 .clarke-adu-cta-band .clarke-adu-btn-secondary {
-  border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85) !important;
+  border-color: rgba(255,255,255,0.3) !important; color: rgba(255,255,255,0.85) !important;
 }
 .clarke-adu-cta-band .clarke-adu-btn-secondary:hover {
-  border-color: #fff; color: #fff !important; background: rgba(255,255,255,0.08);
+  border-color: var(--color-accent) !important; color: #fff !important;
+  background: rgba(255,255,255,0.08) !important;
 }
-.clarke-adu-cta-band .clarke-adu-btn-secondary:visited { color: rgba(255,255,255,0.85) !important; }
+.clarke-adu-cta-band .clarke-adu-btn-secondary:visited {
+  border-color: rgba(255,255,255,0.3) !important; color: rgba(255,255,255,0.85) !important;
+  background: transparent !important;
+}
+.clarke-adu-cta-band .clarke-adu-btn-secondary:active,
+.clarke-adu-cta-band .clarke-adu-btn-secondary:focus {
+  border-color: var(--color-accent) !important; color: #fff !important;
+  background: rgba(255,255,255,0.08) !important;
+}
 
 /* Light section secondary button */
 .clarke-adu-btn-secondary-light {
-  background: transparent; border: 2px solid var(--color-primary);
-  color: var(--color-primary); padding: 14px 32px;
+  background: transparent !important; border: 2px solid var(--color-primary) !important;
+  color: var(--color-primary) !important; padding: 14px 32px;
   font-family: var(--font-body); font-weight: 600; font-size: 15px;
   border-radius: var(--radius-md); transition: all 0.3s ease;
   text-decoration: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
-.clarke-adu-btn-secondary-light:hover { background: var(--color-primary); color: #fff; }
+.clarke-adu-btn-secondary-light:hover {
+  background: var(--color-primary) !important; color: #fff !important;
+  border: 2px solid var(--color-primary) !important;
+}
+.clarke-adu-btn-secondary-light:visited {
+  background: transparent !important; color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important;
+}
+.clarke-adu-btn-secondary-light:active,
+.clarke-adu-btn-secondary-light:focus {
+  background: var(--color-primary) !important; color: #fff !important;
+  border: 2px solid var(--color-primary) !important;
+}
 </style>
 
 
@@ -934,4 +990,5 @@
   </section>
 
 </div>
+
 
