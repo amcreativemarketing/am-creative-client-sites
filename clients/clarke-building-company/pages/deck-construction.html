@@ -155,13 +155,14 @@
 .clarke-deck-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-heading); margin-bottom: 16px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-deck-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
 .clarke-deck-sub {
   font-size: 16px; line-height: 1.8; color: var(--color-text-primary);
-  margin-bottom: 32px; max-width: 780px;
+  margin-bottom: 32px; max-width: 780px; text-align: center; margin-left: auto; margin-right: auto;
 }
-.clarke-deck-body { font-size: 16px; line-height: 1.8; max-width: 780px; }
+.clarke-deck-body { font-size: 16px; line-height: 1.8; max-width: 780px; margin-left: auto; margin-right: auto; }
 .clarke-deck-body p { margin-bottom: 18px; }
 .clarke-deck-body p:last-child { margin-bottom: 0; }
 .clarke-deck-body a {
@@ -176,11 +177,12 @@
 .clarke-deck-h3 {
   font-family: var(--font-body); font-weight: 600; font-size: 18px;
   color: var(--color-text-heading); margin-bottom: 10px; margin-top: 28px; line-height: 1.3;
+  text-align: center; max-width: 780px; margin-left: auto; margin-right: auto;
 }
 
 /* Checklist */
 .clarke-deck-checklist {
-  list-style: none; margin: 20px 0; max-width: 780px;
+  list-style: none; margin: 20px auto; max-width: 780px;
 }
 .clarke-deck-checklist li {
   padding: 10px 0 10px 32px; position: relative; font-size: 16px; line-height: 1.7;
@@ -231,9 +233,10 @@
 .clarke-deck-dark-h2 {
   font-family: var(--font-heading); font-weight: 400; font-size: 28px;
   line-height: 1.25; color: var(--color-text-inverse); margin-bottom: 16px;
+  text-align: center;
 }
 @media (min-width: 768px) { .clarke-deck-dark-h2 { font-size: clamp(28px, 3.5vw, 36px); } }
-.clarke-deck-dark-body { font-size: 16px; line-height: 1.8; max-width: 780px; color: rgba(255,255,255,0.68); }
+.clarke-deck-dark-body { font-size: 16px; line-height: 1.8; max-width: 780px; color: rgba(255,255,255,0.68); margin-left: auto; margin-right: auto; }
 .clarke-deck-dark-body p { margin-bottom: 18px; }
 .clarke-deck-dark-body p:last-child { margin-bottom: 0; }
 .clarke-deck-dark-body strong { color: rgba(255,255,255,0.9); }
@@ -245,7 +248,7 @@
 .clarke-deck-dark-body a:hover { border-color: var(--color-accent); }
 
 .clarke-deck-dark-checklist {
-  list-style: none; margin: 20px 0; max-width: 780px;
+  list-style: none; margin: 20px auto; max-width: 780px;
 }
 .clarke-deck-dark-checklist li {
   padding: 10px 0 10px 32px; position: relative; font-size: 16px; line-height: 1.7;
@@ -261,7 +264,7 @@
 
 
 /* ======== COMPARISON TABLE ======== */
-.clarke-deck-table-wrap { overflow-x: auto; margin: 28px 0; max-width: 780px; }
+.clarke-deck-table-wrap { overflow-x: auto; margin: 28px auto; max-width: 780px; }
 .clarke-deck-table {
   width: 100%; border-collapse: separate; border-spacing: 0;
   border-radius: var(--radius-lg); overflow: hidden;
@@ -282,6 +285,7 @@
 /* ======== DECK TYPE CARDS ======== */
 .clarke-deck-type-cards {
   display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px;
+  max-width: 780px; margin-left: auto; margin-right: auto;
 }
 @media (min-width: 768px) { .clarke-deck-type-cards { grid-template-columns: 1fr 1fr; gap: 20px; } }
 .clarke-deck-type-card {
@@ -300,6 +304,7 @@
 /* ======== RELATED SERVICES ======== */
 .clarke-deck-related-grid {
   display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px;
+  max-width: 960px; margin-left: auto; margin-right: auto;
 }
 @media (min-width: 600px) { .clarke-deck-related-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
 @media (min-width: 960px) { .clarke-deck-related-grid { grid-template-columns: 1fr 1fr 1fr; gap: 20px; } }
@@ -397,7 +402,7 @@
 }
 .clarke-deck-area-list li {
   background: var(--color-bg-white); border: 1px solid var(--color-border);
-  border-radius: 100px; padding: 10px 20px; font-size: 14px; font-weight: 500;
+  border-radius: var(--radius-md); padding: 10px 20px; font-size: 14px; font-weight: 500;
   color: var(--color-text-heading);
 }
 .clarke-deck-area-list li a {
@@ -761,3 +766,4 @@
   </section>
 
 </div>
+
