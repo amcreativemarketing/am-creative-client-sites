@@ -223,20 +223,33 @@
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
-  padding: 16px 32px;
+  padding: 14px 30px;
   border-radius: var(--radius-md);
-  background: var(--color-primary);
-  color: #fff;
-  border: none;
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  border: 2px solid var(--color-primary) !important;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(139,39,39,0.3);
   min-height: 52px;
 }
 .clarke-btn-primary:hover {
-  background: var(--color-primary-hover);
-  box-shadow: 0 6px 28px rgba(139,39,39,0.4);
+  background: var(--color-secondary) !important;
+  color: #FFFFFF !important;
+  border: 2px solid var(--color-accent) !important;
+  box-shadow: 0 6px 28px rgba(28,36,52,0.4) !important;
   transform: translateY(-1px);
+}
+.clarke-btn-primary:visited {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  border: 2px solid var(--color-primary) !important;
+}
+.clarke-btn-primary:active,
+.clarke-btn-primary:focus {
+  background: var(--color-secondary) !important;
+  color: #FFFFFF !important;
+  border: 2px solid var(--color-accent) !important;
 }
 .clarke-btn-primary svg { width: 16px; height: 16px; }
 .clarke-btn-secondary {
@@ -248,17 +261,28 @@
   font-weight: 600;
   padding: 14px 28px;
   border-radius: var(--radius-md);
-  background: transparent;
-  border: 2px solid rgba(255,255,255,0.18);
-  color: rgba(255,255,255,0.75);
+  background: transparent !important;
+  border: 2px solid rgba(255,255,255,0.18) !important;
+  color: rgba(255,255,255,0.75) !important;
   cursor: pointer;
   transition: all 0.3s ease;
   min-height: 52px;
 }
 .clarke-btn-secondary:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-  background: rgba(201,169,110,0.06);
+  background: var(--color-secondary-hover) !important;
+  border-color: var(--color-accent) !important;
+  color: #FFFFFF !important;
+}
+.clarke-btn-secondary:visited {
+  background: transparent !important;
+  color: rgba(255,255,255,0.75) !important;
+  border-color: rgba(255,255,255,0.18) !important;
+}
+.clarke-btn-secondary:active,
+.clarke-btn-secondary:focus {
+  background: var(--color-secondary-hover) !important;
+  border-color: var(--color-accent) !important;
+  color: #FFFFFF !important;
 }
 .clarke-btn-secondary svg { width: 16px; height: 16px; }
 
@@ -847,7 +871,7 @@
 }
 .clarke-home-area-list li {
   background: var(--color-bg-white); border: 1px solid var(--color-border);
-  border-radius: 100px; padding: 10px 20px; font-size: 14px; font-weight: 500;
+  border-radius: var(--radius-md); padding: 10px 20px; font-size: 14px; font-weight: 500;
   color: var(--color-text-heading);
 }
 .clarke-home-area-list li a {
@@ -943,21 +967,46 @@
 }
 .clarke-home-final-cta .clarke-home-ctas { justify-content: center; }
 .clarke-home-final-cta .clarke-btn-primary {
-  background: #fff;
-  color: var(--color-primary);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  background: #fff !important;
+  color: var(--color-primary) !important;
+  border: 2px solid #fff !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
 }
 .clarke-home-final-cta .clarke-btn-primary:hover {
-  background: var(--color-bg-primary);
+  background: var(--color-bg-primary) !important;
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-accent) !important;
   transform: translateY(-1px);
 }
+.clarke-home-final-cta .clarke-btn-primary:visited {
+  background: #fff !important;
+  color: var(--color-primary) !important;
+  border: 2px solid #fff !important;
+}
+.clarke-home-final-cta .clarke-btn-primary:active,
+.clarke-home-final-cta .clarke-btn-primary:focus {
+  background: var(--color-bg-primary) !important;
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-accent) !important;
+}
 .clarke-home-final-cta .clarke-btn-secondary {
-  border-color: rgba(255,255,255,0.35);
-  color: #fff;
+  border-color: rgba(255,255,255,0.35) !important;
+  color: #fff !important;
 }
 .clarke-home-final-cta .clarke-btn-secondary:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.6) !important;
+  color: #fff !important;
+}
+.clarke-home-final-cta .clarke-btn-secondary:visited {
+  border-color: rgba(255,255,255,0.35) !important;
+  color: #fff !important;
+}
+.clarke-home-final-cta .clarke-btn-secondary:active,
+.clarke-home-final-cta .clarke-btn-secondary:focus {
+  background: rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.6) !important;
+  color: #fff !important;
 }
 </style>
 
@@ -1441,3 +1490,4 @@
 
 </div>
 <!-- END HOMEPAGE CONTENT -->
+
