@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waitlist | Figtree Family Medicine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ft-forest: #3B5340;
+            --ft-sage: #5C7A5E;
+            --ft-sage-light: #7A9A7C;
+            --ft-leaf: #A8C5A0;
+            --ft-cream: #F8F5EF;
+            --ft-warm-white: #FDFCFA;
+            --ft-parchment: #EDE8DF;
+            --ft-bark: #7A6752;
+            --ft-bark-light: #9E8E78;
+            --ft-charcoal: #2D3130;
+            --ft-text: #3A3F3B;
+            --ft-text-light: #6B7269;
+            --ft-remove-muted: #8B6F5C;
+            --ft-remove-bg: #FAF6F3;
+            --ft-border: #DDD7CD;
+            --ft-shadow: rgba(59, 83, 64, 0.08);
+            --ft-shadow-lg: rgba(59, 83, 64, 0.12);
+            --radius: 8px;
+            --radius-lg: 16px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--ft-cream);
+            color: var(--ft-text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── Subtle texture overlay ─── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%235C7A5E' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ─── Header ─── */
+        .ft-header {
+            background: var(--ft-warm-white);
+            border-bottom: 1px solid var(--ft-border);
+            padding: 16px 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .ft-header-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ft-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        /* ─── Main Content ─── */
+        .ft-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ft-container {
+            width: 100%;
+            max-width: 540px;
+            animation: ft-fadeUp 0.7s ease-out both;
+        }
+
+        @keyframes ft-fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ─── Hero Text ─── */
+        .ft-hero {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .ft-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--ft-forest);
+            color: var(--ft-leaf);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 24px;
+        }
+
+        .ft-hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--ft-leaf);
+            border-radius: 50%;
+            animation: ft-pulse 2s infinite;
+        }
+
+        @keyframes ft-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .ft-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 32px;
+            font-weight: 500;
+            color: var(--ft-forest);
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .ft-hero h1 em {
+            font-style: italic;
+            color: var(--ft-sage);
+        }
+
+        .ft-hero p {
+            font-size: 16px;
+            color: var(--ft-text-light);
+            line-height: 1.65;
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        /* ─── Card ─── */
+        .ft-card {
+            background: var(--ft-warm-white);
+            border-radius: var(--radius-lg);
+            box-shadow:
+                0 1px 3px var(--ft-shadow),
+                0 8px 32px var(--ft-shadow);
+            overflow: hidden;
+            border: 1px solid var(--ft-border);
+        }
+
+        /* ─── Tabs ─── */
+        .ft-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--ft-border);
+            position: relative;
+        }
+
+        .ft-tab {
+            flex: 1;
+            padding: 16px 12px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ft-text-light);
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            font-family: inherit;
+            position: relative;
+            transition: color var(--transition), background var(--transition);
+        }
+
+        .ft-tab:hover {
+            color: var(--ft-text);
+            background: rgba(92, 122, 94, 0.04);
+        }
+
+        .ft-tab.active {
+            color: var(--ft-forest);
+            font-weight: 600;
+        }
+
+        .ft-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: var(--ft-forest);
+            border-radius: 2px 2px 0 0;
+            animation: ft-slideIn 0.3s ease-out;
+        }
+
+        .ft-tab-icon {
+            display: block;
+            margin: 0 auto 4px;
+            width: 20px;
+            height: 20px;
+        }
+
+        @keyframes ft-slideIn {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        /* ─── Form Panels ─── */
+        .ft-panel {
+            display: none;
+            padding: 32px 28px 36px;
+            animation: ft-panelIn 0.35s ease-out;
+        }
+
+        .ft-panel.active { display: block; }
+
+        @keyframes ft-panelIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ft-panel-intro {
+            font-size: 14px;
+            color: var(--ft-text-light);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .ft-panel-intro strong {
+            color: var(--ft-text);
+            font-weight: 600;
+        }
+
+        /* ─── GHL Form Iframes ─── */
+        .ft-panel iframe {
+            min-height: 380px;
+            display: block;
+        }
+
+        /* ─── Footer ─── */
+        .ft-footer {
+            text-align: center;
+            padding: 28px 20px 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ft-footer-badge {
+            width: 44px;
+            height: auto;
+            opacity: 0.25;
+            margin-bottom: 12px;
+        }
+
+        .ft-footer p {
+            font-size: 13px;
+            color: var(--ft-text-light);
+            line-height: 1.5;
+        }
+
+        .ft-footer a {
+            color: var(--ft-sage);
+            text-decoration: none;
+        }
+
+        .ft-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .ft-footer-links {
+            margin-top: 6px;
+        }
+
+        .ft-footer-links a {
+            font-size: 12px;
+            color: var(--ft-bark-light);
+        }
+
+        .ft-footer-links span {
+            margin: 0 8px;
+            color: var(--ft-border);
+        }
+
+        /* ─── Questions link ─── */
+        .ft-help {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: var(--ft-text-light);
+        }
+
+        .ft-help a {
+            color: var(--ft-sage);
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color var(--transition);
+        }
+
+        .ft-help a:hover {
+            border-bottom-color: var(--ft-sage);
+        }
+
+        /* ─── Responsive ─── */
+        @media (min-width: 480px) {
+            .ft-hero h1 { font-size: 36px; }
+            .ft-panel { padding: 36px 36px 40px; }
+            .ft-logo { height: 44px; }
+        }
+
+        @media (min-width: 768px) {
+            .ft-hero h1 { font-size: 40px; }
+            .ft-main { padding: 56px 24px; }
+            .ft-hero { margin-bottom: 44px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="ft-header">
+        <div class="ft-header-inner">
+            <a href="https://www.figtreedpc.com/" aria-label="Figtree Family Medicine Home">
+                <img
+                    src="https://images.squarespace-cdn.com/content/v1/62fc669ab936981fc9884cf9/a4810ab8-5d9d-4749-a14c-87f702fb9b3d/FigTree_Horizontal_RGB.png?format=750w"
+                    alt=""
+                    class="ft-logo"
+                    width="220"
+                    height="44"
+                >
+            </a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="ft-main">
+        <div class="ft-container">
+
+            <!-- Hero -->
+            <div class="ft-hero">
+                <div class="ft-hero-badge">Waitlist Open</div>
+                <h1>Primary healthcare, <em>evolved</em></h1>
+                <p>Join the Figtree Family Medicine waitlist and we'll reach out when a membership spot opens. Already on the list? Reconfirm or update your status below.</p>
+            </div>
+
+            <!-- Card with Tabs -->
+            <div class="ft-card">
+                <div class="ft-tabs" role="tablist">
+                    <button
+                        class="ft-tab active"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="panel-join"
+                        data-tab="join"
+                    >
+                        <svg class="ft-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <line x1="19" y1="8" x2="19" y2="14"/>
+                            <line x1="22" y1="11" x2="16" y2="11"/>
+                        </svg>
+                        Join or Reconfirm
+                    </button>
+                    <button
+                        class="ft-tab"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="panel-remove"
+                        data-tab="remove"
+                    >
+                        <svg class="ft-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <line x1="22" y1="11" x2="16" y2="11"/>
+                        </svg>
+                        Leave Waitlist
+                    </button>
+                </div>
+
+                <!-- Join / Reconfirm Waitlist -->
+                <div class="ft-panel active" id="panel-join" role="tabpanel">
+                    <p class="ft-panel-intro">
+                        Enter your info below to <strong>join or reconfirm your place</strong> on our waitlist. We'll be in touch when a membership opens up.
+                    </p>
+
+                    <iframe
+                        src="https://link.amconnect.io/widget/form/qXm6H0luHRcbOR76yfLh"
+                        style="width:100%;height:100%;border:none;border-radius:3px"
+                        id="inline-qXm6H0luHRcbOR76yfLh"
+                        data-layout="{'id':'INLINE'}"
+                        data-trigger-type="alwaysShow"
+                        data-trigger-value=""
+                        data-activation-type="alwaysActivated"
+                        data-activation-value=""
+                        data-deactivation-type="neverDeactivate"
+                        data-deactivation-value=""
+                        data-form-name="Add to waitlist"
+                        data-height="449"
+                        data-layout-iframe-id="inline-qXm6H0luHRcbOR76yfLh"
+                        data-form-id="qXm6H0luHRcbOR76yfLh"
+                        title="Add to waitlist"
+                    ></iframe>
+                </div>
+
+                <!-- Leave Waitlist -->
+                <div class="ft-panel" id="panel-remove" role="tabpanel">
+                    <p class="ft-panel-intro">
+                        No hard feelings. Enter your info below to <strong>remove yourself</strong> from the waitlist. You can always rejoin later.
+                    </p>
+
+                    <iframe
+                        src="https://link.amconnect.io/widget/form/yWh3C2FDJW2OMDwLVg0I"
+                        style="width:100%;height:100%;border:none;border-radius:3px"
+                        id="inline-yWh3C2FDJW2OMDwLVg0I"
+                        data-layout="{'id':'INLINE'}"
+                        data-trigger-type="alwaysShow"
+                        data-trigger-value=""
+                        data-activation-type="alwaysActivated"
+                        data-activation-value=""
+                        data-deactivation-type="neverDeactivate"
+                        data-deactivation-value=""
+                        data-form-name="Remove from waitlist"
+                        data-height="449"
+                        data-layout-iframe-id="inline-yWh3C2FDJW2OMDwLVg0I"
+                        data-form-id="yWh3C2FDJW2OMDwLVg0I"
+                        title="Remove from waitlist"
+                    ></iframe>
+                </div>
+            </div>
+
+            <!-- Help link -->
+            <div class="ft-help">
+                Want to learn more? <a href="https://www.figtreedpc.com/">Visit our website</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="ft-footer">
+        <img
+            src="https://images.squarespace-cdn.com/content/v1/62fc669ab936981fc9884cf9/5b38dc34-8d9c-4d30-a42e-a884df8db3f0/FigTree_Badge_WHITE.png?format=300w"
+            alt=""
+            class="ft-footer-badge"
+            width="44"
+            height="44"
+            loading="lazy"
+        >
+        <p>Figtree Family Medicine PLLC<br>76 Newburyport Turnpike, Newbury, MA 01951</p>
+        <div class="ft-footer-links">
+            <a href="https://www.figtreedpc.com/">Home</a>
+            <span>|</span>
+            <a href="https://www.figtreedpc.com/pricing/">Membership</a>
+            <span>|</span>
+            <a href="https://www.figtreedpc.com/privacy-policy/">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="https://link.amconnect.io/js/form_embed.js"></script>
+    <script>
+        // ─── Tab Switching ───
+        function switchTab(tabName) {
+            document.querySelectorAll('.ft-tab').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            document.querySelectorAll('.ft-panel').forEach(p => p.classList.remove('active'));
+
+            const tab = document.querySelector(`[data-tab="${tabName}"]`);
+            const panel = document.getElementById(`panel-${tabName}`);
+            if (tab && panel) {
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                panel.classList.add('active');
+                panel.style.animation = 'none';
+                panel.offsetHeight;
+                panel.style.animation = '';
+            }
+        }
+
+        document.querySelectorAll('.ft-tab').forEach(tab => {
+            tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+        });
+    </script>
+
+</body>
+</html>
