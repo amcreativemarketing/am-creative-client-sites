@@ -144,6 +144,18 @@
 @media(min-width:1024px){
   .ofc-oanb-hero h1{font-size:46px!important}
 }
+
+/* FAQ Accordion */
+.ofc-oanb-faq{max-width:800px;margin:28px auto}
+.ofc-oanb-faq-item{border-bottom:1px solid #e9ecef}
+.ofc-oanb-faq-item:first-child{border-top:1px solid #e9ecef}
+.ofc-oanb-faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;gap:16px}
+.ofc-oanb-faq-q h3{text-align:left!important;font-size:16px!important;margin:0!important;flex:1}
+.ofc-oanb-faq-q svg{width:20px;height:20px;flex-shrink:0;color:#272262;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.ofc-oanb-faq-item.active .ofc-oanb-faq-q svg{transform:rotate(45deg)}
+.ofc-oanb-faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.ofc-oanb-faq-item.active .ofc-oanb-faq-a{max-height:300px}
+.ofc-oanb-faq-a p{text-align:left!important;font-size:15px!important;color:#666!important;padding:0 0 20px!important;margin:0!important}
 </style>
 
 <div class="ofc-oanb-wrapper">
@@ -388,7 +400,70 @@
     </div>
   </div>
 
-  <!-- SECTION 7: Service Areas + Map -->
+  <!-- SECTION 7: FAQ -->
+  <div class="ofc-oanb-section">
+    <h2>Frequently Asked Questions About Ornamental Fencing in Newburyport</h2>
+    <p>Common questions from Newburyport property owners considering ornamental aluminum or steel fencing.</p>
+
+    <div class="ofc-oanb-faq">
+      <div class="ofc-oanb-faq-item">
+        <div class="ofc-oanb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Will ornamental fencing hold up to Newburyport's harbor salt air?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oanb-faq-a">
+          <p>Yes. Aluminum fencing is naturally rust-proof and requires zero maintenance, even with direct salt-air exposure along the Merrimack River and harbor waterfront. Steel fencing uses galvanized coating plus powder finish for 30+ year corrosion protection. Both materials significantly outperform traditional wrought iron in Newburyport's coastal environment.</p>
+        </div>
+      </div>
+      <div class="ofc-oanb-faq-item">
+        <div class="ofc-oanb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Does Newburyport's Historic District Commission regulate fencing?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oanb-faq-a">
+          <p>The Historic District Commission may review exterior changes to properties within Newburyport's 750-acre National Register Historic District. Ornamental aluminum and steel fencing is generally well-received because it complements Federal-era architecture. Olympic Fence can help you navigate any local requirements before your project begins.</p>
+        </div>
+      </div>
+      <div class="ofc-oanb-faq-item">
+        <div class="ofc-oanb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>What is the difference between aluminum and steel ornamental fencing?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oanb-faq-a">
+          <p>Aluminum fencing is naturally rust-proof, lighter weight, and maintenance-free - ideal for residential yards, <a href="https://olympicfencema.com/pool-fencing/">pool enclosures</a>, and harbor-front homes. Steel fencing delivers maximum strength with custom ornamental designs, better suited for <a href="https://olympicfencema.com/commercial-fencing/">commercial properties</a>, downtown businesses, and high-security applications. Both carry our lifetime workmanship warranty.</p>
+        </div>
+      </div>
+      <div class="ofc-oanb-faq-item">
+        <div class="ofc-oanb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Can ornamental fencing be used for commercial properties in downtown Newburyport?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oanb-faq-a">
+          <p>Absolutely. Steel ornamental fencing is a popular choice for Newburyport businesses along Market Square, State Street, and the harbor district. It provides security and defined property boundaries while maintaining the refined architectural aesthetic the city is known for. We handle both commercial and residential ornamental installations throughout Newburyport.</p>
+        </div>
+      </div>
+      <div class="ofc-oanb-faq-item">
+        <div class="ofc-oanb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>How long does ornamental fence installation take in Newburyport?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oanb-faq-a">
+          <p>Most residential ornamental fence installations are completed in 2-4 days. Commercial projects may take longer depending on scope. Since Olympic Fence is headquartered in nearby West Newbury - just minutes from downtown Newburyport - we're able to respond quickly and keep your project on schedule.</p>
+        </div>
+      </div>
+      <div class="ofc-oanb-faq-item">
+        <div class="ofc-oanb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>What does the lifetime workmanship warranty cover?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oanb-faq-a">
+          <p>Our lifetime workmanship warranty covers our installation work for as long as you own your property. If any issue arises from how the fence was installed, we come back and fix it at no cost. Most fence companies in the Newburyport area only offer 2-3 year warranties. We stand behind our work because our reputation in this community depends on it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 8: Service Areas + Map -->
   <div class="ofc-oanb-section">
     <h2>More Ornamental Aluminum & Steel Fencing Service Areas</h2>
     <p>Olympic Fence installs <a href="https://olympicfencema.com/ornamental-aluminum-and-steel-fencing/">ornamental aluminum and steel fencing</a> throughout North Shore Massachusetts. Explore our other service areas below.</p>
