@@ -1,0 +1,326 @@
+<!-- PROJECTS HUB PAGE - /projects/
+     Replaces existing page content
+     CTAs: "Start the Conversation" → https://bradfordcm.com/contact/
+     STAT PLACEHOLDER: Rick needs to provide project count from BuilderTrend
+-->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+
+:root {
+  --bcm-deep:#14181f; --bcm-charcoal:#1c2129; --bcm-slate:#2a3140;
+  --bcm-warm-gold:#c9a96e; --bcm-gold-light:#dbc291;
+  --bcm-gold-soft:rgba(201,169,110,0.08); --bcm-gold-border:rgba(201,169,110,0.18);
+  --bcm-text-primary:#1f2328; --bcm-text-secondary:#2d3442; --bcm-text-tertiary:#4a5568;
+  --bcm-border:#e8eaef; --bcm-surface:#f7f8fa; --bcm-white:#ffffff;
+  --bcm-shadow-sm:0 1px 2px rgba(0,0,0,0.04); --bcm-shadow-md:0 4px 16px rgba(0,0,0,0.06);
+  --bcm-shadow-lg:0 8px 32px rgba(0,0,0,0.08);
+  --bcm-radius:8px; --bcm-radius-lg:12px;
+}
+.bcm-projects{width:100vw;max-width:100vw;margin-left:calc(-50vw + 50%);position:relative;font-family:'Inter',-apple-system,sans-serif;color:var(--bcm-text-primary);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+.bcm-projects *,.bcm-projects *::before,.bcm-projects *::after{box-sizing:border-box}
+.bcm-projects h1,.bcm-projects h2,.bcm-projects h3{font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;line-height:1.18;margin:0 0 16px;letter-spacing:-0.02em}
+.bcm-projects h1{font-size:2rem} .bcm-projects h2{font-size:1.6rem} .bcm-projects h3{font-size:1.1rem;letter-spacing:-0.01em}
+.bcm-projects p{margin:0 0 16px}
+.bcm-projects a:not([class*="bcm-pj-cta"]):not(.bcm-pj-card-link){color:var(--bcm-warm-gold);text-decoration-color:rgba(201,169,110,0.35);text-underline-offset:3px;text-decoration-thickness:1px;transition:color 0.2s}
+.bcm-projects a:not([class*="bcm-pj-cta"]):not(.bcm-pj-card-link):hover{color:#b8943f}
+.bcm-pj-inner{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* HERO */
+.bcm-pj-hero{background:var(--bcm-deep);padding:80px 24px 72px;text-align:center;position:relative;overflow:hidden}
+.bcm-pj-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(201,169,110,0.05) 0%,transparent 60%);pointer-events:none}
+.bcm-pj-hero-content{position:relative;z-index:2;max-width:680px;margin:0 auto}
+.bcm-pj-hero-label{display:inline-flex;align-items:center;gap:8px;color:var(--bcm-warm-gold);font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:24px}
+.bcm-pj-hero-label::before,.bcm-pj-hero-label::after{content:'';width:24px;height:1px;background:rgba(201,169,110,0.4)}
+.bcm-pj-hero h1{color:var(--bcm-white);font-size:2.4rem;font-weight:700;margin-bottom:18px}
+.bcm-pj-hero-sub{color:rgba(255,255,255,0.75);font-size:1.05rem;max-width:560px;margin:0 auto 0;line-height:1.65}
+
+/* STAT BAR */
+.bcm-pj-stat-bar{background:var(--bcm-charcoal);border-bottom:1px solid rgba(201,169,110,0.12);padding:20px 24px;text-align:center}
+.bcm-pj-stat-bar p{margin:0;color:rgba(255,255,255,0.5);font-size:0.85rem;font-weight:500;letter-spacing:0.01em}
+.bcm-pj-stat-bar strong{color:var(--bcm-warm-gold);font-weight:700}
+
+/* SECTIONS */
+.bcm-pj-section{padding:72px 24px}
+.bcm-pj-section--tinted{background:var(--bcm-surface)}
+.bcm-pj-section--dark{background:var(--bcm-deep)}
+.bcm-pj-section-header{text-align:center;max-width:620px;margin:0 auto 48px}
+.bcm-pj-gold-rule{display:block;width:40px;height:2px;background:var(--bcm-warm-gold);margin:0 auto 20px;border-radius:1px}
+.bcm-pj-section--dark h2{color:var(--bcm-white)}
+.bcm-pj-section--dark p{color:rgba(255,255,255,0.8)}
+.bcm-pj-lead{font-size:1.04rem;color:var(--bcm-text-secondary);line-height:1.7}
+
+/* BUTTONS */
+.bcm-projects a.bcm-pj-cta--gold{display:inline-flex;align-items:center;background:var(--bcm-warm-gold);color:var(--bcm-deep)!important;font-family:'Inter',sans-serif;font-weight:600;font-size:0.92rem;padding:15px 32px;border-radius:6px;text-decoration:none;transition:all 0.25s ease;min-height:50px}
+.bcm-projects a.bcm-pj-cta--gold:hover{background:#b8943f;transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,169,110,0.25);color:var(--bcm-deep)!important}
+.bcm-projects a.bcm-pj-cta--ghost{display:inline-flex;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.9)!important;font-family:'Inter',sans-serif;font-weight:500;font-size:0.92rem;padding:14px 30px;border-radius:6px;text-decoration:none;transition:all 0.25s ease;min-height:50px}
+.bcm-projects a.bcm-pj-cta--ghost:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.3);color:var(--bcm-white)!important}
+
+/* FEATURED PROJECT CARDS */
+.bcm-pj-featured{display:grid;grid-template-columns:1fr;gap:24px}
+.bcm-pj-card-link{display:block;text-decoration:none!important;color:inherit!important;border-radius:var(--bcm-radius-lg);overflow:hidden;border:1px solid var(--bcm-border);background:var(--bcm-white);transition:all 0.35s ease}
+.bcm-pj-card-link:hover{box-shadow:var(--bcm-shadow-lg);transform:translateY(-3px);border-color:var(--bcm-gold-border)}
+.bcm-pj-card-img{position:relative;overflow:hidden;aspect-ratio:16/10}
+.bcm-pj-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;display:block}
+.bcm-pj-card-link:hover .bcm-pj-card-img img{transform:scale(1.04)}
+.bcm-pj-card-tag{position:absolute;top:16px;left:16px;background:rgba(20,24,31,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--bcm-warm-gold);font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:6px 14px;border-radius:4px}
+.bcm-pj-card-body{padding:24px 28px}
+.bcm-pj-card-body h3{font-size:1.15rem;margin-bottom:6px;color:var(--bcm-text-primary)}
+.bcm-pj-card-body p{color:var(--bcm-text-secondary);font-size:0.93rem;margin:0;line-height:1.55}
+.bcm-pj-card-arrow{display:inline-flex;align-items:center;gap:6px;color:var(--bcm-warm-gold);font-size:0.85rem;font-weight:600;margin-top:12px;transition:gap 0.2s}
+.bcm-pj-card-link:hover .bcm-pj-card-arrow{gap:10px}
+
+/* GALLERY GRID - non-linked cards with type labels */
+.bcm-pj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;border-radius:var(--bcm-radius-lg);overflow:hidden}
+.bcm-pj-grid-item{position:relative;overflow:hidden;aspect-ratio:4/3}
+.bcm-pj-grid-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;display:block}
+.bcm-pj-grid-item:hover img{transform:scale(1.04)}
+.bcm-pj-grid-label{position:absolute;bottom:12px;left:12px;background:rgba(20,24,31,0.8);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:rgba(255,255,255,0.85);font-size:0.68rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:5px 12px;border-radius:3px}
+.bcm-pj-grid-item--wide{grid-column:span 2;aspect-ratio:21/9}
+
+/* VIDEO SECTION */
+.bcm-pj-video-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.bcm-pj-video-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--bcm-radius);padding:28px 24px;text-align:center;transition:all 0.25s ease}
+.bcm-pj-video-card:hover{border-color:rgba(201,169,110,0.15);background:rgba(255,255,255,0.05)}
+.bcm-pj-video-card h3{color:var(--bcm-white);font-size:1rem;margin-bottom:6px}
+.bcm-pj-video-card p{color:rgba(255,255,255,0.6);font-size:0.88rem;margin:0}
+.bcm-pj-video-card a{color:var(--bcm-gold-light)!important;text-decoration:none!important;font-weight:600}
+.bcm-pj-video-card a:hover{color:var(--bcm-warm-gold)!important}
+
+/* CTA */
+.bcm-pj-cta-band{background:var(--bcm-surface);padding:72px 24px;text-align:center}
+.bcm-pj-cta-band h2{margin-bottom:12px}
+.bcm-pj-cta-band p{color:var(--bcm-text-secondary);font-size:1rem;max-width:480px;margin:0 auto 36px}
+
+/* LINKS */
+.bcm-pj-links{display:grid;grid-template-columns:1fr;gap:32px;padding-top:48px;border-top:1px solid var(--bcm-border)}
+.bcm-pj-links h3{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--bcm-text-tertiary);margin-bottom:14px}
+.bcm-pj-links ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px 20px}
+.bcm-pj-links li a{font-size:0.9rem;font-weight:500;color:var(--bcm-text-primary)!important;text-decoration:none!important;transition:color 0.2s}
+.bcm-pj-links li a:hover{color:var(--bcm-warm-gold)!important}
+
+@media(min-width:768px){
+  .bcm-projects h1{font-size:2.8rem} .bcm-projects h2{font-size:1.9rem}
+  .bcm-pj-hero{padding:100px 40px 88px}
+  .bcm-pj-hero h1{font-size:3rem}
+  .bcm-pj-section{padding:88px 40px}
+  .bcm-pj-featured{grid-template-columns:1fr 1fr}
+  .bcm-pj-featured .bcm-pj-card-link:first-child{grid-column:span 2}
+  .bcm-pj-grid{grid-template-columns:repeat(3,1fr)}
+  .bcm-pj-video-grid{grid-template-columns:repeat(3,1fr)}
+  .bcm-pj-links{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1024px){
+  .bcm-pj-hero h1{font-size:3.2rem}
+  .bcm-pj-section{padding:100px 40px}
+  .bcm-pj-grid{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+
+<div class="bcm-projects">
+
+  <!-- HERO -->
+  <section class="bcm-pj-hero">
+    <div class="bcm-pj-hero-content">
+      <div class="bcm-pj-hero-label">Portfolio</div>
+      <h1>Our Work</h1>
+      <p class="bcm-pj-hero-sub">Real projects, real transformations. Every build comes with daily documentation, in-house design, and lifetime support through Bradford Home Services.</p>
+    </div>
+  </section>
+
+  <!-- STAT BAR - Rick: fill in from BuilderTrend -->
+  <div class="bcm-pj-stat-bar">
+    <p><strong>100+</strong> residential projects completed across Eastern Massachusetts and Southern New Hampshire</p>
+  </div>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="bcm-pj-section">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-section-header">
+        <span class="bcm-pj-gold-rule"></span>
+        <h2>Featured Projects</h2>
+        <p class="bcm-pj-lead">Standout builds with the full story - before and after, design process, and what made each project work.</p>
+      </div>
+
+      <div class="bcm-pj-featured">
+        <a href="https://bradfordcm.com/projects/beverly-first-floor-renovation/" class="bcm-pj-card-link">
+          <div class="bcm-pj-card-img">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-33-1.webp" alt="" width="800" height="500" loading="eager">
+            <div class="bcm-pj-card-tag">Renovation</div>
+          </div>
+          <div class="bcm-pj-card-body">
+            <h3>Beverly, MA - First Floor Renovation</h3>
+            <p>From closed off to wide open. A complete first-floor transformation featuring in-house design, tin ceilings, and a reimagined staircase that changed how this family uses their home.</p>
+            <div class="bcm-pj-card-arrow">View Project &rarr;</div>
+          </div>
+        </a>
+
+        <a href="https://bradfordcm.com/projects/west-newbury-whole-home-renovation/" class="bcm-pj-card-link">
+          <div class="bcm-pj-card-img">
+            <img src="https://bradfordcm.com/wp-content/uploads/2026/03/14_Kitchen-Wide-Blue-Cabinets.jpg" alt="" width="800" height="500" loading="lazy">
+            <div class="bcm-pj-card-tag">Whole-Home Renovation</div>
+          </div>
+          <div class="bcm-pj-card-body">
+            <h3>West Newbury, MA - Cottage Rebuild</h3>
+            <p>What started as a dormer became a full structural rebuild. No foundation on the back wall, flood zone constraints, aging-in-place needs - and a solution that kept it all within reach.</p>
+            <div class="bcm-pj-card-arrow">View Project &rarr;</div>
+          </div>
+        </a>
+
+        <a href="https://bradfordcm.com/projects/exeter-nh-custom-home/" class="bcm-pj-card-link">
+          <div class="bcm-pj-card-img">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-31-1-1024x683.webp" alt="" width="800" height="500" loading="lazy">
+            <div class="bcm-pj-card-tag">Custom Home</div>
+          </div>
+          <div class="bcm-pj-card-body">
+            <h3>Exeter, NH - Custom Home Build</h3>
+            <p>From an online design that wouldn't pass codes to an engineered solution that delivered everything the client wanted. ICF foundation, open-concept living, built for decades of New England weather.</p>
+            <div class="bcm-pj-card-arrow">View Project &rarr;</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE OF OUR WORK - category-labeled grid -->
+  <section class="bcm-pj-section bcm-pj-section--tinted">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-section-header">
+        <span class="bcm-pj-gold-rule"></span>
+        <h2>More of Our Work</h2>
+        <p class="bcm-pj-lead">A sample of recent work across project types. We update this regularly as new builds wrap up.</p>
+      </div>
+
+      <div class="bcm-pj-grid">
+        <div class="bcm-pj-grid-item bcm-pj-grid-item--wide">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-35-1.webp" alt="" width="800" height="340" loading="lazy">
+          <div class="bcm-pj-grid-label">Kitchen - Beverly</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/06_Deck-Composite-Marsh-View.jpg" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Deck - West Newbury</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8400.webp" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Porch - Essex</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/37_Bathroom1-Full-Shower-Vanity.jpg" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Bathroom - West Newbury</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-17-1.webp" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Staircase - Beverly</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6072-scaled.webp" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Exterior - Hamilton</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/09_Screened-Porch-Bistro-Table.jpg" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Screened Porch - West Newbury</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/30_Bedroom1-Corner-Windows-MiniSplit.jpg" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Bedroom - West Newbury</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-46-1.webp" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Dining - Beverly</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7984-scaled.webp" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Exterior - Wakefield</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/20_Staircase-Full-View-With-Landing.jpg" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Staircase - West Newbury</div>
+        </div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7411-scaled.webp" alt="" width="600" height="450" loading="lazy">
+          <div class="bcm-pj-grid-label">Foundation - Hamilton</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO & CONTENT -->
+  <section class="bcm-pj-section bcm-pj-section--dark">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-section-header">
+        <span class="bcm-pj-gold-rule"></span>
+        <h2>Watch Our Work</h2>
+        <p>Project walkthroughs, build updates, and behind-the-scenes content from active job sites.</p>
+      </div>
+      <div class="bcm-pj-video-grid">
+        <div class="bcm-pj-video-card">
+          <h3>Project Walkthroughs</h3>
+          <p>Rick walks you through completed builds and explains the decisions behind each project.</p>
+          <p style="margin-top:12px;margin-bottom:0;"><a href="https://www.youtube.com/@BradfordConstructionMgmt/">Watch on YouTube</a></p>
+        </div>
+        <div class="bcm-pj-video-card">
+          <h3>Build Updates</h3>
+          <p>Real-time progress from active job sites - the kind of daily documentation every BCM client receives.</p>
+          <p style="margin-top:12px;margin-bottom:0;"><a href="https://www.instagram.com/bradfordcm/">Follow on Instagram</a></p>
+        </div>
+        <div class="bcm-pj-video-card">
+          <h3>Behind the Build</h3>
+          <p>The details that make a project work - structural solutions, material choices, and design decisions explained.</p>
+          <p style="margin-top:12px;margin-bottom:0;"><a href="https://www.facebook.com/BradfordConstructionManagement/">Follow on Facebook</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bcm-pj-cta-band">
+    <div class="bcm-pj-inner">
+      <h2>Your Home Could Be Next</h2>
+      <p>Tell us what you're thinking. Free consultation, real answers, no high-pressure sales.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+        <a href="https://bradfordcm.com/contact/" class="bcm-pj-cta--gold">Start the Conversation</a>
+        <a href="tel:9789459771" style="display:inline-flex;align-items:center;background:var(--bcm-charcoal);color:var(--bcm-white)!important;font-family:'Inter',sans-serif;font-weight:600;font-size:0.92rem;padding:15px 32px;border-radius:6px;text-decoration:none;transition:all 0.25s ease;min-height:50px;">978-945-9771</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINKS -->
+  <section class="bcm-pj-section" style="padding-top:56px;padding-bottom:56px;">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-links">
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="https://bradfordcm.com/home-additions/">Home Additions</a></li>
+            <li><a href="https://bradfordcm.com/home-renovations/">Renovations</a></li>
+            <li><a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADUs</a></li>
+            <li><a href="https://bradfordcm.com/custom-homes/">Custom Homes</a></li>
+            <li><a href="https://bradfordcm.com/kitchen-remodels/">Kitchen Remodels</a></li>
+            <li><a href="https://bradfordcm.com/bathroom-remodels/">Bathroom Remodels</a></li>
+            <li><a href="https://bradfordcm.com/design-build/">Design-Build</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Areas We Serve</h3>
+          <ul>
+            <li><a href="https://bradfordcm.com/haverhill-ma/">Haverhill, MA</a></li>
+            <li><a href="https://bradfordcm.com/newburyport-mass/">Newburyport, MA</a></li>
+            <li><a href="https://bradfordcm.com/south-hamilton-ma/">South Hamilton, MA</a></li>
+            <li><a href="https://bradfordcm.com/wakefield-ma/">Wakefield, MA</a></li>
+            <li><a href="https://bradfordcm.com/essex-ma/">Essex, MA</a></li>
+            <li><a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Learn More</h3>
+          <ul>
+            <li><a href="https://bradfordcm.com/about-us/">About BCM</a></li>
+            <li><a href="https://bradfordcm.com/benefits-of-design-build/">Benefits of Design-Build</a></li>
+            <li><a href="https://bradfordcm.com/contact/">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
