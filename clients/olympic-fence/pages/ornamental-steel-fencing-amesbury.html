@@ -116,6 +116,18 @@
   .ofc-oaam-why-cards{grid-template-columns:repeat(4,1fr)}
   .ofc-oaam-why-card{flex-direction:column;text-align:center;align-items:center}
 }
+
+/* FAQ Accordion */
+.ofc-oaam-faq{max-width:800px;margin:28px auto}
+.ofc-oaam-faq-item{border-bottom:1px solid #e9ecef}
+.ofc-oaam-faq-item:first-child{border-top:1px solid #e9ecef}
+.ofc-oaam-faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;gap:16px}
+.ofc-oaam-faq-q h3{text-align:left!important;font-size:16px!important;margin:0!important;flex:1}
+.ofc-oaam-faq-q svg{width:20px;height:20px;flex-shrink:0;color:#272262;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.ofc-oaam-faq-item.active .ofc-oaam-faq-q svg{transform:rotate(45deg)}
+.ofc-oaam-faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.ofc-oaam-faq-item.active .ofc-oaam-faq-a{max-height:300px}
+.ofc-oaam-faq-a p{text-align:left!important;font-size:15px!important;color:#666!important;padding:0 0 20px!important;margin:0!important}
 </style>
 
 <div class="ofc-oaam-wrapper">
@@ -270,6 +282,68 @@
         <div class="ofc-oaam-review"><div class="ofc-oaam-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><blockquote>"Olympic fence did a fantastic job installing the fence in back yard. The crew was very professional and did the job much quicker than expected. I would recommend them to any one looking to get a fence installed."</blockquote><span class="ofc-oaam-review-author">- Tom F.</span></div>
         <div class="ofc-oaam-review"><div class="ofc-oaam-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><blockquote>"We had our fence repaired by Olympic Fence after a tree fell on it, and they were fantastic from start to finish. They came out quickly, worked efficiently, and did an amazing job. The fence looks brand new! The workers were incredibly kind and pleasant to work with. Highly recommend Olympic Fence Co for anyone needing quality workmanship and great service."</blockquote><span class="ofc-oaam-review-author">- Janelle F.</span></div>
         <div class="ofc-oaam-review"><div class="ofc-oaam-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><blockquote>"I could not be happier with the fencing that Olympic Fence installed. They were excellent in every way and it was a pleasure to deal with James LaPierre."</blockquote><span class="ofc-oaam-review-author">- Janice V.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ofc-oaam-section">
+    <h2>Frequently Asked Questions About Ornamental Fencing in Amesbury</h2>
+    <p>Common questions from Amesbury homeowners considering ornamental aluminum or steel fencing.</p>
+
+    <div class="ofc-oaam-faq">
+      <div class="ofc-oaam-faq-item">
+        <div class="ofc-oaam-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Do I need a fence permit in Amesbury, MA?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oaam-faq-a">
+          <p>Amesbury has a maximum fence height of 6 feet, which is stricter than many surrounding towns. Fences near property boundaries or setback lines may require a permit and review by the Board of Fence Viewers. Fences at intersections must also maintain visibility for traffic safety. Olympic Fence is familiar with all of Amesbury's specific requirements and handles the permitting process for you.</p>
+        </div>
+      </div>
+      <div class="ofc-oaam-faq-item">
+        <div class="ofc-oaam-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>What is Amesbury's Board of Fence Viewers?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oaam-faq-a">
+          <p>The Board of Fence Viewers is a local regulatory body in Amesbury that reviews fence disputes and certain fence installations near property boundaries. They ensure fencing meets town standards for height, placement, and neighborhood compatibility. Olympic Fence has worked with the Board for years and understands how to navigate the review process smoothly.</p>
+        </div>
+      </div>
+      <div class="ofc-oaam-faq-item">
+        <div class="ofc-oaam-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>What is the difference between aluminum and steel ornamental fencing?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oaam-faq-a">
+          <p>Aluminum fencing is naturally rust-proof and maintenance-free with a 25+ year lifespan - ideal for <a href="https://olympicfencema.com/residential-projects/">residential properties</a>, <a href="https://olympicfencema.com/pool-fencing/">pool enclosures</a>, and garden borders throughout Amesbury. Steel fencing offers maximum strength with custom ornamental designs and 30+ year galvanized protection, better suited for security-focused or <a href="https://olympicfencema.com/commercial-fencing/">commercial applications</a>. Both carry our lifetime workmanship warranty.</p>
+        </div>
+      </div>
+      <div class="ofc-oaam-faq-item">
+        <div class="ofc-oaam-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Will ornamental fencing complement Amesbury's historic homes?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oaam-faq-a">
+          <p>Absolutely. Ornamental aluminum and steel fencing is one of the best choices for Amesbury's historic neighborhoods. The classic wrought iron aesthetic complements Colonial, Federal, and Victorian-era architecture while requiring far less maintenance than traditional wrought iron. Multiple style options, colors, and heights allow you to match your home's character perfectly.</p>
+        </div>
+      </div>
+      <div class="ofc-oaam-faq-item">
+        <div class="ofc-oaam-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>How long does fence installation take in Amesbury?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oaam-faq-a">
+          <p>Most residential ornamental fence installations in Amesbury are completed in 2-4 days. Olympic Fence is headquartered in neighboring West Newbury, just minutes from Amesbury, which means faster response times and no long-distance travel charges.</p>
+        </div>
+      </div>
+      <div class="ofc-oaam-faq-item">
+        <div class="ofc-oaam-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>What does the lifetime workmanship warranty cover?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oaam-faq-a">
+          <p>Our lifetime workmanship warranty covers our installation work for as long as you own your Amesbury home. If any issue arises from how the fence was installed, we come back and fix it at no cost. Most fence companies only offer 2-3 year warranties. As a family-owned company that's been in business since 1985, we stand behind every project.</p>
+        </div>
       </div>
     </div>
   </div>
