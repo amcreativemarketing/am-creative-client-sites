@@ -672,6 +672,18 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* FAQ Accordion */
+.ofc-oasb-faq{max-width:800px;margin:28px auto}
+.ofc-oasb-faq-item{border-bottom:1px solid #e9ecef}
+.ofc-oasb-faq-item:first-child{border-top:1px solid #e9ecef}
+.ofc-oasb-faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;gap:16px}
+.ofc-oasb-faq-q h3{text-align:left!important;font-size:16px!important;margin:0!important;flex:1}
+.ofc-oasb-faq-q svg{width:20px;height:20px;flex-shrink:0;color:#272262;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.ofc-oasb-faq-item.active .ofc-oasb-faq-q svg{transform:rotate(45deg)}
+.ofc-oasb-faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.ofc-oasb-faq-item.active .ofc-oasb-faq-a{max-height:300px}
+.ofc-oasb-faq-a p{text-align:left!important;font-size:15px!important;color:#666!important;padding:0 0 20px!important;margin:0!important}
 </style>
 
 <div class="ofc-oasb-wrapper">
@@ -974,7 +986,70 @@
     </div>
   </div>
 
-  <!-- ===================== SECTION 7: Service Areas + Map ===================== -->
+  <!-- ===================== SECTION 7: FAQ ===================== -->
+  <div class="ofc-oasb-section">
+    <h2>Frequently Asked Questions About Ornamental Fencing in Salisbury</h2>
+    <p>Common questions from Salisbury property owners considering ornamental aluminum or steel fencing.</p>
+
+    <div class="ofc-oasb-faq">
+      <div class="ofc-oasb-faq-item">
+        <div class="ofc-oasb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Will ornamental fencing hold up to Salisbury's coastal salt air?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oasb-faq-a">
+          <p>Yes. Aluminum fencing is naturally rust-proof and handles direct salt-air exposure without any special coating or maintenance - making it the top choice for Salisbury Beach and oceanfront properties. Steel fencing uses galvanized coating plus powder finish for 30+ year corrosion protection even in harsh coastal conditions. Both materials significantly outperform traditional wrought iron in salt-air environments.</p>
+        </div>
+      </div>
+      <div class="ofc-oasb-faq-item">
+        <div class="ofc-oasb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Do I need a fence permit in Salisbury, MA?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oasb-faq-a">
+          <p>Fences under 7 feet in height generally do not require a building permit in Salisbury. Most residential ornamental fencing is 4-6 feet tall and falls well within this limit. Pool fencing must meet Massachusetts state code regardless - minimum 48-inch height with self-closing, self-latching gates. Olympic Fence handles all compliance details for your project.</p>
+        </div>
+      </div>
+      <div class="ofc-oasb-faq-item">
+        <div class="ofc-oasb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>What is the difference between aluminum and steel ornamental fencing?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oasb-faq-a">
+          <p>Aluminum fencing is naturally rust-proof with zero maintenance and a 25+ year lifespan - ideal for <a href="https://olympicfencema.com/pool-fencing/">pool enclosures</a>, beachfront yards, and coastal properties throughout Salisbury. Steel fencing offers maximum strength with custom ornamental designs and 30+ year galvanized protection, better suited for security applications and <a href="https://olympicfencema.com/commercial-fencing/">commercial properties</a>. Both carry our lifetime workmanship warranty.</p>
+        </div>
+      </div>
+      <div class="ofc-oasb-faq-item">
+        <div class="ofc-oasb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Is ornamental aluminum fencing a good choice near the beach?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oasb-faq-a">
+          <p>Ornamental aluminum is one of the best fencing materials for beachfront and near-beach properties in Salisbury. Unlike iron or untreated steel, aluminum does not rust when exposed to salt spray, ocean moisture, or coastal humidity. It requires nothing more than an occasional rinse with a garden hose to keep it looking like new for decades.</p>
+        </div>
+      </div>
+      <div class="ofc-oasb-faq-item">
+        <div class="ofc-oasb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>How long does fence installation take in Salisbury?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oasb-faq-a">
+          <p>Most residential ornamental fence installations in Salisbury are completed in 2-4 days depending on yard size and terrain. Olympic Fence is headquartered in nearby West Newbury, just minutes from Salisbury, which means faster scheduling, quicker response times, and no long-distance travel delays.</p>
+        </div>
+      </div>
+      <div class="ofc-oasb-faq-item">
+        <div class="ofc-oasb-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>What does the lifetime workmanship warranty cover?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oasb-faq-a">
+          <p>Our lifetime workmanship warranty covers our installation work for as long as you own your Salisbury property. If any issue arises from how the fence was installed, we return and fix it at no cost. Most fence companies only offer 2-3 year warranties. As a family-owned North Shore company since 1985, we stand behind every project we complete.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 8: Service Areas + Map ===================== -->
   <div class="ofc-oasb-section">
     <h2>More Ornamental Aluminum & Steel Fencing Service Areas</h2>
     <p>Olympic Fence installs <a href="https://olympicfencema.com/ornamental-aluminum-and-steel-fencing/">ornamental aluminum and steel fencing</a> throughout North Shore Massachusetts. Explore our other service areas below.</p>
