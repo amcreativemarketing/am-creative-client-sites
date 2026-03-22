@@ -1,6 +1,5 @@
 <div class="bcm-wakefield">
 
-  <!-- ═══ WHY BCM ═══ -->
   <section class="bcm-wakefield-section bcm-wakefield-section--dark">
     <div class="bcm-wakefield-inner">
       <div class="bcm-wakefield-section-header">
@@ -8,7 +7,6 @@
         <h2>What Makes BCM Different</h2>
         <p>Most contractors finish your project and move on. We built a company around the opposite approach.</p>
       </div>
-
       <div class="bcm-wakefield-diff-grid">
         <div class="bcm-wakefield-diff">
           <div class="bcm-wakefield-diff-marker"></div>
@@ -17,7 +15,6 @@
             <p>Design, permitting, and construction are handled by one accountable team. No finger-pointing between architects, engineers, and builders - they all report to the same project manager.</p>
           </div>
         </div>
-
         <div class="bcm-wakefield-diff">
           <div class="bcm-wakefield-diff-marker"></div>
           <div>
@@ -25,7 +22,6 @@
             <p>After the final walkthrough, Bradford Home Services handles ongoing maintenance, seasonal check-ins, and warranty follow-through. Your project doesn't end when we hand over the keys.</p>
           </div>
         </div>
-
         <div class="bcm-wakefield-diff">
           <div class="bcm-wakefield-diff-marker"></div>
           <div>
@@ -33,7 +29,6 @@
             <p>Detailed scopes of work with documented change orders. You see exactly what's included and what any change costs before you approve it - no vague allowances or surprise invoices.</p>
           </div>
         </div>
-
         <div class="bcm-wakefield-diff">
           <div class="bcm-wakefield-diff-marker"></div>
           <div>
@@ -45,7 +40,6 @@
     </div>
   </section>
 
-  <!-- ═══ PROCESS ═══ -->
   <section class="bcm-wakefield-section">
     <div class="bcm-wakefield-inner">
       <div class="bcm-wakefield-section-header">
@@ -53,7 +47,6 @@
         <h2>How a Project Works</h2>
         <p class="bcm-wakefield-lead">Our <a href="https://bradfordcm.com/design-build/">design-build approach</a> puts one team in charge from the first phone call through post-completion support.</p>
       </div>
-
       <div class="bcm-wakefield-process">
         <div class="bcm-wakefield-process-step">
           <div class="bcm-wakefield-process-num">1</div>
@@ -94,7 +87,6 @@
     </div>
   </section>
 
-  <!-- ═══ WAKEFIELD CONTEXT ═══ -->
   <section class="bcm-wakefield-section bcm-wakefield-section--tinted">
     <div class="bcm-wakefield-inner">
       <div class="bcm-wakefield-split">
@@ -112,7 +104,6 @@
     </div>
   </section>
 
-  <!-- ═══ CTA ═══ -->
   <section class="bcm-wakefield-cta-band">
     <div class="bcm-wakefield-inner">
       <h2>Ready to Talk About Your Project?</h2>
@@ -124,7 +115,6 @@
     </div>
   </section>
 
-  <!-- ═══ INTERNAL LINKS ═══ -->
   <section class="bcm-wakefield-section" style="padding-top: 56px; padding-bottom: 56px;">
     <div class="bcm-wakefield-inner">
       <div class="bcm-wakefield-links">
@@ -164,55 +154,3 @@
   </section>
 
 </div>
-
-<script defer>
-(function() {
-  var imgs = [];
-  var ci = 0;
-  document.querySelectorAll('.bcm-wakefield-gallery-item img').forEach(function(i) { imgs.push(i.src); });
-
-  window.bcmLB = function(idx) {
-    ci = idx;
-    var lb = document.getElementById('bcmLightbox');
-    document.getElementById('bcmLBImg').src = imgs[ci];
-    document.getElementById('bcmLBCount').textContent = (ci + 1) + ' / ' + imgs.length;
-    lb.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  };
-  window.bcmLBClose = function() {
-    document.getElementById('bcmLightbox').classList.remove('active');
-    document.body.style.overflow = '';
-  };
-  window.bcmLBNav = function(d) {
-    ci = (ci + d + imgs.length) % imgs.length;
-    document.getElementById('bcmLBImg').src = imgs[ci];
-    document.getElementById('bcmLBCount').textContent = (ci + 1) + ' / ' + imgs.length;
-  };
-  document.getElementById('bcmLightbox').addEventListener('click', function(e) {
-    if (e.target === this) bcmLBClose();
-  });
-  document.addEventListener('keydown', function(e) {
-    if (!document.getElementById('bcmLightbox').classList.contains('active')) return;
-    if (e.key === 'Escape') bcmLBClose();
-    if (e.key === 'ArrowLeft') bcmLBNav(-1);
-    if (e.key === 'ArrowRight') bcmLBNav(1);
-  });
-
-  window.bcmToggleGallery = function() {
-    var overflow = document.getElementById('bcmGalleryMore');
-    var btn = document.getElementById('bcmGalleryToggle');
-    var txt = document.getElementById('bcmToggleText');
-    var isExpanded = overflow.classList.contains('expanded');
-    if (isExpanded) {
-      overflow.classList.remove('expanded');
-      btn.classList.remove('expanded');
-      txt.textContent = 'View All 12 Photos';
-      document.getElementById('bcmGallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      overflow.classList.add('expanded');
-      btn.classList.add('expanded');
-      txt.textContent = 'Show Less';
-    }
-  };
-})();
-</script>
