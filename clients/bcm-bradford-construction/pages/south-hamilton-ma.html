@@ -1,0 +1,399 @@
+<!-- HERO OPTIONS
+     Option A: [H1] Design-Build Contractor Serving South Hamilton, MA / [H2] One team from design through build - additions, renovations, ADUs, and custom homes.
+     Option B: [H1] South Hamilton, MA General Contractor / [H2] Commercial-grade project management for residential construction.
+     CTAs: "Start a Conversation" → https://bradfordcm.com/contact/ | "Call 978-945-9771" → tel:9789459771
+-->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+
+:root {
+  --bcm-deep: #14181f;
+  --bcm-charcoal: #1c2129;
+  --bcm-slate: #2a3140;
+  --bcm-warm-gold: #c9a96e;
+  --bcm-gold-light: #dbc291;
+  --bcm-gold-soft: rgba(201, 169, 110, 0.08);
+  --bcm-gold-border: rgba(201, 169, 110, 0.18);
+  --bcm-text-primary: #1f2328;
+  --bcm-text-secondary: #2d3442;
+  --bcm-text-tertiary: #4a5568;
+  --bcm-border: #e8eaef;
+  --bcm-surface: #f7f8fa;
+  --bcm-white: #ffffff;
+  --bcm-shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --bcm-shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+  --bcm-shadow-lg: 0 8px 32px rgba(0,0,0,0.08);
+  --bcm-radius: 8px;
+  --bcm-radius-lg: 12px;
+}
+
+.bcm-shamilton { width:100vw; max-width:100vw; margin-left:calc(-50vw + 50%); position:relative; font-family:'Inter',-apple-system,sans-serif; color:var(--bcm-text-primary); -webkit-font-smoothing:antialiased; line-height:1.6; overflow-x:hidden; }
+.bcm-shamilton *, .bcm-shamilton *::before, .bcm-shamilton *::after { box-sizing:border-box; }
+.bcm-shamilton h1,.bcm-shamilton h2,.bcm-shamilton h3,.bcm-shamilton h4 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; line-height:1.18; margin:0 0 16px; letter-spacing:-0.02em; }
+.bcm-shamilton h1 { font-size:2rem; }
+.bcm-shamilton h2 { font-size:1.6rem; }
+.bcm-shamilton h3 { font-size:1.1rem; letter-spacing:-0.01em; }
+.bcm-shamilton p { margin:0 0 16px; }
+.bcm-shamilton a:not([class*="bcm-sh-cta"]):not(.bcm-lb-link) { color:var(--bcm-warm-gold); text-decoration-color:rgba(201,169,110,0.35); text-underline-offset:3px; text-decoration-thickness:1px; transition:color 0.2s; }
+.bcm-shamilton a:not([class*="bcm-sh-cta"]):not(.bcm-lb-link):hover { color:#b8943f; text-decoration-color:#b8943f; }
+.bcm-sh-inner { max-width:1100px; margin:0 auto; padding:0 24px; }
+
+/* HERO */
+.bcm-sh-hero { position:relative; min-height:500px; display:flex; align-items:center; justify-content:center; text-align:center; background:url('https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6072-scaled.webp') center/cover no-repeat; padding:88px 24px 80px; }
+.bcm-sh-hero::before { content:''; position:absolute; inset:0; background:linear-gradient(175deg,rgba(20,24,31,0.92) 0%,rgba(28,33,41,0.72) 55%,rgba(42,49,64,0.78) 100%); }
+.bcm-sh-hero-content { position:relative; z-index:2; max-width:680px; }
+.bcm-sh-hero-label { display:inline-flex; align-items:center; gap:8px; color:var(--bcm-warm-gold); font-size:0.78rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:24px; }
+.bcm-sh-hero-label::before,.bcm-sh-hero-label::after { content:''; width:24px; height:1px; background:rgba(201,169,110,0.4); }
+.bcm-sh-hero h1 { color:var(--bcm-white); font-size:2.2rem; font-weight:700; margin-bottom:18px; }
+.bcm-sh-hero-sub { color:rgba(255,255,255,0.88); font-size:1.05rem; max-width:540px; margin:0 auto 36px; line-height:1.65; }
+.bcm-sh-hero-ctas { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+
+/* BUTTONS */
+.bcm-shamilton a.bcm-sh-cta--gold { display:inline-flex; align-items:center; gap:8px; background:var(--bcm-warm-gold); color:var(--bcm-deep)!important; font-family:'Inter',sans-serif; font-weight:600; font-size:0.92rem; padding:15px 32px; border-radius:6px; text-decoration:none; transition:all 0.25s ease; min-height:50px; letter-spacing:0.01em; }
+.bcm-shamilton a.bcm-sh-cta--gold:hover { background:#b8943f; transform:translateY(-1px); box-shadow:0 4px 16px rgba(201,169,110,0.25); color:var(--bcm-deep)!important; }
+.bcm-shamilton a.bcm-sh-cta--ghost { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.9)!important; font-family:'Inter',sans-serif; font-weight:500; font-size:0.92rem; padding:14px 30px; border-radius:6px; text-decoration:none; transition:all 0.25s ease; min-height:50px; }
+.bcm-shamilton a.bcm-sh-cta--ghost:hover { background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.3); color:var(--bcm-white)!important; }
+.bcm-shamilton a.bcm-sh-cta--dark { display:inline-flex; align-items:center; gap:8px; background:var(--bcm-charcoal); color:var(--bcm-white)!important; font-family:'Inter',sans-serif; font-weight:600; font-size:0.92rem; padding:15px 32px; border-radius:6px; text-decoration:none; transition:all 0.25s ease; min-height:50px; }
+.bcm-shamilton a.bcm-sh-cta--dark:hover { background:var(--bcm-deep); transform:translateY(-1px); box-shadow:0 4px 16px rgba(0,0,0,0.15); color:var(--bcm-white)!important; }
+
+/* TRUST */
+.bcm-sh-trust { background:var(--bcm-deep); border-bottom:1px solid rgba(201,169,110,0.12); }
+.bcm-sh-trust-items { display:flex; justify-content:center; flex-wrap:wrap; }
+.bcm-sh-trust-item { color:rgba(255,255,255,0.65); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; padding:16px 24px; position:relative; }
+.bcm-sh-trust-item:not(:last-child)::after { content:''; position:absolute; right:0; top:50%; transform:translateY(-50%); width:1px; height:14px; background:rgba(255,255,255,0.08); }
+
+/* SECTIONS */
+.bcm-sh-section { padding:72px 24px; }
+.bcm-sh-section--tinted { background:var(--bcm-surface); }
+.bcm-sh-section--dark { background:var(--bcm-deep); position:relative; overflow:hidden; }
+.bcm-sh-section-header { text-align:center; max-width:620px; margin:0 auto 52px; }
+.bcm-sh-gold-rule { display:block; width:40px; height:2px; background:var(--bcm-warm-gold); margin:0 auto 20px; border-radius:1px; }
+.bcm-sh-section--dark h2 { color:var(--bcm-white); }
+.bcm-sh-section--dark p { color:rgba(255,255,255,0.8); }
+.bcm-sh-lead { font-size:1.04rem; color:var(--bcm-text-secondary); line-height:1.7; }
+
+/* ZIGZAG SERVICES (different from Wakefield card grid) */
+.bcm-sh-zigzag { display:flex; flex-direction:column; gap:48px; }
+.bcm-sh-zig { display:grid; grid-template-columns:1fr; gap:32px; align-items:center; }
+.bcm-sh-zig-img { border-radius:var(--bcm-radius-lg); overflow:hidden; box-shadow:var(--bcm-shadow-md); }
+.bcm-sh-zig-img img { width:100%; height:auto; display:block; aspect-ratio:16/10; object-fit:cover; }
+.bcm-sh-zig-text h3 { font-size:1.2rem; margin-bottom:8px; }
+.bcm-sh-zig-text h3 a { color:var(--bcm-text-primary)!important; text-decoration:none!important; }
+.bcm-sh-zig-text h3 a:hover { color:var(--bcm-warm-gold)!important; }
+.bcm-sh-zig-text p { color:var(--bcm-text-secondary); font-size:0.95rem; margin:0; line-height:1.6; }
+
+/* GALLERY */
+.bcm-sh-gallery-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:6px; border-radius:var(--bcm-radius-lg); overflow:hidden; }
+.bcm-sh-gallery-item { position:relative; overflow:hidden; aspect-ratio:4/3; display:block; }
+.bcm-sh-gallery-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; display:block; }
+.bcm-sh-gallery-item:hover img { transform:scale(1.04); }
+.bcm-sh-gallery-item--tall { grid-row:span 2; aspect-ratio:auto; }
+.bcm-sh-gallery-check { display:none; }
+.bcm-sh-gallery-overflow { display:none; }
+.bcm-sh-gallery-check:checked ~ .bcm-sh-gallery-grid .bcm-sh-gallery-overflow { display:contents; }
+.bcm-sh-gallery-label { display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:24px; padding:14px 28px; background:var(--bcm-white); border:1px solid var(--bcm-border); border-radius:6px; color:var(--bcm-text-secondary); font-family:'Inter',sans-serif; font-weight:600; font-size:0.88rem; cursor:pointer; transition:all 0.25s ease; }
+.bcm-sh-gallery-label:hover { border-color:var(--bcm-warm-gold); color:var(--bcm-warm-gold); }
+.bcm-sh-gallery-label svg { width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2; transition:transform 0.3s ease; }
+.bcm-sh-gallery-check:checked ~ .bcm-sh-gallery-label svg { transform:rotate(180deg); }
+.bcm-sh-gallery-label .sh-tog-show { display:inline; }
+.bcm-sh-gallery-label .sh-tog-hide { display:none; }
+.bcm-sh-gallery-check:checked ~ .bcm-sh-gallery-label .sh-tog-show { display:none; }
+.bcm-sh-gallery-check:checked ~ .bcm-sh-gallery-label .sh-tog-hide { display:inline; }
+
+/* CSS lightbox */
+.bcm-sh-lb { position:fixed; inset:0; z-index:99999; background:rgba(14,18,25,0.94); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); display:flex; align-items:center; justify-content:center; padding:24px; opacity:0; visibility:hidden; transition:opacity 0.3s ease,visibility 0.3s ease; }
+.bcm-sh-lb:target { opacity:1; visibility:visible; }
+.bcm-sh-lb img { max-width:90vw; max-height:85vh; object-fit:contain; border-radius:6px; }
+.bcm-lb-link { position:absolute; width:44px; height:44px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:50%; color:rgba(255,255,255,0.7); font-size:1.2rem; text-decoration:none; display:flex; align-items:center; justify-content:center; transition:all 0.2s; }
+.bcm-lb-link:hover { background:rgba(255,255,255,0.12); color:white; }
+.bcm-lb-close { top:24px; right:24px; }
+.bcm-lb-prev { top:50%; left:20px; transform:translateY(-50%); }
+.bcm-lb-next { top:50%; right:20px; transform:translateY(-50%); }
+
+/* DIFFERENTIATORS - icon cards on light bg (different from Wakefield's gold bars on dark) */
+.bcm-sh-proof-grid { display:grid; grid-template-columns:1fr; gap:20px; }
+.bcm-sh-proof-card { background:var(--bcm-white); border:1px solid var(--bcm-border); border-radius:var(--bcm-radius); padding:28px 24px; display:flex; gap:20px; align-items:flex-start; transition:all 0.3s ease; }
+.bcm-sh-proof-card:hover { border-color:var(--bcm-gold-border); box-shadow:var(--bcm-shadow-md); transform:translateY(-2px); }
+.bcm-sh-proof-icon { width:40px; height:40px; min-width:40px; border-radius:8px; background:var(--bcm-gold-soft); border:1px solid var(--bcm-gold-border); display:flex; align-items:center; justify-content:center; }
+.bcm-sh-proof-icon svg { width:18px; height:18px; stroke:var(--bcm-warm-gold); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.bcm-sh-proof-card h3 { font-size:1rem; margin-bottom:4px; }
+.bcm-sh-proof-card p { color:var(--bcm-text-secondary); font-size:0.93rem; margin:0; line-height:1.6; }
+
+/* PROCESS - horizontal numbered steps (different from Wakefield's unified card) */
+.bcm-sh-steps { display:grid; grid-template-columns:1fr; gap:24px; }
+.bcm-sh-step { text-align:center; }
+.bcm-sh-step-num { width:40px; height:40px; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:0.88rem; color:var(--bcm-white); background:var(--bcm-charcoal); border-radius:50%; }
+.bcm-sh-step h3 { font-size:0.98rem; margin-bottom:6px; color:var(--bcm-white); }
+.bcm-sh-step p { color:rgba(255,255,255,0.7); font-size:0.9rem; margin:0; line-height:1.55; max-width:200px; margin-left:auto; margin-right:auto; }
+
+/* CONTEXT SPLIT */
+.bcm-sh-split { display:grid; grid-template-columns:1fr; gap:40px; align-items:center; }
+.bcm-sh-split-img { border-radius:var(--bcm-radius-lg); overflow:hidden; box-shadow:var(--bcm-shadow-lg); }
+.bcm-sh-split-img img { width:100%; height:auto; display:block; }
+
+/* CTA BAND */
+.bcm-sh-cta-band { background:var(--bcm-deep); padding:72px 24px; text-align:center; position:relative; overflow:hidden; }
+.bcm-sh-cta-band::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at center,rgba(201,169,110,0.04) 0%,transparent 60%); pointer-events:none; }
+.bcm-sh-cta-band h2 { color:var(--bcm-white); font-size:1.7rem; margin-bottom:12px; position:relative; }
+.bcm-sh-cta-band p { color:rgba(255,255,255,0.75); font-size:1rem; max-width:480px; margin:0 auto 36px; position:relative; }
+.bcm-sh-cta-band .bcm-sh-hero-ctas { position:relative; }
+
+/* LINKS */
+.bcm-sh-links { display:grid; grid-template-columns:1fr; gap:32px; padding-top:48px; border-top:1px solid var(--bcm-border); }
+.bcm-sh-links h3 { font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--bcm-text-tertiary); margin-bottom:14px; }
+.bcm-sh-links ul { list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px 20px; }
+.bcm-sh-links li a { font-size:0.9rem; font-weight:500; color:var(--bcm-text-primary)!important; text-decoration:none!important; transition:color 0.2s; }
+.bcm-sh-links li a:hover { color:var(--bcm-warm-gold)!important; }
+
+@media (min-width:768px) {
+  .bcm-shamilton h1 { font-size:2.6rem; }
+  .bcm-shamilton h2 { font-size:1.9rem; }
+  .bcm-sh-hero { min-height:560px; padding:100px 40px 92px; }
+  .bcm-sh-hero h1 { font-size:2.9rem; }
+  .bcm-sh-section { padding:88px 40px; }
+  .bcm-sh-zig { grid-template-columns:1fr 1fr; gap:48px; }
+  .bcm-sh-zig:nth-child(even) .bcm-sh-zig-img { order:2; }
+  .bcm-sh-zig:nth-child(even) .bcm-sh-zig-text { order:1; }
+  .bcm-sh-gallery-grid { grid-template-columns:repeat(3,1fr); gap:8px; }
+  .bcm-sh-proof-grid { grid-template-columns:repeat(2,1fr); }
+  .bcm-sh-steps { grid-template-columns:repeat(3,1fr); }
+  .bcm-sh-split { grid-template-columns:1fr 1fr; gap:64px; }
+  .bcm-sh-links { grid-template-columns:repeat(3,1fr); }
+}
+@media (min-width:1024px) {
+  .bcm-sh-hero { min-height:600px; }
+  .bcm-sh-hero h1 { font-size:3.2rem; }
+  .bcm-sh-section { padding:100px 40px; }
+  .bcm-sh-gallery-grid { grid-template-columns:repeat(4,1fr); gap:8px; }
+  .bcm-sh-gallery-item--tall { grid-row:span 2; }
+  .bcm-sh-steps { grid-template-columns:repeat(5,1fr); }
+}
+</style>
+
+<div class="bcm-shamilton">
+
+  <section class="bcm-sh-hero">
+    <div class="bcm-sh-hero-content">
+      <div class="bcm-sh-hero-label">South Hamilton, MA</div>
+      <h1>Design-Build Contractor Serving South Hamilton</h1>
+      <p class="bcm-sh-hero-sub">One team handles your project from design through construction and beyond - with daily updates, transparent pricing, and lifetime support.</p>
+      <div class="bcm-sh-hero-ctas">
+        <a href="https://bradfordcm.com/contact/" class="bcm-sh-cta--gold">Start a Conversation</a>
+        <a href="tel:9789459771" class="bcm-sh-cta--ghost">978-945-9771</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="bcm-sh-trust">
+    <div class="bcm-sh-trust-items">
+      <div class="bcm-sh-trust-item">Licensed &amp; Insured</div>
+      <div class="bcm-sh-trust-item">MA HIC #201908</div>
+      <div class="bcm-sh-trust-item">Design-Build</div>
+      <div class="bcm-sh-trust-item">Lifetime Support via BHS</div>
+    </div>
+  </div>
+
+  <!-- SERVICES - Zigzag layout (Wakefield uses card grid) -->
+  <section class="bcm-sh-section">
+    <div class="bcm-sh-inner">
+      <div class="bcm-sh-section-header">
+        <span class="bcm-sh-gold-rule"></span>
+        <h2>What We Build in South Hamilton</h2>
+        <p class="bcm-sh-lead">Bradford Construction Management takes residential projects from first conversation through final walkthrough - and stays connected long after.</p>
+      </div>
+      <div class="bcm-sh-zigzag">
+        <div class="bcm-sh-zig">
+          <div class="bcm-sh-zig-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6638.webp" alt="" width="600" height="375" loading="lazy"></div>
+          <div class="bcm-sh-zig-text">
+            <h3><a href="https://bradfordcm.com/home-additions/">Home Additions</a></h3>
+            <p>More room for your family without leaving the neighborhood you love. We handle design, permitting, and construction as one team so you're never managing multiple contractors.</p>
+          </div>
+        </div>
+        <div class="bcm-sh-zig">
+          <div class="bcm-sh-zig-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7411-scaled.webp" alt="" width="600" height="375" loading="lazy"></div>
+          <div class="bcm-sh-zig-text">
+            <h3><a href="https://bradfordcm.com/home-renovations/">Whole-Home Renovations</a></h3>
+            <p>From dated layouts to complete transformations. We bring your existing house up to the standard you actually want to live in - with a clear scope and documented change orders.</p>
+          </div>
+        </div>
+        <div class="bcm-sh-zig">
+          <div class="bcm-sh-zig-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7057-scaled.webp" alt="" width="600" height="375" loading="lazy"></div>
+          <div class="bcm-sh-zig-text">
+            <h3><a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">Accessory Dwelling Units</a></h3>
+            <p>In-law suites, rental units, and multigenerational living spaces. We navigate local zoning and permitting so you don't have to figure it out alone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="bcm-sh-section bcm-sh-section--tinted" id="sh-gallery">
+    <div class="bcm-sh-inner">
+      <div class="bcm-sh-section-header">
+        <span class="bcm-sh-gold-rule"></span>
+        <h2>Project Gallery</h2>
+        <p class="bcm-sh-lead">Work completed by our team in the Hamilton and North Shore area. Every project gets the same level of care - clear communication, quality materials, clean execution.</p>
+      </div>
+      <div>
+        <input type="checkbox" class="bcm-sh-gallery-check" id="shGalleryCheck">
+        <div class="bcm-sh-gallery-grid">
+          <a href="#sh-lb0" class="bcm-sh-gallery-item bcm-sh-gallery-item--tall"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6072-scaled.webp" alt="" width="600" height="900" loading="eager"></a>
+          <a href="#sh-lb1" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7817-scaled.webp" alt="" width="600" height="450" loading="eager"></a>
+          <a href="#sh-lb2" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6617-scaled.webp" alt="" width="600" height="450" loading="eager"></a>
+          <a href="#sh-lb3" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7367-scaled.webp" alt="" width="600" height="450" loading="lazy"></a>
+          <a href="#sh-lb4" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/FE897931-EC42-4038-9ED9-6855655AD9C5.webp" alt="" width="600" height="450" loading="lazy"></a>
+          <a href="#sh-lb5" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8398-scaled.webp" alt="" width="600" height="450" loading="lazy"></a>
+          <div class="bcm-sh-gallery-overflow">
+            <a href="#sh-lb6" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6774-scaled.webp" alt="" width="600" height="450" loading="lazy"></a>
+            <a href="#sh-lb7" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7232-scaled.webp" alt="" width="600" height="450" loading="lazy"></a>
+            <a href="#sh-lb8" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7048.webp" alt="" width="600" height="450" loading="lazy"></a>
+            <a href="#sh-lb9" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_1693.webp" alt="" width="600" height="450" loading="lazy"></a>
+            <a href="#sh-lb10" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_1700.webp" alt="" width="600" height="450" loading="lazy"></a>
+            <a href="#sh-lb11" class="bcm-sh-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/1115A02B-BDC5-4A83-B56D-0094F3E0086D.webp" alt="" width="600" height="450" loading="lazy"></a>
+          </div>
+        </div>
+        <label for="shGalleryCheck" class="bcm-sh-gallery-label">
+          <span class="sh-tog-show">View All 12 Photos</span>
+          <span class="sh-tog-hide">Show Less</span>
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </label>
+      </div>
+      <p style="text-align:center; margin-top:20px;">
+        <a href="https://bradfordcm.com/projects/" class="bcm-sh-cta--dark">Browse Full Portfolio</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- CSS lightbox panels -->
+  <div id="sh-lb0" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb11" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6072-scaled.webp" alt=""><a href="#sh-lb1" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb1" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb0" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7817-scaled.webp" alt=""><a href="#sh-lb2" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb2" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb1" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6617-scaled.webp" alt=""><a href="#sh-lb3" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb3" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb2" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7367-scaled.webp" alt=""><a href="#sh-lb4" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb4" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb3" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/FE897931-EC42-4038-9ED9-6855655AD9C5.webp" alt=""><a href="#sh-lb5" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb5" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb4" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8398-scaled.webp" alt=""><a href="#sh-lb6" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb6" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb5" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6774-scaled.webp" alt=""><a href="#sh-lb7" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb7" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb6" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7232-scaled.webp" alt=""><a href="#sh-lb8" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb8" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb7" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7048.webp" alt=""><a href="#sh-lb9" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb9" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb8" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_1693.webp" alt=""><a href="#sh-lb10" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb10" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb9" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_1700.webp" alt=""><a href="#sh-lb11" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <div id="sh-lb11" class="bcm-sh-lb"><a href="#sh-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#sh-lb10" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/1115A02B-BDC5-4A83-B56D-0094F3E0086D.webp" alt=""><a href="#sh-lb0" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+
+  <!-- DIFFERENTIATORS - icon cards on light bg (Wakefield uses gold bars on dark) -->
+  <section class="bcm-sh-section">
+    <div class="bcm-sh-inner">
+      <div class="bcm-sh-section-header">
+        <span class="bcm-sh-gold-rule"></span>
+        <h2>What Makes BCM Different</h2>
+        <p class="bcm-sh-lead">Most contractors finish your project and move on. We built a company around the opposite approach.</p>
+      </div>
+      <div class="bcm-sh-proof-grid">
+        <div class="bcm-sh-proof-card">
+          <div class="bcm-sh-proof-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div><h3>One Team, Start to Finish</h3><p>Design, permitting, and construction handled by a single accountable team. No finger-pointing between architects, engineers, and builders.</p></div>
+        </div>
+        <div class="bcm-sh-proof-card">
+          <div class="bcm-sh-proof-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><h3>Lifetime Support Through BHS</h3><p>After the final walkthrough, Bradford Home Services provides ongoing maintenance, seasonal check-ins, and warranty follow-through.</p></div>
+        </div>
+        <div class="bcm-sh-proof-card">
+          <div class="bcm-sh-proof-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+          <div><h3>Transparent Pricing</h3><p>Detailed scopes of work with documented change orders. You see exactly what's included and what any change costs before you approve it.</p></div>
+        </div>
+        <div class="bcm-sh-proof-card">
+          <div class="bcm-sh-proof-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div><h3>Daily Job-Site Updates</h3><p>Photos of exactly what happened on your project every single day. Everything goes directly to your project portal so you're always in the loop.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS - centered numbered steps on dark bg (Wakefield uses unified card grid) -->
+  <section class="bcm-sh-section bcm-sh-section--dark">
+    <div class="bcm-sh-inner">
+      <div class="bcm-sh-section-header">
+        <span class="bcm-sh-gold-rule"></span>
+        <h2>How a Project Works</h2>
+        <p>Our <a href="https://bradfordcm.com/design-build/" style="color:var(--bcm-gold-light);">design-build approach</a> puts one team in charge from the first phone call through post-completion support.</p>
+      </div>
+      <div class="bcm-sh-steps">
+        <div class="bcm-sh-step"><div class="bcm-sh-step-num">1</div><h3>Conversation</h3><p>Goals, timeline, and a realistic budget range. No commitment.</p></div>
+        <div class="bcm-sh-step"><div class="bcm-sh-step-num">2</div><h3>Feasibility &amp; Design</h3><p>Property evaluation, zoning review, and a plan that fits.</p></div>
+        <div class="bcm-sh-step"><div class="bcm-sh-step-num">3</div><h3>Permitting</h3><p>We handle applications, revisions, and building department coordination.</p></div>
+        <div class="bcm-sh-step"><div class="bcm-sh-step-num">4</div><h3>Construction</h3><p>Daily updates, documented changes, dedicated project manager.</p></div>
+        <div class="bcm-sh-step"><div class="bcm-sh-step-num">5</div><h3>Lifetime Support</h3><p>BHS provides maintenance, seasonal care, and warranty support.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEXT -->
+  <section class="bcm-sh-section bcm-sh-section--tinted">
+    <div class="bcm-sh-inner">
+      <div class="bcm-sh-split">
+        <div>
+          <span class="bcm-sh-gold-rule" style="margin:0 0 20px;"></span>
+          <h2>Building in South Hamilton</h2>
+          <p class="bcm-sh-lead">South Hamilton and the surrounding Hamilton area sit right in the heart of the North Shore - close to the coast, close to Route 1A, and well within our regular project coverage area. Our team is familiar with Hamilton's residential character, local permitting requirements, and the kind of work these homes need.</p>
+          <p style="color:var(--bcm-text-secondary); font-size:0.96rem; line-height:1.65;">Whether it's a foundation-up addition to an older colonial, a full kitchen renovation, or an ADU for family, the approach stays the same: clear scope, honest pricing, reliable schedule, and a team that's on-site daily during active construction.</p>
+          <p style="color:var(--bcm-text-secondary); font-size:0.96rem; line-height:1.65; margin-bottom:0;">Our Haverhill headquarters puts us about 25 minutes from most Hamilton addresses. Close enough to be there when it matters.</p>
+        </div>
+        <div class="bcm-sh-split-img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6617-scaled.webp" alt="" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bcm-sh-cta-band">
+    <div class="bcm-sh-inner">
+      <h2>Ready to Talk About Your Project?</h2>
+      <p>An honest assessment of scope, timeline, and budget. No pressure, no sales pitch.</p>
+      <div class="bcm-sh-hero-ctas">
+        <a href="https://bradfordcm.com/contact/" class="bcm-sh-cta--gold">Get in Touch</a>
+        <a href="tel:9789459771" class="bcm-sh-cta--ghost">978-945-9771</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINKS -->
+  <section class="bcm-sh-section" style="padding-top:56px; padding-bottom:56px;">
+    <div class="bcm-sh-inner">
+      <div class="bcm-sh-links">
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="https://bradfordcm.com/home-additions/">Home Additions</a></li>
+            <li><a href="https://bradfordcm.com/home-renovations/">Renovations</a></li>
+            <li><a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADUs</a></li>
+            <li><a href="https://bradfordcm.com/custom-homes/">Custom Homes</a></li>
+            <li><a href="https://bradfordcm.com/kitchen-remodels/">Kitchen Remodels</a></li>
+            <li><a href="https://bradfordcm.com/bathroom-remodels/">Bathroom Remodels</a></li>
+            <li><a href="https://bradfordcm.com/design-build/">Design-Build</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Nearby Areas</h3>
+          <ul>
+            <li><a href="https://bradfordcm.com/haverhill-ma/">Haverhill, MA</a></li>
+            <li><a href="https://bradfordcm.com/newburyport-mass/">Newburyport, MA</a></li>
+            <li><a href="https://bradfordcm.com/wakefield-ma/">Wakefield, MA</a></li>
+            <li><a href="https://bradfordcm.com/essex-ma-farmers-porch/">Essex, MA</a></li>
+            <li><a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Learn More</h3>
+          <ul>
+            <li><a href="https://bradfordcm.com/about-us/">About BCM</a></li>
+            <li><a href="https://bradfordcm.com/projects/">Project Portfolio</a></li>
+            <li><a href="https://bradfordcm.com/benefits-of-design-build/">Benefits of Design-Build</a></li>
+            <li><a href="https://bradfordcm.com/contact/">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
