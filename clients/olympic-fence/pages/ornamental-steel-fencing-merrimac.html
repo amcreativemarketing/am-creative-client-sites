@@ -156,6 +156,18 @@
   .ofc-oamr-hero h1{font-size:46px!important}
   .ofc-oamr-apps{grid-template-columns:1fr 1fr 1fr}
 }
+
+/* FAQ Accordion */
+.ofc-oamr-faq{max-width:800px;margin:28px auto}
+.ofc-oamr-faq-item{border-bottom:1px solid #e9ecef}
+.ofc-oamr-faq-item:first-child{border-top:1px solid #e9ecef}
+.ofc-oamr-faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;gap:16px}
+.ofc-oamr-faq-q h3{text-align:left!important;font-size:16px!important;margin:0!important;flex:1}
+.ofc-oamr-faq-q svg{width:20px;height:20px;flex-shrink:0;color:#272262;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.ofc-oamr-faq-item.active .ofc-oamr-faq-q svg{transform:rotate(45deg)}
+.ofc-oamr-faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.ofc-oamr-faq-item.active .ofc-oamr-faq-a{max-height:300px}
+.ofc-oamr-faq-a p{text-align:left!important;font-size:15px!important;color:#666!important;padding:0 0 20px!important;margin:0!important}
 </style>
 
 <div class="ofc-oamr-wrapper">
@@ -432,7 +444,70 @@
     </div>
   </div>
 
-  <!-- SECTION 7: Service Areas + Map -->
+  <!-- SECTION 7: FAQ -->
+  <div class="ofc-oamr-section">
+    <h2>Frequently Asked Questions About Ornamental Fencing in Merrimac</h2>
+    <p>Common questions from Merrimac homeowners considering ornamental aluminum or steel fencing for their property.</p>
+
+    <div class="ofc-oamr-faq">
+      <div class="ofc-oamr-faq-item">
+        <div class="ofc-oamr-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Do I need a fence permit in Merrimac, MA?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oamr-faq-a">
+          <p>Fences under 7 feet in height typically do not require a building permit in Merrimac. Most residential ornamental fencing is 4-6 feet tall and falls well within this limit. Pool fencing must meet Massachusetts state code regardless of permit requirements, including minimum 48-inch height and self-closing, self-latching gates. Olympic Fence handles all compliance details for you.</p>
+        </div>
+      </div>
+      <div class="ofc-oamr-faq-item">
+        <div class="ofc-oamr-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>What is the difference between aluminum and steel ornamental fencing?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oamr-faq-a">
+          <p>Aluminum fencing is naturally rust-proof and maintenance-free, making it ideal for <a href="https://olympicfencema.com/residential-projects/">residential yards</a>, <a href="https://olympicfencema.com/pool-fencing/">pool enclosures</a>, and properties near Lake Attitash or the Merrimack River. Steel fencing delivers maximum strength and allows custom ornamental detailing with 30+ year corrosion protection. Both materials carry our lifetime workmanship warranty.</p>
+        </div>
+      </div>
+      <div class="ofc-oamr-faq-item">
+        <div class="ofc-oamr-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Is ornamental fencing safe for families with children and pets?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oamr-faq-a">
+          <p>Yes. Ornamental aluminum and steel fencing provides excellent containment for children and pets. Tight picket spacing prevents smaller animals from slipping through, and the height options we install keep larger dogs safely contained. For Merrimac families, it offers peace of mind while maintaining the clean, open look that suits the town's residential character. We also install dedicated <a href="https://olympicfencema.com/dog-fencing/">dog fencing</a> solutions.</p>
+        </div>
+      </div>
+      <div class="ofc-oamr-faq-item">
+        <div class="ofc-oamr-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>Will ornamental fencing hold up near Lake Attitash and the Merrimack River?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oamr-faq-a">
+          <p>Absolutely. Aluminum fencing is naturally rust-proof and handles moisture exposure without any coating or special treatment, making it the top choice for Lake Attitash waterfront and Merrimack River-adjacent properties. Steel fencing uses galvanized plus powder-coat protection for 30+ year durability, even in high-moisture environments.</p>
+        </div>
+      </div>
+      <div class="ofc-oamr-faq-item">
+        <div class="ofc-oamr-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>How long does fence installation take in Merrimac?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oamr-faq-a">
+          <p>Most residential ornamental fence installations in Merrimac are completed in 2-4 days depending on yard size and terrain. Olympic Fence is headquartered in neighboring West Newbury, so our crews are just minutes away - which means faster response times and no long-distance travel delays.</p>
+        </div>
+      </div>
+      <div class="ofc-oamr-faq-item">
+        <div class="ofc-oamr-faq-q" onclick="this.parentElement.classList.toggle('active')">
+          <h3>What does the lifetime workmanship warranty include?</h3>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="ofc-oamr-faq-a">
+          <p>Our lifetime workmanship warranty covers our installation work for as long as you own your Merrimac home. If any issue arises from how the fence was installed, we return and fix it at no cost. Most fence contractors only offer 2-3 year warranties. As a neighboring West Newbury company that's been in business since 1985, we stand behind every project we complete.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 8: Service Areas + Map -->
   <div class="ofc-oamr-section">
     <h2>More Ornamental Aluminum & Steel Fencing Service Areas</h2>
     <p>Olympic Fence installs <a href="https://olympicfencema.com/ornamental-aluminum-and-steel-fencing/">ornamental aluminum and steel fencing</a> throughout North Shore Massachusetts. Explore our other service areas below.</p>
