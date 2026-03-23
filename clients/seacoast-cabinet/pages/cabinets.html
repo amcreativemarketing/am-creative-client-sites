@@ -102,7 +102,7 @@
 .sc-cb-content-grid { display: grid; grid-template-columns: 1fr; gap: 32px; max-width: 1000px; margin: 0 auto; align-items: center; }
 .sc-cb-content-image { border-radius: 10px; overflow: hidden; }
 .sc-cb-content-image img { width: 100%; height: auto; display: block; border-radius: 10px; }
-.sc-cb-content-text h2 { text-align: left; font-size: 1.5rem; color: #2c3e50 !important; }
+.sc-cb-content-text h2 { text-align: center; font-size: 1.5rem; color: #2c3e50 !important; }
 .sc-cb-content-text h3 { font-size: 1.05rem; font-weight: 600; color: #2c3e50 !important; margin-top: 1.25em; margin-bottom: 0.4em; }
 .sc-cb-content-text p { font-size: 0.95rem; color: #555 !important; line-height: 1.7; }
 
@@ -120,7 +120,10 @@
 .sc-cb-tag-midrange { background: #7d99ad; }
 .sc-cb-tag-value { background: #5cb85c; }
 
-.sc-cb-brand-content h2 { text-align: left; font-size: 1.5rem; }
+/* BRAND LOGO */
+.sc-cb-brand-logo { display: block; max-height: 48px; width: auto; margin-bottom: 0.75em; }
+
+.sc-cb-brand-content h2 { text-align: center; font-size: 1.5rem; }
 .sc-cb-brand-content p { font-size: 0.95rem; color: #555 !important; line-height: 1.7; }
 
 .sc-cb-brand-specs {
@@ -177,7 +180,7 @@
 .sc-cb-callout { background: #2c3e50; padding: 50px 20px; }
 .sc-cb-callout-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
 .sc-cb-callout-badge { display: inline-block; background: rgba(184,144,95,0.2); border: 1px solid rgba(184,144,95,0.4); color: #b8905f !important; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 4px; margin-bottom: 0.75em; }
-.sc-cb-callout h2 { color: #ffffff !important; text-align: left; font-size: 1.4rem; margin-bottom: 0.5em; }
+.sc-cb-callout h2 { color: #ffffff !important; text-align: center; font-size: 1.4rem; margin-bottom: 0.5em; }
 .sc-cb-callout p { color: rgba(255,255,255,0.85) !important; font-size: 0.95rem; line-height: 1.7; }
 
 /* INSTALL GRID */
@@ -256,7 +259,7 @@
     <section class="sc-cb-hero">
         <div class="sc-cb-hero-content">
             <div class="sc-cb-hero-badge">
-                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 Stars on Google - 80+ Reviews
+                <span>★★★★★</span> 4.9 Stars on Google - 80+ Reviews
             </div>
             <h1>Custom Kitchen & Bathroom Cabinets - North Shore MA Showroom</h1>
             <p class="sc-cb-hero-sub">Explore Mantra, Homecrest, and Omega cabinetry at our Rowley showroom. Semi-custom and custom options, 3D design renderings, and expert guidance for homeowners and contractors across North Shore Massachusetts and Southern New Hampshire.</p>
@@ -270,7 +273,7 @@
     <!-- SECTION 2: TRUST BAR -->
     <div class="sc-cb-trust-bar">
         <div class="sc-cb-trust-items">
-            <span class="sc-cb-trust-item"><span>&#9733;</span> 4.9 Stars on Google</span>
+            <span class="sc-cb-trust-item"><span>★</span> 4.9 Stars on Google</span>
             <span class="sc-cb-trust-item">Cabinet Showroom in Rowley, MA</span>
             <span class="sc-cb-trust-item">NKBA Member</span>
             <span class="sc-cb-trust-item">3 American-Made Cabinet Brands</span>
@@ -336,6 +339,7 @@
                     </div>
                 </div>
                 <div class="sc-cb-brand-content">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/08/Omega-Logo.webp" alt="" class="sc-cb-brand-logo" loading="lazy">
                     <div class="sc-cb-brand-tag sc-cb-tag-premium">Premium / Luxury</div>
                     <h2>Omega Cabinetry</h2>
                     <p>Semi-custom flexibility with custom-grade construction. Dovetail drawer boxes, soft-close hardware, and the widest finish library in the MasterBrand family come standard, not as upgrades. Omega is the right choice for homeowners who want furniture-quality cabinets with extensive customization, including inset construction, full-access frameless options, and specialty door profiles.</p>
@@ -380,6 +384,7 @@
                     </div>
                 </div>
                 <div class="sc-cb-brand-content">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/01/HomeCrest-new-logo.webp" alt="" class="sc-cb-brand-logo" loading="lazy">
                     <div class="sc-cb-brand-tag sc-cb-tag-midrange">Mid-Range</div>
                     <h2>Homecrest Cabinets</h2>
                     <p>The sweet spot for most North Shore kitchen remodels. Homecrest delivers solid construction, a wide range of door styles and finishes, and semi-custom modifications at a mid-range price point. Quality craftsmanship without the premium price tag, and the brand that covers the most common kitchen and bathroom layouts our clients request.</p>
@@ -423,6 +428,7 @@
                     </div>
                 </div>
                 <div class="sc-cb-brand-content">
+                    <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/08/Mantra-Logo.webp" alt="" class="sc-cb-brand-logo" loading="lazy">
                     <div class="sc-cb-brand-tag sc-cb-tag-value">Value</div>
                     <h2>Mantra Cabinets</h2>
                     <p>Quality American-made cabinets at the most accessible price point in our lineup. Mantra is built for budget-conscious homeowners, rental properties, and contractor multi-unit projects. Shorter lead times and straightforward configurations make Mantra the fastest path from design to installation.</p>
@@ -574,17 +580,17 @@
 
             <div class="sc-cb-reviews-grid">
                 <div class="sc-cb-review-card">
-                    <div class="sc-cb-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="sc-cb-review-stars">★★★★★</div>
                     <p class="sc-cb-review-text">"We've done lots of projects around our house, but none have been as smooth and worry-free as the kitchen we did with Frank and his team. They have a perfect combination of product line, design talent and customer focus to ensure that our project came out perfectly. A great company!"</p>
                     <div class="sc-cb-review-author">- Ed K., Google Review</div>
                 </div>
                 <div class="sc-cb-review-card">
-                    <div class="sc-cb-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="sc-cb-review-stars">★★★★★</div>
                     <p class="sc-cb-review-text">"They were nothing but accommodating and professional throughout the whole process. The entire process with Frank and Dee was exceptional from start to finish, to include the install team, Tim and Ray. A huge thank you to the whole team from Seacoast Cabinet! We highly recommend them and appreciate everything they did for us."</p>
                     <div class="sc-cb-review-author">- Pete S., Google Review</div>
                 </div>
                 <div class="sc-cb-review-card">
-                    <div class="sc-cb-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="sc-cb-review-stars">★★★★★</div>
                     <p class="sc-cb-review-text">"We recently had our kitchen remodeled. Deondre was my designer and go to person. From start to finish Dee was knowledgeable, patient and incredibly helpful. I received a personalized assistance that exceeded all expectations. The product line Seacoast Cabinets use is exceptional. I highly recommend."</p>
                     <div class="sc-cb-review-author">- RR H., Google Review</div>
                 </div>
