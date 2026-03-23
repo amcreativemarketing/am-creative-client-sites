@@ -1,0 +1,47 @@
+============================================================
+BK DUCT & DRYER CLEANING — HOMEPAGE OPTIMIZATION
+SECTION 1: "BREATHE EASIER" — TEXT ONLY
+============================================================
+
+Copy/paste these into the existing Elementor text widgets.
+Keep the photo slider and layout as-is. Hero stays as-is.
+
+------------------------------------------------------------
+
+H2 (keep as-is):
+Breathe Easier. Reduce Dryer-Fire Risk. Sleep Better.
+
+------------------------------------------------------------
+
+UPDATED BODY TEXT (replace existing paragraph):
+
+Your home's air ducts and dryer vents collect dust, lint, allergens, and debris that you can't see - but your family breathes every day. BK Duct & Dryer Cleaning removes what's hiding in your system and shows you the proof with before-and-after photos on every job. No guesswork, no pressure, just results you can see and feel.
+
+------------------------------------------------------------
+
+UPDATED BULLET POINTS (replace existing 5 bullets):
+
+1. Reduce Allergy and Asthma Triggers
+Less dust, pollen, and pet dander circulating through your home every time the system kicks on.
+
+2. Lower Your Dryer Fire Risk
+Lint buildup in dryer vents contributes to thousands of home fires each year. Annual cleaning keeps your family safer.
+
+3. Cut Energy Costs
+Clean ducts and vents restore proper airflow, so your HVAC and dryer run shorter cycles and use less energy.
+
+4. Transparent, No-Surprise Pricing
+A short phone consult gets you a written quote before anyone shows up. No hidden fees, no upsells.
+
+5. Photo Proof on Every Job
+Before-and-after documentation so you see exactly what was removed - not just a technician's word.
+
+------------------------------------------------------------
+
+UPDATED QUOTE LINE (replace existing quote below the CTA):
+
+"Brian and Keenan explained the whole process and left everything cleaner than they found it." - Rachel C., repeat customer
+
+============================================================
+END OF SECTION 1
+============================================================
