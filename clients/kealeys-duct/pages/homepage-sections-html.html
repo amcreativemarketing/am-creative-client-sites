@@ -1,0 +1,900 @@
+<!--
+  ============================================================
+  BK DUCT & DRYER CLEANING — HOMEPAGE OPTIMIZATION
+  SECTION 2: HTML CODE
+  ============================================================
+  
+  This code replaces everything from the "Dryer Venter and Air 
+  Duct Cleaning Services" heading down through the page content
+  above the footer.
+
+  Sections included:
+  1. Services Overview (Dryer Vent + Air Duct cards)
+  2. Why Choose BK (4-column trust grid)
+  3. How It Works (3-step process)
+  4. Customer Reviews (3-column static grid)
+  5. Service Area (3 location cards)
+  6. FAQ Accordion (6 questions)
+  
+  NOTE: All SEO markup handled by OTTO. Images use alt="".
+  ============================================================
+-->
+
+<style>
+  /* ===== BK Homepage Optimized Sections ===== */
+  /* Namespace: .bk-hp- */
+
+  .bk-hp-section {
+    padding: 36px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .bk-hp-section-alt {
+    background-color: #f5f5f5;
+    padding: 36px 20px;
+  }
+
+  .bk-hp-section-alt .bk-hp-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+
+  .bk-hp-h2 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #0e3160;
+    text-align: center;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+  }
+
+
+  .bk-hp-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto 28px auto;
+    line-height: 1.6;
+  }
+
+
+  /* ---- Service Cards ---- */
+  .bk-hp-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .bk-hp-service-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bk-hp-service-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+  }
+
+  .bk-hp-service-body {
+    padding: 24px 24px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .bk-hp-service-body h3 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #0e3160;
+    margin: 0 0 10px 0;
+  }
+
+  .bk-hp-service-body p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.65;
+    margin: 0 0 6px 0;
+    max-width: 440px;
+  }
+
+  .bk-hp-service-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 20px 0;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .bk-hp-service-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #444444;
+    padding: 4px 0 4px 26px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .bk-hp-service-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23b7254d'%3E%3Cpath d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .bk-hp-service-cta-wrap {
+    margin-top: auto;
+    padding-top: 8px;
+  }
+
+  .bk-hp-btn {
+    display: inline-block;
+    background-color: #b7254d;
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    min-height: 44px;
+    min-width: 260px;
+    line-height: 1.3;
+    box-sizing: border-box;
+  }
+
+  .bk-hp-btn:hover {
+    background-color: #9a1e40;
+    color: #ffffff;
+  }
+
+  .bk-hp-btn-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: #b7254d;
+    border: 2px solid #b7254d;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s ease;
+    min-height: 44px;
+    line-height: 1.3;
+    box-sizing: border-box;
+  }
+
+  .bk-hp-btn-outline:hover {
+    background-color: #b7254d;
+    color: #ffffff;
+  }
+
+  /* ---- Why Choose Grid ---- */
+  .bk-hp-why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 4px;
+  }
+
+  .bk-hp-why-card {
+    text-align: center;
+    padding: 20px 16px;
+  }
+
+  .bk-hp-why-icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: rgba(14, 49, 96, 0.08);
+    margin-bottom: 12px;
+  }
+
+  .bk-hp-why-icon-wrap svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .bk-hp-why-card h3 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #0e3160;
+    margin: 0 0 6px 0;
+  }
+
+  .bk-hp-why-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---- Process Steps ---- */
+  .bk-hp-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 4px;
+  }
+
+  .bk-hp-step {
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  .bk-hp-step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #b7254d;
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .bk-hp-step h3 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #0e3160;
+    margin: 0 0 6px 0;
+  }
+
+  .bk-hp-step p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---- Reviews ---- */
+  .bk-hp-reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bk-hp-review-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 22px 20px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bk-hp-review-stars {
+    color: #f5a623;
+    font-size: 16px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+
+  .bk-hp-review-card blockquote {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #444444;
+    line-height: 1.65;
+    margin: 0 0 12px 0;
+    font-style: italic;
+    flex-grow: 1;
+  }
+
+  .bk-hp-review-name {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0e3160;
+  }
+
+  .bk-hp-review-source {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #888888;
+  }
+
+  /* ---- Service Area Cards ---- */
+  .bk-hp-area-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 4px;
+  }
+
+  .bk-hp-area-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px 20px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  }
+
+  .bk-hp-area-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #b7254d;
+  }
+
+  .bk-hp-area-card-header svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .bk-hp-area-card-header h3 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #0e3160;
+    margin: 0;
+  }
+
+  .bk-hp-area-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 2;
+    column-gap: 12px;
+  }
+
+  .bk-hp-area-card ul li {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #444444;
+    padding: 3px 0;
+    line-height: 1.45;
+    break-inside: avoid;
+  }
+
+  .bk-hp-area-card ul li a {
+    color: #b7254d;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .bk-hp-area-card ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .bk-hp-home-badge {
+    display: inline-block;
+    background-color: rgba(183, 37, 77, 0.1);
+    color: #b7254d;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-left: 3px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ---- FAQ Accordion (Card + Left Chevron) ---- */
+  .bk-hp-faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bk-hp-faq-item {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    overflow: hidden;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  .bk-hp-faq-item.bk-hp-faq-active {
+    border-left-color: #b7254d;
+  }
+
+  .bk-hp-faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 14px 18px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #0e3160;
+    text-align: left;
+    cursor: pointer;
+    line-height: 1.4;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .bk-hp-faq-chevron {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+
+  .bk-hp-faq-chevron svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .bk-hp-faq-chevron svg polyline {
+    fill: none;
+    stroke: #b7254d;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .bk-hp-faq-question[aria-expanded="true"] .bk-hp-faq-chevron {
+    transform: rotate(90deg);
+  }
+
+  .bk-hp-faq-qtext {
+    flex: 1;
+  }
+
+  .bk-hp-faq-answer {
+    display: none;
+    padding: 0 18px 16px 50px;
+  }
+
+  .bk-hp-faq-answer.bk-hp-faq-open {
+    display: block;
+  }
+
+  .bk-hp-faq-answer p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+
+  .bk-hp-center {
+    text-align: center;
+  }
+
+  .bk-hp-mt-20 {
+    margin-top: 20px;
+  }
+
+  .bk-hp-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #888888;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+
+  /* ---- Responsive: Tablet ---- */
+  @media (min-width: 768px) {
+    .bk-hp-section,
+    .bk-hp-section-alt {
+      padding: 44px 28px;
+    }
+
+    .bk-hp-h2 {
+      font-size: 28px;
+    }
+
+    .bk-hp-services-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .bk-hp-why-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .bk-hp-steps {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .bk-hp-reviews-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .bk-hp-area-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  /* ---- Responsive: Desktop ---- */
+  @media (min-width: 1024px) {
+    .bk-hp-section,
+    .bk-hp-section-alt .bk-hp-inner {
+      padding: 52px 32px;
+    }
+
+    .bk-hp-h2 {
+      font-size: 30px;
+    }
+
+    .bk-hp-why-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
+
+
+<!-- ============================================================
+     SECTION 1: SERVICES OVERVIEW
+     Replaces "Dryer Venter and Air Duct Cleaning Services"
+     ============================================================ -->
+<div class="bk-hp-section">
+  <h2 class="bk-hp-h2">Dryer Vent &amp; Air Duct Cleaning Services</h2>
+  <p class="bk-hp-subtitle">Two services, one team you can trust. Every job includes a short phone consult, written pricing, and before-and-after photo documentation.</p>
+
+  <div class="bk-hp-services-grid">
+
+    <!-- Card 1: Dryer Vent Cleaning -->
+    <div class="bk-hp-service-card">
+      <a href="https://bkductdryercleaning.com/dryer-vent-cleaning/">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/12/5.webp" alt="" width="600" height="400" loading="lazy" class="bk-hp-service-img">
+      </a>
+      <div class="bk-hp-service-body">
+        <h3>Dryer Vent Cleaning &amp; Inspection</h3>
+        <p>Lint buildup inside dryer vents restricts airflow, forces your dryer to work harder, and contributes to thousands of residential fires every year. Our cleaning removes the hidden lint your dryer's trap doesn't catch, from the drum connection all the way to the exterior exhaust.</p>
+        <ul class="bk-hp-service-list">
+          <li>Reduces dryer fire risk with full lint removal</li>
+          <li>Cuts drying time, often by a full cycle or more</li>
+          <li>Most homes completed in under an hour</li>
+          <li>Before-and-after photos document every job</li>
+        </ul>
+        <div class="bk-hp-service-cta-wrap">
+          <a href="https://bkductdryercleaning.com/dryer-vent-cleaning/" class="bk-hp-btn">Learn About Dryer Vent Cleaning</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Air Duct / HVAC Cleaning -->
+    <div class="bk-hp-service-card">
+      <a href="https://bkductdryercleaning.com/air-duct-cleaning/">
+        <img src="https://bkductdryercleaning.com/wp-content/uploads/2025/12/HVAC-Cleaning-Salisbury-14.webp" alt="" width="600" height="400" loading="lazy" class="bk-hp-service-img">
+      </a>
+      <div class="bk-hp-service-body">
+        <h3>Residential Air Duct &amp; HVAC Cleaning</h3>
+        <p>Your HVAC system circulates air through every room in the house. Over time, dust, pollen, pet dander, and construction debris collect in those ducts and get pushed back into your living space every time the system runs. We clean the full duct system, register to register, so your family breathes cleaner air.</p>
+        <ul class="bk-hp-service-list">
+          <li>Reduces dust, allergens, and pet dander circulation</li>
+          <li>Restores HVAC airflow and system efficiency</li>
+          <li>Recommended after renovations or new home purchases</li>
+          <li>Thorough photo documentation of the full cleaning</li>
+        </ul>
+        <div class="bk-hp-service-cta-wrap">
+          <a href="https://bkductdryercleaning.com/air-duct-cleaning/" class="bk-hp-btn">Learn About Air Duct Cleaning</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="bk-hp-note">Not sure which service you need? <a href="https://bkductdryercleaning.com/contact/" style="color:#b7254d; font-weight:500;">Contact us</a> for a quick phone consult. We'll walk you through it.</p>
+</div>
+
+
+<!-- ============================================================
+     SECTION 2: WHY CHOOSE BK
+     Trust differentiators with SVG icons in circles
+     ============================================================ -->
+<div class="bk-hp-section-alt">
+  <div class="bk-hp-inner">
+    <h2 class="bk-hp-h2">Why North Shore Homeowners Choose BK Duct &amp; Dryer Cleaning</h2>
+    <p class="bk-hp-subtitle">We know the duct cleaning industry has a reputation problem. That's exactly why we do things differently.</p>
+
+    <div class="bk-hp-why-grid">
+
+      <div class="bk-hp-why-card">
+        <div class="bk-hp-why-icon-wrap">
+          <!-- Home / Family icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0e3160" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Family-Owned Since 1993</h3>
+        <p>Brian Kealey started this business over 32 years ago. Today, his son Keenan works alongside him. Your home is in the hands of the people whose name is on the truck.</p>
+      </div>
+
+      <div class="bk-hp-why-card">
+        <div class="bk-hp-why-icon-wrap">
+          <!-- Wrench / Engineering icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0e3160" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Engineering-Grade Approach</h3>
+        <p>Brian holds a mechanical engineering degree. He doesn't just clean systems, he understands how they work, what fails, and what actually needs attention.</p>
+      </div>
+
+      <div class="bk-hp-why-card">
+        <div class="bk-hp-why-icon-wrap">
+          <!-- Camera / Photo proof icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0e3160" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </div>
+        <h3>Photo Proof, Not Promises</h3>
+        <p>Every job includes before-and-after photos so you can see exactly what was removed. We don't ask you to take our word for it.</p>
+      </div>
+
+      <div class="bk-hp-why-card">
+        <div class="bk-hp-why-icon-wrap">
+          <!-- Shield / Trust icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0e3160" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>No Upsells, No Surprises</h3>
+        <p>A short phone call gets you a written price before anyone shows up. If we don't think you need the service, we'll tell you that too.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SECTION 3: SIMPLE 3-STEP PROCESS
+     ============================================================ -->
+<div class="bk-hp-section">
+  <h2 class="bk-hp-h2">How It Works: 3 Simple Steps</h2>
+  <p class="bk-hp-subtitle">From first call to finished job, the whole process is built around your schedule and your comfort level.</p>
+
+  <div class="bk-hp-steps">
+    <div class="bk-hp-step">
+      <div class="bk-hp-step-number">1</div>
+      <h3>Call or Request a Quote</h3>
+      <p>Reach us at <a href="tel:+19789614513" style="color:#b7254d; font-weight:500;">(978) 961-4513</a> or <a href="https://bkductdryercleaning.com/contact/" style="color:#b7254d; font-weight:500;">submit a quick form</a>. We respond the same day.</p>
+    </div>
+    <div class="bk-hp-step">
+      <div class="bk-hp-step-number">2</div>
+      <h3>Short Phone Consult</h3>
+      <p>We ask a few questions about your home's setup, confirm access points, and give you a written price. No visit needed for the quote.</p>
+    </div>
+    <div class="bk-hp-step">
+      <div class="bk-hp-step-number">3</div>
+      <h3>We Clean, You Verify</h3>
+      <p>We show up on time, do the work, and hand you before-and-after photos. Your system runs better, and you can see exactly why.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SECTION 4: REVIEWS / SOCIAL PROOF
+     Static 3-column grid (no carousel)
+     ============================================================ -->
+<div class="bk-hp-section-alt">
+  <div class="bk-hp-inner">
+    <h2 class="bk-hp-h2">What Our Customers Are Saying</h2>
+    <p class="bk-hp-subtitle">Real reviews from homeowners across North Shore MA, Southern NH, and the Seacoast.</p>
+
+    <div class="bk-hp-reviews-grid">
+
+      <div class="bk-hp-review-card">
+        <div class="bk-hp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Excellent experience, top notch communication from inquiry to completed job. Highly recommend and will use again."</blockquote>
+        <span class="bk-hp-review-name">Franco D.</span>
+        <span class="bk-hp-review-source">Google Review</span>
+      </div>
+
+      <div class="bk-hp-review-card">
+        <div class="bk-hp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Brian and Keenan were very professional and explained the process. They even helped me understand my heating system as I was having an issue with it that day. Very knowledgeable! This is my 2nd time hiring them and I will definitely be calling them again."</blockquote>
+        <span class="bk-hp-review-name">Rachel C.</span>
+        <span class="bk-hp-review-source">Google Review</span>
+      </div>
+
+      <div class="bk-hp-review-card">
+        <div class="bk-hp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Keenan did an outstanding job! He was pleasant and efficient and explained the entire process to me. The basement was clean and neat when he finished and my dryer works well!"</blockquote>
+        <span class="bk-hp-review-name">Patty D.</span>
+        <span class="bk-hp-review-source">Google Review</span>
+      </div>
+
+    </div>
+
+    <div class="bk-hp-center bk-hp-mt-20">
+      <a href="https://bkductdryercleaning.com/about/" class="bk-hp-btn-outline">Meet the Team Behind the Work</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SECTION 5: SERVICE AREA
+     Clean card layout with map pin icons and 2-col town lists
+     ============================================================ -->
+<div class="bk-hp-section">
+  <h2 class="bk-hp-h2">Serving Homeowners Across Massachusetts, New Hampshire &amp; Maine</h2>
+  <p class="bk-hp-subtitle">Based in Salisbury, MA, we provide professional dryer vent and air duct cleaning throughout the North Shore, <a href="https://bkductdryercleaning.com/rockingham-county-nh/" style="color:#b7254d; font-weight:500;">Rockingham County NH</a>, and York County ME.</p>
+
+  <div class="bk-hp-area-grid">
+
+    <div class="bk-hp-area-card">
+      <div class="bk-hp-area-card-header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#b7254d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <h3>North Shore MA</h3>
+      </div>
+      <ul>
+        <li><a href="https://bkductdryercleaning.com/salisbury-ma/">Salisbury</a> <span class="bk-hp-home-badge">HQ</span></li>
+        <li><a href="https://bkductdryercleaning.com/newburyport-ma/">Newburyport</a></li>
+        <li><a href="https://bkductdryercleaning.com/amesbury-ma/">Amesbury</a></li>
+        <li><a href="https://bkductdryercleaning.com/essex-county-ma/">Essex County</a></li>
+        <li>Haverhill</li>
+        <li>Merrimac</li>
+        <li>Georgetown</li>
+        <li>Newbury</li>
+        <li>West Newbury</li>
+      </ul>
+    </div>
+
+    <div class="bk-hp-area-card">
+      <div class="bk-hp-area-card-header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#b7254d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <h3><a href="https://bkductdryercleaning.com/rockingham-county-nh/" style="color:#0e3160; text-decoration:none;">Rockingham County, NH</a></h3>
+      </div>
+      <ul>
+        <li><a href="https://bkductdryercleaning.com/portsmouth-nh/">Portsmouth</a></li>
+        <li><a href="https://bkductdryercleaning.com/exeter-nh/">Exeter</a></li>
+        <li><a href="https://bkductdryercleaning.com/hampton-nh/">Hampton</a></li>
+        <li><a href="https://bkductdryercleaning.com/stratham-nh/">Stratham</a></li>
+        <li><a href="https://bkductdryercleaning.com/seabrook-nh/">Seabrook</a></li>
+        <li><a href="https://bkductdryercleaning.com/rye-nh/">Rye</a></li>
+        <li>Salem</li>
+        <li>Hampton Falls</li>
+        <li>Greenland</li>
+      </ul>
+    </div>
+
+    <div class="bk-hp-area-card">
+      <div class="bk-hp-area-card-header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#b7254d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <h3>York County, ME</h3>
+      </div>
+      <ul>
+        <li><a href="https://bkductdryercleaning.com/kittery-me/">Kittery</a></li>
+        <li>York</li>
+        <li>Eliot</li>
+        <li>Berwick</li>
+        <li>South Berwick</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p class="bk-hp-note"><strong>Don't see your town?</strong> We likely serve your area. <a href="https://bkductdryercleaning.com/contact/" style="color:#b7254d; font-weight:500;">Give us a call</a> for a quick quote.</p>
+
+  <div class="bk-hp-center bk-hp-mt-20">
+    <a href="https://bkductdryercleaning.com/services-area/" class="bk-hp-btn-outline">View Full Service Area</a>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SECTION 6: FAQ ACCORDION
+     Card-based with left-side chevron arrow
+     ============================================================ -->
+<div class="bk-hp-section-alt">
+  <div class="bk-hp-inner">
+    <h2 class="bk-hp-h2">Frequently Asked Questions</h2>
+    <p class="bk-hp-subtitle">Answers to the most common questions we hear from homeowners.</p>
+
+    <div class="bk-hp-faq-list">
+
+      <div class="bk-hp-faq-item">
+        <button class="bk-hp-faq-question" aria-expanded="false" onclick="var item=this.closest('.bk-hp-faq-item'); var isOpen=this.getAttribute('aria-expanded')==='true'; this.setAttribute('aria-expanded', isOpen?'false':'true'); this.nextElementSibling.classList.toggle('bk-hp-faq-open'); item.classList.toggle('bk-hp-faq-active');">
+          <span class="bk-hp-faq-chevron"><svg viewBox="0 0 16 16"><polyline points="5 3 11 8 5 13"/></svg></span>
+          <span class="bk-hp-faq-qtext">How often should I have my dryer vent cleaned?</span>
+        </button>
+        <div class="bk-hp-faq-answer">
+          <p>Most homeowners should have their dryer vent professionally cleaned once a year. If your household runs more than five loads a week, or if you notice your dryer taking longer than it used to, every six months is a safer interval. Annual cleaning is the single most effective way to reduce dryer-related fire risk.</p>
+        </div>
+      </div>
+
+      <div class="bk-hp-faq-item">
+        <button class="bk-hp-faq-question" aria-expanded="false" onclick="var item=this.closest('.bk-hp-faq-item'); var isOpen=this.getAttribute('aria-expanded')==='true'; this.setAttribute('aria-expanded', isOpen?'false':'true'); this.nextElementSibling.classList.toggle('bk-hp-faq-open'); item.classList.toggle('bk-hp-faq-active');">
+          <span class="bk-hp-faq-chevron"><svg viewBox="0 0 16 16"><polyline points="5 3 11 8 5 13"/></svg></span>
+          <span class="bk-hp-faq-qtext">How do I know if my dryer vent needs cleaning?</span>
+        </button>
+        <div class="bk-hp-faq-answer">
+          <p>The most common signs are clothes taking more than one cycle to dry, a burning smell during use, the dryer drum feeling unusually hot at the end of a cycle, and visible lint around the outdoor vent opening. If you notice any of these, schedule a cleaning sooner rather than later.</p>
+        </div>
+      </div>
+
+      <div class="bk-hp-faq-item">
+        <button class="bk-hp-faq-question" aria-expanded="false" onclick="var item=this.closest('.bk-hp-faq-item'); var isOpen=this.getAttribute('aria-expanded')==='true'; this.setAttribute('aria-expanded', isOpen?'false':'true'); this.nextElementSibling.classList.toggle('bk-hp-faq-open'); item.classList.toggle('bk-hp-faq-active');">
+          <span class="bk-hp-faq-chevron"><svg viewBox="0 0 16 16"><polyline points="5 3 11 8 5 13"/></svg></span>
+          <span class="bk-hp-faq-qtext">How much does air duct cleaning cost?</span>
+        </button>
+        <div class="bk-hp-faq-answer">
+          <p>The cost depends on the size of your home, the number of vents, and how accessible the ductwork is. We provide a written quote after a short phone consult, so you know the price before we ever show up. No hidden fees and no surprise charges. <a href="https://bkductdryercleaning.com/contact/" style="color:#b7254d; font-weight:500;">Request your free quote here</a>.</p>
+        </div>
+      </div>
+
+      <div class="bk-hp-faq-item">
+        <button class="bk-hp-faq-question" aria-expanded="false" onclick="var item=this.closest('.bk-hp-faq-item'); var isOpen=this.getAttribute('aria-expanded')==='true'; this.setAttribute('aria-expanded', isOpen?'false':'true'); this.nextElementSibling.classList.toggle('bk-hp-faq-open'); item.classList.toggle('bk-hp-faq-active');">
+          <span class="bk-hp-faq-chevron"><svg viewBox="0 0 16 16"><polyline points="5 3 11 8 5 13"/></svg></span>
+          <span class="bk-hp-faq-qtext">How long does an air duct or dryer vent cleaning take?</span>
+        </button>
+        <div class="bk-hp-faq-answer">
+          <p>A dryer vent cleaning typically takes 45 to 60 minutes. A full residential air duct cleaning runs 2 to 4 hours depending on the size of the home and the number of registers. We'll give you a time estimate during the phone consult so you can plan your day.</p>
+        </div>
+      </div>
+
+      <div class="bk-hp-faq-item">
+        <button class="bk-hp-faq-question" aria-expanded="false" onclick="var item=this.closest('.bk-hp-faq-item'); var isOpen=this.getAttribute('aria-expanded')==='true'; this.setAttribute('aria-expanded', isOpen?'false':'true'); this.nextElementSibling.classList.toggle('bk-hp-faq-open'); item.classList.toggle('bk-hp-faq-active');">
+          <span class="bk-hp-faq-chevron"><svg viewBox="0 0 16 16"><polyline points="5 3 11 8 5 13"/></svg></span>
+          <span class="bk-hp-faq-qtext">Do you serve New Hampshire and Maine?</span>
+        </button>
+        <div class="bk-hp-faq-answer">
+          <p>Yes. We serve all of <a href="https://bkductdryercleaning.com/rockingham-county-nh/" style="color:#b7254d; font-weight:500;">Rockingham County NH</a>, including <a href="https://bkductdryercleaning.com/portsmouth-nh/" style="color:#b7254d; font-weight:500;">Portsmouth</a>, <a href="https://bkductdryercleaning.com/exeter-nh/" style="color:#b7254d; font-weight:500;">Exeter</a>, <a href="https://bkductdryercleaning.com/hampton-nh/" style="color:#b7254d; font-weight:500;">Hampton</a>, and Salem. We also cover parts of York County ME, including <a href="https://bkductdryercleaning.com/kittery-me/" style="color:#b7254d; font-weight:500;">Kittery</a>, York, and Eliot. <a href="https://bkductdryercleaning.com/services-area/" style="color:#b7254d; font-weight:500;">View the full service area</a>.</p>
+        </div>
+      </div>
+
+      <div class="bk-hp-faq-item">
+        <button class="bk-hp-faq-question" aria-expanded="false" onclick="var item=this.closest('.bk-hp-faq-item'); var isOpen=this.getAttribute('aria-expanded')==='true'; this.setAttribute('aria-expanded', isOpen?'false':'true'); this.nextElementSibling.classList.toggle('bk-hp-faq-open'); item.classList.toggle('bk-hp-faq-active');">
+          <span class="bk-hp-faq-chevron"><svg viewBox="0 0 16 16"><polyline points="5 3 11 8 5 13"/></svg></span>
+          <span class="bk-hp-faq-qtext">Is air duct cleaning worth it?</span>
+        </button>
+        <div class="bk-hp-faq-answer">
+          <p>If anyone in your home deals with allergies, asthma, or dust sensitivity, duct cleaning can make a noticeable difference in day-to-day comfort. It's also worth doing after renovations, moving into a new home, or if you have pets. We show you photos of what comes out of your system, so you can judge the value for yourself.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bk-hp-center bk-hp-mt-20">
+      <a href="https://bkductdryercleaning.com/faqs/" class="bk-hp-btn-outline">View All FAQs</a>
+    </div>
+  </div>
+</div>
+
