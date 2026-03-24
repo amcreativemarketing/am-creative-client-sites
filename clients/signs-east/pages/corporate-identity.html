@@ -1,0 +1,886 @@
+<!-- Signs East Corporate Identity Page Content
+     Sits BELOW existing hero section, ABOVE footer
+     Target keywords: corporate identity signs, corporate logo signs, office lobby signs
+     No schema, no meta tags, no microdata - OTTO handles all SEO
+     All alt="" empty - OTTO handles alt text optimization
+-->
+
+<style>
+/* === Signs East Corporate Identity Page === */
+.se-corp {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --container-max: 1140px;
+}
+
+.se-corp {
+  font-family: var(--font-body);
+  color: var(--se-text);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.se-corp * { box-sizing: border-box; }
+
+.se-corp img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.se-corp a {
+  color: var(--se-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.se-corp a:hover {
+  border-bottom-color: var(--se-primary);
+}
+
+/* === Containers & Sections === */
+.se-corp-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.se-corp-section {
+  padding: 60px 20px;
+  overflow: visible;
+}
+
+.se-corp-section--gray { background-color: var(--se-bg-light); }
+.se-corp-section--dark { background-color: var(--se-dark); color: var(--se-white); }
+
+/* === Typography === */
+.se-corp h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--se-dark);
+  margin: 0 0 14px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.se-corp-section--dark h2 { color: var(--se-white); }
+
+.se-corp h3 {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  color: var(--se-dark);
+  margin: 0 0 10px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.se-corp-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--se-primary);
+  margin-bottom: 10px;
+}
+
+.se-corp-lead {
+  font-size: 18px;
+  color: var(--se-text-light);
+  margin: 0 0 30px;
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.se-corp-center { text-align: center; }
+
+.se-corp-lead--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Buttons (high specificity to override global a) === */
+.se-corp a.se-corp-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 30px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-bottom: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  min-width: 180px;
+  line-height: 1.4;
+  overflow: visible;
+}
+
+.se-corp a.se-corp-btn:hover { border-bottom: none; }
+
+.se-corp a.se-corp-btn.se-corp-btn--primary {
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  border: none;
+  border-bottom: none;
+}
+
+.se-corp a.se-corp-btn.se-corp-btn--primary:hover {
+  background-color: #a51717;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  border: none;
+  border-bottom: none;
+}
+
+.se-corp a.se-corp-btn.se-corp-btn--outline {
+  background-color: transparent;
+  color: #C61C1C;
+  border: 2px solid #C61C1C;
+  border-bottom: 2px solid #C61C1C;
+  padding: 12px 34px;
+  border-radius: 30px;
+}
+
+.se-corp a.se-corp-btn.se-corp-btn--outline:hover {
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  border: 2px solid #C61C1C;
+  border-bottom: 2px solid #C61C1C;
+}
+
+.se-corp-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+  overflow: visible;
+}
+
+.se-corp-btn-row--center { justify-content: center; }
+
+/* === Section 1: Intro with side photo === */
+.se-corp-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.se-corp-intro-img {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+
+.se-corp-intro-text p { margin: 0 0 16px; }
+
+/* === Section 2: Photo Gallery Grid === */
+.se-corp-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.se-corp-gallery-item {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.se-corp-gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.se-corp-gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.se-corp-gallery-item--wide {
+  grid-column: span 2;
+}
+
+.se-corp-gallery-item--wide img {
+  height: 280px;
+}
+
+/* === Section 3: Two-column feature === */
+.se-corp-feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.se-corp-feature-img {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.se-corp-feature-text p {
+  margin: 0 0 14px;
+  color: var(--se-text-light);
+}
+
+.se-corp-materials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.se-corp-material {
+  display: inline-block;
+  background: var(--se-bg-light);
+  color: var(--se-text);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+/* === Section: Package Cards === */
+.se-corp-packages {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.se-corp-package {
+  background: var(--se-white);
+  border-radius: 8px;
+  padding: 32px 28px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+  border-left: 4px solid var(--se-primary);
+  transition: transform 0.2s ease;
+}
+
+.se-corp-package:hover {
+  transform: translateY(-3px);
+}
+
+.se-corp-package h3 { margin-bottom: 8px; }
+
+.se-corp-package p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: var(--se-text-light);
+  line-height: 1.65;
+}
+
+.se-corp-package-includes {
+  font-size: 14px;
+  color: var(--se-text);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* === Section: Process Steps (4-step icons) === */
+.se-corp-process {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  counter-reset: process;
+}
+
+.se-corp-step {
+  text-align: center;
+  position: relative;
+}
+
+.se-corp-step-icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--se-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.se-corp-step-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--se-white);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.se-corp-step h3 { font-size: 19px; margin-bottom: 6px; }
+
+.se-corp-step p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--se-text-light);
+  line-height: 1.6;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* === Section: Reviews === */
+.se-corp-reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.se-corp-review {
+  background: var(--se-white);
+  border-radius: 8px;
+  padding: 28px 24px 24px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  border-top: 3px solid var(--se-primary);
+}
+
+.se-corp-review-stars {
+  color: #f5a623;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.se-corp-review blockquote {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--se-text);
+}
+
+.se-corp-review-author {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--se-dark);
+}
+
+.se-corp-review-divider {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.se-corp-review-source {
+  font-size: 13px;
+  color: var(--se-text-light);
+}
+
+/* === Section: FAQ (ADA style) === */
+.se-corp-faq-container { max-width: 800px; margin: 0 auto; }
+
+.se-corp-faq-header { text-align: center; margin-bottom: 50px; }
+
+.se-corp-faq-header h2 { font-size: 38px; margin-bottom: 15px; }
+
+.se-corp-faq-header p { font-size: 17px; color: var(--se-text-light); margin: 0; }
+
+.se-corp-faq-list { display: flex; flex-direction: column; gap: 15px; }
+
+.se-corp-faq-item {
+  background-color: var(--se-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.se-corp-faq-item:hover { background-color: #ededed; }
+
+.se-corp-faq-question {
+  width: 100%;
+  padding: 22px 25px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--se-dark);
+  transition: color 0.2s ease;
+  min-height: 44px;
+  line-height: 1.45;
+}
+
+.se-corp-faq-question:hover {
+  color: var(--se-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--se-primary);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.se-corp-faq-icon {
+  width: 24px; height: 24px; min-width: 24px;
+  position: relative; flex-shrink: 0;
+}
+
+.se-corp-faq-icon::before,
+.se-corp-faq-icon::after {
+  content: "";
+  position: absolute;
+  background-color: var(--se-primary);
+  transition: transform 0.3s ease;
+}
+
+.se-corp-faq-icon::before {
+  width: 14px; height: 2px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-corp-faq-icon::after {
+  width: 2px; height: 14px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-corp-faq-item.active .se-corp-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-corp-faq-answer {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-corp-faq-item.active .se-corp-faq-answer { max-height: 350px; }
+
+.se-corp-faq-answer-inner {
+  padding: 0 25px 22px;
+  font-size: 16px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-corp-faq-answer-inner p { margin: 0; }
+
+.se-corp-faq-answer-inner a {
+  color: var(--se-primary);
+  border-bottom: 1px solid var(--se-primary);
+}
+
+.se-corp-faq-answer-inner a:hover {
+  color: var(--se-primary-hover);
+  border-color: var(--se-primary-hover);
+}
+
+/* === Final CTA === */
+.se-corp-final-cta {
+  background: var(--se-white);
+  text-align: center;
+  padding: 70px 20px;
+  border-top: 4px solid var(--se-primary);
+  overflow: visible;
+}
+
+.se-corp-final-cta h2 { margin-bottom: 14px; }
+
+.se-corp-final-cta p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: var(--se-text-light);
+  font-size: 17px;
+}
+
+/* === Responsive - Tablet (768px+) === */
+@media (min-width: 768px) {
+  .se-corp-section { padding: 80px 30px; }
+  .se-corp h2 { font-size: 34px; }
+
+  .se-corp-intro { grid-template-columns: 1fr 1fr; gap: 45px; }
+
+  .se-corp-gallery { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .se-corp-gallery-item img { height: 240px; }
+  .se-corp-gallery-item--wide { grid-column: span 1; }
+  .se-corp-gallery-item--wide img { height: 240px; }
+
+  .se-corp-feature { grid-template-columns: 1fr 1fr; gap: 50px; }
+  .se-corp-feature--reverse .se-corp-feature-img { order: 2; }
+
+  .se-corp-packages { grid-template-columns: repeat(3, 1fr); }
+
+  .se-corp-process { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+  .se-corp-reviews { grid-template-columns: repeat(3, 1fr); }
+
+  .se-corp-faq-header h2 { font-size: 34px; }
+}
+
+/* === Responsive - Desktop (1024px+) === */
+@media (min-width: 1024px) {
+  .se-corp-section { padding: 90px 40px; }
+  .se-corp h2 { font-size: 38px; }
+  .se-corp-faq-header h2 { font-size: 38px; }
+  .se-corp-final-cta { padding: 90px 40px; }
+  .se-corp-gallery-item img { height: 280px; }
+  .se-corp-gallery-item--wide img { height: 280px; }
+}
+
+/* === Responsive - Mobile (max 767px) === */
+@media (max-width: 767px) {
+  .se-corp-faq-header h2 { font-size: 28px; }
+  .se-corp-faq-header { margin-bottom: 35px; }
+  .se-corp-faq-question { font-size: 16px; padding: 18px 20px; }
+  .se-corp-faq-answer-inner { padding: 0 20px 18px; font-size: 15px; }
+}
+</style>
+
+<div class="se-corp">
+
+  <!-- ================================================
+       Section 1: Intro
+       ================================================ -->
+  <section class="se-corp-section">
+    <div class="se-corp-container">
+      <div class="se-corp-intro">
+        <div class="se-corp-intro-text">
+          <span class="se-corp-eyebrow">Corporate Signage</span>
+          <h2>Corporate Identity Signs That Reflect Your Brand</h2>
+          <p>Your office signage is the first thing clients, visitors, and employees see when they walk through the door. <a href="https://signseast.com/">Signs East</a> designs and fabricates corporate identity signs that carry your brand from the lobby to the parking lot - logo walls, reception signage, wayfinding, and building identification that all work together as one cohesive system.</p>
+          <p>We work with businesses across Southern NH, Seacoast NH, and North Shore MA to create professional office signage using premium materials like dimensional acrylic, brushed metals, and backlit panels. Whether you are outfitting a new space or rebranding an existing one, every sign is built to match your exact brand colors, fonts, and standards.</p>
+          <div class="se-corp-btn-row">
+            <a href="https://signseast.com/contact-us/" class="se-corp-btn se-corp-btn--primary">Request a Free Consultation</a>
+            <a href="https://signseast.com/showcase/" class="se-corp-btn se-corp-btn--outline">View Our Work</a>
+          </div>
+        </div>
+        <div class="se-corp-intro-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_pratt-whitney3.jpg" alt="" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 2: Project Gallery Grid
+       ================================================ -->
+  <section class="se-corp-section se-corp-section--gray">
+    <div class="se-corp-container">
+      <div class="se-corp-center">
+        <span class="se-corp-eyebrow">Our Work</span>
+        <h2>Corporate Identity Projects</h2>
+        <p class="se-corp-lead se-corp-lead--center">From national brands to local businesses - a selection of corporate signage projects we have designed, fabricated, and installed.</p>
+      </div>
+      <div class="se-corp-gallery">
+        <div class="se-corp-gallery-item">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_pratt-whitney.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+        </div>
+        <div class="se-corp-gallery-item">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_carvana2.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+        </div>
+        <div class="se-corp-gallery-item">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_carvana.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+        </div>
+        <div class="se-corp-gallery-item">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_10-east.webp" alt="" width="400" height="300" loading="lazy" decoding="async">
+        </div>
+        <div class="se-corp-gallery-item">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/IMG_6195.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+        </div>
+        <div class="se-corp-gallery-item">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_pratt-whitney3.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 3: Corporate Logo Signs (priority keyword section)
+       ================================================ -->
+  <section class="se-corp-section">
+    <div class="se-corp-container">
+      <div class="se-corp-feature">
+        <div class="se-corp-feature-text">
+          <span class="se-corp-eyebrow">Logo Signs</span>
+          <h2>Corporate Logo Signs and Dimensional Letters</h2>
+          <p>Your logo is the anchor of your brand identity. We fabricate corporate logo signs in 3D dimensional letters using acrylic, aluminum, PVC, and brushed metals - then mount them on lobby walls, building facades, and reception areas where they make the strongest impression.</p>
+          <p>Every sign is precision-cut and color-matched to your exact brand guidelines. We offer flat-cut letters, built-up dimensional letters, and backlit options with <a href="https://signseast.com/illuminated-signs/">LED illumination</a> for lobbies and building exteriors that need to stand out day and night.</p>
+          <div class="se-corp-materials">
+            <span class="se-corp-material">Acrylic</span>
+            <span class="se-corp-material">Brushed Aluminum</span>
+            <span class="se-corp-material">PVC</span>
+            <span class="se-corp-material">Stainless Steel</span>
+            <span class="se-corp-material">Backlit LED</span>
+          </div>
+        </div>
+        <div class="se-corp-feature-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_pratt-whitney.jpg" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 4: Office Lobby & Reception Signs (high CPC keyword)
+       ================================================ -->
+  <section class="se-corp-section se-corp-section--gray">
+    <div class="se-corp-container">
+      <div class="se-corp-feature se-corp-feature--reverse">
+        <div class="se-corp-feature-text">
+          <span class="se-corp-eyebrow">First Impressions</span>
+          <h2>Office Lobby and Reception Signs</h2>
+          <p>The lobby is where first impressions happen. Company lobby signs set the tone before a single word is spoken - they tell visitors this is a business that pays attention to details. We create reception area signage that reinforces your brand the moment someone walks in, from illuminated logo walls to frosted glass accents and brand statement displays.</p>
+          <p>Whether you need a single reception sign or a complete lobby signage package, we design everything to work with your interior architecture. Our <a href="https://signseast.com/dimensional-and-channel-lettering/">dimensional lettering</a> creates depth and presence that flat printed signs simply cannot match.</p>
+          <div class="se-corp-materials">
+            <span class="se-corp-material">Logo Walls</span>
+            <span class="se-corp-material">Reception Signs</span>
+            <span class="se-corp-material">Brand Statements</span>
+            <span class="se-corp-material">Frosted Glass</span>
+            <span class="se-corp-material">Illuminated</span>
+          </div>
+        </div>
+        <div class="se-corp-feature-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_carvana2.jpg" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 5: Exterior & Building Identity
+       ================================================ -->
+  <section class="se-corp-section">
+    <div class="se-corp-container">
+      <div class="se-corp-feature">
+        <div class="se-corp-feature-text">
+          <span class="se-corp-eyebrow">Building Identity</span>
+          <h2>Exterior Corporate and Building Signs</h2>
+          <p>Your brand should be visible before someone even enters the building. We design and install exterior corporate signs including building identification letters, <a href="https://signseast.com/monument-signs/">monument signs</a>, post-and-panel signs, and illuminated outdoor signage that carries your identity from the curb to the front door.</p>
+          <p>All exterior signs are built with weather-resistant materials and UV-stable finishes to maintain their appearance through New England's four seasons. For businesses that need visibility after dark, we offer illuminated options with energy-efficient LED systems.</p>
+          <div class="se-corp-materials">
+            <span class="se-corp-material">Building Letters</span>
+            <span class="se-corp-material">Monument Signs</span>
+            <span class="se-corp-material">Post & Panel</span>
+            <span class="se-corp-material">LED Illuminated</span>
+          </div>
+        </div>
+        <div class="se-corp-feature-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_10-east.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 6: Corporate Sign Packages
+       ================================================ -->
+  <section class="se-corp-section se-corp-section--gray">
+    <div class="se-corp-container">
+      <div class="se-corp-center">
+        <span class="se-corp-eyebrow">Full Solutions</span>
+        <h2>Custom Corporate Sign Packages</h2>
+        <p class="se-corp-lead se-corp-lead--center">Instead of ordering signs one at a time, get a complete corporate signage package designed as a unified system. Consistent branding, one point of contact, one timeline.</p>
+      </div>
+      <div class="se-corp-packages">
+        <div class="se-corp-package">
+          <h3>Full Office Package</h3>
+          <p>Everything your office needs in one order - lobby sign, reception signage, room identification, wayfinding, and ADA-compliant signs. Designed as a cohesive set that reinforces your brand in every hallway and doorway.</p>
+          <p class="se-corp-package-includes">Includes: Lobby logo + wayfinding + room signs + ADA</p>
+        </div>
+        <div class="se-corp-package">
+          <h3>New Construction Package</h3>
+          <p>Moving into a new space? We coordinate with your build-out timeline to deliver and install all interior and exterior signage before opening day. One vendor for the entire sign scope.</p>
+          <p class="se-corp-package-includes">Includes: Exterior ID + lobby + directories + ADA + <a href="https://signseast.com/banner-signs/">banners</a></p>
+        </div>
+        <div class="se-corp-package">
+          <h3>Office Rebrand Package</h3>
+          <p>New name, new logo, or refreshed brand guidelines? We survey your existing signage, identify what needs replacing, and deliver updated signs that reflect the new brand across every touchpoint.</p>
+          <p class="se-corp-package-includes">Includes: Audit + removal + new signage + <a href="https://signseast.com/vehicle-graphics/">fleet graphics</a></p>
+        </div>
+      </div>
+      <div class="se-corp-btn-row se-corp-btn-row--center">
+        <a href="https://signseast.com/contact-us/" class="se-corp-btn se-corp-btn--primary">Get a Package Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 7: How It Works (4-step process with icons)
+       ================================================ -->
+  <section class="se-corp-section">
+    <div class="se-corp-container">
+      <div class="se-corp-center">
+        <span class="se-corp-eyebrow">Our Process</span>
+        <h2>How to Order Your Corporate Signs</h2>
+        <p class="se-corp-lead se-corp-lead--center">Four steps from first conversation to installed signs. We keep it simple and transparent at every stage.</p>
+      </div>
+      <div class="se-corp-process">
+        <div class="se-corp-step">
+          <div class="se-corp-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <h3>Consultation</h3>
+          <p>Tell us about your space, brand, and goals. We can visit your site or work from floor plans and photos.</p>
+        </div>
+        <div class="se-corp-step">
+          <div class="se-corp-step-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>Design</h3>
+          <p>We create mockups and proofs matched to your brand guidelines. Revisions until you are completely satisfied.</p>
+        </div>
+        <div class="se-corp-step">
+          <div class="se-corp-step-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <h3>Fabrication</h3>
+          <p>Signs are built in our Kingston, NH shop using precision equipment and premium materials. Quality checked before delivery.</p>
+        </div>
+        <div class="se-corp-step">
+          <div class="se-corp-step-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Installation</h3>
+          <p>Professional installation at your location. We handle mounting, electrical connections for illuminated signs, and final cleanup.</p>
+        </div>
+      </div>
+      <div class="se-corp-btn-row se-corp-btn-row--center" style="margin-top: 40px;">
+        <a href="https://signseast.com/contact-us/" class="se-corp-btn se-corp-btn--primary">Start Your Project</a>
+        <a href="tel:+19782732992" class="se-corp-btn se-corp-btn--outline">Call (978) 273-2992</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 8: Customer Reviews
+       ================================================ -->
+  <section class="se-corp-section se-corp-section--gray">
+    <div class="se-corp-container">
+      <div class="se-corp-center">
+        <span class="se-corp-eyebrow">Client Feedback</span>
+        <h2>What Our Corporate Clients Say</h2>
+        <p class="se-corp-lead se-corp-lead--center">4.9 stars from 79+ Google reviews. Here is what businesses say about working with <a href="https://signseast.com/about-us/">our team</a>.</p>
+      </div>
+      <div class="se-corp-reviews">
+        <div class="se-corp-review">
+          <div class="se-corp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Always happy to work with the Signs East crew. They work diligently to make sure the product they are producing is completed in a timely manner and exactly to your liking. Will definitely be requesting their services again."</blockquote>
+          <span class="se-corp-review-author">Gordon S.</span>
+          <span class="se-corp-review-divider">|</span>
+          <span class="se-corp-review-source">Google Review</span>
+        </div>
+        <div class="se-corp-review">
+          <div class="se-corp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Great company doing great things! These guys have helped me out on several occasions. Super professional, great timing, and high quality work. Would highly recommend to anyone!"</blockquote>
+          <span class="se-corp-review-author">Daniel J.</span>
+          <span class="se-corp-review-divider">|</span>
+          <span class="se-corp-review-source">Google Review</span>
+        </div>
+        <div class="se-corp-review">
+          <div class="se-corp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"If I could leave 10 stars, I would. I contracted Signs East for a few projects. The team had the three projects designed and installed in a few days! They are fast, efficient, and everything you want in a company. I will be using Signs East again for future projects."</blockquote>
+          <span class="se-corp-review-author">Capito Coffee</span>
+          <span class="se-corp-review-divider">|</span>
+          <span class="se-corp-review-source">Google Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 9: FAQ (ADA style, 5 questions)
+       ================================================ -->
+  <section class="se-corp-section">
+    <div class="se-corp-container">
+      <div class="se-corp-faq-container">
+        <div class="se-corp-faq-header">
+          <h2>Frequently Asked Questions About Corporate Identity Signs</h2>
+          <p>Common questions about materials, packages, and process.</p>
+        </div>
+        <div class="se-corp-faq-list">
+          <div class="se-corp-faq-item">
+            <button class="se-corp-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What types of corporate identity signs does Signs East offer?
+              <span class="se-corp-faq-icon"></span>
+            </button>
+            <div class="se-corp-faq-answer">
+              <div class="se-corp-faq-answer-inner">
+                <p>We produce the full range of corporate signage - lobby logo signs, reception area signs, dimensional letters, wayfinding and directory signs, ADA-compliant room signs, exterior building identification, monument signs, and illuminated options. We can handle a single sign or a complete office package.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-corp-faq-item">
+            <button class="se-corp-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What materials are used for corporate logo signs?
+              <span class="se-corp-faq-icon"></span>
+            </button>
+            <div class="se-corp-faq-answer">
+              <div class="se-corp-faq-answer-inner">
+                <p>We fabricate corporate logo signs in acrylic, aluminum, brushed stainless steel, PVC, and foam with hardcoat finishes. Finishes include brushed, polished, matte, and painted options. For illuminated logos, we use LED modules behind acrylic or channel letters for a backlit or halo-lit effect.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-corp-faq-item">
+            <button class="se-corp-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Can you match my company's exact brand colors and fonts?
+              <span class="se-corp-faq-icon"></span>
+            </button>
+            <div class="se-corp-faq-answer">
+              <div class="se-corp-faq-answer-inner">
+                <p>Yes. We color-match to Pantone, CMYK, or hex values and reproduce your exact typefaces. If you have brand guidelines, send them over and we will follow them precisely. If you do not have formal guidelines, we can work from your logo file and existing materials.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-corp-faq-item">
+            <button class="se-corp-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How long does it take to produce corporate signage?
+              <span class="se-corp-faq-icon"></span>
+            </button>
+            <div class="se-corp-faq-answer">
+              <div class="se-corp-faq-answer-inner">
+                <p>Timeline depends on the scope. A single lobby sign typically takes one to two weeks from proof approval to installation. Full office packages with multiple sign types run two to four weeks. Rush production is available - call us at <a href="tel:+19782732992">(978) 273-2992</a> to discuss your deadline.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-corp-faq-item">
+            <button class="se-corp-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Do you offer installation services for office and lobby signs?
+              <span class="se-corp-faq-icon"></span>
+            </button>
+            <div class="se-corp-faq-answer">
+              <div class="se-corp-faq-answer-inner">
+                <p>Yes. We handle professional installation throughout our <a href="https://signseast.com/sign-services/">service area</a> covering Southern NH, Seacoast NH, and North Shore MA. Installation includes mounting hardware, electrical connections for illuminated signs, and leveling. We coordinate with your building management if needed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 10: Final CTA
+       ================================================ -->
+  <section class="se-corp-final-cta">
+    <div class="se-corp-container">
+      <h2>Ready to Elevate Your Corporate Signage?</h2>
+      <p>Tell us about your space and brand. We will provide a consultation, design mockups, and a detailed quote - all at no cost to get started.</p>
+      <div class="se-corp-btn-row se-corp-btn-row--center">
+        <a href="https://signseast.com/contact-us/" class="se-corp-btn se-corp-btn--primary">Request a Free Consultation</a>
+        <a href="tel:+19782732992" class="se-corp-btn se-corp-btn--outline">Call (978) 273-2992</a>
+      </div>
+    </div>
+  </section>
+
+</div>
