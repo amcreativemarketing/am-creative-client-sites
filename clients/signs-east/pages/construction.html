@@ -1,0 +1,1143 @@
+<!-- Signs East Construction Signage Page Content
+     Sits BELOW existing hero section, ABOVE footer
+     Target keywords: construction site signs, construction zone signs, temporary construction signs
+     No schema, no meta tags, no microdata - OTTO handles all SEO
+     All alt="" empty - OTTO handles alt text optimization
+-->
+
+<style>
+/* === Signs East Construction Page Styles === */
+.se-construction {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --se-accent-warm: #FFF8F0;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --button-radius: 30px;
+  --container-max-width: 1140px;
+}
+
+.se-construction {
+  font-family: var(--font-body);
+  color: var(--se-text);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.se-construction * {
+  box-sizing: border-box;
+}
+
+.se-construction img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.se-construction a {
+  color: var(--se-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.se-construction a:hover {
+  border-bottom-color: var(--se-primary);
+}
+
+/* === Layout === */
+.se-cx-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.se-cx-section {
+  padding: 60px 20px;
+}
+
+.se-cx-section--gray {
+  background-color: var(--se-bg-light);
+}
+
+.se-cx-section--warm {
+  background-color: var(--se-accent-warm);
+}
+
+.se-cx-section--dark {
+  background-color: var(--se-dark);
+  color: var(--se-white);
+}
+
+/* === Typography === */
+.se-construction h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--se-dark);
+  margin: 0 0 14px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.se-cx-section--dark h2 {
+  color: var(--se-white);
+}
+
+.se-construction h3 {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  color: var(--se-dark);
+  margin: 0 0 10px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.se-cx-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--se-primary);
+  margin-bottom: 10px;
+}
+
+.se-cx-lead {
+  font-size: 18px;
+  color: var(--se-text-light);
+  margin: 0 0 30px;
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.se-cx-lead--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Buttons === */
+.se-cx-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-bottom: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  min-width: 180px;
+  line-height: 1.4;
+}
+
+.se-cx-btn:hover {
+  border-bottom: none;
+}
+
+.se-cx-btn--primary {
+  background-color: var(--se-primary);
+  color: var(--se-white);
+  border-bottom: none;
+}
+
+.se-cx-btn--primary:hover {
+  background-color: var(--se-primary-hover);
+  transform: translateY(-2px);
+  color: var(--se-white);
+  border-bottom: none;
+}
+
+.se-cx-btn--outline {
+  background-color: transparent;
+  color: var(--se-primary);
+  border: 2px solid var(--se-primary);
+  padding: 12px 34px;
+}
+
+.se-cx-btn--outline:hover {
+  background-color: var(--se-primary);
+  color: var(--se-white);
+  transform: translateY(-2px);
+  border: 2px solid var(--se-primary);
+}
+
+.se-cx-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.se-cx-btn-row--center {
+  justify-content: center;
+}
+
+/* ============================================
+   Section 1: Intro - Full-width image left
+   ============================================ */
+.se-cx-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.se-cx-intro-img {
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.se-cx-intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.se-cx-intro-body {
+  padding: 40px 20px;
+}
+
+.se-cx-intro-body p {
+  margin: 0 0 16px;
+}
+
+/* ============================================
+   Section 2: Sign types - Stacked feature rows
+   ============================================ */
+.se-cx-features {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.se-cx-feature-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.se-cx-feature-img {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.se-cx-feature-body h3 {
+  font-size: 23px;
+}
+
+.se-cx-feature-body p {
+  margin: 0 0 12px;
+  color: var(--se-text-light);
+}
+
+.se-cx-feature-tag {
+  display: inline-block;
+  background: var(--se-primary);
+  color: var(--se-white);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.se-cx-product-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.se-cx-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.se-cx-spec {
+  display: inline-block;
+  background: var(--se-bg-light);
+  color: var(--se-text);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* ============================================
+   Section: Comparison Table
+   ============================================ */
+.se-cx-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 30px;
+}
+
+.se-cx-compare {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 15px;
+}
+
+.se-cx-compare thead th {
+  background-color: var(--se-dark);
+  color: var(--se-white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.se-cx-compare thead th:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+.se-cx-compare thead th:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+.se-cx-compare thead th.se-cx-highlight-col {
+  background-color: var(--se-primary);
+  text-align: center;
+}
+
+.se-cx-compare tbody td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #e8e8e8;
+  color: var(--se-text);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.se-cx-compare tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.se-cx-compare tbody tr:nth-child(even) td {
+  background-color: #fafafa;
+}
+
+.se-cx-compare tbody td:first-child {
+  font-weight: 600;
+  color: var(--se-dark);
+  white-space: nowrap;
+}
+
+.se-cx-compare tbody td.se-cx-highlight-col {
+  background-color: #fef5f5;
+  text-align: center;
+  font-weight: 600;
+}
+
+.se-cx-compare tbody tr:nth-child(even) td.se-cx-highlight-col {
+  background-color: #fceaea;
+}
+
+.se-cx-check {
+  color: var(--se-primary);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.se-cx-x {
+  color: #bbb;
+  font-size: 18px;
+}
+
+/* ============================================
+   Section: Reviews - Horizontal scroll on mobile
+   ============================================ */
+.se-cx-reviews-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.se-cx-review {
+  background: var(--se-white);
+  border-radius: 8px;
+  padding: 28px 24px 24px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.se-cx-review::before {
+  content: "\201C";
+  font-family: var(--font-heading);
+  font-size: 64px;
+  color: var(--se-primary);
+  opacity: 0.15;
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  line-height: 1;
+}
+
+.se-cx-review-stars {
+  color: #f5a623;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.se-cx-review blockquote {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--se-text);
+}
+
+.se-cx-review-author {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--se-dark);
+}
+
+.se-cx-review-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.se-cx-review-divider {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.se-cx-review-source {
+  font-size: 13px;
+  color: var(--se-text-light);
+}
+
+/* ============================================
+   Section: How to Order - Timeline style
+   ============================================ */
+.se-cx-timeline {
+  position: relative;
+  padding-left: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.se-cx-timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--se-primary);
+  opacity: 0.25;
+}
+
+.se-cx-timeline-step {
+  position: relative;
+  padding-bottom: 35px;
+}
+
+.se-cx-timeline-step:last-child {
+  padding-bottom: 0;
+}
+
+.se-cx-timeline-dot {
+  position: absolute;
+  left: -40px;
+  top: 2px;
+  width: 32px;
+  height: 32px;
+  background: var(--se-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--se-white);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.se-cx-timeline-step h3 {
+  margin-bottom: 6px;
+  font-size: 19px;
+}
+
+.se-cx-timeline-step p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--se-text-light);
+  line-height: 1.65;
+}
+
+/* ============================================
+   Section: FAQ (ADA page style)
+   ============================================ */
+.se-cx-faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.se-cx-faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-cx-faq-header h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.se-cx-faq-header p {
+  font-size: 17px;
+  color: var(--se-text-light);
+  margin: 0;
+}
+
+.se-cx-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.se-cx-faq-item {
+  background-color: var(--se-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.se-cx-faq-item:hover {
+  background-color: #ededed;
+}
+
+.se-cx-faq-question {
+  width: 100%;
+  padding: 22px 25px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--se-dark);
+  transition: color 0.2s ease;
+  min-height: 44px;
+  line-height: 1.45;
+}
+
+.se-cx-faq-question:hover {
+  color: var(--se-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--se-primary);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.se-cx-faq-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.se-cx-faq-icon::before,
+.se-cx-faq-icon::after {
+  content: "";
+  position: absolute;
+  background-color: var(--se-primary);
+  transition: transform 0.3s ease;
+}
+
+.se-cx-faq-icon::before {
+  width: 14px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-cx-faq-icon::after {
+  width: 2px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-cx-faq-item.active .se-cx-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-cx-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-cx-faq-item.active .se-cx-faq-answer {
+  max-height: 350px;
+}
+
+.se-cx-faq-answer-inner {
+  padding: 0 25px 22px;
+  font-size: 16px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-cx-faq-answer-inner p {
+  margin: 0;
+}
+
+.se-cx-faq-answer-inner a {
+  color: var(--se-primary);
+  border-bottom: 1px solid var(--se-primary);
+}
+
+.se-cx-faq-answer-inner a:hover {
+  color: var(--se-primary-hover);
+  border-color: var(--se-primary-hover);
+}
+
+/* ============================================
+   Section: Related Services Grid
+   ============================================ */
+.se-cx-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   Section: Final CTA
+   ============================================ */
+.se-cx-final-cta {
+  background: var(--se-white);
+  text-align: center;
+  padding: 70px 20px;
+  border-top: 4px solid var(--se-primary);
+}
+
+.se-cx-final-cta h2 {
+  margin-bottom: 14px;
+}
+
+.se-cx-final-cta p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: var(--se-text-light);
+  font-size: 17px;
+}
+
+/* ============================================
+   Responsive - Tablet (768px+)
+   ============================================ */
+@media (min-width: 768px) {
+  .se-cx-section {
+    padding: 80px 30px;
+  }
+
+  .se-construction h2 {
+    font-size: 34px;
+  }
+
+  .se-cx-intro {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .se-cx-intro-img {
+    max-height: none;
+  }
+
+  .se-cx-intro-body {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .se-cx-feature-row {
+    grid-template-columns: 2fr 3fr;
+    gap: 40px;
+  }
+
+  .se-cx-feature-row:nth-child(even) {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .se-cx-feature-row:nth-child(even) .se-cx-feature-img {
+    order: 2;
+  }
+
+  .se-cx-product-grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .se-cx-reviews-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .se-cx-faq-header h2 {
+    font-size: 34px;
+  }
+
+  .se-cx-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
+   Responsive - Desktop (1024px+)
+   ============================================ */
+@media (min-width: 1024px) {
+  .se-cx-section {
+    padding: 90px 40px;
+  }
+
+  .se-construction h2 {
+    font-size: 38px;
+  }
+
+  .se-cx-intro-body {
+    padding: 60px 55px;
+  }
+
+  .se-cx-faq-header h2 {
+    font-size: 38px;
+  }
+
+  .se-cx-final-cta {
+    padding: 90px 40px;
+  }
+
+  .se-cx-services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ============================================
+   Responsive - Mobile fixes (max 767px)
+   ============================================ */
+@media (max-width: 767px) {
+  .se-cx-faq-header h2 {
+    font-size: 28px;
+  }
+
+  .se-cx-faq-header {
+    margin-bottom: 35px;
+  }
+
+  .se-cx-faq-question {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
+
+  .se-cx-faq-answer-inner {
+    padding: 0 20px 18px;
+    font-size: 15px;
+  }
+
+  .se-cx-timeline {
+    padding-left: 36px;
+  }
+
+  .se-cx-timeline-dot {
+    left: -36px;
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+}
+</style>
+
+<div class="se-construction">
+
+  <!-- ================================================
+       Section 1: Intro - image + text side-by-side
+       ================================================ -->
+  <section class="se-cx-intro">
+    <div class="se-cx-intro-img">
+      <img src="https://signseast.com/wp-content/uploads/2026/03/Construction.webp" alt="" width="800" height="600" loading="lazy">
+    </div>
+    <div class="se-cx-intro-body">
+      <span class="se-cx-eyebrow">Construction Signage</span>
+      <h2>Construction Site Signs Built for Real Job Sites</h2>
+      <p>Every construction project needs signage that handles the conditions - weather, foot traffic, heavy equipment, and inspections. <a href="https://signseast.com/">Signs East</a> builds construction site signs and safety signage that meet compliance standards and survive the job from groundbreaking to final walkthrough.</p>
+      <p>We use aluminum composite, coroplast, and heavy-gauge aluminum with UV-resistant inks so your construction zone signs stay readable through rain, sun, and jobsite dust. Whether you need temporary construction signs for a two-week project or permanent safety signage for an ongoing operation, we handle it fast - same-day proofs, short turnaround, and delivery right to your site. <a href="https://signseast.com/about-us/">Learn more about our team</a>.</p>
+      <div class="se-cx-btn-row">
+        <a href="https://signseast.com/contact-us/" class="se-cx-btn se-cx-btn--primary">Get a Free Quote</a>
+        <a href="https://signseast.com/showcase/" class="se-cx-btn se-cx-btn--outline">View Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 2: Sign types - alternating feature rows
+       ================================================ -->
+  <section class="se-cx-section se-cx-section--gray">
+    <div class="se-cx-container">
+      <span class="se-cx-eyebrow">What We Build</span>
+      <h2>Construction Sign Products</h2>
+      <p class="se-cx-lead">From road construction signs and zone markers to safety warnings and custom job site branding - every sign type a contractor, developer, or municipality needs.</p>
+
+      <div class="se-cx-product-grid-2col">
+
+        <!-- Card 1: Road Construction & Zone Signs -->
+        <div style="background: var(--se-white); border-radius: 8px; padding: 30px 28px; box-shadow: 0 6px 24px rgba(0,0,0,0.07); border-top: 4px solid var(--se-primary);">
+          <span class="se-cx-feature-tag">High Demand</span>
+          <h3>Road Construction and Zone Signs</h3>
+          <p style="color: var(--se-text-light); margin: 0 0 12px;">Road work ahead, lane closure, detour, and construction zone signs built on reflective aluminum for daytime and nighttime visibility. We produce DOT-style signage for road projects, utility work, and municipal construction zones. Reflective sheeting options available for nighttime compliance.</p>
+          <div class="se-cx-specs">
+            <span class="se-cx-spec">Reflective Aluminum</span>
+            <span class="se-cx-spec">DOT-Style</span>
+            <span class="se-cx-spec">Hi-Vis Sheeting</span>
+            <span class="se-cx-spec">Custom Sizes</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Safety & Warning Signs -->
+        <div style="background: var(--se-white); border-radius: 8px; padding: 30px 28px; box-shadow: 0 6px 24px rgba(0,0,0,0.07); border-top: 4px solid var(--se-primary);">
+          <h3>Construction Safety and Warning Signs</h3>
+          <p style="color: var(--se-text-light); margin: 0 0 12px;">Hard hat required, PPE zones, danger, caution, and warning signs produced to ANSI Z535 safety color standards. The correct color coding matters - red means danger (immediate hazard), orange means warning (potential hazard), yellow means caution (minor hazard). We get it right so your site passes inspection. Available in rigid aluminum, coroplast, and self-adhesive vinyl.</p>
+          <div class="se-cx-specs">
+            <span class="se-cx-spec">ANSI Z535 Colors</span>
+            <span class="se-cx-spec">Aluminum</span>
+            <span class="se-cx-spec">Coroplast</span>
+            <span class="se-cx-spec">Adhesive Vinyl</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Temporary Construction Signs -->
+        <div style="background: var(--se-white); border-radius: 8px; padding: 30px 28px; box-shadow: 0 6px 24px rgba(0,0,0,0.07); border-top: 4px solid var(--se-primary);">
+          <span class="se-cx-feature-tag">Quick Win</span>
+          <h3>Temporary Construction Signs</h3>
+          <p style="color: var(--se-text-light); margin: 0 0 12px;">Lightweight, portable signs for short-term projects - site entrance markers, no trespassing notices, restricted area warnings, and directional signs. Printed on coroplast or aluminum with metal H-stakes or grommets for fence mounting. Weatherproof, UV-resistant, and reusable for multi-site contractors.</p>
+          <div class="se-cx-specs">
+            <span class="se-cx-spec">Coroplast</span>
+            <span class="se-cx-spec">Weatherproof</span>
+            <span class="se-cx-spec">UV-Resistant</span>
+            <span class="se-cx-spec">Reusable</span>
+            <span class="se-cx-spec">H-Stakes</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Custom Job Site Signs -->
+        <div style="background: var(--se-white); border-radius: 8px; padding: 30px 28px; box-shadow: 0 6px 24px rgba(0,0,0,0.07); border-top: 4px solid var(--se-primary);">
+          <h3>Custom Job Site Signs and Barriers</h3>
+          <p style="color: var(--se-text-light); margin: 0 0 12px;">Company-branded construction signs that identify your project, display your logo, and establish your presence on the job site. We produce project identification signs, construction fence mesh <a href="https://signseast.com/banner-signs/">banners</a>, barricade wraps, and branded safety signs. Your construction site is a billboard for your business - we help you make that impression count with signage that matches your <a href="https://signseast.com/corporate-identity/">corporate identity</a>.</p>
+          <div class="se-cx-specs">
+            <span class="se-cx-spec">Logo Branding</span>
+            <span class="se-cx-spec">Fence Mesh</span>
+            <span class="se-cx-spec">Barricade Wraps</span>
+            <span class="se-cx-spec">Project ID</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 4: Comparison Table
+       ================================================ -->
+  <section class="se-cx-section">
+    <div class="se-cx-container">
+      <div style="text-align: center;">
+        <span class="se-cx-eyebrow">The Difference</span>
+        <h2>Why Hire Signs East vs. Other Options</h2>
+        <p class="se-cx-lead se-cx-lead--center">Online sign stores ship generic products. National chains follow a template. Here is what you actually get when you work with a local sign company that understands construction.</p>
+      </div>
+      <div class="se-cx-table-wrap">
+        <table class="se-cx-compare">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th class="se-cx-highlight-col">Signs East</th>
+              <th>Online Print Shops</th>
+              <th>National Chains</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Compliance and Safety Review</td>
+              <td class="se-cx-highlight-col"><span class="se-cx-check">&#10003;</span> Included</td>
+              <td><span class="se-cx-x">&#10005;</span> You verify</td>
+              <td><span class="se-cx-x">&#10005;</span> Limited</td>
+            </tr>
+            <tr>
+              <td>Same-Day Proofs</td>
+              <td class="se-cx-highlight-col"><span class="se-cx-check">&#10003;</span> Standard</td>
+              <td><span class="se-cx-x">&#10005;</span> 2-5 days</td>
+              <td><span class="se-cx-x">&#10005;</span> 1-3 days</td>
+            </tr>
+            <tr>
+              <td>Job Site Delivery</td>
+              <td class="se-cx-highlight-col"><span class="se-cx-check">&#10003;</span> Direct to site</td>
+              <td><span class="se-cx-x">&#10005;</span> Ship to address</td>
+              <td><span class="se-cx-x">&#10005;</span> Store pickup</td>
+            </tr>
+            <tr>
+              <td>Custom Sizes and Materials</td>
+              <td class="se-cx-highlight-col"><span class="se-cx-check">&#10003;</span> Any spec</td>
+              <td>Limited templates</td>
+              <td>Standard only</td>
+            </tr>
+            <tr>
+              <td>Company Branding on Signs</td>
+              <td class="se-cx-highlight-col"><span class="se-cx-check">&#10003;</span> Full custom</td>
+              <td>Upload-only</td>
+              <td>Basic logo add</td>
+            </tr>
+            <tr>
+              <td>Free Design Assistance</td>
+              <td class="se-cx-highlight-col"><span class="se-cx-check">&#10003;</span> Included</td>
+              <td><span class="se-cx-x">&#10005;</span> Extra charge</td>
+              <td><span class="se-cx-x">&#10005;</span> Extra charge</td>
+            </tr>
+            <tr>
+              <td>Rush and Emergency Orders</td>
+              <td class="se-cx-highlight-col"><span class="se-cx-check">&#10003;</span> Call us</td>
+              <td><span class="se-cx-x">&#10005;</span> Not available</td>
+              <td>Limited</td>
+            </tr>
+            <tr>
+              <td>Bulk and Multi-Site Pricing</td>
+              <td class="se-cx-highlight-col"><span class="se-cx-check">&#10003;</span> Custom quotes</td>
+              <td>Volume discounts</td>
+              <td>Fixed pricing</td>
+            </tr>
+            <tr>
+              <td>Local Accountability</td>
+              <td class="se-cx-highlight-col"><span class="se-cx-check">&#10003;</span> Kingston, NH</td>
+              <td><span class="se-cx-x">&#10005;</span> Anonymous</td>
+              <td>Franchise</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="se-cx-btn-row se-cx-btn-row--center">
+        <a href="https://signseast.com/contact-us/" class="se-cx-btn se-cx-btn--primary">Get Your Custom Quote</a>
+        <a href="tel:+19782732992" class="se-cx-btn se-cx-btn--outline">Call (978) 273-2992</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 5: Customer Reviews
+       ================================================ -->
+  <section class="se-cx-section se-cx-section--warm">
+    <div class="se-cx-container">
+      <div style="text-align: center;">
+        <span class="se-cx-eyebrow">From the Job Site</span>
+        <h2>What Contractors Say About Signs East</h2>
+        <p class="se-cx-lead se-cx-lead--center">4.9 stars from 79+ Google reviews. Here is what contractors and business owners have to say about working with us.</p>
+      </div>
+      <div class="se-cx-reviews-row">
+        <div class="se-cx-review">
+          <div class="se-cx-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Tor has gone above and beyond. He came right to our job site and got machines done. We have brought trucks right to his shop and in less then a hour they were lettered up to perfection. He knows down time isn't great for business so he gets it done in no time!"</blockquote>
+          <span class="se-cx-review-author">Mark N.</span>
+          <span class="se-cx-review-divider">|</span>
+          <span class="se-cx-review-source">Google Review</span>
+        </div>
+        <div class="se-cx-review">
+          <div class="se-cx-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Signs East is our go to, they do outstanding job with fast turn around time. They have done multiple pieces of our equipment and trucks."</blockquote>
+          <span class="se-cx-review-author">Elijah W.</span>
+          <span class="se-cx-review-divider">|</span>
+          <span class="se-cx-review-source">Google Review</span>
+        </div>
+        <div class="se-cx-review">
+          <div class="se-cx-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Tor and co have been my go to for truck lettering, logo design and yard signs for years now. They always provide exceptional service with a quick turnaround and when it comes to my business that is key to getting my trucks back on the road working!"</blockquote>
+          <span class="se-cx-review-author">Mike C.</span>
+          <span class="se-cx-review-divider">|</span>
+          <span class="se-cx-review-source">Google Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 6: How to Order - Timeline style
+       ================================================ -->
+  <section class="se-cx-section">
+    <div class="se-cx-container">
+      <div style="text-align: center;">
+        <span class="se-cx-eyebrow">Simple Process</span>
+        <h2>How to Order Construction Signs</h2>
+        <p class="se-cx-lead se-cx-lead--center">Three steps. No runaround. We keep it as straightforward as the work you do.</p>
+      </div>
+      <div class="se-cx-timeline">
+        <div class="se-cx-timeline-step">
+          <div class="se-cx-timeline-dot">1</div>
+          <h3>Tell Us What the Job Needs</h3>
+          <p>Call us at <a href="tel:+19782732992">(978) 273-2992</a> or <a href="https://signseast.com/contact-us/">submit a quote request</a>. Let us know the sign types, sizes, and quantities. If you have artwork or a logo, send it over. If not, our team handles the design.</p>
+        </div>
+        <div class="se-cx-timeline-step">
+          <div class="se-cx-timeline-dot">2</div>
+          <h3>Review and Approve Your Proof</h3>
+          <p>We send a digital proof - usually the same day. You check the layout, colors, and compliance details. Request changes until it is exactly right. Nothing goes to production without your sign-off.</p>
+        </div>
+        <div class="se-cx-timeline-step">
+          <div class="se-cx-timeline-dot">3</div>
+          <h3>We Produce and Deliver</h3>
+          <p>Once approved, we print, finish, and deliver. Local jobs get hand delivery direct to your site. Rush orders available when your project timeline does not wait. Need <a href="https://signseast.com/sign-repair/">sign repair</a> or replacement on an existing job? We handle that too.</p>
+        </div>
+      </div>
+      <div class="se-cx-btn-row se-cx-btn-row--center" style="margin-top: 40px;">
+        <a href="https://signseast.com/contact-us/" class="se-cx-btn se-cx-btn--primary">Request a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 7: Full-width image break
+       ================================================ -->
+  <section style="overflow: hidden; max-height: 260px;">
+    <img src="https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-24-at-9.04.48-AM.webp" alt="" width="1200" height="260" loading="lazy" decoding="async" style="width: 100%; height: 260px; object-fit: cover; display: block;">
+  </section>
+
+  <!-- ================================================
+       Section 8: FAQ (ADA page style)
+       ================================================ -->
+  <section class="se-cx-section">
+    <div class="se-cx-container">
+      <div class="se-cx-faq-container">
+        <div class="se-cx-faq-header">
+          <h2>Frequently Asked Questions About Construction Signs</h2>
+          <p>Common questions about materials, sizing, and ordering.</p>
+        </div>
+        <div class="se-cx-faq-list">
+          <div class="se-cx-faq-item">
+            <button class="se-cx-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What materials are construction site signs made from?
+              <span class="se-cx-faq-icon"></span>
+            </button>
+            <div class="se-cx-faq-answer">
+              <div class="se-cx-faq-answer-inner">
+                <p>We use aluminum composite, heavy-gauge aluminum, and coroplast depending on the application. Aluminum is best for permanent or long-term installations. Coroplast works well for temporary construction signs that need to be lightweight and portable. All materials are printed with UV-resistant inks for outdoor durability.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-cx-faq-item">
+            <button class="se-cx-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How long do temporary construction signs last outdoors?
+              <span class="se-cx-faq-icon"></span>
+            </button>
+            <div class="se-cx-faq-answer">
+              <div class="se-cx-faq-answer-inner">
+                <p>Coroplast temporary signs typically hold up for 6 to 12 months of outdoor exposure depending on conditions. Aluminum signs last significantly longer - three to five years or more. Both options use UV-resistant inks that resist fading from sun exposure.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-cx-faq-item">
+            <button class="se-cx-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What sizes are available for construction zone signs?
+              <span class="se-cx-faq-icon"></span>
+            </button>
+            <div class="se-cx-faq-answer">
+              <div class="se-cx-faq-answer-inner">
+                <p>We produce standard sizes including 18x24, 24x36, 36x48, and 48x48 inches, plus any custom dimension your project requires. Road construction signs follow DOT standard sizing. Give us the specs and we will build to match.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-cx-faq-item">
+            <button class="se-cx-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Can you create custom construction signs with our company logo?
+              <span class="se-cx-faq-icon"></span>
+            </button>
+            <div class="se-cx-faq-answer">
+              <div class="se-cx-faq-answer-inner">
+                <p>Yes. We produce company-branded job site signs, project identification panels, and fence mesh banners with your logo, colors, and contact information. Send us your artwork or just your logo and we will design the layout at no extra charge.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-cx-faq-item">
+            <button class="se-cx-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How quickly can construction signs be produced and delivered?
+              <span class="se-cx-faq-icon"></span>
+            </button>
+            <div class="se-cx-faq-answer">
+              <div class="se-cx-faq-answer-inner">
+                <p>Standard turnaround is two to three business days after proof approval. Rush and same-day production are available for urgent job site needs. Call us directly at <a href="tel:+19782732992">(978) 273-2992</a> for emergency orders. Local delivery to your site is available throughout Southern NH, Seacoast NH, and North Shore MA.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 9: Related Services
+       ================================================ -->
+  <section class="se-cx-section se-cx-section--gray">
+    <div class="se-cx-container">
+      <div style="text-align: center;">
+        <span class="se-cx-eyebrow">Beyond Construction Signs</span>
+        <h2>Other Sign Services for Your Business</h2>
+        <p class="se-cx-lead se-cx-lead--center">Construction signs are just one part of what we do. Signs East handles the full range of commercial signage from <a href="https://signseast.com/sign-services/">design to installation</a>.</p>
+      </div>
+      <div class="se-cx-services-grid">
+        <a href="https://signseast.com/monument-signs/" style="display: block; background: var(--se-white); padding: 22px 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); text-decoration: none; border-bottom: none; transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 3px solid var(--se-primary);">
+          <strong style="color: var(--se-dark); font-size: 16px; display: block; margin-bottom: 4px;">Monument Signs</strong>
+          <span style="color: var(--se-text-light); font-size: 14px;">Permanent site identification</span>
+        </a>
+        <a href="https://signseast.com/pole-and-pylon/" style="display: block; background: var(--se-white); padding: 22px 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); text-decoration: none; border-bottom: none; transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 3px solid var(--se-primary);">
+          <strong style="color: var(--se-dark); font-size: 16px; display: block; margin-bottom: 4px;">Pole and Pylon Signs</strong>
+          <span style="color: var(--se-text-light); font-size: 14px;">High-visibility roadside signage</span>
+        </a>
+        <a href="https://signseast.com/dimensional-and-channel-lettering/" style="display: block; background: var(--se-white); padding: 22px 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); text-decoration: none; border-bottom: none; transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 3px solid var(--se-primary);">
+          <strong style="color: var(--se-dark); font-size: 16px; display: block; margin-bottom: 4px;">Channel Letters</strong>
+          <span style="color: var(--se-text-light); font-size: 14px;">Illuminated building signage</span>
+        </a>
+        <a href="https://signseast.com/banner-signs/" style="display: block; background: var(--se-white); padding: 22px 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); text-decoration: none; border-bottom: none; transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 3px solid var(--se-primary);">
+          <strong style="color: var(--se-dark); font-size: 16px; display: block; margin-bottom: 4px;">Banner Signs</strong>
+          <span style="color: var(--se-text-light); font-size: 14px;">Temporary and event signage</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 10: Final CTA
+       ================================================ -->
+  <section class="se-cx-final-cta">
+    <div class="se-cx-container">
+      <h2>Need Construction Signs for Your Next Project?</h2>
+      <p>Tell us what the job requires. We will have a quote and proof ready fast - same-day in most cases. Call, email, or fill out our form.</p>
+      <div class="se-cx-btn-row se-cx-btn-row--center">
+        <a href="https://signseast.com/contact-us/" class="se-cx-btn se-cx-btn--primary">Request a Free Quote</a>
+        <a href="tel:+19782732992" class="se-cx-btn se-cx-btn--outline">Call (978) 273-2992</a>
+      </div>
+    </div>
+  </section>
+
+</div>
