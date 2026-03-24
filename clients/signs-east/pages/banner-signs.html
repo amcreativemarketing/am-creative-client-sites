@@ -1,0 +1,1062 @@
+<!-- Signs East Banner Signs Page Content
+     Sits BELOW existing hero section, ABOVE footer
+     Target keyword: banner signs, banner printing, custom banners
+     No schema, no meta tags, no microdata - OTTO handles all SEO
+     All alt="" empty - OTTO handles alt text optimization
+-->
+
+<style>
+/* === Signs East Banner Signs Page Styles === */
+/* CSS Variables (inherited from brand.md) */
+.se-banner-page {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --se-border: #e0e0e0;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --button-radius: 30px;
+  --container-max-width: 1140px;
+  --section-padding: 50px 20px;
+  --card-radius: 10px;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.se-banner-page {
+  font-family: var(--font-body);
+  color: var(--se-text);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.se-banner-page * {
+  box-sizing: border-box;
+}
+
+.se-banner-page img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === Container === */
+.se-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === Section Base === */
+.se-section {
+  padding: var(--section-padding);
+}
+
+.se-section--gray {
+  background-color: var(--se-bg-light);
+}
+
+.se-section--dark {
+  background-color: var(--se-dark);
+  color: var(--se-white);
+}
+
+.se-section--dark .se-section-subtitle {
+  color: #cccccc;
+}
+
+/* === Typography === */
+.se-banner-page h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--se-dark);
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.se-section--dark h2 {
+  color: var(--se-white);
+}
+
+.se-banner-page h3 {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  color: var(--se-dark);
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.se-section-subtitle {
+  font-size: 17px;
+  color: var(--se-text-light);
+  margin: 0 0 35px;
+  max-width: 700px;
+}
+
+.se-section-subtitle--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.se-section-header--center {
+  text-align: center;
+}
+
+/* === Buttons === */
+.se-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  min-width: 180px;
+  line-height: 1.4;
+}
+
+.se-btn--primary {
+  background-color: var(--se-primary);
+  color: var(--se-white);
+}
+
+.se-btn--primary:hover {
+  background-color: var(--se-primary-hover);
+  transform: translateY(-2px);
+}
+
+.se-btn--outline {
+  background-color: transparent;
+  color: var(--se-primary);
+  border: 2px solid var(--se-primary);
+}
+
+.se-btn--outline:hover {
+  background-color: var(--se-primary);
+  color: var(--se-white);
+  transform: translateY(-2px);
+}
+
+.se-btn--white {
+  background-color: var(--se-white);
+  color: var(--se-primary);
+}
+
+.se-btn--white:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.se-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+/* === Intro Section === */
+.se-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.se-intro-text p {
+  margin: 0 0 18px;
+}
+
+.se-intro-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.se-intro-img {
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+/* === Product Cards === */
+.se-product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.se-product-card {
+  background: var(--se-white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 30px 26px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-top: 4px solid var(--se-primary);
+}
+
+.se-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
+}
+
+.se-product-card h3 {
+  margin-bottom: 10px;
+}
+
+.se-product-card p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--se-text-light);
+}
+
+.se-product-card p:last-child {
+  margin-bottom: 0;
+}
+
+.se-card-tag {
+  display: inline-block;
+  background-color: #fbe9e9;
+  color: var(--se-primary);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* === Split Content === */
+.se-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.se-split--reverse .se-split-img {
+  order: -1;
+}
+
+.se-split-img {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.se-split-text p {
+  margin: 0 0 16px;
+}
+
+.se-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+
+.se-detail-list li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.se-detail-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--se-primary);
+  border-radius: 50%;
+}
+
+/* === Why Choose Section === */
+.se-why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.se-why-card {
+  background: var(--se-white);
+  padding: 28px 24px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.se-why-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--se-primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.se-why-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: var(--se-white);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.se-why-card p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--se-text-light);
+  line-height: 1.6;
+}
+
+/* === Steps Section === */
+.se-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  counter-reset: step-counter;
+}
+
+.se-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.se-step-number {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background-color: var(--se-primary);
+  color: var(--se-white);
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.se-step-content h3 {
+  margin-bottom: 6px;
+  font-size: 19px;
+}
+
+.se-step-content p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--se-text-light);
+  line-height: 1.6;
+}
+
+/* === Reviews === */
+.se-reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.se-review-card {
+  background: var(--se-white);
+  padding: 30px 26px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--se-primary);
+  position: relative;
+}
+
+.se-review-stars {
+  color: #f5a623;
+  font-size: 18px;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+}
+
+.se-review-card blockquote {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--se-text);
+}
+
+.se-review-author {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--se-dark);
+}
+
+.se-review-source {
+  font-size: 13px;
+  color: var(--se-text-light);
+}
+
+/* === FAQ (ADA-style card accordion) === */
+.se-faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.se-faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.se-faq-header h2 {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 400;
+  color: var(--se-dark);
+  margin: 0 0 15px;
+}
+
+.se-faq-header p {
+  font-size: 17px;
+  color: var(--se-text-light);
+  margin: 0;
+}
+
+.se-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.se-faq-item {
+  background-color: var(--se-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.se-faq-question {
+  width: 100%;
+  padding: 22px 25px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--se-dark);
+  transition: color 0.2s ease;
+  min-height: 44px;
+  line-height: 1.45;
+}
+
+.se-faq-question:hover {
+  color: var(--se-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--se-primary);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.se-faq-item:hover {
+  background-color: #ededed;
+}
+
+.se-faq-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.se-faq-icon::before,
+.se-faq-icon::after {
+  content: "";
+  position: absolute;
+  background-color: var(--se-primary);
+  transition: transform 0.3s ease;
+}
+
+.se-faq-icon::before {
+  width: 14px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-faq-icon::after {
+  width: 2px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-faq-item.active .se-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-faq-item.active .se-faq-answer {
+  max-height: 350px;
+}
+
+.se-faq-answer-inner {
+  padding: 0 25px 22px;
+  font-size: 16px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-faq-answer-inner p {
+  margin: 0;
+}
+
+.se-faq-answer-inner a {
+  color: var(--se-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--se-primary);
+}
+
+.se-faq-answer-inner a:hover {
+  color: var(--se-primary-hover);
+  border-color: var(--se-primary-hover);
+}
+
+/* FAQ responsive */
+@media (max-width: 767px) {
+  .se-faq-header h2 {
+    font-size: 28px;
+  }
+
+  .se-faq-header p {
+    font-size: 16px;
+  }
+
+  .se-faq-header {
+    margin-bottom: 35px;
+  }
+
+  .se-faq-question {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
+
+  .se-faq-answer-inner {
+    padding: 0 20px 18px;
+    font-size: 15px;
+  }
+}
+
+/* === Final CTA === */
+.se-final-cta {
+  background-color: var(--se-white);
+  color: var(--se-dark);
+  text-align: center;
+  padding: 60px 20px;
+  border-top: 4px solid var(--se-primary);
+}
+
+.se-final-cta h2 {
+  color: var(--se-dark);
+  margin-bottom: 14px;
+}
+
+.se-final-cta p {
+  max-width: 620px;
+  margin: 0 auto 30px;
+  font-size: 17px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-final-cta .se-btn-group {
+  justify-content: center;
+  margin-top: 0;
+}
+
+/* === Responsive - Tablet (768px+) === */
+@media (min-width: 768px) {
+  .se-section {
+    padding: 65px 30px;
+  }
+
+  .se-banner-page h2 {
+    font-size: 34px;
+  }
+
+  .se-banner-page h3 {
+    font-size: 23px;
+  }
+
+  .se-intro-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+
+  .se-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .se-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .se-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .se-reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .se-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+
+  .se-step {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .se-final-cta {
+    padding: 80px 30px;
+  }
+}
+
+/* === Responsive - Desktop (1024px+) === */
+@media (min-width: 1024px) {
+  .se-section {
+    padding: 80px 40px;
+  }
+
+  .se-banner-page h2 {
+    font-size: 38px;
+  }
+
+  .se-product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .se-why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .se-final-cta {
+    padding: 90px 40px;
+  }
+}
+</style>
+
+<div class="se-banner-page">
+
+  <!-- Section 1: Intro / What We Offer -->
+  <section class="se-section">
+    <div class="se-container">
+      <div class="se-intro-grid">
+        <div class="se-intro-text">
+          <h2>Custom Banner Printing for Businesses and Events</h2>
+          <p>Whether you need a banner to promote a grand opening, draw attention at a trade show, or mark a special event, <a href="https://signseast.com/">Signs East</a> builds every banner to order right here in New Hampshire. We use heavy-duty vinyl, high-resolution digital printing, and reinforced finishing so your message looks sharp and holds up - outdoors in New England weather or indoors under event lighting.</p>
+          <p>Every banner leaves our shop with grommets, hemmed edges, and print quality that stays vibrant for three to four years of outdoor exposure. Need it faster than anyone else can deliver? That is what we do. Call us at <a href="tel:+19782732992">(978) 273-2992</a> and we will have a proof in your inbox the same day.</p>
+          <div class="se-btn-group">
+            <a href="https://signseast.com/contact-us/" class="se-btn se-btn--primary">Get a Free Quote</a>
+            <a href="https://signseast.com/sign-services/" class="se-btn se-btn--outline">View All Sign Services</a>
+          </div>
+        </div>
+        <div class="se-intro-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/Indoor-and-Outdoor-Banner-Sign-Printing.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Banner Product Types -->
+  <section class="se-section se-section--gray">
+    <div class="se-container">
+      <div class="se-section-header--center">
+        <h2>Banner Sign Products</h2>
+        <p class="se-section-subtitle se-section-subtitle--center">From street-level vinyl banners to portable trade show displays, we build every type of banner your business needs.</p>
+      </div>
+      <div class="se-product-grid">
+        <div class="se-product-card">
+          <span class="se-card-tag">Most Popular</span>
+          <h3>Vinyl Banners</h3>
+          <p>Our go-to for outdoor and indoor use. Printed on 13oz or 18oz scrim vinyl with UV-resistant inks. Available in standard sizes (2x4, 3x6, 4x8) or any custom dimension you need. Finished with grommets and reinforced hems.</p>
+        </div>
+        <div class="se-product-card">
+          <span class="se-card-tag">Wind-Friendly</span>
+          <h3>Mesh Banners</h3>
+          <p>Built for high-wind locations like construction sites, fencing, and building facades. The perforated material lets wind pass through without tearing, while still showing bold, readable graphics from the street.</p>
+        </div>
+        <div class="se-product-card">
+          <span class="se-card-tag">Trade Shows</span>
+          <h3>Retractable Banner Stands</h3>
+          <p>Portable, professional, and set up in under a minute. The banner retracts into an aluminum base for easy transport. Perfect for trade show booths, lobby displays, job fairs, and pop-up events.</p>
+        </div>
+        <div class="se-product-card">
+          <h3>Step and Repeat Banners</h3>
+          <p>The backdrop you see at press events and grand openings. We print your logo in a repeating pattern on wrinkle-resistant fabric or vinyl so your brand stays visible in every photo.</p>
+        </div>
+        <div class="se-product-card">
+          <h3>Feather and Teardrop Flags</h3>
+          <p>Tall, eye-catching flags that move with the breeze. Great for car dealerships, open houses, seasonal sales, and storefronts that need to grab attention from the road.</p>
+        </div>
+        <div class="se-product-card">
+          <h3>Pole Banners</h3>
+          <p>Mounted on light poles or freestanding poles along streets, parking lots, and campuses. Double-sided printing so your message reads from both directions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Custom Vinyl Banners Deep Dive -->
+  <section class="se-section">
+    <div class="se-container">
+      <div class="se-split">
+        <div class="se-split-text">
+          <h2>Custom Vinyl Banner Signs</h2>
+          <p>Vinyl banners remain the most cost-effective way to get your message in front of people - and when they are printed right, they work harder and last longer than most business owners expect. At Signs East, we print on premium 13oz and 18oz scrim vinyl using wide-format digital printers that deliver full-color, photo-quality graphics.</p>
+          <p>Every custom vinyl banner we produce is weather-resistant, fade-resistant, and finished with your choice of grommets, pole pockets, or reinforced webbing depending on how you plan to hang it.</p>
+          <ul class="se-detail-list">
+            <li>Standard sizes: 2x4, 3x6, 4x8, and any custom dimension</li>
+            <li>Full-color printing with UV-resistant, fade-proof inks</li>
+            <li>Grommets, pole pockets, or wind slits as needed</li>
+            <li>Hemmed and heat-welded edges for clean, durable finishing</li>
+            <li>Indoor and outdoor use - rated for 3-4 years of New England exposure</li>
+          </ul>
+        </div>
+        <div class="se-split-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-24-at-8.12.32-AM.png" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Outdoor and Indoor Banners -->
+  <section class="se-section se-section--gray">
+    <div class="se-container">
+      <div class="se-split se-split--reverse">
+        <div class="se-split-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-24-at-8.13.04-AM.webp" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="se-split-text">
+          <h2>Outdoor and Indoor Banner Options</h2>
+          <p>Where your banner goes determines how we build it. Outdoor banner signs need heavier materials, UV-resistant inks, and reinforced mounting hardware to survive sun, rain, and wind. Indoor banners can use lighter substrates with sharper detail since they are protected from the elements.</p>
+          <p>We handle both, and we help you pick the right combination of material, finish, and mounting so the banner matches the environment and the job it needs to do.</p>
+          <ul class="se-detail-list">
+            <li>Outdoor: storefronts, construction fencing, building facades, parking lots, event tents</li>
+            <li>Indoor: retail displays, lobby signage, warehouses, conference rooms, restaurant menus</li>
+            <li>Hemmed edges and reinforced grommets rated for outdoor mounting</li>
+            <li>Single-sided or double-sided printing available</li>
+          </ul>
+          <div class="se-btn-group">
+            <a href="https://signseast.com/contact-us/" class="se-btn se-btn--primary">Get a Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Trade Show and Event Banners -->
+  <section class="se-section">
+    <div class="se-container">
+      <div class="se-split">
+        <div class="se-split-text">
+          <h2>Trade Show and Event Banners</h2>
+          <p>Trade shows give you one shot to stand out in a room full of competitors. We build portable banner displays, retractable stands, and backdrop systems that set up fast and look sharp under event lighting. Every piece is designed to pack down small, travel easy, and hold up through multiple events.</p>
+          <p>From pop-up display banners and tabletop retractable stands to full step-and-repeat backdrops, we cover the complete range of trade show and event signage. Our team handles the design work too - just bring us your logo and goals, and we will build the graphics that get your booth noticed.</p>
+          <ul class="se-detail-list">
+            <li>Retractable banner stands with aluminum base and carry bag</li>
+            <li>Pop-up display banners for booth backwalls</li>
+            <li>Step-and-repeat backdrops for photo opportunities</li>
+            <li>Tabletop displays and counter cards</li>
+            <li>Fast turnaround for last-minute event prep</li>
+          </ul>
+        </div>
+        <div class="se-split-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-24-at-8.13.41-AM.png" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Large Format Banner Printing -->
+  <section class="se-section se-section--gray">
+    <div class="se-container">
+      <div class="se-split se-split--reverse">
+        <div class="se-split-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-24-at-8.14.18-AM.png" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="se-split-text">
+          <h2>Large Format Banner Printing</h2>
+          <p>When your banner needs to be seen from across a parking lot or down a highway, standard printing does not cut it. Our wide-format printers handle banner sizes well beyond what most shops can produce - and we maintain high-resolution output at every scale.</p>
+          <p>We accept files in PDF, AI, EPS, and high-resolution JPEG formats. Not sure if your artwork is print-ready? Send it over and our team will check the resolution, color mode, and bleed before we print. No surprises, no wasted materials.</p>
+          <ul class="se-detail-list">
+            <li>High-resolution digital printing at 720 DPI and above</li>
+            <li>Same-day and rush banner printing available</li>
+            <li>We accept PDF, AI, EPS, and JPEG file formats</li>
+            <li>Competitive pricing on bulk banner orders</li>
+            <li>Free artwork review before printing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Why Choose Signs East -->
+  <section class="se-section">
+    <div class="se-container">
+      <div class="se-section-header--center">
+        <h2>Why Choose Signs East for Your Banner Needs?</h2>
+        <p class="se-section-subtitle se-section-subtitle--center">Since 2012, businesses across Southern NH, the Seacoast, and North Shore MA have counted on us for banner signs that show up on time and hold up for years.</p>
+      </div>
+      <div class="se-why-grid">
+        <div class="se-why-card">
+          <div class="se-why-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Fast Turnaround</h3>
+          <p>While other shops quote weeks, we deliver in days. Same-day proofs and rush production available when you are up against a deadline.</p>
+        </div>
+        <div class="se-why-card">
+          <div class="se-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>Premium Print Quality</h3>
+          <p>High-resolution digital printing on 3M and Avery materials. Full-color, UV-resistant inks that stay vibrant through New England's toughest seasons.</p>
+        </div>
+        <div class="se-why-card">
+          <div class="se-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          </div>
+          <h3>Free Design Help</h3>
+          <p>Not a designer? No problem. Send us your logo, text, and colors and our team will build the layout for you - no extra charge. We send a proof for your approval before anything goes to print.</p>
+        </div>
+        <div class="se-why-card">
+          <div class="se-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Local Sign Company You Can Trust</h3>
+          <p>We are not a franchise or an online print mill. Tor and the Signs East team are based in Kingston, NH, and have been serving this community since 2012 with 79+ five-star Google reviews. From banners to <a href="https://signseast.com/monument-signs/">monument signs</a>, we handle it all in-house.</p>
+        </div>
+        <div class="se-why-card">
+          <div class="se-why-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Full Transparency</h3>
+          <p>You see a proof before we print. You know the price before we start. No hidden fees, no vague timelines - just straight answers and reliable follow-through.</p>
+        </div>
+        <div class="se-why-card">
+          <div class="se-why-icon">
+            <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2" ry="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>Delivery and Shipping</h3>
+          <p>Local customers get hand delivery. Everyone else gets careful packaging and standard shipping. Either way, your banner arrives ready to hang.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: How to Order -->
+  <section class="se-section se-section--gray">
+    <div class="se-container">
+      <div class="se-section-header--center">
+        <h2>How to Order Custom Banners</h2>
+        <p class="se-section-subtitle se-section-subtitle--center">Three simple steps from first call to finished banner. We keep the process fast and straightforward so you can focus on your business.</p>
+      </div>
+      <div class="se-steps">
+        <div class="se-step">
+          <div class="se-step-number">1</div>
+          <div class="se-step-content">
+            <h3>Tell Us What You Need</h3>
+            <p>Call us at <a href="tel:+19782732992">(978) 273-2992</a> or fill out our <a href="https://signseast.com/contact-us/">quote request form</a>. Let us know the size, quantity, and where the banner will be displayed. If you have artwork ready, send it over.</p>
+          </div>
+        </div>
+        <div class="se-step">
+          <div class="se-step-number">2</div>
+          <div class="se-step-content">
+            <h3>Approve Your Proof</h3>
+            <p>We send you a digital proof - usually the same day. Review the layout, colors, and text. Request changes until it looks exactly right. Nothing goes to print without your approval.</p>
+          </div>
+        </div>
+        <div class="se-step">
+          <div class="se-step-number">3</div>
+          <div class="se-step-content">
+            <h3>We Print and Deliver</h3>
+            <p>Once approved, we print, finish, and ship or hand-deliver your banner. Rush production is available when deadlines are tight.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="https://signseast.com/contact-us/" class="se-btn se-btn--primary">Request a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Customer Reviews -->
+  <section class="se-section">
+    <div class="se-container">
+      <div class="se-section-header--center">
+        <h2>What Our Customers Say</h2>
+        <p class="se-section-subtitle se-section-subtitle--center">4.9 stars from 79+ Google reviews. Here is what real customers have to say about working with Signs East.</p>
+      </div>
+      <div class="se-reviews-grid">
+        <div class="se-review-card">
+          <div class="se-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Sign East is awesome! Tor and his team did an excellent job for me on the sign for my DJ booth. Awesome quality printing and materials. Quick and prompt service. I highly recommend using them. Thank you!"</blockquote>
+          <span class="se-review-author">Stephen A.</span><br>
+          <span class="se-review-source">Google Review</span>
+        </div>
+        <div class="se-review-card">
+          <div class="se-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Tor Larson of Signs East LLC was our go-to for a Custom branded PVC sign for our law office building in Concord. He handled everything: estimate - design - permit - installation. Highly recommend."</blockquote>
+          <span class="se-review-author">Heidi B.</span><br>
+          <span class="se-review-source">Google Review</span>
+        </div>
+        <div class="se-review-card">
+          <div class="se-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Signs East is always a pleasure to work with. Whether it's signs, lettering, window tint, or other custom work, everything is handled quickly and with great attention to detail. Communication is excellent, turnaround is fast, and they consistently go the extra mile to make sure the job comes out right. Highly recommend."</blockquote>
+          <span class="se-review-author">Skyler O.</span><br>
+          <span class="se-review-source">Google Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: FAQ -->
+  <section class="se-section">
+    <div class="se-container">
+      <div class="se-faq-container">
+        <div class="se-faq-header">
+          <h2>Frequently Asked Questions About Banner Signs</h2>
+          <p>Common questions about materials, pricing, and turnaround.</p>
+        </div>
+        <div class="se-faq-list">
+          <div class="se-faq-item">
+            <button class="se-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What is the best material for outdoor banner signs?
+              <span class="se-faq-icon"></span>
+            </button>
+            <div class="se-faq-answer">
+              <div class="se-faq-answer-inner">
+                <p>For outdoor use, we recommend 13oz or 18oz scrim vinyl. It resists fading, tearing, and water damage while delivering bold, readable graphics. For high-wind locations like construction fencing, mesh banners are the better choice since they let wind pass through without ripping.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-faq-item">
+            <button class="se-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How much do custom banner signs cost?
+              <span class="se-faq-icon"></span>
+            </button>
+            <div class="se-faq-answer">
+              <div class="se-faq-answer-inner">
+                <p>Pricing depends on the size, material, and finishing options. A standard 3x6 vinyl banner with grommets starts at a very competitive price point. Contact us at <a href="tel:+19782732992">(978) 273-2992</a> or <a href="https://signseast.com/contact-us/">request a quote online</a> for exact pricing on your project.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-faq-item">
+            <button class="se-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How long does banner printing take?
+              <span class="se-faq-icon"></span>
+            </button>
+            <div class="se-faq-answer">
+              <div class="se-faq-answer-inner">
+                <p>Standard turnaround is two to three business days after proof approval. Rush and same-day printing are available for time-sensitive projects - just let us know your deadline when you reach out.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-faq-item">
+            <button class="se-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What sizes are available for vinyl banners?
+              <span class="se-faq-icon"></span>
+            </button>
+            <div class="se-faq-answer">
+              <div class="se-faq-answer-inner">
+                <p>We offer standard sizes including 2x4, 3x6, 4x8, and 4x10 feet, as well as fully custom dimensions. If you have a specific space to fill, give us the measurements and we will build a banner to fit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-faq-item">
+            <button class="se-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Can you design my banner for me?
+              <span class="se-faq-icon"></span>
+            </button>
+            <div class="se-faq-answer">
+              <div class="se-faq-answer-inner">
+                <p>Yes. Send us your logo, the text you want, and any colors or images, and our team will design the layout at no additional cost. We will send a proof for your review, and you can request as many revisions as you need before we print.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-faq-item">
+            <button class="se-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Do you offer same-day or rush banner printing?
+              <span class="se-faq-icon"></span>
+            </button>
+            <div class="se-faq-answer">
+              <div class="se-faq-answer-inner">
+                <p>Yes, we offer rush production and same-day printing for time-sensitive jobs. Call us directly at <a href="tel:+19782732992">(978) 273-2992</a> so we can confirm availability and get your project moving right away.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-faq-item">
+            <button class="se-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What file formats do you accept for custom banners?
+              <span class="se-faq-icon"></span>
+            </button>
+            <div class="se-faq-answer">
+              <div class="se-faq-answer-inner">
+                <p>We accept PDF, AI, EPS, and high-resolution JPEG files. If your file is not print-ready, our team will review it and let you know if any adjustments are needed before we go to press.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-faq-item">
+            <button class="se-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Are your banner signs weather-resistant?
+              <span class="se-faq-icon"></span>
+            </button>
+            <div class="se-faq-answer">
+              <div class="se-faq-answer-inner">
+                <p>Absolutely. Our outdoor banners are printed with UV-resistant inks on waterproof vinyl and finished with reinforced hems and grommets. They are built to handle New England sun, rain, and wind for three to four years before showing signs of wear.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 11: Final CTA -->
+  <section class="se-final-cta">
+    <div class="se-container">
+      <h2>Ready to Get Started on Your Banner Project?</h2>
+      <p>Tell us what you need and we will have a quote and proof ready fast. Call, email, or fill out our form - we respond the same day.</p>
+      <div class="se-btn-group">
+        <a href="https://signseast.com/contact-us/" class="se-btn se-btn--primary">Request a Free Quote</a>
+        <a href="tel:+19782732992" class="se-btn se-btn--outline">Call (978) 273-2992</a>
+      </div>
+    </div>
+  </section>
+
+</div>
