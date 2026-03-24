@@ -88,6 +88,7 @@
 .clarke-fade-d3 { animation-delay: 0.4s; opacity: 0; }
 .clarke-fade-d4 { animation-delay: 0.55s; opacity: 0; }
 .clarke-fade-d5 { animation-delay: 0.7s; opacity: 0; }
+.clarke-fade-d6 { animation-delay: 0.85s; opacity: 0; }
 
 
 /* ========================================
@@ -191,6 +192,22 @@
   opacity: 0.35;
   z-index: -1;
   border-radius: 2px;
+}
+
+/* Hero personal voice line */
+.clarke-home-voice {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-style: italic;
+  color: rgba(201,169,110,0.75);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  border-left: 2px solid rgba(201,169,110,0.25);
+  max-width: 480px;
+}
+@media (min-width: 768px) {
+  .clarke-home-voice { font-size: 18px; }
 }
 
 /* Hero subhead */
@@ -1035,11 +1052,15 @@
           <span class="clarke-highlight">Built to Last.</span>
         </h1>
 
-        <p class="clarke-home-subhead clarke-fade clarke-fade-d3">
+        <p class="clarke-home-voice clarke-fade clarke-fade-d3">
+          "Your home should look just as good 20 years from now as the day we leave."
+        </p>
+
+        <p class="clarke-home-subhead clarke-fade clarke-fade-d4">
           Clarke Building Company — full-service remodeling and construction for homeowners across the North Shore of Massachusetts. <strong>One contractor. One point of contact. From first conversation to final walkthrough.</strong>
         </p>
 
-        <div class="clarke-home-ctas clarke-fade clarke-fade-d4">
+        <div class="clarke-home-ctas clarke-fade clarke-fade-d5">
           <a href="https://clarkebuildingcompany.com/contact/" class="clarke-btn-primary">
             Get a Free Estimate
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -1050,7 +1071,7 @@
           </a>
         </div>
 
-        <div class="clarke-home-trust clarke-fade clarke-fade-d5">
+        <div class="clarke-home-trust clarke-fade clarke-fade-d6">
           <div class="clarke-home-trust-item">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             Licensed &amp; Insured
