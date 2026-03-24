@@ -12,7 +12,7 @@
 | **Business Name** | Signs East LLC |
 | **Owner** | Tor Larson |
 | **Address** | 34 NH-125, Kingston, NH 03848 |
-| **Phone** | (978) 273-2992 |
+| **Phone** | (978) 818-1740 |
 | **Email** | sales@signseast.com |
 | **Website** | https://signseast.com |
 | **Founded** | 2012 |
@@ -333,9 +333,10 @@ https://www.google.com/maps/place/Signs+East+LLC./data=!4m2!3m1!1s0x0:0x8f8ea677
 **Owner:** Tor Larson
 - Personal: torlarson1@gmail.com
 - Business: sales@signseast.com
-- Phone: (978) 273-2992
+- Phone: (978) 818-1740
 
 **Designer:** Kiernan (can provide brand assets)
 
 **AM Creative Contact:** Jon (via project)
 - Referral from Frank LeBlanc
+
