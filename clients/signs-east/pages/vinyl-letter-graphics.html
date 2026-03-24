@@ -1,0 +1,977 @@
+<!-- Signs East Vinyl Letter Graphics Page Content
+     Sits BELOW existing hero section, ABOVE footer
+     Target keywords: vinyl lettering, vinyl letters, custom vinyl lettering, vinyl graphics, truck lettering
+     No schema, no meta tags, no microdata - OTTO handles all SEO
+     All alt="" empty - OTTO handles alt text optimization
+-->
+
+<style>
+/* === Signs East Vinyl Lettering Page Styles === */
+.se-vl-page {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --se-border: #e0e0e0;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --button-radius: 30px;
+  --container-max-width: 1140px;
+  --card-radius: 10px;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.se-vl-page {
+  font-family: var(--font-body);
+  color: var(--se-text);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.se-vl-page * { box-sizing: border-box; }
+.se-vl-page img { max-width: 100%; height: auto; display: block; }
+
+.se-vl-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === Sections === */
+.se-vl-section { padding: 50px 20px; }
+.se-vl-section--gray { background-color: var(--se-bg-light); }
+.se-vl-section--dark { background-color: var(--se-dark); color: var(--se-white); }
+
+/* === Typography === */
+.se-vl-page h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--se-dark);
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+
+.se-vl-section--dark h2 { color: var(--se-white); }
+
+.se-vl-page h3 {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  color: var(--se-dark);
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.se-vl-lead {
+  font-size: 17px;
+  color: var(--se-text-light);
+  margin: 0 0 30px;
+  max-width: 720px;
+}
+
+.se-vl-lead--center { text-align: center; margin-left: auto; margin-right: auto; }
+.se-vl-center { text-align: center; }
+
+.se-vl-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--se-primary);
+  margin-bottom: 10px;
+}
+
+/* === Buttons === */
+.se-vl-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  min-width: 180px;
+  line-height: 1.4;
+}
+
+.se-vl-btn--primary { background-color: var(--se-primary); color: var(--se-white); }
+.se-vl-btn--primary:hover { background-color: var(--se-primary-hover); transform: translateY(-2px); }
+.se-vl-btn--outline { background-color: transparent; color: var(--se-primary); border: 2px solid var(--se-primary); }
+.se-vl-btn--outline:hover { background-color: var(--se-primary); color: var(--se-white); transform: translateY(-2px); }
+.se-vl-btn--white { background-color: var(--se-white); color: var(--se-primary); }
+.se-vl-btn--white:hover { background-color: #f0f0f0; transform: translateY(-2px); }
+
+.se-vl-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.se-vl-btn-row--center { justify-content: center; }
+
+/* === Intro Grid === */
+.se-vl-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.se-vl-intro p { margin: 0 0 16px; }
+
+.se-vl-intro-img {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+/* === Surface Grid (4x4 bullet list) === */
+.se-vl-surface-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.se-vl-surface-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 30px;
+}
+
+.se-vl-surface-list li {
+  padding: 8px 0 8px 24px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--se-dark);
+  line-height: 1.5;
+}
+
+.se-vl-surface-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 9px;
+  height: 9px;
+  background: var(--se-primary);
+  border-radius: 50%;
+}
+
+/* === Content Blocks with Left Accent === */
+.se-vl-accent-block {
+  border-left: 4px solid var(--se-primary);
+  padding-left: 24px;
+  margin-bottom: 40px;
+}
+
+.se-vl-accent-block:last-child { margin-bottom: 0; }
+
+.se-vl-accent-block p {
+  margin: 0 0 14px;
+  font-size: 16px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-vl-accent-block p:last-child { margin-bottom: 0; }
+
+/* === Split Feature === */
+.se-vl-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.se-vl-split--reverse .se-vl-split-img { order: -1; }
+
+.se-vl-split-img {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.se-vl-split-text p { margin: 0 0 16px; }
+
+.se-vl-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.se-vl-detail-list li {
+  padding: 7px 0 7px 26px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.se-vl-detail-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 9px;
+  height: 9px;
+  background: var(--se-primary);
+  border-radius: 50%;
+}
+
+/* === B2B Callout (Vehicle/Truck Section) === */
+.se-vl-callout {
+  background: var(--se-dark);
+  color: var(--se-white);
+  border-radius: var(--card-radius);
+  padding: 40px 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.se-vl-callout h2 { color: var(--se-white); }
+
+.se-vl-callout p {
+  color: #d0d0d0;
+  margin: 0 0 16px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.se-vl-callout a {
+  color: #ff6b6b;
+  text-decoration: none;
+  border-bottom: 1px solid #ff6b6b;
+}
+
+.se-vl-callout a:hover {
+  color: var(--se-white);
+  border-color: var(--se-white);
+}
+
+.se-vl-callout .se-vl-detail-list li::before {
+  background: #ff6b6b;
+}
+
+.se-vl-callout-img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* === Vehicle Gallery (3-card vertical stack) === */
+.se-vl-callout-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.se-vl-callout-gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.se-vl-callout-gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* === Boat Photo Grid (2x2 side by side) === */
+.se-vl-boat-photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 900px;
+  margin: 30px auto 0;
+}
+
+.se-vl-boat-photos-item {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.se-vl-boat-photos-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* === Numbered Trust List === */
+.se-vl-trust-list {
+  max-width: 800px;
+  margin: 0 auto;
+  counter-reset: trust-counter;
+}
+
+.se-vl-trust-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--se-border);
+}
+
+.se-vl-trust-item:last-child { border-bottom: none; }
+
+.se-vl-trust-num {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  background: var(--se-primary);
+  color: var(--se-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.se-vl-trust-item h3 { font-size: 18px; margin-bottom: 4px; }
+.se-vl-trust-item p { margin: 0; font-size: 15px; color: var(--se-text-light); line-height: 1.6; }
+
+/* === Ordering Steps - Horizontal Cards === */
+.se-vl-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.se-vl-step {
+  background: var(--se-white);
+  border-radius: var(--card-radius);
+  padding: 28px 24px;
+  box-shadow: var(--card-shadow);
+  border-top: 4px solid var(--se-primary);
+  text-align: center;
+}
+
+.se-vl-step-num {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #fbe9e9;
+  color: var(--se-primary);
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 12px;
+}
+
+.se-vl-step h3 { font-size: 18px; }
+.se-vl-step p { margin: 0; font-size: 15px; color: var(--se-text-light); line-height: 1.6; }
+
+/* === Reviews === */
+.se-vl-reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.se-vl-review {
+  background: var(--se-white);
+  padding: 28px 24px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--se-primary);
+}
+
+.se-vl-review-stars {
+  color: #f5a623;
+  font-size: 18px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.se-vl-review blockquote {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--se-text);
+}
+
+.se-vl-review-author { font-weight: 700; font-size: 15px; color: var(--se-dark); }
+.se-vl-review-source { font-size: 13px; color: var(--se-text-light); }
+
+/* === FAQ === */
+.se-vl-faq-wrap { max-width: 800px; margin: 0 auto; }
+
+.se-vl-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.se-vl-faq-item {
+  background-color: var(--se-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.se-vl-faq-item:hover { background-color: #ededed; }
+
+.se-vl-faq-q {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--se-dark);
+  transition: color 0.2s ease;
+  min-height: 44px;
+  line-height: 1.45;
+}
+
+.se-vl-faq-q:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--se-primary);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.se-vl-faq-toggle {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.se-vl-faq-toggle::before,
+.se-vl-faq-toggle::after {
+  content: "";
+  position: absolute;
+  background-color: var(--se-primary);
+  transition: transform 0.3s ease;
+}
+
+.se-vl-faq-toggle::before {
+  width: 14px; height: 2px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-vl-faq-toggle::after {
+  width: 2px; height: 14px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-vl-faq-item.active .se-vl-faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-vl-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-vl-faq-item.active .se-vl-faq-a { max-height: 350px; }
+
+.se-vl-faq-a-inner {
+  padding: 0 24px 20px;
+  font-size: 16px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-vl-faq-a-inner p { margin: 0; }
+
+.se-vl-faq-a-inner a {
+  color: var(--se-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--se-primary);
+}
+
+.se-vl-faq-a-inner a:hover {
+  color: var(--se-primary-hover);
+  border-color: var(--se-primary-hover);
+}
+
+/* === Final CTA === */
+.se-vl-final-cta {
+  text-align: center;
+  padding: 60px 20px;
+  border-top: 4px solid var(--se-primary);
+}
+
+.se-vl-final-cta h2 { margin-bottom: 14px; }
+
+.se-vl-final-cta p {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  font-size: 17px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-vl-final-cta .se-vl-btn-row { margin-top: 0; }
+
+/* === Responsive - Tablet (768px+) === */
+@media (min-width: 768px) {
+  .se-vl-section { padding: 65px 30px; }
+  .se-vl-page h2 { font-size: 34px; }
+  .se-vl-page h3 { font-size: 23px; }
+
+  .se-vl-intro { grid-template-columns: 1fr 1fr; gap: 45px; }
+
+  .se-vl-split { grid-template-columns: 1fr 1fr; gap: 50px; }
+
+  .se-vl-callout { grid-template-columns: 1fr 1fr; gap: 40px; padding: 50px 40px; }
+
+  .se-vl-surface-list { grid-template-columns: repeat(4, 1fr); gap: 4px 24px; }
+
+  .se-vl-boat-photos { grid-template-columns: 1fr 1fr; }
+
+  .se-vl-steps { grid-template-columns: repeat(3, 1fr); }
+
+  .se-vl-reviews { grid-template-columns: repeat(3, 1fr); }
+
+  .se-vl-final-cta { padding: 80px 30px; }
+}
+
+/* === Responsive - Desktop (1024px+) === */
+@media (min-width: 1024px) {
+  .se-vl-section { padding: 80px 40px; }
+  .se-vl-page h2 { font-size: 38px; }
+
+  .se-vl-final-cta { padding: 90px 40px; }
+}
+
+@media (max-width: 767px) {
+  .se-vl-faq-q { font-size: 16px; padding: 18px 20px; }
+  .se-vl-faq-a-inner { padding: 0 20px 18px; font-size: 15px; }
+  .se-vl-callout { padding: 30px 22px; }
+}
+</style>
+
+<div class="se-vl-page">
+
+  <!-- ================================================
+       Section 1: Intro
+       ================================================ -->
+  <section class="se-vl-section">
+    <div class="se-vl-container">
+      <div class="se-vl-intro">
+        <div>
+          <span class="se-vl-eyebrow">Vinyl Lettering & Graphics</span>
+          <h2>Custom Vinyl Lettering for Every Surface</h2>
+          <p>Vinyl lettering is the fastest, most versatile way to put your business name, logo, or message on nearly any surface - windows, walls, vehicles, trucks, boats, and storefronts. <a href="https://signseast.com/">Signs East</a> produces precision-cut vinyl letters and custom vinyl graphics for businesses across Southern NH, the Seacoast, and North Shore MA.</p>
+          <p>We use premium cast and calendered vinyl with UV-resistant adhesive that holds up outdoors for five to seven years. Every order is cut in-house on our plotter and available with professional installation or ready-to-apply transfer tape for DIY application.</p>
+          <div class="se-vl-btn-row">
+            <a href="https://signseast.com/contact-us/" class="se-vl-btn se-vl-btn--primary">Request a Quote</a>
+            <a href="https://signseast.com/sign-services/" class="se-vl-btn se-vl-btn--outline">View All Services</a>
+          </div>
+        </div>
+        <div class="se-vl-intro-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/IMG_5997-scaled.jpg" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 2: Where Vinyl Lettering Goes (Application Tags)
+       ================================================ -->
+  <section class="se-vl-section se-vl-section--gray" style="padding-top: 40px; padding-bottom: 40px;">
+    <div class="se-vl-container">
+      <div class="se-vl-center">
+        <span class="se-vl-eyebrow">Where It Goes</span>
+        <h2>Our Vinyl Lettering and Graphics Products</h2>
+        <p class="se-vl-lead se-vl-lead--center">Precision-cut vinyl letters and die-cut graphics for every application your business needs.</p>
+      </div>
+      <div class="se-vl-surface-grid">
+        <ul class="se-vl-surface-list">
+          <li>Storefronts</li>
+          <li>Windows</li>
+          <li>Walls & Interiors</li>
+          <li>Trucks & Fleets</li>
+          <li>Boats & Marine</li>
+          <li>Doors & Glass</li>
+          <li>Trailers</li>
+          <li>Buildings & Facades</li>
+          <li>Office Lobbies</li>
+          <li>Retail Displays</li>
+          <li>Outdoor Signs</li>
+          <li>Car Doors & Tailgates</li>
+          <li>Restaurant Menus</li>
+          <li>Mailboxes & Posts</li>
+          <li>Equipment & Machinery</li>
+          <li>Event & Trade Shows</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 3: Storefront & Window Vinyl Lettering
+       ================================================ -->
+  <section class="se-vl-section">
+    <div class="se-vl-container">
+      <div class="se-vl-split">
+        <div class="se-vl-split-text">
+          <span class="se-vl-eyebrow">Storefront Identity</span>
+          <h2>Storefront and Window Vinyl Lettering</h2>
+          <p>Your storefront window is the first thing customers see. Vinyl letters for windows turn that glass into branded real estate - displaying your business name, hours, phone number, and promotional messaging. We produce storefront vinyl lettering in any font, color, and size to match your brand identity.</p>
+          <p>Options include standard cut vinyl, frosted/etched glass effect vinyl, and perforated window vinyl that lets light through while displaying bold graphics from outside. Removable adhesive options are available for tenants who need clean removal when a lease ends.</p>
+          <ul class="se-vl-detail-list">
+            <li>Business name, hours, phone, and logo lettering</li>
+            <li>Frosted and etched glass effect vinyl</li>
+            <li>Perforated window vinyl for privacy with visibility</li>
+            <li>Removable options for lease-based locations</li>
+          </ul>
+        </div>
+        <div class="se-vl-split-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_spirit-wellness.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 4: Wall & Interior Vinyl Letters
+       ================================================ -->
+  <section class="se-vl-section se-vl-section--gray">
+    <div class="se-vl-container">
+      <div class="se-vl-split se-vl-split--reverse">
+        <div class="se-vl-split-text">
+          <span class="se-vl-eyebrow">Interior Branding</span>
+          <h2>Wall and Interior Vinyl Letters</h2>
+          <p>Vinyl letters for walls transform blank office space into branded environments. From reception area logos and mission statements to retail wall graphics and wayfinding text, wall vinyl adds professional identity to any interior without the cost of painted murals or dimensional signage.</p>
+          <p>We offer matte and gloss finishes with custom color matching to your brand palette. Removable vinyl options are available for renters and businesses that refresh their messaging regularly. For larger installations, pair vinyl lettering with full <a href="https://signseast.com/wall-graphics-murals/">wall graphics and murals</a>.</p>
+          <ul class="se-vl-detail-list">
+            <li>Office and reception logo lettering</li>
+            <li>Mission statements and branded messaging</li>
+            <li>Retail and restaurant wall graphics</li>
+            <li>Matte, gloss, and metallic finish options</li>
+          </ul>
+        </div>
+        <div class="se-vl-split-img">
+          <img src="https://signseast.com/wp-content/uploads/2025/11/imgi_7_peabody-signs_window-treatment3.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 5: Vehicle & Truck Vinyl Lettering (B2B Callout)
+       ================================================ -->
+  <section class="se-vl-section">
+    <div class="se-vl-container">
+      <div class="se-vl-callout">
+        <div>
+          <span class="se-vl-eyebrow" style="color: #ff6b6b;">High-Value B2B</span>
+          <h2>Vehicle and Truck Vinyl Lettering</h2>
+          <p>Every truck, van, and work vehicle in your fleet is a mobile billboard - and vinyl lettering is the most cost-effective way to put your company name, phone number, and DOT information on it. Truck lettering from Signs East uses premium cast vinyl that resists fading, cracking, and peeling through years of daily driving, car washes, and New England weather.</p>
+          <p>We letter everything from single work trucks to full commercial fleets. Door logos, tailgate lettering, DOT number compliance, and complete vehicle vinyl lettering packages are available. For full coverage, check our <a href="https://signseast.com/vehicle-graphics/">vehicle graphics and wraps</a> services.</p>
+          <ul class="se-vl-detail-list">
+            <li>Truck door logos and company identification</li>
+            <li>DOT numbers and regulatory compliance lettering</li>
+            <li>Fleet lettering with volume pricing</li>
+            <li>Cast vinyl rated for 5-7 years outdoor durability</li>
+            <li>Professional installation or ready-to-apply kits</li>
+          </ul>
+          <div class="se-vl-btn-row">
+            <a href="https://signseast.com/contact-us/" class="se-vl-btn se-vl-btn--white">Get a Fleet Quote</a>
+          </div>
+        </div>
+        <div class="se-vl-callout-gallery">
+          <div class="se-vl-callout-gallery-item">
+            <img src="https://signseast.com/wp-content/uploads/2026/03/IMG_20200106_142401-scaled.webp" alt="" width="400" height="300" loading="lazy" decoding="async">
+          </div>
+          <div class="se-vl-callout-gallery-item">
+            <img src="https://signseast.com/wp-content/uploads/2025/11/IMG_6109-min-scaled.webp" alt="" width="400" height="300" loading="lazy" decoding="async">
+          </div>
+          <div class="se-vl-callout-gallery-item">
+            <img src="https://signseast.com/wp-content/uploads/2025/11/IMG_8124-min-scaled.webp" alt="" width="400" height="300" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 6: Custom Die-Cut & Outdoor Vinyl
+       ================================================ -->
+  <section class="se-vl-section se-vl-section--gray">
+    <div class="se-vl-container">
+      <div class="se-vl-center" style="margin-bottom: 35px;">
+        <span class="se-vl-eyebrow">Specialty Applications</span>
+        <h2>Custom Die-Cut Vinyl Letters and Graphics</h2>
+        <p class="se-vl-lead se-vl-lead--center">Beyond standard text lettering - custom shapes, logo reproductions, and large-format outdoor vinyl for buildings and signs.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr; gap: 0; max-width: 800px; margin: 0 auto;">
+        <div class="se-vl-accent-block">
+          <h3>Die-Cut Vinyl Letters and Logos</h3>
+          <p>Our plotter cuts vinyl to any shape - circles, custom outlines, logo silhouettes, and complex contour cuts. Die-cut vinyl letters are available in hundreds of colors, multiple finishes, and any font. Send us your artwork in AI, EPS, PDF, or high-resolution JPEG and we will cut it to spec.</p>
+        </div>
+        <div class="se-vl-accent-block">
+          <h3>Outdoor and Large Format Vinyl Lettering</h3>
+          <p>Building facades, exterior walls, and outdoor sign faces need vinyl that handles direct sun, rain, and temperature swings. We use exterior-grade cast vinyl with UV-resistant pigments and permanent adhesive rated for five to seven years of outdoor exposure. Sizes range from small door lettering to building-scale text several feet tall.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 6b: Boat & Marine Vinyl Lettering Photos
+       ================================================ -->
+  <section class="se-vl-section">
+    <div class="se-vl-container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="se-vl-center" style="margin-bottom: 24px;">
+          <span class="se-vl-eyebrow">Marine Grade</span>
+          <h2>Boat and Marine Vinyl Lettering</h2>
+          <p class="se-vl-lead se-vl-lead--center">Boat name lettering, registration numbers, hull graphics, and transom lettering - all produced with marine-grade vinyl built to handle saltwater, UV exposure, and constant moisture.</p>
+        </div>
+        <div class="se-vl-boat-photos">
+          <div class="se-vl-boat-photos-item">
+            <img src="https://signseast.com/wp-content/uploads/2025/11/IMG_7138-min.webp" alt="" width="600" height="400" loading="lazy" decoding="async">
+          </div>
+          <div class="se-vl-boat-photos-item">
+            <img src="https://signseast.com/wp-content/uploads/2026/03/Boat-Wrap-scaled.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 7: Vinyl Lettering for Business
+       ================================================ -->
+  <section class="se-vl-section">
+    <div class="se-vl-container">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <span class="se-vl-eyebrow">Your Local Vinyl Lettering Expert</span>
+        <h2>Vinyl Lettering for Business</h2>
+        <p>Most businesses need vinyl lettering in multiple places - storefront windows, company vehicles, interior walls, and exterior signage. Instead of ordering from multiple vendors, Signs East handles the full scope. We keep your fonts, colors, and branding consistent across every surface and every location.</p>
+        <p>Whether you need a single set of window letters or a complete business identity package covering your storefront, fleet, and office, we produce everything in-house and deliver fast. Pair vinyl lettering with <a href="https://signseast.com/dimensional-and-channel-lettering/">dimensional and channel letters</a>, <a href="https://signseast.com/banner-signs/">banner signs</a>, or <a href="https://signseast.com/window-tinting/">window tinting</a> for a complete exterior presence.</p>
+        <div class="se-vl-btn-row se-vl-btn-row--center">
+          <a href="https://signseast.com/contact-us/" class="se-vl-btn se-vl-btn--primary">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 8: Why Choose Signs East
+       ================================================ -->
+  <section class="se-vl-section se-vl-section--gray">
+    <div class="se-vl-container">
+      <div class="se-vl-center" style="margin-bottom: 30px;">
+        <span class="se-vl-eyebrow">The Signs East Difference</span>
+        <h2>Why Choose Signs East for Vinyl Lettering?</h2>
+      </div>
+      <div class="se-vl-trust-list">
+        <div class="se-vl-trust-item">
+          <div class="se-vl-trust-num">1</div>
+          <div>
+            <h3>Premium Materials</h3>
+            <p>We use cast and calendered vinyl from 3M and Avery - not cheap imported film. Cast vinyl conforms to curves and lasts five to seven years outdoors. Calendered vinyl works for flat surfaces at a lower price point.</p>
+          </div>
+        </div>
+        <div class="se-vl-trust-item">
+          <div class="se-vl-trust-num">2</div>
+          <div>
+            <h3>Precision Cutting</h3>
+            <p>Computer-controlled plotter cutting delivers clean edges and tight detail on every letter, logo, and graphic. No hand-cut inconsistencies.</p>
+          </div>
+        </div>
+        <div class="se-vl-trust-item">
+          <div class="se-vl-trust-num">3</div>
+          <div>
+            <h3>Any Color, Font, or Size</h3>
+            <p>Hundreds of vinyl colors in stock. Any font you can name. Sizes from half-inch text to building-scale letters. Custom color matching to your exact brand specs.</p>
+          </div>
+        </div>
+        <div class="se-vl-trust-item">
+          <div class="se-vl-trust-num">4</div>
+          <div>
+            <h3>Professional Installation or DIY</h3>
+            <p>Our crew installs on-site for storefronts, vehicles, walls, and boats. Or we ship your letters with transfer tape and application instructions for self-install.</p>
+          </div>
+        </div>
+        <div class="se-vl-trust-item">
+          <div class="se-vl-trust-num">5</div>
+          <div>
+            <h3>Fast Turnaround from a Local Shop</h3>
+            <p>Based in Kingston, NH with 79+ five-star Google reviews. Tor and the Signs East team have been producing vinyl lettering for businesses since 2012. Need a <a href="https://signseast.com/sign-repair/">sign repair</a> while we are out? We handle that too.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 9: How to Order
+       ================================================ -->
+  <section class="se-vl-section">
+    <div class="se-vl-container">
+      <div class="se-vl-center" style="margin-bottom: 30px;">
+        <h2>How to Order Custom Vinyl Lettering</h2>
+        <p class="se-vl-lead se-vl-lead--center">Three steps from first call to finished lettering. We keep it fast and straightforward.</p>
+      </div>
+      <div class="se-vl-steps">
+        <div class="se-vl-step">
+          <div class="se-vl-step-num">1</div>
+          <h3>Tell Us the Details</h3>
+          <p>Call us at <a href="tel:+19788181740" style="color: var(--se-primary); text-decoration: none;">(978) 818-1740</a> or <a href="https://signseast.com/contact-us/" style="color: var(--se-primary); text-decoration: none;">submit a quote request</a>. Let us know the surface, size, text or artwork, and any color or font preferences.</p>
+        </div>
+        <div class="se-vl-step">
+          <div class="se-vl-step-num">2</div>
+          <h3>Approve Your Proof</h3>
+          <p>We send a digital proof showing your lettering layout, font, and color choices. Request changes until it is exactly right. Nothing gets cut without your approval.</p>
+        </div>
+        <div class="se-vl-step">
+          <div class="se-vl-step-num">3</div>
+          <h3>We Cut and Deliver</h3>
+          <p>Once approved, we cut your vinyl, weed the excess, and apply transfer tape. We deliver and install, or ship it ready for self-application.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 10: Reviews
+       ================================================ -->
+  <section class="se-vl-section se-vl-section--gray">
+    <div class="se-vl-container">
+      <div class="se-vl-center">
+        <h2>What Our Customers Say</h2>
+        <p class="se-vl-lead se-vl-lead--center">4.9 stars from 79+ Google reviews.</p>
+      </div>
+      <div class="se-vl-reviews">
+        <div class="se-vl-review">
+          <div class="se-vl-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"I've used Signs East for years. Total Professionals! All my Signs came out Amazing and with Incredible speed. Had my banners next day! Tor and his team are a pleasure to work with."</blockquote>
+          <span class="se-vl-review-author">Tom M.</span><br>
+          <span class="se-vl-review-source">Google Review</span>
+        </div>
+        <div class="se-vl-review">
+          <div class="se-vl-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"I have been using Signs East since I started my business in 2019 and have had them do a number of projects for me from lettering a full trailer to lettering up my shop door. Tor is always responsive and his turn around time and quality is second to none. I highly recommend Signs East for all of your sign, vinyl and decal needs!"</blockquote>
+          <span class="se-vl-review-author">Josh J.</span><br>
+          <span class="se-vl-review-source">Google Review</span>
+        </div>
+        <div class="se-vl-review">
+          <div class="se-vl-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Amazing work! Super professional, outgoing and friendly guy always willing to go above and beyond! He takes great pride in his work and it shows. Highly recommend!!!"</blockquote>
+          <span class="se-vl-review-author">Sav M.</span><br>
+          <span class="se-vl-review-source">Google Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 11: FAQ
+       ================================================ -->
+  <section class="se-vl-section">
+    <div class="se-vl-container">
+      <div class="se-vl-faq-wrap">
+        <div class="se-vl-center" style="margin-bottom: 40px;">
+          <h2>Frequently Asked Questions About Vinyl Lettering</h2>
+          <p class="se-vl-lead se-vl-lead--center">Common questions about materials, durability, and ordering.</p>
+        </div>
+        <div class="se-vl-faq-list">
+          <div class="se-vl-faq-item">
+            <button class="se-vl-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How long does vinyl lettering last outdoors?
+              <span class="se-vl-faq-toggle"></span>
+            </button>
+            <div class="se-vl-faq-a">
+              <div class="se-vl-faq-a-inner">
+                <p>Cast vinyl lasts five to seven years outdoors with proper installation. Calendered vinyl typically lasts three to five years. Both resist fading and water damage, but cast vinyl handles curves and extreme weather better over time.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-vl-faq-item">
+            <button class="se-vl-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Can vinyl lettering be removed without damaging surfaces?
+              <span class="se-vl-faq-toggle"></span>
+            </button>
+            <div class="se-vl-faq-a">
+              <div class="se-vl-faq-a-inner">
+                <p>Yes. Removable vinyl peels off cleanly from glass, painted walls, and most smooth surfaces without leaving residue or damage. Permanent vinyl can also be removed with heat and adhesive remover, though it takes more effort. We offer removable options for tenants and temporary applications.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-vl-faq-item">
+            <button class="se-vl-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What is the difference between cut vinyl and printed vinyl?
+              <span class="se-vl-faq-toggle"></span>
+            </button>
+            <div class="se-vl-faq-a">
+              <div class="se-vl-faq-a-inner">
+                <p>Cut vinyl is solid-color vinyl that is cut into shapes by a plotter - the color goes all the way through the material. Printed vinyl is white vinyl with a full-color image printed on top and then laminated. Cut vinyl is more durable for text and single-color logos. Printed vinyl is used for full-color graphics and photos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-vl-faq-item">
+            <button class="se-vl-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Do you offer vinyl lettering for vehicles and trucks?
+              <span class="se-vl-faq-toggle"></span>
+            </button>
+            <div class="se-vl-faq-a">
+              <div class="se-vl-faq-a-inner">
+                <p>Yes. We produce truck lettering, van lettering, car door graphics, DOT numbers, and full fleet lettering packages. All vehicle vinyl is cut from cast vinyl rated for outdoor durability on moving vehicles. Contact us at <a href="tel:+19788181740">(978) 818-1740</a> for fleet pricing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-vl-faq-item">
+            <button class="se-vl-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What file format should I submit for custom vinyl graphics?
+              <span class="se-vl-faq-toggle"></span>
+            </button>
+            <div class="se-vl-faq-a">
+              <div class="se-vl-faq-a-inner">
+                <p>We accept AI, EPS, PDF, and high-resolution JPEG files. Vector formats (AI, EPS, PDF) work best for clean cutting. If you only have a low-resolution file, send it over and our team will let you know if it needs to be redrawn before cutting.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 12: Final CTA
+       ================================================ -->
+  <section class="se-vl-final-cta">
+    <div class="se-vl-container">
+      <h2>Ready to Get Your Vinyl Lettering Started?</h2>
+      <p>Tell us the surface, the text, and the timeline. We will have a proof and quote ready fast. Call, email, or fill out our form.</p>
+      <div class="se-vl-btn-row se-vl-btn-row--center">
+        <a href="https://signseast.com/contact-us/" class="se-vl-btn se-vl-btn--primary">Request a Quote</a>
+        <a href="tel:+19788181740" class="se-vl-btn se-vl-btn--outline">Call (978) 818-1740</a>
+      </div>
+    </div>
+  </section>
+
+</div>
