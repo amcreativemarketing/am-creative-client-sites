@@ -1,0 +1,1026 @@
+<!-- Signs East Pole & Pylon Signs Page Content
+     Sits BELOW existing hero section, ABOVE footer
+     Target keywords: pylon signs, pole signs, custom pylon signs, illuminated pylon signs, LED pylon signs
+     No schema, no meta tags, no microdata - OTTO handles all SEO
+     All alt="" empty - OTTO handles alt text optimization
+-->
+
+<style>
+/* === Signs East Pole & Pylon Page Styles === */
+.se-pp-page {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --se-border: #e0e0e0;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --button-radius: 30px;
+  --container-max-width: 1140px;
+  --card-radius: 10px;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.se-pp-page {
+  font-family: var(--font-body);
+  color: var(--se-text);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.se-pp-page * { box-sizing: border-box; }
+.se-pp-page img { max-width: 100%; height: auto; display: block; }
+
+.se-pp-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === Section Base === */
+.se-pp-section { padding: 50px 20px; }
+.se-pp-section--gray { background-color: var(--se-bg-light); }
+.se-pp-section--dark { background-color: var(--se-dark); color: var(--se-white); }
+
+/* === Typography === */
+.se-pp-page h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--se-dark);
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+
+.se-pp-section--dark h2 { color: var(--se-white); }
+
+.se-pp-page h3 {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  color: var(--se-dark);
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.se-pp-lead {
+  font-size: 17px;
+  color: var(--se-text-light);
+  margin: 0 0 30px;
+  max-width: 720px;
+}
+
+.se-pp-lead--center { text-align: center; margin-left: auto; margin-right: auto; }
+.se-pp-center { text-align: center; }
+
+.se-pp-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--se-primary);
+  margin-bottom: 10px;
+}
+
+/* === Buttons === */
+.se-pp-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  min-width: 180px;
+  line-height: 1.4;
+}
+
+.se-pp-btn--primary { background-color: var(--se-primary); color: var(--se-white); }
+.se-pp-btn--primary:hover { background-color: var(--se-primary-hover); transform: translateY(-2px); }
+.se-pp-btn--outline { background-color: transparent; color: var(--se-primary); border: 2px solid var(--se-primary); }
+.se-pp-btn--outline:hover { background-color: var(--se-primary); color: var(--se-white); transform: translateY(-2px); }
+.se-pp-btn--white { background-color: var(--se-white); color: var(--se-primary); }
+.se-pp-btn--white:hover { background-color: #f0f0f0; transform: translateY(-2px); }
+
+.se-pp-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.se-pp-btn-row--center { justify-content: center; }
+
+/* === Section 1: Intro === */
+.se-pp-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.se-pp-intro p { margin: 0 0 16px; }
+
+.se-pp-intro-img {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+/* === Trust Bar === */
+.se-pp-trust-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background-color: var(--se-border);
+  border: 1px solid var(--se-border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+}
+
+.se-pp-trust-stat {
+  background: var(--se-white);
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.se-pp-trust-stat-number {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--se-primary);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.se-pp-trust-stat-label {
+  font-size: 14px;
+  color: var(--se-text-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* === Alternating Feature Sections === */
+.se-pp-feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.se-pp-feature--reverse .se-pp-feature-img { order: -1; }
+
+.se-pp-feature-img {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.se-pp-feature-text p { margin: 0 0 16px; }
+
+.se-pp-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.se-pp-detail-list li {
+  padding: 7px 0 7px 26px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.se-pp-detail-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 9px;
+  height: 9px;
+  background: var(--se-primary);
+  border-radius: 50%;
+}
+
+/* === Dark Featured Section (Illuminated) === */
+.se-pp-section--dark .se-pp-detail-list li::before {
+  background: #ff6b6b;
+}
+
+.se-pp-section--dark a {
+  color: #ff6b6b;
+  border-bottom: 1px solid #ff6b6b;
+  text-decoration: none;
+}
+
+.se-pp-section--dark a:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.se-pp-section--dark p {
+  color: #d0d0d0;
+}
+
+/* === Pricing Section === */
+.se-pp-pricing-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.se-pp-pricing-factors {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 24px 0 0;
+}
+
+.se-pp-pricing-factor {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--se-white);
+  border-radius: var(--card-radius);
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid var(--se-primary);
+}
+
+.se-pp-pricing-factor-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: #fbe9e9;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.se-pp-pricing-factor-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--se-primary);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.se-pp-pricing-factor h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.se-pp-pricing-factor p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--se-text-light);
+  line-height: 1.6;
+}
+
+/* === Vertical Timeline Process === */
+.se-pp-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+.se-pp-timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--se-border);
+  border-radius: 2px;
+}
+
+.se-pp-timeline-step {
+  position: relative;
+  padding-bottom: 36px;
+}
+
+.se-pp-timeline-step:last-child { padding-bottom: 0; }
+
+.se-pp-timeline-dot {
+  position: absolute;
+  left: -40px;
+  top: 2px;
+  width: 33px;
+  height: 33px;
+  background: var(--se-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--se-white);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.se-pp-timeline-step h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.se-pp-timeline-step p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--se-text-light);
+  line-height: 1.65;
+}
+
+/* === Why Choose - Pillars === */
+.se-pp-pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.se-pp-pillar {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--se-white);
+  border-radius: var(--card-radius);
+  padding: 24px 22px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease;
+}
+
+.se-pp-pillar:hover { transform: translateY(-3px); }
+
+.se-pp-pillar-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--se-primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.se-pp-pillar-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--se-white);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.se-pp-pillar h3 { font-size: 18px; margin-bottom: 4px; }
+.se-pp-pillar p { margin: 0; font-size: 15px; color: var(--se-text-light); line-height: 1.6; }
+
+/* === Reviews === */
+.se-pp-reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.se-pp-review {
+  background: var(--se-white);
+  padding: 28px 24px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--se-primary);
+}
+
+.se-pp-review-stars {
+  color: #f5a623;
+  font-size: 18px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.se-pp-review blockquote {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--se-text);
+}
+
+.se-pp-review-author { font-weight: 700; font-size: 15px; color: var(--se-dark); }
+.se-pp-review-source { font-size: 13px; color: var(--se-text-light); }
+
+/* === FAQ Accordion === */
+.se-pp-faq-wrap { max-width: 800px; margin: 0 auto; }
+
+.se-pp-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.se-pp-faq-item {
+  background-color: var(--se-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.se-pp-faq-item:hover { background-color: #ededed; }
+
+.se-pp-faq-q {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--se-dark);
+  transition: color 0.2s ease;
+  min-height: 44px;
+  line-height: 1.45;
+}
+
+.se-pp-faq-q:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--se-primary);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.se-pp-faq-toggle {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.se-pp-faq-toggle::before,
+.se-pp-faq-toggle::after {
+  content: "";
+  position: absolute;
+  background-color: var(--se-primary);
+  transition: transform 0.3s ease;
+}
+
+.se-pp-faq-toggle::before {
+  width: 14px; height: 2px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-pp-faq-toggle::after {
+  width: 2px; height: 14px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-pp-faq-item.active .se-pp-faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-pp-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-pp-faq-item.active .se-pp-faq-a { max-height: 350px; }
+
+.se-pp-faq-a-inner {
+  padding: 0 24px 20px;
+  font-size: 16px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-pp-faq-a-inner p { margin: 0; }
+
+.se-pp-faq-a-inner a {
+  color: var(--se-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--se-primary);
+}
+
+.se-pp-faq-a-inner a:hover {
+  color: var(--se-primary-hover);
+  border-color: var(--se-primary-hover);
+}
+
+/* === Final CTA === */
+.se-pp-final-cta {
+  text-align: center;
+  padding: 60px 20px;
+  border-top: 4px solid var(--se-primary);
+}
+
+.se-pp-final-cta h2 { margin-bottom: 14px; }
+
+.se-pp-final-cta p {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  font-size: 17px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-pp-final-cta .se-pp-btn-row { margin-top: 0; }
+
+/* === Responsive - Tablet (768px+) === */
+@media (min-width: 768px) {
+  .se-pp-section { padding: 65px 30px; }
+  .se-pp-page h2 { font-size: 34px; }
+  .se-pp-page h3 { font-size: 23px; }
+
+  .se-pp-intro { grid-template-columns: 1fr 1fr; gap: 45px; }
+
+  .se-pp-trust-bar { grid-template-columns: repeat(4, 1fr); }
+
+  .se-pp-feature { grid-template-columns: 1fr 1fr; gap: 50px; }
+
+  .se-pp-pricing-factors { grid-template-columns: repeat(2, 1fr); }
+
+  .se-pp-pillars { grid-template-columns: repeat(2, 1fr); }
+
+  .se-pp-reviews { grid-template-columns: repeat(3, 1fr); }
+
+  .se-pp-final-cta { padding: 80px 30px; }
+}
+
+/* === Responsive - Desktop (1024px+) === */
+@media (min-width: 1024px) {
+  .se-pp-section { padding: 80px 40px; }
+  .se-pp-page h2 { font-size: 38px; }
+
+  .se-pp-pillars { grid-template-columns: repeat(3, 1fr); }
+
+  .se-pp-trust-stat-number { font-size: 38px; }
+
+  .se-pp-final-cta { padding: 90px 40px; }
+}
+
+/* === FAQ responsive === */
+@media (max-width: 767px) {
+  .se-pp-faq-q { font-size: 16px; padding: 18px 20px; }
+  .se-pp-faq-a-inner { padding: 0 20px 18px; font-size: 15px; }
+}
+</style>
+
+<div class="se-pp-page">
+
+  <!-- ================================================
+       Section 1: Intro
+       ================================================ -->
+  <section class="se-pp-section">
+    <div class="se-pp-container">
+      <div class="se-pp-intro">
+        <div class="se-pp-intro-text">
+          <span class="se-pp-eyebrow">Pylon Signs & Pole Signs</span>
+          <h2>Custom Pylon Signs and Pole Signs for Maximum Visibility</h2>
+          <p>Pylon signs and pole signs are the tallest, most visible signage a business can install. They put your name above the roofline, above the treeline, and in front of every driver on the road. <a href="https://signseast.com/">Signs East</a> designs, fabricates, and installs custom pylon signs for shopping centers, gas stations, hotels, restaurants, and standalone businesses across Southern NH, the Seacoast, and North Shore MA.</p>
+          <p>Whether you need a single-tenant illuminated pylon sign on a highway corridor, a multi-tenant directory sign for a retail plaza, or a freestanding pole sign at a roadside location, we handle the full scope - from engineering and permitting through fabrication and professional installation.</p>
+          <div class="se-pp-btn-row">
+            <a href="https://signseast.com/contact-us/" class="se-pp-btn se-pp-btn--primary">Request a Quote</a>
+            <a href="https://signseast.com/sign-services/" class="se-pp-btn se-pp-btn--outline">View All Services</a>
+          </div>
+        </div>
+        <div class="se-pp-intro-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-24-at-10.17.22-AM.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 2: Trust Bar
+       ================================================ -->
+  <section class="se-pp-section se-pp-section--gray" style="padding-top: 0; padding-bottom: 50px;">
+    <div class="se-pp-container">
+      <div class="se-pp-trust-bar">
+        <div class="se-pp-trust-stat">
+          <div class="se-pp-trust-stat-number">13+</div>
+          <div class="se-pp-trust-stat-label">Years in Business</div>
+        </div>
+        <div class="se-pp-trust-stat">
+          <div class="se-pp-trust-stat-number">4.9</div>
+          <div class="se-pp-trust-stat-label">Google Rating</div>
+        </div>
+        <div class="se-pp-trust-stat">
+          <div class="se-pp-trust-stat-number">79+</div>
+          <div class="se-pp-trust-stat-label">5-Star Reviews</div>
+        </div>
+        <div class="se-pp-trust-stat">
+          <div class="se-pp-trust-stat-number">100%</div>
+          <div class="se-pp-trust-stat-label">In-House Fabrication</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 3: Pylon Sign Products (Feature sections)
+       ================================================ -->
+  <section class="se-pp-section">
+    <div class="se-pp-container">
+      <div class="se-pp-center">
+        <span class="se-pp-eyebrow">What We Build</span>
+        <h2>Our Pylon and Pole Sign Products</h2>
+        <p class="se-pp-lead se-pp-lead--center">From single-tenant highway pylons to multi-tenant shopping center directories, we fabricate every type of pole and pylon sign your business needs.</p>
+      </div>
+      <div class="se-pp-feature" style="margin-bottom: 50px;">
+        <div class="se-pp-feature-text">
+          <h3>Single-Tenant Pylon Signs</h3>
+          <p>The classic freestanding sign for standalone businesses. A single-tenant pylon sign puts your brand front and center with maximum roadside visibility. Built on a steel pole or enclosed pylon structure, these signs range from 10 to 40+ feet tall depending on local codes and your visibility requirements.</p>
+          <ul class="se-pp-detail-list">
+            <li>Custom heights to clear surrounding structures and vegetation</li>
+            <li>Illuminated and non-illuminated options</li>
+            <li>Cabinet, channel letter, or combination face designs</li>
+            <li>Engineered foundations to handle New England wind loads</li>
+          </ul>
+        </div>
+        <div class="se-pp-feature-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_town-fare-1.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="se-pp-feature se-pp-feature--reverse">
+        <div class="se-pp-feature-text">
+          <h3>Multi-Tenant Pylon Signs</h3>
+          <p>Shopping centers, strip malls, office parks, and mixed-use developments need directory-style pylon signs that showcase multiple tenants in a clear, organized layout. We design multi-tenant pylon signs with interchangeable panels so individual tenants can be added, removed, or updated without replacing the entire sign.</p>
+          <ul class="se-pp-detail-list">
+            <li>Interchangeable tenant panels for easy updates</li>
+            <li>Consistent branding hierarchy across all tenant slots</li>
+            <li>Standard panel sizes for cost-effective tenant changes</li>
+            <li>Illuminated cabinet or individually lit panels available</li>
+          </ul>
+        </div>
+        <div class="se-pp-feature-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_ipswich-plaza.jpg" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 4: Freestanding Pole Signs
+       ================================================ -->
+  <section class="se-pp-section se-pp-section--gray">
+    <div class="se-pp-container">
+      <div class="se-pp-feature">
+        <div class="se-pp-feature-text">
+          <span class="se-pp-eyebrow">Roadside Visibility</span>
+          <h2>Freestanding Pole Signs for Business</h2>
+          <p>Pole signs are the traditional choice for gas stations, auto dealerships, fast food restaurants, hotels, and any roadside business that needs height-based visibility. Single-pole and double-pole configurations are available, with custom heights and clearances to meet your location requirements and local sign ordinances.</p>
+          <p>We handle the full process from structural engineering through installation - including foundation work, electrical connections for illuminated signs, and permitting with local authorities.</p>
+          <ul class="se-pp-detail-list">
+            <li>Single-pole and double-pole construction</li>
+            <li>Custom heights and setback compliance</li>
+            <li>LED cabinet, channel letter, or combination faces</li>
+            <li>Gas station price changers and reader boards</li>
+          </ul>
+          <div class="se-pp-btn-row">
+            <a href="https://signseast.com/contact-us/" class="se-pp-btn se-pp-btn--primary">Get a Quote</a>
+          </div>
+        </div>
+        <div class="se-pp-feature-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_white-dove.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 5: Illuminated & LED Pylon Signs (Dark Section)
+       ================================================ -->
+  <section class="se-pp-section se-pp-section--dark">
+    <div class="se-pp-container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="se-pp-eyebrow" style="color: #ff6b6b;">24/7 Visibility</span>
+        <h2>Illuminated and LED Pylon Signs</h2>
+        <p style="font-size: 18px; line-height: 1.7; margin: 0 0 18px;">An illuminated pylon sign works around the clock - drawing attention during the day and standing out against a dark sky at night. LED pylon signs are the most energy-efficient and longest-lasting option, cutting operating costs compared to older fluorescent and neon lighting.</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">We retrofit existing signs with LED modules and fabricate new illuminated pylon signs from scratch. Options include internally illuminated cabinet faces, backlit halo-lit channel letters, and edge-lit LED panels. Every illuminated sign we build connects to your existing electrical service with proper permitting and code-compliant wiring.</p>
+        <ul class="se-pp-detail-list">
+          <li>LED cabinet illumination for bright, even face lighting</li>
+          <li>Backlit and halo-lit channel letter options</li>
+          <li>Energy-efficient LED upgrades for existing pylon signs</li>
+          <li>Night visibility for highway, roadside, and commercial locations</li>
+          <li>Lower maintenance and operating costs vs. fluorescent</li>
+        </ul>
+        <p style="margin-top: 20px; font-size: 16px;">Already have a pylon sign that needs an LED upgrade? Check our <a href="https://signseast.com/illuminated-cabinates/">illuminated sign cabinet</a> services or <a href="https://signseast.com/contact-us/">contact us</a> for a retrofit quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 6: Commercial & Highway Pylon Signs
+       ================================================ -->
+  <section class="se-pp-section">
+    <div class="se-pp-container">
+      <div class="se-pp-feature se-pp-feature--reverse">
+        <div class="se-pp-feature-text">
+          <span class="se-pp-eyebrow">High-Visibility</span>
+          <h2>Commercial and Highway Pylon Signs</h2>
+          <p>Commercial pylon signs along highways, arterial roads, and high-traffic corridors need to be visible at 65+ mph from hundreds of feet away. That means oversized lettering, high-contrast color combinations, and proper elevation above the roadway. Signs East engineers commercial pylon signs to meet DOT visibility standards and local height ordinances while maximizing your brand impact.</p>
+          <p>Industries we serve with highway and commercial pylon signage include gas stations, hotels and hospitality, quick-service restaurants, automotive dealerships, and retail shopping centers. We also produce <a href="https://signseast.com/monument/">monument signs</a> for businesses that need ground-level presence alongside their pylon.</p>
+        </div>
+        <div class="se-pp-feature-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/IMG_20210914_112136-scaled-1.jpg" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 7: Pylon Sign Fabrication & Installation
+       ================================================ -->
+  <section class="se-pp-section se-pp-section--gray">
+    <div class="se-pp-container">
+      <div class="se-pp-center">
+        <span class="se-pp-eyebrow">End-to-End</span>
+        <h2>Pylon Sign Fabrication and Installation</h2>
+        <p class="se-pp-lead se-pp-lead--center">Most pylon sign companies are resellers - they take your order and outsource the work. Signs East handles every step in-house, from initial design through installation and maintenance.</p>
+      </div>
+      <div class="se-pp-timeline">
+        <div class="se-pp-timeline-step">
+          <div class="se-pp-timeline-dot">1</div>
+          <h3>Site Survey and Design</h3>
+          <p>We visit your location to assess visibility angles, height requirements, setback distances, and electrical access. Then our team designs your sign to fit the site and meet local codes.</p>
+        </div>
+        <div class="se-pp-timeline-step">
+          <div class="se-pp-timeline-dot">2</div>
+          <h3>Engineering and Permitting</h3>
+          <p>Pylon signs require structural engineering for the foundation and wind load calculations. We handle the engineering drawings and submit all permit applications to your municipality.</p>
+        </div>
+        <div class="se-pp-timeline-step">
+          <div class="se-pp-timeline-dot">3</div>
+          <h3>Fabrication</h3>
+          <p>Your sign is built in our Kingston, NH shop using steel, aluminum, and commercial-grade materials. Cabinet faces, channel letters, and illumination components are assembled and tested before leaving our facility.</p>
+        </div>
+        <div class="se-pp-timeline-step">
+          <div class="se-pp-timeline-dot">4</div>
+          <h3>Installation and Electrical</h3>
+          <p>Our crew handles foundation work, pole setting, sign mounting, and electrical connections. We coordinate with local inspectors and utilities as needed to get your sign permitted, installed, and lit.</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="https://signseast.com/contact-us/" class="se-pp-btn se-pp-btn--primary">Start Your Pylon Sign Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 8: Pylon Sign Pricing / Cost
+       ================================================ -->
+  <section class="se-pp-section">
+    <div class="se-pp-container">
+      <div class="se-pp-pricing-wrap">
+        <div class="se-pp-center">
+          <span class="se-pp-eyebrow">Pricing</span>
+          <h2>How Much Do Pylon Signs Cost?</h2>
+          <p class="se-pp-lead se-pp-lead--center">Pylon sign pricing varies widely depending on size, type, and features. A basic non-illuminated pole sign might start in the low thousands, while a large illuminated multi-tenant pylon sign can range well above $15,000. Here are the main factors that drive the cost.</p>
+        </div>
+        <div class="se-pp-pricing-factors">
+          <div class="se-pp-pricing-factor">
+            <div class="se-pp-pricing-factor-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22V2M17 7l-5-5-5 5"/></svg>
+            </div>
+            <div>
+              <h3>Size and Height</h3>
+              <p>Taller signs require deeper foundations, heavier steel, and more engineering. A 15-foot pole sign costs significantly less than a 40-foot highway pylon.</p>
+            </div>
+          </div>
+          <div class="se-pp-pricing-factor">
+            <div class="se-pp-pricing-factor-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </div>
+            <div>
+              <h3>Illumination Type</h3>
+              <p>Non-illuminated signs are the most affordable. LED-illuminated cabinet faces or channel letters add cost but deliver 24/7 visibility and stronger brand presence.</p>
+            </div>
+          </div>
+          <div class="se-pp-pricing-factor">
+            <div class="se-pp-pricing-factor-icon">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+            </div>
+            <div>
+              <h3>Single vs. Multi-Tenant</h3>
+              <p>A multi-tenant directory sign with interchangeable panels is more complex to fabricate than a single-tenant pylon, adding to the overall project cost.</p>
+            </div>
+          </div>
+          <div class="se-pp-pricing-factor">
+            <div class="se-pp-pricing-factor-icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <h3>Permitting and Installation</h3>
+              <p>Local sign codes, setback requirements, foundation excavation, and electrical work all factor into the installed cost. We handle the full permitting process for you.</p>
+            </div>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 28px; font-size: 16px; color: var(--se-text-light);">For an accurate quote on your pylon sign project, <a href="https://signseast.com/contact-us/" style="color: var(--se-primary); border-bottom: 1px solid var(--se-primary); text-decoration: none;">contact our team</a> or call <a href="tel:+19788181740" style="color: var(--se-primary); text-decoration: none;">(978) 818-1740</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 9: Why Choose Signs East
+       ================================================ -->
+  <section class="se-pp-section se-pp-section--gray">
+    <div class="se-pp-container">
+      <div class="se-pp-center">
+        <span class="se-pp-eyebrow">The Signs East Difference</span>
+        <h2>Why Choose Signs East for Your Pylon Sign?</h2>
+        <p class="se-pp-lead se-pp-lead--center">Since 2012, businesses across Southern NH, the Seacoast, and North Shore MA have trusted us for commercial signage that shows up on time and lasts for years.</p>
+      </div>
+      <div class="se-pp-pillars">
+        <div class="se-pp-pillar">
+          <div class="se-pp-pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <h3>In-House Fabrication</h3>
+            <p>We build your sign in our own shop - not outsourced to a third party. That means tighter quality control and faster turnaround.</p>
+          </div>
+        </div>
+        <div class="se-pp-pillar">
+          <div class="se-pp-pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div>
+            <h3>Permitting Expertise</h3>
+            <p>Pylon signs require permits, variances, and sometimes zoning board hearings. We handle the paperwork and code compliance so you do not have to.</p>
+          </div>
+        </div>
+        <div class="se-pp-pillar">
+          <div class="se-pp-pillar-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h3>Fast Turnaround</h3>
+            <p>While other sign companies quote months, we deliver in weeks. When you are up against an opening date or a lease deadline, we make it happen.</p>
+          </div>
+        </div>
+        <div class="se-pp-pillar">
+          <div class="se-pp-pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <h3>Weather-Built Construction</h3>
+            <p>New England wind, ice, and salt air punish outdoor signage. Our pylon signs use powder-coated steel, marine-grade hardware, and UV-resistant materials built for this climate.</p>
+          </div>
+        </div>
+        <div class="se-pp-pillar">
+          <div class="se-pp-pillar-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3>End-to-End Service</h3>
+            <p>Design, engineering, permitting, fabrication, installation, and maintenance. One team, one point of contact, from start to finish. We also produce <a href="https://signseast.com/dimensional-and-channel-lettering/" style="color: var(--se-primary); text-decoration: none; border-bottom: 1px solid var(--se-primary);">channel letters</a> and other exterior signage to complement your pylon.</p>
+          </div>
+        </div>
+        <div class="se-pp-pillar">
+          <div class="se-pp-pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h3>Local and Accountable</h3>
+            <p>Based in Kingston, NH with 79+ five-star Google reviews. Tor and the Signs East team have been serving businesses across NH, MA, and ME since 2012.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 10: Customer Reviews
+       ================================================ -->
+  <section class="se-pp-section">
+    <div class="se-pp-container">
+      <div class="se-pp-center">
+        <h2>What Our Customers Say</h2>
+        <p class="se-pp-lead se-pp-lead--center">4.9 stars from 79+ Google reviews.</p>
+      </div>
+      <div class="se-pp-reviews">
+        <div class="se-pp-review">
+          <div class="se-pp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Signs East always does great work. Tor is very customer oriented and takes pride in what he creates; he treats every job with the same attention to detail - big or small. I highly recommend this company!"</blockquote>
+          <span class="se-pp-review-author">Mae L.</span><br>
+          <span class="se-pp-review-source">Google Review</span>
+        </div>
+        <div class="se-pp-review">
+          <div class="se-pp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"They have done several jobs now for us. From vehicle door magnets, commercial, boat lettering, and condo association signs all the work has been top-notch and a great price done fast and always on time. Highly recommend! Best sign company in New England."</blockquote>
+          <span class="se-pp-review-author">Josh B.</span><br>
+          <span class="se-pp-review-source">Google Review</span>
+        </div>
+        <div class="se-pp-review">
+          <div class="se-pp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Amazing work! Super professional, outgoing and friendly guy always willing to go above and beyond! He takes great pride in his work and it shows. Highly recommend!!!"</blockquote>
+          <span class="se-pp-review-author">Sav M.</span><br>
+          <span class="se-pp-review-source">Google Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 11: FAQ
+       ================================================ -->
+  <section class="se-pp-section se-pp-section--gray">
+    <div class="se-pp-container">
+      <div class="se-pp-faq-wrap">
+        <div class="se-pp-center" style="margin-bottom: 40px;">
+          <h2>Frequently Asked Questions About Pylon Signs</h2>
+          <p class="se-pp-lead se-pp-lead--center">Common questions about pylon sign types, costs, permitting, and installation.</p>
+        </div>
+        <div class="se-pp-faq-list">
+          <div class="se-pp-faq-item">
+            <button class="se-pp-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What is the difference between a pylon sign and a pole sign?
+              <span class="se-pp-faq-toggle"></span>
+            </button>
+            <div class="se-pp-faq-a">
+              <div class="se-pp-faq-a-inner">
+                <p>A pylon sign has an enclosed base structure that covers the support poles, giving a cleaner, more modern appearance. A pole sign exposes the support pole or poles, which is typical for gas station price signs and older roadside signage. Both achieve high visibility, but pylon signs are generally preferred for new commercial installations.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-pp-faq-item">
+            <button class="se-pp-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How much does a custom pylon sign cost?
+              <span class="se-pp-faq-toggle"></span>
+            </button>
+            <div class="se-pp-faq-a">
+              <div class="se-pp-faq-a-inner">
+                <p>Pylon sign costs depend on size, height, illumination, single vs. multi-tenant configuration, and installation complexity. Contact us at <a href="tel:+19788181740">(978) 818-1740</a> or <a href="https://signseast.com/contact-us/">request a quote online</a> for accurate pricing on your project.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-pp-faq-item">
+            <button class="se-pp-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Do pylon signs require permits?
+              <span class="se-pp-faq-toggle"></span>
+            </button>
+            <div class="se-pp-faq-a">
+              <div class="se-pp-faq-a-inner">
+                <p>Yes. Pylon signs require building permits and often need variances or zoning board approval depending on the location and size. We handle the entire permitting process, including engineering drawings and municipal submissions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-pp-faq-item">
+            <button class="se-pp-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How long does it take to fabricate and install a pylon sign?
+              <span class="se-pp-faq-toggle"></span>
+            </button>
+            <div class="se-pp-faq-a">
+              <div class="se-pp-faq-a-inner">
+                <p>Typical turnaround from approved design to installation is four to eight weeks depending on sign complexity, permitting timelines, and material availability. Simpler pole signs and panel replacements can be completed faster. Contact us with your timeline and we will confirm what is achievable.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-pp-faq-item">
+            <button class="se-pp-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Are LED pylon signs worth the investment?
+              <span class="se-pp-faq-toggle"></span>
+            </button>
+            <div class="se-pp-faq-a">
+              <div class="se-pp-faq-a-inner">
+                <p>LED illumination costs more upfront but pays for itself through lower electricity bills, longer lifespan (50,000+ hours vs. 10,000 for fluorescent), and reduced maintenance. For any business that needs nighttime visibility, LED is the standard we recommend.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 12: Final CTA
+       ================================================ -->
+  <section class="se-pp-final-cta">
+    <div class="se-pp-container">
+      <h2>Ready to Start Your Pylon Sign Project?</h2>
+      <p>Tell us about your location and visibility goals. We will provide a quote and walk you through the design, permitting, and installation process. Call, email, or fill out our form.</p>
+      <div class="se-pp-btn-row se-pp-btn-row--center">
+        <a href="https://signseast.com/contact-us/" class="se-pp-btn se-pp-btn--primary">Request a Quote</a>
+        <a href="tel:+19788181740" class="se-pp-btn se-pp-btn--outline">Call (978) 818-1740</a>
+      </div>
+    </div>
+  </section>
+
+</div>
