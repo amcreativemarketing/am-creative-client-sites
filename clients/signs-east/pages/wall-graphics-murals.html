@@ -1,0 +1,901 @@
+<!-- Signs East Wall Graphics & Murals Page Content
+     Sits BELOW existing hero section, ABOVE footer
+     Target keywords: custom wall graphics, wall murals, wall graphics for business, wall decals
+     No schema, no meta tags, no microdata - OTTO handles all SEO
+     All alt="" empty - OTTO handles alt text optimization
+-->
+
+<style>
+/* === Signs East Wall Graphics Page Styles === */
+.se-wg-page {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --se-border: #e0e0e0;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --button-radius: 30px;
+  --container-max-width: 1140px;
+  --card-radius: 10px;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.se-wg-page {
+  font-family: var(--font-body);
+  color: var(--se-text);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.se-wg-page * { box-sizing: border-box; }
+.se-wg-page img { max-width: 100%; height: auto; display: block; }
+
+.se-wg-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === Sections === */
+.se-wg-section { padding: 50px 20px; }
+.se-wg-section--gray { background-color: var(--se-bg-light); }
+.se-wg-section--dark { background-color: var(--se-dark); color: var(--se-white); }
+
+/* === Typography === */
+.se-wg-page h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--se-dark);
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+
+.se-wg-section--dark h2 { color: var(--se-white); }
+
+.se-wg-page h3 {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  color: var(--se-dark);
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.se-wg-lead {
+  font-size: 17px;
+  color: var(--se-text-light);
+  margin: 0 0 30px;
+  max-width: 720px;
+}
+
+.se-wg-lead--center { text-align: center; margin-left: auto; margin-right: auto; }
+.se-wg-center { text-align: center; }
+
+.se-wg-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--se-primary);
+  margin-bottom: 10px;
+}
+
+/* === Buttons === */
+.se-wg-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  min-width: 180px;
+  line-height: 1.4;
+}
+
+.se-wg-btn--primary { background-color: var(--se-primary); color: var(--se-white); }
+.se-wg-btn--primary:hover { background-color: var(--se-primary-hover); transform: translateY(-2px); }
+.se-wg-btn--outline { background-color: transparent; color: var(--se-primary); border: 2px solid var(--se-primary); }
+.se-wg-btn--outline:hover { background-color: var(--se-primary); color: var(--se-white); transform: translateY(-2px); }
+
+.se-wg-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.se-wg-btn-row--center { justify-content: center; }
+
+/* === Intro === */
+.se-wg-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.se-wg-intro p { margin: 0 0 16px; }
+
+.se-wg-intro-img {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+/* === Industry Showcase Grid (Image Cards with Overlay) === */
+.se-wg-showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.se-wg-showcase-card {
+  position: relative;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  min-height: 240px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.se-wg-showcase-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.se-wg-showcase-overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 24px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+  color: var(--se-white);
+}
+
+.se-wg-showcase-overlay h3 {
+  color: var(--se-white);
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.se-wg-showcase-overlay p {
+  margin: 0;
+  font-size: 14px;
+  color: #d0d0d0;
+  line-height: 1.55;
+}
+
+/* === Split Feature === */
+.se-wg-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.se-wg-split--reverse .se-wg-split-img { order: -1; }
+
+.se-wg-split-img {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.se-wg-split-text p { margin: 0 0 16px; }
+
+.se-wg-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.se-wg-detail-list li {
+  padding: 7px 0 7px 26px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.se-wg-detail-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 9px;
+  height: 9px;
+  background: var(--se-primary);
+  border-radius: 50%;
+}
+
+/* === Inline CTA Banner === */
+.se-wg-cta-banner {
+  background: var(--se-dark);
+  border-radius: var(--card-radius);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.se-wg-cta-banner h3 {
+  color: var(--se-white);
+  font-size: 24px;
+  margin: 0;
+}
+
+.se-wg-cta-banner p {
+  color: #cccccc;
+  margin: 0;
+  font-size: 16px;
+  max-width: 550px;
+}
+
+/* === Two-Column Info === */
+.se-wg-two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.se-wg-info-card {
+  background: var(--se-white);
+  border-radius: var(--card-radius);
+  padding: 30px 26px;
+  box-shadow: var(--card-shadow);
+  border-top: 4px solid var(--se-primary);
+}
+
+.se-wg-info-card h3 { margin-bottom: 8px; }
+
+.se-wg-info-card p {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: var(--se-text-light);
+  line-height: 1.65;
+}
+
+.se-wg-info-card p:last-child { margin-bottom: 0; }
+
+/* === Stat Highlights (Why Choose) === */
+.se-wg-highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.se-wg-highlight {
+  background: var(--se-white);
+  border-radius: var(--card-radius);
+  padding: 24px 22px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.se-wg-highlight-marker {
+  flex-shrink: 0;
+  width: 6px;
+  height: 48px;
+  background: var(--se-primary);
+  border-radius: 3px;
+}
+
+.se-wg-highlight h3 { font-size: 17px; margin-bottom: 3px; }
+.se-wg-highlight p { margin: 0; font-size: 15px; color: var(--se-text-light); line-height: 1.55; }
+
+/* === Steps === */
+.se-wg-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  counter-reset: step-count;
+}
+
+.se-wg-step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.se-wg-step-num {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  background: var(--se-primary);
+  color: var(--se-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.se-wg-step h3 { font-size: 18px; margin-bottom: 4px; }
+.se-wg-step p { margin: 0; font-size: 15px; color: var(--se-text-light); line-height: 1.6; }
+
+/* === Reviews === */
+.se-wg-reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.se-wg-review {
+  background: var(--se-white);
+  padding: 28px 24px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--se-primary);
+}
+
+.se-wg-review-stars {
+  color: #f5a623;
+  font-size: 18px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.se-wg-review blockquote {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--se-text);
+}
+
+.se-wg-review-author { font-weight: 700; font-size: 15px; color: var(--se-dark); }
+.se-wg-review-source { font-size: 13px; color: var(--se-text-light); }
+
+/* === FAQ === */
+.se-wg-faq-wrap { max-width: 800px; margin: 0 auto; }
+
+.se-wg-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.se-wg-faq-item {
+  background-color: var(--se-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.se-wg-faq-item:hover { background-color: #ededed; }
+
+.se-wg-faq-q {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--se-dark);
+  transition: color 0.2s ease;
+  min-height: 44px;
+  line-height: 1.45;
+}
+
+.se-wg-faq-q:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--se-primary);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.se-wg-faq-toggle {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.se-wg-faq-toggle::before,
+.se-wg-faq-toggle::after {
+  content: "";
+  position: absolute;
+  background-color: var(--se-primary);
+  transition: transform 0.3s ease;
+}
+
+.se-wg-faq-toggle::before {
+  width: 14px; height: 2px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-wg-faq-toggle::after {
+  width: 2px; height: 14px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-wg-faq-item.active .se-wg-faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-wg-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-wg-faq-item.active .se-wg-faq-a { max-height: 350px; }
+
+.se-wg-faq-a-inner {
+  padding: 0 24px 20px;
+  font-size: 16px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-wg-faq-a-inner p { margin: 0; }
+
+.se-wg-faq-a-inner a {
+  color: var(--se-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--se-primary);
+}
+
+.se-wg-faq-a-inner a:hover {
+  color: var(--se-primary-hover);
+  border-color: var(--se-primary-hover);
+}
+
+/* === Final CTA === */
+.se-wg-final-cta {
+  text-align: center;
+  padding: 60px 20px;
+  border-top: 4px solid var(--se-primary);
+}
+
+.se-wg-final-cta h2 { margin-bottom: 14px; }
+
+.se-wg-final-cta p {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  font-size: 17px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-wg-final-cta .se-wg-btn-row { margin-top: 0; }
+
+/* === Responsive - Tablet (768px+) === */
+@media (min-width: 768px) {
+  .se-wg-section { padding: 65px 30px; }
+  .se-wg-page h2 { font-size: 34px; }
+  .se-wg-page h3 { font-size: 23px; }
+
+  .se-wg-intro { grid-template-columns: 1fr 1fr; gap: 45px; }
+
+  .se-wg-showcase { grid-template-columns: 1fr 1fr; }
+
+  .se-wg-split { grid-template-columns: 1fr 1fr; gap: 50px; }
+
+  .se-wg-two-col { grid-template-columns: 1fr 1fr; }
+
+  .se-wg-highlights { grid-template-columns: repeat(2, 1fr); }
+
+  .se-wg-steps { grid-template-columns: repeat(3, 1fr); }
+  .se-wg-step { flex-direction: column; text-align: center; align-items: center; }
+
+  .se-wg-reviews { grid-template-columns: repeat(3, 1fr); }
+
+  .se-wg-cta-banner { flex-direction: row; text-align: left; justify-content: space-between; }
+
+  .se-wg-final-cta { padding: 80px 30px; }
+}
+
+/* === Responsive - Desktop (1024px+) === */
+@media (min-width: 1024px) {
+  .se-wg-section { padding: 80px 40px; }
+  .se-wg-page h2 { font-size: 38px; }
+
+  .se-wg-highlights { grid-template-columns: repeat(3, 1fr); }
+
+  .se-wg-final-cta { padding: 90px 40px; }
+}
+
+@media (max-width: 767px) {
+  .se-wg-faq-q { font-size: 16px; padding: 18px 20px; }
+  .se-wg-faq-a-inner { padding: 0 20px 18px; font-size: 15px; }
+  .se-wg-showcase-card { min-height: 200px; }
+}
+</style>
+
+<div class="se-wg-page">
+
+  <!-- ================================================
+       Section 1: Intro
+       ================================================ -->
+  <section class="se-wg-section">
+    <div class="se-wg-container">
+      <div class="se-wg-intro">
+        <div>
+          <span class="se-wg-eyebrow">Wall Graphics & Murals</span>
+          <h2>Custom Wall Graphics and Murals for Business</h2>
+          <p>Custom wall graphics turn blank walls into branded experiences. Whether you need a floor-to-ceiling mural in your gym, a branded feature wall in your office lobby, or atmosphere graphics in your restaurant, <a href="https://signseast.com/">Signs East</a> produces high-resolution wall murals and vinyl wall graphics that transform any commercial space.</p>
+          <p>We print on premium vinyl, fabric, and wallpaper substrates with UV-resistant inks that hold their color for years. Every wall graphic we produce is custom-sized to your exact wall dimensions - no standard sizes, no compromises. Serving businesses across Southern NH, the Seacoast, and North Shore MA.</p>
+          <div class="se-wg-btn-row">
+            <a href="https://signseast.com/contact-us/" class="se-wg-btn se-wg-btn--primary">Request a Quote</a>
+            <a href="https://signseast.com/sign-services/" class="se-wg-btn se-wg-btn--outline">View All Services</a>
+          </div>
+        </div>
+        <div class="se-wg-intro-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_united-pipe.jpg" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 2: Industry Showcase Grid
+       ================================================ -->
+  <section class="se-wg-section se-wg-section--gray">
+    <div class="se-wg-container">
+      <div class="se-wg-center" style="margin-bottom: 30px;">
+        <span class="se-wg-eyebrow">Industries We Serve</span>
+        <h2>Our Wall Graphics and Mural Products</h2>
+        <p class="se-wg-lead se-wg-lead--center">From corporate lobbies to fitness centers and restaurants - wall murals built for the way each industry uses its space.</p>
+      </div>
+      <div class="se-wg-showcase">
+        <div class="se-wg-showcase-card">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_united-pipe.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+          <div class="se-wg-showcase-overlay">
+            <h3>Office and Corporate Wall Graphics</h3>
+            <p>Reception murals, conference room branding, company values walls, and logo displays that impress clients and reinforce culture.</p>
+          </div>
+        </div>
+        <div class="se-wg-showcase-card">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/IMG_20200114_095620-scaled.webp" alt="" width="600" height="400" loading="lazy" decoding="async">
+          <div class="se-wg-showcase-overlay">
+            <h3>Gym and Fitness Center Wall Murals</h3>
+            <p>Motivational graphics, sport-themed murals, zone identification, and branded gym walls that energize your training space.</p>
+          </div>
+        </div>
+        <div class="se-wg-showcase-card">
+          <img src="https://signseast.com/wp-content/uploads/2025/11/imgi_7_peabody-signs_window-treatment3.webp" alt="" width="600" height="400" loading="lazy" decoding="async">
+          <div class="se-wg-showcase-overlay">
+            <h3>Restaurant and Hospitality Wall Graphics</h3>
+            <p>Atmosphere murals, feature walls, menu displays, and branded graphics for restaurants, bars, cafes, hotels, and event venues.</p>
+          </div>
+        </div>
+        <div class="se-wg-showcase-card">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_45.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+          <div class="se-wg-showcase-overlay">
+            <h3>Retail and School Wall Murals</h3>
+            <p>Seasonal promotions, brand story walls, mascot murals, educational graphics, and wayfinding displays for retail and education spaces.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 3: Custom Wall Murals Deep Dive
+       ================================================ -->
+  <section class="se-wg-section">
+    <div class="se-wg-container">
+      <div class="se-wg-split">
+        <div class="se-wg-split-text">
+          <span class="se-wg-eyebrow">Brand Identity</span>
+          <h2>Custom Wall Murals for Business</h2>
+          <p>A branded wall mural does more than decorate a room - it communicates who you are before anyone opens a brochure or visits your website. Clients walking into your lobby, employees arriving at the office, and customers stepping into your store all form an impression based on what your walls say about your business.</p>
+          <p>Signs East produces custom wall murals that feature your company logo, brand colors, mission statements, team photos, and custom artwork. We print at resolutions that look sharp from across the room and hold detail up close. Pair wall murals with <a href="https://signseast.com/dimensional-and-channel-lettering/">dimensional and channel letters</a> for added depth and presence.</p>
+          <ul class="se-wg-detail-list">
+            <li>Company logo and identity feature walls</li>
+            <li>Brand color and pattern murals</li>
+            <li>Inspirational quote and mission statement walls</li>
+            <li>Full-coverage floor-to-ceiling statement walls</li>
+            <li>Photo-realistic printing at any scale</li>
+          </ul>
+        </div>
+        <div class="se-wg-split-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/IMG_20200114_095620-scaled.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 4: Inline CTA Banner
+       ================================================ -->
+  <section class="se-wg-section se-wg-section--gray" style="padding-top: 0; padding-bottom: 50px;">
+    <div class="se-wg-container">
+      <div class="se-wg-cta-banner">
+        <div>
+          <h3>Have a wall that needs work?</h3>
+          <p>Send us your wall dimensions and we will provide a quote with material options.</p>
+        </div>
+        <a href="https://signseast.com/contact-us/" class="se-wg-btn se-wg-btn--primary" style="flex-shrink: 0;">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 5: Large Format & Vinyl Wall Graphics (Two Column)
+       ================================================ -->
+  <section class="se-wg-section">
+    <div class="se-wg-container">
+      <div class="se-wg-center" style="margin-bottom: 30px;">
+        <span class="se-wg-eyebrow">Materials & Formats</span>
+        <h2>Vinyl Wall Graphics and Custom Wall Wraps</h2>
+        <p class="se-wg-lead se-wg-lead--center">The right material depends on your wall surface, your timeline, and whether the graphics need to come down later.</p>
+      </div>
+      <div class="se-wg-two-col">
+        <div class="se-wg-info-card">
+          <h3>Vinyl Wall Graphics and Decals</h3>
+          <p>Cast and calendered vinyl adheres to drywall, glass, tile, concrete, and most painted surfaces. Removable vinyl peels off cleanly without damaging the wall underneath - the right choice for leased office spaces or seasonal promotions. For individual text and logo applications, see our <a href="https://signseast.com/vinyl-letter-graphics/" style="color: var(--se-primary); text-decoration: none; border-bottom: 1px solid var(--se-primary);">vinyl lettering</a> services.</p>
+          <p>We also produce custom wall wraps that cover entire surfaces with seamless, edge-to-edge graphics. Combine wall graphics with <a href="https://signseast.com/floor-graphics/" style="color: var(--se-primary); text-decoration: none; border-bottom: 1px solid var(--se-primary);">floor graphics</a> for a complete branded environment.</p>
+        </div>
+        <div class="se-wg-info-card">
+          <h3>Large Format and Floor-to-Ceiling Murals</h3>
+          <p>When your vision calls for full-wall coverage, we print multi-panel murals at resolutions that stay sharp from any distance. Panoramic photography, custom illustrations, and brand-pattern walls are all possible at any aspect ratio and any scale.</p>
+          <p>Our wide-format printers handle panels up to 60 inches wide, and we tile larger installations seamlessly so the finished wall shows no visible seams between panels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 6: Wall Graphics Printing & Installation
+       ================================================ -->
+  <section class="se-wg-section se-wg-section--gray">
+    <div class="se-wg-container">
+      <div class="se-wg-split se-wg-split--reverse">
+        <div class="se-wg-split-text">
+          <span class="se-wg-eyebrow">End-to-End</span>
+          <h2>Wall Graphics Printing and Installation</h2>
+          <p>Signs East handles the entire wall graphics process from design through professional installation. We print on commercial-grade substrates using high-resolution digital printers that deliver true-color output across large surfaces. Our installation team preps the wall surface, applies the graphics bubble-free, and trims everything clean.</p>
+          <p>We accept files in PDF, AI, and high-resolution PNG formats with CMYK color profiles. Not sure if your artwork is print-ready? Send it over and our team will review the file and confirm before anything goes to print.</p>
+          <ul class="se-wg-detail-list">
+            <li>High-resolution digital printing on vinyl, fabric, and wallpaper</li>
+            <li>Professional surface prep and bubble-free installation</li>
+            <li>File review and color matching before printing</li>
+            <li>Multi-panel seamless tiling for large walls</li>
+          </ul>
+        </div>
+        <div class="se-wg-split-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_45.jpg" alt="" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 7: Why Choose Signs East
+       ================================================ -->
+  <section class="se-wg-section">
+    <div class="se-wg-container">
+      <div class="se-wg-center" style="margin-bottom: 30px;">
+        <span class="se-wg-eyebrow">The Signs East Difference</span>
+        <h2>Why Choose Signs East for Wall Graphics?</h2>
+        <p class="se-wg-lead se-wg-lead--center">Since 2012, businesses across NH, MA, and ME have counted on us for wall graphics that look sharp and hold up for years.</p>
+      </div>
+      <div class="se-wg-highlights">
+        <div class="se-wg-highlight">
+          <div class="se-wg-highlight-marker"></div>
+          <div>
+            <h3>True-Color Printing</h3>
+            <p>High-resolution output that matches your brand colors exactly. CMYK calibrated and proofed before every print run.</p>
+          </div>
+        </div>
+        <div class="se-wg-highlight">
+          <div class="se-wg-highlight-marker"></div>
+          <div>
+            <h3>Any Size - No Limits</h3>
+            <p>From small accent decals to floor-to-ceiling panoramic murals. We print to your exact wall dimensions.</p>
+          </div>
+        </div>
+        <div class="se-wg-highlight">
+          <div class="se-wg-highlight-marker"></div>
+          <div>
+            <h3>Removable Options</h3>
+            <p>Graphics that come down clean when the lease ends or the branding changes. No wall damage, no residue.</p>
+          </div>
+        </div>
+        <div class="se-wg-highlight">
+          <div class="se-wg-highlight-marker"></div>
+          <div>
+            <h3>Design and Installation</h3>
+            <p>One team handles the full process - concept through installation. We also produce <a href="https://signseast.com/corporate-identity/" style="color: var(--se-primary); text-decoration: none; border-bottom: 1px solid var(--se-primary);">corporate identity signs</a> and <a href="https://signseast.com/banner-signs/" style="color: var(--se-primary); text-decoration: none; border-bottom: 1px solid var(--se-primary);">banner signs</a> to complement your wall graphics.</p>
+          </div>
+        </div>
+        <div class="se-wg-highlight">
+          <div class="se-wg-highlight-marker"></div>
+          <div>
+            <h3>Fast Turnaround</h3>
+            <p>While other shops quote weeks, we deliver in days. Proofs and rush production available when you are up against a deadline.</p>
+          </div>
+        </div>
+        <div class="se-wg-highlight">
+          <div class="se-wg-highlight-marker"></div>
+          <div>
+            <h3>Local and Accountable</h3>
+            <p>Based in Kingston, NH with 79+ five-star Google reviews. Tor and the <a href="https://signseast.com/about-us/" style="color: var(--se-primary); text-decoration: none; border-bottom: 1px solid var(--se-primary);">Signs East team</a> have been serving businesses since 2012. We also handle <a href="https://signseast.com/vehicle-graphics/" style="color: var(--se-primary); text-decoration: none; border-bottom: 1px solid var(--se-primary);">vehicle graphics</a> and <a href="https://signseast.com/boat-graphics-wraps/" style="color: var(--se-primary); text-decoration: none; border-bottom: 1px solid var(--se-primary);">boat graphics</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 8: How to Order
+       ================================================ -->
+  <section class="se-wg-section se-wg-section--gray">
+    <div class="se-wg-container">
+      <div class="se-wg-center" style="margin-bottom: 30px;">
+        <h2>How to Order Your Custom Wall Graphic or Mural</h2>
+        <p class="se-wg-lead se-wg-lead--center">Three steps from bare wall to branded space.</p>
+      </div>
+      <div class="se-wg-steps">
+        <div class="se-wg-step">
+          <div class="se-wg-step-num">1</div>
+          <div>
+            <h3>Share Your Vision</h3>
+            <p>Call us at <a href="tel:+19788181740" style="color: var(--se-primary); text-decoration: none;">(978) 818-1740</a> or <a href="https://signseast.com/contact-us/" style="color: var(--se-primary); text-decoration: none;">submit a quote request</a>. Send your wall dimensions, photos of the space, and any artwork or ideas you have in mind.</p>
+          </div>
+        </div>
+        <div class="se-wg-step">
+          <div class="se-wg-step-num">2</div>
+          <div>
+            <h3>Approve Your Proof</h3>
+            <p>We create a digital mockup showing how the wall graphic will look in your space. Request changes until it is right. Nothing goes to print without your sign-off.</p>
+          </div>
+        </div>
+        <div class="se-wg-step">
+          <div class="se-wg-step-num">3</div>
+          <div>
+            <h3>We Print and Install</h3>
+            <p>Once approved, we print, trim, and schedule installation. Our team handles surface prep and application so the finished result is clean and bubble-free.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 9: Reviews
+       ================================================ -->
+  <section class="se-wg-section">
+    <div class="se-wg-container">
+      <div class="se-wg-center">
+        <h2>What Our Customers Say</h2>
+        <p class="se-wg-lead se-wg-lead--center">4.9 stars from 79+ Google reviews.</p>
+      </div>
+      <div class="se-wg-reviews">
+        <div class="se-wg-review">
+          <div class="se-wg-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"I just picked up 5'th or 6'th lettering job from these guys and realized I haven't written a review. I picked up our trailer today and they knocked it out of the park again which prompted a review, Great work guys!"</blockquote>
+          <span class="se-wg-review-author">Fuel N.</span><br>
+          <span class="se-wg-review-source">Google Review</span>
+        </div>
+        <div class="se-wg-review">
+          <div class="se-wg-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Tor did a great job with new signage for my condo building. He is very professional and got the job done quickly. I would recommend for any sign project you may have!"</blockquote>
+          <span class="se-wg-review-author">Katie S.</span><br>
+          <span class="se-wg-review-source">Google Review</span>
+        </div>
+        <div class="se-wg-review">
+          <div class="se-wg-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"These guys are awesome - truly professional operation, phenomenal service, and great product. I run a residential real estate business and will never go anywhere else for all my sign and rider needs. Highly recommend to any business owner!"</blockquote>
+          <span class="se-wg-review-author">Chris M.</span><br>
+          <span class="se-wg-review-source">Google Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 10: FAQ
+       ================================================ -->
+  <section class="se-wg-section se-wg-section--gray">
+    <div class="se-wg-container">
+      <div class="se-wg-faq-wrap">
+        <div class="se-wg-center" style="margin-bottom: 40px;">
+          <h2>Frequently Asked Questions About Wall Graphics and Murals</h2>
+          <p class="se-wg-lead se-wg-lead--center">Common questions about materials, surfaces, installation, and pricing.</p>
+        </div>
+        <div class="se-wg-faq-list">
+          <div class="se-wg-faq-item">
+            <button class="se-wg-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Can wall graphics be removed without damaging the wall?
+              <span class="se-wg-faq-toggle"></span>
+            </button>
+            <div class="se-wg-faq-a">
+              <div class="se-wg-faq-a-inner">
+                <p>Yes. Removable vinyl wall graphics peel off cleanly from most painted surfaces, glass, and smooth tile without leaving residue or pulling paint. This makes them a strong option for leased office spaces, seasonal promotions, and businesses that update their branding regularly.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-wg-faq-item">
+            <button class="se-wg-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What surfaces can wall graphics be applied to?
+              <span class="se-wg-faq-toggle"></span>
+            </button>
+            <div class="se-wg-faq-a">
+              <div class="se-wg-faq-a-inner">
+                <p>Wall graphics adhere to painted drywall, glass, smooth tile, concrete, brick (with prep), metal, and wood surfaces. Textured walls may require a specialty vinyl or surface preparation. We assess your wall type before recommending materials to ensure a clean application.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-wg-faq-item">
+            <button class="se-wg-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How long do custom wall murals last?
+              <span class="se-wg-faq-toggle"></span>
+            </button>
+            <div class="se-wg-faq-a">
+              <div class="se-wg-faq-a-inner">
+                <p>Interior wall murals printed on quality vinyl last five to ten years or longer in indoor environments. The graphics resist fading, scratching, and peeling under normal interior conditions. Direct sunlight exposure can shorten lifespan, but UV-resistant laminates extend durability in sun-facing locations.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-wg-faq-item">
+            <button class="se-wg-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Do you offer professional installation for wall murals?
+              <span class="se-wg-faq-toggle"></span>
+            </button>
+            <div class="se-wg-faq-a">
+              <div class="se-wg-faq-a-inner">
+                <p>Yes. Our installation team handles surface preparation, alignment, bubble-free application, and trimming. We install wall graphics across our full service area in Southern NH, the Seacoast, and North Shore MA. Contact us at <a href="tel:+19788181740">(978) 818-1740</a> to schedule.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-wg-faq-item">
+            <button class="se-wg-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How much do custom wall graphics and murals cost?
+              <span class="se-wg-faq-toggle"></span>
+            </button>
+            <div class="se-wg-faq-a">
+              <div class="se-wg-faq-a-inner">
+                <p>Pricing depends on wall size, material type, print complexity, and whether professional installation is included. <a href="https://signseast.com/contact-us/">Contact us</a> with your wall dimensions and project details for an accurate quote.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 11: Final CTA
+       ================================================ -->
+  <section class="se-wg-final-cta">
+    <div class="se-wg-container">
+      <h2>Ready to Transform Your Walls?</h2>
+      <p>Send us your wall dimensions and ideas. We will provide a quote, create a mockup, and handle the full installation. Call, email, or fill out our form.</p>
+      <div class="se-wg-btn-row se-wg-btn-row--center">
+        <a href="https://signseast.com/contact-us/" class="se-wg-btn se-wg-btn--primary">Request a Quote</a>
+        <a href="tel:+19788181740" class="se-wg-btn se-wg-btn--outline">Call (978) 818-1740</a>
+      </div>
+    </div>
+  </section>
+
+</div>
