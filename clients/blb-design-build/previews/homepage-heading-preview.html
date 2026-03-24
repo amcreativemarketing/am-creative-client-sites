@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLB Homepage - Proposed Heading Updates (Preview)</title>
+<style>
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7fc9387e7b24.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f200f69dbc0a.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f217169dbc09.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Messina Modern', Georgia, serif;
+  font-weight: 300;
+  color: #555;
+  background: #fff;
+}
+
+/* === PREVIEW HEADER BAR === */
+.preview-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 14px 24px;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.preview-bar span {
+  font-weight: 300;
+  font-family: 'Messina Modern', sans-serif;
+  font-size: 13px;
+  color: #b8b8ae;
+}
+
+/* === CHANGE BADGES === */
+.tag-change {
+  display: inline-block;
+  font-family: 'Messina Sans', monospace;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin-left: 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+.tag-change.tag-new {
+  background: #2d6a4f;
+  color: #fff;
+}
+
+.tag-change.tag-was {
+  background: #c1121f;
+  color: #fff;
+}
+
+.tag-change.tag-moved {
+  background: #b8b8ae;
+  color: #1a1a1a;
+}
+
+/* === ANNOTATION CALLOUT === */
+.annotation {
+  background: #fffbe6;
+  border-left: 4px solid #d4a843;
+  padding: 16px 20px;
+  margin: 0 auto 0;
+  max-width: 1200px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.annotation strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.annotation code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #1a1a1a;
+}
+
+/* === NAV === */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.nav-logo {
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #fff;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links li {
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* === HERO SECTION === */
+.hero {
+  position: relative;
+  height: 85vh;
+  min-height: 550px;
+  max-height: 800px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === SECTION 2: REMODELING REIMAGINED === */
+.intro-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+
+.intro-left {
+  background: linear-gradient(135deg, #8B6914 0%, #6B4F10 30%, #5A3E0E 60%, #4A300B 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Wood grain texture simulation */
+.intro-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0,0,0,0.03) 0px,
+    rgba(0,0,0,0) 2px,
+    rgba(0,0,0,0) 8px,
+    rgba(0,0,0,0.02) 10px
+  );
+}
+
+.intro-logo-mark {
+  width: 200px;
+  height: 240px;
+  background: rgba(255,255,255,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Messina Sans', sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: relative;
+  z-index: 2;
+}
+
+.intro-logo-mark span {
+  font-size: 72px;
+  font-weight: 700;
+  color: #8B6914;
+}
+
+.intro-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 60px 60px 50px;
+  background: #fff;
+}
+
+.intro-tagline {
+  font-family: 'Messina Modern', serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b8b8ae;
+  margin-bottom: 12px;
+}
+
+.intro-right h1 {
+  font-family: 'Messina Modern', serif;
+  font-weight: 600;
+  font-size: 42px;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.intro-right h2 {
+  font-family: 'Messina Modern', serif;
+  font-weight: 300;
+  font-size: 17px;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+.btn-taupe {
+  display: inline-block;
+  background: #b8b8ae;
+  color: #f1f1f1;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 36px;
+  transition: background 0.3s ease;
+}
+
+.btn-taupe:hover {
+  background: #a0a096;
+}
+
+/* === SECTION 3: BEYOND THE BUILD === */
+.beyond-section {
+  background: #1a1a1a;
+  padding: 80px 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.beyond-pre {
+  font-family: 'Messina Modern', serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 8px;
+}
+
+.beyond-section h2 {
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.beyond-subhead {
+  font-family: 'Messina Modern', serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: rgba(255,255,255,0.85);
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.7;
+}
+
+.beyond-body {
+  font-family: 'Messina Modern', serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(255,255,255,0.65);
+  max-width: 680px;
+  margin: 0 auto 28px;
+  line-height: 1.8;
+}
+
+.beyond-body a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.btn-outline-white {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  font-family: 'Messina Sans', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 32px;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  transition: border-color 0.3s ease;
+}
+
+.btn-outline-white:hover {
+  border-color: #fff;
+}
+
+/* === SECTION 4: PROCESS === */
+.process-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+
+.process-left {
+  padding: 80px 50px;
+}
+
+.process-left h2 {
+  font-family: 'Messina Modern', serif;
+  font-weight: 600;
+  font-size: 38px;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.process-sub {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.process-sub a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.process-phase {
+  border-top: 1px solid #e0e0e0;
+  padding: 20px 0;
+}
+
+.process-phase-title {
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #b8b8ae;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.process-phase-body {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-top: 16px;
+}
+
+.process-right {
+  background: url('https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2024/01/314Haverhill_FREEBIRD-115.jpg?w=800&ssl=1') center/cover no-repeat;
+}
+
+.btn-taupe-process {
+  display: inline-block;
+  background: #b8b8ae;
+  color: #f1f1f1;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 32px;
+  margin-top: 24px;
+  transition: background 0.3s ease;
+}
+
+/* === SUMMARY TABLE === */
+.summary {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.summary h2 {
+  font-family: 'Messina Modern', serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+.summary table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.summary th {
+  text-align: left;
+  font-family: 'Messina Sans', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  padding: 12px 16px;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+.summary td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e8e8e8;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.summary .col-tag {
+  width: 60px;
+  font-family: monospace;
+  font-size: 12px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.summary .col-before {
+  color: #c1121f;
+  text-decoration: line-through;
+  text-decoration-color: rgba(193, 18, 31, 0.3);
+}
+
+.summary .col-after {
+  color: #2d6a4f;
+  font-weight: 400;
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+  .intro-section { grid-template-columns: 1fr; }
+  .intro-left { min-height: 250px; }
+  .intro-right { padding: 40px 24px; }
+  .intro-right h1 { font-size: 30px; }
+  .process-section { grid-template-columns: 1fr; }
+  .process-right { min-height: 300px; }
+  .process-left { padding: 48px 24px; }
+  .nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+  .beyond-section h2 { font-size: 28px; letter-spacing: 3px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Preview Header -->
+<div class="preview-bar">
+  AM CREATIVE - HOMEPAGE HEADING PREVIEW
+  <span>Proposed changes only. Visual design stays the same.</span>
+</div>
+
+<!-- Annotation -->
+<div class="annotation" style="border-bottom: 1px solid #e8e8e8; padding: 20px 24px;">
+  <strong>What this preview shows:</strong> The homepage sections below look the same as they do today. The only changes are which text sits inside the <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;h3&gt;</code> tags. Green badges mark new or moved heading tags. The visual design, images, and layout are unchanged. Corinne would make these tag changes in the Divi builder.
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 1: HERO IMAGE (unchanged) -->
+<!-- ============================================================ -->
+<div class="hero">
+  <div class="nav">
+    <div class="nav-logo">BLB<br>DESIGN/<br>BUILD</div>
+    <ul class="nav-links">
+      <li>HOME</li>
+      <li>ABOUT</li>
+      <li>SERVICES</li>
+      <li>PORTFOLIO</li>
+      <li>BLOG</li>
+      <li>CONTACT US</li>
+    </ul>
+  </div>
+  <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2024/12/88HighStreet_FREEBIRD-34.jpg?w=1400&ssl=1" alt="" style="width:100%;height:100%;object-fit:cover;">
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 2: REMODELING, REIMAGINED → PROPOSED CHANGES -->
+<!-- ============================================================ -->
+<div class="annotation">
+  <strong>Section change:</strong> "Remodeling, Reimagined." moves from <code>&lt;h1&gt;</code> to a styled tagline <code>&lt;span&gt;</code>. The <code>&lt;h1&gt;</code> now contains the primary keyword + location. The <code>&lt;h2&gt;</code> is tightened to a concise service statement. <strong>Visually, this section looks the same.</strong>
+</div>
+
+<div class="intro-section">
+  <div class="intro-left">
+    <div class="intro-logo-mark"><span>B</span></div>
+  </div>
+  <div class="intro-right">
+    <!-- THIS IS THE KEY CHANGE -->
+    <div class="intro-tagline">
+      Remodeling, Reimagined. <span class="tag-change tag-moved">WAS H1 → NOW TAGLINE</span>
+    </div>
+
+    <h1>
+      North Shore Home Remodeling + Design-Build
+      <span class="tag-change tag-new">NEW H1</span>
+    </h1>
+
+    <h2>
+      Full-service renovations for kitchens, additions, + whole homes in Amesbury, MA. Your home is an investment, your lifestyle, and it's personal.
+      <span class="tag-change tag-new">UPDATED H2</span>
+    </h2>
+
+    <a href="#" class="btn-taupe">START YOUR REMODEL CONVERSATION</a>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 3: BEYOND THE BUILD → PROPOSED CHANGES -->
+<!-- ============================================================ -->
+<div class="annotation">
+  <strong>Section change:</strong> "BEYOND THE BUILD" stays as visual branding. The <code>&lt;h2&gt;</code> tag moves to the descriptive heading below it, which now contains "North Shore" and "design-build." Body copy stays the same.
+</div>
+
+<div class="beyond-section">
+  <div class="beyond-pre">We Go</div>
+  <div style="font-family:'Messina Sans',sans-serif;font-weight:700;font-size:44px;letter-spacing:6px;text-transform:uppercase;color:#fff;margin-bottom:32px;">
+    BEYOND THE BUILD <span class="tag-change tag-moved" style="font-size:10px;vertical-align:middle;">WAS H2 → NOW STYLED DIV</span>
+  </div>
+
+  <h2 class="beyond-subhead" style="font-weight:400;font-size:20px;color:rgba(255,255,255,0.95);">
+    Design-Build for North Shore Homeowners Since 2012
+    <span class="tag-change tag-new">NEW H2</span>
+  </h2>
+
+  <p class="beyond-body">
+    We've done more than remodels. We've built relationships, acquired the trust of countless homeowners, transformed tired homes into valuable assets, and delivered vibrant, contemporary living spaces beyond expectations.
+  </p>
+
+  <a href="#" class="btn-outline-white">ABOUT US</a>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SECTION 4: OUR PROCESS → PROPOSED CHANGES -->
+<!-- ============================================================ -->
+<div class="annotation">
+  <strong>Section change:</strong> "Our Process" changes from a generic label to a keyword-rich <code>&lt;h2&gt;</code>. Subtitle updated with internal link. Phase titles stay as-is.
+</div>
+
+<div class="process-section">
+  <div class="process-left">
+    <h2>
+      Our Design-Build Process
+      <span class="tag-change tag-new">UPDATED H2</span>
+    </h2>
+    <p class="process-sub">
+      Here's how we take your <a href="#">remodel from concept to completion</a> with total transparency.
+    </p>
+
+    <div class="process-phase">
+      <div class="process-phase-title">DESIGN PHASE</div>
+      <p class="process-phase-body">
+        Working alongside the builder, architect, and project developer, we collaborate with the client to create detailed concept drawings of your vision. Working directly with the builder streamlines the construction process and aligns your budget with your expectations.
+      </p>
+    </div>
+    <div class="process-phase">
+      <div class="process-phase-title">SCOPE PHASE <span style="font-size:18px;color:#ccc;">+</span></div>
+    </div>
+    <div class="process-phase">
+      <div class="process-phase-title">BUILD PHASE <span style="font-size:18px;color:#ccc;">+</span></div>
+    </div>
+
+    <a href="#" class="btn-taupe-process">START YOUR PROJECT WITH A SEAMLESS PLAN</a>
+  </div>
+  <div class="process-right"></div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- SUMMARY TABLE -->
+<!-- ============================================================ -->
+<div class="summary">
+  <h2>Summary of Heading Tag Changes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tag</th>
+        <th>Current</th>
+        <th>Proposed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-tag">H1</td>
+        <td class="col-before">Remodeling, Reimagined.</td>
+        <td class="col-after">North Shore Home Remodeling + Design-Build</td>
+      </tr>
+      <tr>
+        <td class="col-tag">H2 #1</td>
+        <td class="col-before">Full-service design-build for kitchens, additions, and more on the North Shore. When we work together to build out your vision for your home, we understand it's much more than a remodel. Your home is an investment, your lifestyle, and it's personal.</td>
+        <td class="col-after">Full-service renovations for kitchens, additions, + whole homes in Amesbury, MA. Your home is an investment, your lifestyle, and it's personal.</td>
+      </tr>
+      <tr>
+        <td class="col-tag">H2 #2</td>
+        <td class="col-before">BLB Design / Build is proud to have a hand in building out the dreams of North Shore homeowners.</td>
+        <td class="col-after">Design-Build for North Shore Homeowners Since 2012</td>
+      </tr>
+      <tr>
+        <td class="col-tag">H3</td>
+        <td class="col-before">Here's how we take your remodel from concept to completion with total transparency.</td>
+        <td class="col-after">Our Design-Build Process <span style="font-size:12px;color:#666;text-decoration:none;">(promoted to H2)</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="annotation" style="margin-top: 32px;">
+    <strong>What doesn't change:</strong> "Remodeling, Reimagined." and "BEYOND THE BUILD" stay on the page, styled exactly as they are. The visual design, images, fonts, colors, and layout are all unchanged. We're only updating which text sits inside the HTML heading tags that Google reads.
+  </div>
+</div>
+
+
+</body>
+</html>
