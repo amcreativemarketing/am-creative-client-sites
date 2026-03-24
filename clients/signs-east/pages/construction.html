@@ -59,6 +59,7 @@
 
 .se-cx-section {
   padding: 60px 20px;
+  overflow: visible;
 }
 
 .se-cx-section--gray {
@@ -123,10 +124,10 @@
 }
 
 /* === Buttons === */
-.se-cx-btn {
+.se-construction a.se-cx-btn {
   display: inline-block;
   padding: 14px 34px;
-  border-radius: var(--button-radius);
+  border-radius: 30px;
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 600;
@@ -138,37 +139,43 @@
   text-align: center;
   min-width: 180px;
   line-height: 1.4;
+  overflow: visible;
 }
 
-.se-cx-btn:hover {
+.se-construction a.se-cx-btn:hover {
   border-bottom: none;
 }
 
-.se-cx-btn--primary {
-  background-color: var(--se-primary);
-  color: var(--se-white);
+.se-construction a.se-cx-btn.se-cx-btn--primary {
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  border: none;
   border-bottom: none;
 }
 
-.se-cx-btn--primary:hover {
-  background-color: var(--se-primary-hover);
+.se-construction a.se-cx-btn.se-cx-btn--primary:hover {
+  background-color: #a51717;
+  color: #FFFFFF;
   transform: translateY(-2px);
-  color: var(--se-white);
+  border: none;
   border-bottom: none;
 }
 
-.se-cx-btn--outline {
+.se-construction a.se-cx-btn.se-cx-btn--outline {
   background-color: transparent;
-  color: var(--se-primary);
-  border: 2px solid var(--se-primary);
+  color: #C61C1C;
+  border: 2px solid #C61C1C;
+  border-bottom: 2px solid #C61C1C;
   padding: 12px 34px;
+  border-radius: 30px;
 }
 
-.se-cx-btn--outline:hover {
-  background-color: var(--se-primary);
-  color: var(--se-white);
+.se-construction a.se-cx-btn.se-cx-btn--outline:hover {
+  background-color: #C61C1C;
+  color: #FFFFFF;
   transform: translateY(-2px);
-  border: 2px solid var(--se-primary);
+  border: 2px solid #C61C1C;
+  border-bottom: 2px solid #C61C1C;
 }
 
 .se-cx-btn-row {
@@ -176,6 +183,7 @@
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 28px;
+  overflow: visible;
 }
 
 .se-cx-btn-row--center {
@@ -642,6 +650,7 @@
   text-align: center;
   padding: 70px 20px;
   border-top: 4px solid var(--se-primary);
+  overflow: visible;
 }
 
 .se-cx-final-cta h2 {
@@ -1022,8 +1031,10 @@
   <!-- ================================================
        Section 7: Full-width image break
        ================================================ -->
-  <section style="overflow: hidden; max-height: 260px;">
-    <img src="https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-24-at-9.04.48-AM.webp" alt="" width="1200" height="260" loading="lazy" decoding="async" style="width: 100%; height: 260px; object-fit: cover; display: block;">
+  <section style="padding: 0;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <img src="https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-24-at-9.04.48-AM.webp" alt="" width="1200" height="900" loading="lazy" decoding="async" style="width: 100%; height: auto; display: block; border-radius: 0;">
+    </div>
   </section>
 
   <!-- ================================================
