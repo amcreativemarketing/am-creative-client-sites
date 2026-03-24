@@ -1,0 +1,895 @@
+<!-- Signs East Floor Graphics Page Content
+     Sits BELOW existing hero section, ABOVE footer
+     Target keywords: floor graphics, floor decals, floor stickers, floor signage
+     No schema, no meta tags, no microdata - OTTO handles all SEO
+     All alt="" empty - OTTO handles alt text optimization
+-->
+
+<style>
+/* === Signs East Floor Graphics Page === */
+.se-floor {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --container-max: 1140px;
+}
+
+.se-floor {
+  font-family: var(--font-body);
+  color: var(--se-text);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.se-floor * { box-sizing: border-box; }
+
+.se-floor img { max-width: 100%; height: auto; display: block; }
+
+.se-floor a {
+  color: var(--se-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.se-floor a:hover { border-bottom-color: var(--se-primary); }
+
+/* === Containers === */
+.se-fl-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.se-fl-section {
+  padding: 60px 20px;
+  overflow: visible;
+}
+
+.se-fl-section--gray { background-color: var(--se-bg-light); }
+.se-fl-section--dark { background-color: var(--se-dark); color: var(--se-white); }
+
+/* === Typography === */
+.se-floor h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--se-dark);
+  margin: 0 0 14px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.se-fl-section--dark h2 { color: var(--se-white); }
+
+.se-floor h3 {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  color: var(--se-dark);
+  margin: 0 0 10px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.se-fl-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--se-primary);
+  margin-bottom: 10px;
+}
+
+.se-fl-lead {
+  font-size: 18px;
+  color: var(--se-text-light);
+  margin: 0 0 30px;
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.se-fl-center { text-align: center; }
+
+.se-fl-lead--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Buttons === */
+.se-floor a.se-fl-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 30px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-bottom: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  min-width: 180px;
+  line-height: 1.4;
+  overflow: visible;
+}
+
+.se-floor a.se-fl-btn:hover { border-bottom: none; }
+
+.se-floor a.se-fl-btn.se-fl-btn--primary {
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  border: none;
+  border-bottom: none;
+}
+
+.se-floor a.se-fl-btn.se-fl-btn--primary:hover {
+  background-color: #a51717;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  border: none;
+  border-bottom: none;
+}
+
+.se-floor a.se-fl-btn.se-fl-btn--outline {
+  background-color: transparent;
+  color: #C61C1C;
+  border: 2px solid #C61C1C;
+  border-bottom: 2px solid #C61C1C;
+  padding: 12px 34px;
+  border-radius: 30px;
+}
+
+.se-floor a.se-fl-btn.se-fl-btn--outline:hover {
+  background-color: #C61C1C;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  border: 2px solid #C61C1C;
+  border-bottom: 2px solid #C61C1C;
+}
+
+.se-fl-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+  overflow: visible;
+}
+
+.se-fl-btn-row--center { justify-content: center; }
+
+/* === Section 1: Intro with centered photo === */
+.se-fl-intro-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.se-fl-intro-text p {
+  text-align: left;
+  margin: 0 0 16px;
+}
+
+.se-fl-intro-img {
+  margin-top: 35px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Section 2: Product types - icon strip === */
+.se-fl-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.se-fl-product {
+  background: var(--se-white);
+  border-radius: 8px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.se-fl-product:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+}
+
+.se-fl-product-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--se-primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.se-fl-product-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--se-white);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.se-fl-product h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.se-fl-product p {
+  font-size: 14px;
+  color: var(--se-text-light);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* === Section: Two-column content === */
+.se-fl-two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.se-fl-content-block h3 {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.se-fl-content-block p {
+  margin: 0 0 14px;
+  color: var(--se-text-light);
+}
+
+.se-fl-content-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+
+.se-fl-content-block ul li {
+  padding: 6px 0 6px 24px;
+  position: relative;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.se-fl-content-block ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 8px;
+  height: 8px;
+  background: var(--se-primary);
+  border-radius: 50%;
+}
+
+/* === Section: Industry Applications grid === */
+.se-fl-industries {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.se-fl-industry {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--se-white);
+  padding: 22px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.se-fl-industry-icon {
+  width: 40px;
+  height: 40px;
+  background: #fbe9e9;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.se-fl-industry-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--se-primary);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.se-fl-industry-text h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.se-fl-industry-text p {
+  font-size: 14px;
+  color: var(--se-text-light);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* === Section: Materials === */
+.se-fl-materials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.se-fl-mat {
+  padding: 24px;
+  background: var(--se-white);
+  border-radius: 8px;
+  border-left: 4px solid var(--se-primary);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.se-fl-mat h3 { font-size: 18px; margin-bottom: 6px; }
+
+.se-fl-mat p {
+  font-size: 15px;
+  color: var(--se-text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* === Section: Reviews === */
+.se-fl-reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.se-fl-review {
+  background: var(--se-bg-light);
+  border-radius: 8px;
+  padding: 28px 24px;
+}
+
+.se-fl-review-stars {
+  color: #f5a623;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.se-fl-review blockquote {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--se-text);
+}
+
+.se-fl-review-author { font-weight: 700; font-size: 14px; color: var(--se-dark); }
+.se-fl-review-divider { color: #ccc; font-size: 14px; }
+.se-fl-review-source { font-size: 13px; color: var(--se-text-light); }
+
+/* === Section: FAQ (ADA style) === */
+.se-fl-faq-container { max-width: 800px; margin: 0 auto; }
+.se-fl-faq-header { text-align: center; margin-bottom: 50px; }
+.se-fl-faq-header h2 { font-size: 38px; margin-bottom: 15px; }
+.se-fl-faq-header p { font-size: 17px; color: var(--se-text-light); margin: 0; }
+.se-fl-faq-list { display: flex; flex-direction: column; gap: 15px; }
+
+.se-fl-faq-item {
+  background-color: var(--se-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.se-fl-faq-item:hover { background-color: #ededed; }
+
+.se-fl-faq-question {
+  width: 100%; padding: 22px 25px;
+  background: none; border: none; text-align: left;
+  cursor: pointer; display: flex; justify-content: space-between;
+  align-items: center; gap: 15px;
+  font-family: var(--font-body); font-size: 18px; font-weight: 600;
+  color: var(--se-dark); transition: color 0.2s ease;
+  min-height: 44px; line-height: 1.45;
+}
+
+.se-fl-faq-question:hover {
+  color: var(--se-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--se-primary);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.se-fl-faq-icon {
+  width: 24px; height: 24px; min-width: 24px;
+  position: relative; flex-shrink: 0;
+}
+
+.se-fl-faq-icon::before,
+.se-fl-faq-icon::after {
+  content: ""; position: absolute;
+  background-color: var(--se-primary);
+  transition: transform 0.3s ease;
+}
+
+.se-fl-faq-icon::before {
+  width: 14px; height: 2px; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-fl-faq-icon::after {
+  width: 2px; height: 14px; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-fl-faq-item.active .se-fl-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-fl-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.se-fl-faq-item.active .se-fl-faq-answer { max-height: 350px; }
+
+.se-fl-faq-answer-inner {
+  padding: 0 25px 22px; font-size: 16px;
+  color: var(--se-text-light); line-height: 1.7;
+}
+
+.se-fl-faq-answer-inner p { margin: 0; }
+
+.se-fl-faq-answer-inner a {
+  color: var(--se-primary);
+  border-bottom: 1px solid var(--se-primary);
+}
+
+/* === Final CTA === */
+.se-fl-final-cta {
+  background: var(--se-white);
+  text-align: center;
+  padding: 70px 20px;
+  border-top: 4px solid var(--se-primary);
+  overflow: visible;
+}
+
+.se-fl-final-cta h2 { margin-bottom: 14px; }
+
+.se-fl-final-cta p {
+  max-width: 600px; margin: 0 auto 30px;
+  color: var(--se-text-light); font-size: 17px;
+}
+
+/* === Responsive - Tablet (768px+) === */
+@media (min-width: 768px) {
+  .se-fl-section { padding: 80px 30px; }
+  .se-floor h2 { font-size: 34px; }
+  .se-fl-products { grid-template-columns: repeat(3, 1fr); }
+  .se-fl-two-col { grid-template-columns: 1fr 1fr; }
+  .se-fl-industries { grid-template-columns: repeat(2, 1fr); }
+  .se-fl-materials-grid { grid-template-columns: repeat(2, 1fr); }
+  .se-fl-reviews { grid-template-columns: repeat(3, 1fr); }
+  .se-fl-faq-header h2 { font-size: 34px; }
+}
+
+/* === Responsive - Desktop (1024px+) === */
+@media (min-width: 1024px) {
+  .se-fl-section { padding: 90px 40px; }
+  .se-floor h2 { font-size: 38px; }
+  .se-fl-products { grid-template-columns: repeat(5, 1fr); }
+  .se-fl-industries { grid-template-columns: repeat(3, 1fr); }
+  .se-fl-materials-grid { grid-template-columns: repeat(4, 1fr); }
+  .se-fl-faq-header h2 { font-size: 38px; }
+  .se-fl-final-cta { padding: 90px 40px; }
+}
+
+/* === Mobile (max 767px) === */
+@media (max-width: 767px) {
+  .se-fl-faq-header h2 { font-size: 28px; }
+  .se-fl-faq-header { margin-bottom: 35px; }
+  .se-fl-faq-question { font-size: 16px; padding: 18px 20px; }
+  .se-fl-faq-answer-inner { padding: 0 20px 18px; font-size: 15px; }
+}
+</style>
+
+<div class="se-floor">
+
+  <!-- ================================================
+       Section 1: Intro - Centered text with photo below
+       ================================================ -->
+  <section class="se-fl-section">
+    <div class="se-fl-container">
+      <div class="se-fl-intro-text">
+        <span class="se-fl-eyebrow">Floor Graphics</span>
+        <h2>Custom Floor Graphics, Decals and Floor Stickers</h2>
+        <p>Floors are the most underused advertising surface in any business. Custom floor graphics turn that empty space into branded messaging, directional signage, safety markings, and promotional displays that customers literally cannot avoid. Signs East prints durable floor decals and floor stickers on anti-slip vinyl for indoor and outdoor surfaces - retail stores, warehouses, offices, gyms, trade show booths, and more.</p>
+        <p>Every floor graphic we produce is printed with UV-resistant inks on commercial-grade vinyl with an anti-slip laminate that holds up in high-traffic areas. Available in custom sizes, die-cut shapes, and removable adhesive options that come up clean without damaging the surface underneath. Serving businesses across Southern NH, Seacoast NH, and North Shore MA.</p>
+        <div class="se-fl-btn-row se-fl-btn-row--center">
+          <a href="https://signseast.com/contact-us/" class="se-fl-btn se-fl-btn--primary">Request a Quote</a>
+          <a href="https://signseast.com/sign-services/" class="se-fl-btn se-fl-btn--outline">View All Services</a>
+        </div>
+      </div>
+      <div class="se-fl-intro-img">
+        <img src="https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-24-at-10.08.26-AM.png" alt="" width="800" height="500" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 2: Product Types - Icon grid (5 across on desktop)
+       ================================================ -->
+  <section class="se-fl-section se-fl-section--gray">
+    <div class="se-fl-container">
+      <div class="se-fl-center">
+        <span class="se-fl-eyebrow">What We Print</span>
+        <h2>Floor Graphic Products</h2>
+        <p class="se-fl-lead se-fl-lead--center">From individual floor decals to full floor wraps - every type of floor signage your business needs.</p>
+      </div>
+      <div class="se-fl-products">
+        <div class="se-fl-product">
+          <div class="se-fl-product-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          </div>
+          <h3>Floor Decals</h3>
+          <p>Die-cut vinyl decals for logos, promotions, and directional messaging.</p>
+        </div>
+        <div class="se-fl-product">
+          <div class="se-fl-product-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Floor Stickers</h3>
+          <p>Adhesive stickers in standard and custom shapes for quick applications.</p>
+        </div>
+        <div class="se-fl-product">
+          <div class="se-fl-product-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M2 15h20"/></svg>
+          </div>
+          <h3>Floor Wraps</h3>
+          <p>Large-format graphics covering entire floor sections for branding and events.</p>
+        </div>
+        <div class="se-fl-product">
+          <div class="se-fl-product-icon">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
+          </div>
+          <h3>Safety Floor Signs</h3>
+          <p>Anti-slip markings, hazard zones, and safety-compliant floor signage.</p>
+        </div>
+        <div class="se-fl-product">
+          <div class="se-fl-product-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+          <h3>Directional Graphics</h3>
+          <p>Wayfinding arrows, queue markers, and aisle identification decals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 3: Deep dives - two-column layout
+       ================================================ -->
+  <section class="se-fl-section">
+    <div class="se-fl-container">
+      <div class="se-fl-two-col">
+        <div class="se-fl-content-block">
+          <span class="se-fl-eyebrow">High Volume</span>
+          <h3>Custom Floor Decals and Vinyl Stickers</h3>
+          <p>Floor decals are the fastest way to put a message on any hard surface. We print custom floor decals on premium vinyl with full-color graphics, die-cut to any shape - circles, squares, arrows, footprints, or your exact logo outline. Available in both permanent and removable adhesive depending on how long you need them down.</p>
+          <ul>
+            <li>Standard sizes: 12x12, 24x24, 36x36 inches plus custom</li>
+            <li>Indoor and outdoor vinyl options</li>
+            <li>Removable adhesive - no residue on removal</li>
+            <li>Anti-slip laminate standard on all floor decals</li>
+          </ul>
+        </div>
+        <div class="se-fl-content-block">
+          <span class="se-fl-eyebrow">Full Coverage</span>
+          <h3>Floor Wraps and Large-Format Floor Graphics</h3>
+          <p>When individual decals are not enough, floor wraps cover entire sections with seamless, high-resolution graphics. We print multi-panel floor wraps for retail floors, trade show booths, event venues, and corporate lobbies - turning plain floors into branded experiences.</p>
+          <ul>
+            <li>Seamless multi-panel printing for large areas</li>
+            <li>Trade show and event installations</li>
+            <li>Branded retail floor sections and logo floors</li>
+            <li>Removable options that come up clean after events</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 4: Floor Signage for Retail (High CPC)
+       ================================================ -->
+  <section class="se-fl-section se-fl-section--dark">
+    <div class="se-fl-container">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <span class="se-fl-eyebrow" style="color: #ff6b6b;">Retail Ready</span>
+        <h2>Floor Signage for Retail and Business</h2>
+        <p style="color: #d0d0d0; font-size: 18px; line-height: 1.7; margin: 0 0 20px;">Your floor is prime advertising real estate. Floor signage drives customer attention to promotions, guides foot traffic through your store, and reinforces your brand at every step. Retail floor graphics work harder than shelf tags because they are impossible to miss - customers walk directly over them.</p>
+        <p style="color: #d0d0d0; font-size: 17px; line-height: 1.7; margin: 0 0 28px;">We produce floor signage for product launches, seasonal promotions, entrance branding, and in-store campaigns. Pair floor decals with <a href="https://signseast.com/wall-graphics-murals/" style="color: #ff6b6b; border-color: #ff6b6b;">wall graphics</a> and <a href="https://signseast.com/banner-signs/" style="color: #ff6b6b; border-color: #ff6b6b;">banner signs</a> for a complete in-store marketing system.</p>
+        <a href="https://signseast.com/contact-us/" class="se-fl-btn se-fl-btn--primary">Get a Quote for Your Space</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 5: Industry Applications
+       ================================================ -->
+  <section class="se-fl-section">
+    <div class="se-fl-container">
+      <div class="se-fl-center">
+        <span class="se-fl-eyebrow">Where They Work</span>
+        <h2>Industry Applications for Floor Graphics</h2>
+        <p class="se-fl-lead se-fl-lead--center">Floor graphics are not limited to retail. Here are the industries and environments where our floor decals, stickers, and wraps deliver results.</p>
+      </div>
+      <div class="se-fl-industries">
+        <div class="se-fl-industry">
+          <div class="se-fl-industry-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="se-fl-industry-text">
+            <h3>Retail and Grocery</h3>
+            <p>Promotional decals, aisle markers, entrance branding, and seasonal campaign graphics.</p>
+          </div>
+        </div>
+        <div class="se-fl-industry">
+          <div class="se-fl-industry-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <div class="se-fl-industry-text">
+            <h3>Gyms and Fitness Centers</h3>
+            <p>Court graphics, zone markings, motivational floor designs, and equipment spacing decals.</p>
+          </div>
+        </div>
+        <div class="se-fl-industry">
+          <div class="se-fl-industry-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+          </div>
+          <div class="se-fl-industry-text">
+            <h3>Schools and Universities</h3>
+            <p>Spirit graphics, directional signs, safety markings, and cafeteria wayfinding.</p>
+          </div>
+        </div>
+        <div class="se-fl-industry">
+          <div class="se-fl-industry-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <div class="se-fl-industry-text">
+            <h3>Trade Shows and Events</h3>
+            <p>Booth floor wraps, branded stickers, sponsor logos, and directional event signage.</p>
+          </div>
+        </div>
+        <div class="se-fl-industry">
+          <div class="se-fl-industry-icon">
+            <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div class="se-fl-industry-text">
+            <h3>Warehouses and Distribution</h3>
+            <p>Safety zone markings, traffic flow arrows, hazard area identification, and pedestrian routing.</p>
+          </div>
+        </div>
+        <div class="se-fl-industry">
+          <div class="se-fl-industry-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="se-fl-industry-text">
+            <h3>Hospitals and Healthcare</h3>
+            <p>Wayfinding, sanitization zone markers, department identification, and patient flow routing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 6: Materials and Printing
+       ================================================ -->
+  <section class="se-fl-section se-fl-section--gray">
+    <div class="se-fl-container">
+      <div class="se-fl-center">
+        <span class="se-fl-eyebrow">Built to Last</span>
+        <h2>Floor Graphics Printing and Materials</h2>
+        <p class="se-fl-lead se-fl-lead--center">We print on commercial-grade substrates with finishes engineered for foot traffic, moisture, and daily wear.</p>
+      </div>
+      <div class="se-fl-materials-grid">
+        <div class="se-fl-mat">
+          <h3>Anti-Slip Vinyl</h3>
+          <p>Textured laminate over printed vinyl. Meets slip-resistance standards for commercial and public spaces. Standard on all floor graphics.</p>
+        </div>
+        <div class="se-fl-mat">
+          <h3>Removable Adhesive</h3>
+          <p>Comes up clean without residue or surface damage. Ideal for events, seasonal promotions, and temporary campaigns.</p>
+        </div>
+        <div class="se-fl-mat">
+          <h3>Outdoor UV Vinyl</h3>
+          <p>UV-resistant inks on weather-rated vinyl for sidewalks, parking lots, and outdoor event spaces. Rated for extended outdoor exposure.</p>
+        </div>
+        <div class="se-fl-mat">
+          <h3>File Formats</h3>
+          <p>We accept PDF, AI, EPS, and high-resolution PNG files. Not sure if your artwork is print-ready? Send it over and we will review it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 7: Reviews
+       ================================================ -->
+  <section class="se-fl-section">
+    <div class="se-fl-container">
+      <div class="se-fl-center">
+        <span class="se-fl-eyebrow">What Clients Say</span>
+        <h2>Reviews from Signs East Customers</h2>
+        <p class="se-fl-lead se-fl-lead--center">4.9 stars from 79+ Google reviews.</p>
+      </div>
+      <div class="se-fl-reviews">
+        <div class="se-fl-review">
+          <div class="se-fl-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"This company is the BEST sign company in the area. So fast and detailed oriented! They're great with design too. One stop shop! I can't recommend Tor and his team enough!"</blockquote>
+          <span class="se-fl-review-author">Cayley L.</span>
+          <span class="se-fl-review-divider">|</span>
+          <span class="se-fl-review-source">Google Review</span>
+        </div>
+        <div class="se-fl-review">
+          <div class="se-fl-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Great company, great work, and great owner!! Tor is awesome and a hard worker. He is the definition of the American Dream and is very knowledgeable. I highly recommend him and this great local business."</blockquote>
+          <span class="se-fl-review-author">Zach A.</span>
+          <span class="se-fl-review-divider">|</span>
+          <span class="se-fl-review-source">Google Review</span>
+        </div>
+        <div class="se-fl-review">
+          <div class="se-fl-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Amazing work! Super professional, outgoing and friendly guy always willing to go above and beyond! He takes great pride in his work and it shows. Highly recommend!!!"</blockquote>
+          <span class="se-fl-review-author">Sav M.</span>
+          <span class="se-fl-review-divider">|</span>
+          <span class="se-fl-review-source">Google Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 8: How to Order
+       ================================================ -->
+  <section class="se-fl-section se-fl-section--gray">
+    <div class="se-fl-container">
+      <div class="se-fl-center">
+        <span class="se-fl-eyebrow">Getting Started</span>
+        <h2>How to Order Custom Floor Graphics</h2>
+        <p class="se-fl-lead se-fl-lead--center">Three steps from first call to finished floor graphics.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 700px; margin: 0 auto;">
+        <div style="display: flex; gap: 18px; align-items: flex-start;">
+          <div style="flex-shrink: 0; width: 44px; height: 44px; background: var(--se-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--font-heading); font-size: 18px; font-weight: 700;">1</div>
+          <div>
+            <h3 style="font-size: 19px; margin-bottom: 4px;">Tell Us What You Need</h3>
+            <p style="margin: 0; font-size: 15px; color: var(--se-text-light);">Call <a href="tel:+19782732992">(978) 273-2992</a> or <a href="https://signseast.com/contact-us/">submit a quote request</a>. Let us know the type, size, quantity, surface material, and whether you need indoor or outdoor graphics. Send your artwork if you have it.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 18px; align-items: flex-start;">
+          <div style="flex-shrink: 0; width: 44px; height: 44px; background: var(--se-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--font-heading); font-size: 18px; font-weight: 700;">2</div>
+          <div>
+            <h3 style="font-size: 19px; margin-bottom: 4px;">Approve Your Proof</h3>
+            <p style="margin: 0; font-size: 15px; color: var(--se-text-light);">We send a digital proof for your review. Check the layout, colors, and sizing. Request changes until it is right. Nothing prints without your approval.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 18px; align-items: flex-start;">
+          <div style="flex-shrink: 0; width: 44px; height: 44px; background: var(--se-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--font-heading); font-size: 18px; font-weight: 700;">3</div>
+          <div>
+            <h3 style="font-size: 19px; margin-bottom: 4px;">We Print and Deliver</h3>
+            <p style="margin: 0; font-size: 15px; color: var(--se-text-light);">Once approved, we print, laminate with anti-slip finish, and ship or hand-deliver your floor graphics. Application instructions included. Need <a href="https://signseast.com/vinyl-letter-graphics/">vinyl graphics</a> for other surfaces too? We handle that.</p>
+          </div>
+        </div>
+      </div>
+      <div class="se-fl-btn-row se-fl-btn-row--center" style="margin-top: 40px;">
+        <a href="https://signseast.com/contact-us/" class="se-fl-btn se-fl-btn--primary">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 9: FAQ (5 questions)
+       ================================================ -->
+  <section class="se-fl-section">
+    <div class="se-fl-container">
+      <div class="se-fl-faq-container">
+        <div class="se-fl-faq-header">
+          <h2>Frequently Asked Questions About Floor Graphics</h2>
+          <p>Common questions about materials, durability, and ordering.</p>
+        </div>
+        <div class="se-fl-faq-list">
+          <div class="se-fl-faq-item">
+            <button class="se-fl-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What are floor graphics made of?
+              <span class="se-fl-faq-icon"></span>
+            </button>
+            <div class="se-fl-faq-answer">
+              <div class="se-fl-faq-answer-inner">
+                <p>Our floor graphics are printed on commercial-grade vinyl with an anti-slip laminate overlay. The vinyl substrate is available in both permanent and removable adhesive options. For outdoor use, we print on UV-resistant vinyl rated for extended weather exposure.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-fl-faq-item">
+            <button class="se-fl-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Are your floor graphics anti-slip and safe to walk on?
+              <span class="se-fl-faq-icon"></span>
+            </button>
+            <div class="se-fl-faq-answer">
+              <div class="se-fl-faq-answer-inner">
+                <p>Yes. Every floor graphic we produce includes a textured anti-slip laminate that meets commercial slip-resistance standards. This finish is suitable for high-traffic areas, wet environments, and public spaces where safety is a requirement.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-fl-faq-item">
+            <button class="se-fl-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              Can floor graphics be removed without damaging the floor?
+              <span class="se-fl-faq-icon"></span>
+            </button>
+            <div class="se-fl-faq-answer">
+              <div class="se-fl-faq-answer-inner">
+                <p>Yes, when using our removable adhesive option. These floor decals peel up cleanly without leaving residue or damaging finished surfaces. They are the right choice for events, seasonal promotions, and temporary installations. Permanent adhesive is available for long-term applications.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-fl-faq-item">
+            <button class="se-fl-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              How long do floor graphics last indoors vs. outdoors?
+              <span class="se-fl-faq-icon"></span>
+            </button>
+            <div class="se-fl-faq-answer">
+              <div class="se-fl-faq-answer-inner">
+                <p>Indoor floor graphics on smooth surfaces typically last one to three years depending on foot traffic. Outdoor floor graphics are rated for six months to one year depending on weather exposure and surface conditions. Higher-traffic areas will show wear sooner.</p>
+              </div>
+            </div>
+          </div>
+          <div class="se-fl-faq-item">
+            <button class="se-fl-faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+              What sizes are available for custom floor decals?
+              <span class="se-fl-faq-icon"></span>
+            </button>
+            <div class="se-fl-faq-answer">
+              <div class="se-fl-faq-answer-inner">
+                <p>We offer standard sizes including 12x12, 24x24, and 36x36 inches, plus fully custom dimensions and die-cut shapes. For floor wraps covering larger areas, we print multi-panel installations in any size your space requires. Contact us at <a href="tel:+19782732992">(978) 273-2992</a> with your measurements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       Section 10: Final CTA
+       ================================================ -->
+  <section class="se-fl-final-cta">
+    <div class="se-fl-container">
+      <h2>Ready to Put Your Brand on the Floor?</h2>
+      <p>Tell us about your space and we will recommend the right floor graphic solution. Call, email, or fill out our form.</p>
+      <div class="se-fl-btn-row se-fl-btn-row--center">
+        <a href="https://signseast.com/contact-us/" class="se-fl-btn se-fl-btn--primary">Request a Quote</a>
+        <a href="tel:+19782732992" class="se-fl-btn se-fl-btn--outline">Call (978) 273-2992</a>
+      </div>
+    </div>
+  </section>
+
+</div>
