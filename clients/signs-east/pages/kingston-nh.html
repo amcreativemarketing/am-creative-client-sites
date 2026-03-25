@@ -1,0 +1,820 @@
+<!-- Signs East - Kingston, NH Location Page
+     Content between hero and footer
+     H1 is in hero section: Custom Signs & Signage Solutions in Kingston, NH
+     Phone: (978) 818-1740
+     No schema, no meta tags, no microdata - OTTO handles SEO markup
+     All images: alt="" empty - OTTO generates alt text
+-->
+
+<style>
+/* ============================================
+   Signs East - Kingston NH Location Page
+   Namespace: .se-kn-
+   Mobile-first approach
+   ============================================ */
+
+:root {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --button-radius: 30px;
+  --container-max-width: 1140px;
+}
+
+.se-kn-section { padding: 50px 20px; }
+
+.se-kn-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.se-kn-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--se-primary);
+  margin-bottom: 12px;
+}
+
+.se-kn-section h2 { font-family: var(--font-heading); font-size: 28px; color: var(--se-dark); margin: 0 0 16px; line-height: 1.25; }
+.se-kn-section h3 { font-family: var(--font-heading); font-size: 22px; color: var(--se-dark); margin: 0 0 12px; line-height: 1.3; }
+.se-kn-section p { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--se-text); margin: 0 0 16px; }
+
+.se-kn-lead { font-size: 18px; color: var(--se-text-light); max-width: 720px; }
+
+.se-kn-center,
+.se-kn-center h2,
+.se-kn-center h3,
+.se-kn-center p,
+.se-kn-center span { text-align: center !important; }
+
+.se-kn-center .se-kn-lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.se-kn-btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: var(--button-radius);
+  text-decoration: none;
+  transition: background 0.3s, transform 0.15s;
+  cursor: pointer;
+  min-height: 48px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.se-kn-btn--primary { background: var(--se-primary); color: var(--se-white); }
+.se-kn-btn--primary:hover { background: var(--se-primary-hover); transform: translateY(-1px); }
+.se-kn-btn--outline { background: transparent; color: var(--se-primary); border: 2px solid var(--se-primary); }
+.se-kn-btn--outline:hover { background: var(--se-primary); color: var(--se-white); }
+.se-kn-btn--white { background: var(--se-white); color: var(--se-dark); }
+.se-kn-btn--white:hover { background: var(--se-bg-light); transform: translateY(-1px); }
+
+.se-kn-btn-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+.se-kn-btn-row--center { justify-content: center; }
+
+.se-kn-light { background: var(--se-bg-light); }
+
+
+/* ============================================
+   Section 1: Intro Split
+   ============================================ */
+.se-kn-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.se-kn-intro-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+
+.se-kn-intro-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.se-kn-intro-text ul li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--se-text);
+  padding: 8px 0 8px 28px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.se-kn-intro-text ul li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--se-primary);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+/* ============================================
+   Section 2: Services Grid (icon cards)
+   ============================================ */
+.se-kn-svc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.se-kn-svc-card {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 24px 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  text-align: center !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.se-kn-svc-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+}
+
+.se-kn-svc-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--se-primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.se-kn-svc-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--se-white);
+}
+
+.se-kn-svc-card h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+  text-align: center !important;
+}
+
+.se-kn-svc-card p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: var(--se-text-light);
+  text-align: center !important;
+}
+
+.se-kn-svc-card a {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--se-primary);
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.se-kn-svc-card a:hover { text-decoration: underline; }
+
+
+/* ============================================
+   Section 3: Why Choose Us (numbered list)
+   ============================================ */
+.se-kn-why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.se-kn-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.se-kn-reason {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.se-kn-reason-num {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--se-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--se-white);
+}
+
+.se-kn-reason h3 { font-size: 18px; margin-bottom: 4px; }
+.se-kn-reason p { font-size: 15px; margin: 0; color: var(--se-text-light); }
+
+.se-kn-why-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+
+/* ============================================
+   Section 4: Service Area + Map
+   ============================================ */
+.se-kn-area-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.se-kn-map-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.se-kn-map-wrap iframe {
+  width: 100%;
+  height: 350px;
+  display: block;
+}
+
+.se-kn-town-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.se-kn-town-pill {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--se-dark);
+  background: var(--se-white);
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 6px 16px;
+}
+
+.se-kn-town-pill--hq {
+  background: var(--se-primary);
+  color: var(--se-white);
+  border-color: var(--se-primary);
+}
+
+
+/* ============================================
+   Section 5: Mid-page Photo CTA
+   ============================================ */
+.se-kn-photo-cta {
+  position: relative;
+  padding: 80px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.se-kn-photo-cta::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(25,25,25,0.78);
+}
+
+.se-kn-photo-cta .se-kn-container {
+  position: relative;
+  z-index: 1;
+  text-align: center !important;
+}
+
+.se-kn-photo-cta h2 { color: var(--se-white) !important; }
+.se-kn-photo-cta p { color: rgba(255,255,255,0.9) !important; font-size: 18px; max-width: 640px; margin: 0 auto 28px !important; }
+
+
+/* ============================================
+   Section 6: Testimonials (3-column cards)
+   ============================================ */
+.se-kn-reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.se-kn-review-card {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 30px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.se-kn-review-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--se-primary);
+  border-radius: 10px 10px 0 0;
+}
+
+.se-kn-review-stars { color: #f5a623; font-size: 18px; margin-bottom: 14px; letter-spacing: 2px; }
+
+.se-kn-review-text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--se-text);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.se-kn-review-author { font-family: var(--font-body); font-size: 14px; font-weight: 700; color: var(--se-dark); }
+.se-kn-review-source { font-size: 13px; color: var(--se-text-light); font-weight: 400; }
+
+.se-kn-reviews-footer { text-align: center; margin-top: 30px; }
+.se-kn-reviews-footer p { font-size: 15px; color: var(--se-text-light); }
+.se-kn-reviews-footer a { color: var(--se-primary); font-weight: 700; text-decoration: none; }
+.se-kn-reviews-footer a:hover { text-decoration: underline; }
+
+
+/* ============================================
+   Section 7: FAQ Accordion
+   ============================================ */
+.se-kn-faq-wrap { max-width: 800px; margin: 0 auto; }
+
+.se-kn-faq-list { display: flex; flex-direction: column; gap: 14px; }
+
+.se-kn-faq-item {
+  background-color: var(--se-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.se-kn-faq-item:hover { background-color: #ededed; }
+
+.se-kn-faq-q {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--se-dark);
+  transition: color 0.2s ease;
+  min-height: 44px;
+  line-height: 1.45;
+}
+
+.se-kn-faq-q:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--se-primary);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.se-kn-faq-toggle {
+  width: 24px; height: 24px; min-width: 24px;
+  position: relative; flex-shrink: 0;
+}
+
+.se-kn-faq-toggle::before,
+.se-kn-faq-toggle::after {
+  content: "";
+  position: absolute;
+  background-color: var(--se-primary);
+  transition: transform 0.3s ease;
+}
+
+.se-kn-faq-toggle::before { width: 14px; height: 2px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.se-kn-faq-toggle::after { width: 2px; height: 14px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.se-kn-faq-item.active .se-kn-faq-toggle::after { transform: translate(-50%, -50%) rotate(90deg); }
+
+.se-kn-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.se-kn-faq-item.active .se-kn-faq-a { max-height: 350px; }
+
+.se-kn-faq-a-inner { padding: 0 24px 20px; font-size: 16px; color: var(--se-text-light); line-height: 1.7; }
+.se-kn-faq-a-inner p { margin: 0; }
+.se-kn-faq-a-inner a { color: var(--se-primary); text-decoration: none; border-bottom: 1px solid var(--se-primary); }
+.se-kn-faq-a-inner a:hover { color: var(--se-primary-hover); border-color: var(--se-primary-hover); }
+
+
+/* ============================================
+   Section 8: Final CTA
+   ============================================ */
+.se-kn-final-cta {
+  text-align: center !important;
+  padding: 60px 20px;
+  background: var(--se-primary);
+}
+
+.se-kn-final-cta h2 { color: var(--se-white) !important; margin-bottom: 12px; }
+.se-kn-final-cta p { color: rgba(255,255,255,0.9) !important; font-size: 18px; max-width: 600px; margin: 0 auto 28px !important; }
+
+
+/* ============================================
+   Responsive: Tablet (768px+)
+   ============================================ */
+@media (min-width: 768px) {
+  .se-kn-section { padding: 70px 30px; }
+  .se-kn-section h2 { font-size: 34px; }
+
+  .se-kn-intro-grid { grid-template-columns: 1fr 1fr; gap: 50px; }
+  .se-kn-svc-grid { grid-template-columns: repeat(4, 1fr); }
+  .se-kn-why-grid { grid-template-columns: 1fr 1fr; gap: 50px; }
+  .se-kn-area-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .se-kn-reviews-grid { grid-template-columns: repeat(3, 1fr); }
+  .se-kn-photo-cta h2 { font-size: 34px; }
+}
+
+@media (min-width: 1024px) {
+  .se-kn-section { padding: 80px 30px; }
+  .se-kn-section h2 { font-size: 38px; }
+  .se-kn-intro-grid { gap: 70px; }
+  .se-kn-photo-cta { padding: 100px 30px; }
+  .se-kn-photo-cta h2 { font-size: 38px; }
+}
+</style>
+
+
+<!-- ================================================
+     Section 1: Intro — Your Local Sign Shop in Kingston
+     ================================================ -->
+<section class="se-kn-section">
+  <div class="se-kn-container">
+    <div class="se-kn-intro-grid">
+      <div class="se-kn-intro-text">
+        <span class="se-kn-eyebrow">Your Kingston Sign Shop</span>
+        <h2>Sign Company Serving Kingston, New Hampshire</h2>
+        <p>Signs East has been the go-to sign company for businesses in Kingston, NH and throughout Rockingham County since 2012. Located right on Route 125, our shop handles everything from custom storefront signs and vehicle graphics to sign repair, LED retrofits, and seasonal boat shrinkwrapping — all designed, fabricated, and installed by our team.</p>
+        <p>When you work with Signs East, you are working directly with the people who build and install your signs. No call centers, no middlemen, no three-month waits. Tor and the crew answer the phone, show up on time, and deliver work that lasts. See completed projects in our <a href="https://signseast.com/showcase/">project showcase</a>.</p>
+        <ul>
+          <li>Custom signs, banners, and business signage</li>
+          <li>Vehicle wraps, truck lettering, and fleet graphics</li>
+          <li>Sign repair, LED retrofits, and maintenance</li>
+          <li>Serving Kingston, Plaistow, Exeter, and all of Rockingham County</li>
+        </ul>
+        <div class="se-kn-btn-row">
+          <a href="https://signseast.com/contact-us/" class="se-kn-btn se-kn-btn--primary">Get a Quote for Your Kingston Business</a>
+          <a href="tel:+19788181740" class="se-kn-btn se-kn-btn--outline">Call (978) 818-1740</a>
+        </div>
+      </div>
+      <div class="se-kn-intro-img">
+        <img src="https://signseast.com/wp-content/uploads/2026/01/Tor-installing-beach-casino-sign-letter.webp" alt="" width="600" height="450" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 2: Services Grid
+     ================================================ -->
+<section class="se-kn-section se-kn-light">
+  <div class="se-kn-container">
+    <div class="se-kn-center">
+      <span class="se-kn-eyebrow">What We Do</span>
+      <h2>Our Sign Services in Kingston, NH</h2>
+      <p class="se-kn-lead">From a simple vinyl banner to a full illuminated storefront sign, we build it all right here in Kingston.</p>
+    </div>
+
+    <div class="se-kn-svc-grid">
+      <a href="https://signseast.com/sign-services/" class="se-kn-svc-card" style="text-decoration:none; color:inherit;">
+        <div class="se-kn-svc-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7V3H2v18h20V7H12zm-2 12H4v-2h6v2zm0-4H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 12h-8V9h8v10zm-2-8h-4v2h4v-2zm0 4h-4v2h4v-2z"/></svg>
+        </div>
+        <h3>Business Signs</h3>
+        <p>Storefront, lobby, and outdoor signage</p>
+      </a>
+      <a href="https://signseast.com/vehicle-graphics/" class="se-kn-svc-card" style="text-decoration:none; color:inherit;">
+        <div class="se-kn-svc-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+        </div>
+        <h3>Vehicle Graphics</h3>
+        <p>Wraps, lettering, and fleet branding</p>
+      </a>
+      <a href="https://signseast.com/banner-signs/" class="se-kn-svc-card" style="text-decoration:none; color:inherit;">
+        <div class="se-kn-svc-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+        </div>
+        <h3>Banners</h3>
+        <p>Indoor, outdoor, and event banners</p>
+      </a>
+      <a href="https://signseast.com/window-tinting/" class="se-kn-svc-card" style="text-decoration:none; color:inherit;">
+        <div class="se-kn-svc-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5z"/></svg>
+        </div>
+        <h3>Window Tinting</h3>
+        <p>Solar, privacy, and decorative film</p>
+      </a>
+      <a href="https://signseast.com/vinyl-letter-graphics/" class="se-kn-svc-card" style="text-decoration:none; color:inherit;">
+        <div class="se-kn-svc-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4v3h5v12h3V7h5V4h-13zm19 5h-9v3h3v7h3v-7h3V9z"/></svg>
+        </div>
+        <h3>Vinyl Lettering</h3>
+        <p>Cut vinyl for any smooth surface</p>
+      </a>
+      <a href="https://signseast.com/sign-repair/" class="se-kn-svc-card" style="text-decoration:none; color:inherit;">
+        <div class="se-kn-svc-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+        </div>
+        <h3>Sign Repair</h3>
+        <p>Repair, LED retrofits, maintenance</p>
+      </a>
+      <a href="https://signseast.com/wall-graphics-murals/" class="se-kn-svc-card" style="text-decoration:none; color:inherit;">
+        <div class="se-kn-svc-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+        </div>
+        <h3>Wall Graphics</h3>
+        <p>Murals, wraps, and interior branding</p>
+      </a>
+      <a href="https://signseast.com/floor-graphics/" class="se-kn-svc-card" style="text-decoration:none; color:inherit;">
+        <div class="se-kn-svc-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2l6 6-2 2-6-6 2-2zm10 0l-6 6 2 2 6-6-2-2zM3 14l6 6-2 2-6-6 2-2zm10 0l-6 6 2 2 6-6-2-2zm5-4l-6 6 2 2 6-6-2-2z"/></svg>
+        </div>
+        <h3>Floor Graphics</h3>
+        <p>Retail, event, and wayfinding decals</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 3: Why Kingston Businesses Choose Signs East
+     ================================================ -->
+<section class="se-kn-section">
+  <div class="se-kn-container">
+    <div class="se-kn-why-grid">
+      <div>
+        <span class="se-kn-eyebrow">Why Signs East</span>
+        <h2>Why Kingston Businesses Choose Signs East</h2>
+        <p>We have been building signs for New Hampshire businesses since 2012. Here is why local business owners keep coming back.</p>
+
+        <div class="se-kn-reasons">
+          <div class="se-kn-reason">
+            <div class="se-kn-reason-num">1</div>
+            <div>
+              <h3>We Are Right Here in Kingston</h3>
+              <p>Our shop is at 34 Route 125. You can walk in, see work in progress, and talk to the people who will actually build your sign. No phone trees, no corporate runaround.</p>
+            </div>
+          </div>
+          <div class="se-kn-reason">
+            <div class="se-kn-reason-num">2</div>
+            <div>
+              <h3>Fast Turnaround When It Matters</h3>
+              <p>Other sign companies make you wait months. We answer the phone, turn around proofs quickly, and get your project done on schedule. When your sign goes dark, we show up.</p>
+            </div>
+          </div>
+          <div class="se-kn-reason">
+            <div class="se-kn-reason-num">3</div>
+            <div>
+              <h3>Everything In-House</h3>
+              <p>Design, fabrication, printing, and installation — all handled by our team at our Kingston shop. No subcontractors, no finger-pointing when something needs to get done.</p>
+            </div>
+          </div>
+          <div class="se-kn-reason">
+            <div class="se-kn-reason-num">4</div>
+            <div>
+              <h3>3M Certified Materials</h3>
+              <p>We use 3M and Avery premium materials on every project. UV-resistant inks, commercial-grade substrates, and proper installation techniques built for New England weather.</p>
+            </div>
+          </div>
+          <div class="se-kn-reason">
+            <div class="se-kn-reason-num">5</div>
+            <div>
+              <h3>Owner-Operated Accountability</h3>
+              <p>Tor Larson started this company with $20 in 2012 and built it one customer at a time. When you call Signs East, you get the owner — not a call center. <a href="https://signseast.com/about-us/">Learn more about our story</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="se-kn-why-img">
+        <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_bernies-1.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 4: Service Area + Map
+     ================================================ -->
+<section class="se-kn-section se-kn-light">
+  <div class="se-kn-container">
+    <div class="se-kn-center" style="margin-bottom: 30px;">
+      <span class="se-kn-eyebrow">Service Area</span>
+      <h2>Serving Kingston and Surrounding NH Communities</h2>
+      <p class="se-kn-lead">Based at 34 Route 125 in Kingston, we serve businesses throughout Southern New Hampshire and the Seacoast region. If you are nearby, come visit the shop. If you are further out, we come to you.</p>
+    </div>
+
+    <div class="se-kn-area-grid">
+      <div>
+        <h3>Communities We Serve from Kingston</h3>
+        <p>Our Kingston location puts us within easy reach of every town in Rockingham County and beyond. We regularly work with businesses in all of these communities.</p>
+        <div class="se-kn-town-list">
+          <span class="se-kn-town-pill se-kn-town-pill--hq">Kingston (HQ)</span>
+          <span class="se-kn-town-pill">Plaistow</span>
+          <span class="se-kn-town-pill">Exeter</span>
+          <span class="se-kn-town-pill">Hampton</span>
+          <span class="se-kn-town-pill">Salem</span>
+          <span class="se-kn-town-pill">Sandown</span>
+          <span class="se-kn-town-pill">Newton</span>
+          <span class="se-kn-town-pill">Danville</span>
+          <span class="se-kn-town-pill">East Kingston</span>
+          <span class="se-kn-town-pill">Atkinson</span>
+          <span class="se-kn-town-pill">Hampstead</span>
+          <span class="se-kn-town-pill">Raymond</span>
+          <span class="se-kn-town-pill">Fremont</span>
+          <span class="se-kn-town-pill">Brentwood</span>
+          <span class="se-kn-town-pill">Derry</span>
+          <span class="se-kn-town-pill">Portsmouth</span>
+        </div>
+        <div class="se-kn-btn-row">
+          <a href="https://signseast.com/contact-us/" class="se-kn-btn se-kn-btn--primary">Contact Us About Your Project</a>
+        </div>
+      </div>
+      <div class="se-kn-map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93514.10836341855!2d-71.14356433540638!3d42.90837850247221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2fba52b16867f%3A0xcb1b2a28c30e30cb!2sKingston%2C%20NH!5e0!3m2!1sen!2sus!4v1774474547915!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 5: Mid-Page Photo CTA
+     ================================================ -->
+<section class="se-kn-photo-cta" style="background-image: url('https://signseast.com/wp-content/uploads/2025/11/IMG_6130-min-scaled.webp');">
+  <div class="se-kn-container">
+    <h2>When Failure Is Not an Option, We Are the Team to Call</h2>
+    <p>Whether you need a new storefront sign, vehicle graphics for your fleet, or an emergency sign repair — our Kingston team handles it all, start to finish.</p>
+    <div class="se-kn-btn-row se-kn-btn-row--center">
+      <a href="https://signseast.com/contact-us/" class="se-kn-btn se-kn-btn--white">Request Your Quote</a>
+      <a href="tel:+19788181740" class="se-kn-btn se-kn-btn--outline" style="border-color: #fff; color: #fff;">Call (978) 818-1740</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 6: Testimonials (3-column cards)
+     ================================================ -->
+<section class="se-kn-section">
+  <div class="se-kn-container">
+    <div class="se-kn-center">
+      <span class="se-kn-eyebrow">What Our Customers Say</span>
+      <h2>Trusted by Businesses Across Southern New Hampshire</h2>
+    </div>
+
+    <div class="se-kn-reviews-grid">
+      <div class="se-kn-review-card">
+        <div class="se-kn-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="se-kn-review-text">"Always happy to work with the Signs East crew. They work diligently to make sure the product they are producing is completed in a timely manner and exactly to your liking. Will definitely be requesting their services again."</p>
+        <div class="se-kn-review-author">Gordon S. <span class="se-kn-review-source">· Google Review</span></div>
+      </div>
+
+      <div class="se-kn-review-card">
+        <div class="se-kn-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="se-kn-review-text">"I've asked Tor to do all my trucks, equipment and trailers. Each time has been a little different request and he always pulls through. He has coordinated lettering my equipment around vacations and is extremely attentive. His skill and communication is second to none and is by far the best at what he does. 10 stars for sure."</p>
+        <div class="se-kn-review-author">Benny R. <span class="se-kn-review-source">· Google Review</span></div>
+      </div>
+
+      <div class="se-kn-review-card">
+        <div class="se-kn-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="se-kn-review-text">"Top quality products along with top of the line work! Tor will truly do right by you. Signs East will bring the presence of your company to the next level!!!"</p>
+        <div class="se-kn-review-author">Charles M. <span class="se-kn-review-source">· Google Review</span></div>
+      </div>
+    </div>
+
+    <div class="se-kn-reviews-footer">
+      <p>4.9 stars from 79+ reviews on Google · <a href="https://www.google.com/maps/place/Signs+East+LLC./data=!4m2!3m1!1s0x0:0x8f8ea67732ea31d2?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener">Read All Reviews</a></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 7: FAQ Accordion
+     ================================================ -->
+<section class="se-kn-section se-kn-light">
+  <div class="se-kn-container">
+    <div class="se-kn-faq-wrap">
+      <div class="se-kn-center" style="margin-bottom: 40px;">
+        <span class="se-kn-eyebrow">Common Questions</span>
+        <h2>Frequently Asked Questions About Signs in Kingston, NH</h2>
+      </div>
+      <div class="se-kn-faq-list">
+        <div class="se-kn-faq-item">
+          <button class="se-kn-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            Does Signs East serve Kingston, NH?
+            <span class="se-kn-faq-toggle"></span>
+          </button>
+          <div class="se-kn-faq-a">
+            <div class="se-kn-faq-a-inner">
+              <p>Yes — Kingston is our home base. Our shop is located at 34 Route 125 in Kingston, NH 03848. We serve Kingston and all of Rockingham County, including Plaistow, Sandown, Newton, Danville, East Kingston, Exeter, and surrounding communities. <a href="https://signseast.com/contact-us/">Contact us</a> to discuss your project.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-kn-faq-item">
+          <button class="se-kn-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            What types of signs do you make for Kingston businesses?
+            <span class="se-kn-faq-toggle"></span>
+          </button>
+          <div class="se-kn-faq-a">
+            <div class="se-kn-faq-a-inner">
+              <p>We offer a full range of business signage including storefront signs, channel letters, illuminated sign cabinets, vinyl banners, vehicle wraps and truck lettering, window graphics, wall murals, ADA signs, monument signs, pole and pylon signs, and construction signage. We also handle sign repair, LED retrofits, and flagpole services.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-kn-faq-item">
+          <button class="se-kn-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            How long does it take to get a custom sign in Kingston, NH?
+            <span class="se-kn-faq-toggle"></span>
+          </button>
+          <div class="se-kn-faq-a">
+            <div class="se-kn-faq-a-inner">
+              <p>Turnaround times depend on the type and complexity of the project. Simple vinyl lettering and banners can often be completed in a few days. Fabricated signs, channel letters, and illuminated signs take longer depending on permitting and material requirements. We are known for fast turnaround — when other shops make customers wait months, we get it done.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-kn-faq-item">
+          <button class="se-kn-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            Do you handle sign installation in Kingston and Southern NH?
+            <span class="se-kn-faq-toggle"></span>
+          </button>
+          <div class="se-kn-faq-a">
+            <div class="se-kn-faq-a-inner">
+              <p>Yes. We handle professional sign installation throughout Southern New Hampshire, including Kingston, Plaistow, Exeter, Hampton, Salem, Derry, Portsmouth, and surrounding communities. We also assist with local permitting where required — every town has different sign regulations, and we know the process in most towns we serve.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-kn-faq-item">
+          <button class="se-kn-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            How do I get a quote for signs in Kingston, NH?
+            <span class="se-kn-faq-toggle"></span>
+          </button>
+          <div class="se-kn-faq-a">
+            <div class="se-kn-faq-a-inner">
+              <p>The easiest way is to <a href="https://signseast.com/contact-us/">fill out our contact form</a> or call us directly at <a href="tel:+19788181740">(978) 818-1740</a>. Tell us what you need, and we will put together a detailed estimate. You are also welcome to stop by our shop at 34 Route 125 in Kingston to talk about your project in person.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 8: Final CTA
+     ================================================ -->
+<section class="se-kn-final-cta">
+  <div class="se-kn-container">
+    <h2>Ready to Get Started on Your Kingston Sign Project?</h2>
+    <p>Visit our shop at 34 Route 125 in Kingston, call us, or send a message. Custom signs, vehicle graphics, banners, repairs — we handle it all.</p>
+    <div class="se-kn-btn-row se-kn-btn-row--center">
+      <a href="https://signseast.com/contact-us/" class="se-kn-btn se-kn-btn--white">Request Your Quote</a>
+      <a href="tel:+19788181740" class="se-kn-btn se-kn-btn--outline" style="border-color: #fff; color: #fff;">Call (978) 818-1740</a>
+    </div>
+  </div>
+</section>
