@@ -1,0 +1,1173 @@
+<!-- Signs East - Boat Graphics & Wraps Page
+     Content between hero and footer
+     H1 is in hero section: Custom Boat Wraps & Boat Graphics for Every Vessel
+     Phone: (978) 818-1740
+     No schema, no meta tags, no microdata - OTTO handles SEO markup
+     All images: alt="" empty - OTTO generates alt text
+-->
+
+<style>
+/* ============================================
+   Signs East - Boat Graphics & Wraps Styles
+   Namespace: .se-bg-
+   Mobile-first approach
+   ============================================ */
+
+:root {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --button-radius: 30px;
+  --container-max-width: 1140px;
+}
+
+.se-bg-section {
+  padding: 50px 20px;
+}
+
+.se-bg-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.se-bg-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--se-primary);
+  margin-bottom: 12px;
+}
+
+.se-bg-section h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--se-dark);
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+.se-bg-section h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--se-dark);
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.se-bg-section p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--se-text);
+  margin: 0 0 16px;
+}
+
+.se-bg-lead {
+  font-size: 18px;
+  color: var(--se-text-light);
+  max-width: 720px;
+}
+
+.se-bg-lead--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.se-bg-center { text-align: center !important; }
+.se-bg-center h2 { text-align: center !important; }
+.se-bg-center h3 { text-align: center !important; }
+.se-bg-center p { text-align: center !important; }
+.se-bg-center span { text-align: center !important; }
+.se-bg-center .se-bg-lead { text-align: center !important; margin-left: auto; margin-right: auto; }
+
+.se-bg-svc-panel,
+.se-bg-svc-panel h3,
+.se-bg-svc-panel p { text-align: center !important; }
+
+.se-bg-compare-col,
+.se-bg-compare-col h3 { text-align: center !important; }
+
+.se-bg-timeline-step,
+.se-bg-timeline-step h3,
+.se-bg-timeline-step p { text-align: center !important; }
+
+.se-bg-photo-cta .se-bg-container,
+.se-bg-photo-cta h2,
+.se-bg-photo-cta p { text-align: center !important; }
+
+.se-bg-final-cta,
+.se-bg-final-cta h2,
+.se-bg-final-cta p { text-align: center !important; }
+
+.se-bg-btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: var(--button-radius);
+  text-decoration: none;
+  transition: background 0.3s, transform 0.15s;
+  cursor: pointer;
+  min-height: 48px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.se-bg-btn--primary {
+  background: var(--se-primary);
+  color: var(--se-white);
+}
+
+.se-bg-btn--primary:hover {
+  background: var(--se-primary-hover);
+  transform: translateY(-1px);
+}
+
+.se-bg-btn--outline {
+  background: transparent;
+  color: var(--se-primary);
+  border: 2px solid var(--se-primary);
+}
+
+.se-bg-btn--outline:hover {
+  background: var(--se-primary);
+  color: var(--se-white);
+}
+
+.se-bg-btn--white {
+  background: var(--se-white);
+  color: var(--se-dark);
+}
+
+.se-bg-btn--white:hover {
+  background: var(--se-bg-light);
+  transform: translateY(-1px);
+}
+
+.se-bg-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.se-bg-btn-row--center { justify-content: center; }
+
+.se-bg-light { background: var(--se-bg-light); }
+
+
+/* ============================================
+   Section 1: Intro (Image left, text right)
+   ============================================ */
+.se-bg-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.se-bg-intro-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+
+.se-bg-intro-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.se-bg-intro-checklist li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--se-text);
+  padding: 8px 0 8px 28px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.se-bg-intro-checklist li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--se-primary);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+/* ============================================
+   Section 2: Service Breakdown (Tabbed look)
+   ============================================ */
+.se-bg-services-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.se-bg-svc-panel {
+  padding: 32px 28px;
+  border-top: 4px solid var(--se-primary);
+  background: var(--se-white);
+}
+
+.se-bg-svc-panel + .se-bg-svc-panel {
+  border-top: 4px solid var(--se-primary);
+  margin-top: 1px;
+  box-shadow: 0 -1px 0 #e8e8e8;
+}
+
+.se-bg-svc-panel h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.se-bg-svc-panel p {
+  margin-bottom: 0;
+  font-size: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.se-bg-svc-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--se-white);
+  background: var(--se-primary);
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
+/* ============================================
+   Section 3: Vessel Types (Photo Mosaic)
+   ============================================ */
+.se-bg-mosaic {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.se-bg-mosaic-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--se-dark);
+}
+
+.se-bg-mosaic-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.se-bg-mosaic-item:hover img { opacity: 1; }
+
+.se-bg-mosaic-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(25,25,25,0.85));
+}
+
+.se-bg-mosaic-caption h3 {
+  color: var(--se-white);
+  font-size: 20px;
+  margin: 0 0 4px;
+}
+
+.se-bg-mosaic-caption p {
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  margin: 0;
+}
+
+
+/* ============================================
+   Section 4: Wrap vs Paint Comparison
+   ============================================ */
+.se-bg-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.se-bg-compare-col {
+  border-radius: 10px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.se-bg-compare-col--wrap {
+  background: var(--se-white);
+  border: 2px solid var(--se-primary);
+}
+
+.se-bg-compare-col--paint {
+  background: var(--se-bg-light);
+  border: 2px solid #ddd;
+}
+
+.se-bg-compare-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.se-bg-compare-col--wrap .se-bg-compare-badge {
+  background: var(--se-primary);
+  color: var(--se-white);
+}
+
+.se-bg-compare-col--paint .se-bg-compare-badge {
+  background: #ddd;
+  color: var(--se-text);
+}
+
+.se-bg-compare-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px auto 0;
+  max-width: 340px;
+  text-align: left;
+}
+
+.se-bg-compare-list li {
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 8px 0 8px 28px;
+  position: relative;
+  line-height: 1.5;
+  color: var(--se-text);
+}
+
+.se-bg-compare-col--wrap .se-bg-compare-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--se-primary);
+  font-weight: 700;
+}
+
+.se-bg-compare-col--paint .se-bg-compare-list li::before {
+  content: "\2717";
+  position: absolute;
+  left: 0;
+  color: #999;
+  font-weight: 700;
+}
+
+
+/* ============================================
+   Section 5: Process Timeline (Centered)
+   ============================================ */
+.se-bg-timeline {
+  max-width: 700px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.se-bg-timeline-dot {
+  width: 44px;
+  height: 44px;
+  background: var(--se-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--se-white);
+  margin: 0 auto 14px;
+}
+
+.se-bg-timeline-step h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.se-bg-timeline-step p {
+  font-size: 15px;
+  color: var(--se-text-light);
+  margin: 0 auto;
+  max-width: 560px;
+}
+
+
+/* ============================================
+   Section 6: Mid-page CTA (photo background)
+   ============================================ */
+.se-bg-photo-cta {
+  position: relative;
+  padding: 80px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.se-bg-photo-cta::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(25,25,25,0.78);
+}
+
+.se-bg-photo-cta .se-bg-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.se-bg-photo-cta h2 {
+  color: var(--se-white);
+}
+
+.se-bg-photo-cta p {
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+
+
+/* ============================================
+   Section 7: Testimonials (3-column cards)
+   ============================================ */
+.se-bg-reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.se-bg-review-card {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 30px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.se-bg-review-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--se-primary);
+  border-radius: 10px 10px 0 0;
+}
+
+.se-bg-review-stars {
+  color: #f5a623;
+  font-size: 18px;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+}
+
+.se-bg-review-text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--se-text);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.se-bg-review-author {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--se-dark);
+}
+
+.se-bg-review-source {
+  font-size: 13px;
+  color: var(--se-text-light);
+  font-weight: 400;
+}
+
+.se-bg-reviews-footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.se-bg-reviews-footer p {
+  font-size: 15px;
+  color: var(--se-text-light);
+}
+
+.se-bg-reviews-footer a {
+  color: var(--se-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.se-bg-reviews-footer a:hover { text-decoration: underline; }
+
+
+/* ============================================
+   Section 8: Related Services
+   ============================================ */
+.se-bg-related-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.se-bg-related-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: var(--se-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 4px solid var(--se-primary);
+}
+
+.se-bg-related-link:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.se-bg-related-link span {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--se-dark);
+}
+
+.se-bg-related-link .se-bg-arrow {
+  font-size: 18px;
+  color: var(--se-primary);
+  font-weight: 700;
+}
+
+
+/* ============================================
+   Section 9: FAQ Accordion (matching other pages)
+   ============================================ */
+.se-bg-faq-wrap { max-width: 800px; margin: 0 auto; }
+
+.se-bg-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.se-bg-faq-item {
+  background-color: var(--se-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.se-bg-faq-item:hover { background-color: #ededed; }
+
+.se-bg-faq-q {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--se-dark);
+  transition: color 0.2s ease;
+  min-height: 44px;
+  line-height: 1.45;
+}
+
+.se-bg-faq-q:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--se-primary);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.se-bg-faq-toggle {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.se-bg-faq-toggle::before,
+.se-bg-faq-toggle::after {
+  content: "";
+  position: absolute;
+  background-color: var(--se-primary);
+  transition: transform 0.3s ease;
+}
+
+.se-bg-faq-toggle::before {
+  width: 14px; height: 2px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-bg-faq-toggle::after {
+  width: 2px; height: 14px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-bg-faq-item.active .se-bg-faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-bg-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-bg-faq-item.active .se-bg-faq-a { max-height: 350px; }
+
+.se-bg-faq-a-inner {
+  padding: 0 24px 20px;
+  font-size: 16px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-bg-faq-a-inner p { margin: 0; }
+
+.se-bg-faq-a-inner a {
+  color: var(--se-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--se-primary);
+}
+
+.se-bg-faq-a-inner a:hover {
+  color: var(--se-primary-hover);
+  border-color: var(--se-primary-hover);
+}
+
+
+/* ============================================
+   Section 10: Final CTA
+   ============================================ */
+.se-bg-final-cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--se-primary);
+}
+
+.se-bg-final-cta h2 {
+  color: var(--se-white);
+  margin-bottom: 12px;
+}
+
+.se-bg-final-cta p {
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+
+/* ============================================
+   Responsive: Tablet (768px+)
+   ============================================ */
+@media (min-width: 768px) {
+  .se-bg-section { padding: 70px 30px; }
+  .se-bg-section h2 { font-size: 34px; }
+
+  .se-bg-intro-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .se-bg-mosaic {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .se-bg-compare-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .se-bg-related-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .se-bg-reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .se-bg-photo-cta h2 { font-size: 34px; }
+}
+
+
+/* ============================================
+   Responsive: Desktop (1024px+)
+   ============================================ */
+@media (min-width: 1024px) {
+  .se-bg-section { padding: 80px 30px; }
+  .se-bg-section h2 { font-size: 38px; }
+
+  .se-bg-intro-grid { gap: 70px; }
+
+  .se-bg-mosaic {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .se-bg-mosaic-item:first-child {
+    grid-row: span 2;
+  }
+
+  .se-bg-mosaic-item:first-child img {
+    height: 100%;
+    min-height: 400px;
+  }
+
+  .se-bg-photo-cta {
+    padding: 100px 30px;
+  }
+
+  .se-bg-photo-cta h2 { font-size: 38px; }
+
+  .se-bg-related-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .se-bg-faq-q { font-size: 16px; padding: 18px 20px; }
+  .se-bg-faq-a-inner { padding: 0 20px 18px; font-size: 15px; }
+}
+</style>
+
+
+<!-- ================================================
+     Section 1: Intro
+     ================================================ -->
+<section class="se-bg-section">
+  <div class="se-bg-container">
+    <div class="se-bg-intro-grid">
+      <div class="se-bg-intro-img">
+        <img src="https://signseast.com/wp-content/uploads/2026/03/Boat-Wrap-scaled.jpg" alt="" width="600" height="450" loading="lazy">
+      </div>
+      <div>
+        <span class="se-bg-eyebrow">Boat Wraps & Marine Graphics</span>
+        <h2>Custom Boat Wraps and Graphics Built to Handle the Water</h2>
+        <p>Your boat takes a beating out there. Sun, salt, waves, dock rash — whatever the water throws at it. Signs East designs and installs marine-grade vinyl wraps and graphics that protect your hull while turning heads at every marina, launch ramp, and anchorage across the New Hampshire Seacoast and North Shore of Massachusetts.</p>
+        <p>We handle everything from full hull wraps and partial accent graphics to boat name lettering, registration numbers, and custom decals. Every job uses marine-grade cast vinyl rated for UV exposure, saltwater, and years of use on the water. Check out completed projects in our <a href="https://signseast.com/showcase/">project showcase</a>.</p>
+        <ul class="se-bg-intro-checklist">
+          <li>Full and partial boat wraps for any vessel</li>
+          <li>Custom lettering, decals, and registration numbers</li>
+          <li>Marine-grade 3M vinyl with UV and salt resistance</li>
+          <li>Pontoons, bass boats, sailboats, and personal watercraft</li>
+        </ul>
+        <div class="se-bg-btn-row">
+          <a href="https://signseast.com/contact-us/" class="se-bg-btn se-bg-btn--primary">Get a Boat Wrap Quote</a>
+          <a href="tel:+19788181740" class="se-bg-btn se-bg-btn--outline">Call (978) 818-1740</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 2: Service Breakdown (Stacked panels)
+     ================================================ -->
+<section class="se-bg-section se-bg-light">
+  <div class="se-bg-container">
+    <div class="se-bg-center">
+      <span class="se-bg-eyebrow">What We Do</span>
+      <h2>Full Boat Wraps, Partial Wraps and Vinyl Graphics</h2>
+      <p class="se-bg-lead se-bg-lead--center">From a complete color change to a simple name on the transom, we match the right product to your boat and your budget.</p>
+    </div>
+
+    <div class="se-bg-services-row">
+      <div class="se-bg-svc-panel">
+        <span class="se-bg-svc-tag">Most Popular</span>
+        <h3>Full Hull Boat Wraps</h3>
+        <p>A complete transformation of your boat's exterior. Full hull wraps cover the entire visible surface with marine-grade cast vinyl, giving you unlimited design options while protecting the gelcoat underneath. Custom colors, patterns, graphics, or brand wraps — if you can picture it, we can build it.</p>
+      </div>
+      <div class="se-bg-svc-panel">
+        <h3>Partial Boat Wraps and Accent Graphics</h3>
+        <p>Want to add color or branding without wrapping the entire hull? Partial wraps and accent stripes let you customize specific areas — the bow, stern, waterline stripe, or transom panel — at a fraction of the cost of a full wrap. These work especially well for adding sponsor logos, racing graphics, or color accents to match your trailer.</p>
+      </div>
+      <div class="se-bg-svc-panel">
+        <h3>Boat Lettering, Decals and Registration Numbers</h3>
+        <p>Custom boat name lettering, hailing port text, and marine vinyl decals cut and installed to your specifications. We also produce state-compliant <a href="https://signseast.com/vinyl-letter-graphics/">registration numbers</a> in the correct size, font, and color to meet NH and MA requirements. From classic serif text to modern display fonts — we match the style to your vessel.</p>
+      </div>
+      <div class="se-bg-svc-panel">
+        <h3>Marine Vinyl Wrap Installation</h3>
+        <p>Every installation is handled by our trained team using marine-specific application techniques. We prep the surface, manage compound curves and hull geometry, and seal every edge against water intrusion. The result is a wrap that stays tight and looks sharp through years of use, trailering, and New England weather.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 3: Vessel Types (Photo Mosaic)
+     ================================================ -->
+<section class="se-bg-section">
+  <div class="se-bg-container">
+    <div class="se-bg-center">
+      <span class="se-bg-eyebrow">Boats We Wrap</span>
+      <h2>Pontoon Boat Wraps, Bass Boat Wraps and More</h2>
+      <p class="se-bg-lead se-bg-lead--center">Virtually any boat can be wrapped. Here are some of the vessel types we work on regularly.</p>
+    </div>
+
+    <div class="se-bg-mosaic">
+      <div class="se-bg-mosaic-item">
+        <img src="https://signseast.com/wp-content/uploads/2025/11/487506526_1127319686077146_7694367013230652990_n.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+        <div class="se-bg-mosaic-caption">
+          <h3>Pontoon and Deck Boats</h3>
+          <p>Full and partial wraps for flat-panel pontoons and deck boats</p>
+        </div>
+      </div>
+      <div class="se-bg-mosaic-item">
+        <img src="https://signseast.com/wp-content/uploads/2025/11/IMG_7138-min.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+        <div class="se-bg-mosaic-caption">
+          <h3>Bass and Fishing Boats</h3>
+          <p>Custom wraps and sponsor graphics for tournament and recreation</p>
+        </div>
+      </div>
+      <div class="se-bg-mosaic-item">
+        <img src="https://signseast.com/wp-content/uploads/2026/03/IMG_6408-scaled.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
+        <div class="se-bg-mosaic-caption">
+          <h3>Center Console and Cruisers</h3>
+          <p>Name lettering, hull accents, and full wraps for larger vessels</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="se-bg-center" style="margin-top: 30px;">
+      <p>We also wrap sailboats, ski boats, jet skis, kayaks, and personal watercraft. If it goes on the water, we can wrap it.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 4: Wrap vs Paint
+     ================================================ -->
+<section class="se-bg-section se-bg-light">
+  <div class="se-bg-container">
+    <div class="se-bg-center">
+      <span class="se-bg-eyebrow">Why Wrap?</span>
+      <h2>Boat Wraps vs. Paint: Which Is Better?</h2>
+      <p class="se-bg-lead se-bg-lead--center">For most boat owners, a vinyl wrap is the more practical and cost-effective choice. Here is how the two options compare.</p>
+    </div>
+
+    <div class="se-bg-compare-grid">
+      <div class="se-bg-compare-col se-bg-compare-col--wrap">
+        <span class="se-bg-compare-badge">Vinyl Wrap</span>
+        <h3>The Modern Choice</h3>
+        <ul class="se-bg-compare-list">
+          <li>Lower cost than a full marine paint job</li>
+          <li>Installed in 1-3 days vs. weeks for paint</li>
+          <li>Unlimited design options and custom graphics</li>
+          <li>Protects original gelcoat and preserves resale value</li>
+          <li>Removable — change the look without permanent commitment</li>
+          <li>UV-resistant marine vinyl rated for 5-7 years</li>
+        </ul>
+      </div>
+      <div class="se-bg-compare-col se-bg-compare-col--paint">
+        <span class="se-bg-compare-badge">Marine Paint</span>
+        <h3>The Traditional Route</h3>
+        <ul class="se-bg-compare-list">
+          <li>Higher cost ($5,000-$15,000+ for a full paint job)</li>
+          <li>Weeks of prep, application, and curing time</li>
+          <li>Limited to solid colors and simple designs</li>
+          <li>Permanent — no easy reversal</li>
+          <li>Chips, scratches, and oxidation over time</li>
+          <li>Requires professional touch-up and maintenance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 5: Process Timeline
+     ================================================ -->
+<section class="se-bg-section">
+  <div class="se-bg-container">
+    <div class="se-bg-center">
+      <span class="se-bg-eyebrow">How It Works</span>
+      <h2>Custom Boat Wrap Designs: Your Vision, Our Craft</h2>
+      <p class="se-bg-lead se-bg-lead--center">From initial concept to launch day, here is what the process looks like when you work with Signs East.</p>
+    </div>
+
+    <div class="se-bg-timeline">
+      <div class="se-bg-timeline-step">
+        <div class="se-bg-timeline-dot">1</div>
+        <h3>Tell Us About Your Boat</h3>
+        <p>Contact us with your boat type, size, and what you have in mind — a full wrap, accent graphics, name lettering, or registration numbers. Photos of your boat help us estimate accurately.</p>
+      </div>
+      <div class="se-bg-timeline-step">
+        <div class="se-bg-timeline-dot">2</div>
+        <h3>Design and Proof</h3>
+        <p>Our team creates a custom design based on your vision. We send you a digital proof showing exactly how the wrap or graphics will look on your specific vessel. Revisions until you are completely satisfied.</p>
+      </div>
+      <div class="se-bg-timeline-step">
+        <div class="se-bg-timeline-dot">3</div>
+        <h3>Print and Fabrication</h3>
+        <p>Once the design is approved, we print on marine-grade cast vinyl and laminate for UV and saltwater protection. Everything is produced in-house at our Kingston shop.</p>
+      </div>
+      <div class="se-bg-timeline-step">
+        <div class="se-bg-timeline-dot">4</div>
+        <h3>Installation</h3>
+        <p>We prep the hull surface, apply the wrap with heat forming around curves and compound shapes, and seal every edge. Most full wraps are completed in 1-3 days. Lettering and decal jobs are often done same-day.</p>
+      </div>
+      <div class="se-bg-timeline-step">
+        <div class="se-bg-timeline-dot">5</div>
+        <h3>Back on the Water</h3>
+        <p>Your boat is ready to launch. We will walk you through basic care instructions to get the most life out of your new wrap — cleaning, storage tips, and what to avoid.</p>
+      </div>
+    </div>
+
+    <div class="se-bg-btn-row se-bg-btn-row--center" style="margin-top: 36px;">
+      <a href="https://signseast.com/contact-us/" class="se-bg-btn se-bg-btn--primary">Start Your Boat Wrap Project</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 6: Mid-Page Photo CTA
+     ================================================ -->
+<section class="se-bg-photo-cta" style="background-image: url('https://signseast.com/wp-content/uploads/2026/03/IMG_6408-scaled.webp');">
+  <div class="se-bg-container">
+    <h2>Your Boat Deserves Better Than a Faded Hull</h2>
+    <p>Whether you are wrapping a pontoon on Winnipesaukee, lettering a bass boat out of Hampton Harbor, or branding a charter fleet on the Seacoast — we handle it all from our Kingston shop.</p>
+    <div class="se-bg-btn-row se-bg-btn-row--center">
+      <a href="https://signseast.com/contact-us/" class="se-bg-btn se-bg-btn--white">Request Your Boat Wrap Quote</a>
+      <a href="tel:+19788181740" class="se-bg-btn se-bg-btn--outline" style="border-color: #fff; color: #fff;">Call (978) 818-1740</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 7: Testimonials (stacked with accent bar)
+     ================================================ -->
+<section class="se-bg-section">
+  <div class="se-bg-container">
+    <div class="se-bg-center">
+      <span class="se-bg-eyebrow">What Our Customers Say</span>
+      <h2>Trusted by Boat Owners and Businesses Across New England</h2>
+    </div>
+
+    <div class="se-bg-reviews-grid">
+      <div class="se-bg-review-card">
+        <div class="se-bg-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="se-bg-review-text">"Always happy to work with the Signs East crew. They work diligently to make sure the product they are producing is completed in a timely manner and exactly to your liking. Will definitely be requesting their services again."</p>
+        <div class="se-bg-review-author">Gordon S. <span class="se-bg-review-source">· Google Review</span></div>
+      </div>
+
+      <div class="se-bg-review-card">
+        <div class="se-bg-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="se-bg-review-text">"Top quality products along with top of the line work! Tor will truly do right by you. Signs East will bring the presence of your company to the next level!!!"</p>
+        <div class="se-bg-review-author">Charles M. <span class="se-bg-review-source">· Google Review</span></div>
+      </div>
+
+      <div class="se-bg-review-card">
+        <div class="se-bg-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="se-bg-review-text">"I've asked Tor to do all my trucks, equipment and trailers. Each time has been a little different request and he always pulls through. He has coordinated lettering my equipment around vacations and is extremely attentive. His skill and communication is second to none and is by far the best at what he does. 10 stars for sure."</p>
+        <div class="se-bg-review-author">Benny R. <span class="se-bg-review-source">· Google Review</span></div>
+      </div>
+    </div>
+
+    <div class="se-bg-reviews-footer">
+      <p>4.9 stars from 79+ reviews on Google · <a href="https://www.google.com/maps/place/Signs+East+LLC./data=!4m2!3m1!1s0x0:0x8f8ea67732ea31d2?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener">Read All Reviews</a></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 8: Related Services
+     ================================================ -->
+<section class="se-bg-section se-bg-light">
+  <div class="se-bg-container">
+    <div class="se-bg-center">
+      <span class="se-bg-eyebrow">More from Signs East</span>
+      <h2>Related Graphics and Wrap Services</h2>
+      <p class="se-bg-lead se-bg-lead--center">Boat wraps are just one part of what we do. If your business or property needs graphics, signage, or wraps, we handle it all in-house. Explore our full range of <a href="https://signseast.com/sign-services/">sign services</a>.</p>
+    </div>
+
+    <div class="se-bg-related-grid">
+      <a href="https://signseast.com/vehicle-graphics/" class="se-bg-related-link">
+        <span>Vehicle Graphics and Wraps</span>
+        <span class="se-bg-arrow">&rarr;</span>
+      </a>
+      <a href="https://signseast.com/vinyl-letter-graphics/" class="se-bg-related-link">
+        <span>Vinyl Letters and Graphics</span>
+        <span class="se-bg-arrow">&rarr;</span>
+      </a>
+      <a href="https://signseast.com/wall-graphics-murals/" class="se-bg-related-link">
+        <span>Wall Graphics and Murals</span>
+        <span class="se-bg-arrow">&rarr;</span>
+      </a>
+      <a href="https://signseast.com/window-tinting/" class="se-bg-related-link">
+        <span>Window Tinting</span>
+        <span class="se-bg-arrow">&rarr;</span>
+      </a>
+      <a href="https://signseast.com/floor-graphics/" class="se-bg-related-link">
+        <span>Floor Graphics</span>
+        <span class="se-bg-arrow">&rarr;</span>
+      </a>
+      <a href="https://signseast.com/corporate-identity/" class="se-bg-related-link">
+        <span>Corporate Identity</span>
+        <span class="se-bg-arrow">&rarr;</span>
+      </a>
+      <a href="https://signseast.com/banner-signs/" class="se-bg-related-link">
+        <span>Banner Signs</span>
+        <span class="se-bg-arrow">&rarr;</span>
+      </a>
+      <a href="https://signseast.com/sign-repair/" class="se-bg-related-link">
+        <span>Sign Repair and Maintenance</span>
+        <span class="se-bg-arrow">&rarr;</span>
+      </a>
+      <a href="https://signseast.com/showcase/" class="se-bg-related-link">
+        <span>View Our Project Showcase</span>
+        <span class="se-bg-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 9: FAQ Accordion
+     ================================================ -->
+<section class="se-bg-section">
+  <div class="se-bg-container">
+    <div class="se-bg-faq-wrap">
+      <div class="se-bg-center" style="margin-bottom: 40px;">
+        <span class="se-bg-eyebrow">Common Questions</span>
+        <h2>Frequently Asked Questions About Boat Wraps and Graphics</h2>
+      </div>
+      <div class="se-bg-faq-list">
+        <div class="se-bg-faq-item">
+          <button class="se-bg-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            How much does it cost to wrap a boat?
+            <span class="se-bg-faq-toggle"></span>
+          </button>
+          <div class="se-bg-faq-a">
+            <div class="se-bg-faq-a-inner">
+              <p>Boat wrap costs typically range from $1,500 to $5,000 or more depending on vessel size, design complexity, and wrap coverage. A full hull wrap on a pontoon or ski boat averages $2,000 to $3,500. Partial wraps and decal packages start lower. We provide detailed estimates after reviewing your specific boat — <a href="https://signseast.com/contact-us/">contact us</a> for a custom quote.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-bg-faq-item">
+          <button class="se-bg-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            How long does a boat wrap last?
+            <span class="se-bg-faq-toggle"></span>
+          </button>
+          <div class="se-bg-faq-a">
+            <div class="se-bg-faq-a-inner">
+              <p>A professionally installed boat wrap lasts 5 to 7 years with proper care. Marine-grade cast vinyl is UV-resistant and designed to withstand water, sun, and salt exposure. Keeping the boat clean, rinsing after saltwater use, and storing out of direct sunlight when possible can extend the lifespan even further.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-bg-faq-item">
+          <button class="se-bg-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            Can any boat be wrapped?
+            <span class="se-bg-faq-toggle"></span>
+          </button>
+          <div class="se-bg-faq-a">
+            <div class="se-bg-faq-a-inner">
+              <p>Yes, virtually any boat can be wrapped — including pontoons, bass boats, fishing boats, sailboats, center consoles, and personal watercraft. Vinyl wraps are applied to the hull, sides, and transom. The process is non-destructive and the wrap can be removed later without damaging the gelcoat or original finish underneath.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-bg-faq-item">
+          <button class="se-bg-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            Is a boat wrap better than paint?
+            <span class="se-bg-faq-toggle"></span>
+          </button>
+          <div class="se-bg-faq-a">
+            <div class="se-bg-faq-a-inner">
+              <p>For most recreational boat owners, wrapping is the more practical and cost-effective choice. Wraps cost less than marine paint, install faster (days vs. weeks), offer unlimited design options, protect the original finish, and can be removed cleanly if you want to change the look or sell the boat. Paint makes sense for large commercial vessels or when a permanent factory-quality finish is required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-bg-faq-item">
+          <button class="se-bg-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            How long does it take to wrap a boat?
+            <span class="se-bg-faq-toggle"></span>
+          </button>
+          <div class="se-bg-faq-a">
+            <div class="se-bg-faq-a-inner">
+              <p>Most full boat wrap installations are completed in 1 to 3 days depending on vessel size and design complexity. Simple lettering, decals, or registration number jobs can often be done same-day. We work efficiently to minimize your boat's downtime and get you back on the water as quickly as possible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 10: Final CTA
+     ================================================ -->
+<section class="se-bg-final-cta">
+  <div class="se-bg-container">
+    <h2>Ready to Transform Your Boat?</h2>
+    <p>Tell us about your vessel and we will put together a plan. Full wraps, partial graphics, lettering, decals — we handle it all from our Kingston shop.</p>
+    <div class="se-bg-btn-row se-bg-btn-row--center">
+      <a href="https://signseast.com/contact-us/" class="se-bg-btn se-bg-btn--white">Request Your Boat Wrap Quote</a>
+      <a href="tel:+19788181740" class="se-bg-btn se-bg-btn--outline" style="border-color: #fff; color: #fff;">Call (978) 818-1740</a>
+    </div>
+  </div>
+</section>
