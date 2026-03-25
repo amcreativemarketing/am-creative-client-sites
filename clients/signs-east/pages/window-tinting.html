@@ -1,0 +1,1065 @@
+<!-- Signs East - Window Tinting Page
+     Content between hero and footer
+     H1 is in hero section: Professional Window Tinting Services for Homes, Businesses & Vehicles
+     Phone: (978) 818-1740
+     No schema, no meta tags, no microdata - OTTO handles SEO markup
+     All images: alt="" empty - OTTO generates alt text
+-->
+
+<style>
+/* ============================================
+   Signs East - Window Tinting Page Styles
+   Namespace: .se-wt-
+   Mobile-first approach
+   ============================================ */
+
+/* CSS Variables */
+:root {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --button-radius: 30px;
+  --container-max-width: 1140px;
+}
+
+/* Base */
+.se-wt-section {
+  padding: 50px 20px;
+}
+
+.se-wt-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.se-wt-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--se-primary);
+  margin-bottom: 12px;
+}
+
+.se-wt-section h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--se-dark);
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+.se-wt-section h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--se-dark);
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.se-wt-section p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--se-text);
+  margin: 0 0 16px;
+}
+
+.se-wt-lead {
+  font-size: 18px;
+  color: var(--se-text-light);
+  max-width: 720px;
+}
+
+.se-wt-lead--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.se-wt-center {
+  text-align: center;
+}
+
+.se-wt-btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: var(--button-radius);
+  text-decoration: none;
+  transition: background 0.3s, transform 0.15s;
+  cursor: pointer;
+  min-height: 48px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.se-wt-btn--primary {
+  background: var(--se-primary);
+  color: var(--se-white);
+}
+
+.se-wt-btn--primary:hover {
+  background: var(--se-primary-hover);
+  transform: translateY(-1px);
+}
+
+.se-wt-btn--outline {
+  background: transparent;
+  color: var(--se-primary);
+  border: 2px solid var(--se-primary);
+}
+
+.se-wt-btn--outline:hover {
+  background: var(--se-primary);
+  color: var(--se-white);
+}
+
+.se-wt-btn--white {
+  background: var(--se-white);
+  color: var(--se-dark);
+}
+
+.se-wt-btn--white:hover {
+  background: var(--se-bg-light);
+  transform: translateY(-1px);
+}
+
+.se-wt-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.se-wt-btn-row--center {
+  justify-content: center;
+}
+
+.se-wt-bg-light {
+  background: var(--se-bg-light);
+}
+
+.se-wt-bg-dark {
+  background: var(--se-dark);
+}
+
+
+/* ============================================
+   Section 1: Intro Split
+   ============================================ */
+.se-wt-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.se-wt-intro-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.se-wt-intro-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.se-wt-intro-text ul li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--se-text);
+  padding: 8px 0;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.se-wt-intro-text ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--se-primary);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+/* ============================================
+   Section 2: Stats Trust Bar
+   ============================================ */
+.se-wt-stats-bar {
+  padding: 40px 20px;
+  background: var(--se-dark);
+}
+
+.se-wt-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  text-align: center;
+}
+
+.se-wt-stat-item {
+  color: var(--se-white);
+}
+
+.se-wt-stat-number {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--se-white);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.se-wt-stat-number span {
+  color: var(--se-primary);
+}
+
+.se-wt-stat-label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.7);
+}
+
+
+/* ============================================
+   Section 3: Service Category Cards
+   ============================================ */
+.se-wt-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.se-wt-card {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 36px 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border-top: 4px solid var(--se-primary);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.se-wt-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+
+.se-wt-card-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--se-primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.se-wt-card-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--se-white);
+}
+
+.se-wt-card h3 {
+  margin-bottom: 14px;
+}
+
+.se-wt-card p {
+  margin-bottom: 16px;
+}
+
+.se-wt-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.se-wt-card-features li {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--se-text);
+  padding: 6px 0 6px 22px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.se-wt-card-features li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--se-primary);
+  font-weight: 700;
+}
+
+
+/* ============================================
+   Section 4: Benefits (Two Column with Image)
+   ============================================ */
+.se-wt-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.se-wt-benefits-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.se-wt-benefit {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.se-wt-benefit-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--se-primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.se-wt-benefit-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--se-white);
+}
+
+.se-wt-benefit h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.se-wt-benefit p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.se-wt-benefits-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+
+/* ============================================
+   Section 5: Full-Width Photo Break / CTA
+   ============================================ */
+.se-wt-photo-break {
+  position: relative;
+  padding: 80px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.se-wt-photo-break::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(25,25,25,0.75);
+}
+
+.se-wt-photo-break .se-wt-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.se-wt-photo-break h2 {
+  color: var(--se-white);
+  font-size: 28px;
+}
+
+.se-wt-photo-break p {
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+
+
+
+
+/* ============================================
+   Section 7: Testimonials (3-column cards)
+   ============================================ */
+.se-wt-reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.se-wt-review-card {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 30px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.se-wt-review-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--se-primary);
+  border-radius: 10px 10px 0 0;
+}
+
+.se-wt-review-stars {
+  color: #f5a623;
+  font-size: 18px;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+}
+
+.se-wt-review-text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--se-text);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.se-wt-review-author {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--se-dark);
+}
+
+.se-wt-review-source {
+  font-size: 13px;
+  color: var(--se-text-light);
+  font-weight: 400;
+}
+
+.se-wt-reviews-summary {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.se-wt-reviews-summary p {
+  font-size: 15px;
+  color: var(--se-text-light);
+}
+
+.se-wt-reviews-summary a {
+  color: var(--se-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.se-wt-reviews-summary a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================
+   Section 8: FAQ Accordion
+   ============================================ */
+.se-wt-faq-wrap { max-width: 800px; margin: 0 auto; }
+
+.se-wt-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.se-wt-faq-item {
+  background-color: var(--se-bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.se-wt-faq-item:hover { background-color: #ededed; }
+
+.se-wt-faq-q {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--se-dark);
+  transition: color 0.2s ease;
+  min-height: 44px;
+  line-height: 1.45;
+}
+
+.se-wt-faq-q:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--se-primary);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.se-wt-faq-toggle {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.se-wt-faq-toggle::before,
+.se-wt-faq-toggle::after {
+  content: "";
+  position: absolute;
+  background-color: var(--se-primary);
+  transition: transform 0.3s ease;
+}
+
+.se-wt-faq-toggle::before {
+  width: 14px; height: 2px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-wt-faq-toggle::after {
+  width: 2px; height: 14px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.se-wt-faq-item.active .se-wt-faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.se-wt-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.se-wt-faq-item.active .se-wt-faq-a { max-height: 350px; }
+
+.se-wt-faq-a-inner {
+  padding: 0 24px 20px;
+  font-size: 16px;
+  color: var(--se-text-light);
+  line-height: 1.7;
+}
+
+.se-wt-faq-a-inner p { margin: 0; }
+
+.se-wt-faq-a-inner a {
+  color: var(--se-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--se-primary);
+}
+
+.se-wt-faq-a-inner a:hover {
+  color: var(--se-primary-hover);
+  border-color: var(--se-primary-hover);
+}
+
+
+/* ============================================
+   Section 9: Final CTA
+   ============================================ */
+.se-wt-final-cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--se-primary);
+}
+
+.se-wt-final-cta h2 {
+  color: var(--se-white);
+  margin-bottom: 12px;
+}
+
+.se-wt-final-cta p {
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+.se-wt-final-cta .se-wt-btn-row {
+  justify-content: center;
+}
+
+
+/* ============================================
+   Responsive: Tablet (768px+)
+   ============================================ */
+@media (min-width: 768px) {
+  .se-wt-section {
+    padding: 70px 30px;
+  }
+
+  .se-wt-section h2 {
+    font-size: 34px;
+  }
+
+  .se-wt-intro-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .se-wt-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .se-wt-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .se-wt-benefits-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .se-wt-reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .se-wt-photo-break h2 {
+    font-size: 34px;
+  }
+}
+
+
+/* ============================================
+   Responsive: Desktop (1024px+)
+   ============================================ */
+@media (min-width: 1024px) {
+  .se-wt-section {
+    padding: 80px 30px;
+  }
+
+  .se-wt-section h2 {
+    font-size: 38px;
+  }
+
+  .se-wt-intro-grid {
+    gap: 70px;
+  }
+
+  .se-wt-stat-number {
+    font-size: 50px;
+  }
+
+  .se-wt-photo-break {
+    padding: 100px 30px;
+  }
+
+  .se-wt-photo-break h2 {
+    font-size: 38px;
+  }
+}
+</style>
+
+
+<!-- ================================================
+     Section 1: Intro / What Is Window Tinting
+     ================================================ -->
+<section class="se-wt-section">
+  <div class="se-wt-container">
+    <div class="se-wt-intro-grid">
+      <div class="se-wt-intro-text">
+        <span class="se-wt-eyebrow">Window Tinting Solutions</span>
+        <h2>Window Tinting That Works as Hard as You Do</h2>
+        <p>Whether you need to cut heat in a corner office, add privacy to a storefront, or protect your vehicle's interior from UV damage, window tinting delivers measurable results from day one. Signs East installs professional window film for homes, businesses, and vehicles across Southern New Hampshire and the Seacoast region.</p>
+        <p>We use premium 3M and commercial-grade films that block up to 99% of UV rays, reduce solar heat by up to 78%, and last 10–20 years with proper care. Every installation is handled by our trained team — no subcontractors, no shortcuts. See completed projects in our <a href="https://signseast.com/showcase/">project showcase</a>.</p>
+        <ul>
+          <li>Residential, commercial, and auto tinting</li>
+          <li>Solar, security, decorative, and privacy films</li>
+          <li>3M certified materials and installation</li>
+          <li>Southern NH, Seacoast NH, and North Shore MA</li>
+        </ul>
+        <div class="se-wt-btn-row">
+          <a href="https://signseast.com/contact-us/" class="se-wt-btn se-wt-btn--primary">Request a Window Tinting Quote</a>
+          <a href="tel:+19788181740" class="se-wt-btn se-wt-btn--outline">Call (978) 818-1740</a>
+        </div>
+      </div>
+      <div class="se-wt-intro-img">
+        <img src="https://signseast.com/wp-content/uploads/2025/11/imgi_7_peabody-signs_window-treatment3.webp" alt="" width="600" height="450" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 2: Stats Trust Bar
+     ================================================ -->
+<section class="se-wt-stats-bar">
+  <div class="se-wt-container">
+    <div class="se-wt-stats-grid">
+      <div class="se-wt-stat-item">
+        <div class="se-wt-stat-number">99<span>%</span></div>
+        <div class="se-wt-stat-label">UV Ray Rejection</div>
+      </div>
+      <div class="se-wt-stat-item">
+        <div class="se-wt-stat-number">78<span>%</span></div>
+        <div class="se-wt-stat-label">Solar Heat Blocked</div>
+      </div>
+      <div class="se-wt-stat-item">
+        <div class="se-wt-stat-number">13<span>+</span></div>
+        <div class="se-wt-stat-label">Years in Business</div>
+      </div>
+      <div class="se-wt-stat-item">
+        <div class="se-wt-stat-number">4.9<span>★</span></div>
+        <div class="se-wt-stat-label">Google Rating (79+ Reviews)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 3: Service Category Cards
+     ================================================ -->
+<section class="se-wt-section se-wt-bg-light">
+  <div class="se-wt-container">
+    <div class="se-wt-center">
+      <span class="se-wt-eyebrow">Our Window Tinting Solutions</span>
+      <h2>Window Tinting for Every Application</h2>
+      <p class="se-wt-lead se-wt-lead--center">From bedroom privacy film to full commercial building tinting, we match the right product to your specific needs and budget.</p>
+    </div>
+
+    <div class="se-wt-cards-grid">
+
+      <!-- Residential Card -->
+      <div class="se-wt-card">
+        <div class="se-wt-card-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L4 9v12h16V9l-8-6zm6 16H6v-9.5l6-4.5 6 4.5V19z"/></svg>
+        </div>
+        <h3>Residential Window Tinting</h3>
+        <p>Keep your home cooler in summer and warmer in winter. Residential window film reduces energy costs, protects furniture from fading, and adds privacy without blocking natural light.</p>
+        <ul class="se-wt-card-features">
+          <li>Heat and UV reduction for living spaces</li>
+          <li>Privacy film for bedrooms and bathrooms</li>
+          <li>Decorative frosted and patterned options</li>
+          <li>Skylight tinting for glare control</li>
+        </ul>
+      </div>
+
+      <!-- Commercial Card -->
+      <div class="se-wt-card">
+        <div class="se-wt-card-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7V3H2v18h20V7H12zm-2 12H4v-2h6v2zm0-4H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 12h-8V9h8v10zm-2-8h-4v2h4v-2zm0 4h-4v2h4v-2z"/></svg>
+        </div>
+        <h3>Commercial Window Tinting</h3>
+        <p>Reduce glare on screens, lower cooling costs, and give your storefront a polished, professional look. Commercial window film pays for itself through energy savings and improved comfort for employees and customers.</p>
+        <ul class="se-wt-card-features">
+          <li>Office and conference room tinting</li>
+          <li>Storefront and retail window film</li>
+          <li>Security and safety film for glass reinforcement</li>
+          <li>Anti-graffiti protection for street-facing windows</li>
+        </ul>
+      </div>
+
+      <!-- Automotive Card -->
+      <div class="se-wt-card">
+        <div class="se-wt-card-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+        </div>
+        <h3>Auto Window Tinting</h3>
+        <p>Keep your car cooler, protect your interior from cracking and fading, and add a clean, finished look. We offer standard dyed film, ceramic film, and everything in between for cars, trucks, and SUVs.</p>
+        <ul class="se-wt-card-features">
+          <li>Standard and premium ceramic window film</li>
+          <li>Full vehicle tinting packages</li>
+          <li>SUV, truck, and van rear window film</li>
+          <li>NH tint law-compliant installations</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 4: Benefits (Two Column + Image)
+     ================================================ -->
+<section class="se-wt-section">
+  <div class="se-wt-container">
+    <div class="se-wt-benefits-grid">
+      <div>
+        <span class="se-wt-eyebrow">Why Choose Window Film?</span>
+        <h2>The Real Benefits of Professional Window Tinting</h2>
+        <p>Window tinting is one of the most cost-effective upgrades you can make to a home, office, or vehicle. Here is what you get from a professional installation.</p>
+
+        <div class="se-wt-benefits-list">
+          <div class="se-wt-benefit">
+            <div class="se-wt-benefit-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <div>
+              <h3>Reduces Heat and Lowers Energy Bills</h3>
+              <p>Quality window film blocks up to 78% of solar heat, cutting cooling costs by up to 30% and keeping indoor temperatures comfortable year-round.</p>
+            </div>
+          </div>
+
+          <div class="se-wt-benefit">
+            <div class="se-wt-benefit-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <div>
+              <h3>Blocks 99% of Harmful UV Rays</h3>
+              <p>UV protection prevents fading on furniture, flooring, merchandise, and vehicle interiors — extending the life of everything inside your space.</p>
+            </div>
+          </div>
+
+          <div class="se-wt-benefit">
+            <div class="se-wt-benefit-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <div>
+              <h3>Increases Privacy Without Losing Light</h3>
+              <p>Privacy film lets natural light in while keeping prying eyes out — ideal for conference rooms, residential bedrooms, bathrooms, and street-facing storefronts.</p>
+            </div>
+          </div>
+
+          <div class="se-wt-benefit">
+            <div class="se-wt-benefit-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <div>
+              <h3>Enhances Security and Shatter Resistance</h3>
+              <p>Security window film holds glass together on impact, adding a layer of protection against break-ins, storms, and accidents.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="se-wt-benefits-img">
+        <img src="https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-25-at-9.46.36-AM.png" alt="" width="600" height="450" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 5: Full-Width Photo Break / Mid-Page CTA
+     ================================================ -->
+<section class="se-wt-photo-break" style="background-image: url('https://signseast.com/wp-content/uploads/2026/03/Screenshot-2026-03-25-at-9.46.43-AM.png');">
+  <div class="se-wt-container">
+    <h2>Your Space Deserves Better Than Bare Glass</h2>
+    <p>From a single office window to a full commercial building, we handle every window tinting project with the same attention to detail. Tell us what you need and we will put together a plan that fits your building and your budget.</p>
+    <div class="se-wt-btn-row se-wt-btn-row--center">
+      <a href="https://signseast.com/contact-us/" class="se-wt-btn se-wt-btn--white">Request Your Tinting Quote</a>
+      <a href="tel:+19788181740" class="se-wt-btn se-wt-btn--outline" style="border-color: #fff; color: #fff;">Call (978) 818-1740</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ================================================
+     Section 7: Testimonials
+     ================================================ -->
+<section class="se-wt-section">
+  <div class="se-wt-container">
+    <div class="se-wt-center">
+      <span class="se-wt-eyebrow">What Our Customers Say</span>
+      <h2>Trusted by Businesses Across New Hampshire</h2>
+    </div>
+
+    <div class="se-wt-reviews-grid">
+      <div class="se-wt-review-card">
+        <div class="se-wt-review-stars">★★★★★</div>
+        <p class="se-wt-review-text">"These guys are the Best! Don't know if there is anyone out there who works harder. They're easy to deal with and will go out of their way to get your job done on time and on budget. Cheers for a great job!!!"</p>
+        <div class="se-wt-review-author">Stewart D. <span class="se-wt-review-source">· Google Review</span></div>
+      </div>
+
+      <div class="se-wt-review-card">
+        <div class="se-wt-review-stars">★★★★★</div>
+        <p class="se-wt-review-text">"Signs East is always a pleasure to work with. Whether it's signs, lettering, window tint, or other custom work, everything is handled quickly and with great attention to detail. Communication is excellent, turnaround is fast, and they consistently go the extra mile to make sure the job comes out right. Highly recommend."</p>
+        <div class="se-wt-review-author">Skyler O. <span class="se-wt-review-source">· Google Review</span></div>
+      </div>
+
+      <div class="se-wt-review-card">
+        <div class="se-wt-review-stars">★★★★★</div>
+        <p class="se-wt-review-text">"I just recently had the pleasure of working with Signs East for some lawn Signs for my company. Super easy to deal with his team responded promptly and professionally. Very happy with everything! Highly recommend!"</p>
+        <div class="se-wt-review-author">Thomas C. <span class="se-wt-review-source">· Google Review</span></div>
+      </div>
+    </div>
+
+    <div class="se-wt-reviews-summary">
+      <p>4.9 stars from 79+ reviews on Google · <a href="https://www.google.com/maps/place/Signs+East+LLC./data=!4m2!3m1!1s0x0:0x8f8ea67732ea31d2?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener">Read All Reviews</a></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 8: Related Services Crosslinks
+     ================================================ -->
+<section class="se-wt-section se-wt-bg-light">
+  <div class="se-wt-container">
+    <div class="se-wt-center">
+      <span class="se-wt-eyebrow">More from Signs East</span>
+      <h2>Related Graphics and Film Services</h2>
+      <p class="se-wt-lead se-wt-lead--center">Window tinting is just one part of what we do. If your space needs graphics, wraps, or signage, we handle it all in-house. Explore our full range of <a href="https://signseast.com/sign-services/">sign services</a>.</p>
+    </div>
+
+    <div class="se-wt-cards-grid" style="margin-top: 30px;">
+      <div class="se-wt-card" style="text-align: center; border-top-color: var(--se-dark);">
+        <h3>Vehicle Graphics</h3>
+        <p>Fleet wraps, truck lettering, and partial vehicle graphics designed and installed by our certified team.</p>
+        <a href="https://signseast.com/vehicle-graphics/" class="se-wt-btn se-wt-btn--outline" style="margin-top: 8px;">View Vehicle Graphics</a>
+      </div>
+      <div class="se-wt-card" style="text-align: center; border-top-color: var(--se-dark);">
+        <h3>Vinyl Letters and Graphics</h3>
+        <p>Custom vinyl lettering for storefronts, walls, doors, boats, and any smooth surface.</p>
+        <a href="https://signseast.com/vinyl-letter-graphics/" class="se-wt-btn se-wt-btn--outline" style="margin-top: 8px;">View Vinyl Graphics</a>
+      </div>
+      <div class="se-wt-card" style="text-align: center; border-top-color: var(--se-dark);">
+        <h3>Wall Graphics and Murals</h3>
+        <p>Transform blank walls into branded spaces with custom printed murals and wall graphics.</p>
+        <a href="https://signseast.com/wall-graphics-murals/" class="se-wt-btn se-wt-btn--outline" style="margin-top: 8px;">View Wall Graphics</a>
+      </div>
+    </div>
+    <div class="se-wt-cards-grid" style="grid-template-columns: 1fr; max-width: 760px; margin: 24px auto 0;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div class="se-wt-card" style="text-align: center; border-top-color: var(--se-dark);">
+          <h3>Floor Graphics</h3>
+          <p>Durable printed floor graphics for retail spaces, lobbies, warehouses, and event venues.</p>
+          <a href="https://signseast.com/floor-graphics/" class="se-wt-btn se-wt-btn--outline" style="margin-top: 8px;">View Floor Graphics</a>
+        </div>
+        <div class="se-wt-card" style="text-align: center; border-top-color: var(--se-dark);">
+          <h3>Banner Signs</h3>
+          <p>Indoor and outdoor banners for events, promotions, grand openings, and construction sites.</p>
+          <a href="https://signseast.com/banner-signs/" class="se-wt-btn se-wt-btn--outline" style="margin-top: 8px;">View Banner Signs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 9: FAQ Accordion
+     ================================================ -->
+<section class="se-wt-section">
+  <div class="se-wt-container">
+    <div class="se-wt-faq-wrap">
+      <div class="se-wt-center" style="margin-bottom: 40px;">
+        <span class="se-wt-eyebrow">Common Questions</span>
+        <h2>Frequently Asked Questions About Window Tinting</h2>
+      </div>
+      <div class="se-wt-faq-list">
+        <div class="se-wt-faq-item">
+          <button class="se-wt-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            How much does window tinting cost?
+            <span class="se-wt-faq-toggle"></span>
+          </button>
+          <div class="se-wt-faq-a">
+            <div class="se-wt-faq-a-inner">
+              <p>Window tinting costs vary by application and film type. Residential window film typically runs $150–$400 per window, commercial applications range from $200–$600, and automotive tinting falls between $100–$400 for a full vehicle. The final price depends on film type (standard, ceramic, security), the number and size of windows, and whether existing film needs removal. We provide detailed estimates after reviewing your specific project — <a href="https://signseast.com/contact-us/">contact us</a> for a custom quote.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-wt-faq-item">
+          <button class="se-wt-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            Does window tinting reduce heat inside my home or office?
+            <span class="se-wt-faq-toggle"></span>
+          </button>
+          <div class="se-wt-faq-a">
+            <div class="se-wt-faq-a-inner">
+              <p>Yes — and significantly. Professional-grade window film blocks up to 78% of solar heat, which can reduce air conditioning costs by as much as 30%. The difference is noticeable immediately after installation, especially in south- and west-facing rooms that take direct afternoon sun. It also cuts glare on screens and monitors, making offices and living rooms more comfortable to work and relax in.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-wt-faq-item">
+          <button class="se-wt-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            How long does window tinting last?
+            <span class="se-wt-faq-toggle"></span>
+          </button>
+          <div class="se-wt-faq-a">
+            <div class="se-wt-faq-a-inner">
+              <p>With professional installation, most window films last 10–20 years. Ceramic and nano-carbon films tend to outlast standard dyed films. The key factors in longevity are the quality of the film, the installation technique, and avoiding ammonia-based cleaners that can degrade the film over time. We use premium-grade films and professional installation methods to maximize the lifespan of every project.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-wt-faq-item">
+          <button class="se-wt-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            Is window tinting worth it for businesses?
+            <span class="se-wt-faq-toggle"></span>
+          </button>
+          <div class="se-wt-faq-a">
+            <div class="se-wt-faq-a-inner">
+              <p>For most commercial spaces, window tinting pays for itself within a few years through energy savings alone. Beyond the cost savings, it reduces glare for employees working at screens, protects merchandise and furniture from UV fading, improves the exterior appearance of your building, and adds a layer of security with shatter-resistant film. Retail storefronts, office buildings, and restaurants all benefit from the combination of comfort, protection, and professional appearance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="se-wt-faq-item">
+          <button class="se-wt-faq-q" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'))">
+            Can window tinting be removed or replaced?
+            <span class="se-wt-faq-toggle"></span>
+          </button>
+          <div class="se-wt-faq-a">
+            <div class="se-wt-faq-a-inner">
+              <p>Yes. Window tint film can be professionally removed without damaging the glass underneath. If you are upgrading to a different film type, changing the tint level, or removing old degraded tinting, our team handles the full removal and replacement process. We recommend professional removal to avoid leaving adhesive residue or scratching the glass.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     Section 10: Final CTA
+     ================================================ -->
+<section class="se-wt-final-cta">
+  <div class="se-wt-container">
+    <h2>Ready to Get Started on Your Window Tinting Project?</h2>
+    <p>Tell us about your space and we will put together a plan. Residential, commercial, or automotive — we handle it all.</p>
+    <div class="se-wt-btn-row">
+      <a href="https://signseast.com/contact-us/" class="se-wt-btn se-wt-btn--white">Request Your Quote</a>
+      <a href="tel:+19788181740" class="se-wt-btn se-wt-btn--outline" style="border-color: #fff; color: #fff;">Call (978) 818-1740</a>
+    </div>
+  </div>
+</section>
+
