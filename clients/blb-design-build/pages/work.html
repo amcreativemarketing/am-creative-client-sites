@@ -1,0 +1,662 @@
+<!-- BLB Design / Build - Portfolio/Work Page Content Section
+     This content sits between the existing Divi hero section (H1 "OUR PORTFOLIO")
+     and the footer CTA section. Paste into a Divi Code Module.
+     
+     OTTO handles: meta tags, schema, OG tags, alt text, canonical
+     We handle: content structure, project grid, gallery nav, CTAs, trust signals
+
+     FLAG FOR JON: The OTTO "Related Pages" links at the bottom of this page are
+     displaying raw AI prompt output as anchor text (e.g. "Key phrases from main
+     page summary..."). These are visible to users and look broken/spammy.
+     Check OTTO dashboard > Community Backlinks and disable or fix these.
+     
+     ALSO: The current "WHOLE HOMES" button links to /whole-homes/ which is NOT
+     in the sitemap. The correct gallery URL is /whole-homes-gallery/. Fixed below.
+-->
+
+<style>
+/* === BLB Portfolio Page Styles === */
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7fc9387e7b24.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f200f69dbc0a.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f217169dbc09.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7f0af27e7b25.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.blb-port-wrapper {
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  color: #555555;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.blb-port-wrapper a {
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.blb-port-contained {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Trust Bar --- */
+.blb-port-trust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 20px 24px;
+  background: #f8f8f8;
+  flex-wrap: wrap;
+}
+
+.blb-port-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.blb-port-trust-stars {
+  color: #d4a843;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.blb-port-trust-divider {
+  width: 1px;
+  height: 18px;
+  background: #ccc;
+}
+
+/* --- Intro --- */
+.blb-port-intro {
+  padding: 60px 0 48px;
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.blb-port-intro h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  margin: 0 0 20px 0;
+  line-height: 1.35;
+}
+
+.blb-port-intro p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0 0 16px 0;
+}
+
+.blb-port-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.blb-port-intro a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --- Section Headings --- */
+.blb-port-section-head {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.blb-port-section-head h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 26px;
+  letter-spacing: -0.4px;
+  margin: 0 0 8px 0;
+}
+
+.blb-port-section-head p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* --- Featured Projects Grid --- */
+.blb-port-projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-bottom: 64px;
+}
+
+.blb-port-project {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  cursor: pointer;
+}
+
+.blb-port-project img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.blb-port-project:hover img {
+  transform: scale(1.04);
+}
+
+.blb-port-project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 20, 20, 0.85) 0%,
+    rgba(20, 20, 20, 0.35) 40%,
+    transparent 65%
+  );
+  transition: background 0.4s ease;
+}
+
+.blb-port-project:hover .blb-port-project-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(20, 20, 20, 0.9) 0%,
+    rgba(20, 20, 20, 0.5) 50%,
+    rgba(20, 20, 20, 0.1) 70%,
+    transparent 100%
+  );
+}
+
+.blb-port-project-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  z-index: 2;
+  color: #fff;
+}
+
+.blb-port-project-content h3 {
+  font-family: 'Messina Modern', sans-serif !important;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+  margin: 0 0 4px 0;
+  color: #fff;
+}
+
+.blb-port-project-type {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  font-weight: 300;
+  margin: 0 0 12px 0;
+}
+
+.blb-port-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-bottom: 1.5px solid rgba(255,255,255,0.4);
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.blb-port-project-link:hover {
+  border-color: #fff;
+}
+
+.blb-port-project-link svg {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.3s ease;
+}
+
+.blb-port-project:hover .blb-port-project-link svg {
+  transform: translateX(3px);
+}
+
+.blb-port-project-click {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+/* --- Gallery Categories --- */
+.blb-port-categories {
+  background: #f8f8f8;
+  padding: 64px 24px;
+}
+
+.blb-port-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blb-port-cat {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+}
+
+.blb-port-cat img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blb-port-cat:hover img {
+  transform: scale(1.05);
+}
+
+.blb-port-cat-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.45);
+  transition: background 0.3s ease;
+}
+
+.blb-port-cat:hover .blb-port-cat-overlay {
+  background: rgba(20, 20, 20, 0.55);
+}
+
+.blb-port-cat-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px;
+  z-index: 2;
+  text-align: center;
+}
+
+.blb-port-cat-label span {
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.blb-port-cat-click {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+/* --- Testimonial --- */
+.blb-port-testimonial {
+  background: #1a1a1a;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.blb-port-testimonial-stars {
+  color: #d4a843;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.blb-port-testimonial blockquote {
+  max-width: 720px;
+  margin: 0 auto 20px;
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #ffffff;
+  font-style: italic;
+  letter-spacing: -0.2px;
+}
+
+.blb-port-testimonial cite {
+  display: block;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #b8b8ae;
+  font-style: normal;
+}
+
+/* --- Final CTA --- */
+.blb-port-cta {
+  text-align: center;
+  padding: 56px 24px;
+}
+
+.blb-port-cta h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 26px;
+  letter-spacing: -0.4px;
+  margin: 0 0 12px 0;
+}
+
+.blb-port-cta p {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 28px 0;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.blb-port-btn {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #ffffff !important;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  padding: 17px 48px;
+  border: 2px solid #1a1a1a;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.blb-port-btn:hover {
+  background: transparent;
+  color: #1a1a1a !important;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .blb-port-projects {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .blb-port-cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blb-port-trust {
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 20px;
+  }
+
+  .blb-port-trust-divider {
+    display: none;
+  }
+
+  .blb-port-intro {
+    padding: 40px 16px 36px;
+  }
+
+  .blb-port-intro h2 {
+    font-size: 24px;
+  }
+
+  .blb-port-projects {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-bottom: 48px;
+  }
+
+  .blb-port-project {
+    aspect-ratio: 3 / 4;
+  }
+
+  .blb-port-categories {
+    padding: 48px 16px;
+  }
+
+  .blb-port-cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .blb-port-testimonial {
+    padding: 44px 20px;
+  }
+
+  .blb-port-testimonial blockquote {
+    font-size: 18px;
+  }
+
+  .blb-port-cta {
+    padding: 44px 16px;
+  }
+
+  .blb-port-cta h2 {
+    font-size: 22px;
+  }
+}
+</style>
+
+
+<div class="blb-port-wrapper">
+
+  <!-- Trust Bar -->
+  <div class="blb-port-trust">
+    <div class="blb-port-trust-item">
+      <span class="blb-port-trust-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>5.0 Google Rating</span>
+    </div>
+    <div class="blb-port-trust-divider"></div>
+    <div class="blb-port-trust-item">Every Project Custom-Designed</div>
+    <div class="blb-port-trust-divider"></div>
+    <div class="blb-port-trust-item">North Shore MA + Southern NH</div>
+  </div>
+
+
+  <!-- Intro -->
+  <div class="blb-port-contained">
+    <div class="blb-port-intro">
+      <h2>Real Projects. Real Homes. Real Results.</h2>
+      <p>Every project in our portfolio started with a homeowner who had a vision and a list of questions. From <a href="https://blbdesignbuild.com/kitchen-remodeling/">kitchen remodels</a> and <a href="https://blbdesignbuild.com/bathroom-remodeling/">bathroom renovations</a> to <a href="https://blbdesignbuild.com/home-additions/">home additions</a> and <a href="https://blbdesignbuild.com/whole-home-remodeling/">whole home transformations</a>, these are the spaces we've helped North Shore families create. Browse by project or by category below.</p>
+    </div>
+  </div>
+
+
+  <!-- Featured Projects -->
+  <div class="blb-port-contained">
+    <div class="blb-port-section-head">
+      <h2>Featured Projects</h2>
+      <p>A closer look at recent work across the North Shore.</p>
+    </div>
+
+    <div class="blb-port-projects">
+
+      <!-- Federalist Remodel -->
+      <div class="blb-port-project">
+        <a href="https://blbdesignbuild.com/project/federalist-remodel/" class="blb-port-project-click" aria-label="Federalist Remodel project"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2024/05/88HighStreet_FREEBIRD-79-copy.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async">
+        <div class="blb-port-project-overlay"></div>
+        <div class="blb-port-project-content">
+          <h3>Federalist Remodel</h3>
+          <p class="blb-port-project-type">Kitchen + Bath / Newburyport, MA</p>
+          <span class="blb-port-project-link">VIEW PROJECT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Washington Addition -->
+      <div class="blb-port-project">
+        <a href="https://blbdesignbuild.com/project/washington-addition/" class="blb-port-project-click" aria-label="Washington Addition project"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2025/08/4M4A0814-Enhanced-NR.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async">
+        <div class="blb-port-project-overlay"></div>
+        <div class="blb-port-project-content">
+          <h3>Washington Addition</h3>
+          <p class="blb-port-project-type">Addition / Newburyport, MA</p>
+          <span class="blb-port-project-link">VIEW PROJECT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Speakeasy Basement Retreat -->
+      <div class="blb-port-project">
+        <a href="https://blbdesignbuild.com/project/speakeasy-basement-retreat/" class="blb-port-project-click" aria-label="Speakeasy Basement Retreat project"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2025/12/4M4A1149.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async">
+        <div class="blb-port-project-overlay"></div>
+        <div class="blb-port-project-content">
+          <h3>Speakeasy Basement Retreat</h3>
+          <p class="blb-port-project-type">Basement Remodel / Newburyport, MA</p>
+          <span class="blb-port-project-link">VIEW PROJECT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Colonial Refresh -->
+      <div class="blb-port-project">
+        <a href="https://blbdesignbuild.com/project/colonial-refresh/" class="blb-port-project-click" aria-label="Colonial Refresh project"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2022/02/BLB_Freebird-46.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async">
+        <div class="blb-port-project-overlay"></div>
+        <div class="blb-port-project-content">
+          <h3>Colonial Refresh</h3>
+          <p class="blb-port-project-type">Whole Home / North Shore, MA</p>
+          <span class="blb-port-project-link">VIEW PROJECT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- NE Colonial Refresh -->
+      <div class="blb-port-project">
+        <a href="https://blbdesignbuild.com/project/ne-colonial-refresh/" class="blb-port-project-click" aria-label="NE Colonial Refresh project"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2022/02/KnightsProject_BLB-93.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async">
+        <div class="blb-port-project-overlay"></div>
+        <div class="blb-port-project-content">
+          <h3>NE Colonial Refresh</h3>
+          <p class="blb-port-project-type">Whole Home / North Shore, MA</p>
+          <span class="blb-port-project-link">VIEW PROJECT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Modern Kitchen -->
+      <div class="blb-port-project">
+        <a href="https://blbdesignbuild.com/project/modern-kitchen/" class="blb-port-project-click" aria-label="Modern Kitchen project"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2022/08/PlummerProject_Freebird-2.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async">
+        <div class="blb-port-project-overlay"></div>
+        <div class="blb-port-project-content">
+          <h3>Modern Kitchen</h3>
+          <p class="blb-port-project-type">Kitchen Remodel / North Shore, MA</p>
+          <span class="blb-port-project-link">VIEW PROJECT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Browse by Category -->
+  <div class="blb-port-categories">
+    <div class="blb-port-contained">
+      <div class="blb-port-section-head">
+        <h2>Browse by Category</h2>
+        <p>Explore our full galleries organized by project type.</p>
+      </div>
+
+      <div class="blb-port-cat-grid">
+
+        <div class="blb-port-cat">
+          <a href="https://blbdesignbuild.com/kitchens-baths-gallery/" class="blb-port-cat-click" aria-label="Kitchens + Baths Gallery"></a>
+          <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2024/10/Stratham_FREEBIRD-36.jpg?w=400&ssl=1" alt="" width="400" height="533" loading="lazy" decoding="async">
+          <div class="blb-port-cat-overlay"></div>
+          <div class="blb-port-cat-label"><span>KITCHENS + BATHS</span></div>
+        </div>
+
+        <div class="blb-port-cat">
+          <a href="https://blbdesignbuild.com/whole-homes-gallery/" class="blb-port-cat-click" aria-label="Whole Homes Gallery"></a>
+          <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2024/01/314Haverhill_FREEBIRD-115.jpg?w=400&ssl=1" alt="" width="400" height="533" loading="lazy" decoding="async">
+          <div class="blb-port-cat-overlay"></div>
+          <div class="blb-port-cat-label"><span>WHOLE HOMES</span></div>
+        </div>
+
+        <div class="blb-port-cat">
+          <a href="https://blbdesignbuild.com/additions-gallery/" class="blb-port-cat-click" aria-label="Additions Gallery"></a>
+          <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2024/01/314Haverhill_FREEBIRD-120.jpg?w=400&ssl=1" alt="" width="400" height="533" loading="lazy" decoding="async">
+          <div class="blb-port-cat-overlay"></div>
+          <div class="blb-port-cat-label"><span>ADDITIONS</span></div>
+        </div>
+
+        <div class="blb-port-cat">
+          <a href="https://blbdesignbuild.com/basements/" class="blb-port-cat-click" aria-label="Basements Gallery"></a>
+          <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2025/12/4M4A1147.jpg?w=400&ssl=1" alt="" width="400" height="533" loading="lazy" decoding="async">
+          <div class="blb-port-cat-overlay"></div>
+          <div class="blb-port-cat-label"><span>BASEMENTS</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Testimonial (verified: Katie E., from /testimonials/) -->
+  <div class="blb-port-testimonial">
+    <div class="blb-port-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <blockquote>"The quality of work and craftsmanship was top-notch, and we are so impressed with how it came out. The addition looks like it was always part of our house, and every detail was thoughtfully considered. We say often, 'We can't believe this is our house!'"</blockquote>
+    <cite>Katie E.</cite>
+  </div>
+
+
+  <!-- Final CTA -->
+  <div class="blb-port-cta">
+    <h2>Inspired by What You See?</h2>
+    <p>Every project starts with a conversation. Tell us about your home, your goals, and what you've been imagining. We'll help you figure out the right path forward, without pressure or obligations.</p>
+    <a href="https://blbdesignbuild.com/contact-us/" class="blb-port-btn">TELL US ABOUT YOUR PROJECT</a>
+  </div>
+
+</div>
