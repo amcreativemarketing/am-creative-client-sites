@@ -1,0 +1,867 @@
+<!-- BLB Design / Build - Services Page Content Section
+     This content sits between the existing Divi hero section (H1 "OUR SERVICES")
+     and the footer CTA section. Paste into a Divi Code Module.
+     
+     OTTO handles: meta tags, schema (Service, LocalBusiness), OG tags, alt text, canonical
+     We handle: content structure, services grid, CTAs, trust signals, internal links
+-->
+
+<style>
+/* === BLB Services Page Styles === */
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7fc9387e7b24.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f200f69dbc0a.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f217169dbc09.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7f0af27e7b25.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Wrapper --- */
+.blb-svc-wrapper {
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  color: #555555;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.blb-svc-wrapper a {
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* --- Contained sections --- */
+.blb-svc-contained {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Trust Bar --- */
+.blb-svc-trust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 20px 24px;
+  background: #f8f8f8;
+  flex-wrap: wrap;
+}
+
+.blb-svc-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.blb-svc-trust-stars {
+  color: #d4a843;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.blb-svc-trust-divider {
+  width: 1px;
+  height: 18px;
+  background: #ccc;
+}
+
+/* --- Intro Section --- */
+.blb-svc-intro {
+  padding: 60px 0 48px;
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.blb-svc-intro h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  margin: 0 0 20px 0;
+  line-height: 1.35;
+}
+
+.blb-svc-intro p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0 0 16px 0;
+}
+
+.blb-svc-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.blb-svc-intro a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --- Services Grid --- */
+.blb-svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 0 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blb-svc-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.blb-svc-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.blb-svc-card:hover .blb-svc-card-img {
+  transform: scale(1.04);
+}
+
+.blb-svc-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 20, 20, 0.88) 0%,
+    rgba(20, 20, 20, 0.5) 40%,
+    rgba(20, 20, 20, 0.08) 70%,
+    transparent 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.blb-svc-card:hover .blb-svc-card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(20, 20, 20, 0.92) 0%,
+    rgba(20, 20, 20, 0.6) 50%,
+    rgba(20, 20, 20, 0.15) 75%,
+    transparent 100%
+  );
+}
+
+.blb-svc-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 28px 24px;
+  color: #ffffff;
+}
+
+.blb-svc-card-content h3 {
+  font-family: 'Messina Modern', sans-serif !important;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: -0.3px;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.blb-svc-card-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 16px 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+.blb-svc-card:hover .blb-svc-card-desc {
+  max-height: 120px;
+  opacity: 1;
+  margin: 0 0 16px 0;
+}
+
+.blb-svc-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.blb-svc-card-link:hover {
+  border-color: #ffffff;
+}
+
+.blb-svc-card-link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+}
+
+.blb-svc-card:hover .blb-svc-card-link svg {
+  transform: translateX(3px);
+}
+
+/* Full-card clickability */
+.blb-svc-card-click {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+/* --- Why Design-Build Section --- */
+.blb-svc-why {
+  background: #f8f8f8;
+  padding: 64px 24px;
+}
+
+.blb-svc-why-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.blb-svc-why h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 26px;
+  letter-spacing: -0.4px;
+  margin: 0 0 20px 0;
+  line-height: 1.35;
+}
+
+.blb-svc-why p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0 0 16px 0;
+}
+
+.blb-svc-why-points {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.blb-svc-why-points li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.blb-svc-why-points li strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.blb-svc-why-cta {
+  margin-top: 24px;
+}
+
+.blb-svc-why-cta a {
+  display: inline-block;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  border-bottom: 2px solid #b8b8ae;
+  padding-bottom: 3px;
+  transition: border-color 0.3s ease;
+}
+
+.blb-svc-why-cta a:hover {
+  border-color: #1a1a1a;
+}
+
+/* --- Process Preview --- */
+.blb-svc-process {
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.blb-svc-process h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 26px;
+  letter-spacing: -0.4px;
+  margin: 0 0 12px 0;
+}
+
+.blb-svc-process > p {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 40px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blb-svc-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.blb-svc-step {
+  text-align: center;
+  position: relative;
+}
+
+.blb-svc-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid #b8b8ae;
+  border-radius: 50%;
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.blb-svc-step h3 {
+  font-family: 'Messina Modern', sans-serif !important;
+  font-weight: 300;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.3px;
+}
+
+.blb-svc-step p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+}
+
+/* Step connector lines */
+.blb-svc-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  right: -20px;
+  width: 40px;
+  height: 1px;
+  background: #d0d0d0;
+}
+
+/* --- Testimonial --- */
+.blb-svc-testimonial {
+  background: #1a1a1a;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.blb-svc-testimonial blockquote {
+  max-width: 720px;
+  margin: 0 auto 20px;
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #ffffff;
+  font-style: italic;
+  letter-spacing: -0.2px;
+}
+
+.blb-svc-testimonial cite {
+  display: block;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #b8b8ae;
+  font-style: normal;
+}
+
+.blb-svc-testimonial-stars {
+  color: #d4a843;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+/* --- Not Sure Section --- */
+.blb-svc-explore {
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.blb-svc-explore h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 26px;
+  letter-spacing: -0.4px;
+  margin: 0 0 12px 0;
+}
+
+.blb-svc-explore > p {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 36px 0;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blb-svc-explore-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blb-svc-explore-card {
+  padding: 28px 24px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blb-svc-explore-card:hover {
+  border-color: #b8b8ae;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.blb-svc-explore-card h3 {
+  font-family: 'Messina Modern', sans-serif !important;
+  font-weight: 300;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.blb-svc-explore-card p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #666;
+  margin: 0 0 14px 0;
+}
+
+.blb-svc-explore-card a {
+  display: inline-block;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  border-bottom: 2px solid #b8b8ae;
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.blb-svc-explore-card a:hover {
+  border-color: #1a1a1a;
+}
+
+/* --- Final CTA --- */
+.blb-svc-final-cta {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 56px 24px;
+}
+
+.blb-svc-final-cta h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 26px;
+  letter-spacing: -0.4px;
+  margin: 0 0 12px 0;
+}
+
+.blb-svc-final-cta p {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 28px 0;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.blb-svc-btn {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #ffffff !important;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  padding: 17px 48px;
+  border: 2px solid #1a1a1a;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.blb-svc-btn:hover {
+  background: transparent;
+  color: #1a1a1a !important;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .blb-svc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 16px 48px;
+  }
+
+  .blb-svc-card-desc {
+    max-height: 120px;
+    opacity: 1;
+  }
+
+  .blb-svc-why-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .blb-svc-steps {
+    gap: 24px;
+  }
+
+  .blb-svc-step:not(:last-child)::after {
+    display: none;
+  }
+
+  .blb-svc-explore-links {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blb-svc-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 16px 40px;
+  }
+
+  .blb-svc-card {
+    aspect-ratio: 3 / 4;
+  }
+
+  .blb-svc-trust {
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 20px;
+  }
+
+  .blb-svc-trust-divider {
+    display: none;
+  }
+
+  .blb-svc-intro {
+    padding: 40px 16px 36px;
+  }
+
+  .blb-svc-intro h2 {
+    font-size: 24px;
+  }
+
+  .blb-svc-why {
+    padding: 48px 16px;
+  }
+
+  .blb-svc-why h2 {
+    font-size: 22px;
+  }
+
+  .blb-svc-process {
+    padding: 48px 16px;
+  }
+
+  .blb-svc-steps {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 320px;
+  }
+
+  .blb-svc-testimonial {
+    padding: 44px 20px;
+  }
+
+  .blb-svc-testimonial blockquote {
+    font-size: 18px;
+  }
+
+  .blb-svc-explore {
+    padding: 48px 16px;
+  }
+
+  .blb-svc-final-cta {
+    padding: 44px 16px;
+  }
+
+  .blb-svc-final-cta h2 {
+    font-size: 22px;
+  }
+}
+</style>
+
+
+<div class="blb-svc-wrapper">
+
+  <!-- Trust Bar -->
+  <div class="blb-svc-trust">
+    <div class="blb-svc-trust-item">
+      <span class="blb-svc-trust-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>5.0 Google Rating</span>
+    </div>
+    <div class="blb-svc-trust-divider"></div>
+    <div class="blb-svc-trust-item">Pro NE Member</div>
+    <div class="blb-svc-trust-divider"></div>
+    <div class="blb-svc-trust-item">Design-Build Firm, Amesbury MA</div>
+  </div>
+
+
+  <!-- Intro / Value Prop -->
+  <div class="blb-svc-contained">
+    <div class="blb-svc-intro">
+      <h2>One Team. Design Through Completion.</h2>
+      <p>At BLB Design / Build, our architectural partnership and in-house scope development keep your project aligned from the first sketch to the final walkthrough. Instead of managing separate designers, architects, and contractors, you work with one coordinated team focused on your vision, your budget, and your timeline.</p>
+      <p>Whether you're planning a <a href="https://blbdesignbuild.com/kitchen-remodeling/">kitchen remodel</a>, adding space for a growing family, or transforming your entire home, we bring the same commitment to every project: clear communication, quality craftsmanship, and results that exceed what you imagined. Learn more about <a href="https://blbdesignbuild.com/design-build-process/">how our process works</a>.</p>
+    </div>
+  </div>
+
+
+  <!-- Services Grid -->
+  <div class="blb-svc-contained">
+    <div class="blb-svc-grid">
+
+      <!-- Kitchen Remodeling -->
+      <div class="blb-svc-card">
+        <a href="https://blbdesignbuild.com/kitchen-remodeling/" class="blb-svc-card-click" aria-label="Kitchen Remodeling"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2024/10/Stratham_FREEBIRD-36.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async" class="blb-svc-card-img">
+        <div class="blb-svc-card-overlay"></div>
+        <div class="blb-svc-card-content">
+          <h3>Kitchen Remodeling</h3>
+          <p class="blb-svc-card-desc">From layout reconfiguration and cabinetry to countertops and fixtures, we coordinate every detail of your kitchen project. The result is a space that works for how your family actually lives.</p>
+          <span class="blb-svc-card-link">EXPLORE KITCHENS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Bathroom Remodeling -->
+      <div class="blb-svc-card">
+        <a href="https://blbdesignbuild.com/bathroom-remodeling/" class="blb-svc-card-click" aria-label="Bathroom Remodeling"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2025/03/Wilson_FREEBIRD-49.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async" class="blb-svc-card-img">
+        <div class="blb-svc-card-overlay"></div>
+        <div class="blb-svc-card-content">
+          <h3>Bathroom Remodeling</h3>
+          <p class="blb-svc-card-desc">Whether it's a primary bath overhaul or a guest bath refresh, we handle tile, plumbing, fixtures, and finishes with the same attention to detail. Every selection is guided by your style and coordinated by our team.</p>
+          <span class="blb-svc-card-link">EXPLORE BATHROOMS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Home Additions -->
+      <div class="blb-svc-card">
+        <a href="https://blbdesignbuild.com/home-additions/" class="blb-svc-card-click" aria-label="Home Additions"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2024/01/314Haverhill_FREEBIRD-120.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async" class="blb-svc-card-img">
+        <div class="blb-svc-card-overlay"></div>
+        <div class="blb-svc-card-content">
+          <h3>Home Additions</h3>
+          <p class="blb-svc-card-desc">Need more room? From bump-outs and <a href="https://blbdesignbuild.com/north-shore-remodeling/second-story-additions/" style="color:#fff;text-decoration:underline;">second-story additions</a> to full-scale expansions, we design and build new space that integrates with your home's existing character.</p>
+          <span class="blb-svc-card-link">EXPLORE ADDITIONS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Whole Home Remodeling -->
+      <div class="blb-svc-card">
+        <a href="https://blbdesignbuild.com/whole-home-remodeling/" class="blb-svc-card-click" aria-label="Whole Home Remodeling"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2025/04/BLB-92.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async" class="blb-svc-card-img">
+        <div class="blb-svc-card-overlay"></div>
+        <div class="blb-svc-card-content">
+          <h3>Whole Home Remodeling</h3>
+          <p class="blb-svc-card-desc">When your project spans multiple rooms or floors, our design-build approach keeps everything moving in sync. One team, one timeline, one point of contact for the entire renovation.</p>
+          <span class="blb-svc-card-link">EXPLORE WHOLE HOMES <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Basements -->
+      <div class="blb-svc-card">
+        <a href="https://blbdesignbuild.com/basements/" class="blb-svc-card-click" aria-label="Basements"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2025/12/4M4A1147.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async" class="blb-svc-card-img">
+        <div class="blb-svc-card-overlay"></div>
+        <div class="blb-svc-card-content">
+          <h3>Basements</h3>
+          <p class="blb-svc-card-desc">Turn underused square footage into something your family will actually enjoy. From entertainment areas to home offices, we help you rethink what's possible below grade.</p>
+          <span class="blb-svc-card-link">EXPLORE BASEMENTS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- In-Law Suites + ADUs -->
+      <div class="blb-svc-card">
+        <a href="https://blbdesignbuild.com/in-law-suites/" class="blb-svc-card-click" aria-label="In-Law Suites + ADUs"></a>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2025/08/4M4A0862-Enhanced-NR-crop.jpg?w=600&ssl=1" alt="" width="600" height="750" loading="lazy" decoding="async" class="blb-svc-card-img">
+        <div class="blb-svc-card-overlay"></div>
+        <div class="blb-svc-card-content">
+          <h3>In-Law Suites + ADUs</h3>
+          <p class="blb-svc-card-desc">Multi-generational living, guest quarters, or rental income. We design and build suites that feel like a natural extension of your home while meeting local building requirements.</p>
+          <span class="blb-svc-card-link">EXPLORE IN-LAW SUITES <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Why Design-Build -->
+  <div class="blb-svc-why">
+    <div class="blb-svc-why-inner">
+      <div>
+        <h2>Why Design-Build Works</h2>
+        <p>The traditional approach, hiring a designer and a builder separately, often leads to miscommunication, change orders, and budgets that drift. Design-build eliminates that gap by keeping design and construction under one roof from day one.</p>
+        <p>At BLB Design / Build, that means:</p>
+        <ul class="blb-svc-why-points">
+          <li><strong>Aligned vision and budget.</strong> Our team develops your design with buildability and cost in mind from the start, so your plans don't outpace your investment.</li>
+          <li><strong>One point of contact.</strong> Your project manager coordinates every trade, every timeline, and every decision, so you always know what's happening and when.</li>
+          <li><strong>Fewer surprises.</strong> With our scope development process, we identify challenges early and address them before construction begins.</li>
+          <li><strong>Faster completion.</strong> Design and pre-construction planning overlap, which means your project moves from concept to reality more efficiently.</li>
+        </ul>
+        <div class="blb-svc-why-cta">
+          <a href="https://blbdesignbuild.com/design-build-process/">LEARN ABOUT OUR PROCESS</a>
+        </div>
+      </div>
+      <div>
+        <img src="https://i0.wp.com/blbdesignbuild.com/wp-content/uploads/2025/05/418-Main-St-49.jpg?w=540&ssl=1" alt="" width="540" height="360" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Process Preview -->
+  <div class="blb-svc-process blb-svc-contained">
+    <h2>How a Project Comes Together</h2>
+    <p>Every remodel follows a clear path. Here's what to expect when you work with BLB Design / Build.</p>
+
+    <div class="blb-svc-steps">
+      <div class="blb-svc-step">
+        <div class="blb-svc-step-num">1</div>
+        <h3>Design, Planning, + Contract</h3>
+        <p>We learn about your goals, develop a detailed scope and design, and align everything with your budget before any work begins.</p>
+      </div>
+      <div class="blb-svc-step">
+        <div class="blb-svc-step-num">2</div>
+        <h3>Construction</h3>
+        <p>Our team coordinates all trades and manages the build. You'll receive bi-weekly updates and have full visibility through CoConstruct&#8482;.</p>
+      </div>
+      <div class="blb-svc-step">
+        <div class="blb-svc-step-num">3</div>
+        <h3>Completion + Walkthrough</h3>
+        <p>We walk through the finished project together, address any final details, and make sure everything meets your expectations.</p>
+      </div>
+    </div>
+
+    <a href="https://blbdesignbuild.com/design-build-process/" class="blb-svc-btn">SEE THE FULL PROCESS</a>
+  </div>
+
+
+  <!-- Testimonial -->
+  <div class="blb-svc-testimonial">
+    <div class="blb-svc-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <blockquote>"BLB has been great to work with, both as contractors and as people. I will use them again on my next home project and recommend them to anyone who asks. And if asked, I will tell them that BLB cares more about your house as much as you do. It's really that simple."</blockquote>
+    <cite>Peter G.</cite>
+  </div>
+
+
+  <!-- Not Sure Where to Start -->
+  <div class="blb-svc-explore">
+    <h2>Not Sure Where to Start?</h2>
+    <p>That's completely normal. Here are a few ways to explore what's possible for your home.</p>
+
+    <div class="blb-svc-explore-links">
+      <div class="blb-svc-explore-card">
+        <h3>See Our Work</h3>
+        <p>Browse completed projects from kitchens and baths to full home renovations.</p>
+        <a href="https://blbdesignbuild.com/work/">VIEW PORTFOLIO</a>
+      </div>
+      <div class="blb-svc-explore-card">
+        <h3>Read What Clients Say</h3>
+        <p>Hear directly from homeowners about their experience working with our team.</p>
+        <a href="https://blbdesignbuild.com/testimonials/">READ REVIEWS</a>
+      </div>
+      <div class="blb-svc-explore-card">
+        <h3>Start a Conversation</h3>
+        <p>Tell us about your project and we'll help you figure out the right path forward.</p>
+        <a href="https://blbdesignbuild.com/contact-us/">GET IN TOUCH</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Final CTA -->
+  <div class="blb-svc-final-cta">
+    <h2>Ready to Talk About Your Project?</h2>
+    <p>Whether you have a clear vision or are still exploring ideas, we're here to help. No pressure, no obligations. Just an honest conversation about what's possible for your home.</p>
+    <a href="https://blbdesignbuild.com/contact-us/" class="blb-svc-btn">TELL US ABOUT YOUR PROJECT</a>
+  </div>
+
+</div>
