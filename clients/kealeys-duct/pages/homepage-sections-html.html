@@ -12,7 +12,7 @@
   1. Services Overview (Dryer Vent + Air Duct cards)
   2. Why Choose BK (4-column trust grid)
   3. How It Works (3-step process)
-  4. Customer Reviews (3-column static grid)
+  4. Customer Reviews (AM Connect review widget)
   5. Service Area (3 location cards)
   6. FAQ Accordion (6 questions)
   
@@ -290,51 +290,16 @@
     margin-right: auto;
   }
 
-  /* ---- Reviews ---- */
-  .bk-hp-reviews-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
+  /* ---- Review Widget ---- */
+  .bk-hp-review-widget-wrap {
+    max-width: 900px;
+    margin: 0 auto;
   }
 
-  .bk-hp-review-card {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 22px 20px;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .bk-hp-review-stars {
-    color: #f5a623;
-    font-size: 16px;
-    margin-bottom: 8px;
-    letter-spacing: 2px;
-  }
-
-  .bk-hp-review-card blockquote {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    color: #444444;
-    line-height: 1.65;
-    margin: 0 0 12px 0;
-    font-style: italic;
-    flex-grow: 1;
-  }
-
-  .bk-hp-review-name {
-    font-family: 'Manrope', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    color: #0e3160;
-  }
-
-  .bk-hp-review-source {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    color: #888888;
+  .bk-hp-review-widget-wrap iframe.lc_reviews_widget {
+    min-width: 100%;
+    width: 100%;
+    border: none;
   }
 
   /* ---- Service Area Cards ---- */
@@ -546,10 +511,6 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .bk-hp-reviews-grid {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
     .bk-hp-area-grid {
       grid-template-columns: 1fr 1fr 1fr;
     }
@@ -710,36 +671,16 @@
 
 <!-- ============================================================
      SECTION 4: REVIEWS / SOCIAL PROOF
-     Static 3-column grid (no carousel)
+     AM Connect review widget - auto-updating from Google
      ============================================================ -->
 <div class="bk-hp-section-alt">
   <div class="bk-hp-inner">
     <h2 class="bk-hp-h2">What Our Customers Are Saying</h2>
     <p class="bk-hp-subtitle">Real reviews from homeowners across North Shore MA, Southern NH, and the Seacoast.</p>
 
-    <div class="bk-hp-reviews-grid">
-
-      <div class="bk-hp-review-card">
-        <div class="bk-hp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"Excellent experience, top notch communication from inquiry to completed job. Highly recommend and will use again."</blockquote>
-        <span class="bk-hp-review-name">Franco D.</span>
-        <span class="bk-hp-review-source">Google Review</span>
-      </div>
-
-      <div class="bk-hp-review-card">
-        <div class="bk-hp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"Brian and Keenan were very professional and explained the process. They even helped me understand my heating system as I was having an issue with it that day. Very knowledgeable! This is my 2nd time hiring them and I will definitely be calling them again."</blockquote>
-        <span class="bk-hp-review-name">Rachel C.</span>
-        <span class="bk-hp-review-source">Google Review</span>
-      </div>
-
-      <div class="bk-hp-review-card">
-        <div class="bk-hp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"Keenan did an outstanding job! He was pleasant and efficient and explained the entire process to me. The basement was clean and neat when he finished and my dryer works well!"</blockquote>
-        <span class="bk-hp-review-name">Patty D.</span>
-        <span class="bk-hp-review-source">Google Review</span>
-      </div>
-
+    <div class="bk-hp-review-widget-wrap">
+      <script type='text/javascript' src='https://link.bkductdryercleaning.com/reputation/assets/review-widget.js'></script>
+      <iframe class='lc_reviews_widget' src='https://link.bkductdryercleaning.com/reputation/widgets/review_widget/3FH2unTSATr18fj7pm1r' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%;'></iframe>
     </div>
 
     <div class="bk-hp-center bk-hp-mt-20">
