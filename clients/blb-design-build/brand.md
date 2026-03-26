@@ -74,14 +74,23 @@
 | White | `#ffffff` | Clean backgrounds, button text |
 | Header Bar | `#b8b8ae` | Stone gray - blog/project headers |
 
-### Typography
+### Typography - Heading Hierarchy (from brand guide, confirmed by Corinne March 2026)
+
+| Element | Font | Weight | Design Size | Leading | Usage |
+|---------|------|--------|-------------|---------|-------|
+| H1 | Messina Sans Black | 900 | 80px | 86px | Page headings, major section headings, emphasized words |
+| H2 | Messina Sans Bold | 700 | 60px | 70px | Section headings, blog body headings, smaller headings |
+| H3 | Messina Modern Light | 300 | 36px | 46px | Sub headings, CTA headings, call out or short quote |
+| H4 | Messina Sans Bold | 700 | 20px | 28px | Minor headings, table labels, sub-sub headings, can be ALL CAPS |
+
+**Note:** Design sizes above are from the brand spec. Web implementations scale these down proportionally (e.g., H1 ~32-42px, H2 ~22-28px on web). The key requirement is the correct font-family and weight for each heading level.
+
+### Body Text
 | Element | Specs |
 |---------|-------|
-| Font Family | Messina Modern Light |
-| Headlines | Font-weight: 300 (light), negative letter-spacing (-1px on large) |
-| Body | Font-size: 16-18px, line-height: 1.6-1.8 |
+| Body Font | Messina Modern Light, font-weight: 300 |
+| Body Size | 16-18px, line-height: 1.6-1.8 |
 | Body Color | `#555` or `#666` |
-| H2 Override | `font-family: 'Messina Modern', sans-serif !important; font-weight: 400;` |
 
 ### Hosted Font Files (woff2, GHL media)
 | Font | Weight | URL |
@@ -92,7 +101,7 @@
 | Messina Sans Black | 900 | `https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7f0af27e7b25.woff2` |
 | Messina Serif Light Italic | 300 italic | `https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84036702ffa39f680c6.woff2` |
 
-**CSS usage:** Use `'Messina Modern'` as a single font-family with weight variants (300 for Light, 600 for Semi Bold). Use `'Messina Sans'` for buttons/CTAs (700 for Bold, 900 for Black). No Google Fonts fallback needed on new pages.
+**CSS usage:** Use `'Messina Sans'` for H1 (weight 900/Black) and H2 (weight 700/Bold). Use `'Messina Modern'` for H3 (weight 300/Light) and body text. Use `'Messina Sans'` for H4 (weight 700/Bold) and buttons/CTAs. No Google Fonts fallback needed on new pages.
 
 ### Button Styles
 | Type | Specs |
@@ -448,3 +457,4 @@ Location-service combo pages (e.g., "Kitchen Remodeling Newburyport") make sense
 ---
 
 *Last updated: March 5, 2026*
+
