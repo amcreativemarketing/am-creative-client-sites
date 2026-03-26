@@ -1,0 +1,565 @@
+<!-- BLB Design / Build - FAQs Page Content Section
+     This content sits between the existing Divi hero image and footer CTA sections.
+     Paste into a Divi Code Module within the FAQ content section.
+     
+     OTTO handles: meta tags, schema (FAQPage, LocalBusiness), OG tags, alt text, canonical
+     We handle: content structure, accordion, CTAs, trust signals, internal links
+-->
+
+<style>
+/* === BLB FAQ Page Styles === */
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7fc9387e7b24.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f200f69dbc0a.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f217169dbc09.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7f0af27e7b25.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.blb-faq-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 20px 40px;
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  color: #555555;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.blb-faq-wrapper h1 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 900;
+  color: #1a1a1a;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.blb-faq-intro {
+  margin-bottom: 36px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.blb-faq-intro a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Trust bar */
+.blb-faq-trust {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 24px;
+  background: #f8f8f8;
+  border-radius: 6px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.blb-faq-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #1a1a1a;
+  font-weight: 300;
+}
+
+.blb-faq-trust-stars {
+  color: #d4a843;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.blb-faq-trust-divider {
+  width: 1px;
+  height: 20px;
+  background: #ccc;
+}
+
+/* Section headers */
+.blb-faq-wrapper h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 22px;
+  letter-spacing: -0.3px;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Accordion */
+.blb-faq-item {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.blb-faq-item:last-child {
+  border-bottom: none;
+}
+
+.blb-faq-toggle {
+  display: none;
+}
+
+.blb-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #1a1a1a;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+  gap: 16px;
+}
+
+.blb-faq-question:hover {
+  color: #666;
+}
+
+.blb-faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.blb-faq-icon::before,
+.blb-faq-icon::after {
+  content: '';
+  position: absolute;
+  background: #1a1a1a;
+  transition: transform 0.3s ease;
+}
+
+.blb-faq-icon::before {
+  width: 16px;
+  height: 1.5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blb-faq-icon::after {
+  width: 1.5px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blb-faq-toggle:checked + .blb-faq-question .blb-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+
+.blb-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 0 0 0;
+}
+
+.blb-faq-toggle:checked ~ .blb-faq-answer {
+  max-height: 600px;
+  padding: 0 0 24px 0;
+}
+
+.blb-faq-answer p {
+  margin: 0 0 14px 0;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.blb-faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.blb-faq-answer a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blb-faq-answer ul {
+  margin: 8px 0 14px 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.blb-faq-answer ul li {
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Mid-page CTA */
+.blb-faq-cta {
+  text-align: center;
+  padding: 40px 24px;
+  margin: 44px 0;
+  background: #f8f8f8;
+  border-radius: 6px;
+}
+
+.blb-faq-cta p {
+  font-size: 17px;
+  color: #555;
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+}
+
+.blb-faq-cta-btn {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #ffffff !important;
+  font-family: 'Messina Sans', 'Messina Modern', sans-serif !important;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  padding: 16px 44px;
+  border: 2px solid #1a1a1a;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.blb-faq-cta-btn:hover {
+  background: transparent;
+  color: #1a1a1a !important;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .blb-faq-wrapper {
+    padding: 16px 16px 32px;
+  }
+
+  .blb-faq-wrapper h1 {
+    font-size: 26px;
+  }
+
+  .blb-faq-wrapper h2 {
+    font-size: 20px;
+    margin-top: 36px;
+  }
+
+  .blb-faq-trust {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .blb-faq-trust-divider {
+    display: none;
+  }
+
+  .blb-faq-question {
+    font-size: 16px;
+    padding: 18px 0;
+  }
+
+  .blb-faq-cta {
+    padding: 32px 20px;
+  }
+
+}
+}
+</style>
+
+<div class="blb-faq-wrapper">
+
+  <h1>Frequently Asked Questions About BLB Design / Build</h1>
+
+  <p class="blb-faq-intro">
+    Planning a remodel is a big decision, and you probably have questions about how the process works. Below, we answer the most common questions homeowners ask before and during their project. If you don't see your question here, <a href="https://blbdesignbuild.com/contact-us/">reach out to our team</a>.
+  </p>
+
+  <!-- Trust Bar -->
+  <div class="blb-faq-trust">
+    <div class="blb-faq-trust-item">
+      <span class="blb-faq-trust-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>5.0 Google Rating</span>
+    </div>
+    <div class="blb-faq-trust-divider"></div>
+    <div class="blb-faq-trust-item">
+      Pro NE Member
+    </div>
+    <div class="blb-faq-trust-divider"></div>
+    <div class="blb-faq-trust-item">
+      Serving the North Shore + Southern NH
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 1: GETTING STARTED ===================== -->
+  <h2>Getting Started</h2>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-1" class="blb-faq-toggle">
+    <label for="faq-1" class="blb-faq-question">
+      What is design-build, and how is it different from hiring separate contractors?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>With a traditional approach, you hire an architect or designer separately from your builder. That often creates a disconnect between what gets designed and what can realistically be built within your budget and timeline.</p>
+      <p>With <a href="https://blbdesignbuild.com/design-build-process/">design-build</a>, one team coordinates the entire project from initial concepts through final construction. At BLB Design / Build, our architectural partnership and in-house scope development keep design and construction aligned from day one. That means fewer surprises, smoother communication, and a finished result that matches what you envisioned.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-2" class="blb-faq-toggle">
+    <label for="faq-2" class="blb-faq-question">
+      How does BLB Design / Build differ from other construction companies?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>Our Design, Scope Development, and Building capabilities help turn your ideas into feasible plans. Our architectural partnership alleviates the common industry disconnect between designer, homeowner, and builder. Our synchrony provides smooth transitions from the design phase to the final stages of your project.</p>
+      <p>You can learn more about our approach on our <a href="https://blbdesignbuild.com/services/">services page</a>, or see what past clients have to say on our <a href="https://blbdesignbuild.com/testimonials/">testimonials page</a>.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-3" class="blb-faq-toggle">
+    <label for="faq-3" class="blb-faq-question">
+      What areas do you serve?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>BLB Design / Build is based in Amesbury, MA and serves homeowners across the <a href="https://blbdesignbuild.com/north-shore-remodeling/">North Shore of Massachusetts</a> and parts of Southern New Hampshire. Our service area extends roughly 30 miles from Amesbury, including towns like Newburyport, West Newbury, Newbury, Rowley, Boxford, and Georgetown. Visit our <a href="https://blbdesignbuild.com/areas-we-serve/">areas we serve</a> page for more details, or <a href="https://blbdesignbuild.com/contact-us/">contact us</a> to confirm we cover your area.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-4" class="blb-faq-toggle">
+    <label for="faq-4" class="blb-faq-question">
+      What should I expect during the initial consultation?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>The first conversation is simply a chance for us to learn about your project and for you to learn about how we work. We'll discuss your goals, your home's current layout, and any ideas you've been considering. There is no pressure and no obligation.</p>
+      <p>This is also a good time to ask us questions about our process, timeline expectations, and whether your project is a good fit for design-build. From there, we can outline next steps if you'd like to move forward.</p>
+      <p><a href="https://blbdesignbuild.com/contact-us/">SCHEDULE A CONSULTATION</a></p>
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 2: PROCESS + TIMELINE ===================== -->
+  <h2>Process + Timeline</h2>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-5" class="blb-faq-toggle">
+    <label for="faq-5" class="blb-faq-question">
+      How long does a typical remodel take?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>Every project is different, so timelines vary based on scope, design complexity, and permitting. A bathroom remodel and a full home renovation will have very different schedules. During the Design, Planning, + Contract phase, we'll develop a detailed timeline specific to your project so you know what to expect before construction begins.</p>
+      <p>You can browse examples of completed projects on our <a href="https://blbdesignbuild.com/work/">portfolio page</a> to get a sense of the types of work we do.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-6" class="blb-faq-toggle">
+    <label for="faq-6" class="blb-faq-question">
+      How can I estimate the duration of pre-construction?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>This heavily depends on your project's size and scope. The larger the project, the more design meetings and scope development are required to bring your project to fruition. Your project manager will walk you through the pre-construction timeline during the planning phase.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-7" class="blb-faq-toggle">
+    <label for="faq-7" class="blb-faq-question">
+      When can we start construction?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>While the contract includes a tentative start date, you will receive a concrete start date following our receipt of the building permit. When planning your project start date, we factor in the current lead times for supplies related to your project, any work that requires seasonal considerations (e.g., exterior painting, excavation, and concrete), and our current waitlist of scheduled projects.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-8" class="blb-faq-toggle">
+    <label for="faq-8" class="blb-faq-question">
+      Will I get a schedule?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>Definitely. You can quickly review your updated project schedule anytime by accessing our construction software, CoConstruct&#8482;. This keeps everything transparent so you always know what's happening and when.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-9" class="blb-faq-toggle">
+    <label for="faq-9" class="blb-faq-question">
+      How frequently will I be provided with project updates?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>Our project manager will schedule bi-weekly meetings at the start of your project. Bi-weekly meetings, held in-person or virtually, offer updates on the previous week's progress, the upcoming schedule, and any outstanding questions. Communication is a core part of how we work.</p>
+    </div>
+  </div>
+
+
+  <!-- Mid-page CTA -->
+  <div class="blb-faq-cta">
+    <p>Have a question we didn't cover? Our team typically responds within one business day.</p>
+    <a href="https://blbdesignbuild.com/contact-us/" class="blb-faq-cta-btn">START YOUR REMODEL CONVERSATION</a>
+  </div>
+
+
+  <!-- ===================== SECTION 3: BUDGET + CHANGES ===================== -->
+  <h2>Budget + Changes</h2>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-10" class="blb-faq-toggle">
+    <label for="faq-10" class="blb-faq-question">
+      How does BLB approach project budgeting?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>Every remodel is unique, so we don't publish one-size-fits-all pricing. During the Design, Planning, + Contract phase, we develop a detailed scope of work and budget specific to your home and goals. Our process is designed to give you a clear picture of costs before construction begins, so there are no surprises along the way.</p>
+      <p>The best way to get an accurate understanding of your investment is to <a href="https://blbdesignbuild.com/contact-us/">schedule a consultation</a>. We'll discuss your vision and provide guidance based on our experience with similar projects across the North Shore.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-11" class="blb-faq-toggle">
+    <label for="faq-11" class="blb-faq-question">
+      What is an additional work order?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>An additional work order is a result of changes requested by the homeowner after the contract is signed outside the scope of work. For example, deciding to add a pantry that wasn't in the original plan for your <a href="https://blbdesignbuild.com/kitchen-remodeling/">kitchen remodel</a>.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-12" class="blb-faq-toggle">
+    <label for="faq-12" class="blb-faq-question">
+      What is a change order?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>Change orders are unforeseen work that must be addressed in order to continue with the original scope of work. For example, rotted beams, foundation issues, double walls + ceilings, and water or insect damage. These are things that only become visible once construction is underway.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-13" class="blb-faq-toggle">
+    <label for="faq-13" class="blb-faq-question">
+      How do we move forward with a work order or change order?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>BLB will always provide an estimated cost for the additional work. Once approved, we can begin the work order or change order tasks. Payments for work orders and change orders vary depending on what type of contract your project has.</p>
+      <ul>
+        <li>If you have a fixed price contract, work orders and change orders are billed separately from progress payments and are due when you sign the approval.</li>
+        <li>If you have a cost plus contract, work orders and change orders are included in the bi-weekly invoices of costs to date.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 4: SELECTIONS + YOUR ROLE ===================== -->
+  <h2>Selections + Your Role</h2>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-14" class="blb-faq-toggle">
+    <label for="faq-14" class="blb-faq-question">
+      Which selections does BLB research and provide?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>Typically, our project developer will assist in selecting plumbing fixtures, tile products, and stone. Our office will always procure plumbing fixtures to ensure they meet the local plumbing codes and regulations. If your project requires specialty selections and finishes, our team will recommend a trusted, local designer for additional assistance.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-15" class="blb-faq-toggle">
+    <label for="faq-15" class="blb-faq-question">
+      What are the homeowner's responsibilities for making product selections?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>While we collaborate with our clients and assist with product selections, which may include tile, stone, flooring, hardware, and more, homeowners are encouraged to research their preferences and visit product showrooms when making decisions.</p>
+      <p>Appliances and electrical fixtures are handled by the homeowner, but we are happy to assist with coordinating the delivery. All electrical fixtures and appliances must be on-site before the electrical and plumbing finish.</p>
+    </div>
+  </div>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-16" class="blb-faq-toggle">
+    <label for="faq-16" class="blb-faq-question">
+      Does BLB handle permits?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>We coordinate the permitting process as part of our project management. The specific requirements depend on your town, the scope of your project, and whether your home is in a historic district or coastal zone. Our team will guide you through what's needed and keep the process on track. If you have questions about permitting in your area, <a href="https://blbdesignbuild.com/contact-us/">reach out to our team</a>.</p>
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 5: HOW TO GET STARTED ===================== -->
+  <h2>Ready to Begin?</h2>
+
+  <div class="blb-faq-item">
+    <input type="checkbox" id="faq-17" class="blb-faq-toggle">
+    <label for="faq-17" class="blb-faq-question">
+      How do I get started with BLB Design / Build?
+      <span class="blb-faq-icon"></span>
+    </label>
+    <div class="blb-faq-answer">
+      <p>The first step is to tell us about your project. You can <a href="https://blbdesignbuild.com/contact-us/">fill out our contact form</a> or call us at <a href="tel:9787922880">978-792-2880</a>. We'll set up an initial conversation to learn about your goals, walk you through our Design, Planning, + Contract process, and answer any remaining questions.</p>
+      <p>Whether you're considering a <a href="https://blbdesignbuild.com/kitchen-remodeling/">kitchen remodel</a>, <a href="https://blbdesignbuild.com/bathroom-remodeling/">bathroom renovation</a>, <a href="https://blbdesignbuild.com/home-additions/">home addition</a>, or <a href="https://blbdesignbuild.com/whole-home-remodeling/">whole home renovation</a>, we're here to help you figure out the right path forward, without pressure or obligations.</p>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <div class="blb-faq-cta" style="margin-bottom: 0;">
+    <p>Remodeling your home is one of the most personal investments you can make. We'd love to learn about your project and show you what's possible.</p>
+    <a href="https://blbdesignbuild.com/contact-us/" class="blb-faq-cta-btn">TELL US ABOUT YOUR PROJECT</a>
+  </div>
+
+</div>
