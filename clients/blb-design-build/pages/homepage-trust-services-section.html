@@ -1,0 +1,463 @@
+<!--
+===========================================
+BLB HOMEPAGE - TRUST + SERVICES SECTION
+Combined block: Trust signals → Services grid → CTA
+Placement: Between "Beyond the Build / Our Process" section and footer
+Updated: March 26, 2026
+===========================================
+
+No schema, no meta tags, no microdata - OTTO handles all SEO markup.
+All images: alt="" empty - OTTO generates SEO alt text.
+-->
+
+<style>
+/* ========================================
+   BLB Homepage Trust + Services
+   Namespace: .blb-hp-main
+   ======================================== */
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e84087a0f217169dbc09.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7f0af27e7b25.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('https://assets.cdn.filesafe.space/FWxRWdiszdzRYCBCiTbS/media/69a9e840fe8d7fc9387e7b24.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Base --- */
+.blb-hp-main {
+  --blb-black: #1a1a1a;
+  --blb-gray-dark: #555555;
+  --blb-gray-medium: #666666;
+  --blb-gray-light: #f8f8f8;
+  --blb-white: #ffffff;
+  --blb-taupe: #b8b8ae;
+  --blb-gold: #d4a574;
+
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  color: var(--blb-gray-dark);
+  line-height: 1.7;
+  font-size: 17px;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  box-sizing: border-box !important;
+}
+
+
+/* ========================================
+   TRUST SIGNALS
+   ======================================== */
+.blb-hp-trust {
+  padding: 60px 20px;
+  background-color: var(--blb-gray-light);
+  text-align: center;
+}
+
+.blb-hp-trust-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.blb-hp-main .blb-hp-trust h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--blb-black);
+  margin: 0 0 24px 0;
+  letter-spacing: 0.5px;
+}
+
+.blb-hp-trust-text {
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--blb-gray-dark);
+  margin: 0 0 28px 0;
+}
+
+.blb-hp-trust-rating {
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--blb-black);
+  margin: 0 0 32px 0;
+}
+
+.blb-hp-trust-stars {
+  color: var(--blb-gold);
+  letter-spacing: 2px;
+}
+
+.blb-hp-trust-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.blb-hp-trust-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  font-family: 'Messina Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid var(--blb-taupe);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: var(--blb-taupe);
+  color: #f1f1f1;
+}
+
+.blb-hp-trust-btn:hover {
+  background-color: var(--blb-black);
+  color: #f1f1f1;
+  border-color: var(--blb-black);
+}
+
+
+/* ========================================
+   SERVICES GRID
+   ======================================== */
+.blb-hp-services {
+  padding: 70px 20px;
+  background-color: var(--blb-white);
+}
+
+.blb-hp-services-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blb-hp-main .blb-hp-services h2 {
+  font-family: 'Messina Sans', sans-serif !important;
+  font-weight: 700;
+  color: var(--blb-black);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.blb-hp-services-subhead {
+  text-align: center;
+  color: var(--blb-gray-dark);
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  max-width: 720px;
+  margin: 0 auto 50px auto;
+  line-height: 1.7;
+}
+
+.blb-hp-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.blb-hp-svc-card {
+  background: var(--blb-gray-light);
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blb-hp-svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.blb-hp-svc-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.blb-hp-svc-card-content {
+  padding: 28px 28px 32px;
+}
+
+.blb-hp-main .blb-hp-svc-card h3 {
+  font-family: 'Messina Modern', sans-serif !important;
+  font-weight: 300;
+  color: var(--blb-black);
+  font-size: 1.35rem;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.3px;
+}
+
+.blb-hp-svc-card p {
+  color: var(--blb-gray-dark);
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 18px 0;
+}
+
+.blb-hp-svc-link {
+  display: inline-block;
+  color: var(--blb-black);
+  font-family: 'Messina Sans', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--blb-black);
+  padding-bottom: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.blb-hp-svc-link:hover {
+  opacity: 0.6;
+}
+
+
+/* ========================================
+   BOTTOM CTA
+   ======================================== */
+.blb-hp-bottom-cta {
+  text-align: center;
+  padding: 50px 20px 70px;
+  background-color: var(--blb-white);
+}
+
+.blb-hp-bottom-cta p {
+  color: var(--blb-gray-medium);
+  font-family: 'Messina Modern', sans-serif;
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.blb-hp-btn-primary {
+  display: inline-block;
+  background-color: var(--blb-black);
+  color: var(--blb-white);
+  padding: 18px 50px;
+  text-decoration: none;
+  font-family: 'Messina Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--blb-black);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.blb-hp-btn-primary:hover {
+  background-color: var(--blb-white);
+  color: var(--blb-black);
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media screen and (max-width: 1024px) {
+  .blb-hp-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blb-hp-trust {
+    padding: 48px 20px;
+  }
+
+  .blb-hp-trust-inner {
+    padding: 0 20px;
+  }
+
+  .blb-hp-main .blb-hp-trust h2 {
+    font-size: 24px;
+  }
+
+  .blb-hp-trust-text {
+    font-size: 15px;
+  }
+
+  .blb-hp-trust-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blb-hp-trust-btn {
+    padding: 12px 30px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .blb-hp-services {
+    padding: 50px 20px;
+  }
+
+  .blb-hp-main .blb-hp-services h2 {
+    font-size: 1.8rem;
+  }
+
+  .blb-hp-services-grid {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+
+  .blb-hp-svc-card {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .blb-hp-svc-card:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .blb-hp-svc-card img {
+    height: 200px;
+  }
+
+  .blb-hp-svc-card-content {
+    padding: 22px 22px 26px;
+  }
+
+  .blb-hp-bottom-cta {
+    padding: 40px 20px 50px;
+  }
+
+  .blb-hp-btn-primary {
+    padding: 16px 40px;
+    font-size: 13px;
+  }
+}
+</style>
+
+
+<div class="blb-hp-main">
+
+  <!-- ======= TRUST SIGNALS ======= -->
+  <section class="blb-hp-trust">
+    <div class="blb-hp-trust-inner">
+      <h2>Trusted by North Shore Homeowners Since 2012</h2>
+
+      <p class="blb-hp-trust-text">
+        BLB Design / Build has completed kitchen remodels, home additions, and whole-home renovations across Amesbury, Newburyport, and the greater North Shore. Our design-build approach means one team handles everything - design, permits, and construction - so you get a single point of contact and no finger-pointing between contractors.
+      </p>
+
+      <p class="blb-hp-trust-rating">
+        <span class="blb-hp-trust-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 rating on Google
+      </p>
+
+      <div class="blb-hp-trust-ctas">
+        <a href="https://blbdesignbuild.com/testimonials/" class="blb-hp-trust-btn">Read Reviews</a>
+        <a href="https://blbdesignbuild.com/contact-us/" class="blb-hp-trust-btn">Schedule a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======= SERVICES GRID ======= -->
+  <section class="blb-hp-services">
+    <div class="blb-hp-services-inner">
+
+      <h2>What We Build</h2>
+      <p class="blb-hp-services-subhead">From kitchens and bathrooms to full-home transformations, BLB Design / Build coordinates every detail of your renovation. One team. One plan. One point of contact from start to finish.</p>
+
+      <div class="blb-hp-services-grid">
+
+        <!-- Kitchen Remodeling -->
+        <div class="blb-hp-svc-card">
+          <img src="https://blbdesignbuild.com/wp-content/uploads/2024/09/Stratham_FREEBIRD-36.jpg" alt="" width="400" height="220" loading="lazy" decoding="async">
+          <div class="blb-hp-svc-card-content">
+            <h3>Kitchen Remodeling</h3>
+            <p>Layout changes, cabinet coordination, countertops, and full kitchen renovations designed around how your family actually uses the space.</p>
+            <a href="https://blbdesignbuild.com/kitchen-remodeling/" class="blb-hp-svc-link">EXPLORE KITCHEN PROJECTS</a>
+          </div>
+        </div>
+
+        <!-- Bathroom Remodeling -->
+        <div class="blb-hp-svc-card">
+          <img src="https://blbdesignbuild.com/wp-content/uploads/2025/09/4M4A0929-Enhanced-NR.jpg" alt="" width="400" height="220" loading="lazy" decoding="async">
+          <div class="blb-hp-svc-card-content">
+            <h3>Bathroom Remodeling</h3>
+            <p>Primary baths, guest bathrooms, and powder rooms. From tile and fixtures to layout reconfiguration, we coordinate every trade involved.</p>
+            <a href="https://blbdesignbuild.com/bathroom-remodeling/" class="blb-hp-svc-link">EXPLORE BATHROOM PROJECTS</a>
+          </div>
+        </div>
+
+        <!-- Whole Home Remodeling -->
+        <div class="blb-hp-svc-card">
+          <img src="https://blbdesignbuild.com/wp-content/uploads/2024/01/314Haverhill_FREEBIRD-187.jpg" alt="" width="400" height="220" loading="lazy" decoding="async">
+          <div class="blb-hp-svc-card-content">
+            <h3>Whole Home Remodeling</h3>
+            <p>Love your neighborhood but not your house? We coordinate complete home transformations, from foundation to roofline, while preserving what makes your home yours.</p>
+            <a href="https://blbdesignbuild.com/whole-home-remodeling/" class="blb-hp-svc-link">EXPLORE WHOLE HOME PROJECTS</a>
+          </div>
+        </div>
+
+        <!-- Home Additions -->
+        <div class="blb-hp-svc-card">
+          <img src="https://blbdesignbuild.com/wp-content/uploads/2024/01/314Haverhill_FREEBIRD-120.jpg" alt="" width="400" height="220" loading="lazy" decoding="async">
+          <div class="blb-hp-svc-card-content">
+            <h3>Home Additions</h3>
+            <p>More space without moving. Second stories, bump-outs, and ground-floor additions designed to blend with your existing home's character and your family's needs.</p>
+            <a href="https://blbdesignbuild.com/home-additions/" class="blb-hp-svc-link">EXPLORE ADDITION PROJECTS</a>
+          </div>
+        </div>
+
+        <!-- Basements -->
+        <div class="blb-hp-svc-card">
+          <img src="https://blbdesignbuild.com/wp-content/uploads/2022/04/ManCave_Freebird-48-2.jpg" alt="" width="400" height="220" loading="lazy" decoding="async">
+          <div class="blb-hp-svc-card-content">
+            <h3>Basement Finishing</h3>
+            <p>Turn unused square footage into functional living space. Home offices, entertainment rooms, guest suites, and more, all built to the same standard as your main floor.</p>
+            <a href="https://blbdesignbuild.com/basements/" class="blb-hp-svc-link">EXPLORE BASEMENT PROJECTS</a>
+          </div>
+        </div>
+
+        <!-- In-Law Suites + ADUs -->
+        <div class="blb-hp-svc-card">
+          <img src="https://blbdesignbuild.com/wp-content/uploads/2025/08/4M4A0862-Enhanced-NR-crop.jpg" alt="" width="400" height="220" loading="lazy" decoding="async">
+          <div class="blb-hp-svc-card-content">
+            <h3>In-Law Suites + ADUs</h3>
+            <p>Private living spaces for aging parents or rental income. We help navigate local zoning requirements and coordinate the design and construction of self-contained units.</p>
+            <a href="https://blbdesignbuild.com/in-law-suites/" class="blb-hp-svc-link">EXPLORE IN-LAW SUITE PROJECTS</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======= BOTTOM CTA ======= -->
+  <div class="blb-hp-bottom-cta">
+    <p>Not sure where to start? We can help you figure out the right approach for your home.</p>
+    <a href="https://blbdesignbuild.com/contact-us/" class="blb-hp-btn-primary">TELL US ABOUT YOUR PROJECT</a>
+  </div>
+
+</div>
