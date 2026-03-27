@@ -1,0 +1,712 @@
+<!-- Signs East - Exeter, NH Location Page Content -->
+<!-- Sits below existing hero section, above existing footer -->
+
+<style>
+:root {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --button-radius: 30px;
+  --container-max-width: 1140px;
+}
+.se-exeter-page {
+  font-family: var(--font-body);
+  color: var(--se-text);
+  line-height: 1.7;
+  font-size: 16px;
+}
+.se-exeter-page *, .se-exeter-page *::before, .se-exeter-page *::after {
+  box-sizing: border-box;
+}
+.se-exeter-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.se-exeter-page h2 {
+  font-family: var(--font-heading);
+  color: var(--se-dark);
+  font-size: 28px;
+  line-height: 1.3;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+.se-exeter-page h3 {
+  font-family: var(--font-heading);
+  color: var(--se-dark);
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+}
+.se-exeter-page p { margin: 0 0 16px 0; }
+.se-exeter-page a {
+  color: var(--se-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.se-exeter-page a:hover {
+  color: var(--se-primary-hover);
+  text-decoration: underline;
+}
+
+/* Buttons - guaranteed white text */
+.se-exeter-btn {
+  display: inline-block;
+  background: var(--se-primary);
+  color: #FFFFFF !important;
+  padding: 14px 32px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.25s ease, transform 0.2s ease;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+.se-exeter-btn:hover {
+  background: var(--se-primary-hover);
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  transform: translateY(-1px);
+}
+.se-exeter-btn--outline {
+  background: transparent;
+  color: var(--se-primary) !important;
+  border: 2px solid var(--se-primary);
+}
+.se-exeter-btn--outline:hover {
+  background: var(--se-primary);
+  color: #FFFFFF !important;
+}
+
+/* Sections */
+.se-exeter-section { padding: 48px 0; }
+.se-exeter-section--gray { background: var(--se-bg-light); }
+.se-exeter-section-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 32px;
+}
+
+/* ===== Intro Grid ===== */
+.se-exeter-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.se-exeter-intro-text h2 { text-align: left; }
+.se-exeter-intro-img {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+.se-exeter-intro-img img { width: 100%; height: auto; display: block; }
+.se-exeter-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 20px;
+}
+.se-exeter-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--se-dark);
+}
+.se-exeter-trust-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--se-primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.se-exeter-trust-icon svg { width: 20px; height: 20px; fill: var(--se-white); }
+
+/* ===== Services Grid ===== */
+.se-exeter-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+/* 2x2 + 1 centered layout for additional services */
+.se-exeter-services-2col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.se-exeter-services-2col .se-exeter-service-card {
+  width: 100%;
+}
+.se-exeter-service-card {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-left: 4px solid var(--se-primary);
+  text-align: left;
+}
+.se-exeter-service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+.se-exeter-service-card h3 a { color: var(--se-dark); }
+.se-exeter-service-card h3 a:hover { color: var(--se-primary); }
+.se-exeter-service-card p {
+  font-size: 15px;
+  color: var(--se-text-light);
+  margin-bottom: 0;
+}
+
+/* ===== Comparison Table ===== */
+.se-exeter-comparison-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.se-exeter-comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  font-size: 15px;
+}
+.se-exeter-comparison-table thead th {
+  background: var(--se-dark);
+  color: var(--se-white);
+  padding: 16px 14px;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+}
+.se-exeter-comparison-table thead th.se-exeter-highlight-col {
+  background: var(--se-primary);
+}
+.se-exeter-comparison-table tbody td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  text-align: left;
+}
+.se-exeter-comparison-table tbody tr:last-child td { border-bottom: none; }
+.se-exeter-comparison-table tbody tr:nth-child(even) { background: #fafafa; }
+.se-exeter-comparison-table .se-exeter-highlight-col {
+  background: rgba(198,28,28,0.04);
+  font-weight: 600;
+}
+.se-exeter-check { color: var(--se-primary); font-weight: 700; font-size: 18px; }
+.se-exeter-x { color: #ccc; font-size: 18px; }
+.se-exeter-comparison-note {
+  font-size: 13px;
+  color: var(--se-text-light);
+  margin-top: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ===== Gallery ===== */
+.se-exeter-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.se-exeter-gallery-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.se-exeter-gallery-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.se-exeter-gallery-item:hover img { transform: scale(1.03); }
+
+/* ===== Reviews ===== */
+.se-exeter-reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.se-exeter-review-card {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  position: relative;
+  text-align: left;
+}
+.se-exeter-review-card::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 64px;
+  color: var(--se-primary);
+  opacity: 0.15;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  line-height: 1;
+}
+.se-exeter-stars { color: #F59E0B; font-size: 18px; letter-spacing: 2px; margin-bottom: 12px; }
+.se-exeter-review-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--se-text);
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+.se-exeter-review-author { font-weight: 700; color: var(--se-dark); font-size: 14px; }
+.se-exeter-review-source { font-size: 13px; color: var(--se-text-light); }
+
+/* ===== Districts ===== */
+.se-exeter-districts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.se-exeter-district {
+  background: var(--se-white);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+.se-exeter-district h3 { font-size: 17px; margin-bottom: 6px; color: var(--se-primary); }
+.se-exeter-district p { font-size: 14px; margin-bottom: 0; color: var(--se-text-light); }
+
+/* ===== Permit ===== */
+.se-exeter-permit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.se-exeter-permit-text h2 { text-align: left; }
+.se-exeter-permit-text p { text-align: left; }
+.se-exeter-permit-box {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--se-primary);
+  text-align: left;
+}
+.se-exeter-permit-detail {
+  font-size: 15px;
+  color: var(--se-text);
+  margin-bottom: 8px;
+}
+.se-exeter-permit-detail strong { color: var(--se-dark); }
+
+/* ===== Map ===== */
+.se-exeter-map-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.se-exeter-map-wrap iframe { width: 100%; height: 380px; border: 0; display: block; }
+
+/* ===== Final CTA - Red gradient (not black, footer is black) ===== */
+.se-exeter-cta-section {
+  text-align: center;
+  padding: 56px 0;
+  background: linear-gradient(135deg, #C61C1C 0%, #8B1414 100%);
+  color: var(--se-white);
+}
+.se-exeter-cta-section h2 { color: var(--se-white); font-size: 32px; margin-bottom: 12px; }
+.se-exeter-cta-section p {
+  color: rgba(255,255,255,0.9);
+  font-size: 17px;
+  max-width: 560px;
+  margin: 0 auto 28px;
+}
+.se-exeter-cta-btn-white {
+  display: inline-block;
+  background: var(--se-white);
+  color: var(--se-primary) !important;
+  padding: 14px 32px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.25s ease, transform 0.2s ease;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+.se-exeter-cta-btn-white:hover {
+  background: #f0f0f0;
+  color: var(--se-primary) !important;
+  text-decoration: none !important;
+  transform: translateY(-1px);
+}
+.se-exeter-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.se-exeter-phone-link {
+  color: var(--se-white) !important;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-decoration: none !important;
+}
+.se-exeter-phone-link:hover { color: rgba(255,255,255,0.8) !important; text-decoration: none !important; }
+
+/* ===== Nearby ===== */
+.se-exeter-nearby {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+.se-exeter-nearby a {
+  background: var(--se-bg-light);
+  color: var(--se-text) !important;
+  padding: 10px 20px;
+  border-radius: var(--button-radius);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+  text-decoration: none !important;
+}
+.se-exeter-nearby a:hover {
+  background: var(--se-primary);
+  color: var(--se-white) !important;
+  text-decoration: none !important;
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 768px) {
+  .se-exeter-page h2 { font-size: 32px; }
+  .se-exeter-section { padding: 64px 0; }
+  .se-exeter-intro-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
+  .se-exeter-services-grid { grid-template-columns: 1fr 1fr; }
+  .se-exeter-services-2col .se-exeter-service-card { width: calc(50% - 10px); }
+  .se-exeter-gallery { grid-template-columns: 1fr 1fr; }
+  .se-exeter-gallery-item img { height: 280px; }
+  .se-exeter-reviews-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .se-exeter-districts-grid { grid-template-columns: 1fr 1fr; }
+  .se-exeter-permit-grid { grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .se-exeter-cta-buttons { flex-direction: row; justify-content: center; }
+  .se-exeter-cta-section h2 { font-size: 36px; }
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 1024px) {
+  .se-exeter-page h2 { font-size: 36px; }
+  .se-exeter-section { padding: 80px 0; }
+  .se-exeter-intro-grid { gap: 64px; }
+  .se-exeter-services-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .se-exeter-gallery { grid-template-columns: repeat(4, 1fr); }
+  .se-exeter-gallery-item img { height: 260px; }
+  .se-exeter-districts-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+</style>
+
+<div class="se-exeter-page">
+
+  <!-- ===== SECTION 1: Intro / Proximity ===== -->
+  <section class="se-exeter-section">
+    <div class="se-exeter-container">
+      <div class="se-exeter-intro-grid">
+        <div class="se-exeter-intro-text">
+          <h2>Full-Service Sign Shop Minutes from Exeter</h2>
+          <p>Signs East is located in Kingston, just minutes south of Exeter. That makes us the closest full-service sign company to Exeter's downtown business district, the Epping Road corridor, and the Portsmouth Avenue commercial strip.</p>
+          <p>We're not a print shop that happens to offer signs. We design, fabricate, and install everything in-house - from channel letter storefronts on Water Street to vehicle wraps for contractors running jobs off Route 101. When your sign needs electrical work, LED retrofits, or emergency repair, we handle that too.</p>
+          <div class="se-exeter-trust-bar">
+            <div class="se-exeter-trust-item">
+              <div class="se-exeter-trust-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+              4.9 Stars - 79+ Reviews
+            </div>
+            <div class="se-exeter-trust-item">
+              <div class="se-exeter-trust-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+              13+ Years in Business
+            </div>
+            <div class="se-exeter-trust-item">
+              <div class="se-exeter-trust-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+              Fast Turnaround
+            </div>
+          </div>
+        </div>
+        <div class="se-exeter-intro-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/03/IMG_20200106_142332-scaled.webp" alt="" width="800" height="600" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: Services ===== -->
+  <section class="se-exeter-section se-exeter-section--gray">
+    <div class="se-exeter-container">
+      <h2>Sign Services for Exeter Businesses</h2>
+      <div class="se-exeter-section-intro">
+        <p>From downtown storefronts on Front Street to fleet trucks running the Seacoast, here's how we help Exeter businesses get noticed.</p>
+      </div>
+      <div class="se-exeter-services-grid">
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/dimensional-and-channel-lettering/">Channel Letters and Storefront Signs</a></h3>
+          <p>Illuminated channel letters, dimensional signage, and backlit displays built for Exeter's historic downtown and commercial corridors. Custom designed and fabricated in our Kingston shop.</p>
+        </div>
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/sign-repair/">Sign Repair and LED Retrofits</a></h3>
+          <p>Flickering lights, storm damage, or outdated neon - we diagnose and fix it. Our team handles electrical sign repair and LED conversions for businesses across Exeter and the Seacoast.</p>
+        </div>
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/vehicle-graphics/">Vehicle Graphics and Truck Lettering</a></h3>
+          <p>Turn your work vehicles into rolling billboards. Full wraps, partial wraps, and vinyl lettering designed to get your Exeter-area business noticed on every job.</p>
+        </div>
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/monument-signs/">Monument and Outdoor Signs</a></h3>
+          <p>Ground-mounted monument signs, post-and-panel setups, and property markers built to withstand New Hampshire weather and make a lasting first impression.</p>
+        </div>
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/banner-signs/">Banner Signs and Event Signage</a></h3>
+          <p>Need signage for a grand opening, Exeter event, or seasonal promotion? We produce durable, high-quality banners and temporary signage on fast turnaround.</p>
+        </div>
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/vinyl-letter-graphics/">Vinyl Lettering and Graphics</a></h3>
+          <p>Window graphics, wall lettering, directional signage, and ADA-compliant displays. Professional applications for offices, retail spaces, and restaurants throughout Exeter.</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 36px;">
+        <a href="https://signseast.com/sign-services/" class="se-exeter-btn">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: Comparison ===== -->
+  <section class="se-exeter-section">
+    <div class="se-exeter-container">
+      <h2>Why Exeter Businesses Choose Signs East</h2>
+      <div class="se-exeter-section-intro">
+        <p>Not all sign companies are built the same. Here's what sets us apart from the typical franchise shops and print-and-cut operations.</p>
+      </div>
+      <div class="se-exeter-comparison-wrap">
+        <table class="se-exeter-comparison-table">
+          <thead>
+            <tr>
+              <th>Capability</th>
+              <th class="se-exeter-highlight-col">Signs East</th>
+              <th>Franchise Sign Shops</th>
+              <th>Print-Only Shops</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>In-House Design and Fabrication</td><td class="se-exeter-highlight-col"><span class="se-exeter-check">&#10003;</span></td><td><span class="se-exeter-x">&#10007;</span> Often outsourced</td><td><span class="se-exeter-x">&#10007;</span></td></tr>
+            <tr><td>Electrical Sign Repair</td><td class="se-exeter-highlight-col"><span class="se-exeter-check">&#10003;</span></td><td><span class="se-exeter-x">&#10007;</span></td><td><span class="se-exeter-x">&#10007;</span></td></tr>
+            <tr><td>LED Retrofits and Conversions</td><td class="se-exeter-highlight-col"><span class="se-exeter-check">&#10003;</span></td><td><span class="se-exeter-x">&#10007;</span></td><td><span class="se-exeter-x">&#10007;</span></td></tr>
+            <tr><td>Vehicle Wraps and Fleet Graphics</td><td class="se-exeter-highlight-col"><span class="se-exeter-check">&#10003;</span></td><td><span class="se-exeter-check">&#10003;</span></td><td><span class="se-exeter-x">&#10007;</span></td></tr>
+            <tr><td>Monument and Pylon Signs</td><td class="se-exeter-highlight-col"><span class="se-exeter-check">&#10003;</span></td><td>Limited</td><td><span class="se-exeter-x">&#10007;</span></td></tr>
+            <tr><td>On-Site Installation</td><td class="se-exeter-highlight-col"><span class="se-exeter-check">&#10003;</span></td><td><span class="se-exeter-check">&#10003;</span></td><td><span class="se-exeter-x">&#10007;</span></td></tr>
+            <tr><td>Owner-Direct Communication</td><td class="se-exeter-highlight-col"><span class="se-exeter-check">&#10003;</span></td><td><span class="se-exeter-x">&#10007;</span> Call center</td><td>Varies</td></tr>
+            <tr><td>Flagpole Services</td><td class="se-exeter-highlight-col"><span class="se-exeter-check">&#10003;</span></td><td><span class="se-exeter-x">&#10007;</span></td><td><span class="se-exeter-x">&#10007;</span></td></tr>
+            <tr><td>Boat and Marine Graphics</td><td class="se-exeter-highlight-col"><span class="se-exeter-check">&#10003;</span></td><td><span class="se-exeter-x">&#10007;</span></td><td><span class="se-exeter-x">&#10007;</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="se-exeter-comparison-note">Comparison based on typical service offerings from franchise and print-focused sign shops in the Seacoast NH and North Shore MA area.</p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: Gallery ===== -->
+  <section class="se-exeter-section se-exeter-section--gray">
+    <div class="se-exeter-container" style="text-align: center;">
+      <h2>Our Work in Action</h2>
+      <div class="se-exeter-section-intro">
+        <p>From custom storefront signs to vehicle lettering and large-format graphics - built, printed, and installed by our team in Kingston.</p>
+      </div>
+      <div class="se-exeter-gallery">
+        <div class="se-exeter-gallery-item"><img src="https://signseast.com/wp-content/uploads/2026/03/IMG_20200106_142332-scaled.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+        <div class="se-exeter-gallery-item"><img src="https://signseast.com/wp-content/uploads/2025/11/IMG_5947-scaled.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+        <div class="se-exeter-gallery-item"><img src="https://signseast.com/wp-content/uploads/2025/11/IMG_6109-min-scaled.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+        <div class="se-exeter-gallery-item"><img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_animal-center.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+      </div>
+      <div style="margin-top: 32px;">
+        <a href="https://signseast.com/showcase/" class="se-exeter-btn--outline se-exeter-btn">View Full Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: Reviews ===== -->
+  <section class="se-exeter-section">
+    <div class="se-exeter-container" style="text-align: center;">
+      <h2>What Our Customers Say</h2>
+      <div class="se-exeter-section-intro">
+        <p>We've earned a 4.9-star rating with 79+ Google reviews. Here's what business owners are saying about working with Signs East.</p>
+      </div>
+      <div class="se-exeter-reviews-grid">
+        <div class="se-exeter-review-card">
+          <div class="se-exeter-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="se-exeter-review-text">Highly recommend Signs East for decal, lettering or advertising! They do quality work, have a great response time, and are genuinely great people! Top local business to support! Thank you Signs East for the high quality decals you made for me!</p>
+          <div class="se-exeter-review-author">Catelyn R.</div>
+          <div class="se-exeter-review-source">Google Review</div>
+        </div>
+        <div class="se-exeter-review-card">
+          <div class="se-exeter-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="se-exeter-review-text">Sign East is awesome! Tor and his team did an excellent job for me on the sign for my DJ booth. Awesome quality printing and materials. Quick and prompt service. I highly recommend using them. Thank you!</p>
+          <div class="se-exeter-review-author">Stephen A.</div>
+          <div class="se-exeter-review-source">Google Review</div>
+        </div>
+        <div class="se-exeter-review-card">
+          <div class="se-exeter-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="se-exeter-review-text">Signs East is always a pleasure to work with. Whether it's signs, lettering, window tint, or other custom work, everything is handled quickly and with great attention to detail. Communication is excellent, turnaround is fast, and they consistently go the extra mile to make sure the job comes out right. Highly recommend.</p>
+          <div class="se-exeter-review-author">Skyler O.</div>
+          <div class="se-exeter-review-source">Google Review</div>
+        </div>
+      </div>
+      <div style="margin-top: 32px;">
+        <a href="https://www.google.com/maps/place/Signs+East+LLC./data=!4m2!3m1!1s0x0:0x8f8ea67732ea31d2?sa=X&ved=1t:2428&ictx=111" class="se-exeter-btn--outline se-exeter-btn" target="_blank" rel="noopener noreferrer">Read More Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6: Commercial Districts ===== -->
+  <section class="se-exeter-section se-exeter-section--gray">
+    <div class="se-exeter-container">
+      <h2>Exeter Commercial Districts We Serve</h2>
+      <div class="se-exeter-section-intro">
+        <p>Whether your business is on Water Street, the Epping Road corridor, or out by the industrial park - we know Exeter and we know what it takes to get your signage noticed, permitted, and installed.</p>
+      </div>
+      <div class="se-exeter-districts-grid">
+        <div class="se-exeter-district">
+          <h3>Downtown Exeter</h3>
+          <p>Water Street, Front Street, Court Street, Center Street, and Bow Street. Exeter's historic heart with foot traffic, restaurants, and local retailers. Sign regulations in the WC and C-1 zones apply - we can help navigate those requirements.</p>
+        </div>
+        <div class="se-exeter-district">
+          <h3>Epping Road Corridor</h3>
+          <p>A growing commercial strip with C-3 zoning and tax incentives through the Economic Revitalization program. High visibility for monument signs, pylon signs, and storefront lettering.</p>
+        </div>
+        <div class="se-exeter-district">
+          <h3>Portsmouth Avenue</h3>
+          <p>Highway Commercial (C-2) zone along one of Exeter's busiest routes. Ideal for large-format signage, illuminated signs, and <a href="https://signseast.com/digital-readerboards/">digital readerboards</a> that capture traffic heading toward the Seacoast.</p>
+        </div>
+        <div class="se-exeter-district">
+          <h3>Lincoln Street</h3>
+          <p>Near Exeter's Downeaster Amtrak stop - the busiest in NH. Local businesses here benefit from commuter and school traffic. Vinyl graphics, A-frame sidewalk signs, and window displays work well in this area.</p>
+        </div>
+        <div class="se-exeter-district">
+          <h3>Industrial and Professional Parks</h3>
+          <p>Holland Way, Route 88, and Hampton Road. Larger lots for <a href="https://signseast.com/monument-signs/">monument signs</a>, building-mounted signage, and wayfinding systems for office complexes and manufacturing facilities.</p>
+        </div>
+        <div class="se-exeter-district">
+          <h3>Surrounding Areas</h3>
+          <p>We also serve businesses in Stratham, Brentwood, Kensington, and East Kingston. If you're within a short drive of Exeter, we're your local sign team. See our <a href="https://signseast.com/signs-kingston-nh/">Kingston, NH page</a> for more about our home base.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7: Sign Permits ===== -->
+  <section class="se-exeter-section">
+    <div class="se-exeter-container">
+      <div class="se-exeter-permit-grid">
+        <div class="se-exeter-permit-text">
+          <h2>What Does the Sign Permit Process Look Like in Exeter?</h2>
+          <p>Exeter requires a sign permit for most commercial signage installations. The rules vary by zoning district - downtown's historic overlay has stricter requirements than the Epping Road corridor, for example.</p>
+          <p>Most business owners don't want to deal with building applications, zoning codes, or scheduling inspections. That's where we come in. Signs East handles the permit coordination for your project so you can focus on running your business.</p>
+          <p>We've worked with towns across Southern NH and the Seacoast. We know the process, we know the people, and we'll make sure your sign is built to code and installed on schedule.</p>
+          <a href="https://signseast.com/contact-us/" class="se-exeter-btn">Talk to Us About Your Exeter Project</a>
+        </div>
+        <div class="se-exeter-permit-box">
+          <h3>Exeter Sign Permit Details</h3>
+          <p class="se-exeter-permit-detail"><strong>Permits Required:</strong> Yes - for most commercial signage</p>
+          <p class="se-exeter-permit-detail"><strong>Issuing Office:</strong> Exeter Building Department</p>
+          <p class="se-exeter-permit-detail"><strong>Address:</strong> 10 Front Street, Exeter, NH 03833</p>
+          <p class="se-exeter-permit-detail"><strong>Contact:</strong> (603) 778-0591 ext 112</p>
+          <p class="se-exeter-permit-detail"><strong>Zoning Ordinance:</strong> Article 5.7.2 - Sign Regulations</p>
+          <p class="se-exeter-permit-detail"><strong>Historic District:</strong> Additional review required for downtown signs</p>
+          <p class="se-exeter-permit-detail" style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;"><strong>Signs East handles permit coordination</strong> - from application to inspection scheduling. We take care of it so you don't have to.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 8: Map ===== -->
+  <section class="se-exeter-section se-exeter-section--gray">
+    <div class="se-exeter-container" style="text-align: center;">
+      <h2>Serving Exeter from Our Kingston Shop</h2>
+      <div class="se-exeter-section-intro">
+        <p>Our fabrication shop at 34 NH-125 in Kingston is a quick drive south of Exeter. We serve businesses throughout Southern NH, the Seacoast, and North Shore MA.</p>
+      </div>
+      <div class="se-exeter-map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93382.14401176262!2d-71.03329373064061!3d42.995291496055096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2ee8b31a6d6f9%3A0x79980c61d8c71831!2sExeter%2C%20NH%2003833!5e0!3m2!1sen!2sus!4v1774623688878!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p style="margin-top: 20px; font-size: 15px;"><strong>Signs East LLC</strong> - 34 NH-125, Kingston, NH 03848 - <a href="tel:+19788181740">(978) 818-1740</a> - <a href="/cdn-cgi/l/email-protection#dcafbdb0b9af9cafb5bbb2afb9bdafa8f2bfb3b1"><span class="__cf_email__" data-cfemail="f182909d9482b18298969f8294908285df929e9c">[email&#160;protected]</span></a></p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 9: Additional Services ===== -->
+  <section class="se-exeter-section">
+    <div class="se-exeter-container">
+      <h2>More Services for Exeter Businesses</h2>
+      <div class="se-exeter-section-intro">
+        <p>Beyond signs, we offer a range of services to help your business stand out.</p>
+      </div>
+      <div class="se-exeter-services-2col">
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/wall-graphics-murals/">Wall Graphics and Murals</a></h3>
+          <p>Transform interior and exterior walls with branded graphics, murals, and large-format prints that make your space memorable.</p>
+        </div>
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/window-tinting/">Window Tinting</a></h3>
+          <p>Commercial window tinting for privacy, UV protection, and energy savings. Professional installation for Exeter offices, storefronts, and restaurants.</p>
+        </div>
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/flagpoles/">Flagpole Services</a></h3>
+          <p>Flagpole installation, repair, and maintenance. We supply and service flagpoles for businesses, municipalities, and residential properties.</p>
+        </div>
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/digital-readerboards/">Digital Readerboards</a></h3>
+          <p>Programmable LED message centers for high-traffic locations. Update your message from anywhere to promote specials, events, and business hours.</p>
+        </div>
+        <div class="se-exeter-service-card">
+          <h3><a href="https://signseast.com/boat-graphics-wraps/">Boat Graphics and Marine Lettering</a></h3>
+          <p>Registration numbers, boat names, and custom marine graphics. We work with Seacoast boat owners on everything from simple lettering to full hull wraps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 10: Nearby Locations ===== -->
+  <section class="se-exeter-section se-exeter-section--gray" style="padding: 40px 0;">
+    <div class="se-exeter-container" style="text-align: center;">
+      <h3 style="margin-bottom: 16px; text-align: center;">Also Serving Nearby Communities</h3>
+      <div class="se-exeter-nearby">
+        <a href="https://signseast.com/signs-kingston-nh/">Kingston, NH</a>
+        <a href="https://signseast.com/signs-portsmouth-nh/">Portsmouth, NH</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 11: Final CTA (Red gradient - distinct from black footer) ===== -->
+  <section class="se-exeter-cta-section">
+    <div class="se-exeter-container">
+      <h2>Ready to Talk About Your Exeter Sign Project?</h2>
+      <p>Whether you need a new storefront sign, vehicle lettering, or a repair on your existing signage - call Tor directly or send us a message. No voicemail maze. No three-month wait.</p>
+      <div class="se-exeter-cta-buttons">
+        <a href="https://signseast.com/contact-us/" class="se-exeter-cta-btn-white">Get a Free Consultati
