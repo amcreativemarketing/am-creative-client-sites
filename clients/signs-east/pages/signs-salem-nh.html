@@ -1,0 +1,592 @@
+<!-- Signs East - Salem, NH Location Page Content -->
+<!-- Sits below existing hero section, above existing footer -->
+
+<style>
+:root {
+  --se-primary: #C61C1C;
+  --se-primary-hover: #a51717;
+  --se-dark: #191919;
+  --se-text: #333333;
+  --se-text-light: #555555;
+  --se-bg-light: #F5F5F5;
+  --se-white: #FFFFFF;
+  --font-heading: "Baskervville", serif;
+  --font-body: "Assistant", sans-serif;
+  --button-radius: 30px;
+  --container-max-width: 1140px;
+}
+.se-salem-page { font-family: var(--font-body); color: var(--se-text); line-height: 1.7; font-size: 16px; }
+.se-salem-page *, .se-salem-page *::before, .se-salem-page *::after { box-sizing: border-box; }
+.se-salem-container { max-width: var(--container-max-width); margin: 0 auto; padding: 0 20px; }
+.se-salem-page h2 { font-family: var(--font-heading); color: var(--se-dark); font-size: 28px; line-height: 1.3; margin: 0 0 16px 0; }
+.se-salem-page h3 { font-family: var(--font-heading); color: var(--se-dark); font-size: 20px; line-height: 1.3; margin: 0 0 10px 0; }
+.se-salem-page p { margin: 0 0 16px 0; }
+.se-salem-page a { color: var(--se-primary); text-decoration: none; transition: color 0.2s ease; }
+.se-salem-page a:hover { color: var(--se-primary-hover); text-decoration: underline; }
+.se-salem-btn {
+  display: inline-block; background: var(--se-primary); color: #FFFFFF !important; padding: 14px 32px;
+  border-radius: var(--button-radius); font-family: var(--font-body); font-size: 16px; font-weight: 600;
+  text-decoration: none !important; transition: background 0.25s ease, transform 0.2s ease;
+  min-width: 44px; min-height: 44px; text-align: center;
+}
+.se-salem-btn:hover { background: var(--se-primary-hover); color: #FFFFFF !important; text-decoration: none !important; transform: translateY(-1px); }
+.se-salem-btn--outline { background: transparent; color: var(--se-primary) !important; border: 2px solid var(--se-primary); }
+.se-salem-btn--outline:hover { background: var(--se-primary); color: #FFFFFF !important; }
+.se-salem-section { padding: 48px 0; }
+.se-salem-section--gray { background: var(--se-bg-light); }
+.se-salem-centered { text-align: center; }
+
+/* ===== Intro: Two-Column Text + Image ===== */
+.se-salem-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.se-salem-intro-text { text-align: center; }
+.se-salem-intro-text h2 { text-align: center; font-size: 24px !important; }
+.se-salem-intro-text p { text-align: center; max-width: 520px; margin-left: auto; margin-right: auto; }
+.se-salem-intro-img {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+.se-salem-intro-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.se-salem-intro-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  justify-content: center;
+}
+.se-salem-intro-trust span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--se-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.se-salem-intro-trust span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--se-primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ===== Services: Icon Tiles ===== */
+.se-salem-services-tiles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.se-salem-tile {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.se-salem-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+.se-salem-tile-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--se-primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+.se-salem-tile-icon svg { width: 24px; height: 24px; fill: var(--se-white); }
+.se-salem-tile h3 { font-size: 16px; margin-bottom: 6px; }
+.se-salem-tile h3 a { color: var(--se-dark); }
+.se-salem-tile h3 a:hover { color: var(--se-primary); }
+.se-salem-tile p { font-size: 13px; color: var(--se-text-light); margin: 0; line-height: 1.5; }
+
+/* ===== Numbered Reasons ===== */
+.se-salem-reasons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  counter-reset: reason;
+}
+.se-salem-reason {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.se-salem-reason-num {
+  counter-increment: reason;
+  width: 48px;
+  height: 48px;
+  background: var(--se-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--se-white);
+}
+.se-salem-reason-content h3 { font-size: 18px; margin-bottom: 4px; }
+.se-salem-reason-content p { font-size: 15px; color: var(--se-text-light); margin: 0; }
+
+/* ===== Offset Gallery ===== */
+.se-salem-gallery-offset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 12px;
+}
+.se-salem-gallery-offset img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+.se-salem-gallery-offset img:hover { opacity: 0.9; }
+.se-salem-gallery-tall {
+  grid-row: span 2;
+}
+.se-salem-gallery-tall img {
+  height: 100%;
+  min-height: 200px;
+}
+
+/* ===== Reviews: Horizontal Strip ===== */
+.se-salem-reviews-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.se-salem-review {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  text-align: left;
+  position: relative;
+}
+.se-salem-review::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--se-primary);
+  border-radius: 0 0 10px 10px;
+}
+.se-salem-stars { color: #F59E0B; font-size: 18px; letter-spacing: 2px; margin-bottom: 12px; }
+.se-salem-review p { font-size: 15px; line-height: 1.7; color: var(--se-text); margin-bottom: 14px; }
+.se-salem-review-author { font-weight: 700; color: var(--se-dark); font-size: 14px; }
+.se-salem-review-source { font-size: 13px; color: var(--se-text-light); }
+
+/* ===== Districts: Tag-Style Compact ===== */
+.se-salem-districts-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.se-salem-district-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px;
+  background: var(--se-white);
+  border-radius: 8px;
+  border: 1px solid #eee;
+  transition: box-shadow 0.25s ease, transform 0.15s ease;
+}
+.se-salem-district-item:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.se-salem-district-marker {
+  width: 6px;
+  min-height: 40px;
+  background: var(--se-primary);
+  border-radius: 3px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.se-salem-district-item h3 { font-size: 17px; color: var(--se-primary); margin-bottom: 4px; }
+.se-salem-district-item p { font-size: 14px; color: var(--se-text-light); margin: 0; }
+
+/* ===== Permit Callout ===== */
+.se-salem-permit-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+.se-salem-permit-split h2 { text-align: left; font-size: 22px !important; }
+.se-salem-permit-split p { text-align: left; }
+.se-salem-permit-info {
+  background: var(--se-white);
+  border-radius: 10px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--se-primary);
+}
+.se-salem-permit-info h3 { text-align: left; margin-bottom: 12px; }
+.se-salem-permit-row { font-size: 15px; color: var(--se-text); margin-bottom: 6px; text-align: left; }
+.se-salem-permit-row strong { color: var(--se-dark); }
+
+/* ===== Map ===== */
+.se-salem-map-wrap { border-radius: 10px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.se-salem-map-wrap iframe { width: 100%; height: 380px; border: 0; display: block; }
+
+/* ===== CTA ===== */
+.se-salem-cta {
+  text-align: center; padding: 56px 0;
+  background: linear-gradient(135deg, #C61C1C 0%, #8B1414 100%); color: var(--se-white);
+}
+.se-salem-cta h2 { color: var(--se-white); font-size: 32px; margin-bottom: 12px; }
+.se-salem-cta p { color: rgba(255,255,255,0.9); font-size: 17px; max-width: 560px; margin: 0 auto 28px; }
+.se-salem-cta-btn-white {
+  display: inline-block; background: var(--se-white); color: var(--se-primary) !important;
+  padding: 14px 32px; border-radius: var(--button-radius); font-family: var(--font-body);
+  font-size: 16px; font-weight: 600; text-decoration: none !important;
+  transition: background 0.25s ease, transform 0.2s ease; min-width: 44px; min-height: 44px;
+}
+.se-salem-cta-btn-white:hover { background: #f0f0f0; color: var(--se-primary) !important; text-decoration: none !important; transform: translateY(-1px); }
+
+/* ===== Nearby ===== */
+.se-salem-nearby { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; }
+.se-salem-nearby a {
+  background: var(--se-bg-light); color: var(--se-text) !important; padding: 10px 20px;
+  border-radius: var(--button-radius); font-size: 14px; font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease; text-decoration: none !important;
+}
+.se-salem-nearby a:hover { background: var(--se-primary); color: var(--se-white) !important; text-decoration: none !important; }
+
+/* ===== Tablet ===== */
+@media (min-width: 768px) {
+  .se-salem-page h2 { font-size: 32px; }
+  .se-salem-section { padding: 64px 0; }
+  .se-salem-intro { grid-template-columns: 1fr 1fr; gap: 48px; }
+  .se-salem-intro-text h2 { font-size: 26px !important; }
+  .se-salem-intro-text p { max-width: none; }
+  .se-salem-permit-split h2 { font-size: 24px !important; }
+  .se-salem-services-tiles { grid-template-columns: repeat(3, 1fr); }
+  .se-salem-reasons { grid-template-columns: 1fr 1fr; }
+  .se-salem-gallery-offset img { height: 220px; }
+  .se-salem-gallery-tall img { min-height: 452px; }
+  .se-salem-reviews-strip { grid-template-columns: 1fr 1fr 1fr; }
+  .se-salem-districts-list { grid-template-columns: 1fr 1fr; }
+  .se-salem-permit-split { grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
+  .se-salem-cta h2 { font-size: 36px; }
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 1024px) {
+  .se-salem-page h2 { font-size: 36px; }
+  .se-salem-section { padding: 80px 0; }
+  .se-salem-intro { gap: 64px; }
+  .se-salem-intro-text h2 { font-size: 28px !important; }
+  .se-salem-permit-split h2 { font-size: 26px !important; }
+  .se-salem-services-tiles { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .se-salem-districts-list { grid-template-columns: 1fr 1fr 1fr; }
+  .se-salem-gallery-offset img { height: 260px; }
+  .se-salem-gallery-tall img { min-height: 532px; }
+}
+</style>
+
+<div class="se-salem-page">
+
+  <!-- ===== INTRO: Two-Column Text + Image ===== -->
+  <section class="se-salem-section">
+    <div class="se-salem-container">
+      <div class="se-salem-intro">
+        <div class="se-salem-intro-text">
+          <h2>Your Sign Team Serving Salem, NH</h2>
+          <p>Signs East serves Salem businesses from our fabrication shop in Kingston, about 30 minutes northeast via NH-125 through Plaistow. We build every sign in-house - no franchise middlemen, no outsourcing to a warehouse in another state.</p>
+          <p>Whether you need storefront signage for the Route 28 corridor, vehicle wraps for your fleet, or an LED retrofit on an existing sign, our team handles design, fabrication, and installation start to finish.</p>
+          <a href="https://signseast.com/contact-us/" class="se-salem-btn" style="margin-top: 8px;">Get a Free Consultation</a>
+          <div class="se-salem-intro-trust">
+            <span>4.9-Star Google Rating</span>
+            <span>79+ Reviews</span>
+            <span>13+ Years in Business</span>
+            <span>100% In-House Built</span>
+          </div>
+        </div>
+        <div class="se-salem-intro-img">
+          <img src="https://signseast.com/wp-content/uploads/2026/01/team-on-lift-working-on-tall-sign.webp" alt="" width="800" height="600" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES: Icon Tiles ===== -->
+  <section class="se-salem-section se-salem-section--gray">
+    <div class="se-salem-container">
+      <h2 class="se-salem-centered">Sign Services for Salem Businesses</h2>
+      <p class="se-salem-centered" style="max-width: 680px; margin: 0 auto 32px;">From the Route 28 retail strip to Tuscan Village, here's how we help Salem businesses stand out.</p>
+
+      <div class="se-salem-services-tiles">
+        <div class="se-salem-tile">
+          <div class="se-salem-tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <h3><a href="https://signseast.com/dimensional-and-channel-lettering/">Channel Letters</a></h3>
+          <p>Illuminated and dimensional storefront signage for retail, restaurants, and offices.</p>
+        </div>
+        <div class="se-salem-tile">
+          <div class="se-salem-tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <h3><a href="https://signseast.com/sign-repair/">Sign Repair & LED Retrofits</a></h3>
+          <p>Electrical repair, storm damage, neon restoration, and LED conversions.</p>
+        </div>
+        <div class="se-salem-tile">
+          <div class="se-salem-tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <h3><a href="https://signseast.com/vehicle-graphics/">Vehicle Wraps & Lettering</a></h3>
+          <p>Full wraps, partial wraps, and vinyl lettering for trucks, vans, and trailers.</p>
+        </div>
+        <div class="se-salem-tile">
+          <div class="se-salem-tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <h3><a href="https://signseast.com/monument-signs/">Monument Signs</a></h3>
+          <p>Ground-mounted signs for office parks, plazas, and commercial properties.</p>
+        </div>
+        <div class="se-salem-tile">
+          <div class="se-salem-tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <h3><a href="https://signseast.com/banner-signs/">Banners & Event Signs</a></h3>
+          <p>Grand openings, promotions, and seasonal signage on fast turnaround.</p>
+        </div>
+        <div class="se-salem-tile">
+          <div class="se-salem-tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <h3><a href="https://signseast.com/vinyl-letter-graphics/">Vinyl Graphics</a></h3>
+          <p>Window graphics, wall lettering, directional signage, and ADA displays.</p>
+        </div>
+        <div class="se-salem-tile">
+          <div class="se-salem-tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <h3><a href="https://signseast.com/wall-graphics-murals/">Wall Graphics & Murals</a></h3>
+          <p>Branded interior and exterior graphics for restaurants, gyms, and offices.</p>
+        </div>
+        <div class="se-salem-tile">
+          <div class="se-salem-tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <h3><a href="https://signseast.com/boat-graphics-wraps/">Boat Graphics</a></h3>
+          <p>Registration numbers, boat names, and custom marine graphics and wraps.</p>
+        </div>
+      </div>
+
+      <div class="se-salem-centered" style="margin-top: 32px;">
+        <a href="https://signseast.com/sign-services/" class="se-salem-btn">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY SIGNS EAST: Numbered Reasons ===== -->
+  <section class="se-salem-section">
+    <div class="se-salem-container se-salem-centered">
+      <h2>Why Salem Businesses Choose Signs East</h2>
+      <p style="max-width: 680px; margin: 0 auto 36px;">Salem has sign shops and franchise operations. Here's what makes working with us different.</p>
+
+      <div class="se-salem-reasons">
+        <div class="se-salem-reason">
+          <div class="se-salem-reason-num">1</div>
+          <div class="se-salem-reason-content">
+            <h3>We Build Everything In-House</h3>
+            <p>Our Kingston shop handles design, fabrication, and finishing. No outsourcing to a warehouse in another state. When Tor says your sign will be ready, it will be ready.</p>
+          </div>
+        </div>
+        <div class="se-salem-reason">
+          <div class="se-salem-reason-num">2</div>
+          <div class="se-salem-reason-content">
+            <h3>We Handle Electrical Work</h3>
+            <p>Most Salem sign companies can't touch wiring, ballasts, or LED components. We do <a href="https://signseast.com/sign-repair/">sign repair</a>, LED retrofits, and neon restoration that others have to refer out.</p>
+          </div>
+        </div>
+        <div class="se-salem-reason">
+          <div class="se-salem-reason-num">3</div>
+          <div class="se-salem-reason-content">
+            <h3>One Call Covers Everything</h3>
+            <p>Building signs, <a href="https://signseast.com/vehicle-graphics/">vehicle wraps</a>, <a href="https://signseast.com/flagpoles/">flagpoles</a>, <a href="https://signseast.com/digital-readerboards/">digital readerboards</a>, <a href="https://signseast.com/window-tinting/">window tinting</a>, boat graphics. One team, one relationship, every service.</p>
+          </div>
+        </div>
+        <div class="se-salem-reason">
+          <div class="se-salem-reason-num">4</div>
+          <div class="se-salem-reason-content">
+            <h3>Tor Answers the Phone</h3>
+            <p>No franchise call center. No voicemail maze. The owner picks up, listens to what you need, and gets the job moving. That's how we've done it since 2012.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OFFSET GALLERY ===== -->
+  <section class="se-salem-section se-salem-section--gray">
+    <div class="se-salem-container">
+      <h2 class="se-salem-centered">Built, Printed, and Installed by Our Team</h2>
+      <p class="se-salem-centered" style="max-width: 600px; margin: 0 auto 28px;">Every project is handled start to finish from our Kingston fabrication shop.</p>
+      <div class="se-salem-gallery-offset">
+        <div class="se-salem-gallery-tall">
+          <img src="https://signseast.com/wp-content/uploads/2025/11/imgi_27_IMG_20210929_122136-scaled-1.webp" alt="" width="600" height="800" loading="lazy" decoding="async">
+        </div>
+        <div>
+          <img src="https://signseast.com/wp-content/uploads/2026/03/peabody-signs_2220.webp" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+        <div>
+          <img src="https://signseast.com/wp-content/uploads/2025/11/IMG_8268-scaled.webp" alt="" width="600" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="se-salem-centered" style="margin-top: 28px;">
+        <a href="https://signseast.com/showcase/" class="se-salem-btn--outline se-salem-btn">View Full Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="se-salem-section">
+    <div class="se-salem-container">
+      <h2 class="se-salem-centered">What Our Customers Say</h2>
+      <p class="se-salem-centered" style="max-width: 600px; margin: 0 auto 32px;">4.9-star rating with 79+ Google reviews. Here's what business owners say about working with Signs East.</p>
+
+      <div class="se-salem-reviews-strip">
+        <div class="se-salem-review">
+          <div class="se-salem-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Tor and co have been my go to for truck lettering, logo design and yard signs for years now. They always provide exceptional service with a quick turnaround and when it comes to my business that is key to getting my trucks back on the road working!</p>
+          <div class="se-salem-review-author">Mike C.</div>
+          <div class="se-salem-review-source">Google Review</div>
+        </div>
+        <div class="se-salem-review">
+          <div class="se-salem-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>I had sign installation and LED retrofit work done by the Signs East team, and they did an excellent job. The team was very professional, punctual, and easy to work with. The work was completed on time and the quality exceeded my expectations. The LED retrofit was installed neatly and works perfectly.</p>
+          <div class="se-salem-review-author">Roughaiana T.</div>
+          <div class="se-salem-review-source">Google Review</div>
+        </div>
+        <div class="se-salem-review">
+          <div class="se-salem-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Always happy to work with the Signs East crew. They work diligently to make sure the product they are producing is completed in a timely manner and exactly to your liking. Will definitely be requesting their services again.</p>
+          <div class="se-salem-review-author">Gordon S.</div>
+          <div class="se-salem-review-source">Google Review</div>
+        </div>
+      </div>
+
+      <div class="se-salem-centered" style="margin-top: 32px;">
+        <a href="https://www.google.com/maps/place/Signs+East+LLC./data=!4m2!3m1!1s0x0:0x8f8ea67732ea31d2?sa=X&ved=1t:2428&ictx=111" class="se-salem-btn--outline se-salem-btn" target="_blank" rel="noopener noreferrer">Read More Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMERCIAL DISTRICTS ===== -->
+  <section class="se-salem-section se-salem-section--gray">
+    <div class="se-salem-container">
+      <h2 class="se-salem-centered">Salem Commercial Areas We Serve</h2>
+      <p class="se-salem-centered" style="max-width: 680px; margin: 0 auto 32px;">Salem is Southern NH's commercial hub. We know where the businesses are and what kind of signage each area needs.</p>
+
+      <div class="se-salem-districts-list">
+        <div class="se-salem-district-item">
+          <div class="se-salem-district-marker"></div>
+          <div>
+            <h3>Route 28 / South Broadway Corridor</h3>
+            <p>One of the busiest retail stretches in the state. National chains, plazas, restaurants, and car dealerships lining both sides from the Methuen border to northern Salem. Zoned Commercial Highway C with high-visibility signage opportunities for <a href="https://signseast.com/monument-signs/">monument signs</a>, building-mounted lettering, and <a href="https://signseast.com/digital-readerboards/">digital readerboards</a>.</p>
+          </div>
+        </div>
+        <div class="se-salem-district-item">
+          <div class="se-salem-district-marker"></div>
+          <div>
+            <h3>Tuscan Village</h3>
+            <p>Massive mixed-use development on the former Rockingham Park racetrack. Retail, medical offices, condos, and apartments - with new businesses opening regularly. Every storefront and office suite needs signage, wayfinding, and branding.</p>
+          </div>
+        </div>
+        <div class="se-salem-district-item">
+          <div class="se-salem-district-marker"></div>
+          <div>
+            <h3>Mall at Rockingham Park</h3>
+            <p>Regional shopping destination drawing MA shoppers for NH tax-free shopping. Surrounding plazas and outparcels along Route 28 create steady demand for retail signage, banners, and seasonal displays.</p>
+          </div>
+        </div>
+        <div class="se-salem-district-item">
+          <div class="se-salem-district-marker"></div>
+          <div>
+            <h3>North Broadway / CIB Zone</h3>
+            <p>Commercial-Industrial district north of the Mall area with general retail, personal service shops, restaurants, and professional offices. Fleet vehicles and service companies in this zone benefit from <a href="https://signseast.com/vehicle-graphics/">truck lettering and wraps</a>.</p>
+          </div>
+        </div>
+        <div class="se-salem-district-item">
+          <div class="se-salem-district-marker"></div>
+          <div>
+            <h3>I-93 Corridor (Exits 1-3)</h3>
+            <p>Gateway from Massachusetts into NH. Businesses along this corridor get massive traffic volume and need high-visibility signage. Accessible to both Salem residents and cross-border shoppers.</p>
+          </div>
+        </div>
+        <div class="se-salem-district-item">
+          <div class="se-salem-district-marker"></div>
+          <div>
+            <h3>Surrounding Areas</h3>
+            <p>We also serve businesses in Windham, Pelham, Atkinson, and Plaistow. If you're in Southern NH, we're your local sign team. See our <a href="https://signseast.com/signs-kingston-nh/">Kingston, NH page</a> for more about our home base.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIGN PERMITS ===== -->
+  <section class="se-salem-section">
+    <div class="se-salem-container">
+      <div class="se-salem-permit-split">
+        <div>
+          <h2>Do I Need a Sign Permit in Salem, NH?</h2>
+          <p>Yes. Salem requires a permit from the Building Department before installing, replacing, or moving any commercial sign. The good news: sign repair and maintenance don't require a permit.</p>
+          <p>The application requires a sketch plan of your site, elevation drawings, and the sign caption. The permit fee is a flat $100. Salem uses the OpenGov online permitting system, so applications can be submitted digitally.</p>
+          <p>We've installed signs across Southern NH and know the process. One less thing you have to figure out on your own.</p>
+          <a href="https://signseast.com/contact-us/" class="se-salem-btn">Talk to Us About Your Salem Project</a>
+        </div>
+        <div class="se-salem-permit-info">
+          <h3>Salem Sign Permit Details</h3>
+          <p class="se-salem-permit-row"><strong>Permit Required:</strong> Yes - for new signs, replacements, and relocations</p>
+          <p class="se-salem-permit-row"><strong>Not Required:</strong> Sign repair and maintenance</p>
+          <p class="se-salem-permit-row"><strong>Fee:</strong> $100 flat</p>
+          <p class="se-salem-permit-row"><strong>Regulations:</strong> Chapter 490, Article VII, Section 490-702</p>
+          <p class="se-salem-permit-row"><strong>Issued By:</strong> Building Department (Inspectional Services)</p>
+          <p class="se-salem-permit-row"><strong>Address:</strong> 33 Geremonty Drive, Salem, NH 03079</p>
+          <p class="se-salem-permit-row"><strong>Online Permits:</strong> Available through OpenGov</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP ===== -->
+  <section class="se-salem-section se-salem-section--gray">
+    <div class="se-salem-container se-salem-centered">
+      <h2>Serving Salem from Our Kingston Shop</h2>
+      <p style="max-width: 640px; margin: 0 auto 24px;">Our fabrication shop at 34 NH-125 in Kingston is about 30 minutes from Salem through Plaistow. We serve businesses throughout Southern NH, the Seacoast, and North Shore MA.</p>
+      <div class="se-salem-map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93686.11808661914!2d-71.30785461684904!3d42.79487782970784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3aa58533cac19%3A0x8a27fe4fc103c4e3!2sSalem%2C%20NH%2003079!5e0!3m2!1sen!2sus!4v1774636050379!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEARBY LOCATIONS ===== -->
+  <section class="se-salem-section" style="padding: 40px 0;">
+    <div class="se-salem-container se-salem-centered">
+      <h3 style="text-align: center; margin-bottom: 16px;">Also Serving Nearby Communities</h3>
+      <div class="se-salem-nearby">
+        <a href="https://signseast.com/signs-kingston-nh/">Kingston, NH</a>
+        <a href="https://signseast.com/signs-exeter-nh/">Exeter, NH</a>
+        <a href="https://signseast.com/signs-portsmouth-nh/">Portsmouth, NH</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="se-salem-cta">
+    <div class="se-salem-container">
+      <h2>Ready to Talk About Your Salem Sign Project?</h2>
+      <p>New sign, vehicle lettering, repair, or retrofit - send us a message and we'll get back to you fast. No three-month wait.</p>
+      
