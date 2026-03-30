@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Schema and meta tags removed - deployed via OTTO post-publish -->
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --moore-teal: #0B4B4B;
+            --moore-teal-dark: #093C3C;
+            --moore-gold: #C9A227;
+            --moore-gold-dark: #A8891F;
+            --moore-gold-light: #E8D48A;
+            --moore-cream: #F2F0EA;
+            --moore-gray: #C7D0D0;
+            --moore-gray-dark: #9BABAB;
+            --moore-text: #0C2424;
+            --moore-text-light: #FFFFFF;
+            --moore-text-muted: #4A5F5F;
+            --section-padding: clamp(60px, 8vw, 100px);
+            --container-max: 1200px;
+            --shadow-sm: 0 2px 8px rgba(12,36,36,0.06);
+            --shadow-md: 0 4px 20px rgba(12,36,36,0.08);
+            --shadow-lg: 0 8px 40px rgba(12,36,36,0.12);
+            --transition-fast: 0.2s ease;
+            --transition-med: 0.3s ease;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 18px; line-height: 1.7; color: var(--moore-text); background: #fff; }
+        h1, h2, h3, h4 { font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.2; font-weight: 700; }
+        h1 { font-size: clamp(2.25rem, 5vw, 3.25rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); font-weight: 600; }
+        p { margin-bottom: 1rem; }
+        p:last-child { margin-bottom: 0; }
+        a { color: var(--moore-teal); text-decoration: none; }
+        a:hover { color: var(--moore-gold); }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+
+        .btn { display: inline-block; padding: 16px 32px; font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 4px; cursor: pointer; transition: all var(--transition-med); text-decoration: none; border: 2px solid transparent; }
+        .btn--gold { background: var(--moore-gold) !important; color: var(--moore-text) !important; border-color: var(--moore-gold) !important; }
+        .btn--gold:hover { background: var(--moore-gold-dark) !important; border-color: var(--moore-gold-dark) !important; transform: translateY(-2px); color: var(--moore-text) !important; }
+        .btn--outline-white { background: transparent !important; color: var(--moore-text-light) !important; border-color: var(--moore-text-light) !important; }
+        .btn--outline-white:hover { background: var(--moore-text-light) !important; color: var(--moore-teal) !important; }
+        .btn--primary { background: var(--moore-teal) !important; color: var(--moore-text-light) !important; border-color: var(--moore-teal) !important; }
+        .btn--primary:hover { background: var(--moore-teal-dark) !important; border-color: var(--moore-teal-dark) !important; transform: translateY(-2px); color: var(--moore-text-light) !important; }
+
+        .hero,.hero h1,.hero h2,.hero h3,.hero p,.hero span,.hero a:not(.btn),.hero .hero__subtitle,.hero .hero__badge { color: var(--moore-text-light) !important; }
+        .mid-cta,.mid-cta h2,.mid-cta p { color: var(--moore-text-light) !important; }
+        .final-cta,.final-cta h2,.final-cta p { color: var(--moore-text-light) !important; }
+
+        /* Trust Bar */
+        .trust-bar { background: var(--moore-cream); border-bottom: 1px solid rgba(12,36,36,0.08); padding: 16px 0; }
+        .trust-bar__inner { display: flex; justify-content: center; flex-wrap: wrap; gap: 32px; }
+        .trust-bar__item { display: flex; align-items: center; gap: 8px; font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 600; color: var(--moore-text); }
+        .trust-bar__icon { color: var(--moore-gold); }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--moore-teal-dark), var(--moore-teal)); padding: var(--section-padding) 0; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); opacity: 0.5; }
+        .hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+        .hero__content { color: var(--moore-text-light); }
+        .hero__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,162,39,0.15); border: 1px solid var(--moore-gold); border-radius: 50px; padding: 8px 20px; margin-bottom: 24px; font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 600; color: var(--moore-gold); }
+        .hero__title { color: var(--moore-text-light); margin-bottom: 20px; }
+        .hero__subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.85); margin-bottom: 32px; line-height: 1.6; }
+        .hero__ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero__image { border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-lg); }
+        .hero__image img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Section Base */
+        section { padding: var(--section-padding) 0; }
+        .section--cream { background: var(--moore-cream); }
+        .section--white { background: #fff; }
+        .section__eyebrow { color: var(--moore-gold); font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+        .section__title { color: var(--moore-text); margin-bottom: 20px; }
+        .section__subtitle { color: var(--moore-text-muted); font-size: 1.125rem; max-width: 700px; }
+        .section__header { text-align: center; margin-bottom: 48px; }
+        .section__header .section__subtitle { margin: 0 auto; }
+
+        /* Why Level 2 */
+        .why-level2 { background: #fff; }
+        .why-level2__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .why-level2__image { border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-md); }
+        .why-level2__content { padding: 20px 0; }
+        .comparison-table { margin: 24px 0; border-radius: 8px; overflow: hidden; border: 1px solid rgba(12,36,36,0.1); }
+        .comparison-table__row { display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(12,36,36,0.1); }
+        .comparison-table__row:last-child { border-bottom: none; }
+        .comparison-table__row--header { background: var(--moore-teal); color: var(--moore-text-light); font-family: 'Raleway', sans-serif; font-weight: 600; }
+        .comparison-table__cell { padding: 16px; text-align: center; }
+        .comparison-table__row:not(.comparison-table__row--header):nth-child(odd) { background: var(--moore-cream); }
+        .comparison-table__highlight { background: rgba(201,162,39,0.15) !important; font-weight: 600; }
+
+        /* Panel Check */
+        .panel-check { background: var(--moore-cream); }
+        .panel-check__inner { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; align-items: center; }
+        .panel-check__content h2 { margin-bottom: 20px; }
+        .panel-check__list { list-style: none; margin: 24px 0; }
+        .panel-check__list li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; color: var(--moore-text-muted); }
+        .panel-check__list li svg { flex-shrink: 0; margin-top: 4px; color: var(--moore-gold); }
+        .panel-check__card { background: #fff; border-radius: 8px; padding: 32px; box-shadow: var(--shadow-md); border-left: 4px solid var(--moore-gold); }
+        .panel-check__card h3 { color: var(--moore-text); margin-bottom: 12px; }
+        .panel-check__card p { color: var(--moore-text-muted); font-size: 16px; }
+        .panel-check__card a { color: var(--moore-teal); font-weight: 600; }
+        .panel-check__card a:hover { color: var(--moore-gold); }
+
+        /* Mid CTA */
+        .mid-cta { background: linear-gradient(135deg, var(--moore-teal-dark), var(--moore-teal)); padding: 60px 0; text-align: center; }
+        .mid-cta__inner { max-width: 700px; margin: 0 auto; }
+        .mid-cta h2 { color: var(--moore-text-light); margin-bottom: 16px; }
+        .mid-cta p { color: rgba(255,255,255,0.85); font-size: 1.125rem; margin-bottom: 28px; }
+
+        /* Process */
+        .process { background: #fff; }
+        .process__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+        .process__step { text-align: center; padding: 32px 24px; background: var(--moore-cream); border-radius: 8px; transition: all var(--transition-med); position: relative; }
+        .process__step:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .process__number { width: 48px; height: 48px; background: var(--moore-teal); color: var(--moore-text-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 1.25rem; margin: 0 auto 20px; }
+        .process__step h3 { color: var(--moore-text); margin-bottom: 12px; }
+        .process__step p { color: var(--moore-text-muted); font-size: 16px; }
+
+        /* Charger Types */
+        .charger-types { background: var(--moore-cream); }
+        .charger-types__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .charger-card { background: #fff; border-radius: 8px; padding: 32px; box-shadow: var(--shadow-sm); transition: all var(--transition-med); border: 1px solid transparent; }
+        .charger-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(201,162,39,0.2); }
+        .charger-card__icon { width: 48px; height: 48px; background: var(--moore-teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .charger-card__icon svg { color: var(--moore-text-light); }
+        .charger-card h3 { color: var(--moore-text); margin-bottom: 12px; }
+        .charger-card p { color: var(--moore-text-muted); font-size: 16px; margin-bottom: 16px; }
+        .charger-card__list { list-style: none; }
+        .charger-card__list li { display: flex; align-items: center; gap: 8px; color: var(--moore-text-muted); font-size: 15px; margin-bottom: 8px; }
+        .charger-card__list li svg { color: var(--moore-gold); flex-shrink: 0; }
+
+        /* Why Us */
+        .why-us { background: #fff; }
+        .why-us__grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: start; }
+        .why-us__owner { background: var(--moore-cream); border-radius: 8px; padding: 32px; text-align: center; }
+        .why-us__owner-image { width: 160px; height: 160px; border-radius: 50%; margin: 0 auto 20px; overflow: hidden; border: 4px solid var(--moore-gold); }
+        .why-us__owner-image img { width: 100%; height: 100%; object-fit: cover; }
+        .why-us__owner h3 { color: var(--moore-text); margin-bottom: 4px; }
+        .why-us__owner-title { color: var(--moore-gold); font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+        .why-us__owner p { color: var(--moore-text-muted); font-size: 16px; }
+        .why-us__reasons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .reason-card { display: flex; gap: 16px; padding: 24px; background: var(--moore-cream); border-radius: 8px; transition: all var(--transition-med); }
+        .reason-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+        .reason-card__icon { width: 48px; height: 48px; background: var(--moore-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .reason-card__icon svg { color: var(--moore-text-light); }
+        .reason-card h4 { font-family: 'Raleway', sans-serif; font-weight: 600; color: var(--moore-text); margin-bottom: 8px; }
+        .reason-card p { color: var(--moore-text-muted); font-size: 15px; }
+
+        /* FAQ */
+        .faq { background: var(--moore-cream); }
+        .faq__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .faq__item { background: #fff; border-radius: 8px; padding: 28px; box-shadow: var(--shadow-sm); transition: all var(--transition-med); }
+        .faq__item:hover { box-shadow: var(--shadow-md); }
+        .faq__question { font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 1.1rem; color: var(--moore-text); margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+        .faq__question svg { color: var(--moore-gold); flex-shrink: 0; margin-top: 2px; }
+        .faq__answer { color: var(--moore-text-muted); padding-left: 36px; font-size: 16px; }
+
+        /* Service Area */
+        .service-area { background: #fff; }
+        .service-area__inner { text-align: center; }
+        .service-area__states { display: flex; justify-content: center; gap: 48px; margin-top: 40px; flex-wrap: wrap; }
+        .service-area__state { text-align: center; }
+        .service-area__state h3 { color: var(--moore-teal); margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .service-area__state h3 svg { color: var(--moore-gold); }
+        .service-area__towns { color: var(--moore-text-muted); font-size: 15px; line-height: 1.8; }
+        .service-area__license { margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(12,36,36,0.1); }
+        .service-area__license p { color: var(--moore-text-muted); font-size: 15px; }
+
+        /* Final CTA */
+        .final-cta { background: linear-gradient(135deg, var(--moore-teal-dark), var(--moore-teal)); padding: var(--section-padding) 0; }
+        .final-cta__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .final-cta__content h2 { color: var(--moore-text-light); margin-bottom: 16px; }
+        .final-cta__content p { color: rgba(255,255,255,0.85); font-size: 1.125rem; margin-bottom: 28px; }
+        .final-cta__contact { display: flex; flex-direction: column; gap: 24px; }
+        .final-cta__contact-item { display: flex; align-items: center; gap: 16px; }
+        .final-cta__contact-icon { width: 48px; height: 48px; background: var(--moore-gold); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .final-cta__contact-icon svg { color: var(--moore-text); }
+        .final-cta__contact-label { font-size: 14px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; }
+        .final-cta__contact-value { font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 1.25rem; color: var(--moore-text-light); }
+        .final-cta__contact-value a { color: var(--moore-text-light); }
+        .final-cta__contact-value a:hover { color: var(--moore-gold); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+            .hero__image { order: -1; max-height: 400px; }
+            .why-level2__grid { grid-template-columns: 1fr; }
+            .why-level2__image { order: -1; }
+            .panel-check__inner { grid-template-columns: 1fr; }
+            .process__grid { grid-template-columns: repeat(2, 1fr); }
+            .charger-types__grid { grid-template-columns: repeat(2, 1fr); }
+            .why-us__grid { grid-template-columns: 1fr; }
+            .why-us__owner { max-width: 400px; margin: 0 auto; }
+            .faq__grid { grid-template-columns: 1fr; }
+            .final-cta__inner { grid-template-columns: 1fr; text-align: center; }
+            .final-cta__contact { align-items: center; }
+        }
+
+        @media (max-width: 768px) {
+            .trust-bar__inner { gap: 16px; }
+            .trust-bar__item { font-size: 12px; }
+            .hero__ctas { flex-direction: column; }
+            .hero__ctas .btn { width: 100%; text-align: center; }
+            .comparison-table__cell { padding: 12px 8px; font-size: 14px; }
+            .process__grid { grid-template-columns: 1fr; }
+            .charger-types__grid { grid-template-columns: 1fr; }
+            .why-us__reasons { grid-template-columns: 1fr; }
+            .service-area__states { flex-direction: column; gap: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-bar__inner">
+                <div class="trust-bar__item">
+                    <svg class="trust-bar__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    Master Electrician
+                </div>
+                <div class="trust-bar__item">
+                    <svg class="trust-bar__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                    25+ Years Experience
+                </div>
+                <div class="trust-bar__item">
+                    <svg class="trust-bar__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    Licensed MA, NH & ME
+                </div>
+                <div class="trust-bar__item">
+                    <svg class="trust-bar__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg>
+                    5.0 ★ Google Rating
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        EV Charging Experts
+                    </div>
+                    <h1 class="hero__title">EV Charger Installation in NH, MA & ME</h1>
+                    <p class="hero__subtitle">Level 2 home charging stations for Tesla, Ford, Rivian, and all electric vehicles. We assess your panel, handle permits, and install it right the first time.</p>
+                    <div class="hero__ctas">
+                        <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Get a Free Estimate</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/electric-car-charging-in-home-garage-2026-01-07-06-26-01-utc-scaled.jpeg" alt="" width="600" height="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Level 2 Section -->
+    <section class="why-level2 section--white">
+        <div class="container">
+            <div class="why-level2__grid">
+                <div class="why-level2__image">
+                    <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/home-garage-charging-electric-vehicle-in-concept-2026-01-05-04-57-22-utc-scaled.jpg" alt="" width="600" height="450">
+                </div>
+                <div class="why-level2__content">
+                    <div class="section__eyebrow">Why Home Charging</div>
+                    <h2 class="section__title">Wake Up to a Full Battery Every Day</h2>
+                    <p>Forget hunting for public charging stations or waiting at the dealership. A Level 2 home charger adds 25-30 miles of range per hour - enough to fully charge most EVs overnight while you sleep.</p>
+                    
+                    <div class="comparison-table">
+                        <div class="comparison-table__row comparison-table__row--header">
+                            <div class="comparison-table__cell">Feature</div>
+                            <div class="comparison-table__cell">Level 1 (110V)</div>
+                            <div class="comparison-table__cell">Level 2 (240V)</div>
+                        </div>
+                        <div class="comparison-table__row">
+                            <div class="comparison-table__cell">Miles per Hour</div>
+                            <div class="comparison-table__cell">3-5 miles</div>
+                            <div class="comparison-table__cell comparison-table__highlight">25-30 miles</div>
+                        </div>
+                        <div class="comparison-table__row">
+                            <div class="comparison-table__cell">Full Charge Time</div>
+                            <div class="comparison-table__cell">40+ hours</div>
+                            <div class="comparison-table__cell comparison-table__highlight">4-10 hours</div>
+                        </div>
+                        <div class="comparison-table__row">
+                            <div class="comparison-table__cell">Daily Driving</div>
+                            <div class="comparison-table__cell">Limited</div>
+                            <div class="comparison-table__cell comparison-table__highlight">No limits</div>
+                        </div>
+                    </div>
+                    
+                    <p>Level 1 charging works fine for plug-in hybrids with small batteries. But if you have a full EV, you need Level 2 to keep up with daily driving.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel Assessment Section -->
+    <section class="panel-check section--cream">
+        <div class="container">
+            <div class="panel-check__inner">
+                <div class="panel-check__content">
+                    <div class="section__eyebrow">Before We Install</div>
+                    <h2 class="section__title">We Check Your Panel First</h2>
+                    <p>Not every home is ready for an EV charger right out of the box. We assess your electrical panel before quoting so you know exactly what's needed - no surprises after the install starts.</p>
+                    
+                    <ul class="panel-check__list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            <span><strong>Panel capacity check</strong> - Most EV chargers need 40-60 amps. If your panel is maxed out, we'll explain your options.</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            <span><strong>Circuit availability</strong> - We verify there's room for a dedicated 240V circuit or determine if panel work is needed.</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            <span><strong>Wire run distance</strong> - Longer runs from panel to garage affect cost. We measure so the quote is accurate.</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            <span><strong>Code requirements</strong> - EV charger installations have specific code requirements. We make sure yours passes inspection.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="panel-check__card">
+                    <h3>Need a Panel Upgrade?</h3>
+                    <p>Many homes built before 1980 have 100-amp panels that can't safely support an EV charger plus existing loads. Older homes may also need <a href="https://mooreelectricinc.net/electrical-rewiring/">rewiring</a> if the existing wiring isn't up to current standards. If yours needs upgrading, we handle that too - often as part of the same project.</p>
+                    <p>Planning to add a <a href="https://mooreelectricinc.net/generator-installation/">whole-home generator</a> alongside your EV charger? Both require significant panel capacity. Moore Electric can assess and plan for both in a single visit.</p>
+                    <p style="margin-top: 16px;"><a href="https://mooreelectricinc.net/electrical-panel-upgrades/">Learn about panel upgrades →</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="mid-cta">
+        <div class="container">
+            <div class="mid-cta__inner">
+                <h2>Ready to Charge at Home?</h2>
+                <p>We'll assess your electrical system and give you an honest quote - no pressure, no surprises.</p>
+                <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Get a Free Estimate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process section--white">
+        <div class="container">
+            <div class="section__header">
+                <div class="section__eyebrow">Our Process</div>
+                <h2 class="section__title">How EV Charger Installation Works</h2>
+                <p class="section__subtitle">From first call to first charge, here's what to expect.</p>
+            </div>
+            
+            <div class="process__grid">
+                <div class="process__step">
+                    <div class="process__number">1</div>
+                    <h3>Assessment</h3>
+                    <p>We inspect your panel, measure the wire run, and discuss charger placement. You get a clear quote with no hidden costs.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">2</div>
+                    <h3>Permitting</h3>
+                    <p>We pull all required permits with your local building department. This protects your home and ensures the work meets code.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">3</div>
+                    <h3>Installation</h3>
+                    <p>We install the dedicated circuit, mount your charger, and make all connections. Most installs take 2-4 hours.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">4</div>
+                    <h3>Test & Train</h3>
+                    <p>We test everything, walk you through operation, and make sure you're comfortable before we leave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charger Types Section -->
+    <section class="charger-types section--cream">
+        <div class="container">
+            <div class="section__header">
+                <div class="section__eyebrow">What We Install</div>
+                <h2 class="section__title">All Major EV Charger Brands</h2>
+                <p class="section__subtitle">Already have a charger picked out? We'll install it. Need recommendations? We can help with that too.</p>
+            </div>
+            
+            <div class="charger-types__grid">
+                <div class="charger-card">
+                    <div class="charger-card__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3>Hardwired Chargers</h3>
+                    <p>Permanently installed units wired directly to your panel. Cleaner look, no outlet needed.</p>
+                    <ul class="charger-card__list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg> Tesla Wall Connector</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg> ChargePoint Home Flex</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg> Emporia, Grizzl-E, JuiceBox</li>
+                    </ul>
+                </div>
+                
+                <div class="charger-card">
+                    <div class="charger-card__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <h3>NEMA 14-50 Outlet</h3>
+                    <p>A heavy-duty 240V outlet lets you use your vehicle's mobile connector or any plug-in charger.</p>
+                    <ul class="charger-card__list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg> Works with any EV</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg> Flexible - swap chargers anytime</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg> Lower upfront cost</li>
+                    </ul>
+                </div>
+                
+                <div class="charger-card">
+                    <div class="charger-card__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Smart Chargers</h3>
+                    <p>WiFi-connected units with app control, scheduling, and energy monitoring.</p>
+                    <ul class="charger-card__list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg> Schedule off-peak charging</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg> Track energy usage</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg> Remote start/stop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us section--white">
+        <div class="container">
+            <div class="section__header">
+                <div class="section__eyebrow">Why Moore Electric</div>
+                <h2 class="section__title">EV Installation by a Master Electrician</h2>
+                <p class="section__subtitle">A lot of companies are jumping into EV charger installation. Here's why experience matters.</p>
+            </div>
+            
+            <div class="why-us__grid">
+                <div class="why-us__owner">
+                    <div class="why-us__owner-image">
+                        <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Brenden-Photo-7.jpg" alt="" width="160" height="160">
+                    </div>
+                    <h3><a href="https://mooreelectricinc.net/about/" style="color: inherit;">Brenden Moore</a></h3>
+                    <div class="why-us__owner-title">Master Electrician & Owner</div>
+                    <p>25+ years of electrical experience. I personally oversee every installation and make sure it's done right.</p>
+                </div>
+                
+                <div class="why-us__reasons">
+                    <div class="reason-card">
+                        <div class="reason-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div>
+                        <div><h4>We Assess First</h4><p>No guessing about your panel capacity. We evaluate your system before quoting so there are no surprises.</p></div>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                        <div><h4>Permits Included</h4><p>We pull all required permits and ensure your installation passes inspection. No shortcuts.</p></div>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                        <div><h4>Licensed in 3 States</h4><p>Fully licensed and insured in New Hampshire, Massachusetts, and Maine. We do it by the book.</p></div>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                        <div><h4>Clear Communication</h4><p>We answer when you call. We explain what we're doing and why. No electrician jargon, no runaround.</p></div>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></div>
+                        <div><h4>Upfront Pricing</h4><p>You get a detailed quote before work starts. The price we quote is the price you pay.</p></div>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div>
+                        <div><h4>Family-Owned</h4><p>Not a franchise, not a call center. We're a local family business that treats your home like our own.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section--cream">
+        <div class="container">
+            <div class="section__header">
+                <div class="section__eyebrow">Common Questions</div>
+                <h2 class="section__title">EV Charger Installation FAQ</h2>
+            </div>
+            
+            <div class="faq__grid">
+                <div class="faq__item">
+                    <div class="faq__question"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> How much does EV charger installation cost?</div>
+                    <p class="faq__answer">Most Level 2 installations cost between $500 and $2,500, depending on your panel capacity, wire run distance, and any upgrades needed. We provide a detailed quote after assessing your specific situation.</p>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Do I need to upgrade my electrical panel?</div>
+                    <p class="faq__answer">It depends on your current panel capacity. Many homes built before 1980 have 100-amp panels that may need upgrading. We assess your panel as part of every quote - if an upgrade is needed, we'll explain your options.</p>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Are there rebates available?</div>
+                    <p class="faq__answer">Massachusetts offers rebates through the MOR-EV program for Level 2 home charger installations. New Hampshire has periodic utility incentive programs. We can help you understand what's available when we provide your quote.</p>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Can you install a Tesla Wall Connector?</div>
+                    <p class="faq__answer">Yes. We install Tesla Wall Connectors, ChargePoint, Emporia, Grizzl-E, and all major brands. We can also install a NEMA 14-50 outlet if you prefer to use your vehicle's mobile connector.</p>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> How long does installation take?</div>
+                    <p class="faq__answer">Most installations take 2-4 hours once permits are approved. If your panel needs upgrading or we need to run wire a significant distance, it may take longer. We give you a clear timeline during the estimate process.</p>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Do you pull permits?</div>
+                    <p class="faq__answer">Yes, always. Electrical permits protect you - they ensure the work is inspected and meets code. Some contractors skip permits to save time, but that can void your insurance and create problems when you sell. We handle all permitting.</p>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> What's the difference between Level 1 and Level 2?</div>
+                    <p class="faq__answer">Level 1 uses a standard 120V outlet and adds 3-5 miles per hour - fine for plug-in hybrids but slow for full EVs. Level 2 uses 240V and adds 25-30 miles per hour, fully charging most EVs overnight.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="service-area section--white">
+        <div class="container">
+            <div class="service-area__inner">
+                <div class="section__eyebrow">Service Area</div>
+                <h2 class="section__title">EV Charger Installation Throughout NH, MA & ME</h2>
+                <p class="section__subtitle">We install EV chargers across southern New Hampshire, northeastern Massachusetts, and southern Maine.</p>
+                
+                <div class="service-area__states">
+                    <div class="service-area__state">
+                        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> New Hampshire</h3>
+                        <p class="service-area__towns">Plaistow • Salem • Hampstead • Atkinson • Kingston • Danville • Sandown • Newton • East Kingston • Exeter • Hampton • Seabrook • Derry • Londonderry</p>
+                    </div>
+                    <div class="service-area__state">
+                        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Massachusetts</h3>
+                        <p class="service-area__towns">Haverhill • Newburyport • Amesbury • Salisbury • Merrimac • West Newbury • Groveland • Georgetown • Newbury • Rowley • Ipswich • Methuen • Lawrence • Andover • North Andover</p>
+                    </div>
+                    <div class="service-area__state">
+                        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Maine</h3>
+                        <p class="service-area__towns">Kittery • York • Ogunquit • Wells • Kennebunk • Kennebunkport • Eliot • South Berwick • Berwick</p>
+                    </div>
+                </div>
+                
+                <div class="service-area__license">
+                    <p><strong>Licensed and Insured:</strong> NH Master Electrician • MA Master Electrician • ME Master Electrician</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta__inner" style="text-align: center; display: block;">
+                <h2>Ready to Charge at Home?</h2>
+                <p>Get a free estimate for EV charger installation. We'll assess your electrical system, explain your options, and give you an honest quote.</p>
+                <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Get a Free Estimate</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
