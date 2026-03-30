@@ -8,24 +8,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
 
 :root {
-  --bcm-deep: #14181f;
-  --bcm-charcoal: #1c2129;
-  --bcm-slate: #2a3140;
-  --bcm-warm-gold: #c9a96e;
-  --bcm-gold-light: #dbc291;
-  --bcm-gold-soft: rgba(201, 169, 110, 0.08);
-  --bcm-gold-border: rgba(201, 169, 110, 0.18);
-  --bcm-text-primary: #1f2328;
-  --bcm-text-secondary: #2d3442;
-  --bcm-text-tertiary: #4a5568;
-  --bcm-border: #e8eaef;
-  --bcm-surface: #f7f8fa;
-  --bcm-white: #ffffff;
-  --bcm-shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
-  --bcm-shadow-md: 0 4px 16px rgba(0,0,0,0.06);
-  --bcm-shadow-lg: 0 8px 32px rgba(0,0,0,0.08);
-  --bcm-radius: 8px;
-  --bcm-radius-lg: 12px;
+  /* Primary Palette */
+  --bcm-black: #1A1A1A;
+  --bcm-gold: #C8A24D;
+  --bcm-charcoal: #1C2331;
+  --bcm-white: #FAF9F7;
+
+  /* Secondary Palette */
+  --bcm-maritime: #0F2A45;
+  --bcm-sage: #7A9B7E;
+  --bcm-gray: #F1F1F1;
+
+  /* Gold System */
+  --bcm-gold-hover: #B8923F;
+  --bcm-gold-light: #D4B46A;
+  --bcm-gold-soft: rgba(200, 162, 77, 0.07);
+  --bcm-gold-border: rgba(200, 162, 77, 0.18);
+  --bcm-gold-glow: rgba(200, 162, 77, 0.12);
+
+  /* Text Hierarchy */
+  --bcm-text-primary: #1C2331;
+  --bcm-text-secondary: #3A4255;
+  --bcm-text-tertiary: #5C6478;
+  --bcm-text-light: rgba(250, 249, 247, 0.88);
+  --bcm-text-muted: rgba(250, 249, 247, 0.62);
+
+  /* Surfaces */
+  --bcm-surface: #F7F7F5;
+  --bcm-surface-raised: #FFFFFF;
+  --bcm-border: #E5E5E2;
+  --bcm-border-subtle: rgba(28, 35, 49, 0.06);
+
+  /* Shadows */
+  --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
+  --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
+  --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
+  --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
+  --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
+
+  /* Radii */
+  --bcm-radius: 6px;
+  --bcm-radius-md: 10px;
+  --bcm-radius-lg: 14px;
+
+  /* Typography */
+  --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --bcm-font-body: 'Inter', -apple-system, sans-serif;
+
+  /* Transitions */
+  --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .bcm-wakefield {
@@ -55,7 +86,7 @@
 .bcm-wakefield p { margin: 0 0 16px; }
 
 .bcm-wakefield a:not([class*="bcm-wakefield-cta"]) {
-  color: var(--bcm-warm-gold);
+  color: var(--bcm-gold);
   text-decoration-color: rgba(201, 169, 110, 0.35);
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
@@ -98,7 +129,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--bcm-warm-gold);
+  color: var(--bcm-gold);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -138,8 +169,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--bcm-warm-gold);
-  color: var(--bcm-deep) !important;
+  background: var(--bcm-gold);
+  color: var(--bcm-black) !important;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 0.92rem;
@@ -157,7 +188,7 @@
   background: #b8943f;
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(201, 169, 110, 0.25);
-  color: var(--bcm-deep) !important;
+  color: var(--bcm-black) !important;
 }
 
 .bcm-wakefield a.bcm-wakefield-cta--ghost {
@@ -198,7 +229,7 @@
   min-height: 50px;
 }
 .bcm-wakefield a.bcm-wakefield-cta--dark:hover {
-  background: var(--bcm-deep);
+  background: var(--bcm-black);
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   color: var(--bcm-white) !important;
@@ -206,7 +237,7 @@
 
 /* ─── TRUST STRIP ─── */
 .bcm-wakefield-trust {
-  background: var(--bcm-deep);
+  background: var(--bcm-black);
   border-bottom: 1px solid rgba(201, 169, 110, 0.12);
 }
 .bcm-wakefield-trust-items {
@@ -240,7 +271,7 @@
 }
 .bcm-wakefield-section--tinted { background: var(--bcm-surface); }
 .bcm-wakefield-section--dark {
-  background: var(--bcm-deep);
+  background: var(--bcm-black);
   position: relative;
   overflow: hidden;
 }
@@ -256,7 +287,7 @@
   display: block;
   width: 40px;
   height: 2px;
-  background: var(--bcm-warm-gold);
+  background: var(--bcm-gold);
   margin: 0 auto 20px;
   border-radius: 1px;
 }
@@ -301,7 +332,7 @@
 .bcm-wakefield-svc-icon svg {
   width: 18px;
   height: 18px;
-  stroke: var(--bcm-warm-gold);
+  stroke: var(--bcm-gold);
   fill: none;
   stroke-width: 1.8;
   stroke-linecap: round;
@@ -312,7 +343,7 @@
   text-decoration: none !important;
 }
 .bcm-wakefield-svc h3 a:hover {
-  color: var(--bcm-warm-gold) !important;
+  color: var(--bcm-gold) !important;
 }
 .bcm-wakefield-svc p {
   color: var(--bcm-text-secondary);
@@ -380,8 +411,8 @@
   transition: all 0.25s ease;
 }
 .bcm-wakefield-gallery-toggle:hover {
-  border-color: var(--bcm-warm-gold);
-  color: var(--bcm-warm-gold);
+  border-color: var(--bcm-gold);
+  color: var(--bcm-gold);
 }
 .bcm-wakefield-gallery-toggle svg {
   width: 16px;
@@ -464,7 +495,7 @@
 .bcm-wakefield-diff-marker {
   width: 3px;
   min-height: 100%;
-  background: linear-gradient(to bottom, var(--bcm-warm-gold), rgba(201, 169, 110, 0.15));
+  background: linear-gradient(to bottom, var(--bcm-gold), rgba(201, 169, 110, 0.15));
   border-radius: 2px;
   flex-shrink: 0;
 }
@@ -502,7 +533,7 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   font-size: 0.82rem;
-  color: var(--bcm-warm-gold);
+  color: var(--bcm-gold);
   min-width: 28px;
   height: 28px;
   display: flex;
@@ -550,7 +581,7 @@
 
 /* ─── CTA BAND ─── */
 .bcm-wakefield-cta-band {
-  background: var(--bcm-deep);
+  background: var(--bcm-black);
   padding: 72px 24px;
   text-align: center;
   position: relative;
@@ -610,7 +641,7 @@
   transition: color 0.2s;
 }
 .bcm-wakefield-links li a:hover {
-  color: var(--bcm-warm-gold) !important;
+  color: var(--bcm-gold) !important;
 }
 
 /* ─── TABLET ─── */
