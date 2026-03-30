@@ -16,29 +16,62 @@
 <style>
 /* === BCM Exeter ADU - Premium v2 === */
 :root {
-  --bcm-navy: #060097;
-  --bcm-navy-deep: #04006B;
-  --bcm-gold: #FFCD57;
-  --bcm-gold-hover: #E5B84E;
-  --bcm-gold-soft: rgba(255, 205, 87, 0.10);
-  --bcm-dark-slate: #1E293B;
-  --bcm-medium-gray: #67768E;
-  --bcm-light-gray: #F2F5F7;
-  --bcm-off-white: #F9FAFB;
-  --bcm-white: #FFFFFF;
-  --bcm-shadow-sm: 0 1px 3px rgba(30, 41, 59, 0.06), 0 1px 2px rgba(30, 41, 59, 0.03);
-  --bcm-shadow-md: 0 4px 20px rgba(30, 41, 59, 0.07), 0 2px 6px rgba(30, 41, 59, 0.04);
-  --bcm-shadow-lg: 0 12px 36px rgba(30, 41, 59, 0.09), 0 4px 12px rgba(30, 41, 59, 0.04);
-  --bcm-shadow-gold: 0 4px 16px rgba(255, 205, 87, 0.3);
-  --bcm-radius: 10px;
+  /* Primary Palette */
+  --bcm-black: #1A1A1A;
+  --bcm-gold: #C8A24D;
+  --bcm-charcoal: #1C2331;
+  --bcm-white: #FAF9F7;
+
+  /* Secondary Palette */
+  --bcm-maritime: #0F2A45;
+  --bcm-sage: #7A9B7E;
+  --bcm-gray: #F1F1F1;
+
+  /* Gold System */
+  --bcm-gold-hover: #B8923F;
+  --bcm-gold-light: #D4B46A;
+  --bcm-gold-soft: rgba(200, 162, 77, 0.07);
+  --bcm-gold-border: rgba(200, 162, 77, 0.18);
+  --bcm-gold-glow: rgba(200, 162, 77, 0.12);
+
+  /* Text Hierarchy */
+  --bcm-text-primary: #1C2331;
+  --bcm-text-secondary: #3A4255;
+  --bcm-text-tertiary: #5C6478;
+  --bcm-text-light: rgba(250, 249, 247, 0.88);
+  --bcm-text-muted: rgba(250, 249, 247, 0.62);
+
+  /* Surfaces */
+  --bcm-surface: #F7F7F5;
+  --bcm-surface-raised: #FFFFFF;
+  --bcm-border: #E5E5E2;
+  --bcm-border-subtle: rgba(28, 35, 49, 0.06);
+
+  /* Shadows */
+  --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
+  --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
+  --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
+  --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
+  --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
+
+  /* Radii */
+  --bcm-radius: 6px;
+  --bcm-radius-md: 10px;
   --bcm-radius-lg: 14px;
+
+  /* Typography */
+  --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --bcm-font-body: 'Inter', -apple-system, sans-serif;
+
+  /* Transitions */
+  --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .bcm-exeter * { box-sizing: border-box; }
 
 .bcm-exeter {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--bcm-dark-slate);
+  color: var(--bcm-text-primary);
   line-height: 1.6;
   font-size: 16px;
   width: 100%;
@@ -65,7 +98,7 @@
   font-weight: 600;
   font-size: 1.85rem;
   line-height: 1.2;
-  color: var(--bcm-dark-slate);
+  color: var(--bcm-text-primary);
   margin: 0 0 16px 0;
   letter-spacing: -0.02em;
 }
@@ -75,17 +108,17 @@
   font-weight: 600;
   font-size: 1.15rem;
   line-height: 1.3;
-  color: var(--bcm-dark-slate);
+  color: var(--bcm-text-primary);
   margin: 0 0 10px 0;
 }
 
 .bcm-exeter p {
   margin: 0 0 16px 0;
-  color: var(--bcm-dark-slate);
+  color: var(--bcm-text-primary);
 }
 
 .bcm-exeter a {
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
@@ -204,13 +237,13 @@
 
 .bcm-exeter a.bcm-exeter-cta--primary {
   background: var(--bcm-gold);
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
   box-shadow: var(--bcm-shadow-gold);
 }
 
 .bcm-exeter a.bcm-exeter-cta--primary:hover {
   background: var(--bcm-gold-hover);
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
   box-shadow: 0 6px 24px rgba(255, 205, 87, 0.4);
 }
 
@@ -223,12 +256,12 @@
 
 .bcm-exeter a.bcm-exeter-cta--outline:hover {
   background: var(--bcm-white);
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
   border-color: var(--bcm-white);
 }
 
 .bcm-exeter a.bcm-exeter-cta--navy {
-  background: var(--bcm-navy);
+  background: var(--bcm-black);
   color: var(--bcm-white);
   border: none;
   box-shadow: 0 2px 10px rgba(6, 0, 151, 0.2);
@@ -242,19 +275,19 @@
 
 .bcm-exeter a.bcm-exeter-cta--gold {
   background: var(--bcm-gold);
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
   box-shadow: var(--bcm-shadow-gold);
 }
 
 .bcm-exeter a.bcm-exeter-cta--gold:hover {
   background: var(--bcm-gold-hover);
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
   box-shadow: 0 6px 24px rgba(255, 205, 87, 0.4);
 }
 
 /* === TRUST BAR === */
 .bcm-exeter-trust {
-  background: var(--bcm-navy);
+  background: var(--bcm-black);
   padding: 0;
   position: relative;
   z-index: 3;
@@ -314,11 +347,11 @@
 }
 
 .bcm-exeter-section--alt {
-  background: var(--bcm-off-white);
+  background: var(--bcm-surface);
 }
 
 .bcm-exeter-section--navy {
-  background: linear-gradient(170deg, var(--bcm-navy) 0%, var(--bcm-navy-deep) 100%);
+  background: linear-gradient(170deg, var(--bcm-black) 0%, var(--bcm-navy-deep) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -351,7 +384,7 @@
 }
 
 .bcm-exeter-section__header p {
-  color: var(--bcm-medium-gray);
+  color: var(--bcm-text-tertiary);
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -394,12 +427,12 @@
 .bcm-exeter-intro__body p {
   font-size: 1.02rem;
   line-height: 1.75;
-  color: var(--bcm-medium-gray);
+  color: var(--bcm-text-tertiary);
 }
 
 .bcm-exeter-intro__body p:first-child {
   font-size: 1.08rem;
-  color: var(--bcm-dark-slate);
+  color: var(--bcm-text-primary);
 }
 
 /* === ADU TYPE CARDS (3-col grid) === */
@@ -445,13 +478,13 @@
 }
 
 .bcm-exeter-type-card__body h3 {
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
   margin-bottom: 8px;
   font-size: 1.1rem;
 }
 
 .bcm-exeter-type-card__body p {
-  color: var(--bcm-medium-gray);
+  color: var(--bcm-text-tertiary);
   font-size: 0.93rem;
   margin: 0;
   line-height: 1.65;
@@ -477,7 +510,7 @@
   border-radius: var(--bcm-radius);
   padding: 28px;
   box-shadow: var(--bcm-shadow-sm);
-  border: 1px solid var(--bcm-light-gray);
+  border: 1px solid var(--bcm-gray);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   display: flex;
   gap: 20px;
@@ -492,7 +525,7 @@
 .bcm-exeter-why-icon {
   width: 44px;
   height: 44px;
-  background: var(--bcm-navy);
+  background: var(--bcm-black);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -507,14 +540,14 @@
 }
 
 .bcm-exeter-why-card__body h3 {
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
   margin-bottom: 6px;
   font-size: 1.05rem;
 }
 
 .bcm-exeter-why-card__body p {
   margin: 0;
-  color: var(--bcm-medium-gray);
+  color: var(--bcm-text-tertiary);
   font-size: 0.93rem;
   line-height: 1.65;
 }
@@ -533,7 +566,7 @@
   padding: 32px 28px;
   text-align: center;
   box-shadow: var(--bcm-shadow-sm);
-  border: 1px solid var(--bcm-light-gray);
+  border: 1px solid var(--bcm-gray);
   position: relative;
   counter-increment: step-counter;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -549,7 +582,7 @@
   display: block;
   width: 48px;
   height: 48px;
-  background: var(--bcm-navy);
+  background: var(--bcm-black);
   color: var(--bcm-gold);
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
@@ -567,7 +600,7 @@
 
 .bcm-exeter-step p {
   margin: 0;
-  color: var(--bcm-medium-gray);
+  color: var(--bcm-text-tertiary);
   font-size: 0.93rem;
   line-height: 1.65;
 }
@@ -577,7 +610,7 @@
   border-radius: var(--bcm-radius-lg);
   overflow: hidden;
   box-shadow: var(--bcm-shadow-md);
-  border: 1px solid var(--bcm-light-gray);
+  border: 1px solid var(--bcm-gray);
 }
 
 .bcm-exeter-cost-table {
@@ -587,7 +620,7 @@
 }
 
 .bcm-exeter-cost-table thead th {
-  background: var(--bcm-navy);
+  background: var(--bcm-black);
   color: var(--bcm-white);
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
@@ -600,14 +633,14 @@
 
 .bcm-exeter-cost-table tbody td {
   padding: 18px 20px;
-  border-bottom: 1px solid var(--bcm-light-gray);
+  border-bottom: 1px solid var(--bcm-gray);
   font-size: 0.95rem;
-  color: var(--bcm-medium-gray);
+  color: var(--bcm-text-tertiary);
 }
 
 .bcm-exeter-cost-table tbody td:first-child {
   font-weight: 600;
-  color: var(--bcm-dark-slate);
+  color: var(--bcm-text-primary);
 }
 
 .bcm-exeter-cost-table tbody tr:last-child td {
@@ -615,7 +648,7 @@
 }
 
 .bcm-exeter-cost-table tbody tr:nth-child(even) {
-  background: var(--bcm-off-white);
+  background: var(--bcm-surface);
 }
 
 .bcm-exeter-cost-table tbody tr {
@@ -629,7 +662,7 @@
 .bcm-exeter-cost-table .bcm-exeter-price {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
 }
 
 /* === ZONING ACCORDION === */
@@ -645,7 +678,7 @@
   background: var(--bcm-white);
   border-radius: var(--bcm-radius);
   overflow: hidden;
-  border: 1px solid var(--bcm-light-gray);
+  border: 1px solid var(--bcm-gray);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -663,7 +696,7 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: var(--bcm-dark-slate);
+  color: var(--bcm-text-primary);
   cursor: pointer;
   position: relative;
   min-height: 44px;
@@ -672,7 +705,7 @@
 }
 
 .bcm-exeter-accordion-trigger:hover {
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
 }
 
 .bcm-exeter-accordion-trigger::after {
@@ -683,7 +716,7 @@
   transform: translateY(-50%);
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
   width: 30px;
   height: 30px;
   display: flex;
@@ -696,7 +729,7 @@
 
 .bcm-exeter-accordion-trigger[aria-expanded="true"]::after {
   content: '\2212';
-  background: var(--bcm-navy);
+  background: var(--bcm-black);
   color: var(--bcm-gold);
 }
 
@@ -708,7 +741,7 @@
 
 .bcm-exeter-accordion-panel__inner {
   padding: 0 24px 24px 24px;
-  color: var(--bcm-medium-gray);
+  color: var(--bcm-text-tertiary);
   line-height: 1.75;
   font-size: 0.95rem;
 }
@@ -725,14 +758,14 @@
   border-radius: var(--bcm-radius-lg);
   padding: 0;
   box-shadow: var(--bcm-shadow-md);
-  border: 1px solid var(--bcm-light-gray);
+  border: 1px solid var(--bcm-gray);
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
 .bcm-exeter-review__top {
-  background: linear-gradient(135deg, var(--bcm-navy), var(--bcm-navy-deep));
+  background: linear-gradient(135deg, var(--bcm-black), var(--bcm-navy-deep));
   padding: 20px 28px;
   display: flex;
   align-items: center;
@@ -759,7 +792,7 @@
 .bcm-exeter-review__text {
   font-size: 0.95rem;
   line-height: 1.75;
-  color: var(--bcm-dark-slate);
+  color: var(--bcm-text-primary);
   margin: 0;
   font-style: italic;
   padding-left: 20px;
@@ -779,7 +812,7 @@
   background: var(--bcm-white);
   border-radius: var(--bcm-radius);
   overflow: hidden;
-  border: 1px solid var(--bcm-light-gray);
+  border: 1px solid var(--bcm-gray);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -797,7 +830,7 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: var(--bcm-dark-slate);
+  color: var(--bcm-text-primary);
   cursor: pointer;
   position: relative;
   min-height: 44px;
@@ -806,7 +839,7 @@
 }
 
 .bcm-exeter-faq-question:hover {
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
 }
 
 .bcm-exeter-faq-question::after {
@@ -817,7 +850,7 @@
   transform: translateY(-50%);
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--bcm-navy);
+  color: var(--bcm-black);
   width: 30px;
   height: 30px;
   display: flex;
@@ -830,7 +863,7 @@
 
 .bcm-exeter-faq-question[aria-expanded="true"]::after {
   content: '\2212';
-  background: var(--bcm-navy);
+  background: var(--bcm-black);
   color: var(--bcm-gold);
 }
 
@@ -842,7 +875,7 @@
 
 .bcm-exeter-faq-answer__inner {
   padding: 0 24px 24px 24px;
-  color: var(--bcm-medium-gray);
+  color: var(--bcm-text-tertiary);
   line-height: 1.75;
   font-size: 0.95rem;
 }
@@ -859,10 +892,10 @@
   text-align: center;
   padding: 14px 16px;
   background: var(--bcm-white);
-  border: 1px solid var(--bcm-light-gray);
+  border: 1px solid var(--bcm-gray);
   border-radius: 8px;
   font-size: 0.93rem;
-  color: var(--bcm-dark-slate);
+  color: var(--bcm-text-primary);
   text-decoration: none;
   font-weight: 600;
   transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
@@ -870,8 +903,8 @@
 }
 
 .bcm-exeter-area-pill:hover {
-  border-color: var(--bcm-navy);
-  color: var(--bcm-navy);
+  border-color: var(--bcm-black);
+  color: var(--bcm-black);
   box-shadow: var(--bcm-shadow-sm);
 }
 
@@ -880,7 +913,7 @@ a.bcm-exeter-area-pill {
 }
 
 a.bcm-exeter-area-pill:hover {
-  background: var(--bcm-navy);
+  background: var(--bcm-black);
   color: var(--bcm-white);
 }
 
@@ -890,7 +923,7 @@ a.bcm-exeter-area-pill:hover {
   overflow: hidden;
   margin-top: 32px;
   box-shadow: var(--bcm-shadow-md);
-  border: 1px solid var(--bcm-light-gray);
+  border: 1px solid var(--bcm-gray);
 }
 
 .bcm-exeter-map-wrap iframe {
@@ -1232,7 +1265,7 @@ a.bcm-exeter-area-pill:hover {
       </table>
     </div>
 
-    <p style="text-align:center; margin-top:28px; color:var(--bcm-medium-gray); font-size:0.9rem; max-width:780px; margin-left:auto; margin-right:auto; line-height:1.7;">Ranges shown are general estimates - actual pricing and timelines vary by project scope, site conditions, and finish level. You'll receive detailed, transparent pricing as part of your initial consultation and project quote. <a href="https://bradfordcm.com/finance-your-dreams/">Learn about financing options</a> including home equity and construction loans, or <a href="https://bradfordcm.com/contact/">contact us</a> for a free estimate tailored to your property.</p>
+    <p style="text-align:center; margin-top:28px; color:var(--bcm-text-tertiary); font-size:0.9rem; max-width:780px; margin-left:auto; margin-right:auto; line-height:1.7;">Ranges shown are general estimates - actual pricing and timelines vary by project scope, site conditions, and finish level. You'll receive detailed, transparent pricing as part of your initial consultation and project quote. <a href="https://bradfordcm.com/finance-your-dreams/">Learn about financing options</a> including home equity and construction loans, or <a href="https://bradfordcm.com/contact/">contact us</a> for a free estimate tailored to your property.</p>
   </div>
 </div>
 
@@ -1314,7 +1347,7 @@ a.bcm-exeter-area-pill:hover {
 
     </div>
 
-    <p style="margin-top:28px; color:var(--bcm-medium-gray); font-size:0.9rem; text-align:center; max-width:700px; margin-left:auto; margin-right:auto;">Exeter may have additional local requirements beyond state minimums. We verify current zoning details with the Town of Exeter before every project.</p>
+    <p style="margin-top:28px; color:var(--bcm-text-tertiary); font-size:0.9rem; text-align:center; max-width:700px; margin-left:auto; margin-right:auto;">Exeter may have additional local requirements beyond state minimums. We verify current zoning details with the Town of Exeter before every project.</p>
   </div>
 </div>
 
@@ -1357,7 +1390,7 @@ a.bcm-exeter-area-pill:hover {
       </div>
     </div>
 
-    <p style="text-align:center; margin-top:28px;"><a href="https://share.google/ap7MVebYR4dZhlNHr" style="color:var(--bcm-navy); font-weight:600;">Read More Reviews on Google</a></p>
+    <p style="text-align:center; margin-top:28px;"><a href="https://share.google/ap7MVebYR4dZhlNHr" style="color:var(--bcm-black); font-weight:600;">Read More Reviews on Google</a></p>
   </div>
 </div>
 
