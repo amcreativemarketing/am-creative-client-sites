@@ -1,0 +1,1029 @@
+<!-- MOORE ELECTRIC - ABOUT PAGE (E-E-A-T Enhanced)
+     URL: /about/
+     
+     HERO OPTIONS:
+     Option A: H1: About Moore Electric | H2: Family-owned electrical company with 25+ years of experience. Master Electrician Brenden Moore personally oversees every project.
+     Option B: H1: Meet Your Electrician | H2: Not a franchise. Not a call center. Just a Master Electrician with 25+ years of experience who shows up and does the job right.
+     
+     CTAs: Get a Free Estimate → /contact/ | Call Now → tel:+16038369513
+-->
+
+<style>
+/* ========================================
+   MOORE ELECTRIC - ABOUT PAGE STYLES
+   E-E-A-T Enhanced | March 2026
+   ======================================== */
+
+:root {
+    --moore-teal: #0B4B4B;
+    --moore-teal-dark: #093C3C;
+    --moore-gold: #C9A227;
+    --moore-gold-dark: #A8891F;
+    --moore-gold-light: #E8D48A;
+    --moore-cream: #F2F0EA;
+    --moore-gray: #C7D0D0;
+    --moore-gray-dark: #9BABAB;
+    --moore-text: #0C2424;
+    --moore-text-light: #FFFFFF;
+    --moore-text-muted: #4A5F5F;
+    --section-padding: clamp(60px, 8vw, 100px);
+    --container-max: 1200px;
+    --shadow-sm: 0 2px 8px rgba(12,36,36,0.06);
+    --shadow-md: 0 4px 20px rgba(12,36,36,0.08);
+    --shadow-lg: 0 8px 40px rgba(12,36,36,0.12);
+    --transition-fast: 0.2s ease;
+    --transition-med: 0.3s ease;
+}
+
+.moore-about *, .moore-about *::before, .moore-about *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.moore-about {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--moore-text);
+}
+
+.moore-about h1, .moore-about h2, .moore-about h3, .moore-about h4 {
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.moore-about h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 20px;
+}
+
+.moore-about h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+}
+
+.moore-about p { margin-bottom: 16px; }
+.moore-about p:last-child { margin-bottom: 0; }
+
+.moore-about a {
+    color: var(--moore-teal);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+.moore-about a:hover { color: var(--moore-gold); }
+.moore-about img { max-width: 100%; height: auto; display: block; }
+
+.moore-about__container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.moore-about__eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--moore-gold);
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* Buttons */
+.moore-about__btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    transition: all var(--transition-med);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.moore-about__btn--gold {
+    background: var(--moore-gold) !important;
+    color: var(--moore-text) !important;
+    border-color: var(--moore-gold) !important;
+}
+.moore-about__btn--gold:hover {
+    background: var(--moore-gold-dark) !important;
+    border-color: var(--moore-gold-dark) !important;
+    transform: translateY(-2px);
+    color: var(--moore-text) !important;
+}
+
+.moore-about__btn--outline {
+    background: transparent !important;
+    color: var(--moore-teal) !important;
+    border-color: var(--moore-teal) !important;
+}
+.moore-about__btn--outline:hover {
+    background: var(--moore-teal) !important;
+    color: var(--moore-text-light) !important;
+}
+
+.moore-about__btn--outline-white {
+    background: transparent !important;
+    color: var(--moore-text-light) !important;
+    border-color: var(--moore-text-light) !important;
+}
+.moore-about__btn--outline-white:hover {
+    background: var(--moore-text-light) !important;
+    color: var(--moore-teal) !important;
+}
+
+/* ========================================
+   STORY SECTION
+   ======================================== */
+.moore-about__story {
+    padding: var(--section-padding) 0;
+    background: #fff;
+}
+
+.moore-about__story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.moore-about__story-content p { color: var(--moore-text-muted); }
+.moore-about__story-content p a { font-weight: 600; }
+
+.moore-about__story-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+.moore-about__story-image img { width: 100%; height: auto; object-fit: cover; }
+
+/* ========================================
+   BRENDEN'S ORIGIN STORY (E-E-A-T)
+   ======================================== */
+.moore-about__origin {
+    padding: var(--section-padding) 0;
+    background: var(--moore-cream);
+}
+
+.moore-about__origin-inner {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.moore-about__origin-quote {
+    border-left: 4px solid var(--moore-gold);
+    padding: 20px 0 20px 28px;
+    margin: 28px 0;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--moore-text-muted);
+    line-height: 1.7;
+}
+
+/* ========================================
+   TRUST PILLARS (E-E-A-T)
+   ======================================== */
+.moore-about__trust {
+    padding: var(--section-padding) 0;
+    background: #fff;
+}
+
+.moore-about__trust-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 48px;
+}
+
+.moore-about__trust-header p { color: var(--moore-text-muted); }
+
+.moore-about__trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.moore-about__trust-card {
+    background: var(--moore-cream);
+    border-radius: 8px;
+    padding: 32px 28px;
+    border-top: 3px solid var(--moore-gold);
+    transition: transform var(--transition-med), box-shadow var(--transition-med);
+}
+.moore-about__trust-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.moore-about__trust-card svg {
+    width: 28px;
+    height: 28px;
+    color: var(--moore-gold);
+    margin-bottom: 14px;
+}
+
+.moore-about__trust-card h3 { margin-bottom: 10px; }
+.moore-about__trust-card p { font-size: 16px; color: var(--moore-text-muted); }
+
+/* ========================================
+   TEAM SECTION
+   ======================================== */
+.moore-about__team {
+    padding: var(--section-padding) 0;
+    background: var(--moore-cream);
+}
+
+.moore-about__team-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.moore-about__team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.moore-about__team-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-med);
+}
+.moore-about__team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.moore-about__team-image {
+    height: 280px;
+    overflow: hidden;
+}
+.moore-about__team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.moore-about__team-info { padding: 28px; }
+
+.moore-about__team-name {
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+}
+
+.moore-about__team-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--moore-gold);
+    margin-bottom: 16px;
+}
+
+.moore-about__team-bio {
+    color: var(--moore-text-muted);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.moore-about__team-quote {
+    font-style: italic;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(12,36,36,0.08);
+    color: var(--moore-text);
+    font-size: 15px;
+}
+
+.moore-about__team-licenses {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(12,36,36,0.08);
+    font-size: 13px;
+    color: var(--moore-text-muted);
+}
+.moore-about__team-licenses strong { color: var(--moore-text); }
+
+/* ========================================
+   VALUES SECTION
+   ======================================== */
+.moore-about__values {
+    padding: var(--section-padding) 0;
+    background: #fff;
+}
+
+.moore-about__values-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.moore-about__values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.moore-about__value-card {
+    background: var(--moore-cream);
+    border-radius: 8px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: all var(--transition-med);
+    border: 1px solid transparent;
+}
+.moore-about__value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(201,162,39,0.2);
+}
+
+.moore-about__value-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--moore-teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+.moore-about__value-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--moore-text-light);
+}
+
+.moore-about__value-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+.moore-about__value-card p {
+    font-size: 15px;
+    color: var(--moore-text-muted);
+    line-height: 1.6;
+}
+
+/* ========================================
+   CREDENTIALS SECTION
+   ======================================== */
+.moore-about__credentials {
+    padding: var(--section-padding) 0;
+    background: var(--moore-cream);
+}
+
+.moore-about__credentials-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+.moore-about__credentials-content > p {
+    color: var(--moore-text-muted);
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.moore-about__badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px 48px;
+    margin-bottom: 40px;
+}
+
+.moore-about__badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.moore-about__badge-icon {
+    width: 72px;
+    height: 72px;
+    background: var(--moore-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+}
+.moore-about__badge-icon svg {
+    width: 36px;
+    height: 36px;
+    color: var(--moore-text);
+}
+
+.moore-about__badge-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--moore-text);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.moore-about__credentials-note {
+    font-style: italic;
+    color: var(--moore-text-muted);
+    font-size: 16px;
+}
+
+/* ========================================
+   SERVICES SECTION
+   ======================================== */
+.moore-about__services {
+    padding: var(--section-padding) 0;
+    background: #fff;
+}
+
+.moore-about__services-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+.moore-about__services-header p {
+    color: var(--moore-text-muted);
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.moore-about__services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.moore-about__service-link {
+    background: var(--moore-cream);
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none !important;
+    transition: all var(--transition-med);
+    border: 1px solid transparent;
+}
+.moore-about__service-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(201,162,39,0.3);
+}
+
+.moore-about__service-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--moore-teal);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.moore-about__service-icon svg {
+    width: 22px;
+    height: 22px;
+    color: var(--moore-text-light);
+}
+
+.moore-about__service-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: var(--moore-text);
+    font-size: 0.95rem;
+}
+.moore-about__service-link:hover .moore-about__service-text {
+    color: var(--moore-teal);
+}
+
+/* ========================================
+   SERVICE AREA SECTION
+   ======================================== */
+.moore-about__area {
+    padding: var(--section-padding) 0;
+    background: var(--moore-cream);
+}
+
+.moore-about__area-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.moore-about__area-content > p { color: var(--moore-text-muted); margin-bottom: 28px; }
+
+.moore-about__states {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.moore-about__state h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--moore-gold);
+    margin-bottom: 12px;
+}
+.moore-about__state ul { list-style: none; }
+.moore-about__state li {
+    font-size: 15px;
+    color: var(--moore-text-muted);
+    padding: 3px 0;
+}
+
+.moore-about__area-note {
+    font-style: italic;
+    color: var(--moore-text-muted);
+    font-size: 15px;
+}
+
+.moore-about__map {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+.moore-about__map iframe {
+    width: 100%;
+    height: 380px;
+    border: 0;
+}
+
+/* ========================================
+   FINAL CTA SECTION
+   ======================================== */
+.moore-about__cta {
+    padding: var(--section-padding) 0;
+    background: linear-gradient(135deg, var(--moore-teal-dark), var(--moore-teal));
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.moore-about__cta::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,162,39,0.08);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.moore-about__cta .moore-about__container { position: relative; z-index: 1; }
+
+.moore-about__cta h2 {
+    color: var(--moore-text-light) !important;
+    margin-bottom: 16px;
+}
+.moore-about__cta p {
+    color: rgba(255,255,255,0.85) !important;
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.moore-about__cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.moore-about__cta-licenses {
+    margin-top: 24px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+@media (max-width: 1024px) {
+    .moore-about__story-grid,
+    .moore-about__area-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .moore-about__story-image { order: -1; }
+    .moore-about__values-grid { grid-template-columns: repeat(2, 1fr); }
+    .moore-about__services-grid { grid-template-columns: repeat(2, 1fr); }
+    .moore-about__trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .moore-about__team-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .moore-about__values-grid { grid-template-columns: 1fr; }
+    .moore-about__services-grid { grid-template-columns: 1fr; }
+    .moore-about__trust-grid { grid-template-columns: 1fr; }
+    .moore-about__states { grid-template-columns: 1fr; gap: 20px; }
+    .moore-about__badges { gap: 24px 32px; }
+    .moore-about__badge-icon { width: 60px; height: 60px; }
+    .moore-about__badge-icon svg { width: 30px; height: 30px; }
+    .moore-about__cta-buttons { flex-direction: column; align-items: center; }
+}
+
+/* Elementor Overrides */
+.moore-about__cta,.moore-about__cta *,.moore-about__cta h2,.moore-about__cta p,
+.moore-about__cta .elementor-widget-container,.moore-about__cta .elementor-heading-title {
+    color: var(--moore-text-light) !important;
+}
+
+.moore-about .elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 100% !important;
+}
+
+.moore-about .elementor-section {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+}
+
+.moore-about .elementor-section-wrap,
+.moore-about .elementor-section-wrap > .elementor-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.moore-about { overflow-x: hidden; }
+</style>
+
+<div class="moore-about">
+
+    <!-- ========================================
+         STORY SECTION
+         ======================================== -->
+    <section class="moore-about__story">
+        <div class="moore-about__container">
+            <div class="moore-about__story-grid">
+                <div class="moore-about__story-content">
+                    <span class="moore-about__eyebrow">Our Story</span>
+                    <h2>About Moore Electric Inc.<br>Meet Your Local Electricians</h2>
+                    <p>When you call Moore Electric, you're not getting a random crew or a dispatcher reading from a script. You're getting Brenden Moore, a Master Electrician with 25+ years of experience, and a team that treats every home like their own.</p>
+                    <p>We're a family-owned business based in Plaistow, NH. Brenden and his wife Asia run the operation together. Asia handles the scheduling and communication (the part customers rave about), while Brenden focuses on what he does best: clean, code-compliant electrical work.</p>
+                    <p>From <a href="https://mooreelectricinc.net/new-construction-electrical/">new construction wiring</a> to <a href="https://mooreelectricinc.net/electrical-panel-upgrades/">panel upgrades</a>, from <a href="https://mooreelectricinc.net/kitchen-bath-electrical/">kitchen remodels</a> to <a href="https://mooreelectricinc.net/ev-charger-installation/">EV charger installations</a>, we've done it all. And we've built our reputation one job at a time, with honest work and clear communication.</p>
+                </div>
+                <div class="moore-about__story-image">
+                    <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Mooreelectricguys.jpg" alt="" width="600" height="400" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         BRENDEN'S ORIGIN STORY (E-E-A-T: Experience)
+         ======================================== -->
+    <section class="moore-about__origin">
+        <div class="moore-about__container">
+            <div class="moore-about__origin-inner">
+                <span class="moore-about__eyebrow">Experience & Expertise</span>
+                <h2>25+ Years in the Electrical Trade</h2>
+                <p>Brenden Moore didn't fall into electrical work - he chose it early and never looked back. Growing up in the Plaistow area, he developed a hands-on approach to problem-solving that led him into the trade straight out of school. He spent years working his way through every level of the field - apprentice, journeyman, and eventually earning his Master Electrician license in New Hampshire, Massachusetts, and Maine, the highest credential the trade offers in all three states.</p>
+                <p>After more than two decades working on job sites across southern NH and northern MA, Brenden founded Moore Electric Inc. to do things the right way on his own terms: quality craftsmanship, honest pricing, and real accountability to the people he serves.</p>
+
+                <div class="moore-about__origin-quote">
+                    "For me, electrical work isn't just a business - it's a trade I take seriously, in communities I actually live and work in. When I'm running a panel upgrade in Plaistow or wiring a new build in Haverhill, I'm not managing from an office. I'm on the tools, with my crew, making sure the job is done right."
+                </div>
+
+                <p>That approach is what separates Moore Electric from the larger outfits. Brenden is directly involved in every project - not a project manager, not a crew lead, but the licensed Master Electrician himself. It's the way he's always worked, and it's the reason customers keep coming back.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         TRUST PILLARS (E-E-A-T: Trust + Authority)
+         ======================================== -->
+    <section class="moore-about__trust">
+        <div class="moore-about__container">
+            <div class="moore-about__trust-header">
+                <span class="moore-about__eyebrow">Why Moore Electric</span>
+                <h2>What Sets Us Apart</h2>
+                <p>Moore Electric isn't the biggest electrical contractor in the area, and that's by design. Here's what you get when you hire us.</p>
+            </div>
+
+            <div class="moore-about__trust-grid">
+                <div class="moore-about__trust-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
+                    <h3>A Master Electrician License Isn't a Formality</h3>
+                    <p>The Master Electrician credential is the top-tier license in the trade. It requires years of verified field experience, passing rigorous state examinations, and staying current with code updates. When Brenden pulls your permit and signs off on your work, that credential is on the line.</p>
+                </div>
+                <div class="moore-about__trust-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+                    <h3>Licensed Across NH, MA & ME</h3>
+                    <p>Moore Electric holds active electrical contractor licenses in New Hampshire, Massachusetts, and Maine. Whether your property is in Plaistow, Haverhill, or across the border, the work is fully licensed and code-compliant in every jurisdiction we operate in.</p>
+                </div>
+                <div class="moore-about__trust-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15a2.25 2.25 0 0 1 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V19.5a2.25 2.25 0 0 0 2.25 2.25h.75"/></svg>
+                    <h3>Permits & Utility Coordination - Handled</h3>
+                    <p>Pulling permits and coordinating with utilities like Eversource and Unitil is part of the job, not an upsell. Moore Electric manages all permit applications and utility communication so the work is legal, inspected, and properly documented.</p>
+                </div>
+                <div class="moore-about__trust-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg>
+                    <h3>Brenden's Team Does the Work. Every Time.</h3>
+                    <p>Moore Electric does not subcontract. The crew that shows up is Brenden's crew - trained, supervised, and accountable. You won't get a third-party team doing work in your home under someone else's license.</p>
+                </div>
+                <div class="moore-about__trust-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"/></svg>
+                    <h3>Free Estimates. Straight Pricing.</h3>
+                    <p>There's no charge to get a quote from Moore Electric, and the price you're given reflects the actual scope of the work. If something changes, you'll hear about it before it happens, not after.</p>
+                </div>
+                <div class="moore-about__trust-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg>
+                    <h3>BBB Accredited. Best of Newburyport.</h3>
+                    <p>Moore Electric is a BBB Accredited Business and a Best of Newburyport award recipient in 2024 and 2025 - reflecting a track record of reliable work and satisfied customers across the region.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         TEAM SECTION (Preserved from original)
+         ======================================== -->
+    <section class="moore-about__team">
+        <div class="moore-about__container">
+            <div class="moore-about__team-header">
+                <span class="moore-about__eyebrow">Meet the Team</span>
+                <h2>The People Behind Moore Electric</h2>
+            </div>
+            <div class="moore-about__team-grid">
+                <!-- Brenden Moore -->
+                <div class="moore-about__team-card">
+                    <div class="moore-about__team-image">
+                        <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Brenden-Photo-7.jpg" alt="" width="500" height="280" loading="lazy" decoding="async" style="object-position: center 30%;">
+                    </div>
+                    <div class="moore-about__team-info">
+                        <h3 class="moore-about__team-name">Brenden Moore</h3>
+                        <p class="moore-about__team-title">Owner / Master Electrician</p>
+                        <p class="moore-about__team-bio">Brenden has been working in the trades for over 25 years. He holds Master Electrician licenses in three states - Massachusetts, New Hampshire, and Maine - and he's on every job, not managing from a desk.</p>
+                        <p class="moore-about__team-quote">"I treat every home like it's my own. That means showing up when I say I will, keeping the worksite clean, and making sure everything is code-compliant. No shortcuts."</p>
+                        <p class="moore-about__team-licenses"><strong>Licenses:</strong> MA #22825 · NH #14511 · ME #MS60023064</p>
+                    </div>
+                </div>
+                
+                <!-- Asia Moore -->
+                <div class="moore-about__team-card">
+                    <div class="moore-about__team-image">
+                        <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/591411630_24997459916620551_2817858362090732555_n.jpg" alt="" width="500" height="280" loading="lazy" decoding="async" style="object-position: center 20%;">
+                    </div>
+                    <div class="moore-about__team-info">
+                        <h3 class="moore-about__team-name">Asia Moore</h3>
+                        <p class="moore-about__team-title">Office Manager</p>
+                        <p class="moore-about__team-bio">Asia keeps Moore Electric running. She handles scheduling, follows up on estimates, and makes sure nothing falls through the cracks.</p>
+                        <p class="moore-about__team-bio">When customers say "communication was excellent" in their reviews, that's Asia. She's the one who calls you back, confirms your appointment, and makes sure Brenden has everything he needs to do the job right.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         VALUES SECTION (Preserved from original)
+         ======================================== -->
+    <section class="moore-about__values">
+        <div class="moore-about__container">
+            <div class="moore-about__values-header">
+                <span class="moore-about__eyebrow">What We Stand For</span>
+                <h2>Our Approach to Every Job</h2>
+            </div>
+            <div class="moore-about__values-grid">
+                <div class="moore-about__value-card">
+                    <div class="moore-about__value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                    </div>
+                    <h3>We Show Up</h3>
+                    <p>When we say we'll be there at 9, we're there at 9. Reliability isn't a bonus - it's the baseline.</p>
+                </div>
+                <div class="moore-about__value-card">
+                    <div class="moore-about__value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3>We Communicate</h3>
+                    <p>No surprises. We explain what we're doing, what it costs, and how long it takes. Before we start.</p>
+                </div>
+                <div class="moore-about__value-card">
+                    <div class="moore-about__value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                    </div>
+                    <h3>We Do It Right</h3>
+                    <p>Code-compliant work, clean jobsites, and the peace of mind that comes from knowing it's built to last.</p>
+                </div>
+                <div class="moore-about__value-card">
+                    <div class="moore-about__value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                    </div>
+                    <h3>Your Home, Not Ours</h3>
+                    <p>We clean up after ourselves and respect your space. Because this is your home, not just our jobsite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CREDENTIALS SECTION (Preserved from original)
+         ======================================== -->
+    <section class="moore-about__credentials">
+        <div class="moore-about__container">
+            <div class="moore-about__credentials-content">
+                <span class="moore-about__eyebrow">Recognition</span>
+                <h2>Awards & Credentials</h2>
+                <p>We don't chase awards - we focus on doing good work. But we're proud to be recognized by our community and the organizations that hold contractors accountable.</p>
+                <div class="moore-about__badges">
+                    <div class="moore-about__badge">
+                        <div class="moore-about__badge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg>
+                        </div>
+                        <span class="moore-about__badge-text">Best Electrician<br>Newburyport 2024</span>
+                    </div>
+                    <div class="moore-about__badge">
+                        <div class="moore-about__badge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg>
+                        </div>
+                        <span class="moore-about__badge-text">Best Electrician<br>Newburyport 2025</span>
+                    </div>
+                    <div class="moore-about__badge">
+                        <div class="moore-about__badge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                        </div>
+                        <span class="moore-about__badge-text">5.0 Star<br>Google Rating</span>
+                    </div>
+                    <div class="moore-about__badge">
+                        <div class="moore-about__badge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <span class="moore-about__badge-text">Better Business<br>Bureau Member</span>
+                    </div>
+                    <div class="moore-about__badge">
+                        <div class="moore-about__badge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                        </div>
+                        <span class="moore-about__badge-text">Licensed in<br>3 States</span>
+                    </div>
+                </div>
+                <p class="moore-about__credentials-note">"Our real measure of success is whether you'd call us again - and recommend us to your neighbor."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SERVICES SECTION (Expanded - all services)
+         ======================================== -->
+    <section class="moore-about__services">
+        <div class="moore-about__container">
+            <div class="moore-about__services-header">
+                <span class="moore-about__eyebrow">What We Do</span>
+                <h2>Our Electrical Services</h2>
+                <p>Moore Electric handles the full range of residential and commercial electrical work across southern NH and northern MA. Whether you need a panel upgrade, EV charger installation, whole-house rewiring, generator installation, or electrical work for a kitchen remodel, new construction, or commercial build-out - we have the experience and licensing to do it correctly, on schedule, and to code.</p>
+            </div>
+            <div class="moore-about__services-grid">
+                <a href="https://mooreelectricinc.net/electrical-panel-upgrades/" class="moore-about__service-link">
+                    <div class="moore-about__service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="6" y1="8" x2="6" y2="16"/><line x1="10" y1="8" x2="10" y2="16"/><line x1="14" y1="8" x2="14" y2="16"/><line x1="18" y1="8" x2="18" y2="16"/></svg>
+                    </div>
+                    <span class="moore-about__service-text">Panel Upgrades & 200 Amp Service</span>
+                </a>
+                <a href="https://mooreelectricinc.net/ev-charger-installation/" class="moore-about__service-link">
+                    <div class="moore-about__service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <span class="moore-about__service-text">EV Charger Installation</span>
+                </a>
+                <a href="https://mooreelectricinc.net/generator-installation/" class="moore-about__service-link">
+                    <div class="moore-about__service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <span class="moore-about__service-text">Generator Installation</span>
+                </a>
+                <a href="https://mooreelectricinc.net/new-construction-electrical/" class="moore-about__service-link">
+                    <div class="moore-about__service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                    </div>
+                    <span class="moore-about__service-text">New Construction Wiring</span>
+                </a>
+                <a href="https://mooreelectricinc.net/electrical-rewiring/" class="moore-about__service-link">
+                    <div class="moore-about__service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <span class="moore-about__service-text">Whole-House Rewiring</span>
+                </a>
+                <a href="https://mooreelectricinc.net/electrical-repairs/" class="moore-about__service-link">
+                    <div class="moore-about__service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <span class="moore-about__service-text">Electrical Repairs</span>
+                </a>
+                <a href="https://mooreelectricinc.net/electrical-service-upgrades/" class="moore-about__service-link">
+                    <div class="moore-about__service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <span class="moore-about__service-text">Service Upgrades</span>
+                </a>
+                <a href="https://mooreelectricinc.net/kitchen-bath-electrical/" class="moore-about__service-link">
+                    <div class="moore-about__service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    </div>
+                    <span class="moore-about__service-text">Kitchen & Bath Remodels</span>
+                </a>
+                <a href="https://mooreelectricinc.net/commercial-services/" class="moore-about__service-link">
+                    <div class="moore-about__service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><circle cx="8" cy="6" r="1"/><circle cx="12" cy="6" r="1"/><circle cx="16" cy="6" r="1"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="10" r="1"/><circle cx="16" cy="10" r="1"/></svg>
+                    </div>
+                    <span class="moore-about__service-text">Commercial Electrical</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SERVICE AREA SECTION (Expanded town list)
+         ======================================== -->
+    <section class="moore-about__area">
+        <div class="moore-about__container">
+            <div class="moore-about__area-grid">
+                <div class="moore-about__area-content">
+                    <span class="moore-about__eyebrow">Where We Work</span>
+                    <h2>Service Area</h2>
+                    <p>Moore Electric Inc. is based in Plaistow, NH and serves communities throughout southern New Hampshire and northern Massachusetts, with select projects in Maine. Whether you need <a href="https://mooreelectricinc.net/electrical-repairs/">electrical repairs</a> in Newburyport or a <a href="https://mooreelectricinc.net/electrical-panel-upgrades/">panel upgrade</a> in Exeter, we're just a phone call away.</p>
+                    <div class="moore-about__states">
+                        <div class="moore-about__state">
+                            <h4>New Hampshire</h4>
+                            <ul>
+                                <li>Plaistow</li>
+                                <li>Hampstead</li>
+                                <li>Kingston</li>
+                                <li>Atkinson</li>
+                                <li>Salem</li>
+                                <li>Derry</li>
+                                <li>Exeter</li>
+                                <li>Stratham</li>
+                                <li>Hampton</li>
+                            </ul>
+                        </div>
+                        <div class="moore-about__state">
+                            <h4>Massachusetts</h4>
+                            <ul>
+                                <li>Newburyport</li>
+                                <li>Amesbury</li>
+                                <li>Haverhill</li>
+                                <li>Andover</li>
+                                <li>North Andover</li>
+                            </ul>
+                        </div>
+                        <div class="moore-about__state">
+                            <h4>Maine</h4>
+                            <ul>
+                                <li>York</li>
+                                <li>Kittery</li>
+                                <li>South Berwick</li>
+                                <li>Eliot</li>
+                                <li>Ogunquit</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="moore-about__area-note">If you're outside these towns, reach out - we're often able to accommodate.</p>
+                </div>
+                <div class="moore-about__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975988.5964516792!2d-71.68353554999999!3d43.24641544999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e303b55edd21db%3A0xe7bd2367443f8b64!2sMoore%20Electric%20Inc.!5e0!3m2!1sen!2sus!4v1768193686235!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Moore Electric Inc. location on Google Maps"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FINAL CTA SECTION
+         ======================================== -->
+    <section class="moore-about__cta">
+        <div class="moore-about__container">
+            <h2>Ready to Work With Us?</h2>
+            <p>If you're looking for a licensed electrician in southern NH or northern MA who will give you a straight answer and stand behind the work, we'd be glad to help.</p>
+            <div class="moore-about__cta-buttons">
+                <a href="https://mooreelectricinc.net/contact/" class="moore-about__btn moore-about__btn--gold">Get a Free Estimate</a>
+                <a href="tel:+16038369513" class="moore-about__btn moore-about__btn--outline-white">Call (603) 836-9513</a>
+            </div>
+            <div class="moore-about__cta-licenses">
+                <strong>License Numbers:</strong> MA #22825 · NH #14511 · ME #MS60023064
+            </div>
+        </div>
+    </section>
+
+</div>
