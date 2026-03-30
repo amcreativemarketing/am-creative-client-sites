@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCM Design System - 2026 Brand Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   BCM DESIGN SYSTEM — 2026 Brand Identity
+   Bradford Construction Management
+   Prepared by AM Creative Marketing
+   ============================================================ */
+
+/* --- DESIGN TOKENS --- */
+:root {
+  /* Primary Palette */
+  --bcm-black: #1A1A1A;
+  --bcm-gold: #C8A24D;
+  --bcm-charcoal: #1C2331;
+  --bcm-white: #FAF9F7;
+
+  /* Secondary Palette */
+  --bcm-maritime: #0F2A45;
+  --bcm-sage: #7A9B7E;
+  --bcm-gray: #F1F1F1;
+
+  /* Gold System */
+  --bcm-gold-hover: #B8923F;
+  --bcm-gold-light: #D4B46A;
+  --bcm-gold-soft: rgba(200, 162, 77, 0.07);
+  --bcm-gold-border: rgba(200, 162, 77, 0.18);
+  --bcm-gold-glow: rgba(200, 162, 77, 0.12);
+
+  /* Text Hierarchy */
+  --bcm-text-primary: #1C2331;
+  --bcm-text-secondary: #3A4255;
+  --bcm-text-tertiary: #5C6478;
+  --bcm-text-light: rgba(250, 249, 247, 0.88);
+  --bcm-text-muted: rgba(250, 249, 247, 0.62);
+
+  /* Surfaces */
+  --bcm-surface: #F7F7F5;
+  --bcm-surface-raised: #FFFFFF;
+  --bcm-border: #E5E5E2;
+  --bcm-border-subtle: rgba(28, 35, 49, 0.06);
+
+  /* Shadows */
+  --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
+  --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
+  --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
+  --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
+  --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
+
+  /* Radii */
+  --bcm-radius: 6px;
+  --bcm-radius-md: 10px;
+  --bcm-radius-lg: 14px;
+
+  /* Typography Scale */
+  --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --bcm-font-body: 'Inter', -apple-system, sans-serif;
+
+  /* Transitions */
+  --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --bcm-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* --- RESET & BASE --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--bcm-font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--bcm-text-primary);
+  background: var(--bcm-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3, h4 {
+  font-family: var(--bcm-font-display);
+  line-height: 1.15;
+  color: var(--bcm-black);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0;
+}
+
+.bcm-label {
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bcm-gold);
+}
+
+.bcm-label--dark {
+  color: var(--bcm-text-tertiary);
+}
+
+.bcm-lead {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--bcm-text-secondary);
+  max-width: 580px;
+}
+
+/* --- LAYOUT --- */
+.bcm-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 768px) {
+  .bcm-container { padding: 0 40px; }
+}
+
+@media (min-width: 1024px) {
+  .bcm-container { padding: 0 48px; }
+}
+
+.bcm-section {
+  padding: 72px 0;
+}
+
+@media (min-width: 768px) {
+  .bcm-section { padding: 96px 0; }
+}
+
+@media (min-width: 1024px) {
+  .bcm-section { padding: 112px 0; }
+}
+
+/* --- SECTION HEADER (reusable) --- */
+.bcm-section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+
+.bcm-section-header .bcm-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.bcm-section-header .bcm-label::before,
+.bcm-section-header .bcm-label::after {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--bcm-gold);
+  opacity: 0.5;
+}
+
+.bcm-section-header h2 {
+  margin-bottom: 16px;
+}
+
+.bcm-section-header .bcm-lead {
+  margin: 0 auto;
+}
+
+/* --- GOLD ACCENT RULE --- */
+.bcm-accent-rule {
+  width: 40px;
+  height: 2px;
+  background: var(--bcm-gold);
+  border: none;
+  margin: 0 auto 20px;
+}
+
+.bcm-accent-rule--left {
+  margin: 0 0 20px 0;
+}
+
+/* --- BUTTONS --- */
+.bcm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 15px 34px;
+  border-radius: var(--bcm-radius);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s var(--bcm-ease);
+  min-height: 50px;
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcm-btn--gold {
+  background: var(--bcm-gold);
+  color: var(--bcm-black);
+}
+
+.bcm-btn--gold:hover {
+  background: var(--bcm-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--bcm-shadow-gold);
+}
+
+.bcm-btn--dark {
+  background: var(--bcm-charcoal);
+  color: var(--bcm-white);
+}
+
+.bcm-btn--dark:hover {
+  background: var(--bcm-black);
+  transform: translateY(-2px);
+  box-shadow: var(--bcm-shadow-lg);
+}
+
+.bcm-btn--maritime {
+  background: var(--bcm-maritime);
+  color: var(--bcm-white);
+}
+
+.bcm-btn--maritime:hover {
+  background: #0b2238;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(15, 42, 69, 0.3);
+}
+
+.bcm-btn--ghost {
+  background: rgba(250, 249, 247, 0.06);
+  color: var(--bcm-text-light);
+  border: 1px solid rgba(250, 249, 247, 0.18);
+}
+
+.bcm-btn--ghost:hover {
+  background: rgba(250, 249, 247, 0.12);
+  border-color: rgba(250, 249, 247, 0.32);
+  transform: translateY(-2px);
+}
+
+.bcm-btn--outline {
+  background: transparent;
+  color: var(--bcm-charcoal);
+  border: 1.5px solid var(--bcm-border);
+}
+
+.bcm-btn--outline:hover {
+  border-color: var(--bcm-gold);
+  color: var(--bcm-black);
+  transform: translateY(-2px);
+}
+
+.bcm-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* --- ARROW ICON --- */
+.bcm-arrow {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s var(--bcm-ease);
+}
+
+.bcm-btn:hover .bcm-arrow { transform: translateX(3px); }
+
+/* ============================================================
+   COMPONENT: HERO
+   ============================================================ */
+.bcm-hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) { .bcm-hero { min-height: 580px; } }
+@media (min-width: 1024px) { .bcm-hero { min-height: 640px; } }
+
+.bcm-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bcm-charcoal);
+}
+
+.bcm-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    172deg,
+    rgba(26, 26, 26, 0.94) 0%,
+    rgba(26, 26, 26, 0.82) 45%,
+    rgba(28, 35, 49, 0.75) 100%
+  );
+}
+
+/* Subtle noise texture on hero */
+.bcm-hero__overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px;
+}
+
+.bcm-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 100px 0 80px;
+  max-width: 680px;
+}
+
+.bcm-hero__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--bcm-gold);
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.bcm-hero__label::before {
+  content: '';
+  width: 24px;
+  height: 1.5px;
+  background: var(--bcm-gold);
+}
+
+.bcm-hero h1 {
+  color: var(--bcm-white);
+  margin-bottom: 20px;
+}
+
+.bcm-hero__subtitle {
+  color: var(--bcm-text-light);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.bcm-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* Hero gold border accent at bottom */
+.bcm-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--bcm-gold), transparent 70%);
+  opacity: 0.4;
+  z-index: 3;
+}
+
+/* ============================================================
+   COMPONENT: TRUST BAR
+   ============================================================ */
+.bcm-trust {
+  background: var(--bcm-black);
+  border-bottom: 1px solid var(--bcm-gold-glow);
+  padding: 18px 0;
+  overflow: hidden;
+}
+
+.bcm-trust__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 0;
+}
+
+.bcm-trust__item {
+  font-family: var(--bcm-font-display);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(250, 249, 247, 0.5);
+  padding: 0 24px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.bcm-trust__item + .bcm-trust__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: rgba(250, 249, 247, 0.1);
+}
+
+.bcm-trust__item span {
+  color: var(--bcm-gold);
+  opacity: 0.7;
+}
+
+/* ============================================================
+   COMPONENT: CARDS — Service Cards
+   ============================================================ */
+.bcm-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) { .bcm-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .bcm-cards { grid-template-columns: repeat(3, 1fr); } }
+
+.bcm-card {
+  background: var(--bcm-surface-raised);
+  border: 1px solid var(--bcm-border);
+  border-radius: var(--bcm-radius-md);
+  padding: 36px 32px;
+  transition: all 0.35s var(--bcm-ease);
+  position: relative;
+}
+
+.bcm-card:hover {
+  border-color: var(--bcm-gold-border);
+  box-shadow: var(--bcm-shadow-md);
+  transform: translateY(-3px);
+}
+
+.bcm-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--bcm-radius);
+  background: var(--bcm-gold-soft);
+  border: 1px solid var(--bcm-gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: all 0.35s var(--bcm-ease);
+}
+
+.bcm-card:hover .bcm-card__icon {
+  background: var(--bcm-gold);
+  border-color: var(--bcm-gold);
+}
+
+.bcm-card__icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--bcm-gold);
+  stroke-width: 1.8;
+  fill: none;
+  transition: stroke 0.35s var(--bcm-ease);
+}
+
+.bcm-card:hover .bcm-card__icon svg {
+  stroke: var(--bcm-black);
+}
+
+.bcm-card h3 {
+  margin-bottom: 10px;
+}
+
+.bcm-card p {
+  color: var(--bcm-text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.bcm-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--bcm-gold);
+  text-decoration: none;
+  transition: gap 0.3s var(--bcm-ease);
+}
+
+.bcm-card__link:hover { gap: 10px; }
+
+/* ============================================================
+   COMPONENT: IMAGE CARDS — Project Spotlights
+   ============================================================ */
+.bcm-img-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .bcm-img-cards { grid-template-columns: repeat(2, 1fr); }
+  .bcm-img-cards--featured .bcm-img-card:first-child {
+    grid-column: 1 / -1;
+  }
+  .bcm-img-cards--featured .bcm-img-card:first-child .bcm-img-card__img {
+    height: 400px;
+  }
+}
+
+.bcm-img-card {
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  background: var(--bcm-surface-raised);
+  border: 1px solid var(--bcm-border-subtle);
+  transition: all 0.4s var(--bcm-ease);
+}
+
+.bcm-img-card:hover {
+  box-shadow: var(--bcm-shadow-lg);
+  transform: translateY(-4px);
+}
+
+.bcm-img-card__img {
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+  background: var(--bcm-charcoal);
+}
+
+.bcm-img-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--bcm-ease);
+}
+
+.bcm-img-card:hover .bcm-img-card__img img {
+  transform: scale(1.04);
+}
+
+.bcm-img-card__body {
+  padding: 28px 28px 32px;
+}
+
+.bcm-img-card__body .bcm-label {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.bcm-img-card__body h3 {
+  margin-bottom: 10px;
+}
+
+.bcm-img-card__body p {
+  color: var(--bcm-text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+/* ============================================================
+   COMPONENT: DARK SECTION (Primary — Black/Charcoal)
+   The default dark surface. Uses the primary black/charcoal palette.
+   Maritime blue is available as --maritime variant for deliberate accent use.
+   ============================================================ */
+.bcm-section--dark {
+  background: linear-gradient(170deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bcm-section--dark::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 162, 77, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Noise texture for dark sections */
+.bcm-section--dark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px;
+  pointer-events: none;
+}
+
+.bcm-section--dark .bcm-container { position: relative; z-index: 1; }
+
+.bcm-section--dark h2 { color: var(--bcm-white); }
+.bcm-section--dark p { color: var(--bcm-text-light); }
+.bcm-section--dark .bcm-lead { color: var(--bcm-text-muted); }
+
+/* ============================================================
+   COMPONENT: MARITIME SECTION (Optional accent — use sparingly)
+   For a single featured section per page where blue backdrop adds contrast.
+   Not for heroes, headers, or primary dark surfaces.
+   ============================================================ */
+.bcm-section--maritime {
+  background: var(--bcm-maritime);
+  position: relative;
+  overflow: hidden;
+}
+
+.bcm-section--maritime::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 162, 77, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.bcm-section--maritime::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px;
+  pointer-events: none;
+}
+
+.bcm-section--maritime .bcm-container { position: relative; z-index: 1; }
+.bcm-section--maritime h2 { color: var(--bcm-white); }
+.bcm-section--maritime p { color: var(--bcm-text-light); }
+.bcm-section--maritime .bcm-lead { color: var(--bcm-text-muted); }
+
+/* --- Vertical Gold Bar Feature (dark sections) --- */
+.bcm-feature-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .bcm-feature-list { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+}
+
+.bcm-feature-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.bcm-feature-item__bar {
+  width: 3px;
+  min-height: 48px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--bcm-gold) 0%, rgba(200, 162, 77, 0.15) 100%);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.bcm-feature-item h4 {
+  color: var(--bcm-white);
+  margin-bottom: 6px;
+}
+
+.bcm-feature-item p {
+  color: var(--bcm-text-muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   COMPONENT: PROCESS STEPS
+   ============================================================ */
+.bcm-process {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid var(--bcm-border);
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  background: var(--bcm-border);
+  gap: 1px;
+}
+
+@media (min-width: 768px) { .bcm-process { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .bcm-process { grid-template-columns: repeat(5, 1fr); } }
+
+.bcm-process__step {
+  background: var(--bcm-surface-raised);
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s var(--bcm-ease);
+}
+
+.bcm-process__step:hover {
+  background: var(--bcm-gold-soft);
+}
+
+.bcm-process__num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--bcm-gold-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--bcm-font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--bcm-gold);
+  margin-bottom: 16px;
+  transition: all 0.3s var(--bcm-ease);
+}
+
+.bcm-process__step:hover .bcm-process__num {
+  background: var(--bcm-gold);
+  color: var(--bcm-black);
+  border-color: var(--bcm-gold);
+}
+
+.bcm-process__step h4 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.bcm-process__step p {
+  font-size: 0.85rem;
+  color: var(--bcm-text-tertiary);
+  line-height: 1.55;
+}
+
+/* ============================================================
+   COMPONENT: FAQ ACCORDION (CSS-only)
+   ============================================================ */
+.bcm-faq { max-width: 780px; margin: 0 auto; }
+
+.bcm-faq__item {
+  border-bottom: 1px solid var(--bcm-border);
+}
+
+.bcm-faq__item:first-child {
+  border-top: 1px solid var(--bcm-border);
+}
+
+.bcm-faq__toggle {
+  display: none;
+}
+
+.bcm-faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 0;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s var(--bcm-ease);
+}
+
+.bcm-faq__question h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  flex: 1;
+  transition: color 0.3s;
+}
+
+.bcm-faq__indicator {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bcm-gold-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s var(--bcm-ease);
+  color: var(--bcm-charcoal);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.bcm-faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--bcm-ease), padding 0.3s var(--bcm-ease);
+}
+
+.bcm-faq__answer p {
+  color: var(--bcm-text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  padding-bottom: 24px;
+  padding-right: 48px;
+}
+
+.bcm-faq__toggle:checked + .bcm-faq__question .bcm-faq__indicator {
+  background: var(--bcm-charcoal);
+  color: var(--bcm-gold);
+  transform: rotate(45deg);
+}
+
+.bcm-faq__toggle:checked + .bcm-faq__question + .bcm-faq__answer {
+  max-height: 300px;
+}
+
+.bcm-faq__toggle:checked + .bcm-faq__question h4 {
+  color: var(--bcm-gold-hover);
+}
+
+/* ============================================================
+   COMPONENT: SPLIT LAYOUT (Text + Image)
+   ============================================================ */
+.bcm-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .bcm-split { grid-template-columns: 1fr 1fr; gap: 64px; }
+}
+
+.bcm-split--reverse .bcm-split__media {
+  order: -1;
+}
+
+@media (min-width: 768px) {
+  .bcm-split--reverse .bcm-split__media { order: 1; }
+  .bcm-split--reverse .bcm-split__content { order: -1; }
+}
+
+.bcm-split__media {
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/3;
+  background: var(--bcm-charcoal);
+}
+
+.bcm-split__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gold corner accent on image */
+.bcm-split__media::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: var(--bcm-gold);
+}
+
+.bcm-split__content h2 {
+  margin-bottom: 16px;
+}
+
+.bcm-split__content p {
+  color: var(--bcm-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.bcm-split__content .bcm-btn {
+  margin-top: 24px;
+}
+
+/* ============================================================
+   COMPONENT: REVIEW / TESTIMONIAL CARDS
+   ============================================================ */
+.bcm-reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) { .bcm-reviews { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .bcm-reviews { grid-template-columns: repeat(3, 1fr); } }
+
+.bcm-review {
+  border-radius: var(--bcm-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--bcm-border-subtle);
+  transition: box-shadow 0.3s var(--bcm-ease);
+}
+
+.bcm-review:hover {
+  box-shadow: var(--bcm-shadow-md);
+}
+
+.bcm-review__header {
+  background: linear-gradient(135deg, var(--bcm-charcoal), var(--bcm-black));
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bcm-review__stars {
+  display: flex;
+  gap: 3px;
+  color: var(--bcm-gold);
+  font-size: 0.85rem;
+}
+
+.bcm-review__author {
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--bcm-white);
+}
+
+.bcm-review__body {
+  padding: 24px;
+  background: var(--bcm-surface-raised);
+}
+
+.bcm-review__quote {
+  font-style: italic;
+  color: var(--bcm-text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  border-left: 3px solid var(--bcm-gold);
+  padding-left: 20px;
+}
+
+/* ============================================================
+   COMPONENT: CTA BAND
+   ============================================================ */
+.bcm-cta-band {
+  background: var(--bcm-black);
+  position: relative;
+  overflow: hidden;
+}
+
+.bcm-cta-band::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--bcm-gold);
+}
+
+.bcm-cta-band .bcm-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .bcm-cta-band .bcm-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+.bcm-cta-band h3 {
+  color: var(--bcm-white);
+  font-size: 1.5rem;
+}
+
+.bcm-cta-band p {
+  color: var(--bcm-text-muted);
+  font-size: 0.93rem;
+  margin-top: 6px;
+}
+
+.bcm-cta-band__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   COMPONENT: STATS ROW
+   ============================================================ */
+.bcm-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+@media (min-width: 768px) { .bcm-stats { grid-template-columns: repeat(4, 1fr); } }
+
+.bcm-stat {
+  text-align: center;
+}
+
+.bcm-stat__number {
+  font-family: var(--bcm-font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--bcm-gold);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.bcm-section--dark .bcm-stat__number { color: var(--bcm-gold); }
+
+.bcm-stat__label {
+  font-family: var(--bcm-font-display);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--bcm-text-tertiary);
+}
+
+.bcm-section--dark .bcm-stat__label { color: var(--bcm-text-muted); }
+
+/* ============================================================
+   COMPONENT: GALLERY (Contained Grid)
+   ============================================================ */
+.bcm-gallery {
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  background: var(--bcm-border);
+}
+
+@media (min-width: 768px) {
+  .bcm-gallery { grid-template-columns: repeat(3, 1fr); }
+  .bcm-gallery__item--tall { grid-row: span 2; }
+}
+
+@media (min-width: 1024px) {
+  .bcm-gallery { grid-template-columns: repeat(4, 1fr); }
+}
+
+.bcm-gallery__item {
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--bcm-charcoal);
+  cursor: pointer;
+  position: relative;
+}
+
+.bcm-gallery__item--tall { aspect-ratio: auto; }
+
+.bcm-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--bcm-ease);
+}
+
+.bcm-gallery__item:hover img {
+  transform: scale(1.06);
+}
+
+/* Hover overlay with gold border effect */
+.bcm-gallery__item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  transition: border-color 0.3s var(--bcm-ease);
+}
+
+.bcm-gallery__item:hover::after {
+  border-color: var(--bcm-gold);
+}
+
+/* ============================================================
+   COMPONENT: TINTED SECTION
+   ============================================================ */
+.bcm-section--tinted {
+  background: var(--bcm-surface);
+}
+
+/* ============================================================
+   SHOWCASE WRAPPER — Only for this demo page
+   ============================================================ */
+.ds-header {
+  text-align: center;
+  padding: 80px 24px 56px;
+  background: var(--bcm-black);
+  color: var(--bcm-white);
+}
+
+.ds-header h1 {
+  color: var(--bcm-white);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.ds-header p {
+  color: var(--bcm-text-muted);
+  font-size: 0.93rem;
+}
+
+.ds-header .bcm-gold-text { color: var(--bcm-gold); }
+
+.ds-label {
+  display: block;
+  text-align: center;
+  font-family: var(--bcm-font-display);
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bcm-text-tertiary);
+  padding: 40px 24px 0;
+  background: var(--bcm-white);
+}
+
+.ds-label--dark { background: transparent; color: var(--bcm-text-muted); }
+
+/* Color swatches */
+.ds-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 32px 24px 48px;
+}
+
+.ds-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.ds-swatch__color {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--bcm-radius);
+  border: 1px solid var(--bcm-border);
+}
+
+.ds-swatch__name {
+  font-family: var(--bcm-font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--bcm-text-primary);
+}
+
+.ds-swatch__hex {
+  font-family: var(--bcm-font-body);
+  font-size: 0.65rem;
+  color: var(--bcm-text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Button showcase */
+.ds-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Divider */
+.ds-divider {
+  height: 1px;
+  background: var(--bcm-border);
+  margin: 0;
+  border: none;
+}
+
+/* Dark button row */
+.ds-buttons--dark {
+  background: var(--bcm-charcoal);
+  border-radius: var(--bcm-radius-md);
+  padding: 32px;
+  margin: 0 24px 24px;
+}
+
+/* Type specimens */
+.ds-type {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.ds-type > * + * { margin-top: 20px; }
+
+.ds-type .bcm-lead { max-width: none; }
+
+</style>
+</head>
+<body>
+
+<!-- =====================================================
+     SHOWCASE HEADER
+     ===================================================== -->
+<header class="ds-header">
+  <h1>BCM Design System <span class="bcm-gold-text">2026</span></h1>
+  <p>Bradford Construction Management - Primary Brand Identity</p>
+</header>
+
+<!-- =====================================================
+     COLOR PALETTE
+     ===================================================== -->
+<div class="ds-label">Color Palette</div>
+<div class="ds-swatches">
+  <div class="ds-swatch">
+    <div class="ds-swatch__color" style="background:#1A1A1A;"></div>
+    <span class="ds-swatch__name">Primary Black</span>
+    <span class="ds-swatch__hex">#1A1A1A</span>
+  </div>
+  <div class="ds-swatch">
+    <div class="ds-swatch__color" style="background:#C8A24D;"></div>
+    <span class="ds-swatch__name">Refined Gold</span>
+    <span class="ds-swatch__hex">#C8A24D</span>
+  </div>
+  <div class="ds-swatch">
+    <div class="ds-swatch__color" style="background:#1C2331;"></div>
+    <span class="ds-swatch__name">Rich Charcoal</span>
+    <span class="ds-swatch__hex">#1C2331</span>
+  </div>
+  <div class="ds-swatch">
+    <div class="ds-swatch__color" style="background:#FAF9F7;"></div>
+    <span class="ds-swatch__name">Warm White</span>
+    <span class="ds-swatch__hex">#FAF9F7</span>
+  </div>
+  <div class="ds-swatch">
+    <div class="ds-swatch__color" style="background:#0F2A45;"></div>
+    <span class="ds-swatch__name">Deep Maritime</span>
+    <span class="ds-swatch__hex">#0F2A45</span>
+  </div>
+  <div class="ds-swatch">
+    <div class="ds-swatch__color" style="background:#7A9B7E;"></div>
+    <span class="ds-swatch__name">Sage</span>
+    <span class="ds-swatch__hex">#7A9B7E</span>
+  </div>
+  <div class="ds-swatch">
+    <div class="ds-swatch__color" style="background:#F1F1F1;"></div>
+    <span class="ds-swatch__name">Light Gray</span>
+    <span class="ds-swatch__hex">#F1F1F1</span>
+  </div>
+</div>
+
+<hr class="ds-divider">
+
+<!-- =====================================================
+     TYPOGRAPHY
+     ===================================================== -->
+<div class="ds-label">Typography</div>
+<div class="ds-type">
+  <h1>Custom Homes Built for Life</h1>
+  <h2>Design-Build with Full Transparency</h2>
+  <h3>Commercial-Grade Project Management</h3>
+  <h4>Daily Job-Site Photo Documentation</h4>
+  <span class="bcm-label" style="display:inline-flex; align-items:center; gap:12px;">
+    <span style="width:24px;height:1.5px;background:var(--bcm-gold);"></span>
+    Section Label
+    <span style="width:24px;height:1.5px;background:var(--bcm-gold);"></span>
+  </span>
+  <p class="bcm-lead">Bradford Construction Management brings commercial-grade project management to residential construction, with clear scopes, transparent pricing, and daily photo documentation throughout every build.</p>
+  <p>One accountable team guides the project from feasibility and design through permitting and build, reducing surprises and keeping decisions simple. After the final walkthrough, we don't disappear. Through Bradford Home Services, clients get ongoing support, seasonal maintenance, and warranty follow-through.</p>
+</div>
+
+<hr class="ds-divider">
+
+<!-- =====================================================
+     BUTTONS
+     ===================================================== -->
+<div class="ds-label">Buttons - Light Background</div>
+<div class="ds-buttons">
+  <a href="#" class="bcm-btn bcm-btn--gold">Get Started Today <span class="bcm-arrow">&rarr;</span></a>
+  <a href="#" class="bcm-btn bcm-btn--dark">Learn More</a>
+  <a href="#" class="bcm-btn bcm-btn--maritime">Schedule a Call</a>
+  <a href="#" class="bcm-btn bcm-btn--outline">View Projects</a>
+</div>
+
+<div class="ds-label">Buttons - Dark Background</div>
+<div class="ds-buttons--dark">
+  <div class="ds-buttons" style="padding:0;">
+    <a href="#" class="bcm-btn bcm-btn--gold">Get Started Today <span class="bcm-arrow">&rarr;</span></a>
+    <a href="#" class="bcm-btn bcm-btn--ghost">View Our Work</a>
+  </div>
+</div>
+
+<!-- =====================================================
+     HERO SECTION
+     ===================================================== -->
+<div class="ds-label">Hero Section</div>
+
+<section class="bcm-hero">
+  <div class="bcm-hero__bg" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80');"></div>
+  <div class="bcm-hero__overlay"></div>
+  <div class="bcm-container">
+    <div class="bcm-hero__content">
+      <!-- Hero labels are optional. Use for service/location pages (e.g., "Custom Homes" or "Andover, MA"). Omit on homepage. -->
+      <h1>Your Premier Design-Build Contractor</h1>
+      <p class="bcm-hero__subtitle">Custom homes, whole-home renovations, and ADUs built with commercial-grade project management, transparent pricing, and lifetime support through Bradford Home Services.</p>
+      <div class="bcm-hero__actions">
+        <a href="#" class="bcm-btn bcm-btn--gold">Schedule a Consultation <span class="bcm-arrow">&rarr;</span></a>
+        <a href="#" class="bcm-btn bcm-btn--ghost">View Our Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     TRUST BAR
+     ===================================================== -->
+<div class="bcm-trust">
+  <div class="bcm-container">
+    <div class="bcm-trust__inner">
+      <div class="bcm-trust__item">Licensed &amp; Insured <span>&middot;</span> MA HIC #201908</div>
+      <div class="bcm-trust__item">Design-Build</div>
+      <div class="bcm-trust__item">Transparent Pricing</div>
+      <div class="bcm-trust__item">Daily Photo Updates</div>
+      <div class="bcm-trust__item">Lifetime Support</div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     SERVICE CARDS
+     ===================================================== -->
+<div class="ds-label">Service Cards</div>
+<section class="bcm-section">
+  <div class="bcm-container">
+    <div class="bcm-section-header">
+      <span class="bcm-label">What We Build</span>
+      <h2>Design-Build Services for Homeowners Who Expect More</h2>
+      <p class="bcm-lead">One team handles every phase, from initial feasibility through final walkthrough and beyond.</p>
+    </div>
+    <div class="bcm-cards">
+      <div class="bcm-card">
+        <div class="bcm-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+        </div>
+        <h3>Custom Homes</h3>
+        <p>Ground-up construction managed with the same tools and processes used on commercial projects. Clear scope, reliable schedule, daily documentation.</p>
+        <a href="#" class="bcm-card__link">Learn more <span class="bcm-arrow">&rarr;</span></a>
+      </div>
+      <div class="bcm-card">
+        <div class="bcm-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM14 2v6h6"/></svg>
+        </div>
+        <h3>Whole-Home Renovations</h3>
+        <p>Complete transformations with transparent pricing and documented change orders. No surprises, no hidden costs, no scope creep without your sign-off.</p>
+        <a href="#" class="bcm-card__link">Learn more <span class="bcm-arrow">&rarr;</span></a>
+      </div>
+      <div class="bcm-card">
+        <div class="bcm-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M9 22V12h6v10"/></svg>
+        </div>
+        <h3>Home Additions &amp; ADUs</h3>
+        <p>From in-law suites to accessory dwelling units, we handle zoning, design, permitting, and construction as a single integrated team.</p>
+        <a href="#" class="bcm-card__link">Learn more <span class="bcm-arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     DARK SECTION — Features with Gold Bars
+     ===================================================== -->
+<div class="ds-label ds-label--dark" style="background:var(--bcm-charcoal);padding-top:12px;">Dark Section (Primary — Black/Charcoal) with Gold Bar Features</div>
+<section class="bcm-section bcm-section--dark">
+  <div class="bcm-container">
+    <div class="bcm-section-header">
+      <span class="bcm-label">Why Bradford</span>
+      <h2>Built Different from the Start</h2>
+      <p class="bcm-lead">The Bradford model was designed around the problems homeowners actually face - poor communication, hidden costs, and builders who disappear after the check clears.</p>
+    </div>
+    <div class="bcm-feature-list">
+      <div class="bcm-feature-item">
+        <div class="bcm-feature-item__bar"></div>
+        <div>
+          <h4>Daily Photo Documentation</h4>
+          <p>Every job site is photographed and documented daily. You see exactly what's happening without setting foot on site.</p>
+        </div>
+      </div>
+      <div class="bcm-feature-item">
+        <div class="bcm-feature-item__bar"></div>
+        <div>
+          <h4>Transparent Pricing</h4>
+          <p>Changes are documented and approved before they happen. Your budget isn't a guess - it's a commitment we manage in real time.</p>
+        </div>
+      </div>
+      <div class="bcm-feature-item">
+        <div class="bcm-feature-item__bar"></div>
+        <div>
+          <h4>One Accountable Team</h4>
+          <p>Design, permitting, and construction run through a single project manager. Fewer handoffs, fewer dropped balls, fewer surprises.</p>
+        </div>
+      </div>
+      <div class="bcm-feature-item">
+        <div class="bcm-feature-item__bar"></div>
+        <div>
+          <h4>Lifetime Support via BHS</h4>
+          <p>Bradford Home Services provides ongoing maintenance, repairs, and warranty support after the build is complete. We never disappear.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     STATS ROW (on dark)
+     ===================================================== -->
+<div class="ds-label ds-label--dark" style="background:var(--bcm-black);padding-top:12px;">Stats Row (Dark Section)</div>
+<section class="bcm-section bcm-section--dark" style="padding:72px 0;">
+  <div class="bcm-container">
+    <div class="bcm-stats">
+      <div class="bcm-stat">
+        <div class="bcm-stat__number">10+</div>
+        <div class="bcm-stat__label">Years Experience</div>
+      </div>
+      <div class="bcm-stat">
+        <div class="bcm-stat__number">100%</div>
+        <div class="bcm-stat__label">Transparent Pricing</div>
+      </div>
+      <div class="bcm-stat">
+        <div class="bcm-stat__number">Daily</div>
+        <div class="bcm-stat__label">Photo Updates</div>
+      </div>
+      <div class="bcm-stat">
+        <div class="bcm-stat__number">Lifetime</div>
+        <div class="bcm-stat__label">Support via BHS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     SPLIT LAYOUT
+     ===================================================== -->
+<div class="ds-label">Split Layout (Text + Image)</div>
+<section class="bcm-section">
+  <div class="bcm-container">
+    <div class="bcm-split">
+      <div class="bcm-split__content">
+        <hr class="bcm-accent-rule bcm-accent-rule--left">
+        <span class="bcm-label bcm-label--dark" style="margin-bottom:12px;display:block;">The BCM + BHS Model</span>
+        <h2>Your Builder for Life Means Exactly That</h2>
+        <p>Most builders hand you the keys and move on. Bradford clients get something different: a lifetime relationship. Through Bradford Home Services, every completed project includes ongoing access to maintenance, seasonal checkups, and priority service.</p>
+        <p>It's an exclusive membership. When something needs attention - whether it's a year after the build or a decade later - you have a team who knows your home inside out.</p>
+        <a href="#" class="bcm-btn bcm-btn--gold">Learn About BHS <span class="bcm-arrow">&rarr;</span></a>
+      </div>
+      <div class="bcm-split__media">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     PROJECT SPOTLIGHT CARDS
+     ===================================================== -->
+<div class="ds-label">Project Spotlight Cards (with Featured)</div>
+<section class="bcm-section bcm-section--tinted">
+  <div class="bcm-container">
+    <div class="bcm-section-header">
+      <span class="bcm-label">Recent Work</span>
+      <h2>Projects That Speak for Themselves</h2>
+    </div>
+    <div class="bcm-img-cards bcm-img-cards--featured">
+      <div class="bcm-img-card">
+        <div class="bcm-img-card__img">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80" alt="">
+        </div>
+        <div class="bcm-img-card__body">
+          <span class="bcm-label">Essex, MA - ADU</span>
+          <h3>Detached Accessory Dwelling Unit with ICF Construction</h3>
+          <p>A high-performance ADU built with insulated concrete forms for superior energy efficiency and structural integrity.</p>
+        </div>
+      </div>
+      <div class="bcm-img-card">
+        <div class="bcm-img-card__img">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="">
+        </div>
+        <div class="bcm-img-card__body">
+          <span class="bcm-label">Wakefield, MA - Custom Home</span>
+          <h3>Ground-Up Custom Home Build</h3>
+          <p>Full design-build execution from lot evaluation through final punch list.</p>
+        </div>
+      </div>
+      <div class="bcm-img-card">
+        <div class="bcm-img-card__img">
+          <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80" alt="">
+        </div>
+        <div class="bcm-img-card__body">
+          <span class="bcm-label">Beverly, MA - Renovation</span>
+          <h3>Complete First-Floor Renovation</h3>
+          <p>Open-concept kitchen, living, and dining with structural beam work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     PROCESS STEPS
+     ===================================================== -->
+<div class="ds-label">Process Steps</div>
+<section class="bcm-section">
+  <div class="bcm-container">
+    <div class="bcm-section-header">
+      <span class="bcm-label">How It Works</span>
+      <h2>From First Call to Lifetime Support</h2>
+    </div>
+    <div class="bcm-process">
+      <div class="bcm-process__step">
+        <div class="bcm-process__num">1</div>
+        <h4>Discovery</h4>
+        <p>We evaluate your property, goals, and budget to confirm the project is a fit.</p>
+      </div>
+      <div class="bcm-process__step">
+        <div class="bcm-process__num">2</div>
+        <h4>Design</h4>
+        <p>Architectural plans, material selections, and detailed scope documentation.</p>
+      </div>
+      <div class="bcm-process__step">
+        <div class="bcm-process__num">3</div>
+        <h4>Permitting</h4>
+        <p>We handle municipal submissions, engineering reviews, and approvals.</p>
+      </div>
+      <div class="bcm-process__step">
+        <div class="bcm-process__num">4</div>
+        <h4>Build</h4>
+        <p>Daily photos, weekly updates, and transparent budget tracking throughout.</p>
+      </div>
+      <div class="bcm-process__step">
+        <div class="bcm-process__num">5</div>
+        <h4>Support</h4>
+        <p>BHS provides ongoing maintenance and warranty follow-through for life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     REVIEWS
+     ===================================================== -->
+<div class="ds-label">Testimonial Cards</div>
+<section class="bcm-section bcm-section--tinted">
+  <div class="bcm-container">
+    <div class="bcm-section-header">
+      <span class="bcm-label">Client Testimonials</span>
+      <h2>What Homeowners Say</h2>
+    </div>
+    <div class="bcm-reviews">
+      <div class="bcm-review">
+        <div class="bcm-review__header">
+          <div class="bcm-review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="bcm-review__author">Sarah M.</div>
+        </div>
+        <div class="bcm-review__body">
+          <p class="bcm-review__quote">The daily photo updates were a game changer. We could see exactly what was happening every single day without having to ask. No other builder we talked to offered anything close to that level of transparency.</p>
+        </div>
+      </div>
+      <div class="bcm-review">
+        <div class="bcm-review__header">
+          <div class="bcm-review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="bcm-review__author">Tom &amp; Lisa R.</div>
+        </div>
+        <div class="bcm-review__body">
+          <p class="bcm-review__quote">We knew exactly what our addition would cost before they broke ground. When we made a change to the kitchen layout, the updated pricing came within 24 hours - no surprises, no games.</p>
+        </div>
+      </div>
+      <div class="bcm-review">
+        <div class="bcm-review__header">
+          <div class="bcm-review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="bcm-review__author">David K.</div>
+        </div>
+        <div class="bcm-review__body">
+          <p class="bcm-review__quote">Two years after our renovation, we had a small issue with a door. One call to Bradford Home Services and it was handled that week. They actually mean it when they say they don't disappear.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     FAQ ACCORDION
+     ===================================================== -->
+<div class="ds-label">FAQ Accordion (CSS-Only)</div>
+<section class="bcm-section">
+  <div class="bcm-container">
+    <div class="bcm-section-header">
+      <span class="bcm-label">Common Questions</span>
+      <h2>What Homeowners Ask Us</h2>
+    </div>
+    <div class="bcm-faq">
+      <div class="bcm-faq__item">
+        <input type="checkbox" class="bcm-faq__toggle" id="faq1">
+        <label class="bcm-faq__question" for="faq1">
+          <h4>What does "transparent pricing" actually mean?</h4>
+          <span class="bcm-faq__indicator">+</span>
+        </label>
+        <div class="bcm-faq__answer">
+          <p>It means every cost is documented before it happens. Your project starts with a detailed scope and budget. If anything changes - a material upgrade, a design revision, an unexpected site condition - we document the change, show you the cost impact, and get your approval before moving forward. No surprise invoices, no vague allowances, no "we'll figure it out later."</p>
+        </div>
+      </div>
+      <div class="bcm-faq__item">
+        <input type="checkbox" class="bcm-faq__toggle" id="faq2">
+        <label class="bcm-faq__question" for="faq2">
+          <h4>How is Bradford different from other builders?</h4>
+          <span class="bcm-faq__indicator">+</span>
+        </label>
+        <div class="bcm-faq__answer">
+          <p>Two things set us apart: process and permanence. We run residential projects with the same tools and discipline used on commercial builds - daily photo documentation, real-time budget tracking, weekly schedule updates. And through Bradford Home Services, we stay in the relationship after the build is done. Maintenance, repairs, warranty follow-through - for life.</p>
+        </div>
+      </div>
+      <div class="bcm-faq__item">
+        <input type="checkbox" class="bcm-faq__toggle" id="faq3">
+        <label class="bcm-faq__question" for="faq3">
+          <h4>What areas do you serve?</h4>
+          <span class="bcm-faq__indicator">+</span>
+        </label>
+        <div class="bcm-faq__answer">
+          <p>We're headquartered in Haverhill, MA and serve homeowners across the North Shore, Merrimack Valley, and Southern New Hampshire. This includes communities like Newburyport, Andover, Georgetown, Exeter, and surrounding areas. Contact us to confirm availability for your specific location.</p>
+        </div>
+      </div>
+      <div class="bcm-faq__item">
+        <input type="checkbox" class="bcm-faq__toggle" id="faq4">
+        <label class="bcm-faq__question" for="faq4">
+          <h4>What is Bradford Home Services?</h4>
+          <span class="bcm-faq__indicator">+</span>
+        </label>
+        <div class="bcm-faq__answer">
+          <p>BHS is our sister company that provides long-term support to Bradford clients after the build is complete. Think of it as an exclusive membership - seasonal maintenance, priority repairs, and warranty follow-through from a team that already knows your home inside out. When other builders move on to the next job, Bradford clients still have a team behind them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     CTA BAND
+     ===================================================== -->
+<div class="ds-label">CTA Band</div>
+<section class="bcm-cta-band">
+  <div class="bcm-container">
+    <div>
+      <h3>Ready to Talk About Your Project?</h3>
+      <p>We'll evaluate your property, discuss your goals, and give you a straight answer on scope and budget.</p>
+    </div>
+    <div class="bcm-cta-band__actions">
+      <a href="#" class="bcm-btn bcm-btn--gold">Schedule a Consultation <span class="bcm-arrow">&rarr;</span></a>
+      <a href="tel:9789459771" class="bcm-btn bcm-btn--ghost">Call 978-945-9771</a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     GALLERY
+     ===================================================== -->
+<div class="ds-label">Photo Gallery (Contained Grid)</div>
+<section class="bcm-section">
+  <div class="bcm-container">
+    <div class="bcm-section-header">
+      <span class="bcm-label">Project Gallery</span>
+      <h2>See the Work Up Close</h2>
+    </div>
+    <div class="bcm-gallery">
+      <div class="bcm-gallery__item bcm-gallery__item--tall">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80" alt="">
+      </div>
+      <div class="bcm-gallery__item">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400&q=80" alt="">
+      </div>
+      <div class="bcm-gallery__item">
+        <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=400&q=80" alt="">
+      </div>
+      <div class="bcm-gallery__item">
+        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=400&q=80" alt="">
+      </div>
+      <div class="bcm-gallery__item">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&q=80" alt="">
+      </div>
+      <div class="bcm-gallery__item">
+        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=80" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     MARITIME SECTION (Optional Accent — use sparingly)
+     ===================================================== -->
+<div class="ds-label ds-label--dark" style="background:var(--bcm-maritime);padding-top:12px;">Maritime Section (Optional Accent — max 1 per page)</div>
+<section class="bcm-section bcm-section--maritime" style="padding:72px 0;">
+  <div class="bcm-container">
+    <div style="text-align:center;max-width:600px;margin:0 auto;">
+      <span class="bcm-label" style="margin-bottom:16px;display:inline-flex;align-items:center;gap:12px;">
+        <span style="width:28px;height:1px;background:var(--bcm-gold);opacity:0.5;"></span>
+        Deep Maritime Accent
+        <span style="width:28px;height:1px;background:var(--bcm-gold);opacity:0.5;"></span>
+      </span>
+      <h2 style="color:var(--bcm-white);">Use This for One Featured Section Per Page</h2>
+      <p style="color:rgba(250,249,247,0.62);font-size:0.95rem;margin-top:12px;">Deep Maritime (#0F2A45) adds visual contrast when you need to break up multiple dark-on-dark sections. Use for a single mid-page feature - not heroes, not headers, not the primary dark treatment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     SERVICE PAGE HERO VARIANT (with label)
+     ===================================================== -->
+<div class="ds-label">Hero Variant — Service/Location Page (with label)</div>
+<section class="bcm-hero" style="min-height:480px;">
+  <div class="bcm-hero__bg" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80');"></div>
+  <div class="bcm-hero__overlay"></div>
+  <div class="bcm-container">
+    <div class="bcm-hero__content" style="padding:80px 0 64px;">
+      <div class="bcm-hero__label"><span>Custom Homes</span></div>
+      <h1 style="font-size:clamp(1.9rem,4vw,2.8rem);">Ground-Up Custom Home Construction</h1>
+      <p class="bcm-hero__subtitle">From lot evaluation through final punch list - one team manages design, permitting, and build with daily documentation and transparent pricing.</p>
+      <div class="bcm-hero__actions">
+        <a href="#" class="bcm-btn bcm-btn--gold">Start Your Project <span class="bcm-arrow">&rarr;</span></a>
+        <a href="#" class="bcm-btn bcm-btn--ghost">View Custom Home Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
