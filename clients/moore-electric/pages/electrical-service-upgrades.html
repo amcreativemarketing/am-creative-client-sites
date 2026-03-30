@@ -83,35 +83,36 @@
         min-height: 52px;
     }
     .esu-btn--primary {
-        background: var(--moore-teal);
-        color: var(--moore-text-light);
-        border-color: var(--moore-teal);
+        background: var(--moore-teal) !important;
+        color: var(--moore-text-light) !important;
+        border-color: var(--moore-teal) !important;
     }
     .esu-btn--primary:hover {
-        background: var(--moore-teal-dark);
-        border-color: var(--moore-teal-dark);
-        color: var(--moore-text-light);
+        background: var(--moore-teal-dark) !important;
+        border-color: var(--moore-teal-dark) !important;
+        color: var(--moore-text-light) !important;
         transform: translateY(-2px);
         box-shadow: var(--esu-shadow-md);
     }
     .esu-btn--gold {
-        background: var(--moore-gold);
-        color: var(--moore-text);
-        border-color: var(--moore-gold);
+        background: var(--moore-gold) !important;
+        color: var(--moore-text) !important;
+        border-color: var(--moore-gold) !important;
     }
     .esu-btn--gold:hover {
-        background: var(--moore-gold-dark);
-        border-color: var(--moore-gold-dark);
+        background: var(--moore-gold-dark) !important;
+        border-color: var(--moore-gold-dark) !important;
+        color: var(--moore-text) !important;
         transform: translateY(-2px);
     }
     .esu-btn--outline {
-        background: transparent;
-        color: var(--moore-text-light);
-        border-color: var(--moore-text-light);
+        background: transparent !important;
+        color: var(--moore-text-light) !important;
+        border-color: var(--moore-text-light) !important;
     }
     .esu-btn--outline:hover {
-        background: var(--moore-text-light);
-        color: var(--moore-teal);
+        background: var(--moore-text-light) !important;
+        color: var(--moore-teal) !important;
     }
     .esu-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
     .esu-cta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
@@ -197,13 +198,6 @@
         box-shadow: var(--esu-shadow-sm);
     }
     .esu-split-card h3 { color: var(--moore-teal); }
-    .esu-price-range {
-        font-family: 'Raleway', sans-serif;
-        font-size: clamp(1.75rem, 3vw, 2.25rem);
-        font-weight: 700;
-        color: var(--moore-teal);
-        margin-bottom: 12px;
-    }
 
     /* ============================= */
     /* Mid-Page CTA Banner           */
@@ -665,10 +659,15 @@
 
         <div class="esu-split-row">
             <div class="esu-split-card">
-                <h3>How Much Does a 200-Amp Service Upgrade Cost in NH?</h3>
-                <div class="esu-price-range">$1,500 - $4,000</div>
-                <p>The final price depends on the type of service (overhead vs. underground), linear footage of cable runs, permit fees, and utility requirements specific to your home. Some homes with older or non-standard setups may fall at the higher end.</p>
-                <p>Moore Electric provides free on-site estimates. Brenden walks through the scope and pricing face-to-face so you know exactly what you're paying for before any work starts.</p>
+                <h3>What Does a 200-Amp Service Upgrade Cost?</h3>
+                <p>Every home is different, and the cost of a service upgrade depends on several factors: overhead vs. underground service, the length of cable runs, permit fees in your town, and utility-specific requirements.</p>
+                <p>Rather than guessing, the best way to get an accurate number is a free on-site estimate. Brenden walks through your specific situation and provides a detailed written quote - no pressure, no obligation.</p>
+                <div class="esu-cta-row" style="margin-top: 20px;">
+                    <a href="https://mooreelectricinc.net/contact/" class="esu-btn esu-btn--primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+                        Get a Free Estimate
+                    </a>
+                </div>
             </div>
             <div class="esu-split-card">
                 <h3>Do I Need a Permit for an Electrical Service Upgrade in NH?</h3>
@@ -798,8 +797,9 @@
 <section class="esu-section esu-conversion">
     <div class="esu-container">
         <div class="esu-conversion__grid">
-            <div class="esu-side-image">
+            <div class="esu-side-image" style="position: static;">
                 <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Photo-Jan-15-2026-10-34-11-AM-5-1.webp" alt="" width="600" height="800" loading="lazy" decoding="async">
+                <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Photo-Jan-15-2026-10-34-11-AM-9.webp" alt="" width="600" height="400" loading="lazy" decoding="async" style="margin-top: 20px; border-radius: 8px;">
             </div>
             <div>
                 <span class="esu-label">Full Conversion</span>
@@ -925,24 +925,7 @@
             <p class="esu-muted">Real reviews from real customers on Google.</p>
         </div>
         <div class="esu-reviews__grid">
-            <div class="esu-review-card">
-                <div class="esu-review-stars">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
-                </div>
-                <blockquote>Absolutely beautiful work done by Moore Electric. Beside installing some difficult pieces, they were extremely neat, organized and displayed great attention to the details. They installed a sub panel and updated old wiring as well. All workers were very respectful of our property and our time. The owner Brendan and his team, (Liam and Max) listened to our request and went above and beyond. We would definitely hire this very professional team again.</blockquote>
-                <div class="esu-review-author">
-                    <div class="esu-review-avatar">CS</div>
-                    <div>
-                        <div class="esu-review-name">Cheryle S.</div>
-                        <div class="esu-review-source">Google Review</div>
-                    </div>
-                </div>
-            </div>
-
+            <!-- Stephen M. -->
             <div class="esu-review-card">
                 <div class="esu-review-stars">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
@@ -961,6 +944,26 @@
                 </div>
             </div>
 
+            <!-- Cheryle S. (center - longest review) -->
+            <div class="esu-review-card">
+                <div class="esu-review-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+                </div>
+                <blockquote>Absolutely beautiful work done by Moore Electric. Beside installing some difficult pieces, they were extremely neat, organized and displayed great attention to the details. They installed a sub panel and updated old wiring as well. All workers were very respectful of our property and our time. The owner Brendan and his team, (Liam and Max) listened to our request and went above and beyond. We would definitely hire this very professional team again.</blockquote>
+                <div class="esu-review-author">
+                    <div class="esu-review-avatar">CS</div>
+                    <div>
+                        <div class="esu-review-name">Cheryle S.</div>
+                        <div class="esu-review-source">Google Review</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sara B. -->
             <div class="esu-review-card">
                 <div class="esu-review-stars">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
@@ -1000,7 +1003,7 @@
             <details class="esu-faq-item">
                 <summary>How much does a 200-amp service upgrade cost?</summary>
                 <div class="esu-faq-answer">
-                    <p>A 200-amp electrical service upgrade in southern New Hampshire typically costs between $1,500 and $4,000. The price varies based on whether you have overhead or underground service, the length of cable runs, permit fees in your town, and any utility-specific requirements. Moore Electric provides free on-site estimates with detailed written quotes before any work begins.</p>
+                    <p>The cost of a 200-amp service upgrade varies based on whether you have overhead or underground service, the length of cable runs, permit fees in your town, and any utility-specific requirements. Every home is different, which is why Moore Electric provides free on-site estimates with a detailed written quote before any work begins. <a href="https://mooreelectricinc.net/contact/">Contact us to schedule a free estimate.</a></p>
                 </div>
             </details>
             <details class="esu-faq-item">
