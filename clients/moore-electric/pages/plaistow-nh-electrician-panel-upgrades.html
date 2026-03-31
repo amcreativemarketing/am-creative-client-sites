@@ -1,0 +1,473 @@
+<!-- Plaistow NH Panel Upgrades Spoke Page — Body Content -->
+<!-- Sits between existing hero section and footer in WordPress -->
+<!-- Parent hub: /plaistow-nh-electrician/ -->
+
+<style>
+    /* ============================================
+       PLAISTOW PANEL UPGRADES SPOKE — SCOPED STYLES
+       ============================================ */
+    :root {
+        --moore-teal: #0B4B4B;
+        --moore-teal-dark: #093C3C;
+        --moore-gold: #C9A227;
+        --moore-gold-dark: #A8891F;
+        --moore-gold-light: #E8D48A;
+        --moore-cream: #F2F0EA;
+        --moore-gray: #C7D0D0;
+        --moore-gray-dark: #9BABAB;
+        --moore-text: #0C2424;
+        --moore-text-light: #FFFFFF;
+        --moore-text-muted: #4A5F5F;
+        --section-padding: clamp(60px, 8vw, 100px);
+        --container-max: 1200px;
+        --shadow-sm: 0 2px 8px rgba(12,36,36,0.06);
+        --shadow-md: 0 4px 20px rgba(12,36,36,0.08);
+        --shadow-lg: 0 8px 40px rgba(12,36,36,0.12);
+        --transition-fast: 0.2s ease;
+        --transition-med: 0.3s ease;
+    }
+
+    .plst-pan *, .plst-pan *::before, .plst-pan *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .plst-pan { font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 18px; line-height: 1.7; color: var(--moore-text); }
+    .plst-pan img { max-width: 100%; height: auto; display: block; }
+    .plst-pan a { color: var(--moore-teal); text-decoration: none; transition: color var(--transition-fast); }
+    .plst-pan a:hover { color: var(--moore-gold); }
+    .plst-pan h2, .plst-pan h3, .plst-pan h4 { font-family: 'Raleway', sans-serif; font-weight: 700; line-height: 1.2; color: var(--moore-text); }
+    .plst-pan h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+    .plst-pan h3 { font-size: clamp(1.15rem, 2.5vw, 1.35rem); font-weight: 600; }
+    .plst-pan p { margin-bottom: 1.25rem; }
+    .plst-pan p:last-child { margin-bottom: 0; }
+    .plst-pan .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .plst-pan section { padding: var(--section-padding) 0; }
+    .plst-pan .eyebrow { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--moore-gold); margin-bottom: 12px; }
+
+    /* Buttons */
+    .plst-pan .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 32px; font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 4px; border: 2px solid transparent; cursor: pointer; transition: all var(--transition-med); text-decoration: none; min-height: 52px; }
+    .plst-pan .btn--gold { background: var(--moore-gold) !important; color: var(--moore-text) !important; border-color: var(--moore-gold) !important; }
+    .plst-pan .btn--gold:hover { background: var(--moore-gold-dark) !important; border-color: var(--moore-gold-dark) !important; transform: translateY(-2px); }
+    .plst-pan .btn--outline-white { background: transparent !important; color: var(--moore-text-light) !important; border-color: var(--moore-text-light) !important; }
+    .plst-pan .btn--outline-white:hover { background: var(--moore-text-light) !important; color: var(--moore-teal) !important; }
+
+    /* ---- Permit Process ---- */
+    .plst-pan-permit { background: #fff; }
+    .plst-pan-permit__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+    .plst-pan-permit__grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+    @media (min-width: 900px) { .plst-pan-permit__grid { grid-template-columns: 1fr 300px; gap: 48px; } }
+    .plst-pan-permit__image { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-lg); }
+    .plst-pan-permit__image img { width: 100%; height: auto; }
+    .plst-pan-steps { list-style: none; counter-reset: permit-step; }
+    .plst-pan-step { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--moore-gray); counter-increment: permit-step; }
+    .plst-pan-step:last-child { border-bottom: none; }
+    .plst-pan-step__num { width: 44px; height: 44px; background: var(--moore-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--moore-text-light); font-size: 1.1rem; flex-shrink: 0; }
+    .plst-pan-step strong { display: block; margin-bottom: 4px; color: var(--moore-text); }
+    .plst-pan-step span { color: var(--moore-text-muted); font-size: 0.95rem; }
+
+    /* ---- Housing Stock ---- */
+    .plst-pan-housing { background: var(--moore-cream); }
+    .plst-pan-housing__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+    .plst-pan-housing__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 768px) { .plst-pan-housing__grid { grid-template-columns: repeat(3, 1fr); } }
+    .plst-pan-era { background: #fff; border-radius: 12px; padding: 32px; box-shadow: var(--shadow-sm); border-top: 4px solid var(--moore-teal); transition: all var(--transition-med); }
+    .plst-pan-era:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .plst-pan-era__decade { font-family: 'Raleway', sans-serif; font-size: 2rem; font-weight: 700; color: var(--moore-gold); margin-bottom: 8px; line-height: 1; }
+    .plst-pan-era h3 { margin-bottom: 12px; font-size: 1.1rem; }
+    .plst-pan-era p { color: var(--moore-text-muted); font-size: 0.95rem; line-height: 1.6; }
+
+    /* ---- Project Examples ---- */
+    .plst-pan-projects { background: #fff; }
+    .plst-pan-projects__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+    .plst-pan-projects__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 768px) { .plst-pan-projects__grid { grid-template-columns: repeat(3, 1fr); } }
+    .plst-pan-project { background: var(--moore-cream); border-radius: 10px; padding: 28px; border-left: 4px solid var(--moore-gold); }
+    .plst-pan-project h3 { margin-bottom: 10px; font-size: 1.05rem; }
+    .plst-pan-project p { color: var(--moore-text-muted); font-size: 0.95rem; line-height: 1.6; }
+
+    /* ---- Eversource ---- */
+    .plst-pan-eversource { background: var(--moore-teal-dark); color: var(--moore-text-light); position: relative; overflow: hidden; }
+    .plst-pan-eversource::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,162,39,0.1) 0%, transparent 70%); pointer-events: none; }
+    .plst-pan-eversource .container { position: relative; z-index: 1; }
+    .plst-pan-eversource__header { text-align: center; max-width: 720px; margin: 0 auto 40px; }
+    .plst-pan-eversource h2 { color: var(--moore-text-light) !important; }
+    .plst-pan-eversource p { color: rgba(255,255,255,0.85); }
+    .plst-pan-eversource__grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+    .plst-pan-eversource__photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+    .plst-pan-eversource__photo { border-radius: 10px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.3); border: 3px solid rgba(201,162,39,0.4); aspect-ratio: 1 / 1; }
+    .plst-pan-eversource__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .plst-pan-eversource__list { list-style: none; margin-top: 24px; }
+    .plst-pan-eversource__list li { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .plst-pan-eversource__list li:last-child { border-bottom: none; }
+    .plst-pan-eversource__list li strong { color: var(--moore-gold); display: block; margin-bottom: 4px; }
+    .plst-pan-eversource__list li span { color: rgba(255,255,255,0.75); font-size: 0.95rem; }
+    .plst-pan-eversource__list svg { width: 20px; height: 20px; color: var(--moore-gold); flex-shrink: 0; margin-top: 2px; }
+
+    /* ---- Reviews ---- */
+    .plst-pan-reviews { background: var(--moore-cream); }
+    .plst-pan-reviews__header { text-align: center; margin-bottom: 48px; }
+    .plst-pan-reviews__badge { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 2px solid var(--moore-gold); border-radius: 50px; padding: 12px 24px; margin-bottom: 24px; }
+    .plst-pan-reviews__badge-score { font-family: 'Raleway', sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--moore-teal); line-height: 1; }
+    .plst-pan-reviews__badge-stars { display: flex; gap: 2px; }
+    .plst-pan-reviews__badge-stars svg { width: 18px; height: 18px; color: var(--moore-gold); fill: var(--moore-gold); }
+    .plst-pan-reviews__badge-label { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text-muted); }
+    .plst-pan-reviews__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 768px) { .plst-pan-reviews__grid { grid-template-columns: repeat(3, 1fr); } }
+    .plst-pan-review { background: #fff; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm); }
+    .plst-pan-review__stars { display: flex; gap: 3px; margin-bottom: 14px; }
+    .plst-pan-review__stars svg { width: 16px; height: 16px; color: var(--moore-gold); fill: var(--moore-gold); }
+    .plst-pan-review__quote { font-size: 0.95rem; font-style: italic; color: var(--moore-text); line-height: 1.7; flex-grow: 1; margin-bottom: 16px; }
+    .plst-pan-review__author { display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--moore-gray); }
+    .plst-pan-review__avatar { width: 40px; height: 40px; background: var(--moore-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--moore-text-light); font-size: 0.9rem; flex-shrink: 0; }
+    .plst-pan-review__name { font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.9rem; }
+    .plst-pan-review__source { font-size: 0.8rem; color: var(--moore-text-muted); }
+
+    /* ---- FAQ ---- */
+    .plst-pan-faq { background: #fff; }
+    .plst-pan-faq__header { text-align: center; margin-bottom: 48px; }
+    .plst-pan-faq-list { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 10px; }
+    @media (min-width: 900px) { .plst-pan-faq-list { grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; } }
+    .plst-pan-faq-item { background: var(--moore-cream); border-radius: 8px; overflow: hidden; }
+    .plst-pan-faq-item__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 22px; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Raleway', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--moore-text); transition: color var(--transition-fast); }
+    .plst-pan-faq-item__q:hover { color: var(--moore-teal); }
+    .plst-pan-faq-item__icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--moore-gold); transition: transform var(--transition-med); }
+    .plst-pan-faq-item__a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .plst-pan-faq-item__a-inner { padding: 0 22px 18px; font-size: 0.9rem; color: var(--moore-text-muted); line-height: 1.7; }
+    .plst-pan-faq-item__a-inner p { margin-bottom: 0; }
+    .plst-pan-faq-item__a-inner a { font-weight: 600; }
+    .plst-pan-faq-item.active .plst-pan-faq-item__icon { transform: rotate(45deg); }
+    .plst-pan-faq-item.active .plst-pan-faq-item__a { max-height: 500px; }
+
+    /* ---- Service Area ---- */
+    .plst-pan-area { background: var(--moore-cream); }
+    .plst-pan-area__header { text-align: center; max-width: 720px; margin: 0 auto 32px; }
+    .plst-pan-area__towns { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; justify-content: center; }
+    .plst-pan-area__town { background: #fff; border-radius: 6px; padding: 8px 16px; font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text-muted); }
+    .plst-pan-area__map { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); margin-top: 32px; }
+    .plst-pan-area__map iframe { width: 100%; height: 350px; border: 0; display: block; }
+
+    /* ---- Mid CTA ---- */
+    .plst-pan-cta { background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%); text-align: center; padding: clamp(48px, 8vw, 80px) 0; }
+    .plst-pan-cta h2 { color: var(--moore-text-light) !important; margin-bottom: 16px; }
+    .plst-pan-cta p { color: rgba(255,255,255,0.85) !important; font-size: 1.1rem; max-width: 600px; margin: 0 auto 28px; }
+    .plst-pan-cta__btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+
+    /* ---- Final CTA ---- */
+    .plst-pan-final { background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%); text-align: center; padding: clamp(60px, 10vw, 100px) 0; }
+    .plst-pan-final__content { max-width: 700px; margin: 0 auto; }
+    .plst-pan-final h2 { color: var(--moore-text-light) !important; margin-bottom: 16px; }
+    .plst-pan-final p { color: rgba(255,255,255,0.85) !important; font-size: 1.1rem; margin-bottom: 28px; }
+    .plst-pan-final__btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 24px; }
+    .plst-pan-final__contact { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+    .plst-pan-final__contact a { color: var(--moore-gold) !important; }
+    .plst-pan-final__hub { margin-top: 20px; }
+    .plst-pan-final__hub a { color: var(--moore-gold) !important; font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.95rem; }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+        .plst-pan .btn { width: 100%; }
+        .plst-pan-cta__btns, .plst-pan-final__btns { flex-direction: column; align-items: center; }
+    }
+</style>
+
+<div class="plst-pan">
+
+<!-- ============================================
+     SECTION 2: Permit Process
+     ============================================ -->
+<section class="plst-pan-permit">
+    <div class="container">
+        <div class="plst-pan-permit__header">
+            <div class="eyebrow">The Plaistow Process</div>
+            <h2>Panel Upgrades in Plaistow: The Permit &amp; Inspection Process</h2>
+            <p style="color: var(--moore-text-muted);">Every electrical panel upgrade in Plaistow requires a permit from the Town of Plaistow Building Department before work begins. As a licensed electrical contractor, Moore Electric files all permit applications on the homeowner's behalf - you don't need to make a trip to Town Hall or navigate the paperwork yourself. For general information about panel upgrades, visit our <a href="https://mooreelectricinc.net/electrical-panel-upgrades/">electrical panel upgrades</a> page.</p>
+        </div>
+
+        <div class="plst-pan-permit__grid">
+            <div>
+                <ol class="plst-pan-steps">
+                    <li class="plst-pan-step">
+                        <div class="plst-pan-step__num">1</div>
+                        <div><strong>Pre-Work Permit Application</strong><span>Moore Electric submits the electrical permit to the Plaistow Building Department, including the scope of work and contractor license number.</span></div>
+                    </li>
+                    <li class="plst-pan-step">
+                        <div class="plst-pan-step__num">2</div>
+                        <div><strong>Utility Coordination with Eversource</strong><span>Before the panel can be disconnected and replaced, Eversource must disconnect the service at the meter. Moore Electric schedules this directly with Eversource NH, typically 1-3 weeks out depending on season.</span></div>
+                    </li>
+                    <li class="plst-pan-step">
+                        <div class="plst-pan-step__num">3</div>
+                        <div><strong>Panel Installation</strong><span>Work is completed on the day of the Eversource disconnect. Most panel upgrades are finished in a single day.</span></div>
+                    </li>
+                    <li class="plst-pan-step">
+                        <div class="plst-pan-step__num">4</div>
+                        <div><strong>Town Inspection</strong><span>A Plaistow building inspector performs the final electrical inspection before the permit is closed out.</span></div>
+                    </li>
+                    <li class="plst-pan-step">
+                        <div class="plst-pan-step__num">5</div>
+                        <div><strong>Eversource Reconnect</strong><span>Service is restored by the utility after the inspection passes. Moore Electric coordinates the full timeline so there are no gaps.</span></div>
+                    </li>
+                </ol>
+            </div>
+            <div class="plst-pan-permit__image">
+                <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_5230.webp" alt="" width="300" height="450" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 3: Plaistow Housing Stock
+     ============================================ -->
+<section class="plst-pan-housing">
+    <div class="container">
+        <div class="plst-pan-housing__header">
+            <div class="eyebrow">Local Housing Context</div>
+            <h2>Why Plaistow Homes Need Panel Upgrades</h2>
+            <p style="color: var(--moore-text-muted);">Plaistow's residential neighborhoods span several decades of construction - and each era brought its own electrical infrastructure that, in many cases, has reached the end of its serviceable life. Here's what Moore Electric sees most often.</p>
+        </div>
+
+        <div class="plst-pan-housing__grid">
+            <div class="plst-pan-era">
+                <div class="plst-pan-era__decade">1950s-70s</div>
+                <h3>Mid-Century Homes Near Town Center</h3>
+                <p>Older neighborhoods surrounding the town center and along routes like Westville Road and Plaistow Road contain homes still running on original fuse boxes or early breaker panels, including Federal Pacific Electric (FPE) Stab-Lok and Zinsco panels. Both have documented safety issues and are no longer considered acceptable by NH electrical code enforcement or most homeowners insurance carriers. Moore Electric regularly replaces FPE and Zinsco panels with modern, code-compliant 200-amp panels. Many of these homes also need <a href="https://mooreelectricinc.net/plaistow-nh-electrician/repairs/">electrical repairs</a> alongside the panel upgrade.</p>
+            </div>
+            <div class="plst-pan-era">
+                <div class="plst-pan-era__decade">1980s-90s</div>
+                <h3>Colonials &amp; Split-Levels</h3>
+                <p>Homes built in the Route 121A, Main Street, and Danville Road corridors were typically wired with 100-amp or 150-amp service - sized for the loads of that era. Today, those same homes are running <a href="https://mooreelectricinc.net/ev-charger-installation/">EV chargers</a>, central AC, heat pumps, and home offices simultaneously. Upgrading to a 200-amp service is the standard solution, often combined with a <a href="https://mooreelectricinc.net/electrical-service-upgrades/">service entrance upgrade</a> to support the new panel.</p>
+            </div>
+            <div class="plst-pan-era">
+                <div class="plst-pan-era__decade">2000s+</div>
+                <h3>Newer Homes Near Route 125</h3>
+                <p>Newer construction near Route 125 and in subdivisions off Kelley Road was built with 200-amp service - but that doesn't mean panels are immune to upgrade needs. The most common calls Moore Electric receives from these neighborhoods are capacity-driven: adding a Level 2 EV charger, wiring a <a href="https://mooreelectricinc.net/home-additions-electrical/">home addition</a>, or installing a <a href="https://mooreelectricinc.net/generator-installation/">whole-home generator</a> that requires a transfer switch and dedicated circuit capacity.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     MID CTA
+     ============================================ -->
+<section class="plst-pan-cta">
+    <div class="container">
+        <h2>Not Sure If Your Panel Needs an Upgrade?</h2>
+        <p>Moore Electric offers free on-site panel assessments for Plaistow homeowners. Brenden will evaluate your current panel, load demands, and give you a straight answer.</p>
+        <div class="plst-pan-cta__btns">
+            <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Get a Free Panel Assessment</a>
+            <a href="tel:6038369513" class="btn btn--outline-white">Call 603-836-9513</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 4: Project Examples
+     ============================================ -->
+<section class="plst-pan-projects">
+    <div class="container">
+        <div class="plst-pan-projects__header">
+            <div class="eyebrow">What to Expect</div>
+            <h2>Common Panel Upgrade Scenarios in Plaistow Homes</h2>
+            <p style="color: var(--moore-text-muted);">These are the types of panel upgrade projects Moore Electric handles regularly throughout Plaistow and surrounding communities.</p>
+        </div>
+
+        <div class="plst-pan-projects__grid">
+            <div class="plst-pan-project">
+                <h3>Federal Pacific Panel Replacement - 100 to 200 Amp</h3>
+                <p>Older ranches with original Federal Pacific Stab-Lok panels flagged by homeowners insurance. Moore Electric replaces the FPE panel with a new 200-amp Square D panel, upgrades the service entrance, and files and passes the Plaistow Building Dept inspection - typically completed in a single day. The homeowner resolves an insurance flag and gains capacity for future upgrades like an <a href="https://mooreelectricinc.net/ev-charger-installation/">EV charger</a>.</p>
+            </div>
+            <div class="plst-pan-project">
+                <h3>150 to 200 Amp Upgrade for EV Charger</h3>
+                <p>Families in 1980s-90s colonials finding their current panel can't support a Level 2 EV charger without overloading existing circuits. Moore Electric upgrades the service from 150 to 200 amps, coordinates the Eversource disconnect, and installs the new panel and EV charger circuit in the same project - one permit, one inspection, one job.</p>
+            </div>
+            <div class="plst-pan-project">
+                <h3>Subpanel Addition for Home Addition</h3>
+                <p>Homeowners adding a family room or finished space who need a subpanel to service the new addition without running circuits back to the main panel. Moore Electric installs a 60-amp subpanel in the addition, runs the feed from the main panel, and permits the work through the Plaistow Building Department. Typically completed in one day.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 5: Eversource Coordination
+     ============================================ -->
+<section class="plst-pan-eversource">
+    <div class="container">
+        <div class="plst-pan-eversource__header">
+            <div class="eyebrow" style="color: var(--moore-gold);">Utility Coordination</div>
+            <h2>Working with Eversource for Your Plaistow Panel Upgrade</h2>
+            <p>Eversource NH is the electric utility serving Plaistow. Any panel upgrade that requires a service disconnect - which includes all full panel replacements - must be coordinated with Eversource before work can begin. Moore Electric manages this entire process.</p>
+        </div>
+
+        <div class="plst-pan-eversource__grid">
+            <div>
+                <ul class="plst-pan-eversource__list">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        <div><strong>Eversource Disconnect Request</strong><span>Filed by Moore Electric on the homeowner's behalf, typically 1-3 weeks lead time (longer in summer storm season).</span></div>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <div><strong>Day-Of Coordination</strong><span>Eversource disconnects at the meter in the morning. Moore Electric completes the panel replacement during the outage window. Eversource reconnects by end of day in most cases.</span></div>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <div><strong>Meter Base Assessment</strong><span>If the existing meter base is outdated or doesn't meet Eversource's current specs, Moore Electric coordinates the replacement as part of the project to avoid a failed reconnect.</span></div>
+                    </li>
+                </ul>
+                <p style="margin-top: 24px;">Homeowners who attempt to coordinate this process themselves often encounter delays. Moore Electric - based at 21 Wentworth Ave in Plaistow - has an established relationship with Eversource NH that means faster scheduling and fewer surprises on installation day.</p>
+            </div>
+        </div>
+
+        <div class="plst-pan-eversource__photos">
+            <div class="plst-pan-eversource__photo">
+                <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_4554-scaled.jpg" alt="" width="600" height="600" loading="lazy">
+            </div>
+            <div class="plst-pan-eversource__photo">
+                <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_5339.webp" alt="" width="600" height="600" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 6: Reviews
+     ============================================ -->
+<section class="plst-pan-reviews">
+    <div class="container">
+        <div class="plst-pan-reviews__header">
+            <div class="eyebrow">Customer Reviews</div>
+            <h2>What Homeowners Say About Moore Electric</h2>
+            <div class="plst-pan-reviews__badge">
+                <div class="plst-pan-reviews__badge-score">5.0</div>
+                <div>
+                    <div class="plst-pan-reviews__badge-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                    <div class="plst-pan-reviews__badge-label">Google Rating</div>
+                </div>
+            </div>
+        </div>
+        <div class="plst-pan-reviews__grid">
+            <div class="plst-pan-review">
+                <div class="plst-pan-review__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="plst-pan-review__quote">"Brenden and his team are superb professionals that make you feel comfortable knowing they will do a great job. We had a fantastic experience with Moore Electric. I highly recommend them for all your electrical needs."</p>
+                <div class="plst-pan-review__author"><div class="plst-pan-review__avatar">RM</div><div><div class="plst-pan-review__name">Randell M.</div><div class="plst-pan-review__source">Google Review</div></div></div>
+            </div>
+            <div class="plst-pan-review">
+                <div class="plst-pan-review__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="plst-pan-review__quote">"We recently purchased a home that required a complete second-floor renovation, and Moore Electric Inc. was outstanding from start to finish. The scope of work was extensive, including removing and replacing all old knob-and-tube wiring with new, fully code-compliant wiring, hardwiring new smoke detectors, and installing all new light fixtures and outlets."</p>
+                <div class="plst-pan-review__author"><div class="plst-pan-review__avatar">KV</div><div><div class="plst-pan-review__name">Kayla V.</div><div class="plst-pan-review__source">Google Review</div></div></div>
+            </div>
+            <div class="plst-pan-review">
+                <div class="plst-pan-review__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="plst-pan-review__quote">"I've been in the trades most of my life. I've worked with, for and have employed many trades guys. Brenden and his crew are among the best I've done business with. Reliable, communicative, fair, honest, and the list goes on."</p>
+                <div class="plst-pan-review__author"><div class="plst-pan-review__avatar">FL</div><div><div class="plst-pan-review__name">Frank L.</div><div class="plst-pan-review__source">Google Review</div></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 7: FAQ
+     ============================================ -->
+<section class="plst-pan-faq">
+    <div class="container">
+        <div class="plst-pan-faq__header">
+            <div class="eyebrow">Common Questions</div>
+            <h2>Frequently Asked Questions - Panel Upgrades in Plaistow, NH</h2>
+        </div>
+        <div class="plst-pan-faq-list">
+            <div class="plst-pan-faq-item">
+                <button class="plst-pan-faq-item__q">How much does a 200-amp panel upgrade cost in Plaistow?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>Panel upgrade costs vary based on the scope of work - a straightforward panel swap is less than a project that also requires a service entrance upgrade, meter base replacement, or Eversource coordination for a capacity increase. Moore Electric provides a free on-site assessment with upfront pricing so you know the full cost before work begins. No surprises.</p></div></div>
+            </div>
+            <div class="plst-pan-faq-item">
+                <button class="plst-pan-faq-item__q">Do I need a permit for a panel upgrade in Plaistow, NH?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>Yes. Every electrical panel upgrade in Plaistow requires a permit from the Town of Plaistow Building Department. Moore Electric files the permit application, coordinates the inspection, and manages the entire process on your behalf. You don't need to visit Town Hall.</p></div></div>
+            </div>
+            <div class="plst-pan-faq-item">
+                <button class="plst-pan-faq-item__q">How long does a panel upgrade take?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>The installation itself is typically completed in a single day. The overall timeline from initial assessment to completion is usually 2-4 weeks, with most of that time spent waiting for the Eversource disconnect appointment. Moore Electric schedules this as early as possible to minimize wait time.</p></div></div>
+            </div>
+            <div class="plst-pan-faq-item">
+                <button class="plst-pan-faq-item__q">Is my Federal Pacific or Zinsco panel dangerous?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>Federal Pacific Stab-Lok and Zinsco panels have well-documented safety issues - breakers that fail to trip under overload conditions, creating fire risk. Many insurance carriers in NH will not insure homes with these panels or charge significantly higher premiums. If your Plaistow home has an FPE or Zinsco panel, Moore Electric recommends a replacement. Call <a href="tel:6038369513">603-836-9513</a> for a free assessment.</p></div></div>
+            </div>
+            <div class="plst-pan-faq-item">
+                <button class="plst-pan-faq-item__q">What is the difference between a panel upgrade and a service upgrade?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>A panel upgrade replaces the breaker box inside your home. A <a href="https://mooreelectricinc.net/electrical-service-upgrades/">service upgrade</a> replaces the entire electrical service - the wiring from the utility pole or underground feed to the meter and into the panel. Many homes going from 100 to 200 amps need both. Moore Electric assesses which scope applies to your home during the free on-site evaluation.</p></div></div>
+            </div>
+            <div class="plst-pan-faq-item">
+                <button class="plst-pan-faq-item__q">Can I add an EV charger to my current panel?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>It depends on your current panel's capacity and available circuits. A Level 2 EV charger typically draws 40-50 amps - significant load on a 100-amp or 150-amp panel that's already near capacity. Moore Electric evaluates your panel's current load and either adds the circuit to your existing panel or recommends an upgrade if there isn't enough headroom.</p></div></div>
+            </div>
+            <div class="plst-pan-faq-item">
+                <button class="plst-pan-faq-item__q">How does Eversource coordinate for a panel upgrade?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>Moore Electric handles all Eversource coordination. This includes filing the disconnect request, scheduling the appointment (typically 1-3 weeks lead time), and coordinating the reconnect after the panel passes inspection. Most homeowners have power restored by end of day.</p></div></div>
+            </div>
+            <div class="plst-pan-faq-item">
+                <button class="plst-pan-faq-item__q">What size panel do I need for my Plaistow home?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>For most Plaistow single-family homes, 200-amp service is the current standard. This provides enough capacity for modern appliances, HVAC systems, EV chargers, and home additions. If you're adding a <a href="https://mooreelectricinc.net/generator-installation/">generator</a> or have unusually high electrical demands, Moore Electric will size the panel correctly during the assessment.</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 8: Service Area
+     ============================================ -->
+<section class="plst-pan-area">
+    <div class="container">
+        <div class="plst-pan-area__header">
+            <div class="eyebrow">Service Area</div>
+            <h2>Panel Upgrade Service Area - Plaistow &amp; Southern NH</h2>
+            <p style="color: var(--moore-text-muted);">Moore Electric completes panel upgrade projects in Plaistow and the immediately surrounding communities with the same local permit knowledge and Eversource coordination. If your town uses Eversource NH and files permits through your local building department, Moore Electric's process is the same.</p>
+        </div>
+
+        <div class="plst-pan-area__towns">
+            <div class="plst-pan-area__town">Plaistow</div>
+            <div class="plst-pan-area__town">Hampstead</div>
+            <div class="plst-pan-area__town">Atkinson</div>
+            <div class="plst-pan-area__town">Kingston</div>
+            <div class="plst-pan-area__town">Newton</div>
+            <div class="plst-pan-area__town">Sandown</div>
+            <div class="plst-pan-area__town">East Kingston</div>
+            <div class="plst-pan-area__town">Danville</div>
+            <div class="plst-pan-area__town">Salem</div>
+            <div class="plst-pan-area__town">Derry</div>
+            <div class="plst-pan-area__town">Londonderry</div>
+            <div class="plst-pan-area__town">Haverhill, MA</div>
+            <div class="plst-pan-area__town">Newburyport, MA</div>
+        </div>
+
+        <div class="plst-pan-area__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93613.18022054654!2d-71.17760773898443!3d42.84303550747583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2fdd7afcd1607%3A0x80f4850c3ec3caf7!2sPlaistow%2C%20NH%2003865!5e0!3m2!1sen!2sus!4v1774960692390!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 9: Final CTA
+     ============================================ -->
+<section class="plst-pan-final">
+    <div class="container">
+        <div class="plst-pan-final__content">
+            <h2>Get a Free Panel Assessment in Plaistow, NH</h2>
+            <p>Not sure if your panel needs an upgrade? Moore Electric offers free on-site assessments for Plaistow homeowners. Brenden, a licensed Master Electrician, will evaluate your current panel, service entrance, and load demands - and give you a straight answer on whether an upgrade is necessary, what it involves, and what it will cost. No pressure, no upsell.</p>
+            <div class="plst-pan-final__btns">
+                <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Schedule a Free Assessment</a>
+                <a href="tel:6038369513" class="btn btn--outline-white">Call 603-836-9513</a>
+            </div>
+            <div class="plst-pan-final__contact">
+                <span>Based at: 21 Wentworth Ave, Plaistow, NH 03865</span>
+                <span><a href="mailto:office@mooreelectricinc.net">office@mooreelectricinc.net</a></span>
+            </div>
+            <div class="plst-pan-final__hub">
+                <a href="https://mooreelectricinc.net/plaistow-nh-electrician/">← Back to Plaistow, NH Electrician Hub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<!-- FAQ Toggle Script -->
+<script defer>
+document.querySelectorAll('.plst-pan-faq-item__q').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement,a=i.classList.contains('active');document.querySelectorAll('.plst-pan-faq-item').forEach(function(f){f.classList.remove('active')});if(!a)i.classList.add('active')})});
+</script>
