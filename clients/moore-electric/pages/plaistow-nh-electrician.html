@@ -1,0 +1,534 @@
+<!-- Plaistow NH Electrician Hub Page — Body Content -->
+<!-- Sits between existing hero section and footer in WordPress -->
+
+<style>
+    /* ============================================
+       PLAISTOW NH HUB PAGE — SCOPED STYLES
+       ============================================ */
+    :root {
+        --moore-teal: #0B4B4B;
+        --moore-teal-dark: #093C3C;
+        --moore-gold: #C9A227;
+        --moore-gold-dark: #A8891F;
+        --moore-gold-light: #E8D48A;
+        --moore-cream: #F2F0EA;
+        --moore-gray: #C7D0D0;
+        --moore-gray-dark: #9BABAB;
+        --moore-text: #0C2424;
+        --moore-text-light: #FFFFFF;
+        --moore-text-muted: #4A5F5F;
+        --section-padding: clamp(60px, 8vw, 100px);
+        --container-max: 1200px;
+        --shadow-sm: 0 2px 8px rgba(12,36,36,0.06);
+        --shadow-md: 0 4px 20px rgba(12,36,36,0.08);
+        --shadow-lg: 0 8px 40px rgba(12,36,36,0.12);
+        --transition-fast: 0.2s ease;
+        --transition-med: 0.3s ease;
+    }
+
+    .plst-hub *, .plst-hub *::before, .plst-hub *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .plst-hub { font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 18px; line-height: 1.7; color: var(--moore-text); }
+    .plst-hub img { max-width: 100%; height: auto; display: block; }
+    .plst-hub a { color: var(--moore-teal); text-decoration: none; transition: color var(--transition-fast); }
+    .plst-hub a:hover { color: var(--moore-gold); }
+    .plst-hub h2, .plst-hub h3, .plst-hub h4 { font-family: 'Raleway', sans-serif; font-weight: 700; line-height: 1.2; color: var(--moore-text); }
+    .plst-hub h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+    .plst-hub h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); font-weight: 600; }
+    .plst-hub p { margin-bottom: 1.25rem; }
+    .plst-hub p:last-child { margin-bottom: 0; }
+    .plst-hub .lead { font-size: 1.15rem; color: var(--moore-text-muted); line-height: 1.6; }
+    .plst-hub .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .plst-hub section { padding: var(--section-padding) 0; }
+
+    /* Buttons */
+    .plst-hub .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 32px; font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 4px; border: 2px solid transparent; cursor: pointer; transition: all var(--transition-med); text-decoration: none; min-height: 52px; }
+    .plst-hub .btn--gold { background: var(--moore-gold) !important; color: var(--moore-text) !important; border-color: var(--moore-gold) !important; }
+    .plst-hub .btn--gold:hover { background: var(--moore-gold-dark) !important; border-color: var(--moore-gold-dark) !important; transform: translateY(-2px); }
+    .plst-hub .btn--primary { background: var(--moore-teal) !important; color: var(--moore-text-light) !important; border-color: var(--moore-teal) !important; }
+    .plst-hub .btn--primary:hover { background: var(--moore-teal-dark) !important; border-color: var(--moore-teal-dark) !important; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .plst-hub .btn--outline { background: transparent !important; color: var(--moore-teal) !important; border-color: var(--moore-teal) !important; }
+    .plst-hub .btn--outline:hover { background: var(--moore-teal) !important; color: var(--moore-text-light) !important; }
+    .plst-hub .btn--outline-white { background: transparent !important; color: var(--moore-text-light) !important; border-color: var(--moore-text-light) !important; }
+    .plst-hub .btn--outline-white:hover { background: var(--moore-text-light) !important; color: var(--moore-teal) !important; }
+    .plst-hub .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* Eyebrow */
+    .plst-hub .eyebrow { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--moore-gold); margin-bottom: 12px; }
+
+    /* ---- SECTION: Credibility ---- */
+    .plst-cred { background: #fff; }
+    .plst-cred__image { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-lg); margin-bottom: 48px; max-height: 480px; }
+    .plst-cred__image img { width: 100%; height: 100%; object-fit: cover; }
+    .plst-cred__grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start; }
+    @media (min-width: 900px) { .plst-cred__grid { grid-template-columns: 1fr 1fr; gap: 48px; } }
+    .plst-cred__nap-col { background: linear-gradient(135deg, rgba(11,75,75,0.04) 0%, rgba(11,75,75,0.08) 100%); border-radius: 12px; padding: 28px; }
+    .plst-cred__nap { background: #fff; border-radius: 10px; padding: 28px 32px; border-left: 4px solid var(--moore-gold); box-shadow: var(--shadow-sm); }
+    .plst-cred__nap-name { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--moore-text); margin-bottom: 4px; }
+    .plst-cred__nap-detail { font-size: 0.95rem; color: var(--moore-text-muted); margin-bottom: 2px; }
+    .plst-cred__badges { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .plst-cred__badge { display: inline-flex; align-items: center; gap: 8px; background: var(--moore-cream); border: 1px solid var(--moore-gray); border-radius: 8px; padding: 10px 16px; font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text); }
+    .plst-cred__badge svg { width: 16px; height: 16px; color: var(--moore-gold); flex-shrink: 0; }
+
+    /* ---- SECTION: Services ---- */
+    .plst-services { background: var(--moore-cream); }
+    .plst-services__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+    .plst-services__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 600px) { .plst-services__grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .plst-services__grid { grid-template-columns: repeat(3, 1fr); } }
+    .plst-svc-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: all var(--transition-med); border: 2px solid transparent; display: flex; flex-direction: column; }
+    .plst-svc-card:hover { border-color: rgba(201,162,39,0.3); box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .plst-svc-card__image { height: 200px; overflow: hidden; }
+    .plst-svc-card__image img { width: 100%; height: 100%; object-fit: cover; }
+    .plst-svc-card__body { padding: 28px; display: flex; flex-direction: column; flex-grow: 1; }
+    .plst-svc-card__icon { width: 44px; height: 44px; background: var(--moore-teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .plst-svc-card__icon svg { width: 22px; height: 22px; color: var(--moore-text-light); }
+    .plst-svc-card h3 { color: var(--moore-teal); margin-bottom: 10px; font-size: 1.15rem; }
+    .plst-svc-card p { color: var(--moore-text-muted); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.6; }
+    .plst-svc-card__cta { margin-top: auto; }
+    .plst-svc-card__cta a { font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; color: var(--moore-teal); display: inline-flex; align-items: center; gap: 6px; transition: color var(--transition-fast); }
+    .plst-svc-card__cta a:hover { color: var(--moore-gold); }
+    .plst-svc-card__cta a svg { width: 16px; height: 16px; }
+    .plst-svc-card--cta { background: var(--moore-teal); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 28px; }
+    .plst-svc-card--cta h3 { color: var(--moore-text-light) !important; margin-bottom: 12px; }
+    .plst-svc-card--cta p { color: rgba(255,255,255,0.8) !important; margin-bottom: 24px; }
+
+    /* ---- SECTION: Folded Services ---- */
+    .plst-folded { background: #fff; }
+    .plst-folded__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 768px) { .plst-folded__grid { grid-template-columns: 1fr 1fr; } }
+    .plst-folded-card { background: var(--moore-cream); border-radius: 10px; padding: 32px; display: flex; flex-direction: column; }
+    .plst-folded-card h3 { margin-bottom: 12px; }
+    .plst-folded-card p { color: var(--moore-text-muted); font-size: 1rem; }
+    .plst-folded-card__cta { margin-top: auto; padding-top: 16px; }
+
+    /* ---- SECTION: Why Choose ---- */
+    .plst-why { background: var(--moore-teal-dark); color: var(--moore-text-light); position: relative; overflow: hidden; }
+    .plst-why::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,162,39,0.1) 0%, transparent 70%); pointer-events: none; }
+    .plst-why__header { text-align: center; max-width: 650px; margin: 0 auto 56px; position: relative; z-index: 1; }
+    .plst-why__header h2 { color: var(--moore-text-light); }
+    .plst-why__header p { color: rgba(255,255,255,0.75); }
+    .plst-why__grid { display: grid; grid-template-columns: 1fr; gap: 24px; position: relative; z-index: 1; }
+    @media (min-width: 600px) { .plst-why__grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .plst-why__grid { grid-template-columns: repeat(4, 1fr); } }
+    .plst-why-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 28px; transition: all var(--transition-med); }
+    .plst-why-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(201,162,39,0.35); transform: translateY(-4px); }
+    .plst-why-card__icon { width: 44px; height: 44px; background: var(--moore-gold); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .plst-why-card__icon svg { width: 22px; height: 22px; color: var(--moore-text); }
+    .plst-why-card h3 { color: var(--moore-text-light) !important; font-size: 1rem; margin-bottom: 8px; }
+    .plst-why-card p { color: rgba(255,255,255,0.75) !important; font-size: 0.9rem; margin-bottom: 0; }
+
+    /* ---- SECTION: Reviews ---- */
+    .plst-reviews { background: var(--moore-cream); }
+    .plst-reviews__header { text-align: center; margin-bottom: 48px; }
+    .plst-reviews__badge { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 2px solid var(--moore-gold); border-radius: 50px; padding: 12px 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+    .plst-reviews__badge-score { font-family: 'Raleway', sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--moore-teal); line-height: 1; }
+    .plst-reviews__badge-stars { display: flex; gap: 2px; }
+    .plst-reviews__badge-stars svg { width: 18px; height: 18px; color: var(--moore-gold); fill: var(--moore-gold); }
+    .plst-reviews__badge-label { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text-muted); }
+    .plst-reviews__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 768px) { .plst-reviews__grid { grid-template-columns: repeat(3, 1fr); } }
+    .plst-review-card { background: #fff; border-radius: 10px; padding: 32px; box-shadow: var(--shadow-sm); transition: all var(--transition-med); display: flex; flex-direction: column; }
+    .plst-review-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .plst-review-card__stars { display: flex; gap: 3px; margin-bottom: 16px; }
+    .plst-review-card__stars svg { width: 18px; height: 18px; color: var(--moore-gold); fill: var(--moore-gold); }
+    .plst-review-card__quote { font-size: 1rem; font-style: italic; color: var(--moore-text); margin-bottom: 20px; line-height: 1.7; flex-grow: 1; }
+    .plst-review-card__author { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--moore-gray); }
+    .plst-review-card__avatar { width: 44px; height: 44px; background: var(--moore-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--moore-text-light); font-size: 1rem; flex-shrink: 0; }
+    .plst-review-card__name { font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.95rem; }
+    .plst-review-card__source { font-size: 0.85rem; color: var(--moore-text-muted); }
+
+    /* ---- SECTION: Service Area ---- */
+    .plst-area { background: var(--moore-teal-dark); color: var(--moore-text-light); }
+    .plst-area h2 { color: var(--moore-text-light) !important; }
+    .plst-area > .container > p { color: rgba(255,255,255,0.8); }
+    .plst-area h3 { color: var(--moore-gold) !important; }
+    .plst-area__towns-wrap { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 32px; }
+    @media (min-width: 768px) { .plst-area__towns-wrap { grid-template-columns: 1fr 1fr; } }
+    .plst-area__towns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .plst-area__town { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 10px 16px; font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.8); text-align: center; transition: background var(--transition-fast); }
+    .plst-area__town:hover { background: rgba(255,255,255,0.14); }
+    .plst-area__map { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-lg); margin-top: 40px; }
+    .plst-area__map iframe { width: 100%; height: 380px; border: 0; display: block; }
+
+    /* ---- SECTION: FAQ ---- */
+    .plst-faq { background: var(--moore-cream); }
+    .plst-faq__header { text-align: center; margin-bottom: 48px; }
+    .plst-faq-list { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 10px; }
+    @media (min-width: 900px) { .plst-faq-list { grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; } }
+    .plst-faq-item { background: #fff; border-radius: 8px; margin-bottom: 10px; overflow: hidden; box-shadow: var(--shadow-sm); }
+    .plst-faq-item__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Raleway', sans-serif; font-size: 1rem; font-weight: 600; color: var(--moore-text); transition: color var(--transition-fast); }
+    .plst-faq-item__q:hover { color: var(--moore-teal); }
+    .plst-faq-item__icon { width: 20px; height: 20px; flex-shrink: 0; color: var(--moore-gold); transition: transform var(--transition-med); }
+    .plst-faq-item__a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .plst-faq-item__a-inner { padding: 0 24px 20px; font-size: 0.95rem; color: var(--moore-text-muted); line-height: 1.7; }
+    .plst-faq-item__a-inner p { margin-bottom: 0; }
+    .plst-faq-item__a-inner a { font-weight: 600; }
+    .plst-faq-item.active .plst-faq-item__icon { transform: rotate(45deg); }
+    .plst-faq-item.active .plst-faq-item__a { max-height: 500px; }
+
+    /* ---- SECTION: Mid CTA ---- */
+    .plst-mid-cta { background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%); text-align: center; padding: clamp(48px, 8vw, 80px) 0; }
+    .plst-mid-cta h2 { color: var(--moore-text-light) !important; margin-bottom: 16px; }
+    .plst-mid-cta p { color: rgba(255,255,255,0.85) !important; font-size: 1.125rem; max-width: 600px; margin: 0 auto 28px; }
+    .plst-mid-cta__ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+
+    /* ---- SECTION: Final CTA ---- */
+    .plst-final { background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%); text-align: center; padding: clamp(60px, 10vw, 120px) 0; position: relative; overflow: hidden; }
+    .plst-final::before { content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(201,162,39,0.15) 0%, transparent 70%); pointer-events: none; }
+    .plst-final__content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+    .plst-final h2 { color: var(--moore-text-light) !important; margin-bottom: 16px; }
+    .plst-final p { color: rgba(255,255,255,0.85) !important; font-size: 1.1rem; margin-bottom: 32px; }
+    .plst-final__ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 28px; }
+    .plst-final__contact { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; font-size: 0.95rem; color: rgba(255,255,255,0.65); }
+    .plst-final__contact a { color: var(--moore-gold) !important; }
+    .plst-final__license { margin-top: 20px; font-size: 0.85rem; color: rgba(255,255,255,0.45); }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+        .plst-hub .btn { width: 100%; }
+        .plst-mid-cta__ctas, .plst-final__ctas { flex-direction: column; align-items: center; }
+        .plst-area__towns { grid-template-columns: 1fr; }
+    }
+</style>
+
+<div class="plst-hub">
+
+<!-- ============================================
+     SECTION 2: Home Base Credibility Block
+     ============================================ -->
+<section class="plst-cred">
+    <div class="container">
+        <div class="plst-cred__image">
+            <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Mooreelectricguys-scaled.webp" alt="" width="1200" height="480" loading="lazy">
+        </div>
+        <div class="eyebrow">Plaistow's Home-Based Electrician</div>
+        <h2>Plaistow's Home-Based Master Electrician</h2>
+        <div class="plst-cred__grid">
+            <div>
+                <p>Moore Electric Inc. isn't a regional franchise dispatching from a distant office. It's a local business, owned and operated by a resident of this community. Brenden Moore runs his company from 21 Wentworth Ave and the communities he serves are the same ones he drives through every day.</p>
+                <p>That local presence means faster response times, real knowledge of local permit offices and utility requirements with Eversource and Unitil, and genuine accountability to neighbors. Brenden holds a Master Electrician license in New Hampshire, Massachusetts, and Maine - the highest credential available in all three states.</p>
+                <p>Moore Electric is fully insured, BBB Accredited, and a Best of Newburyport 2025 award recipient. When you hire Moore Electric, you're hiring the electrician down the road - not a call center.</p>
+            </div>
+            <div class="plst-cred__nap-col">
+                <div class="plst-cred__nap">
+                    <div class="plst-cred__nap-name">Moore Electric Inc.</div>
+                    <div class="plst-cred__nap-detail">21 Wentworth Ave, Plaistow, NH 03865</div>
+                    <div class="plst-cred__nap-detail"><a href="tel:6038369513">603-836-9513</a></div>
+                    <div class="plst-cred__nap-detail"><a href="mailto:office@mooreelectricinc.net">office@mooreelectricinc.net</a></div>
+                </div>
+                <div class="plst-cred__badges">
+                    <div class="plst-cred__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Licensed Master Electrician</div>
+                    <div class="plst-cred__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Based in Plaistow, NH</div>
+                    <div class="plst-cred__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Best of Newburyport 2025</div>
+                    <div class="plst-cred__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>BBB Accredited</div>
+                    <div class="plst-cred__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Family-Owned</div>
+                    <div class="plst-cred__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>Free Estimates</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 3: Spoke Services (5 Spokes)
+     ============================================ -->
+<section class="plst-services">
+    <div class="container">
+        <div class="plst-services__header">
+            <div class="eyebrow">Our Services</div>
+            <h2>Electrical Services in Plaistow, NH</h2>
+            <p class="lead">Moore Electric handles the full range of residential electrical work in the area. All work is performed by Brenden's licensed team - permits handled, utility coordination included, inspections passed.</p>
+        </div>
+
+        <div class="plst-services__grid">
+            <!-- Panel Upgrades -->
+            <div class="plst-svc-card">
+                <div class="plst-svc-card__image"><img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Photo-Oct-17-2024-4-43-35-PM-scaled.webp" alt="" width="600" height="400" loading="lazy"></div>
+                <div class="plst-svc-card__body">
+                    <div class="plst-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+                    <h3>Panel Upgrades</h3>
+                    <p>Aging panels and frequent breaker trips mean it's time for a 200-amp upgrade. Moore Electric handles installation, permits, and Eversource/Unitil coordination.</p>
+                    <div class="plst-svc-card__cta"><a href="https://mooreelectricinc.net/electrical-panel-upgrades/">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+                </div>
+            </div>
+
+            <!-- EV Charger Installation -->
+            <div class="plst-svc-card">
+                <div class="plst-svc-card__image"><img src="https://mooreelectricinc.net/wp-content/uploads/2026/03/level-2-ev-charger-installed-in-a-residential-garage-next-to-an-electric-vehicle-810e8b65-e8d0-4698-aa20-e20ae6f2ae17.webp" alt="" width="600" height="400" loading="lazy"></div>
+                <div class="plst-svc-card__body">
+                    <div class="plst-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                    <h3>EV Charger Installation</h3>
+                    <p>Level 2 home charging for Tesla, Ford, Rivian, and all EVs. Panel assessment, permit, and installation - most completed in a single visit.</p>
+                    <div class="plst-svc-card__cta"><a href="https://mooreelectricinc.net/ev-charger-installation/">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+                </div>
+            </div>
+
+            <!-- Generator Installation -->
+            <div class="plst-svc-card">
+                <div class="plst-svc-card__image"><img src="https://mooreelectricinc.net/wp-content/uploads/2026/02/backhoe-digging-dirt-in-lawn-to-install-electrical-2025-03-11-18-31-05-utc-scaled.webp" alt="" width="600" height="400" loading="lazy"></div>
+                <div class="plst-svc-card__body">
+                    <div class="plst-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+                    <h3>Generator Installation</h3>
+                    <p>Whole-home and partial-load standby generators sized correctly for your home. Permits, utility coordination, and gas connections all handled.</p>
+                    <div class="plst-svc-card__cta"><a href="https://mooreelectricinc.net/generator-installation/">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+                </div>
+            </div>
+
+            <!-- Electrical Repairs -->
+            <div class="plst-svc-card">
+                <div class="plst-svc-card__image"><img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_3431-scaled.jpg" alt="" width="600" height="400" loading="lazy"></div>
+                <div class="plst-svc-card__body">
+                    <div class="plst-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                    <h3>Repairs &amp; Troubleshooting</h3>
+                    <p>Flickering lights, warm outlets, tripping breakers. Fast diagnosis and repair by a Master Electrician. Also handles <a href="https://mooreelectricinc.net/kitchen-bath-electrical/">kitchen and bath electrical</a>.</p>
+                    <div class="plst-svc-card__cta"><a href="https://mooreelectricinc.net/electrical-repairs/">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+                </div>
+            </div>
+
+            <!-- Electrical Rewiring -->
+            <div class="plst-svc-card">
+                <div class="plst-svc-card__image"><img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_3438-scaled.jpg" alt="" width="600" height="400" loading="lazy"></div>
+                <div class="plst-svc-card__body">
+                    <div class="plst-svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                    <h3>Electrical Rewiring</h3>
+                    <p>Knob-and-tube, aluminum, or aging wiring replaced with modern code-compliant systems. Great to combine with <a href="https://mooreelectricinc.net/home-additions-electrical/">additions and renovations</a>.</p>
+                    <div class="plst-svc-card__cta"><a href="https://mooreelectricinc.net/electrical-rewiring/">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+                </div>
+            </div>
+
+            <!-- CTA Card (6th slot) -->
+            <div class="plst-svc-card plst-svc-card--cta">
+                <h3>Need Something Else?</h3>
+                <p>Moore Electric also handles <a href="https://mooreelectricinc.net/new-construction-electrical/" style="color: var(--moore-gold);">new construction</a>, <a href="https://mooreelectricinc.net/commercial-electrical/" style="color: var(--moore-gold);">commercial work</a>, and more.</p>
+                <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Get a Free Estimate</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     MID CTA
+     ============================================ -->
+<section class="plst-mid-cta">
+    <div class="container">
+        <h2>Need an Electrician in Plaistow?</h2>
+        <p>Whether it's a quick repair or a major project, Moore Electric is ready to help. Call or request an estimate online - Brenden responds personally.</p>
+        <div class="plst-mid-cta__ctas">
+            <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Get a Free Estimate</a>
+            <a href="tel:6038369513" class="btn btn--outline-white">Call 603-836-9513</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 4: Folded Services
+     ============================================ -->
+<section class="plst-folded">
+    <div class="container">
+        <div class="eyebrow">Additional Services</div>
+        <h2>Additional Electrical Services in Plaistow, NH</h2>
+        <div class="plst-folded__grid">
+            <div class="plst-folded-card">
+                <h3>New Construction Electrical</h3>
+                <p>Moore Electric provides full electrical services for new residential construction throughout the area. From temporary power and rough-in wiring to panel installation, final trim, and inspection, Brenden's team manages the electrical scope start to finish - coordinating with general contractors, building inspectors, and utilities. All new construction work is performed to current NH electrical code with proper permitting and licensed sign-off at every phase.</p>
+                <div class="plst-folded-card__cta"><a href="https://mooreelectricinc.net/new-construction-electrical/" style="font-weight: 600;">Learn more about New Construction Electrical →</a></div>
+            </div>
+            <div class="plst-folded-card">
+                <h3>Commercial Electrical Services</h3>
+                <p>Moore Electric also provides light commercial electrical services in the area - including tenant build-outs, panel upgrades for commercial properties, and commercial repairs - for small businesses, property managers, and contractors.</p>
+                <div class="plst-folded-card__cta"><a href="https://mooreelectricinc.net/commercial-electrical/" style="font-weight: 600;">Learn more about Commercial Electrical →</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 6: Why Choose Moore Electric
+     ============================================ -->
+<section class="plst-why">
+    <div class="container">
+        <div class="plst-why__header">
+            <div class="eyebrow" style="color: var(--moore-gold);">The Moore Difference</div>
+            <h2>Why Plaistow Homeowners Choose Moore Electric</h2>
+            <p>Not every electrician is the same. Here's what sets Moore Electric apart from the franchises and handymen.</p>
+        </div>
+        <div class="plst-why__grid">
+            <div class="plst-why-card">
+                <div class="plst-why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <h3>Master Electrician License - NH, MA &amp; ME</h3>
+                <p>The Master Electrician credential is the highest license tier in the trade. Brenden holds active Master Electrician licenses in all three states - meaning every job is signed off at the top level of credentialing available.</p>
+            </div>
+            <div class="plst-why-card">
+                <div class="plst-why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <h3>Family-Owned, Owner-Operated</h3>
+                <p>This is not a franchise. When you call Moore Electric, you get Brenden's team on your job - trained, supervised, and directly accountable to the owner. No subcontracting to crews he doesn't know.</p>
+            </div>
+            <div class="plst-why-card">
+                <div class="plst-why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <h3>Permit &amp; Utility Coordination - Included</h3>
+                <p>Every project that requires a permit gets one. Moore Electric files all permit applications and handles Eversource and Unitil coordination as a standard part of the job - not an add-on.</p>
+            </div>
+            <div class="plst-why-card">
+                <div class="plst-why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <h3>BBB Accredited &middot; Best of Newburyport 2025</h3>
+                <p>Third-party recognition from the Better Business Bureau and the Best of Newburyport award reflect a consistent track record of quality work and satisfied customers across the region.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION: Customer Reviews
+     ============================================ -->
+<section class="plst-reviews">
+    <div class="container">
+        <div class="plst-reviews__header">
+            <div class="eyebrow">Customer Reviews</div>
+            <h2>What Our Customers Say</h2>
+            <div class="plst-reviews__badge">
+                <div class="plst-reviews__badge-score">5.0</div>
+                <div>
+                    <div class="plst-reviews__badge-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                    <div class="plst-reviews__badge-label">Google Rating</div>
+                </div>
+            </div>
+        </div>
+        <div class="plst-reviews__grid">
+            <div class="plst-review-card">
+                <div class="plst-review-card__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="plst-review-card__quote">"I own a growing business and as it expands will not hesitate to use Moore Electric Inc. I tend to hire based on character and individuals that put you at ease, so if that's important to you, definitely do not hesitate to reach out to this crew!"</p>
+                <div class="plst-review-card__author"><div class="plst-review-card__avatar">SB</div><div><div class="plst-review-card__name">Sara B.</div><div class="plst-review-card__source">Google Review</div></div></div>
+            </div>
+            <div class="plst-review-card">
+                <div class="plst-review-card__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="plst-review-card__quote">"Absolutely beautiful work done by Moore Electric. They installed a sub panel and updated old wiring as well. All workers were very respectful of our property and our time. The owner Brenden and his team listened to our request and went above and beyond."</p>
+                <div class="plst-review-card__author"><div class="plst-review-card__avatar">CS</div><div><div class="plst-review-card__name">Cheryle S.</div><div class="plst-review-card__source">Google Review</div></div></div>
+            </div>
+            <div class="plst-review-card">
+                <div class="plst-review-card__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="plst-review-card__quote">"Top notch service from Moore Electric. Brenden was professional, knowledgeable and efficient. I use him for both my home and business. Whenever a friend or family member needs electrical work done I always recommend Brenden."</p>
+                <div class="plst-review-card__author"><div class="plst-review-card__avatar">SM</div><div><div class="plst-review-card__name">Stephen M.</div><div class="plst-review-card__source">Google Review</div></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 5: Service Area + Map
+     ============================================ -->
+<section class="plst-area">
+    <div class="container">
+        <div class="eyebrow" style="color: var(--moore-gold);">Service Area</div>
+        <h2>Serving Plaistow, NH &amp; Surrounding Southern NH Communities</h2>
+        <p style="color: rgba(255,255,255,0.8);">Moore Electric serves communities throughout the surrounding area - from Hampstead and Atkinson to Kingston, Newton, and Sandown. Because the team is local, they're familiar with the specific permit offices, utility requirements, and inspection processes in each town. No long dispatch times, no out-of-area crews.</p>
+
+        <div class="plst-area__towns-wrap">
+            <div>
+                <h3 style="margin-bottom: 16px;">New Hampshire</h3>
+                <div class="plst-area__towns">
+                    <div class="plst-area__town">Plaistow</div>
+                    <div class="plst-area__town">Hampstead</div>
+                    <div class="plst-area__town">Atkinson</div>
+                    <div class="plst-area__town">Kingston</div>
+                    <div class="plst-area__town">Newton</div>
+                    <div class="plst-area__town">Sandown</div>
+                    <div class="plst-area__town">East Kingston</div>
+                    <div class="plst-area__town">Danville</div>
+                    <div class="plst-area__town">Fremont</div>
+                    <div class="plst-area__town">Salem</div>
+                    <div class="plst-area__town">Derry</div>
+                    <div class="plst-area__town">Londonderry</div>
+                </div>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 16px;">Massachusetts &amp; Maine</h3>
+                <div class="plst-area__towns">
+                    <div class="plst-area__town">Haverhill, MA</div>
+                    <div class="plst-area__town">Newburyport, MA</div>
+                    <div class="plst-area__town">Amesbury, MA</div>
+                    <div class="plst-area__town">Methuen, MA</div>
+                    <div class="plst-area__town">Lawrence, MA</div>
+                    <div class="plst-area__town">Select ME projects</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plst-area__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93613.18022054654!2d-71.17760773898443!3d42.84303550747583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2fdd7afcd1607%3A0x80f4850c3ec3caf7!2sPlaistow%2C%20NH%2003865!5e0!3m2!1sen!2sus!4v1774960692390!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 7: FAQ
+     ============================================ -->
+<section class="plst-faq">
+    <div class="container">
+        <div class="plst-faq__header">
+            <div class="eyebrow">Common Questions</div>
+            <h2>Frequently Asked Questions - Electrician in Plaistow, NH</h2>
+        </div>
+        <div class="plst-faq-list">
+            <div class="plst-faq-item">
+                <button class="plst-faq-item__q">How much does an electrician cost in Plaistow, NH?<svg class="plst-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-faq-item__a"><div class="plst-faq-item__a-inner"><p>Electrical costs vary by project type. Repairs typically start at a few hundred dollars, <a href="https://mooreelectricinc.net/electrical-panel-upgrades/">panel upgrades</a> range from $1,800 to $4,500+, and <a href="https://mooreelectricinc.net/generator-installation/">generator installations</a> run $3,000 to $8,000+ depending on the system size. Moore Electric provides free, detailed written estimates before any work begins - no hidden fees or surprise charges.</p></div></div>
+            </div>
+            <div class="plst-faq-item">
+                <button class="plst-faq-item__q">Does Moore Electric serve areas outside of Plaistow?<svg class="plst-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-faq-item__a"><div class="plst-faq-item__a-inner"><p>Yes. Moore Electric is based at 21 Wentworth Ave. Brenden serves communities throughout southern New Hampshire, northern Massachusetts, and select projects in southern Maine. The team regularly works in Hampstead, Atkinson, Kingston, Salem, Haverhill, Newburyport, and Amesbury.</p></div></div>
+            </div>
+            <div class="plst-faq-item">
+                <button class="plst-faq-item__q">Do I need a permit for electrical work in NH?<svg class="plst-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-faq-item__a"><div class="plst-faq-item__a-inner"><p>Most electrical work beyond simple fixture replacements requires a permit and state inspection in New Hampshire. This includes panel upgrades, new circuits, rewiring, EV charger installations, and generator hookups. Moore Electric pulls all necessary permits and schedules inspections as part of every qualifying project - you don't need to coordinate anything yourself.</p></div></div>
+            </div>
+            <div class="plst-faq-item">
+                <button class="plst-faq-item__q">What is a Master Electrician, and why does it matter?<svg class="plst-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-faq-item__a"><div class="plst-faq-item__a-inner"><p>A Master Electrician license is the highest credential available in the electrical trade. It requires years of field experience, passing a comprehensive exam, and ongoing education. Only a Master Electrician can pull permits and sign off on electrical work in New Hampshire. Brenden Moore holds active Master Electrician licenses in NH (#14511), MA (#22825), and ME (#MS60023064). <a href="https://mooreelectricinc.net/about/">Learn more about Brenden and the team.</a></p></div></div>
+            </div>
+            <div class="plst-faq-item">
+                <button class="plst-faq-item__q">How quickly can Moore Electric respond for urgent electrical issues?<svg class="plst-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-faq-item__a"><div class="plst-faq-item__a-inner"><p>Because Moore Electric is based right in Plaistow, response times are typically faster than regional competitors dispatching from farther away. For most <a href="https://mooreelectricinc.net/electrical-repairs/">electrical repairs</a>, the team can schedule a service call within 1-2 business days. For dangerous situations like sparking, burning smells, or complete power loss, call 603-836-9513 and they'll prioritize your call.</p></div></div>
+            </div>
+            <div class="plst-faq-item">
+                <button class="plst-faq-item__q">Does Moore Electric do commercial work in Plaistow?<svg class="plst-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-faq-item__a"><div class="plst-faq-item__a-inner"><p>Yes. Moore Electric handles light <a href="https://mooreelectricinc.net/commercial-electrical/">commercial electrical work</a> in the area, including tenant build-outs, commercial panel upgrades, and repairs for small businesses and property managers.</p></div></div>
+            </div>
+            <div class="plst-faq-item">
+                <button class="plst-faq-item__q">What towns near Plaistow does Moore Electric serve?<svg class="plst-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-faq-item__a"><div class="plst-faq-item__a-inner"><p>Moore Electric regularly serves Hampstead, Atkinson, Kingston, Newton, Sandown, East Kingston, Danville, Fremont, Salem, Derry, and Londonderry in New Hampshire. In Massachusetts, the team covers Haverhill, Newburyport, Amesbury, Methuen, and Lawrence. Select projects in southern Maine are also available - call to discuss.</p></div></div>
+            </div>
+            <div class="plst-faq-item">
+                <button class="plst-faq-item__q">How do I get a free estimate from Moore Electric?<svg class="plst-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-faq-item__a"><div class="plst-faq-item__a-inner"><p>Call <a href="tel:6038369513">603-836-9513</a> or <a href="https://mooreelectricinc.net/contact/">submit a request online</a>. Brenden will schedule a convenient time to assess your project, explain your options, and provide a detailed written quote. No pressure, no obligation.</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 8: Final CTA
+     ============================================ -->
+<section class="plst-final">
+    <div class="container">
+        <div class="plst-final__content">
+            <h2>Ready to Work with Plaistow's Trusted Master Electrician?</h2>
+            <p>Whether you need a panel upgrade, EV charger, generator, repairs, or rewiring - Moore Electric Inc. is ready to help. Call or text for a free estimate. Brenden and his team serve Plaistow and surrounding southern NH communities with fast scheduling, licensed work, and transparent pricing.</p>
+            <div class="plst-final__ctas">
+                <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Request a Free Estimate</a>
+                <a href="tel:6038369513" class="btn btn--outline-white">Call 603-836-9513</a>
+            </div>
+            <div class="plst-final__contact">
+                <span>Based at: 21 Wentworth Ave, Plaistow, NH 03865</span>
+                <span><a href="mailto:office@mooreelectricinc.net">office@mooreelectricinc.net</a></span>
+            </div>
+            <p class="plst-final__license">Moore Electric Inc. | NH Lic #14511 | MA Lic #22825 | ME Lic #MS60023064</p>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<!-- FAQ Toggle Script -->
+<script defer>
+document.querySelectorAll('.plst-faq-item__q').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement,a=i.classList.contains('active');document.querySelectorAll('.plst-faq-item').forEach(function(f){f.classList.remove('active')});if(!a)i.classList.add('active')})});
+</script>
