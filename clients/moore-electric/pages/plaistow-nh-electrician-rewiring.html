@@ -3,9 +3,6 @@
 <!-- Parent hub: /plaistow-nh-electrician/ -->
 
 <style>
-    /* ============================================
-       PLAISTOW REWIRING SPOKE — SCOPED STYLES
-       ============================================ */
     :root {
         --moore-teal: #0B4B4B;
         --moore-teal-dark: #093C3C;
@@ -26,7 +23,6 @@
         --transition-fast: 0.2s ease;
         --transition-med: 0.3s ease;
     }
-
     .plst-rw *, .plst-rw *::before, .plst-rw *::after { box-sizing: border-box; margin: 0; padding: 0; }
     .plst-rw { font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 18px; line-height: 1.7; color: var(--moore-text); }
     .plst-rw img { max-width: 100%; height: auto; display: block; }
@@ -40,155 +36,156 @@
     .plst-rw .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
     .plst-rw section { padding: var(--section-padding) 0; }
     .plst-rw .eyebrow { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--moore-gold); margin-bottom: 12px; }
-
-    /* Buttons */
     .plst-rw .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 32px; font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 4px; border: 2px solid transparent; cursor: pointer; transition: all var(--transition-med); text-decoration: none; min-height: 52px; }
     .plst-rw .btn--gold { background: var(--moore-gold) !important; color: var(--moore-text) !important; border-color: var(--moore-gold) !important; }
     .plst-rw .btn--gold:hover { background: var(--moore-gold-dark) !important; border-color: var(--moore-gold-dark) !important; transform: translateY(-2px); }
-    .plst-rw .btn--teal { background: var(--moore-teal) !important; color: var(--moore-text-light) !important; border-color: var(--moore-teal) !important; }
-    .plst-rw .btn--teal:hover { background: var(--moore-teal-dark) !important; border-color: var(--moore-teal-dark) !important; transform: translateY(-2px); }
     .plst-rw .btn--outline-white { background: transparent !important; color: var(--moore-text-light) !important; border-color: var(--moore-text-light) !important; }
     .plst-rw .btn--outline-white:hover { background: var(--moore-text-light) !important; color: var(--moore-teal) !important; }
 
-    /* ---- Trust Bar ---- */
+    /* Trust Bar */
     .plst-rw-trust { background: var(--moore-cream); padding: 28px 0; }
     .plst-rw-trust__grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; }
     .plst-rw-trust__item { display: flex; align-items: center; gap: 8px; font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text-muted); white-space: nowrap; }
     .plst-rw-trust__item svg { width: 18px; height: 18px; color: var(--moore-gold); flex-shrink: 0; }
 
-    /* ---- Housing Stock ---- */
+    /* Timeline */
     .plst-rw-housing { background: #fff; }
-    .plst-rw-housing__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
-    .plst-rw-housing__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-    @media (min-width: 768px) { .plst-rw-housing__grid { grid-template-columns: repeat(3, 1fr); } }
-    .plst-rw-era { background: var(--moore-cream); border-radius: 12px; padding: 32px; border-top: 4px solid var(--moore-teal); transition: all var(--transition-med); }
-    .plst-rw-era:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
-    .plst-rw-era__decade { font-family: 'Raleway', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--moore-gold); margin-bottom: 4px; line-height: 1; }
-    .plst-rw-era__tag { display: inline-block; background: var(--moore-teal); color: var(--moore-text-light); font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 3px; margin-bottom: 12px; }
-    .plst-rw-era h3 { margin-bottom: 12px; font-size: 1.1rem; }
-    .plst-rw-era p { color: var(--moore-text-muted); font-size: 0.95rem; line-height: 1.6; }
-    .plst-rw-era__streets { margin-top: 12px; font-size: 0.85rem; color: var(--moore-teal); font-family: 'Raleway', sans-serif; font-weight: 600; }
+    .plst-rw-housing__header { max-width: 700px; margin: 0 auto 56px; text-align: center; }
+    .plst-rw-tl { max-width: 800px; margin: 0 auto; position: relative; padding-left: 48px; }
+    .plst-rw-tl::before { content: ''; position: absolute; left: 18px; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, var(--moore-gold), var(--moore-teal)); border-radius: 2px; }
+    .plst-rw-tl__item { position: relative; padding-bottom: 40px; }
+    .plst-rw-tl__item:last-child { padding-bottom: 0; }
+    .plst-rw-tl__dot { position: absolute; left: -36px; top: 6px; width: 14px; height: 14px; background: var(--moore-gold); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 0 0 3px var(--moore-teal); z-index: 1; }
+    .plst-rw-tl__era { font-family: 'Raleway', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--moore-gold); margin-bottom: 4px; }
+    .plst-rw-tl__item h3 { margin-bottom: 10px; }
+    .plst-rw-tl__item p { color: var(--moore-text-muted); font-size: 0.95rem; line-height: 1.65; }
+    .plst-rw-tl__streets { margin-top: 10px; display: inline-flex; gap: 8px; flex-wrap: wrap; }
+    .plst-rw-tl__street { background: var(--moore-cream); padding: 4px 12px; border-radius: 4px; font-family: 'Raleway', sans-serif; font-size: 12px; font-weight: 600; color: var(--moore-teal); }
 
-    /* ---- Insurance Section ---- */
-    .plst-rw-insurance { background: var(--moore-teal-dark); color: var(--moore-text-light); position: relative; overflow: hidden; }
-    .plst-rw-insurance::before { content: ''; position: absolute; top: -50%; left: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,162,39,0.1) 0%, transparent 70%); pointer-events: none; }
-    .plst-rw-insurance .container { position: relative; z-index: 1; }
-    .plst-rw-insurance__header { text-align: center; max-width: 720px; margin: 0 auto 40px; }
-    .plst-rw-insurance h2 { color: var(--moore-text-light) !important; }
-    .plst-rw-insurance__grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
-    @media (min-width: 900px) { .plst-rw-insurance__grid { grid-template-columns: 1fr 340px; gap: 48px; } }
-    .plst-rw-insurance__points { list-style: none; }
-    .plst-rw-insurance__points li { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .plst-rw-insurance__points li:last-child { border-bottom: none; }
-    .plst-rw-insurance__points svg { width: 20px; height: 20px; color: var(--moore-gold); flex-shrink: 0; margin-top: 3px; }
-    .plst-rw-insurance__points span { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
-    .plst-rw-insurance__image { border-radius: 10px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.3); border: 3px solid rgba(201,162,39,0.4); }
-    .plst-rw-insurance__image img { width: 100%; height: auto; display: block; }
-    .plst-rw-insurance__callout { margin-top: 32px; background: rgba(201,162,39,0.15); border: 1px solid rgba(201,162,39,0.3); border-radius: 10px; padding: 24px; text-align: center; }
-    .plst-rw-insurance__callout p { color: var(--moore-gold-light); font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 1.05rem; }
+    /* Alert Banner */
+    .plst-rw-alert { background: #1a0a0a; color: var(--moore-text-light); position: relative; overflow: hidden; }
+    .plst-rw-alert::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(201,162,39,0.08) 0%, transparent 50%, rgba(11,75,75,0.15) 100%); pointer-events: none; }
+    .plst-rw-alert .container { position: relative; z-index: 1; }
+    .plst-rw-alert__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,162,39,0.2); border: 1px solid rgba(201,162,39,0.4); border-radius: 50px; padding: 8px 20px; margin-bottom: 24px; font-family: 'Raleway', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--moore-gold); }
+    .plst-rw-alert__badge svg { width: 16px; height: 16px; }
+    .plst-rw-alert h2 { color: var(--moore-text-light) !important; max-width: 800px; }
+    .plst-rw-alert__intro { color: rgba(255,255,255,0.7); max-width: 700px; font-size: 1.05rem; margin-bottom: 40px; }
+    .plst-rw-alert__split { display: grid; grid-template-columns: 1fr; gap: 40px; }
+    @media (min-width: 900px) { .plst-rw-alert__split { grid-template-columns: 1fr 360px; gap: 56px; } }
+    .plst-rw-alert__facts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 600px) { .plst-rw-alert__facts { grid-template-columns: 1fr; } }
+    .plst-rw-alert__fact { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 20px; }
+    .plst-rw-alert__fact-icon { width: 36px; height: 36px; background: rgba(201,162,39,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+    .plst-rw-alert__fact-icon svg { width: 18px; height: 18px; color: var(--moore-gold); }
+    .plst-rw-alert__fact h4 { font-size: 0.9rem; color: var(--moore-text-light); margin-bottom: 6px; }
+    .plst-rw-alert__fact p { color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.55; }
+    .plst-rw-alert__image { border-radius: 12px; overflow: hidden; border: 2px solid rgba(201,162,39,0.3); }
+    .plst-rw-alert__image img { width: 100%; height: 100%; object-fit: cover; }
+    .plst-rw-alert__cta { margin-top: 40px; background: linear-gradient(135deg, var(--moore-teal-dark), var(--moore-teal)); border-radius: 12px; padding: 28px 32px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .plst-rw-alert__cta p { color: var(--moore-text-light); font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 1.05rem; flex: 1; min-width: 280px; }
 
-    /* ---- Permit Process ---- */
-    .plst-rw-permit { background: #fff; }
-    .plst-rw-permit__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
-    .plst-rw-permit__grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
-    @media (min-width: 900px) { .plst-rw-permit__grid { grid-template-columns: 1fr 340px; gap: 48px; } }
-    .plst-rw-permit__image { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-lg); position: sticky; top: 24px; }
-    .plst-rw-permit__image img { width: 100%; height: auto; }
-    .plst-rw-steps { list-style: none; counter-reset: permit-step; }
-    .plst-rw-step { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--moore-gray); }
-    .plst-rw-step:last-child { border-bottom: none; }
-    .plst-rw-step__num { width: 44px; height: 44px; background: var(--moore-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--moore-text-light); font-size: 1.1rem; flex-shrink: 0; }
-    .plst-rw-step strong { display: block; margin-bottom: 4px; color: var(--moore-text); }
-    .plst-rw-step span { color: var(--moore-text-muted); font-size: 0.95rem; }
+    /* Zigzag */
+    .plst-rw-zigzag { background: var(--moore-cream); }
+    .plst-rw-zigzag__block { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+    @media (min-width: 768px) { .plst-rw-zigzag__block { grid-template-columns: 1fr 1fr; gap: 56px; } }
+    .plst-rw-zigzag__media { border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); }
+    .plst-rw-zigzag__media img { width: 100%; height: auto; }
+    .plst-rw-zigzag__steps { list-style: none; margin-top: 24px; }
+    .plst-rw-zigzag__step { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--moore-gray); }
+    .plst-rw-zigzag__step:last-child { border-bottom: none; }
+    .plst-rw-zigzag__step-num { width: 36px; height: 36px; background: var(--moore-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--moore-text-light); font-size: 0.95rem; flex-shrink: 0; }
+    .plst-rw-zigzag__step strong { display: block; margin-bottom: 2px; font-size: 0.95rem; }
+    .plst-rw-zigzag__step span { color: var(--moore-text-muted); font-size: 0.9rem; line-height: 1.55; }
 
-    /* ---- Full vs. Partial ---- */
-    .plst-rw-scope { background: var(--moore-cream); }
+    /* Scope (side by side with divider) */
+    .plst-rw-scope { background: #fff; }
     .plst-rw-scope__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
-    .plst-rw-scope__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-    @media (min-width: 768px) { .plst-rw-scope__grid { grid-template-columns: repeat(2, 1fr); gap: 28px; } }
-    .plst-rw-scope__card { background: #fff; border-radius: 12px; padding: 32px; box-shadow: var(--shadow-sm); transition: all var(--transition-med); }
-    .plst-rw-scope__card:hover { box-shadow: var(--shadow-md); }
-    .plst-rw-scope__card--full { border-top: 4px solid var(--moore-teal); }
-    .plst-rw-scope__card--partial { border-top: 4px solid var(--moore-gold); }
-    .plst-rw-scope__card--panel { border-top: 4px solid var(--moore-teal); }
-    .plst-rw-scope__card h3 { margin-bottom: 12px; font-size: 1.1rem; }
-    .plst-rw-scope__card p { color: var(--moore-text-muted); font-size: 0.95rem; line-height: 1.6; }
+    .plst-rw-scope__vs { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 960px; margin: 0 auto; }
+    @media (min-width: 768px) { .plst-rw-scope__vs { grid-template-columns: 1fr auto 1fr; gap: 0; } }
+    .plst-rw-scope__card { padding: 32px; }
+    .plst-rw-scope__card h3 { margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .plst-rw-scope__card h3 svg { width: 22px; height: 22px; color: var(--moore-gold); }
+    .plst-rw-scope__card p { color: var(--moore-text-muted); font-size: 0.95rem; }
     .plst-rw-scope__items { list-style: none; margin-top: 16px; }
-    .plst-rw-scope__items li { display: flex; gap: 10px; padding: 8px 0; font-size: 0.9rem; color: var(--moore-text-muted); }
-    .plst-rw-scope__items li svg { width: 16px; height: 16px; color: var(--moore-gold); flex-shrink: 0; margin-top: 3px; }
+    .plst-rw-scope__items li { padding: 6px 0; font-size: 0.9rem; color: var(--moore-text-muted); padding-left: 20px; position: relative; }
+    .plst-rw-scope__items li::before { content: ''; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; border-radius: 50%; }
+    .plst-rw-scope__card--full .plst-rw-scope__items li::before { background: var(--moore-teal); }
+    .plst-rw-scope__card--partial .plst-rw-scope__items li::before { background: var(--moore-gold); }
+    .plst-rw-scope__divider { display: none; }
+    @media (min-width: 768px) {
+        .plst-rw-scope__divider { display: flex; align-items: center; justify-content: center; padding: 0 12px; position: relative; }
+        .plst-rw-scope__divider::before { content: ''; position: absolute; top: 0; bottom: 0; width: 1px; background: var(--moore-gray); }
+        .plst-rw-scope__divider span { writing-mode: vertical-rl; font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--moore-gray-dark); background: #fff; padding: 16px 0; position: relative; z-index: 1; }
+    }
+    .plst-rw-scope__panel { max-width: 700px; margin: 32px auto 0; background: var(--moore-cream); border-radius: 10px; padding: 24px 28px; display: flex; align-items: flex-start; gap: 16px; }
+    .plst-rw-scope__panel svg { width: 24px; height: 24px; color: var(--moore-teal); flex-shrink: 0; margin-top: 2px; }
+    .plst-rw-scope__panel p { font-size: 0.95rem; color: var(--moore-text-muted); }
 
-    /* ---- Projects Section ---- */
-    .plst-rw-projects { background: var(--moore-teal-dark); color: var(--moore-text-light); position: relative; overflow: hidden; }
-    .plst-rw-projects::before { content: ''; position: absolute; bottom: -40%; right: -15%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(201,162,39,0.1) 0%, transparent 70%); pointer-events: none; }
-    .plst-rw-projects .container { position: relative; z-index: 1; }
-    .plst-rw-projects__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
-    .plst-rw-projects h2 { color: var(--moore-text-light) !important; }
-    .plst-rw-projects__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-    @media (min-width: 768px) { .plst-rw-projects__grid { grid-template-columns: repeat(3, 1fr); } }
-    .plst-rw-project { background: rgba(255,255,255,0.06); border-radius: 12px; padding: 28px; border-left: 4px solid var(--moore-gold); backdrop-filter: blur(4px); }
-    .plst-rw-project h3 { color: var(--moore-text-light); margin-bottom: 12px; font-size: 1.05rem; }
-    .plst-rw-project p { color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.6; }
-    .plst-rw-project__detail { display: flex; gap: 10px; align-items: flex-start; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); }
-    .plst-rw-project__detail svg { width: 16px; height: 16px; color: var(--moore-gold); flex-shrink: 0; margin-top: 3px; }
-    .plst-rw-project__detail span { color: var(--moore-gold-light); font-size: 0.85rem; font-family: 'Raleway', sans-serif; font-weight: 600; }
-    .plst-rw-projects__photos { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 40px; }
-    @media (max-width: 600px) { .plst-rw-projects__photos { grid-template-columns: 1fr 1fr; } }
-    .plst-rw-projects__photo { border-radius: 10px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.3); border: 3px solid rgba(201,162,39,0.4); aspect-ratio: 4 / 3; }
-    .plst-rw-projects__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    /* Horizontal Project Cards */
+    .plst-rw-projects { background: var(--moore-cream); }
+    .plst-rw-projects__header { text-align: center; max-width: 700px; margin: 0 auto 48px; }
+    .plst-rw-project { display: grid; grid-template-columns: 1fr; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 20px; transition: all var(--transition-med); }
+    .plst-rw-project:last-of-type { margin-bottom: 0; }
+    .plst-rw-project:hover { box-shadow: var(--shadow-md); }
+    @media (min-width: 768px) { .plst-rw-project { grid-template-columns: 4fr 1fr; } }
+    .plst-rw-project__body { padding: 28px 32px; }
+    .plst-rw-project__tag { display: inline-block; font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 3px 10px; border-radius: 3px; margin-bottom: 10px; }
+    .plst-rw-project__tag--kt { background: #fdf0d5; color: #8a6914; }
+    .plst-rw-project__tag--al { background: #e0f0f0; color: var(--moore-teal); }
+    .plst-rw-project__tag--partial { background: #f0e8f5; color: #6b4c8a; }
+    .plst-rw-project h3 { margin-bottom: 10px; font-size: 1.05rem; }
+    .plst-rw-project p { color: var(--moore-text-muted); font-size: 0.95rem; line-height: 1.6; }
+    .plst-rw-project__result { margin-top: 12px; font-family: 'Raleway', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--moore-teal); }
+    .plst-rw-project__accent { background: var(--moore-teal); display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 100px; }
+    .plst-rw-project__accent-text { font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--moore-gold); text-align: center; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.5; }
+    .plst-rw-projects__gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 40px; }
+    @media (max-width: 600px) { .plst-rw-projects__gallery { grid-template-columns: 1fr 1fr; } }
+    .plst-rw-projects__gimg { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4 / 3; }
+    .plst-rw-projects__gimg img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* ---- Reviews ---- */
-    .plst-rw-reviews { background: #fff; }
-    .plst-rw-reviews__header { text-align: center; margin-bottom: 48px; }
-    .plst-rw-reviews__badge { display: inline-flex; align-items: center; gap: 10px; background: var(--moore-cream); border: 2px solid var(--moore-gold); border-radius: 50px; padding: 12px 24px; margin-bottom: 24px; }
-    .plst-rw-reviews__badge-score { font-family: 'Raleway', sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--moore-teal); line-height: 1; }
-    .plst-rw-reviews__badge-stars { display: flex; gap: 2px; }
-    .plst-rw-reviews__badge-stars svg { width: 18px; height: 18px; color: var(--moore-gold); fill: var(--moore-gold); }
-    .plst-rw-reviews__badge-label { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text-muted); }
-    .plst-rw-reviews__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-    @media (min-width: 768px) { .plst-rw-reviews__grid { grid-template-columns: repeat(3, 1fr); } }
-    .plst-rw-review { background: var(--moore-cream); border-radius: 10px; padding: 28px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm); }
-    .plst-rw-review__stars { display: flex; gap: 3px; margin-bottom: 14px; }
-    .plst-rw-review__stars svg { width: 16px; height: 16px; color: var(--moore-gold); fill: var(--moore-gold); }
-    .plst-rw-review__quote { font-size: 0.95rem; font-style: italic; color: var(--moore-text); line-height: 1.7; flex-grow: 1; margin-bottom: 16px; }
-    .plst-rw-review__author { display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--moore-gray); }
-    .plst-rw-review__avatar { width: 40px; height: 40px; background: var(--moore-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--moore-text-light); font-size: 0.9rem; flex-shrink: 0; }
-    .plst-rw-review__name { font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.9rem; }
-    .plst-rw-review__source { font-size: 0.8rem; color: var(--moore-text-muted); }
+    /* Testimonial Strip */
+    .plst-rw-tstrip { background: var(--moore-teal-dark); padding: clamp(40px, 6vw, 64px) 0; }
+    .plst-rw-tstrip__grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 768px) { .plst-rw-tstrip__grid { grid-template-columns: repeat(3, 1fr); } }
+    .plst-rw-tcard { background: rgba(255,255,255,0.06); border-radius: 10px; padding: 24px; border-top: 3px solid var(--moore-gold); }
+    .plst-rw-tcard__stars { display: flex; gap: 2px; margin-bottom: 12px; }
+    .plst-rw-tcard__stars svg { width: 14px; height: 14px; color: var(--moore-gold); fill: var(--moore-gold); }
+    .plst-rw-tcard__text { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-style: italic; line-height: 1.65; margin-bottom: 14px; }
+    .plst-rw-tcard__author { color: var(--moore-gold); font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.85rem; }
 
-    /* ---- FAQ ---- */
-    .plst-rw-faq { background: var(--moore-cream); }
+    /* FAQ Single Column */
+    .plst-rw-faq { background: #fff; }
     .plst-rw-faq__header { text-align: center; margin-bottom: 48px; }
-    .plst-rw-faq-list { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 10px; }
-    @media (min-width: 900px) { .plst-rw-faq-list { grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; } }
-    .plst-rw-faq-item { background: #fff; border-radius: 8px; overflow: hidden; }
-    .plst-rw-faq-item__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 22px; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Raleway', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--moore-text); transition: color var(--transition-fast); }
+    .plst-rw-faq-list { max-width: 800px; margin: 0 auto; }
+    .plst-rw-faq-item { border-bottom: 1px solid var(--moore-gray); }
+    .plst-rw-faq-item:last-child { border-bottom: none; }
+    .plst-rw-faq-item__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Raleway', sans-serif; font-size: 1rem; font-weight: 600; color: var(--moore-text); transition: color var(--transition-fast); }
     .plst-rw-faq-item__q:hover { color: var(--moore-teal); }
-    .plst-rw-faq-item__icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--moore-gold); transition: transform var(--transition-med); }
+    .plst-rw-faq-item__icon { width: 20px; height: 20px; flex-shrink: 0; color: var(--moore-gold); transition: transform var(--transition-med); }
     .plst-rw-faq-item__a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-    .plst-rw-faq-item__a-inner { padding: 0 22px 18px; font-size: 0.9rem; color: var(--moore-text-muted); line-height: 1.7; }
+    .plst-rw-faq-item__a-inner { padding: 0 0 20px; font-size: 0.95rem; color: var(--moore-text-muted); line-height: 1.7; }
     .plst-rw-faq-item__a-inner p { margin-bottom: 0; }
     .plst-rw-faq-item__a-inner a { font-weight: 600; }
     .plst-rw-faq-item.active .plst-rw-faq-item__icon { transform: rotate(45deg); }
     .plst-rw-faq-item.active .plst-rw-faq-item__a { max-height: 600px; }
 
-    /* ---- Service Area ---- */
-    .plst-rw-area { background: #fff; }
+    /* Service Area */
+    .plst-rw-area { background: var(--moore-cream); }
     .plst-rw-area__header { text-align: center; max-width: 720px; margin: 0 auto 32px; }
-    .plst-rw-area__content { display: grid; grid-template-columns: 1fr; gap: 32px; }
-    @media (min-width: 768px) { .plst-rw-area__content { grid-template-columns: 1fr 1fr; gap: 40px; } }
-    .plst-rw-area__towns { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px; }
-    .plst-rw-area__town { background: var(--moore-cream); border-radius: 6px; padding: 8px 16px; font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text-muted); }
+    .plst-rw-area__map { border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md); }
+    .plst-rw-area__map iframe { width: 100%; height: 400px; border: 0; display: block; }
+    .plst-rw-area__towns-wrap { margin-top: 24px; text-align: center; }
+    .plst-rw-area__label { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--moore-text-muted); margin-bottom: 10px; }
+    .plst-rw-area__towns { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 20px; }
+    .plst-rw-area__town { background: #fff; border-radius: 6px; padding: 8px 16px; font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text-muted); }
     .plst-rw-area__town--primary { background: var(--moore-teal); color: var(--moore-text-light); }
-    .plst-rw-area__map { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); }
-    .plst-rw-area__map iframe { width: 100%; height: 350px; border: 0; display: block; }
+    .plst-rw-area__links { text-align: center; margin-top: 16px; color: var(--moore-text-muted); font-size: 0.95rem; }
 
-    /* ---- Mid CTA ---- */
+    /* CTAs */
     .plst-rw-cta { background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%); text-align: center; padding: clamp(48px, 8vw, 80px) 0; }
     .plst-rw-cta h2 { color: var(--moore-text-light) !important; margin-bottom: 16px; }
     .plst-rw-cta p { color: rgba(255,255,255,0.85) !important; font-size: 1.1rem; max-width: 600px; margin: 0 auto 28px; }
     .plst-rw-cta__btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
-
-    /* ---- Final CTA ---- */
     .plst-rw-final { background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%); text-align: center; padding: clamp(60px, 10vw, 100px) 0; }
     .plst-rw-final__content { max-width: 700px; margin: 0 auto; }
     .plst-rw-final h2 { color: var(--moore-text-light) !important; margin-bottom: 16px; }
@@ -198,8 +195,6 @@
     .plst-rw-final__contact a { color: var(--moore-gold) !important; }
     .plst-rw-final__hub { margin-top: 20px; }
     .plst-rw-final__hub a { color: var(--moore-gold) !important; font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.95rem; }
-
-    /* ---- Responsive ---- */
     @media (max-width: 600px) {
         .plst-rw .btn { width: 100%; }
         .plst-rw-cta__btns, .plst-rw-final__btns { flex-direction: column; align-items: center; }
@@ -208,456 +203,240 @@
 
 <div class="plst-rw">
 
-<!-- ============================================
-     TRUST BAR
-     ============================================ -->
+<!-- Trust Bar -->
 <section class="plst-rw-trust">
     <div class="container">
         <div class="plst-rw-trust__grid">
-            <div class="plst-rw-trust__item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                Licensed Master Electrician - NH, MA &amp; ME
-            </div>
-            <div class="plst-rw-trust__item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                Knob-and-Tube Specialists
-            </div>
-            <div class="plst-rw-trust__item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                Insurance Documentation Provided
-            </div>
-            <div class="plst-rw-trust__item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
-                Free Wiring Assessment
-            </div>
+            <div class="plst-rw-trust__item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed Master Electrician - NH, MA &amp; ME</div>
+            <div class="plst-rw-trust__item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Knob-and-Tube Specialists</div>
+            <div class="plst-rw-trust__item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Insurance Documentation Provided</div>
+            <div class="plst-rw-trust__item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg> Free Wiring Assessment</div>
         </div>
     </div>
 </section>
 
-<!-- ============================================
-     SECTION: Plaistow Housing Stock
-     ============================================ -->
+<!-- Housing Stock — Vertical Timeline -->
 <section class="plst-rw-housing">
     <div class="container">
         <div class="plst-rw-housing__header">
             <div class="eyebrow">The Local Housing Picture</div>
             <h2>Why So Many Plaistow Homes Need Rewiring</h2>
-            <p style="color: var(--moore-text-muted);">Plaistow's housing stock spans over a century of construction - and Moore Electric sees the wiring challenges from every era. Here's what we find behind the walls of Plaistow homes. For general information about our rewiring services, visit our <a href="https://mooreelectricinc.net/electrical-rewiring/">electrical rewiring</a> page.</p>
+            <p style="color: var(--moore-text-muted);">Plaistow's housing stock spans over a century of construction - and Moore Electric sees the wiring challenges from every era. For general information about our rewiring services, visit our <a href="https://mooreelectricinc.net/electrical-rewiring/">electrical rewiring</a> page.</p>
         </div>
-
-        <div class="plst-rw-housing__grid">
-            <div class="plst-rw-era">
-                <div class="plst-rw-era__decade">Pre-1950s</div>
-                <div class="plst-rw-era__tag">High Priority</div>
+        <div class="plst-rw-tl">
+            <div class="plst-rw-tl__item">
+                <div class="plst-rw-tl__dot"></div>
+                <div class="plst-rw-tl__era">Pre-1950s - High Priority</div>
                 <h3>Knob-and-Tube Wiring</h3>
                 <p>Ungrounded, incompatible with modern electrical loads, and impossible to insulate safely. Knob-and-tube wiring is the most common rewiring trigger in Plaistow - and the one most likely to create insurance problems for homeowners.</p>
-                <div class="plst-rw-era__streets">Common in: Plaistow Road, Main Street, Westville Road</div>
+                <div class="plst-rw-tl__streets"><span class="plst-rw-tl__street">Plaistow Road</span><span class="plst-rw-tl__street">Main Street</span><span class="plst-rw-tl__street">Westville Road</span></div>
             </div>
-            <div class="plst-rw-era">
-                <div class="plst-rw-era__decade">1965-1973</div>
-                <div class="plst-rw-era__tag">Fire Hazard</div>
+            <div class="plst-rw-tl__item">
+                <div class="plst-rw-tl__dot"></div>
+                <div class="plst-rw-tl__era">1965-1973 - Fire Hazard</div>
                 <h3>Aluminum Branch Circuit Wiring</h3>
                 <p>Aluminum wiring oxidizes and loosens at connections over time - a documented fire hazard found in the split-levels and colonials built during Plaistow's postwar growth period. The fix is either a full rewire or AlumiConn connector remediation at every device connection.</p>
-                <div class="plst-rw-era__streets">Common in: Post-war neighborhoods, split-levels off Route 125</div>
+                <div class="plst-rw-tl__streets"><span class="plst-rw-tl__street">Post-war neighborhoods</span><span class="plst-rw-tl__street">Split-levels off Route 125</span></div>
             </div>
-            <div class="plst-rw-era">
-                <div class="plst-rw-era__decade">1940s-1960s</div>
-                <div class="plst-rw-era__tag">Deteriorating</div>
+            <div class="plst-rw-tl__item">
+                <div class="plst-rw-tl__dot"></div>
+                <div class="plst-rw-tl__era">1940s-1960s - Deteriorating</div>
                 <h3>Cloth-Insulated Wiring</h3>
                 <p>Brittle, cracked insulation that falls apart when disturbed - often discovered when opening walls during a renovation or addition project. If you're planning work on an older Plaistow home, the wiring condition should be assessed before any walls come down.</p>
-                <div class="plst-rw-era__streets">Common in: Older homes throughout Plaistow center</div>
+                <div class="plst-rw-tl__streets"><span class="plst-rw-tl__street">Older homes throughout Plaistow center</span></div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============================================
-     SECTION: The Insurance Issue
-     ============================================ -->
-<section class="plst-rw-insurance">
+<!-- Insurance Alert Banner -->
+<section class="plst-rw-alert">
     <div class="container">
-        <div class="plst-rw-insurance__header">
-            <div class="eyebrow" style="color: var(--moore-gold-light);">Insurance &amp; Knob-and-Tube</div>
-            <h2>Knob-and-Tube Wiring &amp; NH Homeowners Insurance - What Plaistow Homeowners Need to Know</h2>
-            <p style="color: rgba(255,255,255,0.75);">This is the issue that brings most Plaistow homeowners to Moore Electric's door. If you have knob-and-tube wiring, your insurance situation may already be urgent.</p>
-        </div>
-
-        <div class="plst-rw-insurance__grid">
-            <div>
-                <ul class="plst-rw-insurance__points">
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                        <span><strong style="color: var(--moore-gold);">Policy refusals:</strong> NH insurance carriers are increasingly refusing to issue new policies on homes with active knob-and-tube wiring.</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                        <span><strong style="color: var(--moore-gold);">Non-renewal notices:</strong> Existing policyholders are receiving non-renewal letters with 30-60 day deadlines to address the wiring or lose coverage.</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                        <span><strong style="color: var(--moore-gold);">Home sale risk:</strong> Knob-and-tube is flagged as a material defect in NH home sales - it can stop a closing dead in its tracks.</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                        <span><strong style="color: var(--moore-gold);">Premium increases:</strong> Carriers that do still cover knob-and-tube charge significantly higher premiums for the added risk.</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        <span><strong style="color: var(--moore-gold);">Moore Electric's documentation:</strong> We provide insurance-ready documentation with every rewiring project - permit numbers, scope of work, and final Plaistow Building Department inspection sign-off.</span>
-                    </li>
-                </ul>
+        <div class="plst-rw-alert__badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Insurance Alert</div>
+        <h2>Knob-and-Tube Wiring &amp; NH Homeowners Insurance</h2>
+        <p class="plst-rw-alert__intro">This is the issue that brings most Plaistow homeowners to Moore Electric's door. If you have knob-and-tube wiring, your insurance situation may already be urgent.</p>
+        <div class="plst-rw-alert__split">
+            <div class="plst-rw-alert__facts">
+                <div class="plst-rw-alert__fact">
+                    <div class="plst-rw-alert__fact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
+                    <h4>Policy Refusals</h4>
+                    <p>NH carriers increasingly refusing to issue new policies on homes with active knob-and-tube wiring.</p>
+                </div>
+                <div class="plst-rw-alert__fact">
+                    <div class="plst-rw-alert__fact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                    <h4>Non-Renewal Notices</h4>
+                    <p>Existing policyholders receiving 30-60 day deadlines to address wiring or lose coverage.</p>
+                </div>
+                <div class="plst-rw-alert__fact">
+                    <div class="plst-rw-alert__fact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                    <h4>Home Sale Risk</h4>
+                    <p>K&amp;T flagged as material defect in NH home sales - can stop a closing dead in its tracks.</p>
+                </div>
+                <div class="plst-rw-alert__fact">
+                    <div class="plst-rw-alert__fact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                    <h4>Our Documentation</h4>
+                    <p>Moore Electric provides insurance-ready permit numbers, scope of work, and Plaistow Building Dept sign-off.</p>
+                </div>
             </div>
-            <div class="plst-rw-insurance__image">
+            <div class="plst-rw-alert__image">
                 <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_4555-scaled.jpg" alt="" width="800" height="600" loading="lazy" decoding="async">
             </div>
         </div>
-
-        <div class="plst-rw-insurance__callout">
+        <div class="plst-rw-alert__cta">
             <p>Facing an insurance deadline? Call Moore Electric now - we prioritize time-sensitive rewiring projects for Plaistow homeowners.</p>
+            <a href="tel:603-836-9513" class="btn btn--gold">Call 603-836-9513</a>
         </div>
     </div>
 </section>
 
-<!-- ============================================
-     MID CTA
-     ============================================ -->
-<section class="plst-rw-cta">
+<!-- Permit Process — Zigzag -->
+<section class="plst-rw-zigzag">
     <div class="container">
-        <h2>Get a Free Wiring Assessment for Your Plaistow Home</h2>
-        <p>Brenden Moore will assess your home's wiring condition, explain your options, and give you a clear picture of what the project involves - no pressure, no surprises.</p>
-        <div class="plst-rw-cta__btns">
-            <a href="tel:603-836-9513" class="btn btn--gold">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                Call 603-836-9513
-            </a>
-            <a href="https://mooreelectricinc.net/contact/" class="btn btn--outline-white">Schedule a Free Assessment</a>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     SECTION: NH Code & Plaistow Permit Process
-     ============================================ -->
-<section class="plst-rw-permit">
-    <div class="container">
-        <div class="plst-rw-permit__header">
-            <div class="eyebrow">Permits &amp; Inspections</div>
-            <h2>NH Electrical Code &amp; Plaistow Permit Requirements for Rewiring Projects</h2>
-            <p style="color: var(--moore-text-muted);">Every rewiring project in Plaistow requires a permit from the Plaistow Building Department. Moore Electric files all permits on your behalf - you don't need to visit Town Hall or manage the paperwork. Out-of-area contractors sometimes skip Plaistow permits. Moore Electric permits every job, no exceptions.</p>
-        </div>
-
-        <div class="plst-rw-permit__grid">
+        <div class="plst-rw-zigzag__block">
             <div>
-                <ol class="plst-rw-steps">
-                    <li class="plst-rw-step">
-                        <div class="plst-rw-step__num">1</div>
-                        <div>
-                            <strong>Permit Application</strong>
-                            <span>Moore Electric submits the electrical permit to the Plaistow Building Department, including the scope of work, contractor license number, and project details. This is filed before any work begins.</span>
-                        </div>
-                    </li>
-                    <li class="plst-rw-step">
-                        <div class="plst-rw-step__num">2</div>
-                        <div>
-                            <strong>Rough-In Inspection</strong>
-                            <span>After new wiring is run but before walls are closed up, a Plaistow building inspector performs a rough-in inspection to verify all work meets the NH Electrical Code (NEC). This step is critical - it catches any issues while the wiring is still accessible.</span>
-                        </div>
-                    </li>
-                    <li class="plst-rw-step">
-                        <div class="plst-rw-step__num">3</div>
-                        <div>
-                            <strong>Final Inspection &amp; Documentation</strong>
-                            <span>After the project is complete, the Plaistow building inspector performs a final inspection and closes the permit. Moore Electric provides you with insurance-ready documentation - the permit number, scope of work, and signed-off inspection - so your carrier has exactly what they need to update your policy.</span>
-                        </div>
-                    </li>
+                <div class="eyebrow">Permits &amp; Inspections</div>
+                <h2>NH Electrical Code &amp; Plaistow Permit Requirements</h2>
+                <p style="color: var(--moore-text-muted);">Every rewiring project in Plaistow requires a permit from the Plaistow Building Department. Moore Electric files all permits on your behalf. Out-of-area contractors sometimes skip Plaistow permits. Moore Electric permits every job, no exceptions.</p>
+                <ol class="plst-rw-zigzag__steps">
+                    <li class="plst-rw-zigzag__step"><div class="plst-rw-zigzag__step-num">1</div><div><strong>Permit Application</strong><span>Moore Electric submits the electrical permit to the Plaistow Building Department, including the scope of work and contractor license number, before any work begins.</span></div></li>
+                    <li class="plst-rw-zigzag__step"><div class="plst-rw-zigzag__step-num">2</div><div><strong>Rough-In Inspection</strong><span>After new wiring is run but before walls are closed, a Plaistow building inspector verifies all work meets the NH Electrical Code (NEC). This catches any issues while wiring is still accessible.</span></div></li>
+                    <li class="plst-rw-zigzag__step"><div class="plst-rw-zigzag__step-num">3</div><div><strong>Final Inspection &amp; Documentation</strong><span>The inspector performs a final sign-off, and Moore Electric provides insurance-ready documentation - permit number, scope of work, and signed-off inspection for your carrier.</span></div></li>
                 </ol>
             </div>
-            <div class="plst-rw-permit__image">
+            <div class="plst-rw-zigzag__media">
                 <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Photo-Oct-17-2024-4-43-35-PM-scaled.webp" alt="" width="800" height="600" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============================================
-     SECTION: Full vs. Partial Rewiring
-     ============================================ -->
+<!-- Full vs. Partial — Side by Side -->
 <section class="plst-rw-scope">
     <div class="container">
         <div class="plst-rw-scope__header">
             <div class="eyebrow">Your Options</div>
             <h2>What Full and Partial Rewiring Projects Include in Plaistow</h2>
-            <p style="color: var(--moore-text-muted);">Not every older Plaistow home needs a full rewire. Moore Electric assesses your wiring condition, your goals, and your budget to recommend the right scope for your situation.</p>
+            <p style="color: var(--moore-text-muted);">Not every older Plaistow home needs a full rewire. Moore Electric assesses your wiring condition, your goals, and your budget to recommend the right scope.</p>
         </div>
-
-        <div class="plst-rw-scope__grid">
+        <div class="plst-rw-scope__vs">
             <div class="plst-rw-scope__card plst-rw-scope__card--full">
-                <h3>Full Whole-House Rewire</h3>
-                <p>All existing wiring is replaced with modern copper wiring - new grounded outlets throughout, updated circuits, and full compatibility with a modern electrical panel. This is the standard recommendation for knob-and-tube and cloth-insulated homes.</p>
-                <ul class="plst-rw-scope__items">
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> All wiring replaced from panel to every device</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> New grounded outlets and circuits throughout</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Modern panel compatibility</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Complete insurance-ready documentation</li>
-                </ul>
+                <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Full Whole-House Rewire</h3>
+                <p>All existing wiring replaced with modern copper - new grounded outlets, updated circuits, and full modern panel compatibility. The standard recommendation for knob-and-tube and cloth-insulated homes.</p>
+                <ul class="plst-rw-scope__items"><li>All wiring replaced from panel to every device</li><li>New grounded outlets and circuits throughout</li><li>Modern panel compatibility</li><li>Complete insurance-ready documentation</li></ul>
             </div>
+            <div class="plst-rw-scope__divider"><span>or</span></div>
             <div class="plst-rw-scope__card plst-rw-scope__card--partial">
-                <h3>Partial or Phased Rewiring</h3>
-                <p>When a full rewire isn't required or the budget calls for a phased approach, Moore Electric can target the highest-priority circuits first - kitchen, bathroom, bedrooms - and address the rest over time.</p>
-                <ul class="plst-rw-scope__items">
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Circuit-by-circuit prioritization</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> AlumiConn connector remediation for aluminum</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Kitchen and bath priority upgrades</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Pre-sale targeted replacement</li>
-                </ul>
+                <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> Partial or Phased Rewiring</h3>
+                <p>When a full rewire isn't required or the budget calls for a phased approach, Moore Electric targets the highest-priority circuits first and addresses the rest over time.</p>
+                <ul class="plst-rw-scope__items"><li>Circuit-by-circuit prioritization</li><li>AlumiConn connector remediation for aluminum</li><li>Kitchen and bath priority upgrades</li><li>Pre-sale targeted replacement</li></ul>
             </div>
         </div>
-
-        <div class="plst-rw-scope__grid" style="margin-top: 24px;">
-            <div class="plst-rw-scope__card plst-rw-scope__card--panel" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
-                <h3>Panel Upgrade Coordination</h3>
-                <p>Many Plaistow rewiring projects also require a panel upgrade - especially homes with FPE (Federal Pacific) or Zinsco panels, which are known safety hazards. Moore Electric replaces the panel as part of the same project, avoiding the cost and disruption of two separate jobs. <a href="https://mooreelectricinc.net/plaistow-nh-electrician/panel-upgrades/">Learn about panel upgrades in Plaistow.</a></p>
-            </div>
+        <div class="plst-rw-scope__panel">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <p>Many Plaistow rewiring projects also require a <a href="https://mooreelectricinc.net/plaistow-nh-electrician/panel-upgrades/">panel upgrade</a> - especially homes with FPE (Federal Pacific) or Zinsco panels. Moore Electric handles the panel as part of the same project, avoiding the cost and disruption of two separate jobs.</p>
         </div>
     </div>
 </section>
 
-<!-- ============================================
-     SECTION: Real Plaistow Project Examples
-     ============================================ -->
+<!-- Mid CTA -->
+<section class="plst-rw-cta">
+    <div class="container">
+        <h2>Get a Free Wiring Assessment for Your Plaistow Home</h2>
+        <p>Brenden Moore will assess your home's wiring condition, explain your options, and give you a clear picture of what the project involves - no pressure, no surprises.</p>
+        <div class="plst-rw-cta__btns">
+            <a href="tel:603-836-9513" class="btn btn--gold"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Call 603-836-9513</a>
+            <a href="https://mooreelectricinc.net/contact/" class="btn btn--outline-white">Schedule a Free Assessment</a>
+        </div>
+    </div>
+</section>
+
+<!-- Project Examples — Horizontal Cards -->
 <section class="plst-rw-projects">
     <div class="container">
         <div class="plst-rw-projects__header">
-            <div class="eyebrow" style="color: var(--moore-gold-light);">From the Field</div>
-            <h2>Rewiring Projects in Plaistow - From the Field</h2>
-            <p style="color: rgba(255,255,255,0.75);">Representative rewiring projects Moore Electric has completed in the Plaistow area.</p>
+            <div class="eyebrow">From the Field</div>
+            <h2>Rewiring Projects in Plaistow</h2>
+            <p style="color: var(--moore-text-muted);">Representative rewiring projects Moore Electric has completed in the Plaistow area.</p>
         </div>
-
-        <div class="plst-rw-projects__grid">
-            <div class="plst-rw-project">
+        <div class="plst-rw-project">
+            <div class="plst-rw-project__body">
+                <span class="plst-rw-project__tag plst-rw-project__tag--kt">Knob &amp; Tube</span>
                 <h3>Westville Road Cape Cod (1952) - Full K&amp;T Replacement</h3>
-                <p>A 1952 Cape Cod with original knob-and-tube wiring throughout. The homeowner's insurance carrier issued a non-renewal notice. Moore Electric completed a full rewire - replacing all knob-and-tube with modern copper, upgrading from a 100-amp to a 200-amp panel, and providing insurance documentation. The carrier reinstated the policy within two weeks of permit closeout.</p>
-                <div class="plst-rw-project__detail">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <span>100A to 200A panel upgrade included - insurance reinstated in 2 weeks</span>
-                </div>
+                <p>A 1952 Cape Cod with original knob-and-tube wiring throughout. The homeowner's insurance carrier issued a non-renewal notice. Moore Electric completed a full rewire - replacing all knob-and-tube with modern copper, upgrading from a 100-amp to a 200-amp panel, and providing insurance documentation.</p>
+                <div class="plst-rw-project__result">Result: Insurance reinstated within 2 weeks of permit closeout</div>
             </div>
-            <div class="plst-rw-project">
+            <div class="plst-rw-project__accent"><div class="plst-rw-project__accent-text">100A &rarr; 200A<br>Panel Upgrade<br>Included</div></div>
+        </div>
+        <div class="plst-rw-project">
+            <div class="plst-rw-project__body">
+                <span class="plst-rw-project__tag plst-rw-project__tag--al">Aluminum Wiring</span>
                 <h3>Main Street Colonial (1968) - Aluminum Wiring Remediation</h3>
-                <p>A 1968 colonial with aluminum branch circuit wiring at every device connection. Rather than a full rewire, Moore Electric installed AlumiConn connectors at all 47 device connections - a code-compliant remediation that addressed the fire hazard without the cost and disruption of full replacement. A written report was provided for the mortgage company file.</p>
-                <div class="plst-rw-project__detail">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <span>47 AlumiConn connections - no full rewire required</span>
-                </div>
+                <p>A 1968 colonial with aluminum branch circuit wiring at every device connection. Rather than a full rewire, Moore Electric installed AlumiConn connectors at all 47 device connections - a code-compliant remediation that addressed the fire hazard without the cost of full replacement.</p>
+                <div class="plst-rw-project__result">Result: 47 AlumiConn connections - written report for mortgage company</div>
             </div>
-            <div class="plst-rw-project">
+            <div class="plst-rw-project__accent"><div class="plst-rw-project__accent-text">47 Device<br>Connections<br>Remediated</div></div>
+        </div>
+        <div class="plst-rw-project">
+            <div class="plst-rw-project__body">
+                <span class="plst-rw-project__tag plst-rw-project__tag--partial">Partial Rewire</span>
                 <h3>Kelley Road Ranch - Partial Rewire During Renovation</h3>
-                <p>A ranch-style home undergoing a kitchen and master bedroom renovation. Moore Electric performed a partial rewire during the pre-drywall window - replacing the wiring in the affected areas while walls were already open, avoiding the cost of opening and repairing walls separately. Permitted as a partial rewire through the Plaistow Building Department.</p>
-                <div class="plst-rw-project__detail">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <span>Kitchen + master bedroom priority during renovation window</span>
-                </div>
+                <p>A ranch-style home undergoing a kitchen and master bedroom renovation. Moore Electric performed a partial rewire during the pre-drywall window - replacing wiring in the affected areas while walls were already open, avoiding the cost of opening and repairing walls separately. Permitted through the Plaistow Building Department.</p>
+                <div class="plst-rw-project__result">Result: Kitchen + master bedroom priority during renovation window</div>
             </div>
+            <div class="plst-rw-project__accent"><div class="plst-rw-project__accent-text">Renovation<br>Window<br>Maximized</div></div>
         </div>
-
-        <div class="plst-rw-projects__photos">
-            <div class="plst-rw-projects__photo">
-                <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_4555-scaled.jpg" alt="" width="800" height="600" loading="lazy" decoding="async">
-            </div>
-            <div class="plst-rw-projects__photo">
-                <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Photo-Oct-17-2024-4-43-35-PM-scaled.webp" alt="" width="800" height="600" loading="lazy" decoding="async">
-            </div>
-            <div class="plst-rw-projects__photo">
-                <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_4550-scaled.jpg" alt="" width="800" height="600" loading="lazy" decoding="async">
-            </div>
+        <div class="plst-rw-projects__gallery">
+            <div class="plst-rw-projects__gimg"><img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_4555-scaled.jpg" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+            <div class="plst-rw-projects__gimg"><img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Photo-Oct-17-2024-4-43-35-PM-scaled.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+            <div class="plst-rw-projects__gimg"><img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_4550-scaled.jpg" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
         </div>
     </div>
 </section>
 
-<!-- ============================================
-     SECTION: Reviews
-     ============================================ -->
-<section class="plst-rw-reviews">
+<!-- Testimonial Strip -->
+<section class="plst-rw-tstrip">
     <div class="container">
-        <div class="plst-rw-reviews__header">
-            <div class="plst-rw-reviews__badge">
-                <div class="plst-rw-reviews__badge-score">5.0</div>
-                <div>
-                    <div class="plst-rw-reviews__badge-stars">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
-                    <div class="plst-rw-reviews__badge-label">Google Reviews</div>
-                </div>
+        <div class="plst-rw-tstrip__grid">
+            <div class="plst-rw-tcard">
+                <div class="plst-rw-tcard__stars"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="plst-rw-tcard__text">"Brendon and his team are superb professionals that make you feel comfortable knowing they will do a great job. We had a fantastic experience with Moore Electrical. I highly recommend them for all your electrical needs."</p>
+                <div class="plst-rw-tcard__author">- Randell M., Google Review</div>
             </div>
-            <h2>What Plaistow-Area Homeowners Say About Moore Electric</h2>
-        </div>
-
-        <div class="plst-rw-reviews__grid">
-            <div class="plst-rw-review">
-                <div class="plst-rw-review__stars">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <p class="plst-rw-review__quote">"Brendon and his team are superb professionals that make you feel comfortable knowing they will do a great job. We had a fantastic experience with Moore Electrical. I highly recommend them for all your electrical needs."</p>
-                <div class="plst-rw-review__author">
-                    <div class="plst-rw-review__avatar">RM</div>
-                    <div>
-                        <div class="plst-rw-review__name">Randell M.</div>
-                        <div class="plst-rw-review__source">Google Review</div>
-                    </div>
-                </div>
+            <div class="plst-rw-tcard">
+                <div class="plst-rw-tcard__stars"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="plst-rw-tcard__text">"Absolutely love this company. Fabulous service and incredible precise. Highly recommend!!!!"</p>
+                <div class="plst-rw-tcard__author">- Eleni S., Google Review</div>
             </div>
-            <div class="plst-rw-review">
-                <div class="plst-rw-review__stars">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <p class="plst-rw-review__quote">"Absolutely love this company. Fabulous service and incredible precise. Highly recommend!!!!"</p>
-                <div class="plst-rw-review__author">
-                    <div class="plst-rw-review__avatar">ES</div>
-                    <div>
-                        <div class="plst-rw-review__name">Eleni S.</div>
-                        <div class="plst-rw-review__source">Google Review</div>
-                    </div>
-                </div>
-            </div>
-            <div class="plst-rw-review">
-                <div class="plst-rw-review__stars">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <p class="plst-rw-review__quote">"I've been in the trades most of my life. I've worked with, for and have employed many trades guys. Brenden and his crew are among the best I've done business with. Reliable, communicative, fair, honest, and the list goes on. Highly recommend."</p>
-                <div class="plst-rw-review__author">
-                    <div class="plst-rw-review__avatar">FL</div>
-                    <div>
-                        <div class="plst-rw-review__name">Frank L.</div>
-                        <div class="plst-rw-review__source">Google Review</div>
-                    </div>
-                </div>
+            <div class="plst-rw-tcard">
+                <div class="plst-rw-tcard__stars"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <p class="plst-rw-tcard__text">"I've been in the trades most of my life. I've worked with, for and have employed many trades guys. Brenden and his crew are among the best I've done business with. Reliable, communicative, fair, honest, and the list goes on. Highly recommend."</p>
+                <div class="plst-rw-tcard__author">- Frank L., Google Review</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============================================
-     SECTION: FAQ
-     ============================================ -->
+<!-- FAQ — Single Column -->
 <section class="plst-rw-faq">
     <div class="container">
         <div class="plst-rw-faq__header">
             <div class="eyebrow">Common Questions</div>
             <h2>Frequently Asked Questions - Electrical Rewiring in Plaistow, NH</h2>
         </div>
-
         <div class="plst-rw-faq-list">
-            <div class="plst-rw-faq-item">
-                <button class="plst-rw-faq-item__q" aria-expanded="false">
-                    How much does it cost to rewire a house in Plaistow?
-                    <svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="plst-rw-faq-item__a">
-                    <div class="plst-rw-faq-item__a-inner">
-                        <p>The cost depends on your home's size, wiring type, and the scope of the project - full rewire vs. partial, whether a panel upgrade is needed, and the accessibility of your walls and ceilings. A smaller Plaistow Cape Cod with accessible walls will cost significantly less than a larger two-story colonial. Moore Electric provides a free on-site assessment with a clear scope and price before any work starts - <a href="https://mooreelectricinc.net/contact/">schedule yours here</a>.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="plst-rw-faq-item">
-                <button class="plst-rw-faq-item__q" aria-expanded="false">
-                    Is knob-and-tube wiring dangerous?
-                    <svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="plst-rw-faq-item__a">
-                    <div class="plst-rw-faq-item__a-inner">
-                        <p>Knob-and-tube wiring isn't inherently dangerous when it's in original condition and properly maintained. The problem is that most Plaistow homes with knob-and-tube have had modifications over the decades - improper splices, overloaded circuits, and insulation blown over the wiring (which creates a heat buildup risk). It's also ungrounded, meaning it offers no protection from electrical shock. Most NH insurance carriers now consider active knob-and-tube a material liability.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="plst-rw-faq-item">
-                <button class="plst-rw-faq-item__q" aria-expanded="false">
-                    Will my insurance company require a rewire?
-                    <svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="plst-rw-faq-item__a">
-                    <div class="plst-rw-faq-item__a-inner">
-                        <p>Increasingly, yes. NH carriers are refusing to write new policies on homes with active knob-and-tube, and existing policyholders are receiving non-renewal notices with 30-60 day deadlines. If you've received a notice, call Moore Electric right away - we prioritize insurance-deadline rewiring projects and provide the documentation your carrier needs to reinstate or issue a policy.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="plst-rw-faq-item">
-                <button class="plst-rw-faq-item__q" aria-expanded="false">
-                    How long does a rewiring project take?
-                    <svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="plst-rw-faq-item__a">
-                    <div class="plst-rw-faq-item__a-inner">
-                        <p>A full whole-house rewire for a typical Plaistow home takes 1 to 3 weeks of on-site work, depending on the home's size, the accessibility of walls and ceilings, and whether a panel upgrade is included. Partial rewiring projects are shorter - often a few days to a week. The Plaistow permit and inspection process adds some time, but Moore Electric coordinates all scheduling to keep the project moving.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="plst-rw-faq-item">
-                <button class="plst-rw-faq-item__q" aria-expanded="false">
-                    Do I need to move out during a rewire?
-                    <svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="plst-rw-faq-item__a">
-                    <div class="plst-rw-faq-item__a-inner">
-                        <p>In most cases, no. Moore Electric works room by room and maintains power to the areas not being worked on during the day. There will be some disruption - access to walls and ceilings, dust, and temporary power interruptions - but most Plaistow homeowners stay in their homes through the project.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="plst-rw-faq-item">
-                <button class="plst-rw-faq-item__q" aria-expanded="false">
-                    How do I know if my house needs rewiring?
-                    <svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="plst-rw-faq-item__a">
-                    <div class="plst-rw-faq-item__a-inner">
-                        <p>Common signs include two-prong (ungrounded) outlets, frequent tripped breakers, flickering lights, warm or discolored outlet covers, and a home built before the mid-1970s that hasn't been updated electrically. An insurance notice or home inspection report flagging the wiring is another common trigger. Moore Electric offers a free wiring assessment to tell you exactly what you're dealing with. If you're noticing <a href="https://mooreelectricinc.net/plaistow-nh-electrician/repairs/">electrical repair issues</a>, that's often a sign of deeper wiring problems.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="plst-rw-faq-item">
-                <button class="plst-rw-faq-item__q" aria-expanded="false">
-                    Full rewire vs. partial - which do I need?
-                    <svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="plst-rw-faq-item__a">
-                    <div class="plst-rw-faq-item__a-inner">
-                        <p>It depends on your wiring type, its condition, and your goals. Knob-and-tube usually requires a full replacement for insurance compliance. Aluminum wiring can often be addressed with AlumiConn connector remediation without a full rewire. Cloth-insulated wiring in a renovation zone can be handled as a partial. Moore Electric assesses the situation during a free on-site visit and recommends the right scope for your home.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="plst-rw-faq-item">
-                <button class="plst-rw-faq-item__q" aria-expanded="false">
-                    Do I need a permit to rewire my house in Plaistow?
-                    <svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="plst-rw-faq-item__a">
-                    <div class="plst-rw-faq-item__a-inner">
-                        <p>Yes. All rewiring work in Plaistow requires an electrical permit filed with the Plaistow Building Department. This includes both full and partial rewires. Moore Electric files all permits and coordinates the rough-in and final inspections as part of the project - the homeowner doesn't need to manage any of the paperwork or scheduling.</p>
-                    </div>
-                </div>
-            </div>
+            <div class="plst-rw-faq-item"><button class="plst-rw-faq-item__q" aria-expanded="false">How much does it cost to rewire a house in Plaistow?<svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="plst-rw-faq-item__a"><div class="plst-rw-faq-item__a-inner"><p>The cost depends on your home's size, wiring type, and the scope of the project - full rewire vs. partial, whether a panel upgrade is needed, and the accessibility of your walls and ceilings. A smaller Plaistow Cape Cod with accessible walls will cost significantly less than a larger two-story colonial. Moore Electric provides a free on-site assessment with a clear scope and price before any work starts - <a href="https://mooreelectricinc.net/contact/">schedule yours here</a>.</p></div></div></div>
+            <div class="plst-rw-faq-item"><button class="plst-rw-faq-item__q" aria-expanded="false">Is knob-and-tube wiring dangerous?<svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="plst-rw-faq-item__a"><div class="plst-rw-faq-item__a-inner"><p>Knob-and-tube wiring isn't inherently dangerous when it's in original condition and properly maintained. The problem is that most Plaistow homes with knob-and-tube have had modifications over the decades - improper splices, overloaded circuits, and insulation blown over the wiring (which creates a heat buildup risk). It's also ungrounded, meaning it offers no protection from electrical shock. Most NH insurance carriers now consider active knob-and-tube a material liability.</p></div></div></div>
+            <div class="plst-rw-faq-item"><button class="plst-rw-faq-item__q" aria-expanded="false">Will my insurance company require a rewire?<svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="plst-rw-faq-item__a"><div class="plst-rw-faq-item__a-inner"><p>Increasingly, yes. NH carriers are refusing to write new policies on homes with active knob-and-tube, and existing policyholders are receiving non-renewal notices with 30-60 day deadlines. If you've received a notice, call Moore Electric right away - we prioritize insurance-deadline rewiring projects and provide the documentation your carrier needs to reinstate or issue a policy.</p></div></div></div>
+            <div class="plst-rw-faq-item"><button class="plst-rw-faq-item__q" aria-expanded="false">How long does a rewiring project take?<svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="plst-rw-faq-item__a"><div class="plst-rw-faq-item__a-inner"><p>A full whole-house rewire for a typical Plaistow home takes 1 to 3 weeks of on-site work, depending on the home's size, the accessibility of walls and ceilings, and whether a panel upgrade is included. Partial rewiring projects are shorter - often a few days to a week. The Plaistow permit and inspection process adds some time, but Moore Electric coordinates all scheduling to keep the project moving.</p></div></div></div>
+            <div class="plst-rw-faq-item"><button class="plst-rw-faq-item__q" aria-expanded="false">Do I need to move out during a rewire?<svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="plst-rw-faq-item__a"><div class="plst-rw-faq-item__a-inner"><p>In most cases, no. Moore Electric works room by room and maintains power to the areas not being worked on during the day. There will be some disruption - access to walls and ceilings, dust, and temporary power interruptions - but most Plaistow homeowners stay in their homes through the project.</p></div></div></div>
+            <div class="plst-rw-faq-item"><button class="plst-rw-faq-item__q" aria-expanded="false">How do I know if my house needs rewiring?<svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="plst-rw-faq-item__a"><div class="plst-rw-faq-item__a-inner"><p>Common signs include two-prong (ungrounded) outlets, frequent tripped breakers, flickering lights, warm or discolored outlet covers, and a home built before the mid-1970s that hasn't been updated electrically. An insurance notice or home inspection report flagging the wiring is another common trigger. Moore Electric offers a free wiring assessment to tell you exactly what you're dealing with. If you're noticing <a href="https://mooreelectricinc.net/plaistow-nh-electrician/repairs/">electrical repair issues</a>, that's often a sign of deeper wiring problems.</p></div></div></div>
+            <div class="plst-rw-faq-item"><button class="plst-rw-faq-item__q" aria-expanded="false">Full rewire vs. partial - which do I need?<svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="plst-rw-faq-item__a"><div class="plst-rw-faq-item__a-inner"><p>It depends on your wiring type, its condition, and your goals. Knob-and-tube usually requires a full replacement for insurance compliance. Aluminum wiring can often be addressed with AlumiConn connector remediation without a full rewire. Cloth-insulated wiring in a renovation zone can be handled as a partial. Moore Electric assesses the situation during a free on-site visit and recommends the right scope for your home.</p></div></div></div>
+            <div class="plst-rw-faq-item"><button class="plst-rw-faq-item__q" aria-expanded="false">Do I need a permit to rewire my house in Plaistow?<svg class="plst-rw-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="plst-rw-faq-item__a"><div class="plst-rw-faq-item__a-inner"><p>Yes. All rewiring work in Plaistow requires an electrical permit filed with the Plaistow Building Department. This includes both full and partial rewires. Moore Electric files all permits and coordinates the rough-in and final inspections as part of the project - the homeowner doesn't need to manage any of the paperwork or scheduling.</p></div></div></div>
         </div>
     </div>
 </section>
 
-<!-- ============================================
-     SECTION: Service Area
-     ============================================ -->
+<!-- Service Area — Map First -->
 <section class="plst-rw-area">
     <div class="container">
         <div class="plst-rw-area__header">
@@ -665,40 +444,20 @@
             <h2>Electrical Rewiring Serving Plaistow &amp; Southern NH</h2>
             <p style="color: var(--moore-text-muted);">Moore Electric performs rewiring projects throughout Plaistow and the surrounding southern NH and northern MA communities. Because the shop is based in Plaistow, local projects benefit from same-town permit knowledge and quick response times for time-sensitive insurance-deadline work.</p>
         </div>
-
-        <div class="plst-rw-area__content">
-            <div>
-                <h3 style="margin-bottom: 8px;">Primary Service Area</h3>
-                <div class="plst-rw-area__towns">
-                    <span class="plst-rw-area__town plst-rw-area__town--primary">Plaistow</span>
-                    <span class="plst-rw-area__town">Hampstead</span>
-                    <span class="plst-rw-area__town">Atkinson</span>
-                    <span class="plst-rw-area__town">Kingston</span>
-                    <span class="plst-rw-area__town">Newton</span>
-                    <span class="plst-rw-area__town">Sandown</span>
-                    <span class="plst-rw-area__town">East Kingston</span>
-                    <span class="plst-rw-area__town">Danville</span>
-                </div>
-                <h3 style="margin-bottom: 8px;">Also Serving</h3>
-                <div class="plst-rw-area__towns">
-                    <span class="plst-rw-area__town">Salem</span>
-                    <span class="plst-rw-area__town">Derry</span>
-                    <span class="plst-rw-area__town">Haverhill, MA</span>
-                    <span class="plst-rw-area__town">Newburyport, MA</span>
-                    <span class="plst-rw-area__town">Amesbury, MA</span>
-                </div>
-                <p style="margin-top: 16px;">Need a <a href="https://mooreelectricinc.net/plaistow-nh-electrician/generators/">standby generator</a>, <a href="https://mooreelectricinc.net/plaistow-nh-electrician/panel-upgrades/">panel upgrade</a>, or <a href="https://mooreelectricinc.net/plaistow-nh-electrician/ev-chargers/">EV charger installation</a> in Plaistow? Moore Electric handles that too.</p>
-            </div>
-            <div class="plst-rw-area__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93613.18022054654!2d-71.17760773898443!3d42.84303550747583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2fdd7afcd1607%3A0x80f4850c3ec3caf7!2sPlaistow%2C%20NH%2003865!5e0!3m2!1sen!2sus!4v1774960692390!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+        <div class="plst-rw-area__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93613.18022054654!2d-71.17760773898443!3d42.84303550747583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2fdd7afcd1607%3A0x80f4850c3ec3caf7!2sPlaistow%2C%20NH%2003865!5e0!3m2!1sen!2sus!4v1774960692390!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <div class="plst-rw-area__towns-wrap">
+            <div class="plst-rw-area__label">Primary Service Area</div>
+            <div class="plst-rw-area__towns"><span class="plst-rw-area__town plst-rw-area__town--primary">Plaistow</span><span class="plst-rw-area__town">Hampstead</span><span class="plst-rw-area__town">Atkinson</span><span class="plst-rw-area__town">Kingston</span><span class="plst-rw-area__town">Newton</span><span class="plst-rw-area__town">Sandown</span><span class="plst-rw-area__town">East Kingston</span><span class="plst-rw-area__town">Danville</span></div>
+            <div class="plst-rw-area__label">Also Serving</div>
+            <div class="plst-rw-area__towns"><span class="plst-rw-area__town">Salem</span><span class="plst-rw-area__town">Derry</span><span class="plst-rw-area__town">Haverhill, MA</span><span class="plst-rw-area__town">Newburyport, MA</span><span class="plst-rw-area__town">Amesbury, MA</span></div>
+        </div>
+        <p class="plst-rw-area__links">Need a <a href="https://mooreelectricinc.net/plaistow-nh-electrician/generators/">standby generator</a>, <a href="https://mooreelectricinc.net/plaistow-nh-electrician/panel-upgrades/">panel upgrade</a>, or <a href="https://mooreelectricinc.net/plaistow-nh-electrician/ev-chargers/">EV charger installation</a> in Plaistow? Moore Electric handles that too.</p>
     </div>
 </section>
 
-<!-- ============================================
-     FINAL CTA
-     ============================================ -->
+<!-- Final CTA -->
 <section class="plst-rw-final">
     <div class="container">
         <div class="plst-rw-final__content">
@@ -706,25 +465,17 @@
             <h2>Get a Free Wiring Assessment for Your Plaistow Home</h2>
             <p>Whether you're facing an insurance deadline, planning a renovation, or just want to know what's behind your walls, Moore Electric starts every rewiring conversation with a free, no-pressure on-site assessment. Brenden will walk through your home, explain what he finds, and give you a clear picture of your options and costs. If you're on an insurance deadline, call now - we prioritize time-sensitive rewiring projects.</p>
             <div class="plst-rw-final__btns">
-                <a href="tel:603-836-9513" class="btn btn--gold">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                    Call/Text 603-836-9513
-                </a>
+                <a href="tel:603-836-9513" class="btn btn--gold"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Call/Text 603-836-9513</a>
                 <a href="https://mooreelectricinc.net/contact/" class="btn btn--outline-white">Schedule a Free Wiring Assessment</a>
             </div>
-            <div class="plst-rw-final__contact">
-                <span>Based at: 21 Wentworth Ave, Plaistow, NH 03865</span>
-            </div>
-            <div class="plst-rw-final__hub">
-                <a href="https://mooreelectricinc.net/plaistow-nh-electrician/">&larr; Back to Plaistow, NH Electrician Hub</a>
-            </div>
+            <div class="plst-rw-final__contact"><span>Based at: 21 Wentworth Ave, Plaistow, NH 03865</span></div>
+            <div class="plst-rw-final__hub"><a href="https://mooreelectricinc.net/plaistow-nh-electrician/">&larr; Back to Plaistow, NH Electrician Hub</a></div>
         </div>
     </div>
 </section>
 
 </div>
 
-<!-- FAQ Accordion Script -->
 <script defer>
     document.addEventListener('DOMContentLoaded', function() {
         var faqItems = document.querySelectorAll('.plst-rw-faq-item__q');
