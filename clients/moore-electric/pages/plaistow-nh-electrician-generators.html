@@ -1,0 +1,805 @@
+<!-- Plaistow NH Generators Spoke Page — Body Content -->
+<!-- Sits between existing hero section and footer in WordPress -->
+<!-- Parent hub: /plaistow-nh-electrician/ -->
+
+<style>
+    /* ============================================
+       PLAISTOW GENERATORS SPOKE — SCOPED STYLES
+       ============================================ */
+    :root {
+        --moore-teal: #0B4B4B;
+        --moore-teal-dark: #093C3C;
+        --moore-gold: #C9A227;
+        --moore-gold-dark: #A8891F;
+        --moore-gold-light: #E8D48A;
+        --moore-cream: #F2F0EA;
+        --moore-gray: #C7D0D0;
+        --moore-gray-dark: #9BABAB;
+        --moore-text: #0C2424;
+        --moore-text-light: #FFFFFF;
+        --moore-text-muted: #4A5F5F;
+        --section-padding: clamp(60px, 8vw, 100px);
+        --container-max: 1200px;
+        --shadow-sm: 0 2px 8px rgba(12,36,36,0.06);
+        --shadow-md: 0 4px 20px rgba(12,36,36,0.08);
+        --shadow-lg: 0 8px 40px rgba(12,36,36,0.12);
+        --transition-fast: 0.2s ease;
+        --transition-med: 0.3s ease;
+    }
+
+    .plst-gen *, .plst-gen *::before, .plst-gen *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .plst-gen { font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 18px; line-height: 1.7; color: var(--moore-text); }
+    .plst-gen img { max-width: 100%; height: auto; display: block; }
+    .plst-gen a { color: var(--moore-teal); text-decoration: none; transition: color var(--transition-fast); }
+    .plst-gen a:hover { color: var(--moore-gold); }
+    .plst-gen h2, .plst-gen h3, .plst-gen h4 { font-family: 'Raleway', sans-serif; font-weight: 700; line-height: 1.2; color: var(--moore-text); }
+    .plst-gen h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+    .plst-gen h3 { font-size: clamp(1.15rem, 2.5vw, 1.35rem); font-weight: 600; }
+    .plst-gen p { margin-bottom: 1.25rem; }
+    .plst-gen p:last-child { margin-bottom: 0; }
+    .plst-gen .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .plst-gen section { padding: var(--section-padding) 0; }
+    .plst-gen .eyebrow { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--moore-gold); margin-bottom: 12px; }
+
+    /* Buttons */
+    .plst-gen .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 32px; font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 4px; border: 2px solid transparent; cursor: pointer; transition: all var(--transition-med); text-decoration: none; min-height: 52px; }
+    .plst-gen .btn--gold { background: var(--moore-gold) !important; color: var(--moore-text) !important; border-color: var(--moore-gold) !important; }
+    .plst-gen .btn--gold:hover { background: var(--moore-gold-dark) !important; border-color: var(--moore-gold-dark) !important; transform: translateY(-2px); }
+    .plst-gen .btn--teal { background: var(--moore-teal) !important; color: var(--moore-text-light) !important; border-color: var(--moore-teal) !important; }
+    .plst-gen .btn--teal:hover { background: var(--moore-teal-dark) !important; border-color: var(--moore-teal-dark) !important; transform: translateY(-2px); }
+    .plst-gen .btn--outline-white { background: transparent !important; color: var(--moore-text-light) !important; border-color: var(--moore-text-light) !important; }
+    .plst-gen .btn--outline-white:hover { background: var(--moore-text-light) !important; color: var(--moore-teal) !important; }
+
+    /* ---- Trust Bar ---- */
+    .plst-gen-trust { background: var(--moore-cream); padding: 28px 0; }
+    .plst-gen-trust__grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; }
+    .plst-gen-trust__item { display: flex; align-items: center; gap: 8px; font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text-muted); white-space: nowrap; }
+    .plst-gen-trust__item svg { width: 18px; height: 18px; color: var(--moore-gold); flex-shrink: 0; }
+
+    /* ---- Storm Section ---- */
+    .plst-gen-storm { background: #fff; }
+    .plst-gen-storm__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+    .plst-gen-storm__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 768px) { .plst-gen-storm__grid { grid-template-columns: repeat(3, 1fr); } }
+    .plst-gen-storm__card { background: var(--moore-cream); border-radius: 12px; padding: 32px; border-top: 4px solid var(--moore-teal); transition: all var(--transition-med); }
+    .plst-gen-storm__card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .plst-gen-storm__icon { width: 48px; height: 48px; background: var(--moore-teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .plst-gen-storm__icon svg { width: 24px; height: 24px; color: var(--moore-gold); }
+    .plst-gen-storm__card h3 { margin-bottom: 12px; font-size: 1.1rem; }
+    .plst-gen-storm__card p { color: var(--moore-text-muted); font-size: 0.95rem; line-height: 1.6; }
+    .plst-gen-storm__bottom { text-align: center; margin-top: 40px; padding: 28px 32px; background: var(--moore-teal); border-radius: 10px; color: var(--moore-text-light); }
+    .plst-gen-storm__bottom p { color: rgba(255,255,255,0.9); font-size: 1.05rem; font-weight: 600; }
+
+    /* ---- What's Included ---- */
+    .plst-gen-included { background: var(--moore-cream); }
+    .plst-gen-included__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+    .plst-gen-included__grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
+    @media (min-width: 900px) { .plst-gen-included__grid { grid-template-columns: 1fr 340px; gap: 48px; } }
+    .plst-gen-included__image { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-lg); position: sticky; top: 24px; }
+    .plst-gen-included__image img { width: 100%; height: auto; }
+    .plst-gen-step { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--moore-gray); }
+    .plst-gen-step:last-child { border-bottom: none; }
+    .plst-gen-step__num { width: 44px; height: 44px; background: var(--moore-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--moore-text-light); font-size: 1.1rem; flex-shrink: 0; }
+    .plst-gen-step strong { display: block; margin-bottom: 4px; color: var(--moore-text); }
+    .plst-gen-step span { color: var(--moore-text-muted); font-size: 0.95rem; }
+
+    /* ---- Sizing Section ---- */
+    .plst-gen-sizing { background: #fff; }
+    .plst-gen-sizing__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+    .plst-gen-sizing__tiers { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 900px; margin: 0 auto; }
+    @media (min-width: 768px) { .plst-gen-sizing__tiers { grid-template-columns: repeat(3, 1fr); } }
+    .plst-gen-tier { background: var(--moore-cream); border-radius: 12px; padding: 28px; text-align: center; border: 2px solid transparent; transition: all var(--transition-med); }
+    .plst-gen-tier:hover { border-color: var(--moore-gold); box-shadow: var(--shadow-md); }
+    .plst-gen-tier--featured { border-color: var(--moore-gold); position: relative; }
+    .plst-gen-tier--featured::before { content: 'MOST COMMON'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--moore-gold); color: var(--moore-text); font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; padding: 4px 16px; border-radius: 20px; white-space: nowrap; }
+    .plst-gen-tier__kw { font-family: 'Raleway', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--moore-teal); line-height: 1; margin-bottom: 4px; }
+    .plst-gen-tier__label { font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--moore-text-muted); margin-bottom: 16px; }
+    .plst-gen-tier h3 { margin-bottom: 12px; font-size: 1rem; }
+    .plst-gen-tier p { color: var(--moore-text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+    /* ---- Projects Section ---- */
+    .plst-gen-projects { background: var(--moore-teal-dark); color: var(--moore-text-light); position: relative; overflow: hidden; }
+    .plst-gen-projects::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,162,39,0.1) 0%, transparent 70%); pointer-events: none; }
+    .plst-gen-projects .container { position: relative; z-index: 1; }
+    .plst-gen-projects__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+    .plst-gen-projects h2 { color: var(--moore-text-light) !important; }
+    .plst-gen-projects__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 768px) { .plst-gen-projects__grid { grid-template-columns: repeat(3, 1fr); } }
+    .plst-gen-project { background: rgba(255,255,255,0.06); border-radius: 12px; padding: 28px; border-left: 4px solid var(--moore-gold); backdrop-filter: blur(4px); }
+    .plst-gen-project h3 { color: var(--moore-text-light); margin-bottom: 12px; font-size: 1.05rem; }
+    .plst-gen-project p { color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.6; }
+    .plst-gen-project__detail { display: flex; gap: 10px; align-items: flex-start; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .plst-gen-project__detail svg { width: 16px; height: 16px; color: var(--moore-gold); flex-shrink: 0; margin-top: 3px; }
+    .plst-gen-project__detail span { color: var(--moore-gold-light); font-size: 0.85rem; font-family: 'Raleway', sans-serif; font-weight: 600; }
+    .plst-gen-projects__photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+    .plst-gen-projects__photo { border-radius: 10px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.3); border: 3px solid rgba(201,162,39,0.4); aspect-ratio: 4 / 3; }
+    .plst-gen-projects__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ---- Brand Comparison ---- */
+    .plst-gen-brands { background: #fff; }
+    .plst-gen-brands__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+    .plst-gen-brands__table { max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md); }
+    .plst-gen-brands table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .plst-gen-brands thead { background: var(--moore-teal); color: var(--moore-text-light); }
+    .plst-gen-brands th { padding: 16px 20px; text-align: left; font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; }
+    .plst-gen-brands td { padding: 14px 20px; border-bottom: 1px solid var(--moore-gray); color: var(--moore-text-muted); }
+    .plst-gen-brands tbody tr:last-child td { border-bottom: none; }
+    .plst-gen-brands tbody tr:nth-child(even) { background: var(--moore-cream); }
+    .plst-gen-brands td:first-child { font-weight: 600; color: var(--moore-text); }
+    .plst-gen-brands__note { text-align: center; margin-top: 24px; color: var(--moore-text-muted); font-size: 0.95rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+    @media (max-width: 600px) {
+        .plst-gen-brands__table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .plst-gen-brands table { min-width: 500px; }
+    }
+
+    /* ---- Incentives ---- */
+    .plst-gen-incentives { background: var(--moore-cream); }
+    .plst-gen-incentives__header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+    .plst-gen-incentives__grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 768px) { .plst-gen-incentives__grid { grid-template-columns: repeat(2, 1fr); } }
+    .plst-gen-incentive { background: #fff; border-radius: 12px; padding: 28px; box-shadow: var(--shadow-sm); transition: all var(--transition-med); }
+    .plst-gen-incentive:hover { box-shadow: var(--shadow-md); }
+    .plst-gen-incentive__icon { width: 44px; height: 44px; background: var(--moore-teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .plst-gen-incentive__icon svg { width: 22px; height: 22px; color: var(--moore-gold); }
+    .plst-gen-incentive h3 { margin-bottom: 10px; font-size: 1.05rem; }
+    .plst-gen-incentive p { color: var(--moore-text-muted); font-size: 0.95rem; line-height: 1.6; }
+
+    /* ---- Reviews ---- */
+    .plst-gen-reviews { background: #fff; }
+    .plst-gen-reviews__header { text-align: center; margin-bottom: 48px; }
+    .plst-gen-reviews__badge { display: inline-flex; align-items: center; gap: 10px; background: var(--moore-cream); border: 2px solid var(--moore-gold); border-radius: 50px; padding: 12px 24px; margin-bottom: 24px; }
+    .plst-gen-reviews__badge-score { font-family: 'Raleway', sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--moore-teal); line-height: 1; }
+    .plst-gen-reviews__badge-stars { display: flex; gap: 2px; }
+    .plst-gen-reviews__badge-stars svg { width: 18px; height: 18px; color: var(--moore-gold); fill: var(--moore-gold); }
+    .plst-gen-reviews__badge-label { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text-muted); }
+    .plst-gen-reviews__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 768px) { .plst-gen-reviews__grid { grid-template-columns: repeat(3, 1fr); } }
+    .plst-gen-review { background: var(--moore-cream); border-radius: 10px; padding: 28px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm); }
+    .plst-gen-review__stars { display: flex; gap: 3px; margin-bottom: 14px; }
+    .plst-gen-review__stars svg { width: 16px; height: 16px; color: var(--moore-gold); fill: var(--moore-gold); }
+    .plst-gen-review__quote { font-size: 0.95rem; font-style: italic; color: var(--moore-text); line-height: 1.7; flex-grow: 1; margin-bottom: 16px; }
+    .plst-gen-review__author { display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--moore-gray); }
+    .plst-gen-review__avatar { width: 40px; height: 40px; background: var(--moore-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--moore-text-light); font-size: 0.9rem; flex-shrink: 0; }
+    .plst-gen-review__name { font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.9rem; }
+    .plst-gen-review__source { font-size: 0.8rem; color: var(--moore-text-muted); }
+
+    /* ---- FAQ ---- */
+    .plst-gen-faq { background: var(--moore-cream); }
+    .plst-gen-faq__header { text-align: center; margin-bottom: 48px; }
+    .plst-gen-faq-list { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 10px; }
+    @media (min-width: 900px) { .plst-gen-faq-list { grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; } }
+    .plst-gen-faq-item { background: #fff; border-radius: 8px; overflow: hidden; }
+    .plst-gen-faq-item__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 22px; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Raleway', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--moore-text); transition: color var(--transition-fast); }
+    .plst-gen-faq-item__q:hover { color: var(--moore-teal); }
+    .plst-gen-faq-item__icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--moore-gold); transition: transform var(--transition-med); }
+    .plst-gen-faq-item__a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .plst-gen-faq-item__a-inner { padding: 0 22px 18px; font-size: 0.9rem; color: var(--moore-text-muted); line-height: 1.7; }
+    .plst-gen-faq-item__a-inner p { margin-bottom: 0; }
+    .plst-gen-faq-item__a-inner a { font-weight: 600; }
+    .plst-gen-faq-item.active .plst-gen-faq-item__icon { transform: rotate(45deg); }
+    .plst-gen-faq-item.active .plst-gen-faq-item__a { max-height: 600px; }
+
+    /* ---- Service Area ---- */
+    .plst-gen-area { background: #fff; }
+    .plst-gen-area__header { text-align: center; max-width: 720px; margin: 0 auto 32px; }
+    .plst-gen-area__content { display: grid; grid-template-columns: 1fr; gap: 32px; }
+    @media (min-width: 768px) { .plst-gen-area__content { grid-template-columns: 1fr 1fr; gap: 40px; } }
+    .plst-gen-area__towns { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px; }
+    .plst-gen-area__town { background: var(--moore-cream); border-radius: 6px; padding: 8px 16px; font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 600; color: var(--moore-text-muted); }
+    .plst-gen-area__town--primary { background: var(--moore-teal); color: var(--moore-text-light); }
+    .plst-gen-area__map { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); }
+    .plst-gen-area__map iframe { width: 100%; height: 350px; border: 0; display: block; }
+
+    /* ---- Mid CTA ---- */
+    .plst-gen-cta { background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%); text-align: center; padding: clamp(48px, 8vw, 80px) 0; }
+    .plst-gen-cta h2 { color: var(--moore-text-light) !important; margin-bottom: 16px; }
+    .plst-gen-cta p { color: rgba(255,255,255,0.85) !important; font-size: 1.1rem; max-width: 600px; margin: 0 auto 28px; }
+    .plst-gen-cta__btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+
+    /* ---- Final CTA ---- */
+    .plst-gen-final { background: linear-gradient(135deg, var(--moore-teal-dark) 0%, var(--moore-teal) 100%); text-align: center; padding: clamp(60px, 10vw, 100px) 0; }
+    .plst-gen-final__content { max-width: 700px; margin: 0 auto; }
+    .plst-gen-final h2 { color: var(--moore-text-light) !important; margin-bottom: 16px; }
+    .plst-gen-final p { color: rgba(255,255,255,0.85) !important; font-size: 1.1rem; margin-bottom: 28px; }
+    .plst-gen-final__btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 24px; }
+    .plst-gen-final__contact { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+    .plst-gen-final__contact a { color: var(--moore-gold) !important; }
+    .plst-gen-final__hub { margin-top: 20px; }
+    .plst-gen-final__hub a { color: var(--moore-gold) !important; font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.95rem; }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+        .plst-gen .btn { width: 100%; }
+        .plst-gen-cta__btns, .plst-gen-final__btns { flex-direction: column; align-items: center; }
+    }
+</style>
+
+<div class="plst-gen">
+
+<!-- ============================================
+     TRUST BAR
+     ============================================ -->
+<section class="plst-gen-trust">
+    <div class="container">
+        <div class="plst-gen-trust__grid">
+            <div class="plst-gen-trust__item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Licensed Master Electrician - NH, MA &amp; ME
+            </div>
+            <div class="plst-gen-trust__item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Based in Plaistow - Same-Town Installer
+            </div>
+            <div class="plst-gen-trust__item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                Full Project Management - Gas, Electrical &amp; Permits
+            </div>
+            <div class="plst-gen-trust__item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Generac, Kohler &amp; Briggs &amp; Stratton
+            </div>
+            <div class="plst-gen-trust__item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                Free Sizing Estimates
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION: Why Plaistow Needs a Standby Generator
+     ============================================ -->
+<section class="plst-gen-storm">
+    <div class="container">
+        <div class="plst-gen-storm__header">
+            <div class="eyebrow">Local Storm &amp; Outage Context</div>
+            <h2>Plaistow's Storm Season - Why Power Outages Here Aren't a "Maybe"</h2>
+            <p style="color: var(--moore-text-muted);">Plaistow and the surrounding southern NH communities sit in a particularly vulnerable position during New England's two major outage seasons. Here's what Moore Electric sees driving generator demand in Plaistow year after year.</p>
+        </div>
+
+        <div class="plst-gen-storm__grid">
+            <div class="plst-gen-storm__card">
+                <div class="plst-gen-storm__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 17.58A5 5 0 0018 8h-1.26A8 8 0 104 16.25"/><path d="M8 16h.01M8 20h.01M12 18h.01M12 22h.01M16 16h.01M16 20h.01"/></svg>
+                </div>
+                <h3>Winter: Nor'easters &amp; Ice Storms</h3>
+                <p>The Merrimack Valley corridor runs directly through Plaistow and is one of the most reliably impacted zones during major nor'easters and ice events. Ice accumulation snaps limbs and poles, and Eversource NH restoration timelines in southern NH regularly stretch 3 to 7 days following significant events. The ice storms of 2008, 2017, and 2023 left parts of Rockingham County without power for nearly a week.</p>
+            </div>
+            <div class="plst-gen-storm__card">
+                <div class="plst-gen-storm__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><path d="M12 3c1.74 0 3.41.81 4.5 2.09C17.59 6.37 18 7.8 18 9.22c0 2.27-1.58 4.14-3.77 4.68"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <h3>Spring: Wet Snow &amp; Wind Events</h3>
+                <p>Late-season nor'easters with heavy wet snow hit Plaistow's tree canopy hard, particularly in the wooded neighborhoods north of Route 125 and along the Hampstead town line. Wet snow on leafed-out trees in late April and May causes some of the region's most widespread damage to distribution lines.</p>
+            </div>
+            <div class="plst-gen-storm__card">
+                <div class="plst-gen-storm__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <h3>Summer: Thunderstorm &amp; Tropical Season</h3>
+                <p>Severe convective storms and remnants of tropical systems have produced Plaistow outages ranging from hours to multiple days. Summer outages are particularly dangerous for homes with food storage, sump pumps, and basement flooding risk - all common in Plaistow's mix of older and newer residential construction.</p>
+            </div>
+        </div>
+
+        <div class="plst-gen-storm__bottom">
+            <p>Power outages in Plaistow are not an occasional inconvenience - they're a predictable seasonal event. A standby generator converts that exposure from a risk to a solved problem.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     MID CTA
+     ============================================ -->
+<section class="plst-gen-cta">
+    <div class="container">
+        <h2>Protect Your Plaistow Home Before the Next Storm</h2>
+        <p>Get a free, no-pressure on-site sizing assessment from Brenden Moore - your local Master Electrician based right here in Plaistow.</p>
+        <div class="plst-gen-cta__btns">
+            <a href="tel:603-836-9513" class="btn btn--gold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                Call 603-836-9513
+            </a>
+            <a href="https://mooreelectricinc.net/contact/" class="btn btn--outline-white">Free Generator Sizing Estimate</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION: What's Included in a Plaistow Generator Installation
+     ============================================ -->
+<section class="plst-gen-included">
+    <div class="container">
+        <div class="plst-gen-included__header">
+            <div class="eyebrow">Full-Service Installation</div>
+            <h2>What a Whole-Home Generator Installation Includes in Plaistow</h2>
+            <p style="color: var(--moore-text-muted);">A standby generator installation in Plaistow is a multi-trade project. Moore Electric manages the electrical scope - transfer switch, load assessment, wiring - and coordinates directly with your gas or propane supplier and the Town of Plaistow Building Department. For general information about our generator services, visit our <a href="https://mooreelectricinc.net/generator-installation/">generator installation</a> page.</p>
+        </div>
+
+        <div class="plst-gen-included__grid">
+            <div>
+                <div class="plst-gen-step">
+                    <div class="plst-gen-step__num">1</div>
+                    <div>
+                        <strong>Generator Sizing &amp; Load Assessment</strong>
+                        <span>Before any equipment is ordered, Moore Electric performs an on-site load assessment for your Plaistow home - calculating the circuits and appliances you want protected and sizing the generator appropriately. Undersized generators run at capacity under load and wear prematurely. Oversized units cost more than necessary. Getting the sizing right is the most important decision in the project.</span>
+                    </div>
+                </div>
+                <div class="plst-gen-step">
+                    <div class="plst-gen-step__num">2</div>
+                    <div>
+                        <strong>Transfer Switch Installation</strong>
+                        <span>The automatic transfer switch (ATS) is the brain of the system - it detects a utility outage within seconds and switches your home to generator power automatically, then transfers back when Eversource power is restored. Moore Electric installs the ATS adjacent to your main panel and wires it to the circuits identified in the load assessment. If your panel needs an upgrade to support the transfer switch, Moore Electric handles that as part of the project. <a href="https://mooreelectricinc.net/plaistow-nh-electrician/panel-upgrades/">Learn about panel upgrades in Plaistow.</a></span>
+                    </div>
+                </div>
+                <div class="plst-gen-step">
+                    <div class="plst-gen-step__num">3</div>
+                    <div>
+                        <strong>Permit Filing with the Town of Plaistow</strong>
+                        <span>Generator installations in Plaistow require both an electrical permit (filed with the Plaistow Building Department through Moore Electric's contractor license) and in most cases a gas permit coordinated with your gas supplier. Moore Electric files the electrical permit and coordinates the inspection timeline. A Plaistow building inspector performs the final sign-off.</span>
+                    </div>
+                </div>
+                <div class="plst-gen-step">
+                    <div class="plst-gen-step__num">4</div>
+                    <div>
+                        <strong>Gas &amp; Propane Coordination</strong>
+                        <span>Standby generators in Plaistow run on either natural gas (available in some neighborhoods via Liberty Utilities) or propane (the more common option for Plaistow's rural and suburban properties). Moore Electric coordinates directly with your propane supplier for tank sizing and the gas line run to the generator pad. If you're on natural gas, Moore Electric works with your gas utility for the connection.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="plst-gen-included__image">
+                <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Photo-Jan-15-2026-10-34-11-AM-16.webp" alt="" width="680" height="900" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION: Generator Sizing
+     ============================================ -->
+<section class="plst-gen-sizing">
+    <div class="container">
+        <div class="plst-gen-sizing__header">
+            <div class="eyebrow">Right-Sized for Your Home</div>
+            <h2>What Size Generator Do You Need for Your Plaistow Home?</h2>
+            <p style="color: var(--moore-text-muted);">Generator sizing depends on the circuits and appliances you want protected. Here are the common sizing tiers Moore Electric installs for Plaistow homes.</p>
+        </div>
+
+        <div class="plst-gen-sizing__tiers">
+            <div class="plst-gen-tier">
+                <div class="plst-gen-tier__kw">10-16</div>
+                <div class="plst-gen-tier__label">Kilowatts</div>
+                <h3>Essential Circuits</h3>
+                <p>Covers heat, refrigerator, sump pump, lights, and select outlets. A solid choice for homeowners who want critical systems protected without the cost of whole-home coverage.</p>
+            </div>
+            <div class="plst-gen-tier plst-gen-tier--featured">
+                <div class="plst-gen-tier__kw">18-22</div>
+                <div class="plst-gen-tier__label">Kilowatts</div>
+                <h3>Whole-Home Protection</h3>
+                <p>Covers most Plaistow residences up to roughly 2,500 square feet. Keeps everything running during an outage - heat, AC, kitchen, laundry, and all outlets.</p>
+            </div>
+            <div class="plst-gen-tier">
+                <div class="plst-gen-tier__kw">22-26+</div>
+                <div class="plst-gen-tier__label">Kilowatts</div>
+                <h3>Large Home / High Load</h3>
+                <p>For larger homes, homes with <a href="https://mooreelectricinc.net/plaistow-nh-electrician/ev-chargers/">EV chargers</a>, home offices, or whole-home AC systems that need full capacity under any conditions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION: Project Examples
+     ============================================ -->
+<section class="plst-gen-projects">
+    <div class="container">
+        <div class="plst-gen-projects__header">
+            <div class="eyebrow" style="color: var(--moore-gold-light);">From the Field</div>
+            <h2>Standby Generator Projects in Plaistow</h2>
+            <p style="color: rgba(255,255,255,0.75);">Representative generator installations Moore Electric has completed in the Plaistow area.</p>
+        </div>
+
+        <div class="plst-gen-projects__grid">
+            <div class="plst-gen-project">
+                <h3>Route 125 Corridor Colonial - 22 kW Generac, Natural Gas</h3>
+                <p>A 2,400-square-foot colonial on a wooded lot off Route 125 had experienced back-to-back multi-day outages during consecutive winter storms. The homeowners wanted whole-home protection including their electric heat pump, sump pump, refrigerator, and two home office circuits. Moore Electric installed a 22 kW Generac on a concrete pad with an automatic transfer switch, coordinated the Liberty Utilities gas connection, and permitted and passed inspection through the Town of Plaistow Building Department.</p>
+                <div class="plst-gen-project__detail">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Contract to inspection: 4 weeks</span>
+                </div>
+            </div>
+            <div class="plst-gen-project">
+                <h3>Wentworth Ave Neighborhood - 16 kW Generac, Propane</h3>
+                <p>An older ranch on a wooded Plaistow street requested essential-circuit protection rather than whole-home coverage. Moore Electric sized a 16 kW Generac on propane with a new 250-gallon tank coordinated with a local propane supplier. The ATS protected heat, refrigerator, well pump, and sump pump. The homeowner's primary concern was well pump and sump - a common priority for Plaistow's older homes on well water.</p>
+                <div class="plst-gen-project__detail">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Essential-circuit coverage on propane</span>
+                </div>
+            </div>
+            <div class="plst-gen-project">
+                <h3>Kelley Road New Construction - 26 kW Kohler, Propane Pre-Run</h3>
+                <p>A new construction home in a Plaistow subdivision included generator infrastructure in the original build - propane line, pad, and conduit pre-run. Moore Electric installed the 26 kW Kohler unit and full-home ATS, sized to accommodate the home's EV charger circuit and central AC load. Pre-run infrastructure reduced the installation to a single day.</p>
+                <div class="plst-gen-project__detail">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Single-day install with pre-run infrastructure</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="plst-gen-projects__photos">
+            <div class="plst-gen-projects__photo">
+                <img src="https://mooreelectricinc.net/wp-content/uploads/2026/02/backhoe-digging-dirt-in-lawn-to-install-electrical-2025-03-11-18-31-05-utc-scaled.webp" alt="" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="plst-gen-projects__photo">
+                <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Photo-Jan-15-2026-10-34-11-AM-1.webp" alt="" width="680" height="900" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION: Generac vs. Kohler
+     ============================================ -->
+<section class="plst-gen-brands">
+    <div class="container">
+        <div class="plst-gen-brands__header">
+            <div class="eyebrow">Brand Comparison</div>
+            <h2>Generac vs. Kohler: Which Standby Generator Is Right for Your Plaistow Home?</h2>
+            <p style="color: var(--moore-text-muted);">Moore Electric installs both Generac and Kohler standby generators - the two dominant residential brands in southern NH - and can recommend the right fit based on your home's size, fuel type, and budget.</p>
+        </div>
+
+        <div class="plst-gen-brands__table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Generac</th>
+                        <th>Kohler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Market Share</td>
+                        <td>Dominant (widest dealer network)</td>
+                        <td>Premium (established brand)</td>
+                    </tr>
+                    <tr>
+                        <td>Entry Price Point</td>
+                        <td>Lower</td>
+                        <td>Higher</td>
+                    </tr>
+                    <tr>
+                        <td>Warranty</td>
+                        <td>5-year residential</td>
+                        <td>5-year residential</td>
+                    </tr>
+                    <tr>
+                        <td>Fuel Options</td>
+                        <td>Natural gas / propane</td>
+                        <td>Natural gas / propane</td>
+                    </tr>
+                    <tr>
+                        <td>Service Availability in NH</td>
+                        <td>Widespread</td>
+                        <td>More limited</td>
+                    </tr>
+                    <tr>
+                        <td>Best For</td>
+                        <td>Value-focused, broad coverage</td>
+                        <td>Premium build quality</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="plst-gen-brands__note">Moore Electric's recommendation is always based on your specific load requirements and fuel situation - not brand preference. Both brands perform reliably when properly sized and installed.</p>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION: NH Incentives & Financing
+     ============================================ -->
+<section class="plst-gen-incentives">
+    <div class="container">
+        <div class="plst-gen-incentives__header">
+            <div class="eyebrow">Investment &amp; Savings</div>
+            <h2>NH Generator Incentives, Rebates &amp; Financing Options</h2>
+            <p style="color: var(--moore-text-muted);">A whole-home standby generator is a $5,000 to $15,000+ investment. Here's what Plaistow homeowners should know about reducing that cost.</p>
+        </div>
+
+        <div class="plst-gen-incentives__grid">
+            <div class="plst-gen-incentive">
+                <div class="plst-gen-incentive__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <h3>NH &amp; Eversource Incentive Programs</h3>
+                <p>Eversource NH periodically offers demand response programs that include incentives for grid-connected backup generation assets. Some installations that incorporate smart transfer technology qualify for demand management enrollment. Moore Electric can advise on current program availability at the time of your project - these programs change annually.</p>
+            </div>
+            <div class="plst-gen-incentive">
+                <div class="plst-gen-incentive__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                </div>
+                <h3>Manufacturer Financing</h3>
+                <p>Several generator manufacturers - including Generac and Kohler - offer financing programs for residential installations. Moore Electric can provide manufacturer financing information at the time of estimate. Many Plaistow homeowners also finance generator projects through home equity lines given the durable property value improvement a permanent standby unit provides.</p>
+            </div>
+            <div class="plst-gen-incentive">
+                <div class="plst-gen-incentive__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <h3>Federal Tax Credits</h3>
+                <p>Generators installed as part of a broader home energy system (paired with battery storage or solar) may qualify for federal residential clean energy credits. Standalone generator installations typically do not qualify for federal credits on their own.</p>
+            </div>
+            <div class="plst-gen-incentive">
+                <div class="plst-gen-incentive__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <h3>Homeowners Insurance Discounts</h3>
+                <p>Some NH insurance carriers offer premium discounts for homes with standby generators, particularly for properties in storm-exposed areas. Worth a call to your carrier after installation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION: Reviews
+     ============================================ -->
+<section class="plst-gen-reviews">
+    <div class="container">
+        <div class="plst-gen-reviews__header">
+            <div class="plst-gen-reviews__badge">
+                <div class="plst-gen-reviews__badge-score">5.0</div>
+                <div>
+                    <div class="plst-gen-reviews__badge-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <div class="plst-gen-reviews__badge-label">Google Reviews</div>
+                </div>
+            </div>
+            <h2>What Plaistow-Area Homeowners Say About Moore Electric</h2>
+        </div>
+
+        <div class="plst-gen-reviews__grid">
+            <div class="plst-gen-review">
+                <div class="plst-gen-review__stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="plst-gen-review__quote">"Brendon and his team are superb professionals that make you feel comfortable knowing they will do a great job. We had a fantastic experience with Moore Electrical. I highly recommend them for all your electrical needs."</p>
+                <div class="plst-gen-review__author">
+                    <div class="plst-gen-review__avatar">RM</div>
+                    <div>
+                        <div class="plst-gen-review__name">Randell M.</div>
+                        <div class="plst-gen-review__source">Google Review</div>
+                    </div>
+                </div>
+            </div>
+            <div class="plst-gen-review">
+                <div class="plst-gen-review__stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="plst-gen-review__quote">"Top notch service from Moore Electric. Brenden was professional, knowledgeable and efficient. I use him for both my home and business. Whenever a friend or family member needs electrical work done I always recommend Brenden."</p>
+                <div class="plst-gen-review__author">
+                    <div class="plst-gen-review__avatar">SM</div>
+                    <div>
+                        <div class="plst-gen-review__name">Stephen M.</div>
+                        <div class="plst-gen-review__source">Google Review</div>
+                    </div>
+                </div>
+            </div>
+            <div class="plst-gen-review">
+                <div class="plst-gen-review__stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="plst-gen-review__quote">"I've been in the trades most of my life. I've worked with, for and have employed many trades guys. Brenden and his crew are among the best I've done business with. Reliable, communicative, fair, honest, and the list goes on. Highly recommend."</p>
+                <div class="plst-gen-review__author">
+                    <div class="plst-gen-review__avatar">FL</div>
+                    <div>
+                        <div class="plst-gen-review__name">Frank L.</div>
+                        <div class="plst-gen-review__source">Google Review</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION: FAQ
+     ============================================ -->
+<section class="plst-gen-faq">
+    <div class="container">
+        <div class="plst-gen-faq__header">
+            <div class="eyebrow">Common Questions</div>
+            <h2>Frequently Asked Questions - Generator Installation in Plaistow, NH</h2>
+        </div>
+
+        <div class="plst-gen-faq-list">
+            <div class="plst-gen-faq-item">
+                <button class="plst-gen-faq-item__q" aria-expanded="false">
+                    How much does a whole-home generator cost in Plaistow?
+                    <svg class="plst-gen-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="plst-gen-faq-item__a">
+                    <div class="plst-gen-faq-item__a-inner">
+                        <p>Most whole-home standby generator installations in the Plaistow area run between $5,000 and $15,000+, depending on generator size, fuel type (natural gas or propane), and your home's electrical configuration. Essential-circuit systems start lower, while full whole-home Generac or Kohler units with propane tank installation land at the higher end. The best way to get an accurate number is a free on-site sizing estimate - <a href="https://mooreelectricinc.net/contact/">call or schedule one here</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="plst-gen-faq-item">
+                <button class="plst-gen-faq-item__q" aria-expanded="false">
+                    What size generator do I need for my house?
+                    <svg class="plst-gen-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="plst-gen-faq-item__a">
+                    <div class="plst-gen-faq-item__a-inner">
+                        <p>It depends on the circuits and appliances you want protected. A 10-16 kW unit handles essential circuits (heat, refrigerator, sump pump). An 18-22 kW unit provides whole-home coverage for most Plaistow homes up to about 2,500 square feet. Larger homes or those with EV chargers and central AC may need 22-26 kW+. Moore Electric performs an on-site load assessment to size the generator correctly before any equipment is ordered.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="plst-gen-faq-item">
+                <button class="plst-gen-faq-item__q" aria-expanded="false">
+                    How long does a generator installation take?
+                    <svg class="plst-gen-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="plst-gen-faq-item__a">
+                    <div class="plst-gen-faq-item__a-inner">
+                        <p>From signed contract to final inspection, most Plaistow generator installations take 3 to 6 weeks. The timeline depends on equipment availability, gas or propane coordination, and the Plaistow Building Department inspection schedule. The actual on-site installation typically takes 1 to 2 days once the pad is set and the gas line is run.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="plst-gen-faq-item">
+                <button class="plst-gen-faq-item__q" aria-expanded="false">
+                    Do I need a permit for generator installation in Plaistow?
+                    <svg class="plst-gen-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="plst-gen-faq-item__a">
+                    <div class="plst-gen-faq-item__a-inner">
+                        <p>Yes. Generator installations in Plaistow require an electrical permit filed with the Town of Plaistow Building Department, and in most cases a gas permit coordinated with your supplier. Moore Electric handles all permit applications and inspection coordination as part of the project - you don't need to visit Town Hall or manage the paperwork yourself.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="plst-gen-faq-item">
+                <button class="plst-gen-faq-item__q" aria-expanded="false">
+                    Generac vs. Kohler - which standby generator is better?
+                    <svg class="plst-gen-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="plst-gen-faq-item__a">
+                    <div class="plst-gen-faq-item__a-inner">
+                        <p>Both are reliable when properly sized and installed. Generac has a larger dealer and service network in NH and typically offers a lower entry price. Kohler is known for premium build quality. Moore Electric installs both brands and recommends based on your specific load, fuel type, and budget - not brand preference.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="plst-gen-faq-item">
+                <button class="plst-gen-faq-item__q" aria-expanded="false">
+                    Is a standby generator worth the investment?
+                    <svg class="plst-gen-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="plst-gen-faq-item__a">
+                    <div class="plst-gen-faq-item__a-inner">
+                        <p>For Plaistow homeowners, the answer is almost always yes. Southern NH averages multiple multi-day outages per year from nor'easters, ice storms, and summer convective events. A standby generator protects your food storage, sump pump, well water, heating system, and medical equipment - and it adds durable property value. Some NH insurance carriers also offer premium discounts for homes with permanent backup power. <a href="https://mooreelectricinc.net/contact/">Schedule a free assessment</a> to see what it would cost for your home.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="plst-gen-faq-item">
+                <button class="plst-gen-faq-item__q" aria-expanded="false">
+                    What fuel does a standby generator use - gas or propane?
+                    <svg class="plst-gen-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="plst-gen-faq-item__a">
+                    <div class="plst-gen-faq-item__a-inner">
+                        <p>Both. Standby generators in Plaistow run on natural gas (available in some Plaistow neighborhoods via Liberty Utilities) or propane (the more common option for the area's rural and suburban properties). Moore Electric coordinates with your gas or propane supplier for the fuel connection as part of the installation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="plst-gen-faq-item">
+                <button class="plst-gen-faq-item__q" aria-expanded="false">
+                    How often does a standby generator need maintenance?
+                    <svg class="plst-gen-faq-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="plst-gen-faq-item__a">
+                    <div class="plst-gen-faq-item__a-inner">
+                        <p>Most manufacturers recommend annual maintenance - oil change, filter replacement, and a system check. The generator runs a self-test weekly (you'll hear it cycle for about 10 minutes), which keeps the engine lubricated and ready. With proper annual maintenance, a well-installed standby generator typically lasts 20 to 30 years.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION: Service Area
+     ============================================ -->
+<section class="plst-gen-area">
+    <div class="container">
+        <div class="plst-gen-area__header">
+            <div class="eyebrow">Service Coverage</div>
+            <h2>Generator Installation Serving Plaistow &amp; Southern NH</h2>
+            <p style="color: var(--moore-text-muted);">Moore Electric installs standby generators throughout Plaistow and the surrounding southern NH communities. Because the shop is based in Plaistow, generator projects in nearby towns benefit from the same local permit knowledge, Eversource coordination, and propane supplier relationships.</p>
+        </div>
+
+        <div class="plst-gen-area__content">
+            <div>
+                <h3 style="margin-bottom: 8px;">Primary Service Area</h3>
+                <div class="plst-gen-area__towns">
+                    <span class="plst-gen-area__town plst-gen-area__town--primary">Plaistow</span>
+                    <span class="plst-gen-area__town">Hampstead</span>
+                    <span class="plst-gen-area__town">Atkinson</span>
+                    <span class="plst-gen-area__town">Kingston</span>
+                    <span class="plst-gen-area__town">Newton</span>
+                    <span class="plst-gen-area__town">Sandown</span>
+                    <span class="plst-gen-area__town">East Kingston</span>
+                    <span class="plst-gen-area__town">Danville</span>
+                </div>
+                <h3 style="margin-bottom: 8px;">Also Serving</h3>
+                <div class="plst-gen-area__towns">
+                    <span class="plst-gen-area__town">Salem</span>
+                    <span class="plst-gen-area__town">Derry</span>
+                    <span class="plst-gen-area__town">Londonderry</span>
+                    <span class="plst-gen-area__town">Haverhill, MA</span>
+                    <span class="plst-gen-area__town">Newburyport, MA</span>
+                </div>
+                <p style="margin-top: 16px;">Need help with <a href="https://mooreelectricinc.net/plaistow-nh-electrician/repairs/">electrical repairs</a>, <a href="https://mooreelectricinc.net/plaistow-nh-electrician/panel-upgrades/">panel upgrades</a>, <a href="https://mooreelectricinc.net/plaistow-nh-electrician/rewiring/">rewiring</a>, or <a href="https://mooreelectricinc.net/plaistow-nh-electrician/ev-chargers/">EV charger installation</a> in Plaistow? Moore Electric handles that too.</p>
+            </div>
+            <div class="plst-gen-area__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93613.18022054654!2d-71.17760773898443!3d42.84303550747583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2fdd7afcd1607%3A0x80f4850c3ec3caf7!2sPlaistow%2C%20NH%2003865!5e0!3m2!1sen!2sus!4v1774960692390!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     FINAL CTA
+     ============================================ -->
+<section class="plst-gen-final">
+    <div class="container">
+        <div class="plst-gen-final__content">
+            <div class="eyebrow" style="color: var(--moore-gold-light);">Get Started</div>
+            <h2>Ready to Protect Your Plaistow Home from the Next Outage?</h2>
+            <p>A whole-home standby generator is a significant investment - and Moore Electric's process starts with a free, no-pressure on-site sizing assessment before any equipment is specified or purchased. Brenden will walk through your home's load, fuel options, placement, and permit requirements, and give you a clear picture of what the project involves and what it will cost. No sales pressure, no surprises.</p>
+            <div class="plst-gen-final__btns">
+                <a href="tel:603-836-9513" class="btn btn--gold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    Call/Text 603-836-9513
+                </a>
+                <a href="https://mooreelectricinc.net/contact/" class="btn btn--outline-white">Schedule a Free Generator Sizing Estimate</a>
+            </div>
+            <div class="plst-gen-final__contact">
+                <span>Based at: 21 Wentworth Ave, Plaistow, NH 03865</span>
+            </div>
+            <div class="plst-gen-final__hub">
+                <a href="https://mooreelectricinc.net/plaistow-nh-electrician/">&larr; Back to Plaistow, NH Electrician Hub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<!-- FAQ Accordion Script -->
+<script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+        var faqItems = document.querySelectorAll('.plst-gen-faq-item__q');
+        faqItems.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = this.closest('.plst-gen-faq-item');
+                var isActive = item.classList.contains('active');
+                item.classList.toggle('active');
+                this.setAttribute('aria-expanded', !isActive);
+            });
+        });
+    });
+</script>
