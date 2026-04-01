@@ -1,5 +1,4 @@
-<!--
-  BCM Project Page: Exeter Custom Home Build
+<!--BCM Project Page: Exeter Custom Home Build
   URL: /projects/exeter-custom-home-build/
   
   NOTE: This template has NO hero section - it sits below the WordPress page hero.
@@ -9,1002 +8,279 @@
   
   This template starts with a project info bar showing Featured Project badge + details.
   
-  CTAs: "Start Your Project" → /contact/
--->
+  CTAs: "Start Your Project" → /contact/-->
 
 <style>
 /* ============================================
-   BCM PROJECT PAGE STYLES
+   BCM PROJECT PAGES - 2026 DESIGN SYSTEM
    Namespace: .bcm-project-*
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Primary Palette */
   --bcm-black: #1A1A1A;
   --bcm-gold: #C8A24D;
   --bcm-charcoal: #1C2331;
   --bcm-white: #FAF9F7;
-
-  /* Secondary Palette */
   --bcm-maritime: #0F2A45;
   --bcm-sage: #7A9B7E;
   --bcm-gray: #F1F1F1;
-
-  /* Gold System */
   --bcm-gold-hover: #B8923F;
   --bcm-gold-light: #D4B46A;
   --bcm-gold-soft: rgba(200, 162, 77, 0.07);
   --bcm-gold-border: rgba(200, 162, 77, 0.18);
   --bcm-gold-glow: rgba(200, 162, 77, 0.12);
-
-  /* Text Hierarchy */
   --bcm-text-primary: #1C2331;
   --bcm-text-secondary: #3A4255;
   --bcm-text-tertiary: #5C6478;
   --bcm-text-light: rgba(250, 249, 247, 0.88);
   --bcm-text-muted: rgba(250, 249, 247, 0.62);
-
-  /* Surfaces */
   --bcm-surface: #F7F7F5;
   --bcm-surface-raised: #FFFFFF;
   --bcm-border: #E5E5E2;
   --bcm-border-subtle: rgba(28, 35, 49, 0.06);
-
-  /* Shadows */
   --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
   --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
   --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
   --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
   --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
-
-  /* Radii */
   --bcm-radius: 6px;
   --bcm-radius-md: 10px;
   --bcm-radius-lg: 14px;
-
-  /* Typography */
   --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
   --bcm-font-body: 'Inter', -apple-system, sans-serif;
-
-  /* Transitions */
   --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Reset for this component */
-.bcm-project-page * {
-  box-sizing: border-box;
+/* Reset and base styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.bcm-project-page {
-  font-family: var(--font-body);
+html, body {
+  font-family: var(--bcm-font-body);
   color: var(--bcm-text-primary);
-  line-height: 1.6;
-  font-size: 16px;
-  background: var(--bcm-white);
-  overflow-x: hidden;
-  /* WordPress full-width override */
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  position: relative;
+  background-color: var(--bcm-white);
 }
 
-.bcm-project-page img {
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  margin: 2rem 0 1rem 0;
+  color: var(--bcm-text-primary);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin: 1.5rem 0 0.75rem 0;
+  color: var(--bcm-text-secondary);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--bcm-text-secondary);
+}
+
+/* Links */
+a {
+  color: var(--bcm-gold);
+  text-decoration: none;
+  transition: color 0.3s var(--bcm-ease);
+}
+
+a:hover {
+  color: var(--bcm-gold-hover);
+}
+
+/* Images */
+img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* ============================================
-   PROJECT INFO BAR (below site hero)
-   ============================================ */
-
-.bcm-project-info-bar {
-  background: var(--bcm-black);
-  padding: 1rem 2rem;
+/* Sections */
+section {
+  padding: 72px 20px;
 }
 
-.bcm-project-info-bar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+@media (min-width: 768px) {
+  section {
+    padding: 96px 40px;
+  }
 }
 
-.bcm-project-info-bar__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: 100px;
-  font-size: 0.8rem;
+@media (min-width: 1024px) {
+  section {
+    padding: 112px 60px;
+  }
+}
+
+/* Button styles */
+.bcm-btn {
+  display: inline-block;
+  padding: 15px 34px;
+  border-radius: var(--bcm-radius);
+  font-family: var(--bcm-font-display);
   font-weight: 600;
-  letter-spacing: 0.02em;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s var(--bcm-ease);
+  border: none;
+}
+
+.bcm-btn-gold {
+  background-color: var(--bcm-gold);
+  color: var(--bcm-black);
+}
+
+.bcm-btn-gold:hover {
+  background-color: var(--bcm-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--bcm-shadow-gold);
+}
+
+.bcm-btn-ghost {
+  background-color: transparent;
+  color: var(--bcm-text-primary);
+  border: 1px solid var(--bcm-border);
+}
+
+.bcm-btn-ghost:hover {
+  border-color: var(--bcm-gold);
+  color: var(--bcm-gold);
+}
+
+/* Existing content styling compatibility */
+.bcm-project-page,
+.bcm-essex,
+.bcm-cottage {
+  width: 100%;
+}
+
+/* Section layouts - mobile first */
+.bcm-content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bcm-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .bcm-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bcm-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Gallery image styling */
+.bcm-gallery img {
+  border-radius: var(--bcm-radius-lg);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s var(--bcm-ease), box-shadow 0.3s var(--bcm-ease);
+}
+
+.bcm-gallery img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 0 3px var(--bcm-gold-border), var(--bcm-shadow-md);
+}
+
+/* Alternate section backgrounds */
+.bcm-section-light {
+  background-color: var(--bcm-white);
+}
+
+.bcm-section-surface {
+  background-color: var(--bcm-surface);
+}
+
+.bcm-section-dark {
+  background: linear-gradient(170deg, var(--bcm-black), var(--bcm-charcoal));
+  color: var(--bcm-text-light);
+}
+
+.bcm-section-dark h2,
+.bcm-section-dark h3 {
   color: var(--bcm-white);
-  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.bcm-project-info-bar__badge svg {
-  width: 14px;
-  height: 14px;
-  fill: var(--bcm-gold);
+.bcm-section-dark p {
+  color: var(--bcm-text-muted);
 }
 
-.bcm-project-info-bar__details {
+/* Trust bar styles */
+.bcm-trust {
+  background-color: var(--bcm-black);
+  color: var(--bcm-white);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 20px;
   display: flex;
-  align-items: center;
-  gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.bcm-project-info-bar__item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.85);
+.bcm-trust-item {
+  opacity: 0.5;
 }
 
-.bcm-project-info-bar__item svg {
-  width: 16px;
-  height: 16px;
-  opacity: 0.7;
+/* CTA band with gold accent */
+.bcm-cta-band {
+  background-color: var(--bcm-black);
+  border-left: 4px solid var(--bcm-gold);
+  padding: 48px 40px;
+  text-align: center;
+  color: var(--bcm-white);
 }
 
-.bcm-project-info-bar__divider {
-  width: 4px;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
+.bcm-cta-band h2 {
+  color: var(--bcm-white);
+  margin-bottom: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  .bcm-project-info-bar__inner {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .bcm-project-info-bar__details {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .bcm-project-info-bar__divider {
+.bcm-cta-band p {
+  color: var(--bcm-text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Responsive utilities */
+@media (max-width: 767px) {
+  .bcm-desktop-only {
     display: none;
   }
 }
 
-/* ============================================
-   SECTION BASE STYLES
-   ============================================ */
-
-.bcm-project-section {
-  padding: var(--section-padding) 2rem;
-}
-
-.bcm-project-section--alt {
-  background: var(--bcm-surface);
-}
-
-.bcm-project-section--navy {
-  background: var(--bcm-black);
-  color: var(--bcm-white);
-}
-
-.bcm-project-container {
-  max-width: var(--container-max);
-  margin: 0 auto;
-}
-
-.bcm-project-container--narrow {
-  max-width: var(--container-narrow);
-}
-
-/* ============================================
-   SECTION HEADERS
-   ============================================ */
-
-.bcm-project-section__header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.bcm-project-section__eyebrow {
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--bcm-black);
-  margin-bottom: 0.75rem;
-}
-
-.bcm-project-section--navy .bcm-project-section__eyebrow {
-  color: var(--bcm-gold);
-}
-
-.bcm-project-section__title {
-  font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--bcm-text-primary);
-}
-
-.bcm-project-section--navy .bcm-project-section__title {
-  color: var(--bcm-white);
-}
-
-.bcm-project-section__subtitle {
-  font-size: 1.1rem;
-  color: var(--bcm-text-tertiary);
-  max-width: 600px;
-  margin: 1rem auto 0;
-}
-
-/* ============================================
-   VIDEO WALKTHROUGH SECTION
-   ============================================ */
-
-.bcm-video-walkthrough {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.bcm-video-wrapper {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
-  background: var(--bcm-text-primary);
-}
-
-.bcm-video-wrapper--vertical {
-  aspect-ratio: 9/16;
-  max-height: 700px;
-}
-
-.bcm-video-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.bcm-video-caption {
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--bcm-text-tertiary);
-  margin-top: 1.25rem;
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 500px) {
-  .bcm-video-walkthrough {
-    max-width: 100%;
-  }
-  
-  .bcm-video-wrapper--vertical {
-    max-height: 600px;
-  }
-}
-
-/* ============================================
-   THE STORY SECTION
-   ============================================ */
-
-.bcm-story-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .bcm-story-layout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
-
-.bcm-story-content p {
-  color: var(--bcm-text-tertiary);
-  margin-bottom: 1.25rem;
-}
-
-.bcm-story-content p:last-of-type {
-  margin-bottom: 0;
-}
-
-.bcm-story-image {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.bcm-story-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ============================================
-   THE VISION (DESIGN) SECTION
-   ============================================ */
-
-.bcm-vision-layout {
-  display: block;
-}
-
-.bcm-vision-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.bcm-vision-story {
-  max-width: 700px;
-  margin: 0 auto 3rem;
-  text-align: center;
-}
-
-.bcm-vision-story p {
-  color: var(--bcm-text-tertiary);
-  margin-bottom: 1.5rem;
-}
-
-.bcm-vision-text {
-  max-width: 700px;
-  margin-bottom: 3rem;
-}
-
-@media (min-width: 769px) {
-  .bcm-vision-text {
-    max-width: 65%;
-  }
-}
-
-.bcm-vision-text h3 {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--bcm-text-primary);
-}
-
-.bcm-vision-text p {
-  color: var(--bcm-text-tertiary);
-  margin-bottom: 1rem;
-}
-
-.bcm-vision-highlight {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background: var(--bcm-white);
-  padding: 1.25rem;
-  border-radius: 8px;
-  margin-top: 1.5rem;
-  border: 1px solid var(--bcm-gray);
-  text-align: left;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bcm-vision-highlight__icon {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  background: var(--bcm-black);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bcm-vision-highlight__icon svg {
-  width: 20px;
-  height: 20px;
-  fill: var(--bcm-gold);
-}
-
-.bcm-vision-highlight__text strong {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  margin-bottom: 0.25rem;
-}
-
-.bcm-vision-highlight__text span {
-  font-size: 0.875rem;
-  color: var(--bcm-text-tertiary);
-}
-
-/* ============================================
-   FEATURES GRID
-   ============================================ */
-
-.bcm-features-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-@media (max-width: 900px) {
-  .bcm-features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .bcm-features-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.bcm-feature {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background: var(--bcm-white);
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-}
-
-.bcm-feature__icon {
-  width: 50px;
-  height: 50px;
-  background: var(--bcm-black);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem;
-}
-
-.bcm-feature__icon svg {
-  width: 24px;
-  height: 24px;
-  stroke: var(--bcm-gold);
-  fill: none;
-}
-
-.bcm-feature__title {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--bcm-text-primary);
-}
-
-.bcm-feature__text {
-  font-size: 0.875rem;
-  color: var(--bcm-text-tertiary);
-}
-
-/* ============================================
-   ROOM SHOWCASE SECTIONS
-   ============================================ */
-
-.bcm-room-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.bcm-room-layout--reverse {
-  grid-template-columns: 0.8fr 1.2fr;
-}
-
-@media (max-width: 768px) {
-  .bcm-room-layout,
-  .bcm-room-layout--reverse {
-    grid-template-columns: 1fr;
-  }
-}
-
-.bcm-room-main-image {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.bcm-room-main-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  min-height: 350px;
-}
-
-.bcm-room-side {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.bcm-room-side-image {
-  flex: 1;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.bcm-room-side-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  min-height: 160px;
-}
-
-.bcm-room-description {
-  background: var(--bcm-white);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border-left: 4px solid var(--bcm-gold);
-}
-
-.bcm-room-description p {
-  color: var(--bcm-text-tertiary);
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-/* ============================================
-   GALLERY SECTION
-   ============================================ */
-
-.bcm-gallery-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.bcm-gallery-tab {
-  padding: 0.6rem 1.25rem;
-  border: 2px solid var(--bcm-gray);
-  border-radius: 100px;
-  background: transparent;
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--bcm-text-tertiary);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.bcm-gallery-tab:hover {
-  border-color: var(--bcm-black);
-  color: var(--bcm-black);
-}
-
-.bcm-gallery-tab.active {
-  background: var(--bcm-black);
-  border-color: var(--bcm-black);
-  color: var(--bcm-white);
-}
-
-.bcm-gallery-grid {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding-bottom: 1rem;
-  -webkit-overflow-scrolling: touch;
-}
-
-.bcm-gallery-grid::-webkit-scrollbar {
-  height: 8px;
-}
-
-.bcm-gallery-grid::-webkit-scrollbar-track {
-  background: var(--bcm-gray);
-  border-radius: 4px;
-}
-
-.bcm-gallery-grid::-webkit-scrollbar-thumb {
-  background: var(--bcm-text-tertiary);
-  border-radius: 4px;
-}
-
-.bcm-gallery-grid::-webkit-scrollbar-thumb:hover {
-  background: var(--bcm-black);
-}
-
-.bcm-gallery-item {
-  flex: 0 0 auto;
-  width: 350px;
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  scroll-snap-align: start;
-}
-
-.bcm-gallery-item:hover {
-  transform: scale(1.02);
-}
-
-.bcm-gallery-item img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-.bcm-gallery-item--tall {
-  width: 280px;
-}
-
-.bcm-gallery-item--tall img {
-  height: 350px;
-}
-
-.bcm-gallery-item--wide {
-  width: 500px;
-}
-
-.bcm-gallery-item--wide img {
-  height: 280px;
-}
-
-/* ============================================
-   SIGNATURE DETAILS SECTION
-   ============================================ */
-
-.bcm-details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .bcm-details-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-}
-
-.bcm-detail-card {
-  background: var(--bcm-white);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease;
-}
-
-.bcm-detail-card:hover {
-  transform: translateY(-4px);
-}
-
-.bcm-detail-card__image {
-  aspect-ratio: 16/10;
-  overflow: hidden;
-}
-
-.bcm-detail-card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.bcm-detail-card:hover .bcm-detail-card__image img {
-  transform: scale(1.05);
-}
-
-.bcm-detail-card__content {
-  padding: 1.25rem 1.5rem 1.5rem;
-}
-
-.bcm-detail-card__title {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--bcm-text-primary);
-}
-
-.bcm-detail-card__text {
-  font-size: 0.9rem;
-  color: var(--bcm-text-tertiary);
-  line-height: 1.5;
-}
-
-.bcm-detail-card__quote {
-  font-style: italic;
-  color: var(--bcm-black);
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--bcm-gray);
-  font-size: 0.875rem;
-}
-
-/* Subtle internal links */
-.bcm-project-page a.bcm-subtle-link {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid var(--bcm-gray);
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-.bcm-project-page a.bcm-subtle-link:hover {
-  color: var(--bcm-black);
-  border-bottom-color: var(--bcm-black);
-}
-
-.bcm-vision-highlight a.bcm-subtle-link {
-  color: var(--bcm-black);
-  border-bottom-color: rgba(3, 0, 88, 0.3);
-}
-
-.bcm-vision-highlight a.bcm-subtle-link:hover {
-  border-bottom-color: var(--bcm-black);
-}
-
-/* ============================================
-   TESTIMONIAL SECTION
-   ============================================ */
-
-.bcm-testimonial {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.bcm-testimonial__icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 2rem;
-  opacity: 0.3;
-}
-
-.bcm-testimonial__quote {
-  font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
-  font-weight: 500;
-  line-height: 1.3;
-  color: var(--bcm-white);
-  margin-bottom: 2rem;
-}
-
-.bcm-testimonial__secondary {
-  font-size: 1.1rem;
-  opacity: 0.85;
-  margin-bottom: 2rem;
-  font-style: italic;
-}
-
-.bcm-testimonial__attribution {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.bcm-testimonial__divider {
-  width: 40px;
-  height: 2px;
-  background: var(--bcm-gold);
-}
-
-.bcm-testimonial__name {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.bcm-testimonial__detail {
-  font-size: 0.85rem;
-  opacity: 0.7;
-}
-
-/* ============================================
-   PROJECT SPECS
-   ============================================ */
-
-.bcm-specs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  background: var(--bcm-white);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-}
-
-.bcm-spec {
-  text-align: center;
-  padding: 1rem;
-}
-
-.bcm-spec__label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--bcm-text-tertiary);
-  margin-bottom: 0.5rem;
-}
-
-.bcm-spec__value {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--bcm-text-primary);
-}
-
-/* ============================================
-   BHS SUPPORT CALLOUT
-   ============================================ */
-
-.bcm-bhs-callout {
-  background: linear-gradient(135deg, var(--bcm-surface) 0%, #fff 100%);
-  border: 2px solid var(--bcm-gold);
-  border-radius: 16px;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .bcm-bhs-callout {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-.bcm-bhs-callout__icon {
-  flex-shrink: 0;
-  width: 70px;
-  height: 70px;
-  background: var(--bcm-black);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bcm-bhs-callout__icon svg {
-  width: 35px;
-  height: 35px;
-  stroke: var(--bcm-gold);
-  fill: none;
-}
-
-.bcm-bhs-callout__content h3 {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--bcm-text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.bcm-bhs-callout__content p {
-  color: var(--bcm-text-tertiary);
-  margin: 0;
-}
-
-/* ============================================
-   CTA SECTION
-   ============================================ */
-
-.bcm-cta {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--bcm-black) 0%, #050080 100%);
-  border-radius: 16px;
-  margin: 0 2rem;
-}
-
-.bcm-cta h2,
-.bcm-cta__title {
-  font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  font-weight: 700;
-  color: #FFFFFF !important;
-  margin-bottom: 1rem;
-}
-
-.bcm-cta p,
-.bcm-cta__text {
-  color: rgba(255, 255, 255, 0.9) !important;
-  margin-bottom: 2rem;
-  font-size: 1.05rem;
-}
-
-.bcm-cta a,
-.bcm-cta .bcm-btn--outline {
-  color: #FFFFFF !important;
-}
-
-.bcm-cta__buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.bcm-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  border-radius: 100px;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.bcm-btn--primary {
-  background: var(--bcm-gold);
-  color: var(--bcm-text-primary);
-}
-
-.bcm-btn--primary:hover {
-  background: var(--bcm-gold-hover);
-  transform: translateY(-2px);
-}
-
-.bcm-btn--outline {
-  background: transparent;
-  color: var(--bcm-white);
-  border: 2px solid rgba(255, 255, 255, 0.4);
-}
-
-.bcm-btn--outline:hover {
-  border-color: var(--bcm-white);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* ============================================
-   RESPONSIVE ADJUSTMENTS
-   ============================================ */
-
-@media (max-width: 768px) {
-  .bcm-project-section {
-    padding: 3rem 1.5rem;
-  }
-  
-  .bcm-cta {
-    margin: 0 1rem;
-    padding: 3rem 1.5rem;
-  }
-  
-  .bcm-gallery-item {
-    width: 280px;
-  }
-  
-  .bcm-gallery-item--wide {
-    width: 350px;
-  }
-}
-
-@media (max-width: 480px) {
-  .bcm-gallery-item {
-    width: 260px;
-  }
-  
-  .bcm-gallery-item--wide {
-    width: 300px;
+@media (min-width: 768px) {
+  .bcm-mobile-only {
+    display: none;
   }
 }
 </style>
@@ -1529,90 +805,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- ============================================
      SCHEMA MARKUP
      ============================================ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Custom Home Construction",
-  "name": "Custom Home Build - Exeter, NH",
-  "description": "Complete custom home build in Exeter, NH featuring open concept living, oversized kitchen island, wet bar, and farmland views. Designed and built entirely in-house by Bradford Construction Management.",
-  "provider": {
-    "@type": "HomeAndConstructionBusiness",
-    "name": "Bradford Construction Management",
-    "telephone": "978-945-9771",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "145 South Main Street",
-      "addressLocality": "Haverhill",
-      "addressRegion": "MA",
-      "postalCode": "01835"
-    },
-    "url": "https://bradfordcm.com",
-    "areaServed": ["Exeter", "New Hampshire", "North Shore Massachusetts", "Merrimack Valley"]
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Exeter",
-    "containedInPlace": {
-      "@type": "State",
-      "name": "New Hampshire"
-    }
-  }
-}
-</script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Bradford Construction Management",
-  "image": "https://bradfordcm.com/wp-content/uploads/2025/08/asdas-1.png",
-  "telephone": "978-945-9771",
-  "email": "info@bradfordcm.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "145 South Main Street",
-    "addressLocality": "Haverhill",
-    "addressRegion": "MA",
-    "postalCode": "01835",
-    "addressCountry": "US"
-  },
-  "url": "https://bradfordcm.com",
-  "priceRange": "$$$"
-}
-</script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ImageGallery",
-  "name": "Exeter Custom Home Build Project Gallery",
-  "description": "Photos of a custom home build in Exeter, NH including kitchen, dining, living room, bathrooms, and exterior views.",
-  "numberOfItems": 30,
-  "about": {
-    "@type": "Thing",
-    "name": "Custom Home Construction"
-  }
-}
-</script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Exeter Custom Home Walkthrough - Kitchen & Living Areas",
-  "description": "Rick White walks through the kitchen, dining, and living areas of a custom home build in Exeter, NH, explaining the open concept design and how it maximizes the farmland views.",
-  "thumbnailUrl": "https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-1-1.webp",
-  "contentUrl": "https://bradfordcm.com/wp-content/uploads/2025/12/Rick-on-camera-kitchen-explanation-.webm",
-  "uploadDate": "2025-12-11",
-  "duration": "PT1M",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Bradford Construction Management",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://bradfordcm.com/wp-content/uploads/2025/08/asdas-1.png"
-    }
-  }
-}
-</script>

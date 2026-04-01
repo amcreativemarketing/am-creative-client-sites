@@ -6,83 +6,66 @@
 -->
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Primary Palette */
   --bcm-black: #1A1A1A;
   --bcm-gold: #C8A24D;
   --bcm-charcoal: #1C2331;
   --bcm-white: #FAF9F7;
-
-  /* Secondary Palette */
   --bcm-maritime: #0F2A45;
   --bcm-sage: #7A9B7E;
   --bcm-gray: #F1F1F1;
-
-  /* Gold System */
   --bcm-gold-hover: #B8923F;
   --bcm-gold-light: #D4B46A;
   --bcm-gold-soft: rgba(200, 162, 77, 0.07);
   --bcm-gold-border: rgba(200, 162, 77, 0.18);
   --bcm-gold-glow: rgba(200, 162, 77, 0.12);
-
-  /* Text Hierarchy */
   --bcm-text-primary: #1C2331;
   --bcm-text-secondary: #3A4255;
   --bcm-text-tertiary: #5C6478;
   --bcm-text-light: rgba(250, 249, 247, 0.88);
   --bcm-text-muted: rgba(250, 249, 247, 0.62);
-
-  /* Surfaces */
   --bcm-surface: #F7F7F5;
   --bcm-surface-raised: #FFFFFF;
   --bcm-border: #E5E5E2;
   --bcm-border-subtle: rgba(28, 35, 49, 0.06);
-
-  /* Shadows */
   --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
   --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
   --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
   --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
   --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
-
-  /* Radii */
   --bcm-radius: 6px;
   --bcm-radius-md: 10px;
   --bcm-radius-lg: 14px;
-
-  /* Typography */
   --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
   --bcm-font-body: 'Inter', -apple-system, sans-serif;
-
-  /* Transitions */
   --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .bcm-services {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: var(--bcm-text-primary);
-    line-height: 1.6;
-    font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--bcm-font-body);
+  color: var(--bcm-text-primary);
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 .bcm-services *,
 .bcm-services *::before,
 .bcm-services *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .bcm-services h1,
 .bcm-services h2,
 .bcm-services h3,
 .bcm-services h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    color: var(--bcm-text-primary);
-    margin: 0 0 16px 0;
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  color: var(--bcm-text-primary);
+  margin: 0 0 16px 0;
 }
 
 .bcm-services h1 { font-size: 2rem; letter-spacing: -0.025em; line-height: 1.2; }
@@ -90,1009 +73,941 @@
 .bcm-services h3 { font-size: 1.3rem; line-height: 1.3; }
 
 .bcm-services p {
-    margin: 0 0 16px 0;
+  margin: 0 0 16px 0;
 }
 
 .bcm-services a {
-    color: var(--bcm-black);
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-}
-
-.bcm-services a:hover {
-    color: var(--bcm-navy-deep);
+  color: var(--bcm-black);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
 .bcm-services a:not(.bcm-services-cta) {
-    transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 /* ===== HERO SECTION ===== */
 .bcm-services-hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px 20px;
-    overflow: hidden;
-    background: url('https://bradfordcm.com/wp-content/uploads/2026/03/bchill-adu-block-build-edited-16.webp') center/cover no-repeat;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  overflow: hidden;
+  background: url('https://bradfordcm.com/wp-content/uploads/2026/03/bchill-adu-block-build-edited-16.webp') center/cover no-repeat;
 }
 
 .bcm-services-hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(170deg, rgba(4, 0, 107, 0.55) 0%, rgba(6, 0, 151, 0.35) 50%, rgba(30, 41, 59, 0.4) 100%);
-    z-index: 1;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(170deg, rgba(26, 26, 26, 0.55) 0%, rgba(28, 35, 49, 0.5) 50%, rgba(15, 42, 69, 0.4) 100%);
+  z-index: 1;
 }
 
 .bcm-services-hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 780px;
-    margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .bcm-services-hero-badge {
-    display: inline-block;
-    padding: 6px 18px;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 9999px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--bcm-gold);
-    margin-bottom: 24px;
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(200, 162, 77, 0.15);
+  border: 1px solid var(--bcm-gold-border);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bcm-gold);
+  margin-bottom: 24px;
 }
 
 .bcm-services-hero h1 {
-    color: var(--bcm-white);
-    font-size: 2rem;
-    margin-bottom: 20px;
+  color: var(--bcm-white);
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .bcm-services-hero p {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.08rem;
-    line-height: 1.7;
-    max-width: 600px;
-    margin: 0 auto 32px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 32px;
 }
 
 .bcm-services-cta {
-    display: inline-block;
-    padding: 16px 34px;
-    border-radius: 9999px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    min-height: 44px;
-    min-width: 44px;
+  display: inline-block;
+  padding: 15px 34px;
+  border-radius: 6px;
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s var(--bcm-ease);
+  min-height: 44px;
+  min-width: 44px;
+  border: none;
 }
 
 .bcm-services-cta--gold {
-    background: var(--bcm-gold);
-    color: var(--bcm-black);
-    box-shadow: var(--bcm-shadow-gold);
+  background: var(--bcm-gold);
+  color: var(--bcm-black);
+  box-shadow: var(--bcm-shadow-gold);
 }
 
 .bcm-services-cta--gold:hover {
-    background: var(--bcm-gold-hover);
-    color: var(--bcm-black);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(255, 205, 87, 0.4);
+  background: var(--bcm-gold-hover);
+  color: var(--bcm-black);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(200, 162, 77, 0.3);
 }
 
 .bcm-services-cta--outline {
-    background: var(--bcm-white);
-    border: 2px solid var(--bcm-white);
-    color: var(--bcm-black);
+  background: transparent;
+  border: 2px solid var(--bcm-white);
+  color: var(--bcm-white);
 }
 
 .bcm-services-cta--outline:hover {
-    background: transparent;
-    border-color: var(--bcm-gold);
-    color: var(--bcm-gold);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(255, 205, 87, 0.25);
-}
-
-.bcm-services-cta--navy {
-    background: var(--bcm-black);
-    color: var(--bcm-white);
-    box-shadow: 0 2px 10px rgba(6, 0, 151, 0.2);
-}
-
-.bcm-services-cta--navy:hover {
-    background: var(--bcm-navy-deep);
-    color: var(--bcm-white);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(6, 0, 151, 0.3);
+  background: var(--bcm-gold);
+  border-color: var(--bcm-gold);
+  color: var(--bcm-black);
+  transform: translateY(-2px);
 }
 
 /* ===== TRUST BAR ===== */
 .bcm-services-trust {
-    background: var(--bcm-black);
-    padding: 20px;
-    text-align: center;
-    position: relative;
+  background: var(--bcm-black);
+  padding: 20px;
+  text-align: center;
+  position: relative;
 }
 
 .bcm-services-trust::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--bcm-black), var(--bcm-gold), var(--bcm-black));
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--bcm-black), var(--bcm-gold), var(--bcm-black));
 }
 
 .bcm-services-trust-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 0;
-    max-width: 1100px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 0;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .bcm-services-trust-item {
-    color: var(--bcm-white);
-    font-size: 0.82rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    padding: 0 20px;
-    white-space: nowrap;
-    border-right: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(250, 249, 247, 0.7);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0 20px;
+  white-space: nowrap;
+  border-right: 1px solid rgba(250, 249, 247, 0.2);
 }
 
 .bcm-services-trust-item:last-child {
-    border-right: none;
+  border-right: none;
 }
 
 /* ===== SECTIONS ===== */
 .bcm-services-section {
-    padding: 72px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
+  padding: 72px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .bcm-services-section--alt {
-    background: var(--bcm-surface);
+  background: var(--bcm-surface);
 }
 
-.bcm-services-section--alt .bcm-services-section {
-    padding-left: 20px;
-    padding-right: 20px;
+.bcm-services-section--dark {
+  background: linear-gradient(170deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-.bcm-services-section--navy {
-    background: linear-gradient(170deg, var(--bcm-black) 0%, var(--bcm-navy-deep) 100%);
-    position: relative;
-    overflow: hidden;
+.bcm-services-section--dark::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--bcm-gold-glow) 0%, transparent 70%);
+  z-index: 0;
 }
 
-.bcm-services-section--navy::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 205, 87, 0.07) 0%, transparent 70%);
-}
-
-.bcm-services-section--full {
-    padding-left: 0;
-    padding-right: 0;
+.bcm-services-section--dark > * {
+  position: relative;
+  z-index: 1;
 }
 
 .bcm-services-section-header {
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto 48px;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
 }
 
+.bcm-services-section-header h2::before,
 .bcm-services-section-header h2::after {
-    content: '';
-    display: block;
-    width: 48px;
-    height: 3px;
-    background: var(--bcm-gold);
-    border-radius: 2px;
-    margin: 16px auto 0;
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--bcm-gold);
+  margin: 0 12px;
+  vertical-align: middle;
 }
 
 .bcm-services-section-header p {
-    color: var(--bcm-text-tertiary);
-    font-size: 1.02rem;
-    margin-top: 12px;
+  color: var(--bcm-text-tertiary);
+  font-size: 1.02rem;
+  margin-top: 12px;
+}
+
+.bcm-services-section--dark .bcm-services-section-header h2 {
+  color: var(--bcm-white);
+}
+
+.bcm-services-section--dark .bcm-services-section-header h2::before,
+.bcm-services-section--dark .bcm-services-section-header h2::after {
+  background: var(--bcm-gold);
+}
+
+.bcm-services-section--dark .bcm-services-section-header p {
+  color: rgba(250, 249, 247, 0.8);
 }
 
 /* ===== SERVICE CARDS GRID ===== */
 .bcm-services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 .bcm-services-card {
-    background: var(--bcm-white);
-    border: 1px solid var(--bcm-gray);
-    border-radius: var(--bcm-radius-lg);
-    overflow: hidden;
-    box-shadow: var(--bcm-shadow-sm);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
+  background: var(--bcm-white);
+  border: 1px solid var(--bcm-border);
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bcm-shadow-sm);
+  transition: all 0.3s var(--bcm-ease);
+  display: flex;
+  flex-direction: column;
 }
 
 .bcm-services-card:hover {
-    box-shadow: var(--bcm-shadow-lg);
-    transform: translateY(-3px);
+  box-shadow: var(--bcm-shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--bcm-gold-border);
 }
 
 .bcm-services-card-img {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: var(--bcm-gray);
 }
 
 .bcm-services-card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--bcm-ease);
 }
 
 .bcm-services-card:hover .bcm-services-card-img img {
-    transform: scale(1.04);
+  transform: scale(1.04);
 }
 
 .bcm-services-card-body {
-    padding: 28px 24px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .bcm-services-card-body h3 {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .bcm-services-card-body p {
-    color: var(--bcm-text-tertiary);
-    font-size: 1rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    flex: 1;
+  color: var(--bcm-text-tertiary);
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  flex: 1;
 }
 
 .bcm-services-card-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--bcm-black);
-    text-decoration: none;
-    transition: gap 0.3s ease, color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--bcm-black);
+  text-decoration: none;
+  transition: gap 0.3s ease, color 0.2s ease;
 }
 
 .bcm-services-card-link:hover {
-    color: var(--bcm-navy-deep);
-    gap: 12px;
+  color: var(--bcm-gold);
+  gap: 12px;
 }
 
 .bcm-services-card-link svg {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  stroke: currentColor;
 }
 
 /* ===== WHY BCM ===== */
-.bcm-services-why {
-    position: relative;
-    z-index: 1;
-}
-
-.bcm-services-why-header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 48px;
-}
-
-.bcm-services-why-header h2 {
-    color: var(--bcm-white);
-}
-
-.bcm-services-why-header h2::after {
-    margin: 16px auto 0;
-}
-
-.bcm-services-why-header p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.02rem;
-    max-width: 680px;
-    margin: 0 auto;
-}
-
 .bcm-services-why-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .bcm-services-why-item {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .bcm-services-why-icon {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    background: var(--bcm-black);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--bcm-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: rgba(250, 249, 247, 0.08);
+  border: 1px solid rgba(250, 249, 247, 0.12);
+  border-radius: var(--bcm-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .bcm-services-why-icon svg {
-    width: 20px;
-    height: 20px;
-    stroke: var(--bcm-gold);
-    fill: none;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  width: 20px;
+  height: 20px;
+  stroke: var(--bcm-gold);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .bcm-services-why-text h3 {
-    color: var(--bcm-white);
-    font-size: 1.1rem;
-    margin-bottom: 6px;
+  color: var(--bcm-white);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
 }
 
 .bcm-services-why-text p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
-    margin: 0;
-    line-height: 1.5;
+  color: rgba(250, 249, 247, 0.7);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
 }
 
 /* ===== PROCESS SECTION ===== */
 .bcm-services-process-steps {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    counter-reset: step;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  counter-reset: step;
 }
 
 .bcm-services-step {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    counter-increment: step;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  counter-increment: step;
+  padding: 16px;
+  border-radius: var(--bcm-radius);
+  transition: background 0.2s ease;
+}
+
+.bcm-services-step:hover {
+  background: rgba(200, 162, 77, 0.05);
 }
 
 .bcm-services-step-num {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    background: var(--bcm-gold-soft);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: var(--bcm-black);
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: var(--bcm-gold-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--bcm-black);
 }
 
 .bcm-services-step-text h3 {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
 }
 
 .bcm-services-step-text p {
-    color: var(--bcm-text-tertiary);
-    font-size: 0.95rem;
-    margin: 0;
-    line-height: 1.5;
+  color: var(--bcm-text-tertiary);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
 }
 
 /* ===== SERVICE AREA ===== */
 .bcm-services-areas-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 24px;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 24px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
 }
 
 .bcm-services-areas-list li {
-    padding: 8px 0;
-    font-size: 1rem;
-    color: var(--bcm-text-primary);
-    border-bottom: 1px solid var(--bcm-gray);
+  padding: 8px 0;
+  font-size: 1rem;
+  color: var(--bcm-text-primary);
+  border-bottom: 1px solid var(--bcm-border);
 }
 
 .bcm-services-areas-list li a {
-    font-weight: 600;
+  font-weight: 600;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.bcm-services-areas-list li a:hover {
+  color: var(--bcm-gold);
+  transform: translateX(3px);
 }
 
 .bcm-services-areas-note {
-    color: var(--bcm-text-tertiary);
-    font-size: 0.95rem;
-    font-style: italic;
+  color: var(--bcm-text-tertiary);
+  font-size: 0.95rem;
+  font-style: italic;
 }
 
 /* ===== FAQ ACCORDION ===== */
 .bcm-services-faq-list {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .bcm-services-faq-item {
-    border: 1px solid var(--bcm-gray);
-    border-radius: var(--bcm-radius);
-    margin-bottom: 12px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+  border: 1px solid var(--bcm-border);
+  border-radius: var(--bcm-radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .bcm-services-faq-item:hover {
-    box-shadow: var(--bcm-shadow-sm);
+  box-shadow: var(--bcm-shadow-sm);
 }
 
 .bcm-services-faq-toggle {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 20px 24px;
-    background: var(--bcm-white);
-    border: none;
-    cursor: pointer;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--bcm-text-primary);
-    text-align: left;
-    line-height: 1.4;
-    min-height: 44px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--bcm-white);
+  border: none;
+  cursor: pointer;
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--bcm-text-primary);
+  text-align: left;
+  line-height: 1.4;
+  min-height: 44px;
+  transition: background 0.2s ease;
+}
+
+.bcm-services-faq-toggle:hover {
+  background: var(--bcm-surface);
 }
 
 .bcm-services-faq-indicator {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    background: var(--bcm-gold-soft);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: var(--bcm-black);
-    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  background: var(--bcm-gold-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--bcm-black);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .bcm-services-faq-item.active .bcm-services-faq-indicator {
-    background: var(--bcm-black);
-    color: var(--bcm-gold);
-    transform: rotate(45deg);
+  background: var(--bcm-black);
+  color: var(--bcm-gold);
+  transform: rotate(45deg);
 }
 
 .bcm-services-faq-item.active .bcm-services-faq-toggle {
-    border-bottom: 1px solid var(--bcm-gray);
+  border-bottom: 1px solid var(--bcm-border);
 }
 
 .bcm-services-faq-answer {
-    color: var(--bcm-text-tertiary);
-    font-size: 0.98rem;
-    line-height: 1.7;
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  color: var(--bcm-text-tertiary);
+  font-size: 0.98rem;
+  line-height: 1.7;
 }
 
 .bcm-services-faq-item.active {
-    box-shadow: var(--bcm-shadow-md);
-    border-color: rgba(6, 0, 151, 0.1);
+  box-shadow: var(--bcm-shadow-md);
+  border-color: var(--bcm-gold-border);
+}
+
+.bcm-services-faq-item.active .bcm-services-faq-answer {
+  max-height: 400px;
+  padding: 20px 24px;
+}
+
+.bcm-services-faq-answer a {
+  color: var(--bcm-gold);
+  text-decoration: none;
+}
+
+.bcm-services-faq-answer a:hover {
+  text-decoration: underline;
 }
 
 /* ===== CLOSING CTA ===== */
 .bcm-services-closing {
-    text-align: center;
-    position: relative;
-    z-index: 1;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .bcm-services-closing h2 {
-    color: var(--bcm-white);
+  color: var(--bcm-white);
 }
 
+.bcm-services-closing h2::before,
 .bcm-services-closing h2::after {
-    content: '';
-    display: block;
-    width: 48px;
-    height: 3px;
-    background: var(--bcm-gold);
-    border-radius: 2px;
-    margin: 16px auto 0;
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--bcm-gold);
+  margin: 0 12px;
+  vertical-align: middle;
 }
 
 .bcm-services-closing p {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 1.08rem;
-    max-width: 600px;
-    margin: 16px auto 32px;
-    line-height: 1.7;
+  color: rgba(250, 249, 247, 0.85);
+  font-size: 1.08rem;
+  max-width: 600px;
+  margin: 16px auto 32px;
+  line-height: 1.7;
 }
 
 .bcm-services-closing-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
 }
 
-/* ===== TABLET ===== */
+/* ===== RESPONSIVE ===== */
 @media (min-width: 768px) {
-    .bcm-services h1 { font-size: 2.5rem; }
-    .bcm-services h2 { font-size: 2rem; }
-    .bcm-services-hero { min-height: 100vh; padding: 80px 40px; }
-    .bcm-services-hero p { font-size: 1.12rem; }
-    .bcm-services-section { padding: 88px 40px; }
-    .bcm-services-grid { grid-template-columns: 1fr 1fr; }
-    .bcm-services-why-grid { grid-template-columns: 1fr 1fr; }
-    .bcm-services-areas-list { grid-template-columns: 1fr 1fr 1fr; }
-    .bcm-services-trust-items { gap: 0; }
-    .bcm-services-closing-buttons { flex-direction: row; justify-content: center; }
+  .bcm-services h1 { font-size: 2.5rem; }
+  .bcm-services h2 { font-size: 2rem; }
+  .bcm-services-hero { min-height: 100vh; padding: 80px 40px; }
+  .bcm-services-hero p { font-size: 1.12rem; }
+  .bcm-services-section { padding: 88px 40px; }
+  .bcm-services-grid { grid-template-columns: 1fr 1fr; }
+  .bcm-services-why-grid { grid-template-columns: 1fr 1fr; }
+  .bcm-services-areas-list { grid-template-columns: 1fr 1fr 1fr; }
+  .bcm-services-closing-buttons { flex-direction: row; justify-content: center; }
 }
 
-/* ===== DESKTOP ===== */
 @media (min-width: 1024px) {
-    .bcm-services h1 { font-size: 3rem; }
-    .bcm-services h2 { font-size: 2.2rem; }
-    .bcm-services-grid { grid-template-columns: 1fr 1fr 1fr; }
-    .bcm-services-why-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-    .bcm-services-card-img { height: 200px; }
-}
-
-/* ===== UX IMPROVEMENTS ===== */
-
-/* Smooth scroll */
-.bcm-services {
-    scroll-behavior: smooth;
-}
-
-/* Explore card links - gold underline on hover */
-.bcm-services-card-link {
-    position: relative;
-    padding-bottom: 2px;
-}
-
-.bcm-services-card-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--bcm-gold);
-    border-radius: 1px;
-    transition: width 0.3s ease;
-}
-
-.bcm-services-card-link:hover::after {
-    width: 100%;
-}
-
-/* Location list - hover lift on linked items */
-.bcm-services-areas-list li a {
-    display: inline-block;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.bcm-services-areas-list li a:hover {
-    color: var(--bcm-black);
-    transform: translateX(3px);
-}
-
-/* FAQ toggle - smoother expand with max-height */
-.bcm-services-faq-answer {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 24px;
-    transition: max-height 0.35s ease, padding 0.35s ease;
-}
-
-.bcm-services-faq-item.active .bcm-services-faq-answer {
-    max-height: 300px;
-    padding: 20px 24px;
-}
-
-/* Trust bar items - subtle hover glow */
-.bcm-services-trust-item {
-    transition: color 0.2s ease;
-}
-
-.bcm-services-trust-item:hover {
-    color: var(--bcm-gold);
-}
-
-/* Process step hover */
-.bcm-services-step {
-    padding: 16px;
-    border-radius: var(--bcm-radius);
-    transition: background 0.2s ease;
-}
-
-.bcm-services-step:hover {
-    background: var(--bcm-white);
-    box-shadow: var(--bcm-shadow-sm);
+  .bcm-services h1 { font-size: 3rem; }
+  .bcm-services h2 { font-size: 2.2rem; }
+  .bcm-services-grid { grid-template-columns: repeat(3, 1fr); }
+  .bcm-services-why-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .bcm-services-card-img { height: 200px; }
 }
 </style>
 
 <div class="bcm-services">
 
-    <!-- ===== HERO ===== -->
-    <div class="bcm-services-hero">
-        <div class="bcm-services-hero-content">
-            <span class="bcm-services-hero-badge">Design-Build Contractor - Eastern MA &amp; Southern NH</span>
-            <h1>Residential Design-Build Services in Eastern MA &amp; Southern NH</h1>
-            <p>Full-service design-build for additions, ADUs, renovations, and custom homes. One team manages every phase - design through final walkthrough. No handoffs, no surprises.</p>
-            <a href="https://bradfordcm.com/contact/" class="bcm-services-cta bcm-services-cta--gold">Get a Free Estimate</a>
-        </div>
+  <!-- HERO -->
+  <div class="bcm-services-hero">
+    <div class="bcm-services-hero-content">
+      <span class="bcm-services-hero-badge">Design-Build Contractor - Eastern MA &amp; Southern NH</span>
+      <h1>Residential Design-Build Services in Eastern MA &amp; Southern NH</h1>
+      <p>Full-service design-build for additions, ADUs, renovations, and custom homes. One team manages every phase - design through final walkthrough. No handoffs, no surprises.</p>
+      <a href="https://bradfordcm.com/contact/" class="bcm-services-cta bcm-services-cta--gold">Get a Free Estimate</a>
+    </div>
+  </div>
+
+  <!-- TRUST BAR -->
+  <div class="bcm-services-trust">
+    <div class="bcm-services-trust-items">
+      <span class="bcm-services-trust-item">5-Star Google Rated</span>
+      <span class="bcm-services-trust-item">Based in Haverhill, MA</span>
+      <span class="bcm-services-trust-item">Licensed &amp; Insured</span>
+      <span class="bcm-services-trust-item">10+ Years Experience</span>
+      <span class="bcm-services-trust-item">Commercial-Grade Project Management</span>
+    </div>
+  </div>
+
+  <!-- OUR SERVICES GRID -->
+  <div class="bcm-services-section">
+    <div class="bcm-services-section-header">
+      <h2>Our Residential Construction Services</h2>
+      <p>BCM offers a full range of residential design-build services across the North Shore and Merrimack Valley. Every project is managed with commercial-grade discipline - clear timelines, transparent pricing, and daily photo updates so you're never left wondering.</p>
     </div>
 
-    <!-- ===== TRUST BAR ===== -->
-    <div class="bcm-services-trust">
-        <div class="bcm-services-trust-items">
-            <span class="bcm-services-trust-item">5-Star Google Rated</span>
-            <span class="bcm-services-trust-item">Based in Haverhill, MA</span>
-            <span class="bcm-services-trust-item">Licensed &amp; Insured</span>
-            <span class="bcm-services-trust-item">10+ Years Experience</span>
-            <span class="bcm-services-trust-item">Commercial-Grade Project Management</span>
+    <div class="bcm-services-grid">
+      <div class="bcm-services-card">
+        <div class="bcm-services-card-img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/IMG_5996-1-scaled.jpg" alt="" width="400" height="220" loading="lazy">
         </div>
-    </div>
+        <div class="bcm-services-card-body">
+          <h3>Home Additions</h3>
+          <p>Need more space without the hassle of moving? BCM builds seamless home additions that match your existing architecture - master suites, family rooms, mudrooms, in-law suites, and more. Our design-build process means you get a single team from concept to completion, with permits managed, schedules kept, and no surprises on price.</p>
+          <a href="https://bradfordcm.com/home-additions/" class="bcm-services-card-link">
+            Explore Home Additions
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
 
-    <!-- ===== OUR SERVICES GRID ===== -->
+      <div class="bcm-services-card">
+        <div class="bcm-services-card-img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/bchill-adu-block-build-edited-18.webp" alt="" width="400" height="220" loading="lazy">
+        </div>
+        <div class="bcm-services-card-body">
+          <h3>ADU Construction (Accessory Dwelling Units)</h3>
+          <p>Massachusetts's ADU law has created major opportunities for homeowners. BCM builds garage conversion ADUs and detached new-build ADUs, handling zoning, permitting, design, and construction under one roof. Whether you want rental income, a multi-generational suite, or a dedicated guest space, we make the process clear and manageable.</p>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/" class="bcm-services-card-link">
+            Explore ADU Construction
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="bcm-services-card">
+        <div class="bcm-services-card-img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/81-North-St-Reveal-Photo-7.jpg" alt="" width="400" height="220" loading="lazy">
+        </div>
+        <div class="bcm-services-card-body">
+          <h3>Home Renovations</h3>
+          <p>From single-room refreshes to whole-home renovations, BCM brings the same project management rigor to every renovation as it does to new construction. That means no scope creep, no disappearing subcontractors, and no mystery invoices at the end. We handle kitchen remodels, bathroom renovations, basement finishes, and full interior transformations across the North Shore.</p>
+          <a href="https://bradfordcm.com/home-renovations/" class="bcm-services-card-link">
+            Explore Home Renovations
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="bcm-services-card">
+        <div class="bcm-services-card-img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-31.webp" alt="" width="400" height="220" loading="lazy">
+        </div>
+        <div class="bcm-services-card-body">
+          <h3>Custom Homes</h3>
+          <p>Building a custom home is the most complex construction project most people will ever undertake. BCM's design-build model simplifies it - one team manages design, engineering, permitting, and construction, so nothing falls through the cracks between your architect and your builder. We build fully custom homes across Haverhill and the greater North Shore with the same accountability we bring to every project.</p>
+          <a href="https://bradfordcm.com/custom-homes/" class="bcm-services-card-link">
+            Explore Custom Homes
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="bcm-services-card">
+        <div class="bcm-services-card-img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-48-1.webp" alt="" width="400" height="220" loading="lazy">
+        </div>
+        <div class="bcm-services-card-body">
+          <h3>Kitchen &amp; Bathroom Remodels</h3>
+          <p>Kitchen and bath remodels rank among the highest-ROI home improvement projects - and among the most disruptive if managed poorly. BCM coordinates design, demolition, plumbing, electrical, tile, cabinetry, and finishing as a single integrated project, not a relay race between separate contractors. The result: a remodel that finishes on time and delivers what was promised.</p>
+          <a href="https://bradfordcm.com/home-renovations/" class="bcm-services-card-link">
+            Explore Renovations
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY BCM -->
+  <div class="bcm-services-section--dark">
     <div class="bcm-services-section">
-        <div class="bcm-services-section-header">
-            <h2>Our Residential Construction Services</h2>
-            <p>BCM offers a full range of residential design-build services across the North Shore and Merrimack Valley. Every project is managed with commercial-grade discipline - clear timelines, transparent pricing, and daily photo updates so you're never left wondering.</p>
+      <div class="bcm-services-section-header">
+        <h2>Commercial-Grade Project Management. Applied to Your Home.</h2>
+        <p>Most residential contractors run jobs loosely - verbal agreements, shifting timelines, inconsistent communication. BCM was built differently. Founder Rick White spent his career managing commercial construction at the highest level: data centers, large-scale facilities, and projects where schedule, budget, and accountability weren't optional. When he launched Bradford Construction Management, he brought that same discipline into the residential market.</p>
+      </div>
+
+      <div class="bcm-services-why-grid">
+        <div class="bcm-services-why-item">
+          <div class="bcm-services-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div class="bcm-services-why-text">
+            <h3>Transparent Pricing</h3>
+            <p>Know what you're paying before work starts. Detailed scopes with no hidden fees or surprise invoices.</p>
+          </div>
         </div>
 
-        <div class="bcm-services-grid">
-
-            <!-- SERVICE CARD 1: Home Additions -->
-            <div class="bcm-services-card">
-                <div class="bcm-services-card-img">
-                    <img src="https://bradfordcm.com/wp-content/uploads/2026/03/IMG_5996-1-scaled.jpg" alt="" width="400" height="220" loading="lazy" decoding="async">
-                </div>
-                <div class="bcm-services-card-body">
-                    <h3>Home Additions</h3>
-                    <p>Need more space without the hassle of moving? BCM builds seamless home additions that match your existing architecture - master suites, family rooms, mudrooms, in-law suites, and more. Our design-build process means you get a single team from concept to completion, with permits managed, schedules kept, and no surprises on price.</p>
-                    <a href="https://bradfordcm.com/home-additions/" class="bcm-services-card-link">
-                        Explore Home Additions
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- SERVICE CARD 2: ADU Construction -->
-            <div class="bcm-services-card">
-                <div class="bcm-services-card-img">
-                    <img src="https://bradfordcm.com/wp-content/uploads/2026/03/bchill-adu-block-build-edited-18.webp" alt="" width="400" height="220" loading="lazy" decoding="async">
-                </div>
-                <div class="bcm-services-card-body">
-                    <h3>ADU Construction (Accessory Dwelling Units)</h3>
-                    <p>Massachusetts's ADU law has created major opportunities for homeowners. BCM builds garage conversion ADUs and detached new-build ADUs, handling zoning, permitting, design, and construction under one roof. Whether you want rental income, a multi-generational suite, or a dedicated guest space, we make the process clear and manageable.</p>
-                    <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/" class="bcm-services-card-link">
-                        Explore ADU Construction
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- SERVICE CARD 3: Home Renovations -->
-            <div class="bcm-services-card">
-                <div class="bcm-services-card-img">
-                    <img src="https://bradfordcm.com/wp-content/uploads/2026/03/81-North-St-Reveal-Photo-7.jpg" alt="" width="400" height="220" loading="lazy" decoding="async">
-                </div>
-                <div class="bcm-services-card-body">
-                    <h3>Home Renovations</h3>
-                    <p>From single-room refreshes to whole-home renovations, BCM brings the same project management rigor to every renovation as it does to new construction. That means no scope creep, no disappearing subcontractors, and no mystery invoices at the end. We handle kitchen remodels, bathroom renovations, basement finishes, and full interior transformations across the North Shore.</p>
-                    <a href="https://bradfordcm.com/home-renovations/" class="bcm-services-card-link">
-                        Explore Home Renovations
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- SERVICE CARD 4: Custom Homes -->
-            <div class="bcm-services-card">
-                <div class="bcm-services-card-img">
-                    <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-31.webp" alt="" width="400" height="220" loading="lazy" decoding="async">
-                </div>
-                <div class="bcm-services-card-body">
-                    <h3>Custom Homes</h3>
-                    <p>Building a custom home is the most complex construction project most people will ever undertake. BCM's design-build model simplifies it - one team manages design, engineering, permitting, and construction, so nothing falls through the cracks between your architect and your builder. We build fully custom homes across Haverhill and the greater North Shore with the same accountability we bring to every project.</p>
-                    <a href="https://bradfordcm.com/custom-homes/" class="bcm-services-card-link">
-                        Explore Custom Homes
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- SERVICE CARD 5: Kitchen & Bathroom Remodels -->
-            <div class="bcm-services-card">
-                <div class="bcm-services-card-img">
-                    <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-48-1.webp" alt="" width="400" height="220" loading="lazy" decoding="async">
-                </div>
-                <div class="bcm-services-card-body">
-                    <h3>Kitchen &amp; Bathroom Remodels</h3>
-                    <p>Kitchen and bath remodels rank among the highest-ROI home improvement projects - and among the most disruptive if managed poorly. BCM coordinates design, demolition, plumbing, electrical, tile, cabinetry, and finishing as a single integrated project, not a relay race between separate contractors. The result: a remodel that finishes on time and delivers what was promised.</p>
-                    <a href="https://bradfordcm.com/home-renovations/" class="bcm-services-card-link">
-                        Explore Renovations
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
+        <div class="bcm-services-why-item">
+          <div class="bcm-services-why-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <div class="bcm-services-why-text">
+            <h3>Structured Timelines</h3>
+            <p>Real schedules with real milestones, not vague estimates. You'll know what's happening and when.</p>
+          </div>
         </div>
+
+        <div class="bcm-services-why-item">
+          <div class="bcm-services-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <div class="bcm-services-why-text">
+            <h3>Daily Photo Updates</h3>
+            <p>You see what's happening on your job site every single day. No guessing, no waiting for callbacks.</p>
+          </div>
+        </div>
+
+        <div class="bcm-services-why-item">
+          <div class="bcm-services-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="bcm-services-why-text">
+            <h3>Single Point of Contact</h3>
+            <p>One person answers for the entire project from design through final walkthrough. No runaround.</p>
+          </div>
+        </div>
+
+        <div class="bcm-services-why-item">
+          <div class="bcm-services-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="bcm-services-why-text">
+            <h3>Bradford Home Services</h3>
+            <p>Lifetime support including a 6-month post-completion check-in and ongoing service plans. We never disappear.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- ===== WHY BCM ===== -->
-    <div class="bcm-services-section--navy">
-        <div class="bcm-services-section bcm-services-why">
-            <div class="bcm-services-why-header">
-                <h2>Commercial-Grade Project Management. Applied to Your Home.</h2>
-                <p>Most residential contractors run jobs loosely - verbal agreements, shifting timelines, inconsistent communication. BCM was built differently. Founder Rick White spent his career managing commercial construction at the highest level: data centers, large-scale facilities, and projects where schedule, budget, and accountability weren't optional. When he launched Bradford Construction Management, he brought that same discipline into the residential market.</p>
-            </div>
-
-            <div class="bcm-services-why-grid">
-                <div class="bcm-services-why-item">
-                    <div class="bcm-services-why-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-                    </div>
-                    <div class="bcm-services-why-text">
-                        <h3>Transparent Pricing</h3>
-                        <p>Know what you're paying before work starts. Detailed scopes with no hidden fees or surprise invoices.</p>
-                    </div>
-                </div>
-                <div class="bcm-services-why-item">
-                    <div class="bcm-services-why-icon">
-                        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-                    </div>
-                    <div class="bcm-services-why-text">
-                        <h3>Structured Timelines</h3>
-                        <p>Real schedules with real milestones, not vague estimates. You'll know what's happening and when.</p>
-                    </div>
-                </div>
-                <div class="bcm-services-why-item">
-                    <div class="bcm-services-why-icon">
-                        <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                    </div>
-                    <div class="bcm-services-why-text">
-                        <h3>Daily Photo Updates</h3>
-                        <p>You see what's happening on your job site every single day. No guessing, no waiting for callbacks.</p>
-                    </div>
-                </div>
-                <div class="bcm-services-why-item">
-                    <div class="bcm-services-why-icon">
-                        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    </div>
-                    <div class="bcm-services-why-text">
-                        <h3>Single Point of Contact</h3>
-                        <p>One person answers for the entire project from design through final walkthrough. No runaround.</p>
-                    </div>
-                </div>
-                <div class="bcm-services-why-item">
-                    <div class="bcm-services-why-icon">
-                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    </div>
-                    <div class="bcm-services-why-text">
-                        <h3>Bradford Home Services</h3>
-                        <p>Lifetime support including a 6-month post-completion check-in and ongoing service plans. We never disappear.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== PROCESS SECTION ===== -->
-    <div class="bcm-services-section--alt">
-        <div class="bcm-services-section">
-            <div class="bcm-services-section-header">
-                <h2>How the Design-Build Process Works</h2>
-                <p>BCM manages every phase in-house - from the first conversation to the final inspection. Here's what to expect:</p>
-            </div>
-
-            <div class="bcm-services-process-steps">
-                <div class="bcm-services-step">
-                    <div class="bcm-services-step-num">1</div>
-                    <div class="bcm-services-step-text">
-                        <h3>Free Consultation</h3>
-                        <p>We listen to your goals, walk the space, and understand your budget. No pressure, no obligation.</p>
-                    </div>
-                </div>
-                <div class="bcm-services-step">
-                    <div class="bcm-services-step-num">2</div>
-                    <div class="bcm-services-step-text">
-                        <h3>Design &amp; Feasibility</h3>
-                        <p>Our team develops a design that works structurally, aesthetically, and financially.</p>
-                    </div>
-                </div>
-                <div class="bcm-services-step">
-                    <div class="bcm-services-step-num">3</div>
-                    <div class="bcm-services-step-text">
-                        <h3>Permitting</h3>
-                        <p>We handle all required permits with your local municipality. You don't have to chase paperwork.</p>
-                    </div>
-                </div>
-                <div class="bcm-services-step">
-                    <div class="bcm-services-step-num">4</div>
-                    <div class="bcm-services-step-text">
-                        <h3>Construction</h3>
-                        <p>Our crew builds to spec with daily photo updates and a dedicated project manager on every job.</p>
-                    </div>
-                </div>
-                <div class="bcm-services-step">
-                    <div class="bcm-services-step-num">5</div>
-                    <div class="bcm-services-step-text">
-                        <h3>Final Walkthrough</h3>
-                        <p>We don't close out a project until you're satisfied. Every detail gets checked and confirmed.</p>
-                    </div>
-                </div>
-                <div class="bcm-services-step">
-                    <div class="bcm-services-step-num">6</div>
-                    <div class="bcm-services-step-text">
-                        <h3>Bradford Home Services</h3>
-                        <p>A 6-month check-in and ongoing support plan keeps your project in top shape long after we leave.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== SERVICE AREA ===== -->
+  <!-- PROCESS SECTION -->
+  <div class="bcm-services-section--alt">
     <div class="bcm-services-section">
-        <div class="bcm-services-section-header">
-            <h2>Serving Haverhill, the North Shore &amp; Merrimack Valley</h2>
-            <p>Bradford Construction Management is based in Haverhill, MA and serves homeowners across the North Shore and Merrimack Valley region. Our primary service areas include:</p>
+      <div class="bcm-services-section-header">
+        <h2>How the Design-Build Process Works</h2>
+        <p>BCM manages every phase in-house - from the first conversation to the final inspection. Here's what to expect:</p>
+      </div>
+
+      <div class="bcm-services-process-steps">
+        <div class="bcm-services-step">
+          <div class="bcm-services-step-num">1</div>
+          <div class="bcm-services-step-text">
+            <h3>Free Consultation</h3>
+            <p>We listen to your goals, walk the space, and understand your budget. No pressure, no obligation.</p>
+          </div>
         </div>
 
-        <ul class="bcm-services-areas-list">
-            <li><a href="https://bradfordcm.com/haverhill-ma/">Haverhill, MA</a> (headquarters)</li>
-            <li><a href="https://bradfordcm.com/newburyport-mass/">Newburyport, MA</a></li>
-            <li><a href="https://bradfordcm.com/south-hamilton-ma/">South Hamilton, MA</a></li>
-            <li><a href="https://bradfordcm.com/wakefield-ma/">Wakefield, MA</a></li>
-            <li><a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a></li>
-            <li>Andover, MA</li>
-            <li>Methuen, MA</li>
-            <li>North Andover, MA</li>
-            <li>Amesbury, MA</li>
-            <li>Georgetown, MA</li>
-            <li>Ipswich, MA</li>
-            <li>Lawrence, MA</li>
-        </ul>
-
-        <p class="bcm-services-areas-note">Not sure if we serve your area? <a href="https://bradfordcm.com/contact/">Contact us</a> and we'll let you know.</p>
-    </div>
-
-    <!-- ===== FAQ SECTION ===== -->
-    <div class="bcm-services-section--alt">
-        <div class="bcm-services-section">
-            <div class="bcm-services-section-header">
-                <h2>Frequently Asked Questions</h2>
-            </div>
-
-            <div class="bcm-services-faq-list">
-
-                <div class="bcm-services-faq-item">
-                    <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
-                        <span>What is a design-build contractor?</span>
-                        <span class="bcm-services-faq-indicator">+</span>
-                    </button>
-                    <div class="bcm-services-faq-answer">
-                        <p>A design-build contractor manages both the design and construction phases of a project under one contract. Instead of hiring an architect separately from a builder - and hoping they coordinate - you work with one team that's accountable for the entire outcome. BCM offers full <a href="https://bradfordcm.com/design-build/">design-build services</a> for home additions, ADUs, renovations, and custom homes across the North Shore.</p>
-                    </div>
-                </div>
-
-                <div class="bcm-services-faq-item">
-                    <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
-                        <span>What services does Bradford Construction Management offer?</span>
-                        <span class="bcm-services-faq-indicator">+</span>
-                    </button>
-                    <div class="bcm-services-faq-answer">
-                        <p>BCM offers residential design-build services including <a href="https://bradfordcm.com/home-additions/">home additions</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADU construction</a>, <a href="https://bradfordcm.com/home-renovations/">whole-home renovations</a>, <a href="https://bradfordcm.com/custom-homes/">custom home building</a>, and kitchen and bathroom remodels. All services are available to homeowners in <a href="https://bradfordcm.com/haverhill-ma/">Haverhill, MA</a> and surrounding communities in the North Shore and Merrimack Valley.</p>
-                    </div>
-                </div>
-
-                <div class="bcm-services-faq-item">
-                    <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
-                        <span>How much does a home addition cost in Massachusetts?</span>
-                        <span class="bcm-services-faq-indicator">+</span>
-                    </button>
-                    <div class="bcm-services-faq-answer">
-                        <p>Home addition costs vary significantly based on scope, size, and finish level. ADU garage conversions at BCM typically start around $75,000-$80,000. Detached new-build ADUs can range from $200,000 to $400,000 or more. We provide detailed, transparent pricing before any work begins so there are no surprises.</p>
-                    </div>
-                </div>
-
-                <div class="bcm-services-faq-item">
-                    <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
-                        <span>How long does a home addition or renovation take?</span>
-                        <span class="bcm-services-faq-indicator">+</span>
-                    </button>
-                    <div class="bcm-services-faq-answer">
-                        <p>Timelines depend on project size and permit processing. A kitchen or bathroom remodel typically takes 6-12 weeks. A home addition ranges from 3-6 months. A custom home or detached ADU may take 9-18 months. BCM provides a detailed project schedule at the start of every engagement.</p>
-                    </div>
-                </div>
-
-                <div class="bcm-services-faq-item">
-                    <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
-                        <span>Do you handle permits for construction projects?</span>
-                        <span class="bcm-services-faq-indicator">+</span>
-                    </button>
-                    <div class="bcm-services-faq-answer">
-                        <p>Yes. BCM manages all required permits with your local municipality as part of the design-build process. This includes building permits, zoning compliance, and any required inspections throughout the project.</p>
-                    </div>
-                </div>
-
-                <div class="bcm-services-faq-item">
-                    <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
-                        <span>What areas does Bradford Construction Management serve?</span>
-                        <span class="bcm-services-faq-indicator">+</span>
-                    </button>
-                    <div class="bcm-services-faq-answer">
-                        <p>BCM is based in <a href="https://bradfordcm.com/haverhill-ma/">Haverhill, MA</a> and serves the greater North Shore and Merrimack Valley, including Newburyport, Andover, Methuen, North Andover, Amesbury, Georgetown, Ipswich, and Exeter, NH.</p>
-                    </div>
-                </div>
-
-                <div class="bcm-services-faq-item">
-                    <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
-                        <span>What is Bradford Home Services?</span>
-                        <span class="bcm-services-faq-indicator">+</span>
-                    </button>
-                    <div class="bcm-services-faq-answer">
-                        <p>Bradford Home Services (BHS) is BCM's post-completion support program. After your project wraps, you're not on your own. BHS includes a 6-month post-completion check-in, ongoing maintenance service plans, and long-term support to make sure your completed work stays in top condition. It's why we say we're the contractor who never leaves.</p>
-                    </div>
-                </div>
-
-            </div>
+        <div class="bcm-services-step">
+          <div class="bcm-services-step-num">2</div>
+          <div class="bcm-services-step-text">
+            <h3>Design &amp; Feasibility</h3>
+            <p>Our team develops a design that works structurally, aesthetically, and financially.</p>
+          </div>
         </div>
+
+        <div class="bcm-services-step">
+          <div class="bcm-services-step-num">3</div>
+          <div class="bcm-services-step-text">
+            <h3>Permitting</h3>
+            <p>We handle all required permits with your local municipality. You don't have to chase paperwork.</p>
+          </div>
+        </div>
+
+        <div class="bcm-services-step">
+          <div class="bcm-services-step-num">4</div>
+          <div class="bcm-services-step-text">
+            <h3>Construction</h3>
+            <p>Our crew builds to spec with daily photo updates and a dedicated project manager on every job.</p>
+          </div>
+        </div>
+
+        <div class="bcm-services-step">
+          <div class="bcm-services-step-num">5</div>
+          <div class="bcm-services-step-text">
+            <h3>Final Walkthrough</h3>
+            <p>We don't close out a project until you're satisfied. Every detail gets checked and confirmed.</p>
+          </div>
+        </div>
+
+        <div class="bcm-services-step">
+          <div class="bcm-services-step-num">6</div>
+          <div class="bcm-services-step-text">
+            <h3>Bradford Home Services</h3>
+            <p>A 6-month check-in and ongoing support plan keeps your project in top shape long after we leave.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE AREA -->
+  <div class="bcm-services-section">
+    <div class="bcm-services-section-header">
+      <h2>Serving Haverhill, the North Shore &amp; Merrimack Valley</h2>
+      <p>Bradford Construction Management is based in Haverhill, MA and serves homeowners across the North Shore and Merrimack Valley region. Our primary service areas include:</p>
     </div>
 
-    <!-- ===== CLOSING CTA ===== -->
-    <div class="bcm-services-section--navy">
-        <div class="bcm-services-section bcm-services-closing">
-            <h2>Ready to Start Your Project? Let's Talk.</h2>
-            <p>Whether you're in the early planning stages or ready to break ground, BCM is here to help. Contact us for a free, no-pressure consultation. We'll walk through your goals, your space, and what a realistic timeline and budget looks like for your project.</p>
-            <div class="bcm-services-closing-buttons">
-                <a href="https://bradfordcm.com/contact/" class="bcm-services-cta bcm-services-cta--gold">Schedule a Free Consultation</a>
-                <a href="tel:978-945-9771" class="bcm-services-cta bcm-services-cta--outline">Call 978-945-9771</a>
-            </div>
+    <ul class="bcm-services-areas-list">
+      <li><a href="https://bradfordcm.com/haverhill-ma/">Haverhill, MA</a> (headquarters)</li>
+      <li><a href="https://bradfordcm.com/newburyport-mass/">Newburyport, MA</a></li>
+      <li><a href="https://bradfordcm.com/south-hamilton-ma/">South Hamilton, MA</a></li>
+      <li><a href="https://bradfordcm.com/wakefield-ma/">Wakefield, MA</a></li>
+      <li><a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a></li>
+      <li>Andover, MA</li>
+      <li>Methuen, MA</li>
+      <li>North Andover, MA</li>
+      <li>Amesbury, MA</li>
+      <li>Georgetown, MA</li>
+      <li>Ipswich, MA</li>
+      <li>Lawrence, MA</li>
+    </ul>
+
+    <p class="bcm-services-areas-note">Not sure if we serve your area? <a href="https://bradfordcm.com/contact/">Contact us</a> and we'll let you know.</p>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <div class="bcm-services-section--alt">
+    <div class="bcm-services-section">
+      <div class="bcm-services-section-header">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="bcm-services-faq-list">
+        <div class="bcm-services-faq-item">
+          <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
+            <span>What is a design-build contractor?</span>
+            <span class="bcm-services-faq-indicator">+</span>
+          </button>
+          <div class="bcm-services-faq-answer">
+            <p>A design-build contractor manages both the design and construction phases of a project under one contract. Instead of hiring an architect separately from a builder - and hoping they coordinate - you work with one team that's accountable for the entire outcome. BCM offers full <a href="https://bradfordcm.com/design-build/">design-build services</a> for home additions, ADUs, renovations, and custom homes across the North Shore.</p>
+          </div>
         </div>
+
+        <div class="bcm-services-faq-item">
+          <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
+            <span>What services does Bradford Construction Management offer?</span>
+            <span class="bcm-services-faq-indicator">+</span>
+          </button>
+          <div class="bcm-services-faq-answer">
+            <p>BCM offers residential design-build services including <a href="https://bradfordcm.com/home-additions/">home additions</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADU construction</a>, <a href="https://bradfordcm.com/home-renovations/">whole-home renovations</a>, <a href="https://bradfordcm.com/custom-homes/">custom home building</a>, and kitchen and bathroom remodels. All services are available to homeowners in <a href="https://bradfordcm.com/haverhill-ma/">Haverhill, MA</a> and surrounding communities in the North Shore and Merrimack Valley.</p>
+          </div>
+        </div>
+
+        <div class="bcm-services-faq-item">
+          <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
+            <span>How much does a home addition cost in Massachusetts?</span>
+            <span class="bcm-services-faq-indicator">+</span>
+          </button>
+          <div class="bcm-services-faq-answer">
+            <p>Home addition costs vary significantly based on scope, size, and finish level. ADU garage conversions at BCM typically start around $75,000-$80,000. Detached new-build ADUs can range from $200,000 to $400,000 or more. We provide detailed, transparent pricing before any work begins so there are no surprises.</p>
+          </div>
+        </div>
+
+        <div class="bcm-services-faq-item">
+          <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
+            <span>How long does a home addition or renovation take?</span>
+            <span class="bcm-services-faq-indicator">+</span>
+          </button>
+          <div class="bcm-services-faq-answer">
+            <p>Timelines depend on project size and permit processing. A kitchen or bathroom remodel typically takes 6-12 weeks. A home addition ranges from 3-6 months. A custom home or detached ADU may take 9-18 months. BCM provides a detailed project schedule at the start of every engagement.</p>
+          </div>
+        </div>
+
+        <div class="bcm-services-faq-item">
+          <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
+            <span>Do you handle permits for construction projects?</span>
+            <span class="bcm-services-faq-indicator">+</span>
+          </button>
+          <div class="bcm-services-faq-answer">
+            <p>Yes. BCM manages all required permits with your local municipality as part of the design-build process. This includes building permits, zoning compliance, and any required inspections throughout the project.</p>
+          </div>
+        </div>
+
+        <div class="bcm-services-faq-item">
+          <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
+            <span>What areas does Bradford Construction Management serve?</span>
+            <span class="bcm-services-faq-indicator">+</span>
+          </button>
+          <div class="bcm-services-faq-answer">
+            <p>BCM is based in <a href="https://bradfordcm.com/haverhill-ma/">Haverhill, MA</a> and serves the greater North Shore and Merrimack Valley, including Newburyport, Andover, Methuen, North Andover, Amesbury, Georgetown, Ipswich, and Exeter, NH.</p>
+          </div>
+        </div>
+
+        <div class="bcm-services-faq-item">
+          <button class="bcm-services-faq-toggle" aria-expanded="false" onclick="this.parentElement.classList.toggle('active'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('active'));">
+            <span>What is Bradford Home Services?</span>
+            <span class="bcm-services-faq-indicator">+</span>
+          </button>
+          <div class="bcm-services-faq-answer">
+            <p>Bradford Home Services (BHS) is BCM's post-completion support program. After your project wraps, you're not on your own. BHS includes a 6-month post-completion check-in, ongoing maintenance service plans, and long-term support to make sure your completed work stays in top condition. It's why we say we're the contractor who never leaves.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- CLOSING CTA -->
+  <div class="bcm-services-section--dark">
+    <div class="bcm-services-section bcm-services-closing">
+      <h2>Ready to Start Your Project? Let's Talk.</h2>
+      <p>Whether you're in the early planning stages or ready to break ground, BCM is here to help. Contact us for a free, no-pressure consultation. We'll walk through your goals, your space, and what a realistic timeline and budget looks like for your project.</p>
+      <div class="bcm-services-closing-buttons">
+        <a href="https://bradfordcm.com/contact/" class="bcm-services-cta bcm-services-cta--gold">Schedule a Free Consultation</a>
+        <a href="tel:978-945-9771" class="bcm-services-cta bcm-services-cta--outline">Call 978-945-9771</a>
+      </div>
+    </div>
+  </div>
 
 </div>

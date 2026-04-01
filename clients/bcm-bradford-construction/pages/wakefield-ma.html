@@ -1,61 +1,44 @@
-<!-- HERO OPTIONS
-     Option A: [H1] Design-Build Contractor Serving Wakefield, MA / [H2] Additions, renovations, ADUs, and custom homes - planned and built by one accountable team.
-     Option B: [H1] Wakefield, MA Home Construction / [H2] From design through build and beyond - one team, clear pricing, daily updates.
-     CTAs: "Start a Conversation" → https://bradfordcm.com/contact/ | "Call 978-945-9771" → tel:9789459771
+<!--
+  BCM Location Page: Wakefield, MA (Rebuilt 2026)
+  Layout: Icon list services + masonry gallery + numbered list differentiators + accordion process
+  Sits below WordPress hero with H1 and H2
 -->
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Primary Palette */
   --bcm-black: #1A1A1A;
   --bcm-gold: #C8A24D;
   --bcm-charcoal: #1C2331;
   --bcm-white: #FAF9F7;
-
-  /* Secondary Palette */
   --bcm-maritime: #0F2A45;
   --bcm-sage: #7A9B7E;
   --bcm-gray: #F1F1F1;
-
-  /* Gold System */
   --bcm-gold-hover: #B8923F;
   --bcm-gold-light: #D4B46A;
   --bcm-gold-soft: rgba(200, 162, 77, 0.07);
   --bcm-gold-border: rgba(200, 162, 77, 0.18);
   --bcm-gold-glow: rgba(200, 162, 77, 0.12);
-
-  /* Text Hierarchy */
   --bcm-text-primary: #1C2331;
   --bcm-text-secondary: #3A4255;
   --bcm-text-tertiary: #5C6478;
   --bcm-text-light: rgba(250, 249, 247, 0.88);
   --bcm-text-muted: rgba(250, 249, 247, 0.62);
-
-  /* Surfaces */
   --bcm-surface: #F7F7F5;
   --bcm-surface-raised: #FFFFFF;
   --bcm-border: #E5E5E2;
   --bcm-border-subtle: rgba(28, 35, 49, 0.06);
-
-  /* Shadows */
   --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
   --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
   --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
   --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
   --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
-
-  /* Radii */
   --bcm-radius: 6px;
   --bcm-radius-md: 10px;
   --bcm-radius-lg: 14px;
-
-  /* Typography */
   --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
   --bcm-font-body: 'Inter', -apple-system, sans-serif;
-
-  /* Transitions */
   --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -64,381 +47,674 @@
   max-width: 100vw;
   margin-left: calc(-50vw + 50%);
   position: relative;
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: var(--bcm-font-body);
   color: var(--bcm-text-primary);
-  -webkit-font-smoothing: antialiased;
   line-height: 1.6;
   overflow-x: hidden;
 }
-.bcm-wakefield *, .bcm-wakefield *::before, .bcm-wakefield *::after { box-sizing: border-box; }
-.bcm-wakefield h1, .bcm-wakefield h2, .bcm-wakefield h3, .bcm-wakefield h4 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+.bcm-wakefield * { box-sizing: border-box; }
+.bcm-wakefield h2, .bcm-wakefield h3 {
+  font-family: var(--bcm-font-display);
   font-weight: 600;
-  line-height: 1.18;
-  margin: 0 0 16px;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
-.bcm-wakefield h1 { font-size: 2rem; }
-.bcm-wakefield h2 { font-size: 1.6rem; }
-.bcm-wakefield h3 { font-size: 1.1rem; letter-spacing: -0.01em; }
-.bcm-wakefield p { margin: 0 0 16px; }
-.bcm-wakefield a:not([class*="bcm-wakefield-cta"]):not(.bcm-lb-link) {
-  color: var(--bcm-gold);
-  text-decoration-color: rgba(201, 169, 110, 0.35);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  transition: color 0.2s;
-}
-.bcm-wakefield a:not([class*="bcm-wakefield-cta"]):not(.bcm-lb-link):hover {
-  color: #b8943f;
-  text-decoration-color: #b8943f;
-}
-.bcm-wakefield-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-/* HERO */
-.bcm-wakefield-hero {
+.bcm-wakefield h2 { font-size: clamp(1.6rem, 4vw, 2rem); }
+.bcm-wakefield h3 { font-size: 1.15rem; }
+.bcm-wakefield img { max-width: 100%; height: auto; display: block; }
+.bcm-wakefield a { color: var(--bcm-black); text-decoration: none; }
+.bcm-wakefield-container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.bcm-wakefield-section { padding: 72px 24px; background: var(--bcm-white); }
+.bcm-wakefield-section--alt { background: var(--bcm-surface); }
+.bcm-wakefield-section--dark {
+  background: linear-gradient(170deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
   position: relative;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: url('https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7984-scaled.webp') center/cover no-repeat;
-  padding: 88px 24px 80px;
+  overflow: hidden;
 }
-.bcm-wakefield-hero::before {
+.bcm-wakefield-section--dark::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(175deg, rgba(20, 24, 31, 0.92) 0%, rgba(28, 33, 41, 0.72) 55%, rgba(42, 49, 64, 0.78) 100%);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%231A1A1A"/></svg>');
+  opacity: 0.02;
+  pointer-events: none;
 }
-.bcm-wakefield-hero-content { position: relative; z-index: 2; max-width: 680px; }
-.bcm-wakefield-hero-label {
+.bcm-wakefield-section--dark h2, .bcm-wakefield-section--dark h3, .bcm-wakefield-section--dark p {
+  position: relative;
+  z-index: 1;
+  color: var(--bcm-white);
+}
+.bcm-wakefield-section-header {
+  text-align: center;
+  margin-bottom: 52px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bcm-wakefield-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--bcm-font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bcm-gold);
+  margin-bottom: 16px;
+}
+.bcm-wakefield-label::before, .bcm-wakefield-label::after {
+  content: '';
+  width: 36px;
+  height: 1px;
+  background: var(--bcm-gold);
+}
+.bcm-wakefield-subtitle {
+  font-size: 1.02rem;
+  color: var(--bcm-text-secondary);
+  line-height: 1.7;
+  margin-top: 12px;
+}
+
+.bcm-wakefield-button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  background: var(--bcm-gold);
+  color: var(--bcm-black);
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  font-size: 0.93rem;
+  padding: 15px 34px;
+  border-radius: var(--bcm-radius);
+  text-decoration: none;
+  transition: all 0.25s var(--bcm-ease);
+}
+.bcm-wakefield-button:hover {
+  background: var(--bcm-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--bcm-shadow-gold);
+}
+
+.bcm-wakefield-trust {
+  background: var(--bcm-black);
+  border-bottom: 1px solid rgba(200, 162, 77, 0.12);
+  padding: 28px 24px;
+}
+.bcm-wakefield-trust-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.bcm-wakefield-trust-item {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.71rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0 20px;
+  position: relative;
+}
+.bcm-wakefield-trust-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* SERVICES - Icon List */
+.bcm-wakefield-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+.bcm-wakefield-service {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.bcm-wakefield-service-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--bcm-radius-md);
+  background: var(--bcm-gold-soft);
+  border: 1px solid var(--bcm-gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bcm-wakefield-service-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--bcm-gold);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.bcm-wakefield-service h3 { margin-bottom: 6px; }
+.bcm-wakefield-service h3 a {
+  color: var(--bcm-text-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.bcm-wakefield-service h3 a:hover { color: var(--bcm-gold); }
+.bcm-wakefield-service p {
+  color: var(--bcm-text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* GALLERY - Masonry */
+.bcm-wakefield-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.bcm-wakefield-gallery-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  border-radius: var(--bcm-radius-md);
+}
+.bcm-wakefield-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--bcm-ease);
+}
+.bcm-wakefield-gallery-item:hover img { transform: scale(1.05); }
+.bcm-wakefield-gallery-item--tall {
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+.bcm-wakefield-gallery-toggle { display: none; }
+.bcm-wakefield-gallery-more { display: none; }
+.bcm-wakefield-gallery-toggle:checked ~ .bcm-wakefield-gallery-grid .bcm-wakefield-gallery-more {
+  display: contents;
+}
+.bcm-wakefield-gallery-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 28px;
+  background: var(--bcm-white);
+  border: 1px solid var(--bcm-border);
+  border-radius: var(--bcm-radius);
+  color: var(--bcm-text-secondary);
+  font-family: var(--bcm-font-display);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.25s var(--bcm-ease);
+}
+.bcm-wakefield-gallery-label:hover {
+  border-color: var(--bcm-gold);
   color: var(--bcm-gold);
-  font-size: 0.78rem;
+}
+.bcm-wakefield-label-show { display: inline; }
+.bcm-wakefield-label-hide { display: none; }
+.bcm-wakefield-gallery-toggle:checked ~ .bcm-wakefield-gallery-label .bcm-wakefield-label-show {
+  display: none;
+}
+.bcm-wakefield-gallery-toggle:checked ~ .bcm-wakefield-gallery-label .bcm-wakefield-label-hide {
+  display: inline;
+}
+
+/* DIFFERENTIATORS - Numbered List */
+.bcm-wakefield-diff-section { position: relative; z-index: 1; }
+.bcm-wakefield-diff-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.bcm-wakefield-diff {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.bcm-wakefield-diff-num {
+  font-family: var(--bcm-font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--bcm-gold);
+  min-width: 32px;
+  flex-shrink: 0;
+}
+.bcm-wakefield-diff h3 { font-size: 1.05rem; margin-bottom: 6px; color: var(--bcm-white); }
+.bcm-wakefield-diff p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* PROCESS - Accordion */
+.bcm-wakefield-process { display: flex; flex-direction: column; gap: 0; }
+.bcm-wakefield-process-toggle { display: none; }
+.bcm-wakefield-process-step {
+  background: var(--bcm-white);
+  border: 1px solid var(--bcm-border);
+  border-bottom: none;
+}
+.bcm-wakefield-process-step:last-child { border-bottom: 1px solid var(--bcm-border); }
+.bcm-wakefield-process-header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 24px 28px;
+  cursor: pointer;
+  transition: background 0.2s;
+  user-select: none;
+}
+.bcm-wakefield-process-header:hover { background: var(--bcm-surface); }
+.bcm-wakefield-process-num {
+  font-family: var(--bcm-font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--bcm-gold);
+  min-width: 28px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--bcm-gold-border);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bcm-wakefield-process-header h3 { margin: 0 0 4px; font-size: 1rem; }
+.bcm-wakefield-process-header p { color: var(--bcm-text-secondary); font-size: 0.9rem; margin: 0; }
+.bcm-wakefield-process-toggle-label {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--bcm-text-secondary);
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+.bcm-wakefield-process-toggle:checked ~ .bcm-wakefield-process-header .bcm-wakefield-process-toggle-label {
+  transform: rotate(180deg);
+  color: var(--bcm-gold);
+}
+.bcm-wakefield-process-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s var(--bcm-ease);
+}
+.bcm-wakefield-process-toggle:checked ~ .bcm-wakefield-process-content {
+  max-height: 200px;
+}
+.bcm-wakefield-process-content p {
+  color: var(--bcm-text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  padding: 0 28px 24px;
+  margin: 0;
+}
+
+/* CONTEXT */
+.bcm-wakefield-context {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.bcm-wakefield-context-img {
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bcm-shadow-lg);
+}
+.bcm-wakefield-context-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CTA BAND */
+.bcm-wakefield-cta-band {
+  background: var(--bcm-black);
+  padding: 72px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.bcm-wakefield-cta-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(200, 162, 77, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.bcm-wakefield-cta-band h2 {
+  color: var(--bcm-white);
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+.bcm-wakefield-cta-band p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto 36px;
+  position: relative;
+  z-index: 1;
+}
+.bcm-wakefield-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.bcm-wakefield-button-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--bcm-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 34px;
+  border-radius: var(--bcm-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s var(--bcm-ease);
+  background: rgba(255, 255, 255, 0.05);
+}
+.bcm-wakefield-button-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* LINKS */
+.bcm-wakefield-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding-top: 48px;
+  border-top: 1px solid var(--bcm-border);
+}
+.bcm-wakefield-links h3 {
+  font-size: 0.71rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  color: var(--bcm-text-tertiary);
+  margin-bottom: 12px;
 }
-.bcm-wakefield-hero-label::before,
-.bcm-wakefield-hero-label::after {
-  content: '';
-  width: 24px;
-  height: 1px;
-  background: rgba(201, 169, 110, 0.4);
+.bcm-wakefield-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
 }
-.bcm-wakefield-hero h1 { color: var(--bcm-white); font-size: 2.2rem; font-weight: 700; margin-bottom: 18px; }
-.bcm-wakefield-hero-sub { color: rgba(255, 255, 255, 0.88); font-size: 1.05rem; max-width: 540px; margin: 0 auto 36px; line-height: 1.65; }
-.bcm-wakefield-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
-
-/* BUTTONS */
-.bcm-wakefield a.bcm-wakefield-cta--gold {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--bcm-gold); color: var(--bcm-black) !important;
-  font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.92rem;
-  padding: 15px 32px; border-radius: 6px; text-decoration: none;
-  transition: all 0.25s ease; min-height: 50px; letter-spacing: 0.01em;
+.bcm-wakefield-links li a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--bcm-text-primary);
+  text-decoration: none;
+  transition: color 0.2s;
 }
-.bcm-wakefield a.bcm-wakefield-cta--gold:hover { background: #b8943f; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(201, 169, 110, 0.25); color: var(--bcm-black) !important; }
-.bcm-wakefield a.bcm-wakefield-cta--ghost {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.18);
-  color: rgba(255, 255, 255, 0.9) !important; font-family: 'Inter', sans-serif;
-  font-weight: 500; font-size: 0.92rem; padding: 14px 30px; border-radius: 6px;
-  text-decoration: none; transition: all 0.25s ease; min-height: 50px;
-}
-.bcm-wakefield a.bcm-wakefield-cta--ghost:hover { background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.3); color: var(--bcm-white) !important; }
-.bcm-wakefield a.bcm-wakefield-cta--dark {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--bcm-charcoal); color: var(--bcm-white) !important;
-  font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.92rem;
-  padding: 15px 32px; border-radius: 6px; text-decoration: none;
-  transition: all 0.25s ease; min-height: 50px;
-}
-.bcm-wakefield a.bcm-wakefield-cta--dark:hover { background: var(--bcm-black); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); color: var(--bcm-white) !important; }
-
-/* TRUST */
-.bcm-wakefield-trust { background: var(--bcm-black); border-bottom: 1px solid rgba(201, 169, 110, 0.12); }
-.bcm-wakefield-trust-items { display: flex; justify-content: center; flex-wrap: wrap; }
-.bcm-wakefield-trust-item { color: rgba(255, 255, 255, 0.65); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 16px 24px; position: relative; }
-.bcm-wakefield-trust-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 14px; background: rgba(255, 255, 255, 0.08); }
-
-/* SECTIONS */
-.bcm-wakefield-section { padding: 72px 24px; }
-.bcm-wakefield-section--tinted { background: var(--bcm-surface); }
-.bcm-wakefield-section--dark { background: var(--bcm-black); position: relative; overflow: hidden; }
-.bcm-wakefield-section-header { text-align: center; max-width: 620px; margin: 0 auto 52px; }
-.bcm-wakefield-gold-rule { display: block; width: 40px; height: 2px; background: var(--bcm-gold); margin: 0 auto 20px; border-radius: 1px; }
-.bcm-wakefield-section--dark h2 { color: var(--bcm-white); }
-.bcm-wakefield-section--dark p { color: rgba(255, 255, 255, 0.8); }
-.bcm-wakefield-lead { font-size: 1.04rem; color: var(--bcm-text-secondary); line-height: 1.7; }
-
-/* SERVICES */
-.bcm-wakefield-services { display: grid; grid-template-columns: 1fr; gap: 16px; }
-.bcm-wakefield-svc { background: var(--bcm-white); border: 1px solid var(--bcm-border); border-radius: var(--bcm-radius); padding: 28px 24px; transition: all 0.3s ease; }
-.bcm-wakefield-svc:hover { border-color: var(--bcm-gold-border); box-shadow: var(--bcm-shadow-md); transform: translateY(-2px); }
-.bcm-wakefield-svc-icon { width: 40px; height: 40px; border-radius: 8px; background: var(--bcm-gold-soft); border: 1px solid var(--bcm-gold-border); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
-.bcm-wakefield-svc-icon svg { width: 18px; height: 18px; stroke: var(--bcm-gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.bcm-wakefield-svc h3 a { color: var(--bcm-text-primary) !important; text-decoration: none !important; }
-.bcm-wakefield-svc h3 a:hover { color: var(--bcm-gold) !important; }
-.bcm-wakefield-svc p { color: var(--bcm-text-secondary); font-size: 0.93rem; margin: 0; line-height: 1.6; }
-
-/* GALLERY */
-.bcm-wakefield-gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; border-radius: var(--bcm-radius-lg); overflow: hidden; }
-.bcm-wakefield-gallery-item { position: relative; overflow: hidden; aspect-ratio: 4/3; display: block; }
-.bcm-wakefield-gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
-.bcm-wakefield-gallery-item:hover img { transform: scale(1.04); }
-.bcm-wakefield-gallery-item--tall { grid-row: span 2; aspect-ratio: auto; }
-
-/* CSS-only gallery toggle */
-.bcm-wakefield-gallery-check { display: none; }
-.bcm-wakefield-gallery-overflow { display: none; }
-.bcm-wakefield-gallery-check:checked ~ .bcm-wakefield-gallery-grid .bcm-wakefield-gallery-overflow { display: contents; }
-.bcm-wakefield-gallery-label {
-  display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 24px;
-  padding: 14px 28px; background: var(--bcm-white); border: 1px solid var(--bcm-border); border-radius: 6px;
-  color: var(--bcm-text-secondary); font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.88rem;
-  letter-spacing: 0.01em; cursor: pointer; transition: all 0.25s ease;
-}
-.bcm-wakefield-gallery-label:hover { border-color: var(--bcm-gold); color: var(--bcm-gold); }
-.bcm-wakefield-gallery-label svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; transition: transform 0.3s ease; }
-.bcm-wakefield-gallery-check:checked ~ .bcm-wakefield-gallery-label svg { transform: rotate(180deg); }
-.bcm-wakefield-gallery-label .bcm-toggle-show { display: inline; }
-.bcm-wakefield-gallery-label .bcm-toggle-hide { display: none; }
-.bcm-wakefield-gallery-check:checked ~ .bcm-wakefield-gallery-label .bcm-toggle-show { display: none; }
-.bcm-wakefield-gallery-check:checked ~ .bcm-wakefield-gallery-label .bcm-toggle-hide { display: inline; }
-
-/* CSS-only lightbox via :target */
-.bcm-wakefield-lb-panel {
-  position: fixed; inset: 0; z-index: 99999;
-  background: rgba(14, 18, 25, 0.94); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  display: flex; align-items: center; justify-content: center; padding: 24px;
-  opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.bcm-wakefield-lb-panel:target { opacity: 1; visibility: visible; }
-.bcm-wakefield-lb-panel img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 6px; }
-.bcm-lb-link {
-  position: absolute; width: 44px; height: 44px;
-  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50%;
-  color: rgba(255, 255, 255, 0.7); font-size: 1.2rem; text-decoration: none;
-  display: flex; align-items: center; justify-content: center; transition: all 0.2s;
-}
-.bcm-lb-link:hover { background: rgba(255, 255, 255, 0.12); color: white; }
-.bcm-lb-close { top: 24px; right: 24px; }
-.bcm-lb-prev { top: 50%; left: 20px; transform: translateY(-50%); }
-.bcm-lb-next { top: 50%; right: 20px; transform: translateY(-50%); }
-
-/* DIFFERENTIATORS */
-.bcm-wakefield-diff-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
-.bcm-wakefield-diff { display: flex; gap: 20px; align-items: flex-start; position: relative; z-index: 1; }
-.bcm-wakefield-diff-marker { width: 3px; min-height: 100%; background: linear-gradient(to bottom, var(--bcm-gold), rgba(201, 169, 110, 0.15)); border-radius: 2px; flex-shrink: 0; }
-.bcm-wakefield-diff h3 { color: var(--bcm-white); font-size: 1.02rem; font-weight: 600; margin-bottom: 6px; }
-.bcm-wakefield-diff p { color: rgba(255, 255, 255, 0.75); font-size: 0.93rem; margin: 0; line-height: 1.6; }
-
-/* PROCESS */
-.bcm-wakefield-process { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--bcm-border); border: 1px solid var(--bcm-border); border-radius: var(--bcm-radius-lg); overflow: hidden; }
-.bcm-wakefield-process-step { background: var(--bcm-white); padding: 28px 24px; display: flex; gap: 18px; align-items: flex-start; }
-.bcm-wakefield-process-num { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.82rem; color: var(--bcm-gold); min-width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--bcm-gold-border); border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
-.bcm-wakefield-process-step h3 { font-size: 0.98rem; margin-bottom: 4px; }
-.bcm-wakefield-process-step p { color: var(--bcm-text-secondary); font-size: 0.9rem; margin: 0; line-height: 1.55; }
-
-/* SPLIT */
-.bcm-wakefield-split { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
-.bcm-wakefield-split-img { border-radius: var(--bcm-radius-lg); overflow: hidden; box-shadow: var(--bcm-shadow-lg); }
-.bcm-wakefield-split-img img { width: 100%; height: auto; display: block; }
-
-/* CTA BAND */
-.bcm-wakefield-cta-band { background: var(--bcm-black); padding: 72px 24px; text-align: center; position: relative; overflow: hidden; }
-.bcm-wakefield-cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(201, 169, 110, 0.04) 0%, transparent 60%); pointer-events: none; }
-.bcm-wakefield-cta-band h2 { color: var(--bcm-white); font-size: 1.7rem; margin-bottom: 12px; position: relative; }
-.bcm-wakefield-cta-band p { color: rgba(255, 255, 255, 0.75); font-size: 1rem; max-width: 480px; margin: 0 auto 36px; position: relative; }
-.bcm-wakefield-cta-band .bcm-wakefield-hero-ctas { position: relative; }
-
-/* LINKS */
-.bcm-wakefield-links { display: grid; grid-template-columns: 1fr; gap: 32px; padding-top: 48px; border-top: 1px solid var(--bcm-border); }
-.bcm-wakefield-links h3 { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--bcm-text-tertiary); margin-bottom: 14px; }
-.bcm-wakefield-links ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
-.bcm-wakefield-links li a { font-size: 0.9rem; font-weight: 500; color: var(--bcm-text-primary) !important; text-decoration: none !important; transition: color 0.2s; }
-.bcm-wakefield-links li a:hover { color: var(--bcm-gold) !important; }
+.bcm-wakefield-links li a:hover { color: var(--bcm-gold); }
 
 @media (min-width: 768px) {
-  .bcm-wakefield h1 { font-size: 2.6rem; }
-  .bcm-wakefield h2 { font-size: 1.9rem; }
-  .bcm-wakefield-hero { min-height: 560px; padding: 100px 40px 92px; }
-  .bcm-wakefield-hero h1 { font-size: 2.9rem; }
   .bcm-wakefield-section { padding: 88px 40px; }
-  .bcm-wakefield-services { grid-template-columns: repeat(2, 1fr); }
+  .bcm-wakefield-services { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .bcm-wakefield-gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .bcm-wakefield-diff-grid { grid-template-columns: repeat(2, 1fr); }
-  .bcm-wakefield-process { grid-template-columns: repeat(2, 1fr); }
-  .bcm-wakefield-split { grid-template-columns: 1fr 1fr; gap: 64px; }
+  .bcm-wakefield-context { grid-template-columns: 1fr 1fr; gap: 64px; }
   .bcm-wakefield-links { grid-template-columns: repeat(3, 1fr); }
 }
 @media (min-width: 1024px) {
-  .bcm-wakefield-hero { min-height: 600px; }
-  .bcm-wakefield-hero h1 { font-size: 3.2rem; }
-  .bcm-wakefield-section { padding: 100px 40px; }
   .bcm-wakefield-services { grid-template-columns: repeat(4, 1fr); }
-  .bcm-wakefield-gallery-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .bcm-wakefield-gallery-grid { grid-template-columns: repeat(4, 1fr); }
   .bcm-wakefield-gallery-item--tall { grid-row: span 2; }
-  .bcm-wakefield-process { grid-template-columns: repeat(5, 1fr); }
 }
 </style>
 
 <div class="bcm-wakefield">
 
-  <section class="bcm-wakefield-hero">
-    <div class="bcm-wakefield-hero-content">
-      <div class="bcm-wakefield-hero-label">Wakefield, MA</div>
-      <h1>Design-Build Contractor Serving Wakefield</h1>
-      <p class="bcm-wakefield-hero-sub">Additions, renovations, ADUs, and custom homes - planned and built by one accountable team with daily updates and transparent pricing.</p>
-      <div class="bcm-wakefield-hero-ctas">
-        <a href="https://bradfordcm.com/contact/" class="bcm-wakefield-cta--gold">Start a Conversation</a>
-        <a href="tel:9789459771" class="bcm-wakefield-cta--ghost">978-945-9771</a>
-      </div>
-    </div>
-  </section>
-
   <div class="bcm-wakefield-trust">
-    <div class="bcm-wakefield-trust-items">
-      <div class="bcm-wakefield-trust-item">Licensed &amp; Insured</div>
-      <div class="bcm-wakefield-trust-item">MA HIC #201908</div>
-      <div class="bcm-wakefield-trust-item">Design-Build</div>
-      <div class="bcm-wakefield-trust-item">Lifetime Support via BHS</div>
+    <div class="bcm-wakefield-container">
+      <div class="bcm-wakefield-trust-items">
+        <div class="bcm-wakefield-trust-item">Licensed & Insured</div>
+        <div class="bcm-wakefield-trust-item">MA HIC #201908</div>
+        <div class="bcm-wakefield-trust-item">Design-Build Approach</div>
+        <div class="bcm-wakefield-trust-item">Lifetime Support</div>
+      </div>
     </div>
   </div>
 
   <section class="bcm-wakefield-section">
-    <div class="bcm-wakefield-inner">
+    <div class="bcm-wakefield-container">
       <div class="bcm-wakefield-section-header">
-        <span class="bcm-wakefield-gold-rule"></span>
+        <span class="bcm-wakefield-label">Services</span>
         <h2>What We Build in Wakefield</h2>
-        <p class="bcm-wakefield-lead">Bradford Construction Management handles residential projects from first conversation through final walkthrough - and stays connected long after.</p>
+        <p class="bcm-wakefield-subtitle">Bradford Construction Management handles every phase of residential construction from first conversation through final walkthrough and beyond, with one team accountable to you throughout.</p>
       </div>
       <div class="bcm-wakefield-services">
-        <div class="bcm-wakefield-svc">
-          <div class="bcm-wakefield-svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2h-4v-6H9v6H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
-          <h3><a href="https://bradfordcm.com/home-additions/">Home Additions</a></h3>
-          <p>More room for your family without leaving the neighborhood. We handle design, permitting, and construction as one team.</p>
-        </div>
-        <div class="bcm-wakefield-svc">
-          <div class="bcm-wakefield-svc-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
-          <h3><a href="https://bradfordcm.com/home-renovations/">Home Renovations</a></h3>
-          <p>Whole-home and room-by-room renovations that bring your existing house up to the standard you actually want to live in.</p>
-        </div>
-        <div class="bcm-wakefield-svc">
-          <div class="bcm-wakefield-svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v3"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
-          <h3><a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">Accessory Dwelling Units</a></h3>
-          <p>In-law suites, rental units, and multigenerational living spaces. We navigate zoning and permitting so you don't have to.</p>
-        </div>
-        <div class="bcm-wakefield-svc">
-          <div class="bcm-wakefield-svc-icon"><svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><rect x="9" y="12" width="6" height="8"/></svg></div>
-          <h3><a href="https://bradfordcm.com/custom-homes/">Custom Homes</a></h3>
-          <p>Ground-up builds designed around how you actually live. Commercial-grade project management for residential construction.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bcm-wakefield-section bcm-wakefield-section--tinted" id="bcm-gallery">
-    <div class="bcm-wakefield-inner">
-      <div class="bcm-wakefield-section-header">
-        <span class="bcm-wakefield-gold-rule"></span>
-        <h2>Project Gallery</h2>
-        <p class="bcm-wakefield-lead">A look at residential work completed by our team. Each project reflects the same approach - thoughtful design, quality materials, clean execution.</p>
-      </div>
-      <div class="bcm-wakefield-gallery-container">
-        <input type="checkbox" class="bcm-wakefield-gallery-check" id="bcmGalleryCheck">
-        <div class="bcm-wakefield-gallery-grid">
-          <a href="#lb0" class="bcm-wakefield-gallery-item bcm-wakefield-gallery-item--tall"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7984-scaled.webp" alt="" width="600" height="900" loading="eager"></a>
-          <a href="#lb1" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2672-scaled.webp" alt="" width="600" height="450" loading="eager"></a>
-          <a href="#lb2" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/80AD6489-0577-4624-853D-C50E6EF2CDDD.webp" alt="" width="600" height="450" loading="eager"></a>
-          <a href="#lb3" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7737.webp" alt="" width="600" height="450" loading="lazy"></a>
-          <a href="#lb4" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7498.webp" alt="" width="600" height="450" loading="lazy"></a>
-          <a href="#lb5" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2650-scaled.webp" alt="" width="600" height="450" loading="lazy"></a>
-          <div class="bcm-wakefield-gallery-overflow">
-            <a href="#lb6" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8590-scaled.webp" alt="" width="600" height="450" loading="lazy"></a>
-            <a href="#lb7" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7980-scaled.webp" alt="" width="600" height="450" loading="lazy"></a>
-            <a href="#lb8" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2689-scaled.webp" alt="" width="600" height="450" loading="lazy"></a>
-            <a href="#lb9" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7339.webp" alt="" width="600" height="450" loading="lazy"></a>
-            <a href="#lb10" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2670-scaled.webp" alt="" width="600" height="450" loading="lazy"></a>
-            <a href="#lb11" class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8580-scaled.webp" alt="" width="600" height="450" loading="lazy"></a>
+        <div class="bcm-wakefield-service">
+          <div class="bcm-wakefield-service-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2h-4v-6H9v6H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+          <div>
+            <h3><a href="https://bradfordcm.com/home-additions/">Home Additions</a></h3>
+            <p>More room for your growing family without leaving the neighborhood you love. We manage design, permits, and construction as one team.</p>
           </div>
         </div>
-        <label for="bcmGalleryCheck" class="bcm-wakefield-gallery-label">
-          <span class="bcm-toggle-show">View All 12 Photos</span>
-          <span class="bcm-toggle-hide">Show Less</span>
-          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </label>
+        <div class="bcm-wakefield-service">
+          <div class="bcm-wakefield-service-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+          <div>
+            <h3><a href="https://bradfordcm.com/home-renovations/">Home Renovations</a></h3>
+            <p>Whole-home and room-by-room renovations that transform dated spaces into homes you actually want to live in.</p>
+          </div>
+        </div>
+        <div class="bcm-wakefield-service">
+          <div class="bcm-wakefield-service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v3"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
+          <div>
+            <h3><a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">Accessory Dwelling Units</a></h3>
+            <p>In-law suites, rental units, and multigenerational living spaces. We handle zoning and permitting so you don't have to.</p>
+          </div>
+        </div>
+        <div class="bcm-wakefield-service">
+          <div class="bcm-wakefield-service-icon"><svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><rect x="9" y="12" width="6" height="8"/></svg></div>
+          <div>
+            <h3><a href="https://bradfordcm.com/custom-homes/">Custom Homes</a></h3>
+            <p>Ground-up builds designed around how you actually live. Commercial-grade project management for residential construction.</p>
+          </div>
+        </div>
       </div>
-      <p style="text-align:center; margin-top:20px;">
-        <a href="https://bradfordcm.com/projects/" class="bcm-wakefield-cta--dark">Browse Full Portfolio</a>
-      </p>
     </div>
   </section>
 
-  <!-- CSS-only lightbox panels -->
-  <div id="lb0" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb11" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7984-scaled.webp" alt=""><a href="#lb1" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb1" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb0" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2672-scaled.webp" alt=""><a href="#lb2" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb2" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb1" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/80AD6489-0577-4624-853D-C50E6EF2CDDD.webp" alt=""><a href="#lb3" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb3" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb2" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7737.webp" alt=""><a href="#lb4" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb4" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb3" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7498.webp" alt=""><a href="#lb5" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb5" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb4" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2650-scaled.webp" alt=""><a href="#lb6" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb6" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb5" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8590-scaled.webp" alt=""><a href="#lb7" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb7" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb6" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7980-scaled.webp" alt=""><a href="#lb8" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb8" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb7" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2689-scaled.webp" alt=""><a href="#lb9" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb9" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb8" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7339.webp" alt=""><a href="#lb10" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb10" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb9" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2670-scaled.webp" alt=""><a href="#lb11" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
-  <div id="lb11" class="bcm-wakefield-lb-panel"><a href="#bcm-gallery" class="bcm-lb-link bcm-lb-close">&times;</a><a href="#lb10" class="bcm-lb-link bcm-lb-prev">&#8249;</a><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8580-scaled.webp" alt=""><a href="#lb0" class="bcm-lb-link bcm-lb-next">&#8250;</a></div>
+  <section class="bcm-wakefield-section bcm-wakefield-section--alt">
+    <div class="bcm-wakefield-container">
+      <div class="bcm-wakefield-section-header">
+        <span class="bcm-wakefield-label">Portfolio</span>
+        <h2>Project Gallery</h2>
+        <p class="bcm-wakefield-subtitle">A sampling of residential work completed by our team. Each project reflects thoughtful design, quality materials, and clean execution.</p>
+      </div>
+      <div>
+        <input type="checkbox" id="bcmWakegalleryCheck" class="bcm-wakefield-gallery-toggle">
+        <div class="bcm-wakefield-gallery-grid">
+          <div class="bcm-wakefield-gallery-item bcm-wakefield-gallery-item--tall"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7984-scaled.webp" alt="" width="600" height="900" loading="eager"></div>
+          <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2672-scaled.webp" alt="" width="600" height="450" loading="eager"></div>
+          <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/80AD6489-0577-4624-853D-C50E6EF2CDDD.webp" alt="" width="600" height="450" loading="eager"></div>
+          <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7737.webp" alt="" width="600" height="450" loading="lazy"></div>
+          <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7498.webp" alt="" width="600" height="450" loading="lazy"></div>
+          <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2650-scaled.webp" alt="" width="600" height="450" loading="lazy"></div>
+          <div class="bcm-wakefield-gallery-more">
+            <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8590-scaled.webp" alt="" width="600" height="450" loading="lazy"></div>
+            <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7980-scaled.webp" alt="" width="600" height="450" loading="lazy"></div>
+            <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2689-scaled.webp" alt="" width="600" height="450" loading="lazy"></div>
+            <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7339.webp" alt="" width="600" height="450" loading="lazy"></div>
+            <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_2670-scaled.webp" alt="" width="600" height="450" loading="lazy"></div>
+            <div class="bcm-wakefield-gallery-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8580-scaled.webp" alt="" width="600" height="450" loading="lazy"></div>
+          </div>
+        </div>
+        <label for="bcmWakegalleryCheck" class="bcm-wakefield-gallery-label">
+          <span class="bcm-wakefield-label-show">View All 12 Photos</span>
+          <span class="bcm-wakefield-label-hide">Show Less</span>
+        </label>
+      </div>
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="https://bradfordcm.com/projects/" class="bcm-wakefield-button">Browse Full Portfolio</a>
+      </div>
+    </div>
+  </section>
 
   <section class="bcm-wakefield-section bcm-wakefield-section--dark">
-    <div class="bcm-wakefield-inner">
-      <div class="bcm-wakefield-section-header">
-        <span class="bcm-wakefield-gold-rule"></span>
-        <h2>What Makes BCM Different</h2>
-        <p>Most contractors finish your project and move on. We built a company around the opposite approach.</p>
-      </div>
-      <div class="bcm-wakefield-diff-grid">
-        <div class="bcm-wakefield-diff"><div class="bcm-wakefield-diff-marker"></div><div><h3>One Team, Start to Finish</h3><p>Design, permitting, and construction are handled by one accountable team. No finger-pointing between architects, engineers, and builders - they all report to the same project manager.</p></div></div>
-        <div class="bcm-wakefield-diff"><div class="bcm-wakefield-diff-marker"></div><div><h3>Lifetime Support Through BHS</h3><p>After the final walkthrough, Bradford Home Services handles ongoing maintenance, seasonal check-ins, and warranty follow-through. Your project doesn't end when we hand over the keys.</p></div></div>
-        <div class="bcm-wakefield-diff"><div class="bcm-wakefield-diff-marker"></div><div><h3>Transparent Pricing</h3><p>Detailed scopes of work with documented change orders. You see exactly what's included and what any change costs before you approve it - no vague allowances or surprise invoices.</p></div></div>
-        <div class="bcm-wakefield-diff"><div class="bcm-wakefield-diff-marker"></div><div><h3>Daily Job-Site Updates</h3><p>Photos of exactly what happened on your project every single day. No guessing, no waiting for weekly check-ins. Everything goes directly to your project portal.</p></div></div>
+    <div class="bcm-wakefield-container">
+      <div class="bcm-wakefield-diff-section">
+        <div class="bcm-wakefield-section-header">
+          <span class="bcm-wakefield-label">Difference</span>
+          <h2>What Makes BCM Different</h2>
+          <p style="color: rgba(255, 255, 255, 0.8); position: relative; z-index: 1;">Most contractors finish your project and move on. We built our company on the opposite approach.</p>
+        </div>
+        <div class="bcm-wakefield-diff-grid">
+          <div class="bcm-wakefield-diff">
+            <div class="bcm-wakefield-diff-num">1.</div>
+            <div>
+              <h3>One Team, Start to Finish</h3>
+              <p>Design, permitting, and construction are handled by one accountable team. No finger-pointing between architects, engineers, and builders.</p>
+            </div>
+          </div>
+          <div class="bcm-wakefield-diff">
+            <div class="bcm-wakefield-diff-num">2.</div>
+            <div>
+              <h3>Lifetime Support Through BHS</h3>
+              <p>After final walkthrough, Bradford Home Services handles ongoing maintenance, seasonal check-ins, and warranty follow-through.</p>
+            </div>
+          </div>
+          <div class="bcm-wakefield-diff">
+            <div class="bcm-wakefield-diff-num">3.</div>
+            <div>
+              <h3>Transparent Pricing</h3>
+              <p>Detailed scopes with documented change orders. You see exactly what's included and what changes cost before you approve.</p>
+            </div>
+          </div>
+          <div class="bcm-wakefield-diff">
+            <div class="bcm-wakefield-diff-num">4.</div>
+            <div>
+              <h3>Daily Job-Site Updates</h3>
+              <p>Photos of what happened every single day. Everything goes to your project portal so you're always in the loop.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="bcm-wakefield-section">
-    <div class="bcm-wakefield-inner">
+    <div class="bcm-wakefield-container">
       <div class="bcm-wakefield-section-header">
-        <span class="bcm-wakefield-gold-rule"></span>
+        <span class="bcm-wakefield-label">Process</span>
         <h2>How a Project Works</h2>
-        <p class="bcm-wakefield-lead">Our <a href="https://bradfordcm.com/design-build/">design-build approach</a> puts one team in charge from the first phone call through post-completion support.</p>
+        <p class="bcm-wakefield-subtitle">Our design-build approach puts one team in charge from your first phone call through post-completion support. Click any step to learn more.</p>
       </div>
       <div class="bcm-wakefield-process">
-        <div class="bcm-wakefield-process-step"><div class="bcm-wakefield-process-num">1</div><div><h3>Conversation</h3><p>We discuss goals, timeline, and a realistic budget range. No commitment required.</p></div></div>
-        <div class="bcm-wakefield-process-step"><div class="bcm-wakefield-process-num">2</div><div><h3>Feasibility &amp; Design</h3><p>Property evaluation, zoning review, and a design that meets your goals and budget.</p></div></div>
-        <div class="bcm-wakefield-process-step"><div class="bcm-wakefield-process-num">3</div><div><h3>Permitting</h3><p>We prepare applications, handle revisions, and coordinate with local building departments.</p></div></div>
-        <div class="bcm-wakefield-process-step"><div class="bcm-wakefield-process-num">4</div><div><h3>Construction</h3><p>Daily photo updates, documented change orders, and a dedicated project manager.</p></div></div>
-        <div class="bcm-wakefield-process-step"><div class="bcm-wakefield-process-num">5</div><div><h3>Lifetime Support</h3><p>Bradford Home Services provides maintenance, seasonal care, and warranty support.</p></div></div>
+        <div style="display: flex; flex-direction: column;">
+          <input type="checkbox" id="bcmWakeprocess1" class="bcm-wakefield-process-toggle">
+          <label for="bcmWakeprocess1" class="bcm-wakefield-process-header">
+            <div class="bcm-wakefield-process-num">1</div>
+            <div>
+              <h3>Conversation</h3>
+              <p>We discuss your goals, timeline, and realistic budget. No obligation.</p>
+            </div>
+            <div class="bcm-wakefield-process-toggle-label">+</div>
+          </label>
+          <div class="bcm-wakefield-process-content">
+            <p>During our initial conversation, we listen to your vision, understand your timeline expectations, and discuss realistic budget parameters. This is your chance to ask questions with no pressure or obligation to move forward.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <input type="checkbox" id="bcmWakeprocess2" class="bcm-wakefield-process-toggle">
+          <label for="bcmWakeprocess2" class="bcm-wakefield-process-header">
+            <div class="bcm-wakefield-process-num">2</div>
+            <div>
+              <h3>Feasibility & Design</h3>
+              <p>Property evaluation, zoning review, and initial concepts.</p>
+            </div>
+            <div class="bcm-wakefield-process-toggle-label">+</div>
+          </label>
+          <div class="bcm-wakefield-process-content">
+            <p>We evaluate your property's potential, review local zoning and building codes, and develop initial design concepts that fit your goals and budget. This phase determines what's actually buildable and what it will cost.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <input type="checkbox" id="bcmWakeprocess3" class="bcm-wakefield-process-toggle">
+          <label for="bcmWakeprocess3" class="bcm-wakefield-process-header">
+            <div class="bcm-wakefield-process-num">3</div>
+            <div>
+              <h3>Permitting</h3>
+              <p>We prepare and manage all applications and approvals.</p>
+            </div>
+            <div class="bcm-wakefield-process-toggle-label">+</div>
+          </label>
+          <div class="bcm-wakefield-process-content">
+            <p>We handle all permitting details: preparing applications, managing building department reviews and revisions, and coordinating throughout the approval process so you don't have to navigate municipal bureaucracy alone.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <input type="checkbox" id="bcmWakeprocess4" class="bcm-wakefield-process-toggle">
+          <label for="bcmWakeprocess4" class="bcm-wakefield-process-header">
+            <div class="bcm-wakefield-process-num">4</div>
+            <div>
+              <h3>Construction</h3>
+              <p>Daily updates, documented changes, project management.</p>
+            </div>
+            <div class="bcm-wakefield-process-toggle-label">+</div>
+          </label>
+          <div class="bcm-wakefield-process-content">
+            <p>During construction, you get daily photo updates to your project portal, all changes are documented with costs, and a dedicated project manager oversees quality and schedule. Real-time communication throughout.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <input type="checkbox" id="bcmWakeprocess5" class="bcm-wakefield-process-toggle">
+          <label for="bcmWakeprocess5" class="bcm-wakefield-process-header">
+            <div class="bcm-wakefield-process-num">5</div>
+            <div>
+              <h3>Lifetime Support</h3>
+              <p>Bradford Home Services continues from there.</p>
+            </div>
+            <div class="bcm-wakefield-process-toggle-label">+</div>
+          </label>
+          <div class="bcm-wakefield-process-content">
+            <p>After your project is complete, our partnership with Bradford Home Services means you have a dedicated maintenance team that already knows your home. Seasonal care, warranty support, and future renovations - all with one phone call.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="bcm-wakefield-section bcm-wakefield-section--tinted">
-    <div class="bcm-wakefield-inner">
-      <div class="bcm-wakefield-split">
-        <div class="bcm-wakefield-split-text">
-          <span class="bcm-wakefield-gold-rule"></span>
+  <section class="bcm-wakefield-section bcm-wakefield-section--alt">
+    <div class="bcm-wakefield-container">
+      <div class="bcm-wakefield-context">
+        <div>
           <h2>Building in Wakefield</h2>
-          <p class="bcm-wakefield-lead">Wakefield sits at a practical midpoint between the North Shore coast and the Merrimack Valley, making it a natural fit for our project coverage area. Our team is familiar with Wakefield's building department processes, residential zoning requirements, and the mix of housing stock throughout town.</p>
-          <p style="color: var(--bcm-text-secondary); font-size: 0.96rem; line-height: 1.65;">Whether you're adding a second story, renovating a kitchen that hasn't been touched in decades, or exploring an ADU for aging parents, the approach is the same: clear scope, honest pricing, reliable schedule, and a team that picks up the phone.</p>
-          <p style="color: var(--bcm-text-secondary); font-size: 0.96rem; line-height: 1.65; margin-bottom: 0;">Our headquarters in Haverhill puts us about 30 minutes from most Wakefield addresses, and our project managers are on-site daily during active construction.</p>
+          <p style="color: var(--bcm-text-secondary); font-size: 1.02rem; line-height: 1.7; margin-bottom: 16px;">Wakefield sits at a practical midpoint between the North Shore coast and the Merrimack Valley, making it a natural fit for our project coverage area. Our team is familiar with Wakefield's building department, residential zoning requirements, and the mix of housing stock throughout town.</p>
+          <p style="color: var(--bcm-text-secondary); font-size: 0.96rem; line-height: 1.65; margin-bottom: 16px;">Whether you're adding a second story, renovating a kitchen that hasn't been touched in decades, or exploring an ADU for aging parents, the approach is the same: clear scope, honest pricing, reliable schedule, and a team that picks up the phone.</p>
+          <p style="color: var(--bcm-text-secondary); font-size: 0.96rem; line-height: 1.65; margin-bottom: 0;">Our headquarters in Haverhill puts us about 30 minutes from most Wakefield addresses, with project managers on-site daily during active construction.</p>
         </div>
-        <div class="bcm-wakefield-split-img">
+        <div class="bcm-wakefield-context-img">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8580-scaled.webp" alt="" width="600" height="450" loading="lazy">
         </div>
       </div>
@@ -446,18 +722,18 @@
   </section>
 
   <section class="bcm-wakefield-cta-band">
-    <div class="bcm-wakefield-inner">
-      <h2>Ready to Talk About Your Project?</h2>
+    <div class="bcm-wakefield-container">
+      <h2>Ready to Discuss Your Project?</h2>
       <p>An honest assessment of scope, timeline, and budget. No pressure, no sales pitch.</p>
-      <div class="bcm-wakefield-hero-ctas">
-        <a href="https://bradfordcm.com/contact/" class="bcm-wakefield-cta--gold">Get in Touch</a>
-        <a href="tel:9789459771" class="bcm-wakefield-cta--ghost">978-945-9771</a>
+      <div class="bcm-wakefield-ctas">
+        <a href="https://bradfordcm.com/contact/" class="bcm-wakefield-button">Schedule Consultation</a>
+        <a href="tel:9789459771" class="bcm-wakefield-button-ghost">978-945-9771</a>
       </div>
     </div>
   </section>
 
-  <section class="bcm-wakefield-section" style="padding-top: 56px; padding-bottom: 56px;">
-    <div class="bcm-wakefield-inner">
+  <section class="bcm-wakefield-section">
+    <div class="bcm-wakefield-container">
       <div class="bcm-wakefield-links">
         <div>
           <h3>Services</h3>

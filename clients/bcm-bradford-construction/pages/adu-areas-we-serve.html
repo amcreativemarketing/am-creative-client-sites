@@ -1,8 +1,9 @@
 <!--
   BCM ADU Areas We Serve Block
+  2026 Brand Identity Redesign
   Self-contained HTML/CSS for the main ADU hub page.
   Drop into Elementor HTML widget.
-  Brand: Navy #060097, Gold #FFCD57, Dark Slate #1E293B, Light Gray #F2F5F7
+  Brand: Black #1A1A1A, Gold #C8A24D, Maritime #0F2A45, Light Gray #F1F1F1
   Fonts: Plus Jakarta Sans (headings), Inter (body)
 
   TO UPDATE: Uncomment or add <a> links in the appropriate region group.
@@ -177,11 +178,11 @@
     background: var(--bcm-surface);
     color: var(--bcm-black);
     text-decoration: none;
-    border-radius: var(--bcm-radius-pill);
+    border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
     border: 2px solid var(--bcm-gray);
-    transition: var(--bcm-transition);
+    transition: all 0.3s var(--bcm-ease);
   }
 
   .bcm-area-links a:hover {
@@ -229,8 +230,8 @@
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: var(--bcm-radius-pill);
-    transition: var(--bcm-transition);
+    border-radius: 20px;
+    transition: all 0.3s var(--bcm-ease);
     cursor: pointer;
     border: none;
     background-color: var(--bcm-gold);
@@ -240,7 +241,7 @@
   .bcm-areas-cta:hover {
     background-color: var(--bcm-gold-hover);
     transform: translateY(-2px);
-    box-shadow: var(--bcm-shadow-hover);
+    box-shadow: var(--bcm-shadow-gold);
   }
 
   /* Responsive */
