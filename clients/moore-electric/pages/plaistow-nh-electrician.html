@@ -191,8 +191,12 @@
         .plst-area__towns { grid-template-columns: 1fr; }
     }
 
-    /* H1 Page Title */
-    .plst-hub h1 { font-family: 'Raleway', sans-serif; font-size: clamp(2.25rem, 5vw, 3.25rem); font-weight: 700; line-height: 1.2; color: var(--moore-text); margin-bottom: 1rem; }
+    /* H1 Page Title Block */
+    .plst-page-title { padding: 48px 0 40px; border-bottom: 1px solid var(--moore-gray); margin-bottom: 40px; }
+    .plst-page-title .eyebrow { margin-bottom: 10px; }
+    .plst-hub h1 { font-family: 'Raleway', sans-serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.15; color: var(--moore-text); letter-spacing: -0.5px; margin-bottom: 16px; }
+    .plst-page-title__accent { width: 56px; height: 4px; background: var(--moore-gold); border-radius: 2px; }
+    .plst-page-title__sub { font-size: 1.05rem; color: var(--moore-text-muted); margin-top: 14px; margin-bottom: 0; max-width: 620px; }
 </style>
 
 <div class="plst-hub">
@@ -202,7 +206,12 @@
      ============================================ -->
 <section class="plst-cred">
     <div class="container">
-        <h1>Electrician in Plaistow, NH</h1>
+        <div class="plst-page-title">
+            <div class="eyebrow">Moore Electric Inc.</div>
+            <h1>Electrician in Plaistow, NH</h1>
+            <div class="plst-page-title__accent"></div>
+            <p class="plst-page-title__sub">Licensed Master Electrician serving Plaistow and surrounding southern NH communities - residential and commercial electrical services, permits included.</p>
+        </div>
         <div class="plst-cred__image">
             <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/Mooreelectricguys-scaled.webp" alt="" width="1200" height="480" loading="lazy">
         </div>
