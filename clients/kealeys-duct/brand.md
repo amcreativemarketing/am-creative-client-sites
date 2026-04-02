@@ -14,6 +14,12 @@
 - Body: Inter, weight 400-500
 - Google Fonts import: `https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500&display=swap`
 
+## Business Name Rules
+- **Correct:** Kealey's Duct and Dryer Cleaning, Kealey's Duct & Dryer Cleaning, or just "Kealey's"
+- **NEVER use:** BK Duct and Dryer Cleaning, BK Duct & Dryer Cleaning, or "BK" as a standalone name
+- The domain (bkductdryercleaning.com) and email use "bk" but all customer-facing copy and page content must use "Kealey's"
+- CSS class prefixes (.bk-hp-) are technical only and do not need to change
+
 ## Voice & Tone
 - Professional but warm, family-focused
 - Trust-building, addresses "scam PTSD" in industry
