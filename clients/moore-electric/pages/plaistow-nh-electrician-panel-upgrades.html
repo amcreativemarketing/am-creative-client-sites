@@ -31,14 +31,15 @@
     .plst-pan img { max-width: 100%; height: auto; display: block; }
     .plst-pan a { color: var(--moore-teal); text-decoration: none; transition: color var(--transition-fast); }
     .plst-pan a:hover { color: var(--moore-gold); }
-    .plst-pan h2, .plst-pan h3, .plst-pan h4 { font-family: 'Raleway', sans-serif; font-weight: 700; line-height: 1.2; color: var(--moore-text); }
-    .plst-pan h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+    .plst-pan h1, .plst-pan h2, .plst-pan h3, .plst-pan h4 { font-family: 'Raleway', sans-serif; font-weight: 700; line-height: 1.2; color: var(--moore-text); }
+    .plst-pan h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 16px; }
+    .plst-pan h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; text-align: center; }
     .plst-pan h3 { font-size: clamp(1.15rem, 2.5vw, 1.35rem); font-weight: 600; }
     .plst-pan p { margin-bottom: 1.25rem; }
     .plst-pan p:last-child { margin-bottom: 0; }
     .plst-pan .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
     .plst-pan section { padding: var(--section-padding) 0; }
-    .plst-pan .eyebrow { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--moore-gold); margin-bottom: 12px; }
+    .plst-pan .eyebrow { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--moore-gold); margin-bottom: 12px; text-align: center; }
 
     /* Buttons */
     .plst-pan .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 32px; font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 4px; border: 2px solid transparent; cursor: pointer; transition: all var(--transition-med); text-decoration: none; min-height: 52px; }
@@ -46,6 +47,12 @@
     .plst-pan .btn--gold:hover { background: var(--moore-gold-dark) !important; border-color: var(--moore-gold-dark) !important; transform: translateY(-2px); }
     .plst-pan .btn--outline-white { background: transparent !important; color: var(--moore-text-light) !important; border-color: var(--moore-text-light) !important; }
     .plst-pan .btn--outline-white:hover { background: var(--moore-text-light) !important; color: var(--moore-teal) !important; }
+
+    /* ---- H1 Intro ---- */
+    .plst-pan-intro { background: #fff; padding: 48px 0 40px; border-bottom: 1px solid var(--moore-gray); }
+    .plst-pan-intro__inner { text-align: center; max-width: 760px; margin: 0 auto; }
+    .plst-pan-intro__accent { width: 56px; height: 4px; background: var(--moore-gold); border-radius: 2px; margin: 16px auto 20px; }
+    .plst-pan-intro__sub { font-size: 1.1rem; color: var(--moore-text-muted); max-width: 640px; margin: 0 auto; }
 
     /* ---- Permit Process ---- */
     .plst-pan-permit { background: #fff; }
@@ -88,7 +95,6 @@
     .plst-pan-eversource__header { text-align: center; max-width: 720px; margin: 0 auto 40px; }
     .plst-pan-eversource h2 { color: var(--moore-text-light) !important; }
     .plst-pan-eversource p { color: rgba(255,255,255,0.85); }
-    .plst-pan-eversource__grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
     .plst-pan-eversource__photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
     .plst-pan-eversource__photo { border-radius: 10px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.3); border: 3px solid rgba(201,162,39,0.4); aspect-ratio: 1 / 1; }
     .plst-pan-eversource__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -164,14 +170,54 @@
         .plst-pan .btn { width: 100%; }
         .plst-pan-cta__btns, .plst-pan-final__btns { flex-direction: column; align-items: center; }
     }
-
-    /* H1 Page Title */
-    .plst-pan h1 { font-family: 'Raleway', sans-serif; font-size: clamp(2.25rem, 5vw, 3.25rem); font-weight: 700; line-height: 1.2; color: var(--moore-text); margin-bottom: 1rem; }
 </style>
 
 <div class="plst-pan">
-<h1>Electrical Panel Upgrades in Plaistow, NH</h1>
 
+<!-- ============================================
+     H1 INTRO
+     ============================================ -->
+<section class="plst-pan-intro">
+    <div class="container">
+        <div class="plst-pan-intro__inner">
+            <div class="eyebrow">Moore Electric Inc.</div>
+            <h1>Electrical Panel Upgrades in Plaistow, NH</h1>
+            <div class="plst-pan-intro__accent"></div>
+            <p class="plst-pan-intro__sub">Moore Electric handles 200-amp panel upgrades, Federal Pacific replacements, subpanel installations, and service entrance upgrades throughout Plaistow and southern NH. Permits filed, Eversource coordinated, inspections passed - start to finish.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECTION 1: Plaistow Housing Stock
+     ============================================ -->
+<section class="plst-pan-housing">
+    <div class="container">
+        <div class="plst-pan-housing__header">
+            <div class="eyebrow">Local Housing Context</div>
+            <h2>Why Plaistow Homes Need Panel Upgrades</h2>
+            <p style="color: var(--moore-text-muted);">Plaistow's residential neighborhoods span several decades of construction - and each era brought its own electrical infrastructure that, in many cases, has reached the end of its serviceable life. Here's what Moore Electric sees most often.</p>
+        </div>
+
+        <div class="plst-pan-housing__grid">
+            <div class="plst-pan-era">
+                <div class="plst-pan-era__decade">1950s-70s</div>
+                <h3>Mid-Century Homes Near Town Center</h3>
+                <p>Older neighborhoods surrounding the town center and along routes like Westville Road and Plaistow Road contain homes still running on original fuse boxes or early breaker panels - including Federal Pacific Electric (FPE) Stab-Lok and Zinsco panels. Both have documented safety issues and are no longer acceptable under NH electrical code or most homeowners insurance carriers. Moore Electric regularly replaces FPE and Zinsco panels with modern, code-compliant 200-amp panels.</p>
+            </div>
+            <div class="plst-pan-era">
+                <div class="plst-pan-era__decade">1980s-90s</div>
+                <h3>Colonials &amp; Split-Levels</h3>
+                <p>Homes built in the Route 121A, Main Street, and Danville Road corridors were typically wired with 100-amp or 150-amp service - sized for the loads of that era. Today, those same homes are running <a href="https://mooreelectricinc.net/ev-charger-installation/">EV chargers</a>, central AC, heat pumps, and home offices simultaneously. Upgrading to 200-amp service is the standard solution, often combined with a service entrance upgrade to support the new panel.</p>
+            </div>
+            <div class="plst-pan-era">
+                <div class="plst-pan-era__decade">2000s+</div>
+                <h3>Newer Homes Near Route 125</h3>
+                <p>Newer construction near Route 125 and in subdivisions off Kelley Road was built with 200-amp service - but panels still get upgrade calls. The most common: adding a Level 2 EV charger, wiring a <a href="https://mooreelectricinc.net/home-additions-electrical/">home addition</a>, or installing a <a href="https://mooreelectricinc.net/generator-installation/">whole-home generator</a> that requires a transfer switch and dedicated circuit capacity.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- ============================================
      SECTION 2: Permit Process
@@ -181,7 +227,7 @@
         <div class="plst-pan-permit__header">
             <div class="eyebrow">The Plaistow Process</div>
             <h2>Panel Upgrades in Plaistow: The Permit &amp; Inspection Process</h2>
-            <p style="color: var(--moore-text-muted);">Every electrical panel upgrade in Plaistow requires a permit from the Town of Plaistow Building Department before work begins. As a licensed electrical contractor, Moore Electric files all permit applications on the homeowner's behalf - you don't need to make a trip to Town Hall or navigate the paperwork yourself. For general information about panel upgrades, visit our <a href="https://mooreelectricinc.net/electrical-panel-upgrades/">electrical panel upgrades</a> page.</p>
+            <p style="color: var(--moore-text-muted);">Every electrical panel upgrade in Plaistow requires a permit from the Town of Plaistow Building Department before work begins. Moore Electric files all permit applications on your behalf - no trips to Town Hall, no paperwork on your end. For a general overview of what's involved, visit our <a href="https://mooreelectricinc.net/electrical-panel-upgrades/">electrical panel upgrades</a> page.</p>
         </div>
 
         <div class="plst-pan-permit__grid">
@@ -217,43 +263,12 @@
 </section>
 
 <!-- ============================================
-     SECTION 3: Plaistow Housing Stock
-     ============================================ -->
-<section class="plst-pan-housing">
-    <div class="container">
-        <div class="plst-pan-housing__header">
-            <div class="eyebrow">Local Housing Context</div>
-            <h2>Why Plaistow Homes Need Panel Upgrades</h2>
-            <p style="color: var(--moore-text-muted);">Plaistow's residential neighborhoods span several decades of construction - and each era brought its own electrical infrastructure that, in many cases, has reached the end of its serviceable life. Here's what Moore Electric sees most often.</p>
-        </div>
-
-        <div class="plst-pan-housing__grid">
-            <div class="plst-pan-era">
-                <div class="plst-pan-era__decade">1950s-70s</div>
-                <h3>Mid-Century Homes Near Town Center</h3>
-                <p>Older neighborhoods surrounding the town center and along routes like Westville Road and Plaistow Road contain homes still running on original fuse boxes or early breaker panels, including Federal Pacific Electric (FPE) Stab-Lok and Zinsco panels. Both have documented safety issues and are no longer considered acceptable by NH electrical code enforcement or most homeowners insurance carriers. Moore Electric regularly replaces FPE and Zinsco panels with modern, code-compliant 200-amp panels. Many of these homes also need <a href="https://mooreelectricinc.net/plaistow-nh-electrician/repairs/">electrical repairs</a> alongside the panel upgrade.</p>
-            </div>
-            <div class="plst-pan-era">
-                <div class="plst-pan-era__decade">1980s-90s</div>
-                <h3>Colonials &amp; Split-Levels</h3>
-                <p>Homes built in the Route 121A, Main Street, and Danville Road corridors were typically wired with 100-amp or 150-amp service - sized for the loads of that era. Today, those same homes are running <a href="https://mooreelectricinc.net/ev-charger-installation/">EV chargers</a>, central AC, heat pumps, and home offices simultaneously. Upgrading to a 200-amp service is the standard solution, often combined with a <a href="https://mooreelectricinc.net/electrical-service-upgrades/">service entrance upgrade</a> to support the new panel.</p>
-            </div>
-            <div class="plst-pan-era">
-                <div class="plst-pan-era__decade">2000s+</div>
-                <h3>Newer Homes Near Route 125</h3>
-                <p>Newer construction near Route 125 and in subdivisions off Kelley Road was built with 200-amp service - but that doesn't mean panels are immune to upgrade needs. The most common calls Moore Electric receives from these neighborhoods are capacity-driven: adding a Level 2 EV charger, wiring a <a href="https://mooreelectricinc.net/home-additions-electrical/">home addition</a>, or installing a <a href="https://mooreelectricinc.net/generator-installation/">whole-home generator</a> that requires a transfer switch and dedicated circuit capacity.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     MID CTA
+     MID CTA — Awareness stage
      ============================================ -->
 <section class="plst-pan-cta">
     <div class="container">
         <h2>Not Sure If Your Panel Needs an Upgrade?</h2>
-        <p>Moore Electric offers free on-site panel assessments for Plaistow homeowners. Brenden will evaluate your current panel, load demands, and give you a straight answer.</p>
+        <p>Common warning signs: frequent tripping breakers, a Federal Pacific or Zinsco panel, homeowners insurance flagging your panel, or needing capacity for an EV charger or addition. Moore Electric offers free on-site assessments - Brenden gives you a straight answer with no pressure.</p>
         <div class="plst-pan-cta__btns">
             <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Get a Free Panel Assessment</a>
             <a href="tel:6038369513" class="btn btn--outline-white">Call 603-836-9513</a>
@@ -262,7 +277,7 @@
 </section>
 
 <!-- ============================================
-     SECTION 4: Project Examples
+     SECTION 3: Project Examples
      ============================================ -->
 <section class="plst-pan-projects">
     <div class="container">
@@ -290,35 +305,30 @@
 </section>
 
 <!-- ============================================
-     SECTION 5: Eversource Coordination
+     SECTION 4: Eversource Coordination
      ============================================ -->
 <section class="plst-pan-eversource">
     <div class="container">
         <div class="plst-pan-eversource__header">
             <div class="eyebrow" style="color: var(--moore-gold);">Utility Coordination</div>
             <h2>Working with Eversource for Your Plaistow Panel Upgrade</h2>
-            <p>Eversource NH is the electric utility serving Plaistow. Any panel upgrade that requires a service disconnect - which includes all full panel replacements - must be coordinated with Eversource before work can begin. Moore Electric manages this entire process.</p>
+            <p>Eversource NH is the electric utility serving Plaistow. Any panel upgrade that requires a service disconnect - which includes all full panel replacements - must be coordinated with Eversource before work can begin. Moore Electric manages this entire process on your behalf.</p>
         </div>
 
-        <div class="plst-pan-eversource__grid">
-            <div>
-                <ul class="plst-pan-eversource__list">
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                        <div><strong>Eversource Disconnect Request</strong><span>Filed by Moore Electric on the homeowner's behalf, typically 1-3 weeks lead time (longer in summer storm season).</span></div>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                        <div><strong>Day-Of Coordination</strong><span>Eversource disconnects at the meter in the morning. Moore Electric completes the panel replacement during the outage window. Eversource reconnects by end of day in most cases.</span></div>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        <div><strong>Meter Base Assessment</strong><span>If the existing meter base is outdated or doesn't meet Eversource's current specs, Moore Electric coordinates the replacement as part of the project to avoid a failed reconnect.</span></div>
-                    </li>
-                </ul>
-                <p style="margin-top: 24px;">Homeowners who attempt to coordinate this process themselves often encounter delays. Moore Electric - based at 21 Wentworth Ave in Plaistow - has an established relationship with Eversource NH that means faster scheduling and fewer surprises on installation day.</p>
-            </div>
-        </div>
+        <ul class="plst-pan-eversource__list">
+            <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                <div><strong>Eversource Disconnect Request</strong><span>Filed by Moore Electric on your behalf, typically 1-3 weeks lead time - longer during summer storm season. We schedule this the moment your permit is approved.</span></div>
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <div><strong>Day-Of Coordination</strong><span>Eversource disconnects at the meter in the morning. Moore Electric completes the panel replacement during the outage window. Eversource reconnects by end of day in most cases.</span></div>
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div><strong>Meter Base Assessment</strong><span>If the existing meter base is outdated or doesn't meet Eversource's current specs, Moore Electric coordinates the replacement as part of the project to avoid a failed reconnect.</span></div>
+            </li>
+        </ul>
 
         <div class="plst-pan-eversource__photos">
             <div class="plst-pan-eversource__photo">
@@ -332,7 +342,7 @@
 </section>
 
 <!-- ============================================
-     SECTION 6: Reviews
+     SECTION 5: Reviews
      ============================================ -->
 <section class="plst-pan-reviews">
     <div class="container">
@@ -368,7 +378,7 @@
 </section>
 
 <!-- ============================================
-     SECTION 7: FAQ
+     SECTION 6: FAQ
      ============================================ -->
 <section class="plst-pan-faq">
     <div class="container">
@@ -379,7 +389,7 @@
         <div class="plst-pan-faq-list">
             <div class="plst-pan-faq-item">
                 <button class="plst-pan-faq-item__q">How much does a 200-amp panel upgrade cost in Plaistow?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>Panel upgrade costs vary based on the scope of work - a straightforward panel swap is less than a project that also requires a service entrance upgrade, meter base replacement, or Eversource coordination for a capacity increase. Moore Electric provides a free on-site assessment with upfront pricing so you know the full cost before work begins. No surprises.</p></div></div>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>Panel upgrade costs vary based on the scope - a straightforward panel swap is less than a project that also requires a service entrance upgrade, meter base replacement, or Eversource capacity increase. Moore Electric provides a free on-site assessment with upfront pricing so you know the full cost before work begins. No surprises.</p></div></div>
             </div>
             <div class="plst-pan-faq-item">
                 <button class="plst-pan-faq-item__q">Do I need a permit for a panel upgrade in Plaistow, NH?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
@@ -391,11 +401,11 @@
             </div>
             <div class="plst-pan-faq-item">
                 <button class="plst-pan-faq-item__q">Is my Federal Pacific or Zinsco panel dangerous?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>Federal Pacific Stab-Lok and Zinsco panels have well-documented safety issues - breakers that fail to trip under overload conditions, creating fire risk. Many insurance carriers in NH will not insure homes with these panels or charge significantly higher premiums. If your Plaistow home has an FPE or Zinsco panel, Moore Electric recommends a replacement. Call <a href="tel:6038369513">603-836-9513</a> for a free assessment.</p></div></div>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>Federal Pacific Stab-Lok and Zinsco panels have well-documented safety issues - breakers that fail to trip under overload conditions, creating fire risk. Many insurance carriers in NH will not insure homes with these panels or charge significantly higher premiums. Moore Electric recommends a replacement. Call <a href="tel:6038369513">603-836-9513</a> for a free assessment.</p></div></div>
             </div>
             <div class="plst-pan-faq-item">
                 <button class="plst-pan-faq-item__q">What is the difference between a panel upgrade and a service upgrade?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>A panel upgrade replaces the breaker box inside your home. A <a href="https://mooreelectricinc.net/electrical-service-upgrades/">service upgrade</a> replaces the entire electrical service - the wiring from the utility pole or underground feed to the meter and into the panel. Many homes going from 100 to 200 amps need both. Moore Electric assesses which scope applies to your home during the free on-site evaluation.</p></div></div>
+                <div class="plst-pan-faq-item__a"><div class="plst-pan-faq-item__a-inner"><p>A panel upgrade replaces the breaker box inside your home. A <a href="https://mooreelectricinc.net/electrical-service-upgrades/">service upgrade</a> replaces the entire electrical service - the wiring from the utility pole or underground feed to the meter and into the panel. Many homes going from 100 to 200 amps need both. Moore Electric assesses which scope applies during the free on-site evaluation.</p></div></div>
             </div>
             <div class="plst-pan-faq-item">
                 <button class="plst-pan-faq-item__q">Can I add an EV charger to my current panel?<svg class="plst-pan-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
@@ -414,14 +424,14 @@
 </section>
 
 <!-- ============================================
-     SECTION 8: Service Area
+     SECTION 7: Service Area
      ============================================ -->
 <section class="plst-pan-area">
     <div class="container">
         <div class="plst-pan-area__header">
             <div class="eyebrow">Service Area</div>
             <h2>Panel Upgrade Service Area - Plaistow &amp; Southern NH</h2>
-            <p style="color: var(--moore-text-muted);">Moore Electric completes panel upgrade projects in Plaistow and the immediately surrounding communities with the same local permit knowledge and Eversource coordination. If your town uses Eversource NH and files permits through your local building department, Moore Electric's process is the same.</p>
+            <p style="color: var(--moore-text-muted);">Moore Electric completes panel upgrade projects throughout Plaistow and surrounding southern NH communities with the same permit knowledge and Eversource coordination. Same process, same licensing, same day-of execution regardless of which town you're in.</p>
         </div>
 
         <div class="plst-pan-area__towns">
@@ -447,19 +457,19 @@
 </section>
 
 <!-- ============================================
-     SECTION 9: Final CTA
+     SECTION 8: Final CTA — Action stage
      ============================================ -->
 <section class="plst-pan-final">
     <div class="container">
         <div class="plst-pan-final__content">
-            <h2>Get a Free Panel Assessment in Plaistow, NH</h2>
-            <p>Not sure if your panel needs an upgrade? Moore Electric offers free on-site assessments for Plaistow homeowners. Brenden, a licensed Master Electrician, will evaluate your current panel, service entrance, and load demands - and give you a straight answer on whether an upgrade is necessary, what it involves, and what it will cost. No pressure, no upsell.</p>
+            <h2>Ready to Schedule Your Panel Upgrade?</h2>
+            <p>Moore Electric handles the full scope - permits, Eversource coordination, installation, and inspection. Most projects are scheduled within 2-4 weeks of the initial assessment. Call or request online to get started.</p>
             <div class="plst-pan-final__btns">
                 <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Schedule a Free Assessment</a>
                 <a href="tel:6038369513" class="btn btn--outline-white">Call 603-836-9513</a>
             </div>
             <div class="plst-pan-final__contact">
-                <span>Based at: 21 Wentworth Ave, Plaistow, NH 03865</span>
+                <span>21 Wentworth Ave, Plaistow, NH 03865</span>
                 <span><a href="mailto:office@mooreelectricinc.net">office@mooreelectricinc.net</a></span>
             </div>
             <div class="plst-pan-final__hub">
@@ -475,4 +485,3 @@
 <script defer>
 document.querySelectorAll('.plst-pan-faq-item__q').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement,a=i.classList.contains('active');document.querySelectorAll('.plst-pan-faq-item').forEach(function(f){f.classList.remove('active')});if(!a)i.classList.add('active')})});
 </script>
-
