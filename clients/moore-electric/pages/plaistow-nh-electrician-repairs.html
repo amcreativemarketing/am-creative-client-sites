@@ -31,14 +31,15 @@
     .plst-rep img { max-width: 100%; height: auto; display: block; }
     .plst-rep a { color: var(--moore-teal); text-decoration: none; transition: color var(--transition-fast); }
     .plst-rep a:hover { color: var(--moore-gold); }
-    .plst-rep h2, .plst-rep h3, .plst-rep h4 { font-family: 'Raleway', sans-serif; font-weight: 700; line-height: 1.2; color: var(--moore-text); }
-    .plst-rep h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+    .plst-rep h1, .plst-rep h2, .plst-rep h3, .plst-rep h4 { font-family: 'Raleway', sans-serif; font-weight: 700; line-height: 1.2; color: var(--moore-text); }
+    .plst-rep h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 16px; }
+    .plst-rep h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; text-align: center; }
     .plst-rep h3 { font-size: clamp(1.15rem, 2.5vw, 1.35rem); font-weight: 600; }
     .plst-rep p { margin-bottom: 1.25rem; }
     .plst-rep p:last-child { margin-bottom: 0; }
     .plst-rep .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
     .plst-rep section { padding: var(--section-padding) 0; }
-    .plst-rep .eyebrow { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--moore-gold); margin-bottom: 12px; }
+    .plst-rep .eyebrow { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--moore-gold); margin-bottom: 12px; text-align: center; }
 
     /* Buttons */
     .plst-rep .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 32px; font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 4px; border: 2px solid transparent; cursor: pointer; transition: all var(--transition-med); text-decoration: none; min-height: 52px; }
@@ -47,21 +48,27 @@
     .plst-rep .btn--outline-white { background: transparent !important; color: var(--moore-text-light) !important; border-color: var(--moore-text-light) !important; }
     .plst-rep .btn--outline-white:hover { background: var(--moore-text-light) !important; color: var(--moore-teal) !important; }
 
-    /* ---- Local Response ---- */
-    .plst-rep-local { background: #fff; }
-    .plst-rep-local__hero { display: grid; grid-template-columns: 1fr; gap: 0; margin-bottom: 40px; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); }
-    @media (min-width: 900px) { .plst-rep-local__hero { grid-template-columns: 1fr 1fr; } }
-    .plst-rep-local__image { min-height: 300px; }
-    .plst-rep-local__image img { width: 100%; height: 100%; object-fit: cover; }
-    .plst-rep-local__highlight { background: var(--moore-teal); padding: clamp(32px, 5vw, 48px); display: flex; flex-direction: column; justify-content: center; }
-    .plst-rep-local__highlight h2 { color: var(--moore-text-light) !important; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 16px; }
-    .plst-rep-local__highlight p { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 20px; }
-    .plst-rep-local__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
-    .plst-rep-local__stat { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 16px; text-align: center; }
-    .plst-rep-local__stat-num { font-family: 'Raleway', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--moore-gold); line-height: 1; }
-    .plst-rep-local__stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 4px; }
-    .plst-rep-local__body { text-align: center; max-width: 800px; margin: 0 auto; }
-    .plst-rep-local__body p { color: var(--moore-text-muted); font-size: 1.05rem; }
+    /* ---- H1 Intro ---- */
+    .plst-rep-intro { background: #fff; padding: 48px 0 40px; border-bottom: 1px solid var(--moore-gray); }
+    .plst-rep-intro__inner { text-align: center; max-width: 760px; margin: 0 auto; }
+    .plst-rep-intro__accent { width: 56px; height: 4px; background: var(--moore-gold); border-radius: 2px; margin: 16px auto 20px; }
+    .plst-rep-intro__sub { font-size: 1.1rem; color: var(--moore-text-muted); max-width: 620px; margin: 0 auto; }
+
+    /* ---- Credentials Block ---- */
+    .plst-rep-creds { background: #fff; }
+    .plst-rep-creds__grid { display: grid; grid-template-columns: 1fr; gap: 0; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); }
+    @media (min-width: 900px) { .plst-rep-creds__grid { grid-template-columns: 1fr 1fr; } }
+    .plst-rep-creds__image { min-height: 320px; }
+    .plst-rep-creds__image img { width: 100%; height: 100%; object-fit: cover; }
+    .plst-rep-creds__panel { background: var(--moore-teal); padding: clamp(32px, 5vw, 48px); display: flex; flex-direction: column; justify-content: center; }
+    .plst-rep-creds__panel .eyebrow { text-align: left; color: var(--moore-gold); }
+    .plst-rep-creds__panel h2 { color: var(--moore-text-light) !important; font-size: clamp(1.4rem, 3vw, 1.85rem); margin-bottom: 14px; text-align: left; }
+    .plst-rep-creds__panel p { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 24px; }
+    .plst-rep-creds__stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    @media (max-width: 599px) { .plst-rep-creds__stats { grid-template-columns: 1fr 1fr; } }
+    .plst-rep-creds__stat { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 14px 10px; text-align: center; }
+    .plst-rep-creds__stat-num { font-family: 'Raleway', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--moore-gold); line-height: 1; }
+    .plst-rep-creds__stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-top: 4px; line-height: 1.3; }
 
     /* ---- Common Problems ---- */
     .plst-rep-problems { background: var(--moore-cream); }
@@ -179,73 +186,69 @@
         .plst-rep .btn { width: 100%; }
         .plst-rep-cta__btns, .plst-rep-final__btns { flex-direction: column; align-items: center; }
     }
-
-    /* H1 Page Title */
-    .plst-rep h1 { font-family: 'Raleway', sans-serif; font-size: clamp(2.25rem, 5vw, 3.25rem); font-weight: 700; line-height: 1.2; color: var(--moore-text); margin-bottom: 1rem; }
-
-    /* H1 Page Title Block */
-    .plst-rep-page-title { padding: 48px 0 40px; border-bottom: 1px solid var(--moore-gray); margin-bottom: 40px; text-align: center; }
-    .plst-rep-page-title .eyebrow { margin-bottom: 10px; }
-    .plst-rep h1 { font-family: 'Raleway', sans-serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.15; color: var(--moore-text); letter-spacing: -0.5px; margin-bottom: 16px; }
-    .plst-rep-page-title__accent { width: 56px; height: 4px; background: var(--moore-gold); border-radius: 2px; margin: 0 auto; }
-    .plst-rep-page-title__sub { font-size: 1.05rem; color: var(--moore-text-muted); margin-top: 14px; margin-bottom: 0; max-width: 620px; margin-left: auto; margin-right: auto; }
 </style>
 
 <div class="plst-rep">
 
-<!-- Page Title -->
-<section class="plst-rep-local" style="padding-bottom: 0;">
+<!-- ============================================
+     H1 INTRO
+     ============================================ -->
+<section class="plst-rep-intro">
     <div class="container">
-        <div class="plst-rep-page-title">
+        <div class="plst-rep-intro__inner">
             <div class="eyebrow">Moore Electric Inc.</div>
             <h1>Electrical Repairs in Plaistow, NH</h1>
-            <div class="plst-rep-page-title__accent"></div>
-            <p class="plst-rep-page-title__sub">Licensed Master Electrician diagnosing and fixing electrical issues throughout Plaistow and surrounding southern NH - fast response, upfront pricing, permits handled.</p>
+            <div class="plst-rep-intro__accent"></div>
+            <p class="plst-rep-intro__sub">Moore Electric handles residential electrical repairs throughout Plaistow and surrounding southern NH. Brenden Moore is a licensed Master Electrician with 25+ years of experience - every repair call gets a full diagnosis, not a guess and a reset.</p>
         </div>
     </div>
 </section>
 
-
 <!-- ============================================
-     SECTION 2: Local Response Angle
+     SECTION 1: Credentials & Approach
      ============================================ -->
-<section class="plst-rep-local">
+<section class="plst-rep-creds">
     <div class="container">
-        <div class="plst-rep-local__hero">
-            <div class="plst-rep-local__image">
+        <div class="plst-rep-creds__grid">
+            <div class="plst-rep-creds__image">
                 <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_5531.webp" alt="" width="600" height="450" loading="lazy">
             </div>
-            <div class="plst-rep-local__highlight">
-                <div class="eyebrow" style="color: var(--moore-gold);">Fast Local Response</div>
-                <h2>Electrical Repairs in Plaistow - Minutes from Home Base</h2>
-                <p>Most contractors serving southern NH dispatch from Salem or Manchester. Moore Electric is based right here at 21 Wentworth Ave in Plaistow - when you call about a tripping breaker or dead circuit, Brenden isn't routing from across the state.</p>
-                <div class="plst-rep-local__stats">
-                    <div class="plst-rep-local__stat">
-                        <div class="plst-rep-local__stat-num">25+</div>
-                        <div class="plst-rep-local__stat-label">Years Experience</div>
+            <div class="plst-rep-creds__panel">
+                <div class="eyebrow">The Moore Difference</div>
+                <h2>Repairs Done Right - Not Just Reset</h2>
+                <p>Most electrical problems have a root cause that a breaker reset won't fix. Brenden traces faults to their source - aging connections, overloaded circuits, deteriorated wiring, or a failing panel - and repairs what's actually causing the issue. Every job gets a full diagnostic before any work begins, and upfront pricing before any work is approved.</p>
+                <div class="plst-rep-creds__stats">
+                    <div class="plst-rep-creds__stat">
+                        <div class="plst-rep-creds__stat-num">25+</div>
+                        <div class="plst-rep-creds__stat-label">Years Experience</div>
                     </div>
-                    <div class="plst-rep-local__stat">
-                        <div class="plst-rep-local__stat-num">5.0</div>
-                        <div class="plst-rep-local__stat-label">Google Rating</div>
+                    <div class="plst-rep-creds__stat">
+                        <div class="plst-rep-creds__stat-num">5.0</div>
+                        <div class="plst-rep-creds__stat-label">Google Rating</div>
+                    </div>
+                    <div class="plst-rep-creds__stat">
+                        <div class="plst-rep-creds__stat-num">3</div>
+                        <div class="plst-rep-creds__stat-label">State Licenses</div>
+                    </div>
+                    <div class="plst-rep-creds__stat">
+                        <div class="plst-rep-creds__stat-num">$0</div>
+                        <div class="plst-rep-creds__stat-label">Hidden Fees</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="plst-rep-local__body">
-            <p>Response time matters when you're dealing with a sparking outlet, storm-damaged service entrance, or a basement circuit that's out before a family event. Moore Electric prioritizes Plaistow repair calls because this is home territory. Brenden, a licensed Master Electrician, knows the housing stock on Wentworth Ave, the older neighborhoods near town center, and the newer subdivisions along Route 125 - and the electrical issues that tend to come with each.</p>
-        </div>
     </div>
 </section>
 
 <!-- ============================================
-     SECTION 3: Common Electrical Problems
+     SECTION 2: Common Electrical Problems
      ============================================ -->
 <section class="plst-rep-problems">
     <div class="container">
         <div class="plst-rep-problems__header">
             <div class="eyebrow">What We Fix</div>
             <h2>Common Electrical Problems in Plaistow, NH Homes</h2>
-            <p style="color: var(--moore-text-muted);">Plaistow's housing stock spans several decades - from mid-century ranch homes and Cape Cods built in the 1950s and '60s to colonial subdivisions from the 1980s and '90s and newer construction near Route 125. Each era comes with its own common electrical issues, and Moore Electric has seen - and repaired - all of them.</p>
+            <p style="color: var(--moore-text-muted);">Plaistow's housing stock spans several decades - from mid-century ranch homes and Cape Cods built in the 1950s and '60s to colonial subdivisions from the 1980s and '90s and newer construction near Route 125. Each era comes with its own electrical issues, and Moore Electric has seen and repaired all of them.</p>
         </div>
 
         <div class="plst-rep-problems__grid">
@@ -255,7 +258,7 @@
             </div>
             <div class="plst-rep-problem">
                 <h3>Overloaded Circuits &amp; Tripping Breakers</h3>
-                <p>Modern homes run far more load than their original design anticipated - <a href="https://mooreelectricinc.net/ev-charger-installation/">EV chargers</a>, home offices, mini-splits, and modern kitchen appliances push circuits sized for a fraction of that demand. Moore Electric diagnoses whether the issue is a true overload, a failing breaker, a ground fault, or a wiring problem - and provides the right fix, not a reset.</p>
+                <p>Modern homes run far more load than their original design anticipated - <a href="https://mooreelectricinc.net/ev-charger-installation/">EV chargers</a>, home offices, mini-splits, and modern appliances push circuits sized for a fraction of that demand. Moore Electric diagnoses whether the issue is a true overload, a failing breaker, a ground fault, or a wiring problem - and provides the right fix, not a reset.</p>
             </div>
             <div class="plst-rep-problem">
                 <h3>Flickering Lights</h3>
@@ -292,7 +295,7 @@
 </section>
 
 <!-- ============================================
-     SECTION 4: Storm Damage Repairs
+     SECTION 3: Storm Damage Repairs
      ============================================ -->
 <section class="plst-rep-storm">
     <div class="container">
@@ -315,14 +318,14 @@
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                        <div><strong>Generator-Related Wiring Issues</strong><span>After extended outages, portable generator backfeed and improper transfer switch usage create wiring problems Moore Electric frequently diagnoses and corrects. If you're considering a permanent solution, ask about <a href="https://mooreelectricinc.net/generator-installation/" style="color: var(--moore-gold);">standby generator installation</a>.</span></div>
+                        <div><strong>Generator-Related Wiring Issues</strong><span>After extended outages, portable generator backfeed and improper transfer switch usage create wiring problems Moore Electric frequently diagnoses and corrects. Ask about <a href="https://mooreelectricinc.net/generator-installation/" style="color: var(--moore-gold);">standby generator installation</a> for a permanent solution.</span></div>
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                         <div><strong>Flooded Basement Circuits</strong><span>Ice dam leaks and storm flooding can compromise basement wiring, sub-panels, and GFCI protection. Moore Electric assesses and restores these circuits safely before power is restored.</span></div>
                     </li>
                 </ul>
-                <p style="margin-top: 28px;">After any significant storm event, if your home has experienced outages, tripped breakers that won't reset, or any visible damage to your electrical service entrance, call Moore Electric for a post-storm assessment. As a licensed Master Electrician, Brenden provides thorough documentation for insurance claims.</p>
+                <p style="margin-top: 28px;">After any significant storm, if your home has tripped breakers that won't reset or visible damage to your service entrance, call Moore Electric for a post-storm assessment. As a licensed Master Electrician, Brenden provides documentation for insurance claims.</p>
             </div>
             <div class="plst-rep-storm__image">
                 <img src="https://mooreelectricinc.net/wp-content/uploads/2026/01/IMG_6187.webp" alt="" width="320" height="480" loading="lazy">
@@ -332,14 +335,14 @@
 </section>
 
 <!-- ============================================
-     SECTION 5: Real Repair Examples
+     SECTION 4: Real Repair Examples
      ============================================ -->
 <section class="plst-rep-examples">
     <div class="container">
         <div class="plst-rep-examples__header">
             <div class="eyebrow">What to Expect</div>
             <h2>Common Repair Scenarios in Southern NH Homes</h2>
-            <p style="color: var(--moore-text-muted);">These are the types of electrical repair calls Moore Electric handles regularly throughout Plaistow and surrounding communities. Every diagnosis starts with understanding the root cause, not just treating the symptom.</p>
+            <p style="color: var(--moore-text-muted);">These are the types of electrical repair calls Moore Electric handles regularly throughout the area. Every diagnosis starts with understanding the root cause, not just treating the symptom.</p>
         </div>
 
         <div class="plst-rep-examples__grid">
@@ -360,7 +363,7 @@
 </section>
 
 <!-- ============================================
-     SECTION 6: Repair Services List
+     SECTION 5: Repair Services List
      ============================================ -->
 <section class="plst-rep-svclist">
     <div class="container">
@@ -433,7 +436,7 @@
 </section>
 
 <!-- ============================================
-     SECTION 7: FAQ
+     SECTION 6: FAQ
      ============================================ -->
 <section class="plst-rep-faq">
     <div class="container">
@@ -471,22 +474,22 @@
                 <div class="plst-rep-faq-item__a"><div class="plst-rep-faq-item__a-inner"><p>In many cases, yes. Lightning strikes, power surges, and wind damage to service entrances are typically covered events under homeowners policies. Moore Electric documents all storm-related electrical damage thoroughly so you have the records you need to file a claim with your insurance provider.</p></div></div>
             </div>
             <div class="plst-rep-faq-item">
-                <button class="plst-rep-faq-item__q">How quickly can Moore Electric respond for repairs in Plaistow?<svg class="plst-rep-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-                <div class="plst-rep-faq-item__a"><div class="plst-rep-faq-item__a-inner"><p>Because Moore Electric is based right here in Plaistow at 21 Wentworth Ave, response times are typically faster than regional competitors. Most repair calls can be scheduled within 1-2 business days. For dangerous situations - sparking, burning smells, complete power loss - call <a href="tel:6038369513">603-836-9513</a> and the team will prioritize your call.</p></div></div>
+                <button class="plst-rep-faq-item__q">How quickly can Moore Electric respond for repairs?<svg class="plst-rep-faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <div class="plst-rep-faq-item__a"><div class="plst-rep-faq-item__a-inner"><p>Most repair calls can be scheduled within 1-2 business days. For dangerous situations - sparking, burning smells, or complete power loss - call <a href="tel:6038369513">603-836-9513</a> directly and the team will prioritize your call.</p></div></div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============================================
-     SECTION 8: Service Area
+     SECTION 7: Service Area
      ============================================ -->
 <section class="plst-rep-area">
     <div class="container">
         <div class="plst-rep-area__header">
             <div class="eyebrow">Repair Service Area</div>
             <h2>Electrical Repairs Serving Plaistow &amp; Surrounding Southern NH</h2>
-            <p style="color: var(--moore-text-muted);">Moore Electric responds to electrical repair calls throughout Plaistow and the immediate surrounding communities. Because the shop is based in Plaistow, nearby towns benefit from the same fast response time.</p>
+            <p style="color: var(--moore-text-muted);">Moore Electric responds to repair calls throughout Plaistow and nearby communities in southern NH and northern MA. Nearby towns benefit from the same fast scheduling as Plaistow.</p>
         </div>
 
         <div class="plst-rep-area__towns">
@@ -511,19 +514,19 @@
 </section>
 
 <!-- ============================================
-     SECTION 9: Final CTA
+     SECTION 8: Final CTA
      ============================================ -->
 <section class="plst-rep-final">
     <div class="container">
         <div class="plst-rep-final__content">
             <h2>Need an Electrician for Repairs in Plaistow, NH?</h2>
-            <p>Whether it's a flickering light that's been bothering you for weeks or a sparking outlet you noticed this morning, Moore Electric is ready to help. Licensed Master Electrician, local, and based in Plaistow - fast response, full diagnosis, no guessing.</p>
+            <p>Whether it's a flickering light that's been bothering you for weeks or a sparking outlet you noticed this morning, Moore Electric is ready to help. Full diagnosis, upfront pricing, no guessing.</p>
             <div class="plst-rep-final__btns">
                 <a href="https://mooreelectricinc.net/contact/" class="btn btn--gold">Request a Repair Visit</a>
                 <a href="tel:6038369513" class="btn btn--outline-white">Call 603-836-9513</a>
             </div>
             <div class="plst-rep-final__contact">
-                <span>Based at: 21 Wentworth Ave, Plaistow, NH 03865</span>
+                <span>21 Wentworth Ave, Plaistow, NH 03865</span>
                 <span><a href="mailto:office@mooreelectricinc.net">office@mooreelectricinc.net</a></span>
             </div>
             <div class="plst-rep-final__hub">
@@ -539,4 +542,3 @@
 <script defer>
 document.querySelectorAll('.plst-rep-faq-item__q').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement,a=i.classList.contains('active');document.querySelectorAll('.plst-rep-faq-item').forEach(function(f){f.classList.remove('active')});if(!a)i.classList.add('active')})});
 </script>
-
