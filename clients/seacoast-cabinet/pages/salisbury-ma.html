@@ -1,0 +1,1142 @@
+<style>
+/* ============================================
+   Seacoast Cabinet - Salisbury MA Location Page
+   Namespace: .sc-slby-*
+   Mobile-first | Divi-safe with !important
+   ============================================ */
+
+/* ----------------------------------------
+   Full-bleed page wrapper - breaks out of
+   Divi column constraints to span 100vw
+---------------------------------------- */
+.sc-slby-page {
+    --coastal-blue: #7d99ad;
+    --warm-gold: #b8905f;
+    --deep-charcoal: #2c3e50;
+    --pure-white: #ffffff;
+    --light-gray: #f8f8f8;
+    --medium-gray: #666666;
+    --warm-beige: #f5f2ed;
+    --success-green: #5cb85c;
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    margin-left: -50vw !important;
+    max-width: none !important;
+    font-family: 'Open Sans', sans-serif !important;
+    color: #2c3e50 !important;
+    line-height: 1.6 !important;
+}
+
+.sc-slby-page *,
+.sc-slby-page *::before,
+.sc-slby-page *::after {
+    box-sizing: border-box !important;
+}
+
+/* Force Divi parent containers to allow full-width */
+.et_pb_code_inner,
+.et_pb_module,
+.et_pb_code,
+.et_pb_column,
+.et_pb_row,
+.et_pb_section {
+    overflow: visible !important;
+}
+
+.sc-slby-page .et_pb_code_inner,
+.sc-slby-page .et_pb_module,
+.sc-slby-page .et_pb_code {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+.sc-slby-page,
+.sc-slby-page .et_pb_row,
+.sc-slby-page .et_pb_column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.sc-slby-page .et_pb_row {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+.sc-slby-page .et_pb_section {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+.et_pb_fullwidth_code .sc-slby-page,
+.et_pb_section .sc-slby-page {
+    width: 100vw !important;
+    max-width: none !important;
+}
+
+/* ----------------------------------------
+   Hero Section
+---------------------------------------- */
+.sc-slby-hero {
+    position: relative;
+    background: url('https://seacoastcabinetne.com/wp-content/uploads/2026/02/2275-scaled.webp') center center / cover no-repeat;
+    width: 100%;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sc-slby-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 62, 80, 0.45);
+    z-index: 1;
+}
+
+.sc-slby-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+    padding: 90px 30px;
+    margin: 0 auto;
+}
+
+.sc-slby-hero h1 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 2.9rem !important;
+    color: var(--pure-white) !important;
+    line-height: 1.15 !important;
+    margin: 0 0 20px !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.sc-slby-hero p {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 1.2rem !important;
+    color: var(--pure-white) !important;
+    line-height: 1.6 !important;
+    margin: 0 auto 34px !important;
+    opacity: 0.95;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    max-width: 680px;
+}
+
+.sc-slby-hero .sc-slby-btn-gold {
+    font-size: 1.05rem !important;
+    padding: 15px 34px !important;
+}
+
+.sc-slby-hero .sc-slby-btn-hero-outline {
+    display: inline-block !important;
+    border: 2px solid var(--pure-white) !important;
+    color: var(--pure-white) !important;
+    padding: 13px 28px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    min-height: 44px;
+}
+
+.sc-slby-hero .sc-slby-btn-hero-outline:hover {
+    background-color: var(--pure-white) !important;
+    color: var(--deep-charcoal) !important;
+}
+
+/* ----------------------------------------
+   Wrap
+---------------------------------------- */
+.sc-slby-wrap {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--deep-charcoal);
+    line-height: 1.7;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 0;
+}
+
+/* H2 defaults to centered for standalone full-width sections */
+.sc-slby-wrap h2 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 2rem !important;
+    color: var(--deep-charcoal) !important;
+    margin-bottom: 16px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+}
+
+/* Left-aligned override for split-column contexts */
+.sc-slby-h2-left {
+    text-align: left !important;
+}
+
+/* Centered intro paragraph used under standalone section H2s */
+.sc-slby-section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 36px;
+    color: var(--medium-gray);
+    font-size: 1.05rem;
+}
+
+.sc-slby-wrap h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1.3rem !important;
+    color: var(--deep-charcoal) !important;
+    margin-bottom: 12px !important;
+    line-height: 1.3 !important;
+}
+
+.sc-slby-wrap p {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+}
+
+.sc-slby-wrap a {
+    color: var(--coastal-blue);
+    text-decoration: underline;
+}
+
+.sc-slby-wrap a:hover {
+    color: var(--warm-gold);
+}
+
+/* ----------------------------------------
+   CTA Buttons
+---------------------------------------- */
+.sc-slby-btn-gold {
+    display: inline-block !important;
+    background-color: var(--warm-gold) !important;
+    color: var(--pure-white) !important;
+    padding: 14px 30px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    transition: background-color 0.3s ease;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    min-height: 44px;
+}
+
+.sc-slby-btn-gold:hover {
+    background-color: #a17a4f !important;
+    color: var(--pure-white) !important;
+}
+
+.sc-slby-btn-outline {
+    display: inline-block !important;
+    border: 2px solid var(--coastal-blue) !important;
+    color: var(--coastal-blue) !important;
+    padding: 12px 28px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    min-height: 44px;
+}
+
+.sc-slby-btn-outline:hover {
+    background-color: var(--coastal-blue) !important;
+    color: var(--pure-white) !important;
+}
+
+/* ----------------------------------------
+   Trust Bar
+---------------------------------------- */
+.sc-slby-trust-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0;
+}
+
+.sc-slby-trust-item {
+    flex: 1 1 200px;
+    text-align: center;
+    padding: 28px 20px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.sc-slby-trust-item:last-child {
+    border-right: none;
+}
+
+.sc-slby-trust-item .t-icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.sc-slby-trust-item strong {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--deep-charcoal);
+    margin-bottom: 4px;
+}
+
+.sc-slby-trust-item span {
+    font-size: 0.85rem;
+    color: var(--medium-gray);
+}
+
+/* Trust Badges Row */
+.sc-slby-trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 24px 0 44px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 64px;
+    flex-wrap: wrap;
+}
+
+.sc-slby-trust-badges img {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ----------------------------------------
+   Intro Two-Col
+---------------------------------------- */
+.sc-slby-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.sc-slby-intro img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ----------------------------------------
+   Services Section
+---------------------------------------- */
+.sc-slby-services-section {
+    margin-bottom: 70px;
+}
+
+.sc-slby-service-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.sc-slby-service-row:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.sc-slby-service-row img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sc-slby-service-row.flip img {
+    order: -1;
+}
+
+.sc-slby-service-tag {
+    display: inline-block;
+    background: var(--coastal-blue);
+    color: var(--pure-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 3px;
+    margin-bottom: 14px;
+}
+
+/* ----------------------------------------
+   Brand Comparison Table
+---------------------------------------- */
+.sc-slby-compare-section {
+    background: var(--warm-beige);
+    padding: 55px 40px;
+    border-radius: 12px;
+    margin-bottom: 70px;
+}
+
+.sc-slby-compare-intro {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 36px;
+    color: var(--medium-gray);
+}
+
+.sc-slby-compare-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+.sc-slby-compare-table thead tr th {
+    padding: 20px 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    background: var(--deep-charcoal);
+    color: var(--pure-white);
+}
+
+.sc-slby-compare-table thead tr th:first-child {
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.sc-slby-compare-table thead tr th.col-omega    { background: var(--coastal-blue); }
+.sc-slby-compare-table thead tr th.col-homecrest { background: var(--warm-gold); }
+.sc-slby-compare-table thead tr th.col-mantra   { background: #5a7a6a; }
+
+.sc-slby-compare-table tbody tr               { background: var(--pure-white); }
+.sc-slby-compare-table tbody tr:nth-child(even) { background: #f4f7f9; }
+.sc-slby-compare-table tbody tr:hover          { background: #eef3f7; }
+
+.sc-slby-compare-table td {
+    padding: 16px 24px;
+    font-size: 0.95rem;
+    color: var(--deep-charcoal);
+    border-bottom: 1px solid #e8e8e8;
+    vertical-align: top;
+    text-align: center;
+}
+
+.sc-slby-compare-table td:first-child {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    white-space: nowrap;
+}
+
+.sc-slby-compare-table tbody tr:last-child td { border-bottom: none; }
+
+.sc-slby-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sc-slby-badge.blue  { background: rgba(125,153,173,0.15); color: var(--coastal-blue); }
+.sc-slby-badge.gold  { background: rgba(184,144,95,0.15);  color: #9a6e38; }
+.sc-slby-badge.green { background: rgba(90,122,106,0.12);  color: #3d6655; }
+
+.sc-slby-compare-note {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+}
+
+/* ----------------------------------------
+   Project Gallery
+---------------------------------------- */
+.sc-slby-gallery {
+    margin-bottom: 70px;
+}
+
+.sc-slby-gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 260px 260px;
+    gap: 14px;
+    margin: 24px 0 30px;
+}
+
+.sc-slby-gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.sc-slby-gallery-grid img:hover { transform: scale(1.02); }
+.sc-slby-gallery-main { grid-row: 1 / 3; }
+
+/* ----------------------------------------
+   Why Choose - Stat strip + checklist
+---------------------------------------- */
+.sc-slby-why-section {
+    margin-bottom: 70px;
+}
+
+.sc-slby-stat-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--deep-charcoal);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px 0 40px;
+}
+
+.sc-slby-stat {
+    text-align: center;
+    padding: 30px 20px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.sc-slby-stat:last-child { border-right: none; }
+
+.sc-slby-stat .stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--warm-gold);
+    display: block;
+    margin-bottom: 6px;
+    line-height: 1;
+}
+
+.sc-slby-stat .stat-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.4;
+}
+
+.sc-slby-checklist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 40px;
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.sc-slby-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--deep-charcoal);
+    list-style: none !important;
+    list-style-type: none !important;
+}
+
+.sc-slby-checklist li::before {
+    content: "✓";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    background: var(--success-green);
+    color: var(--pure-white);
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ----------------------------------------
+   FAQ - warm beige background
+---------------------------------------- */
+.sc-slby-faq {
+    background: var(--warm-beige);
+    border-radius: 12px;
+    padding: 55px 40px;
+    margin-bottom: 70px;
+}
+
+.sc-slby-faq-item {
+    border-bottom: 1px solid rgba(44,62,80,0.1);
+}
+
+.sc-slby-faq-item:first-of-type {
+    border-top: 1px solid rgba(44,62,80,0.1);
+}
+
+.sc-slby-faq-item summary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    color: var(--deep-charcoal);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.sc-slby-faq-item summary::-webkit-details-marker { display: none; }
+
+.sc-slby-faq-item summary::after {
+    content: "+";
+    font-size: 1.4rem;
+    color: var(--coastal-blue);
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.sc-slby-faq-item[open] summary::after { content: "\2212"; }
+
+.sc-slby-faq-item p {
+    margin: 0 0 20px;
+    font-size: 0.98rem;
+    color: var(--medium-gray);
+}
+
+/* ----------------------------------------
+   Service Area + Map - warm beige background
+---------------------------------------- */
+.sc-slby-area-map-wrap {
+    background: var(--warm-beige);
+    border-radius: 12px;
+    padding: 55px 40px;
+    margin-bottom: 70px;
+}
+
+.sc-slby-area-map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.sc-slby-area-map iframe {
+    width: 100%;
+    height: 420px;
+    border-radius: 10px;
+    border: none;
+    display: block;
+}
+
+.sc-slby-towns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.sc-slby-towns a,
+.sc-slby-towns span {
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.sc-slby-towns a {
+    background: var(--pure-white) !important;
+    color: var(--deep-charcoal) !important;
+    border: 1px solid #ddd;
+}
+
+.sc-slby-towns a:hover {
+    background: var(--coastal-blue) !important;
+    color: var(--pure-white) !important;
+    border-color: var(--coastal-blue);
+}
+
+.sc-slby-towns span {
+    background: var(--coastal-blue);
+    color: var(--pure-white);
+}
+
+/* ----------------------------------------
+   Final CTA
+---------------------------------------- */
+.sc-slby-final-cta {
+    background: var(--coastal-blue);
+    color: var(--pure-white);
+    padding: 65px 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sc-slby-final-cta h2 {
+    color: var(--pure-white) !important;
+    margin-bottom: 12px !important;
+}
+
+.sc-slby-final-cta p {
+    font-size: 1.1rem;
+    margin: 0 auto 28px;
+    opacity: 0.95;
+    max-width: 640px;
+}
+
+.sc-slby-final-cta .sc-slby-btn-gold {
+    font-size: 1.1rem !important;
+    padding: 16px 36px !important;
+    margin-right: 0 !important;
+}
+
+.sc-slby-final-cta .phone-link {
+    display: block;
+    margin-top: 20px;
+    color: var(--pure-white) !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-decoration: none !important;
+}
+
+.sc-slby-final-cta .phone-link:hover { text-decoration: underline !important; }
+
+/* ----------------------------------------
+   Responsive
+---------------------------------------- */
+@media (max-width: 1024px) {
+    .sc-slby-hero { min-height: 460px; }
+    .sc-slby-hero h1 { font-size: 2.3rem !important; }
+    .sc-slby-hero-content { padding: 70px 24px; }
+
+    .sc-slby-intro,
+    .sc-slby-service-row,
+    .sc-slby-area-map { grid-template-columns: 1fr; }
+
+    .sc-slby-service-row.flip img { order: 0; }
+
+    .sc-slby-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .sc-slby-gallery-main {
+        grid-row: auto;
+        grid-column: 1 / 3;
+    }
+
+    .sc-slby-stat-strip { grid-template-columns: 1fr 1fr; }
+    .sc-slby-stat:nth-child(2) { border-right: none; }
+    .sc-slby-stat:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.1); }
+    .sc-slby-stat:nth-child(4) { border-right: none; }
+
+    .sc-slby-compare-section { padding: 40px 24px; overflow-x: auto; }
+    .sc-slby-compare-table { min-width: 560px; }
+}
+
+@media (max-width: 768px) {
+    .sc-slby-hero { min-height: 420px; }
+    .sc-slby-hero h1 { font-size: 1.8rem !important; }
+    .sc-slby-hero p { font-size: 1rem !important; }
+    .sc-slby-hero-content { padding: 55px 20px; }
+    .sc-slby-hero .sc-slby-btn-gold,
+    .sc-slby-hero .sc-slby-btn-hero-outline {
+        display: block !important;
+        text-align: center;
+        margin: 0 0 12px 0 !important;
+    }
+
+    .sc-slby-wrap { padding-top: 30px; }
+    .sc-slby-wrap h2 { font-size: 1.6rem !important; }
+
+    .sc-slby-trust-item {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        flex: 1 1 100%;
+        padding: 20px;
+    }
+    .sc-slby-trust-item:last-child { border-bottom: none; }
+
+    .sc-slby-trust-badges { gap: 20px; }
+    .sc-slby-trust-badges img { height: 52px; }
+
+    .sc-slby-intro img { height: 280px; }
+
+    .sc-slby-gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .sc-slby-gallery-main { grid-column: auto; }
+    .sc-slby-gallery-grid img { height: 240px; }
+
+    .sc-slby-stat-strip { grid-template-columns: 1fr 1fr; }
+    .sc-slby-checklist { grid-template-columns: 1fr; }
+
+    .sc-slby-faq,
+    .sc-slby-area-map-wrap,
+    .sc-slby-compare-section,
+    .sc-slby-final-cta { padding: 36px 20px; }
+
+    .sc-slby-area-map iframe { height: 300px; }
+
+    .sc-slby-btn-gold,
+    .sc-slby-btn-outline {
+        display: block !important;
+        text-align: center;
+        margin-right: 0 !important;
+        margin-bottom: 12px !important;
+    }
+}
+</style>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Full-bleed page wrapper -->
+<div class="sc-slby-page">
+
+<!-- HERO SECTION -->
+<div class="sc-slby-hero">
+    <div class="sc-slby-hero-content">
+        <h1>Kitchen Cabinets Salisbury, MA | Custom Cabinetry & Design</h1>
+        <p>Seacoast Cabinet serves Salisbury homeowners and the surrounding North Shore with American-made cabinetry, personalized design consultation, and professional installation. Visit our Rowley showroom - just 15 minutes down Route 1.</p>
+        <a href="https://seacoastcabinetne.com/contact/" class="sc-slby-btn-gold">Schedule Free Consultation</a>
+        <a href="tel:+19783501040" class="sc-slby-btn-hero-outline">Call 978-350-1040</a>
+    </div>
+</div>
+
+<div class="sc-slby-wrap">
+
+    <!-- Trust Bar -->
+    <div class="sc-slby-trust-bar">
+        <div class="sc-slby-trust-item">
+            <div class="t-icon">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <strong>4.9 Google Rating</strong>
+            <span>Verified customer reviews</span>
+        </div>
+        <div class="sc-slby-trust-item">
+            <div class="t-icon">&#127968;</div>
+            <strong>Family-Owned Since 2019</strong>
+            <span>Rowley, MA showroom</span>
+        </div>
+        <div class="sc-slby-trust-item">
+            <div class="t-icon">&#127482;&#127480;</div>
+            <strong>American-Made Cabinets</strong>
+            <span>Omega, Homecrest &amp; Mantra</span>
+        </div>
+        <div class="sc-slby-trust-item">
+            <div class="t-icon">&#128205;</div>
+            <strong>15 Minutes from Salisbury</strong>
+            <span>Route 1 South, Rowley MA</span>
+        </div>
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="sc-slby-trust-badges">
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/08/best-of-nbpt-badge.png" alt="" width="140" height="65" loading="eager">
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/01/National-Kitchen-and-Bath-Association-Member-Logo.png.webp" alt="" width="140" height="65" loading="eager">
+    </div>
+
+    <!-- SECTION 1: INTRO -->
+    <div class="sc-slby-intro">
+        <div>
+            <h2 class="sc-slby-h2-left">Custom Kitchen Cabinets in Salisbury, MA</h2>
+            <p>Salisbury homeowners don't have a lot of local options when it comes to serious kitchen design. Most cabinet stores are big-box retailers with limited selection and salespeople who don't know cabinetry in depth. Seacoast Cabinet is different.</p>
+            <p>We're a specialty cabinet showroom in Rowley - about 15 minutes down Route 1 from Salisbury - with full-size displays of three American-made cabinet lines, an in-house design team, and a track record of completed projects throughout the Merrimack Valley and North Shore.</p>
+            <p>Whether you're doing a full kitchen gut renovation or replacing dated cabinets in a Salisbury Beach cottage, we'll design something that fits your home, your timeline, and your budget. Call us at <a href="tel:+19783501040">978-350-1040</a> or <a href="https://seacoastcabinetne.com/contact/">schedule a free consultation</a>.</p>
+            <p>
+                <a href="https://seacoastcabinetne.com/contact/" class="sc-slby-btn-gold">Schedule Free Consultation</a>
+                <a href="https://seacoastcabinetne.com/cabinets/" class="sc-slby-btn-outline">View Cabinet Lines</a>
+            </p>
+        </div>
+        <img src="https://seacoastcabinetne.com/wp-content/uploads/2021/08/Showroom2-scaled.webp" alt="" width="600" height="420" loading="eager" decoding="async">
+    </div>
+
+    <!-- SECTION 2: SERVICES -->
+    <div class="sc-slby-services-section">
+        <h2>Cabinet Services Available in Salisbury, MA</h2>
+        <p class="sc-slby-section-intro">We specialize in cabinetry - it's all we do. That focus means better product knowledge, more accurate specifications, and design recommendations your contractor can actually build from.</p>
+
+        <!-- Service Row 1 -->
+        <div class="sc-slby-service-row">
+            <div>
+                <div class="sc-slby-service-tag">Kitchen Cabinets</div>
+                <h3>Custom Kitchen Cabinet Design</h3>
+                <p>Every kitchen project starts with a free design consultation - at our Rowley showroom or in your Salisbury home. We measure your space, talk through your goals, and create a detailed layout with 3D renderings so you can see exactly how your kitchen will look before a single cabinet is ordered.</p>
+                <p>We carry Omega, Homecrest, and Mantra - three American-made lines that cover a wide range of styles, finishes, and price points. Our designers help you find the right fit without overselling. When you're ready to move forward, we hand off complete cabinet specifications your contractor can use without guesswork.</p>
+                <p><a href="https://seacoastcabinetne.com/kitchen-design/">Learn more about our design process</a></p>
+            </div>
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Dutton-Street-Mill-Condo-1440x960-1.webp" alt="" width="600" height="340" loading="lazy" decoding="async">
+        </div>
+
+        <!-- Service Row 2 -->
+        <div class="sc-slby-service-row flip">
+            <div>
+                <div class="sc-slby-service-tag">Bathroom Cabinetry</div>
+                <h3>Bathroom Vanities &amp; Custom Storage</h3>
+                <p>Bathroom cabinet projects are often overlooked until they become a daily frustration. Vanities that don't offer enough storage, medicine cabinets that don't quite fit, or outdated finishes that drag down an otherwise updated bathroom - these are problems we solve regularly for homeowners across the North Shore.</p>
+                <p>We design bathroom cabinetry that fits your exact space, including custom sizing for older homes that weren't built to standard dimensions. Vanities, linen towers, medicine cabinets, and built-in storage solutions are all within scope.</p>
+                <p><a href="https://seacoastcabinetne.com/cabinets/">Browse cabinet options</a></p>
+            </div>
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2025/09/Seacoast-Photos-72.webp" alt="" width="600" height="340" loading="lazy" decoding="async">
+        </div>
+
+        <!-- Service Row 3 -->
+        <div class="sc-slby-service-row">
+            <div>
+                <div class="sc-slby-service-tag">Countertops</div>
+                <h3>Countertop Selection &amp; Coordination</h3>
+                <p>Cabinets and countertops need to work together visually and practically. We carry <a href="https://seacoastcabinetne.com/countertops/">Cambria countertop surfaces</a> in a wide range of colors and patterns, and we help Salisbury homeowners coordinate their countertop choice with cabinet finishes and hardware during the design process.</p>
+                <p>Seeing surfaces together in person - rather than comparing photos online - makes a real difference in getting the combination right. Our showroom has physical samples you can hold and compare side by side with door samples and hardware options.</p>
+            </div>
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Dutton-Street-3.webp" alt="" width="600" height="340" loading="lazy" decoding="async">
+        </div>
+    </div>
+
+    <!-- SECTION 3: BRAND COMPARISON CHART -->
+    <div class="sc-slby-compare-section">
+        <h2>Which Cabinet Line Is Right for Your Salisbury Kitchen?</h2>
+        <p class="sc-slby-compare-intro">We carry three American-made cabinet lines from MasterBrand. Each one is built for a different kind of project. Here's how they compare - and our designers will help you figure out which fits your goals at your free consultation.</p>
+
+        <div style="overflow-x: auto;">
+            <table class="sc-slby-compare-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="col-omega">Omega</th>
+                        <th class="col-homecrest">Homecrest</th>
+                        <th class="col-mantra">Mantra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lead Time</td>
+                        <td>9-12 weeks</td>
+                        <td>5-8 weeks</td>
+                        <td>2-4 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Customization</td>
+                        <td><span class="sc-slby-badge blue">Highest</span></td>
+                        <td><span class="sc-slby-badge gold">Mid-Range</span></td>
+                        <td><span class="sc-slby-badge green">Streamlined</span></td>
+                    </tr>
+                    <tr>
+                        <td>Price Point</td>
+                        <td>$$$</td>
+                        <td>$$</td>
+                        <td>$</td>
+                    </tr>
+                    <tr>
+                        <td>Door Styles</td>
+                        <td>200+ options</td>
+                        <td>Wide selection</td>
+                        <td>Most popular styles</td>
+                    </tr>
+                    <tr>
+                        <td>Drawer Construction</td>
+                        <td>Dovetail joint</td>
+                        <td>Dovetail joint</td>
+                        <td>Solid construction</td>
+                    </tr>
+                    <tr>
+                        <td>Soft-Close Hardware</td>
+                        <td>&#10003; Standard</td>
+                        <td>&#10003; Standard</td>
+                        <td>&#10003; Standard</td>
+                    </tr>
+                    <tr>
+                        <td>Inset Door Option</td>
+                        <td>&#10003; Available</td>
+                        <td>&#10003; Available</td>
+                        <td>&#8212;</td>
+                    </tr>
+                    <tr>
+                        <td>Custom Sizing</td>
+                        <td>&#10003; Full flexibility</td>
+                        <td>Partial</td>
+                        <td>Standard sizes</td>
+                    </tr>
+                    <tr>
+                        <td>Warranty</td>
+                        <td>Limited Lifetime</td>
+                        <td>Limited Lifetime</td>
+                        <td>Limited Lifetime</td>
+                    </tr>
+                    <tr>
+                        <td>Best For</td>
+                        <td>Full custom, complex projects</td>
+                        <td>Quality at accessible price</td>
+                        <td>Fast timelines, modern styles</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="sc-slby-compare-note">Not sure which line fits your project? Our designers will walk you through your options at no cost. <a href="https://seacoastcabinetne.com/cabinet-brands/" style="color: var(--deep-charcoal); font-weight: 600;">Explore all three brands in detail</a> or <a href="https://seacoastcabinetne.com/contact/" style="color: var(--deep-charcoal); font-weight: 600;">schedule your free consultation</a>.</p>
+    </div>
+
+    <!-- SECTION 4: PROJECT GALLERY -->
+    <div class="sc-slby-gallery">
+        <h2>Recent Cabinet Projects from the Seacoast Region</h2>
+        <p class="sc-slby-section-intro">These kitchens represent the range of what we do - from full renovations to targeted updates that changed how these homes look and function every day. Each one started with a free design consultation.</p>
+
+        <div class="sc-slby-gallery-grid">
+            <img class="sc-slby-gallery-main" src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Edge-Street-2-scaled.webp" alt="" width="800" height="534" loading="lazy" decoding="async">
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Dutton-Street-Mill-Condo-1440x960-1.webp" alt="" width="400" height="260" loading="lazy" decoding="async">
+            <img src="https://seacoastcabinetne.com/wp-content/uploads/2022/02/Dutton-Street-3.webp" alt="" width="400" height="260" loading="lazy" decoding="async">
+        </div>
+
+        <p style="text-align:center;">
+            <a href="https://seacoastcabinetne.com/kitchen-design/" class="sc-slby-btn-outline">See More Project Work</a>
+        </p>
+    </div>
+
+    <!-- SECTION 5: WHY CHOOSE US -->
+    <div class="sc-slby-why-section">
+        <h2>Why Salisbury Homeowners Choose Seacoast Cabinet</h2>
+        <p class="sc-slby-section-intro">We do one thing - cabinetry - and we do it with a level of depth that general contractors and big-box stores can't match. Here's what that looks like in practice.</p>
+
+        <div class="sc-slby-stat-strip">
+            <div class="sc-slby-stat">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">North Shore kitchens completed</span>
+            </div>
+            <div class="sc-slby-stat">
+                <span class="stat-number">3</span>
+                <span class="stat-label">American-made cabinet lines in stock</span>
+            </div>
+            <div class="sc-slby-stat">
+                <span class="stat-number">4.9</span>
+                <span class="stat-label">Average Google rating from real customers</span>
+            </div>
+            <div class="sc-slby-stat">
+                <span class="stat-number">6-8</span>
+                <span class="stat-label">Week average timeline start to finish</span>
+            </div>
+        </div>
+
+        <ul class="sc-slby-checklist">
+            <li>Family-owned showroom with hands-on design team - not a call center</li>
+            <li>Three American-made cabinet lines at different price points and lead times</li>
+            <li>Free in-home or in-showroom design consultations with no obligation</li>
+            <li>3D renderings so you see the finished kitchen before ordering</li>
+            <li>Complete specifications handed off to your contractor - no guesswork</li>
+            <li>Cambria countertop samples available in-showroom for comparison</li>
+            <li>Experienced installation team with attention to final detail</li>
+            <li>Serving Salisbury from our Rowley showroom, just 15 minutes away</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 6: FAQ -->
+    <div class="sc-slby-faq">
+        <h2>Frequently Asked Questions About Cabinets in Salisbury, MA</h2>
+        <p class="sc-slby-section-intro" style="margin-bottom: 30px;">Common questions from Salisbury homeowners before their first consultation.</p>
+
+        <details class="sc-slby-faq-item">
+            <summary>How long does a kitchen cabinet installation take in Salisbury, MA?</summary>
+            <p>Most kitchen cabinet installations take 2-5 days once cabinets arrive, depending on kitchen size and scope. The full project timeline from first consultation to completed installation is typically 6-8 weeks - 1-2 weeks for design and selections, 2-12 weeks for manufacturing depending on the cabinet line, and 2-5 days for professional installation. We keep you updated throughout so there are no surprises.</p>
+        </details>
+
+        <details class="sc-slby-faq-item">
+            <summary>Does Seacoast Cabinet offer free consultations near Salisbury, MA?</summary>
+            <p>Yes. We offer free, no-obligation design consultations both at your Salisbury home and at our Rowley showroom on Route 1. Most consultations take 1-2 hours and cover your space measurements, design goals, cabinet options, and a rough budget framework. There's no pressure to move forward - we'd rather you make a confident decision than a fast one. <a href="https://seacoastcabinetne.com/contact/">Schedule yours here</a> or call <a href="tel:+19783501040">978-350-1040</a>.</p>
+        </details>
+
+        <details class="sc-slby-faq-item">
+            <summary>What types of cabinets do you offer in Salisbury, MA?</summary>
+            <p>We carry three American-made cabinet lines: Omega (fully semi-custom, highest customization, 9-12 week lead time), Homecrest (quality construction at a more accessible price point, 5-8 weeks), and Mantra (streamlined selection, fastest lead time at 2-4 weeks, modern styles). All three lines feature soft-close hardware, durable finishes, and limited lifetime warranties. Our designers will help you find the right fit for your project at your free consultation.</p>
+        </details>
+
+        <details class="sc-slby-faq-item">
+            <summary>How much do custom kitchen cabinets cost in Massachusetts?</summary>
+            <p>Custom kitchen cabinet costs in Massachusetts typically range from $8,000-$15,000 for smaller or entry-level projects, $15,000-$30,000 for mid-range full kitchen renovations, and $30,000-$50,000+ for larger or fully custom projects. Your cost depends on kitchen size, cabinet line, finish selections, hardware choices, and installation complexity. We provide detailed, no-obligation estimates after your design consultation so you know exactly what you're working with.</p>
+        </details>
+
+        <details class="sc-slby-faq-item">
+            <summary>Do you serve beach homes and seasonal properties in Salisbury?</summary>
+            <p>Yes. We work with both primary residences and seasonal properties in the Salisbury area, including Salisbury Beach. For beach and coastal homes, we help homeowners select cabinet finishes and materials that handle higher humidity, heavy seasonal use, and the wear that comes with beach-house living. Painted finishes and moisture-resistant constructions are typically what we recommend for these environments.</p>
+        </details>
+
+        <details class="sc-slby-faq-item">
+            <summary>How far is your showroom from Salisbury?</summary>
+            <p>Our showroom is at 300 Newburyport Turnpike, Unit 3, Rowley, MA 01969 - approximately 15 minutes from Salisbury center via Route 1 South. We're open Monday-Friday 9am-5pm and Saturday 10am-4pm. If you'd prefer, we can also come to your home for the initial consultation before you make the trip to Rowley.</p>
+        </details>
+    </div>
+
+    <!-- SECTION 7: SERVICE AREA + MAP -->
+    <div class="sc-slby-area-map-wrap">
+        <div class="sc-slby-area-map">
+            <div>
+                <h2 class="sc-slby-h2-left">Serving Salisbury &amp; the Surrounding North Shore</h2>
+                <p>Our Rowley showroom sits on Route 1 with easy access from I-95, putting us within a short drive of Salisbury and the communities along the Merrimack Valley and MA/NH Seacoast. We work with homeowners and contractors throughout the region.</p>
+
+                <div class="sc-slby-towns">
+                    <span>Salisbury</span>
+                    <a href="https://seacoastcabinetne.com/kitchen-cabinets-newburyport-ma/">Newburyport</a>
+                    <a href="https://seacoastcabinetne.com/kitchen-cabinets-rowley-ma/">Rowley</a>
+                    <a href="https://seacoastcabinetne.com/kitchen-cabinets-ipswich-ma/">Ipswich</a>
+                    <a href="https://seacoastcabinetne.com/kitchen-cabinets-haverhill-ma/">Haverhill</a>
+                    <a href="#" style="pointer-events:none; opacity:0.55;">Amesbury</a>
+                    <a href="#" style="pointer-events:none; opacity:0.55;">Merrimac</a>
+                    <a href="#" style="pointer-events:none; opacity:0.55;">Newbury</a>
+                    <a href="#" style="pointer-events:none; opacity:0.55;">Hampton NH</a>
+                    <a href="#" style="pointer-events:none; opacity:0.55;">Seabrook NH</a>
+                </div>
+            </div>
+
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93603.37678773694!2d-70.94338668863037!3d42.849504956973576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2e6d5a74a4507%3A0xf6809518a4f99e40!2sSalisbury%2C%20MA!5e0!3m2!1sen!2sus!4v1775157748658!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Salisbury MA service area for Seacoast Cabinet"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 8: FINAL CTA -->
+    <div class="sc-slby-final-cta">
+        <h2>Ready to Start Your Salisbury Kitchen Project?</h2>
+        <p>Schedule a free design consultation at our Rowley showroom or in your home. No pressure, no obligation - just honest guidance from a local team that knows cabinetry.</p>
+        <a href="https://seacoastcabinetne.com/contact/" class="sc-slby-btn-gold">Schedule Free Consultation</a>
+        <a href="tel:+19783501040" class="phone-link">&#128222; Call 978-350-1040</a>
+    </div>
+
+</div><!-- /.sc-slby-wrap -->
+
+</div><!-- /.sc-slby-page -->
