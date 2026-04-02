@@ -49,6 +49,88 @@
 .se-kn-section h3 { font-family: var(--font-heading); font-size: 22px; color: var(--se-dark); margin: 0 0 12px; line-height: 1.3; }
 .se-kn-section p { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--se-text); margin: 0 0 16px; }
 
+/* ============================================
+   Hero Section
+   ============================================ */
+.se-kn-hero {
+  position: relative;
+  background-image: url('https://signseast.com/wp-content/uploads/2026/01/Tor-installing-beach-casino-sign-letter.webp');
+  background-size: cover;
+  background-position: center top;
+  padding: 80px 20px;
+  text-align: center;
+}
+.se-kn-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(25,25,25,0.82) 0%, rgba(198,28,28,0.65) 100%);
+}
+.se-kn-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.se-kn-hero h1 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--se-white);
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+.se-kn-hero p {
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+.se-kn-hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.se-kn-hero-btn-white {
+  display: inline-block;
+  background: var(--se-white);
+  color: var(--se-primary) !important;
+  padding: 14px 32px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: background 0.25s ease, transform 0.2s ease;
+  min-height: 48px;
+}
+.se-kn-hero-btn-white:hover {
+  background: #f0f0f0;
+  color: var(--se-primary) !important;
+  transform: translateY(-1px);
+}
+.se-kn-hero-btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--se-white) !important;
+  border: 2px solid var(--se-white);
+  padding: 14px 32px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: background 0.25s ease, transform 0.2s ease;
+  min-height: 48px;
+}
+.se-kn-hero-btn-outline:hover {
+  background: rgba(255,255,255,0.15);
+  color: var(--se-white) !important;
+  transform: translateY(-1px);
+}
+
 .se-kn-lead { font-size: 18px; color: var(--se-text-light); max-width: 720px; }
 
 .se-kn-center,
@@ -439,8 +521,24 @@
 
 
 /* ============================================
-   Section 8: Final CTA
+   Nearby Locations
    ============================================ */
+.se-kn-nearby-section { padding: 40px 20px; text-align: center; }
+.se-kn-nearby-section h3 { font-family: var(--font-heading); font-size: 18px; color: var(--se-dark); margin: 0 0 16px; }
+.se-kn-nearby-pills { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 8px; }
+.se-kn-nearby-pills a {
+  background: var(--se-bg-light);
+  color: var(--se-dark) !important;
+  padding: 10px 20px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.se-kn-nearby-pills a:hover { background: var(--se-primary); color: var(--se-white) !important; }
+
 .se-kn-final-cta {
   text-align: center !important;
   padding: 60px 20px;
@@ -457,7 +555,9 @@
 @media (min-width: 768px) {
   .se-kn-section { padding: 70px 30px; }
   .se-kn-section h2 { font-size: 34px; }
-
+  .se-kn-hero { padding: 112px 30px; }
+  .se-kn-hero h1 { font-size: 44px; }
+  .se-kn-hero-buttons { flex-direction: row; justify-content: center; }
   .se-kn-intro-grid { grid-template-columns: 1fr 1fr; gap: 50px; }
   .se-kn-svc-grid { grid-template-columns: repeat(4, 1fr); }
   .se-kn-why-grid { grid-template-columns: 1fr 1fr; gap: 50px; }
@@ -469,11 +569,27 @@
 @media (min-width: 1024px) {
   .se-kn-section { padding: 80px 30px; }
   .se-kn-section h2 { font-size: 38px; }
+  .se-kn-hero h1 { font-size: 52px; }
   .se-kn-intro-grid { gap: 70px; }
   .se-kn-photo-cta { padding: 100px 30px; }
   .se-kn-photo-cta h2 { font-size: 38px; }
 }
 </style>
+
+
+<!-- ================================================
+     Hero Section
+     ================================================ -->
+<section class="se-kn-hero">
+  <div class="se-kn-hero-inner">
+    <h1>Sign Company in Kingston, NH</h1>
+    <p>Custom signs, vehicle wraps, LED retrofits, and sign repair - designed, fabricated, and installed by our team right here on Route 125. Kingston is our home base. Southern NH and the Seacoast is our backyard.</p>
+    <div class="se-kn-hero-buttons">
+      <a href="https://signseast.com/contact-us/" class="se-kn-hero-btn-white">Get a Quote</a>
+      <a href="tel:+19788181740" class="se-kn-hero-btn-outline">Call (978) 818-1740</a>
+    </div>
+  </div>
+</section>
 
 
 <!-- ================================================
@@ -484,8 +600,8 @@
     <div class="se-kn-intro-grid">
       <div class="se-kn-intro-text">
         <span class="se-kn-eyebrow">Your Kingston Sign Shop</span>
-        <h2>Sign Company Serving Kingston, New Hampshire</h2>
-        <p>Signs East has been the go-to sign company for businesses in Kingston, NH and throughout Rockingham County since 2012. Located right on Route 125, our shop handles everything from custom storefront signs and vehicle graphics to sign repair, LED retrofits, and seasonal boat shrinkwrapping — all designed, fabricated, and installed by our team.</p>
+        <h2>Built In-House, Installed On-Site - Since 2012</h2>
+        <p>Signs East has been the go-to sign company for businesses in Kingston, NH and throughout Rockingham County since 2012. Located right on Route 125, our shop handles everything from custom storefront signs and vehicle graphics to sign repair, LED retrofits, and seasonal boat shrinkwrapping - all designed, fabricated, and installed by our team.</p>
         <p>When you work with Signs East, you are working directly with the people who build and install your signs. No call centers, no middlemen, no three-month waits. Tor and the crew answer the phone, show up on time, and deliver work that lasts. See completed projects in our <a href="https://signseast.com/showcase/">project showcase</a>.</p>
         <ul>
           <li>Custom signs, banners, and business signage</li>
@@ -493,13 +609,9 @@
           <li>Sign repair, LED retrofits, and maintenance</li>
           <li>Serving Kingston, Plaistow, Exeter, and all of Rockingham County</li>
         </ul>
-        <div class="se-kn-btn-row">
-          <a href="https://signseast.com/contact-us/" class="se-kn-btn se-kn-btn--primary">Get a Quote for Your Kingston Business</a>
-          <a href="tel:+19788181740" class="se-kn-btn se-kn-btn--outline">Call (978) 818-1740</a>
-        </div>
       </div>
       <div class="se-kn-intro-img">
-        <img src="https://signseast.com/wp-content/uploads/2026/01/Tor-installing-beach-casino-sign-letter.webp" alt="" width="600" height="450" loading="lazy">
+        <img src="https://signseast.com/wp-content/uploads/2025/11/IMG_5123-min-1-scaled.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -806,6 +918,21 @@
 
 
 <!-- ================================================
+     Nearby Locations
+     ================================================ -->
+<section class="se-kn-nearby-section se-kn-light">
+  <div class="se-kn-container">
+    <h3>Also Serving Nearby Communities</h3>
+    <div class="se-kn-nearby-pills">
+      <a href="https://signseast.com/signs-exeter-nh/">Exeter, NH</a>
+      <a href="https://signseast.com/signs-portsmouth-nh/">Portsmouth, NH</a>
+      <a href="https://signseast.com/signs-salem-nh/">Salem, NH</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
      Section 8: Final CTA
      ================================================ -->
 <section class="se-kn-final-cta">
@@ -818,3 +945,4 @@
     </div>
   </div>
 </section>
+
