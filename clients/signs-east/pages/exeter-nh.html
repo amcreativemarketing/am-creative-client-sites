@@ -31,11 +31,11 @@
 }
 .se-exeter-page h1 {
   font-family: var(--font-heading);
-  color: var(--se-dark);
-  font-size: 28px !important;
-  line-height: 1.3;
+  color: var(--se-white);
+  font-size: 32px !important;
+  line-height: 1.25;
   margin: 0 0 16px 0;
-  text-align: left;
+  text-align: center;
 }
 .se-exeter-page h2 {
   font-family: var(--font-heading);
@@ -93,6 +93,83 @@
 .se-exeter-btn--outline:hover {
   background: var(--se-primary);
   color: #FFFFFF !important;
+}
+
+/* ===== Hero Section ===== */
+.se-exeter-hero {
+  position: relative;
+  background-image: url('https://signseast.com/wp-content/uploads/2026/03/peabody-signs_carvana.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  text-align: center;
+}
+.se-exeter-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(25,25,25,0.82) 0%, rgba(198,28,28,0.65) 100%);
+}
+.se-exeter-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.se-exeter-hero p {
+  color: rgba(255,255,255,0.9);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+.se-exeter-hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.se-exeter-hero-btn-white {
+  display: inline-block;
+  background: var(--se-white);
+  color: var(--se-primary) !important;
+  padding: 14px 32px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.25s ease, transform 0.2s ease;
+  min-width: 44px;
+  min-height: 44px;
+}
+.se-exeter-hero-btn-white:hover {
+  background: #f0f0f0;
+  color: var(--se-primary) !important;
+  text-decoration: none !important;
+  transform: translateY(-1px);
+}
+.se-exeter-hero-btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--se-white) !important;
+  border: 2px solid var(--se-white);
+  padding: 14px 32px;
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  min-width: 44px;
+  min-height: 44px;
+}
+.se-exeter-hero-btn-outline:hover {
+  background: rgba(255,255,255,0.15);
+  color: var(--se-white) !important;
+  text-decoration: none !important;
+  transform: translateY(-1px);
 }
 
 /* Sections */
@@ -409,8 +486,10 @@
 
 /* ===== Tablet ===== */
 @media (min-width: 768px) {
-  .se-exeter-page h1 { font-size: 32px !important; }
+  .se-exeter-page h1 { font-size: 44px !important; }
   .se-exeter-page h2 { font-size: 32px !important; }
+  .se-exeter-hero { padding: 112px 0; }
+  .se-exeter-hero-buttons { flex-direction: row; justify-content: center; }
   .se-exeter-section { padding: 64px 0; }
   .se-exeter-intro-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
   .se-exeter-services-grid { grid-template-columns: 1fr 1fr; }
@@ -426,7 +505,7 @@
 
 /* ===== Desktop ===== */
 @media (min-width: 1024px) {
-  .se-exeter-page h1 { font-size: 36px !important; }
+  .se-exeter-page h1 { font-size: 52px !important; }
   .se-exeter-page h2 { font-size: 36px !important; }
   .se-exeter-section { padding: 80px 0; }
   .se-exeter-intro-grid { gap: 64px; }
@@ -439,12 +518,24 @@
 
 <div class="se-exeter-page">
 
+  <!-- ===== HERO ===== -->
+  <section class="se-exeter-hero">
+    <div class="se-exeter-hero-inner">
+      <h1>Sign Company Serving Exeter, NH</h1>
+      <p>Custom signs, vehicle wraps, electrical repair, and LED retrofits - designed, built, and installed by our team in Kingston, just minutes from Exeter. No franchise. No outsourcing. One call to get it done right.</p>
+      <div class="se-exeter-hero-buttons">
+        <a href="https://signseast.com/contact-us/" class="se-exeter-hero-btn-white">Get a Free Consultation</a>
+        <a href="tel:+19788181740" class="se-exeter-hero-btn-outline">(978) 818-1740</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== SECTION 1: Intro / Proximity ===== -->
   <section class="se-exeter-section">
     <div class="se-exeter-container">
       <div class="se-exeter-intro-grid">
         <div class="se-exeter-intro-text">
-          <h1>Full-Service Sign Shop Minutes from Exeter</h1>
+          <h2>Full-Service Sign Shop Minutes from Exeter</h2>
           <p>Signs East is located in Kingston, just minutes south of Exeter. That makes us the closest full-service sign company to Exeter's downtown business district, the Epping Road corridor, and the Portsmouth Avenue commercial strip.</p>
           <p>We're not a print shop that happens to offer signs. We design, fabricate, and install everything in-house - from channel letter storefronts on Water Street to vehicle wraps for contractors running jobs off Route 101. When your sign needs electrical work, LED retrofits, or emergency repair, we handle that too.</p>
           <div class="se-exeter-trust-bar">
@@ -726,3 +817,4 @@
   </section>
 
 </div>
+
