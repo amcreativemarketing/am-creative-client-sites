@@ -1,0 +1,1375 @@
+<!-- BCM ADU Landing Page - Paid Ad Campaign - Lookbook Download -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    /* Primary Palette */
+    --bcm-black: #1A1A1A;
+    --bcm-gold: #C8A24D;
+    --bcm-charcoal: #1C2331;
+    --bcm-white: #FAF9F7;
+
+    /* Secondary Palette */
+    --bcm-maritime: #0F2A45;
+    --bcm-sage: #7A9B7E;
+    --bcm-gray: #F1F1F1;
+
+    /* Gold System */
+    --bcm-gold-hover: #B8923F;
+    --bcm-gold-light: #D4B46A;
+    --bcm-gold-soft: rgba(200, 162, 77, 0.07);
+    --bcm-gold-border: rgba(200, 162, 77, 0.18);
+    --bcm-gold-glow: rgba(200, 162, 77, 0.12);
+
+    /* Text Hierarchy */
+    --bcm-text-primary: #1C2331;
+    --bcm-text-secondary: #3A4255;
+    --bcm-text-tertiary: #5C6478;
+    --bcm-text-light: rgba(250, 249, 247, 0.88);
+    --bcm-text-muted: rgba(250, 249, 247, 0.62);
+
+    /* Surfaces */
+    --bcm-surface: #F7F7F5;
+    --bcm-surface-raised: #FFFFFF;
+    --bcm-border: #E5E5E2;
+    --bcm-border-subtle: rgba(28, 35, 49, 0.06);
+
+    /* Shadows */
+    --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
+    --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
+    --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
+    --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
+    --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
+
+    /* Radii */
+    --bcm-radius: 6px;
+    --bcm-radius-md: 10px;
+    --bcm-radius-lg: 14px;
+
+    /* Typography */
+    --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --bcm-font-body: 'Inter', -apple-system, sans-serif;
+
+    /* Transitions */
+    --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .bcm-adu * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .bcm-adu {
+    font-family: var(--bcm-font-body);
+    color: var(--bcm-text-primary);
+    line-height: 1.6;
+    background: var(--bcm-white);
+    overflow-x: hidden;
+  }
+
+  .bcm-adu h1, .bcm-adu h2, .bcm-adu h3, .bcm-adu h4 {
+    font-family: var(--bcm-font-display);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .bcm-adu img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Label */
+  .bcm-adu__label {
+    font-family: var(--bcm-font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    color: var(--bcm-gold);
+  }
+
+  .bcm-adu__label--sage { color: var(--bcm-sage); }
+
+  /* Buttons */
+  .bcm-adu a.bcm-adu__cta--gold {
+    display: inline-block;
+    background: var(--bcm-gold);
+    color: var(--bcm-black);
+    padding: 15px 34px;
+    border-radius: 6px;
+    font-family: var(--bcm-font-display);
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s var(--bcm-ease);
+  }
+
+  .bcm-adu a.bcm-adu__cta--gold:hover {
+    background: var(--bcm-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--bcm-shadow-gold);
+  }
+
+  .bcm-adu a.bcm-adu__cta--ghost {
+    display: inline-block;
+    background: rgba(250, 249, 247, 0.06);
+    color: var(--bcm-text-light);
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-family: var(--bcm-font-display);
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(250, 249, 247, 0.18);
+    cursor: pointer;
+    transition: all 0.3s var(--bcm-ease);
+  }
+
+  .bcm-adu a.bcm-adu__cta--ghost:hover {
+    background: rgba(250, 249, 247, 0.12);
+    border-color: rgba(250, 249, 247, 0.32);
+  }
+
+  /* ============================================
+     HERO
+     ============================================ */
+  .bcm-adu__hero {
+    background: linear-gradient(172deg, rgba(26, 26, 26, 0.94) 0%, rgba(26, 26, 26, 0.82) 45%, rgba(28, 35, 49, 0.75) 100%),
+                url('https://bradfordcm.com/wp-content/uploads/2025/12/ELM-OHG-Moms-Place-Next-Door.webp') center/cover no-repeat;
+    color: var(--bcm-white);
+    padding: 3rem 1.5rem 3.5rem;
+    position: relative;
+  }
+
+  .bcm-adu__hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--bcm-gold), transparent);
+    opacity: 0.4;
+  }
+
+  .bcm-adu__hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .bcm-adu__hero-logo {
+    margin-bottom: 2.5rem;
+  }
+
+  .bcm-adu__hero-logo img {
+    height: 57px;
+    width: auto;
+  }
+
+  .bcm-adu__hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    max-width: 680px;
+    letter-spacing: -0.025em;
+  }
+
+  .bcm-adu__hero-sub {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--bcm-text-light);
+    max-width: 560px;
+    margin-bottom: 2rem;
+  }
+
+  .bcm-adu__hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+
+  .bcm-adu__hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(250, 249, 247, 0.12);
+  }
+
+  .bcm-adu__stat-value {
+    font-family: var(--bcm-font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--bcm-gold);
+  }
+
+  .bcm-adu__stat-label {
+    font-size: 0.78rem;
+    color: var(--bcm-text-muted);
+  }
+
+  /* ============================================
+     FORM SECTION
+     ============================================ */
+  .bcm-adu__form-section {
+    padding: 4.5rem 1.5rem;
+    background: var(--bcm-surface);
+  }
+
+  .bcm-adu__form-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .bcm-adu__form-value {
+    text-align: center;
+  }
+
+  .bcm-adu__form-value h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    color: var(--bcm-text-primary);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .bcm-adu__form-value > p {
+    font-size: 1rem;
+    color: var(--bcm-text-tertiary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bcm-adu__form-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bcm-adu__form-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    color: var(--bcm-text-secondary);
+  }
+
+  .bcm-adu__form-feature-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--bcm-gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .bcm-adu__form-embed {
+    background: var(--bcm-surface-raised);
+    border: 1px solid var(--bcm-border);
+    border-radius: var(--bcm-radius-lg);
+    padding: 2rem;
+    box-shadow: var(--bcm-shadow-md);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .bcm-adu__form-embed iframe {
+    width: 100%;
+    min-height: 380px;
+    border: none;
+    border-radius: 3px;
+  }
+
+  /* ============================================
+     VIDEO SECTION
+     ============================================ */
+  .bcm-adu__video {
+    padding: 5rem 1.5rem;
+    background: var(--bcm-white);
+  }
+
+  .bcm-adu__video-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .bcm-adu__video-content h2 {
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    color: var(--bcm-text-primary);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .bcm-adu__video-content > p {
+    color: var(--bcm-text-tertiary);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .bcm-adu__founder {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--bcm-border);
+  }
+
+  .bcm-adu__founder img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .bcm-adu__founder-name {
+    font-family: var(--bcm-font-display);
+    font-weight: 600;
+    color: var(--bcm-text-primary);
+    font-size: 0.95rem;
+  }
+
+  .bcm-adu__founder-title {
+    font-size: 0.82rem;
+    color: var(--bcm-text-tertiary);
+  }
+
+  .bcm-adu__video-player {
+    position: relative;
+    border-radius: var(--bcm-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--bcm-shadow-lg);
+    aspect-ratio: 16/9;
+    background: var(--bcm-black);
+  }
+
+  .bcm-adu__video-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .bcm-adu__video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    background: var(--bcm-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s var(--bcm-ease);
+  }
+
+  .bcm-adu__video-player:hover .bcm-adu__video-play {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+
+  .bcm-adu__video-play svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--bcm-black);
+    margin-left: 3px;
+  }
+
+  /* Video active state */
+  .bcm-adu__video-player.playing .bcm-adu__video-thumb,
+  .bcm-adu__video-player.playing .bcm-adu__video-play {
+    display: none;
+  }
+
+  .bcm-adu__video-player.playing .bcm-adu__video-el {
+    display: block;
+  }
+
+  .bcm-adu__video-el {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ============================================
+     DIGNITY SECTION
+     ============================================ */
+  .bcm-adu__dignity {
+    padding: 5rem 1.5rem;
+    background: var(--bcm-surface);
+  }
+
+  .bcm-adu__dignity-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .bcm-adu__dignity h2 {
+    font-size: clamp(1.7rem, 3.5vw, 2.25rem);
+    color: var(--bcm-text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .bcm-adu__dignity-subtitle {
+    font-size: 1.05rem;
+    color: var(--bcm-sage);
+    font-weight: 600;
+    font-family: var(--bcm-font-display);
+    margin-bottom: 1.5rem;
+  }
+
+  .bcm-adu__dignity-intro {
+    font-size: 1rem;
+    color: var(--bcm-text-secondary);
+    line-height: 1.8;
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .bcm-adu__dignity-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .bcm-adu__dignity-card {
+    background: var(--bcm-surface-raised);
+    border: 1px solid var(--bcm-border);
+    border-radius: var(--bcm-radius-lg);
+    padding: 2rem;
+    text-align: left;
+    transition: all 0.3s var(--bcm-ease);
+  }
+
+  .bcm-adu__dignity-card:hover {
+    box-shadow: var(--bcm-shadow-md);
+    transform: translateY(-3px);
+    border-color: var(--bcm-gold-border);
+  }
+
+  .bcm-adu__dignity-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--bcm-gold-soft);
+    border: 1px solid var(--bcm-gold-border);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .bcm-adu__dignity-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--bcm-gold);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .bcm-adu__dignity-card h3 {
+    font-size: 1.15rem;
+    color: var(--bcm-text-primary);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.01em;
+  }
+
+  .bcm-adu__dignity-card p {
+    font-size: 0.93rem;
+    color: var(--bcm-text-tertiary);
+    line-height: 1.65;
+  }
+
+  .bcm-adu__dignity-note {
+    font-size: 0.92rem;
+    color: var(--bcm-text-tertiary);
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+
+  /* ============================================
+     MODELS PREVIEW
+     ============================================ */
+  .bcm-adu__models {
+    padding: 5rem 1.5rem;
+    background: var(--bcm-white);
+  }
+
+  .bcm-adu__models-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3rem;
+  }
+
+  .bcm-adu__models-header h2 {
+    font-size: clamp(1.7rem, 3.5vw, 2.25rem);
+    color: var(--bcm-text-primary);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .bcm-adu__models-header > p {
+    color: var(--bcm-text-tertiary);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .bcm-adu__models-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bcm-adu__model-card {
+    background: var(--bcm-surface-raised);
+    border: 1px solid var(--bcm-border);
+    border-radius: var(--bcm-radius-lg);
+    overflow: hidden;
+    transition: all 0.3s var(--bcm-ease);
+  }
+
+  .bcm-adu__model-card:hover {
+    box-shadow: var(--bcm-shadow-md);
+    transform: translateY(-3px);
+    border-color: var(--bcm-gold-border);
+  }
+
+  .bcm-adu__model-img {
+    height: 240px;
+    overflow: hidden;
+  }
+
+  .bcm-adu__model-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s var(--bcm-ease);
+  }
+
+  .bcm-adu__model-card:hover .bcm-adu__model-img img {
+    transform: scale(1.03);
+  }
+
+  .bcm-adu__model-body {
+    padding: 1.75rem;
+  }
+
+  .bcm-adu__model-name {
+    font-size: 1.5rem;
+    color: var(--bcm-text-primary);
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.02em;
+  }
+
+  .bcm-adu__model-desc {
+    font-size: 0.93rem;
+    color: var(--bcm-text-tertiary);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  .bcm-adu__model-teaser {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--bcm-font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--bcm-gold);
+    padding-top: 1rem;
+    border-top: 1px solid var(--bcm-border);
+  }
+
+  .bcm-adu__model-teaser svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--bcm-gold);
+    fill: none;
+    stroke-width: 2;
+  }
+
+  /* Real photo strip */
+  .bcm-adu__photo-strip {
+    max-width: 1000px;
+    margin: 2.5rem auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    border-radius: var(--bcm-radius-lg);
+    overflow: hidden;
+  }
+
+  .bcm-adu__photo-strip-item {
+    position: relative;
+    border-radius: var(--bcm-radius-md);
+    overflow: hidden;
+    height: 200px;
+  }
+
+  .bcm-adu__photo-strip-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .bcm-adu__photo-strip-cap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.6rem 1rem;
+    background: linear-gradient(to top, rgba(26, 26, 26, 0.8), transparent);
+    font-size: 0.75rem;
+    color: rgba(250, 249, 247, 0.85);
+    font-family: var(--bcm-font-display);
+    font-weight: 500;
+  }
+
+  /* Form section preview image */
+  .bcm-adu__form-preview {
+    border-radius: var(--bcm-radius-md);
+    overflow: hidden;
+    margin-top: 1.5rem;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 140px;
+  }
+
+  .bcm-adu__form-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Custom build callout */
+  .bcm-adu__custom-callout {
+    max-width: 1000px;
+    margin: 2.5rem auto 0;
+    background: linear-gradient(135deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
+    border-radius: var(--bcm-radius-lg);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--bcm-white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bcm-adu__custom-callout::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--bcm-gold);
+  }
+
+  .bcm-adu__custom-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(200, 162, 77, 0.12);
+    border: 1px solid rgba(200, 162, 77, 0.2);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .bcm-adu__custom-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--bcm-gold);
+    fill: none;
+    stroke-width: 2;
+  }
+
+  .bcm-adu__custom-text h3 {
+    font-size: 1.05rem;
+    color: var(--bcm-white);
+    margin-bottom: 0.25rem;
+  }
+
+  .bcm-adu__custom-text p {
+    font-size: 0.88rem;
+    color: var(--bcm-text-muted);
+    line-height: 1.6;
+  }
+
+  /* ============================================
+     PROCESS
+     ============================================ */
+  .bcm-adu__process {
+    padding: 5rem 1.5rem;
+    background: var(--bcm-surface);
+  }
+
+  .bcm-adu__process-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .bcm-adu__process-content h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2rem);
+    color: var(--bcm-text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .bcm-adu__process-sub {
+    color: var(--bcm-text-tertiary);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .bcm-adu__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bcm-adu__step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .bcm-adu__step-num {
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid var(--bcm-gold-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--bcm-font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--bcm-gold);
+    flex-shrink: 0;
+  }
+
+  .bcm-adu__step h4 {
+    font-size: 0.95rem;
+    color: var(--bcm-text-primary);
+    margin-bottom: 0.15rem;
+  }
+
+  .bcm-adu__step p {
+    font-size: 0.88rem;
+    color: var(--bcm-text-tertiary);
+    line-height: 1.6;
+  }
+
+  .bcm-adu__process-image {
+    position: relative;
+    border-radius: var(--bcm-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--bcm-shadow-lg);
+  }
+
+  .bcm-adu__process-image img {
+    width: 100%;
+    display: block;
+    min-height: 300px;
+    object-fit: cover;
+  }
+
+  .bcm-adu__process-badge {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background: var(--bcm-surface-raised);
+    padding: 1rem 1.25rem;
+    border-radius: var(--bcm-radius-md);
+    box-shadow: var(--bcm-shadow-md);
+  }
+
+  .bcm-adu__process-badge h4 {
+    font-size: 0.9rem;
+    color: var(--bcm-text-primary);
+    margin-bottom: 0.2rem;
+  }
+
+  .bcm-adu__process-badge p {
+    font-size: 0.82rem;
+    color: var(--bcm-text-tertiary);
+    line-height: 1.5;
+  }
+
+  /* ============================================
+     FINAL CTA
+     ============================================ */
+  .bcm-adu__final-cta {
+    background: linear-gradient(172deg, rgba(26, 26, 26, 0.96) 0%, rgba(28, 35, 49, 0.94) 100%);
+    color: var(--bcm-white);
+    padding: 5rem 1.5rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .bcm-adu__final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 20%, rgba(200, 162, 77, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .bcm-adu__final-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .bcm-adu__final-cta h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .bcm-adu__final-cta > .bcm-adu__final-inner > p {
+    font-size: 1.05rem;
+    color: var(--bcm-text-light);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .bcm-adu__final-contact {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(250, 249, 247, 0.1);
+  }
+
+  .bcm-adu__final-contact a {
+    color: var(--bcm-text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+
+  .bcm-adu__final-contact a:hover {
+    color: var(--bcm-gold);
+  }
+
+  /* ============================================
+     ZONING + FOOTER
+     ============================================ */
+  .bcm-adu__zoning {
+    background: var(--bcm-charcoal);
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+  }
+
+  .bcm-adu__zoning p {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 0.82rem;
+    color: rgba(250, 249, 247, 0.55);
+    line-height: 1.7;
+  }
+
+  .bcm-adu__zoning strong {
+    color: var(--bcm-text-light);
+  }
+
+  .bcm-adu__footer {
+    background: var(--bcm-charcoal);
+    color: var(--bcm-white);
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 1px solid rgba(250, 249, 247, 0.06);
+  }
+
+  .bcm-adu__footer-logo {
+    height: 28px;
+    margin-bottom: 0.75rem;
+  }
+
+  .bcm-adu__footer-links {
+    margin-bottom: 0.75rem;
+  }
+
+  .bcm-adu__footer-links a {
+    color: var(--bcm-text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+
+  .bcm-adu__footer-links a:hover {
+    color: var(--bcm-gold);
+  }
+
+  .bcm-adu__footer-copy {
+    font-size: 0.75rem;
+    color: rgba(250, 249, 247, 0.35);
+  }
+
+  .bcm-adu__footer-copy a {
+    color: var(--bcm-gold);
+    text-decoration: none;
+  }
+
+  .bcm-adu__footer-disc {
+    margin-top: 0.5rem;
+    font-size: 0.72rem;
+    color: rgba(250, 249, 247, 0.28);
+    font-style: italic;
+  }
+
+  /* ============================================
+     TABLET (768px)
+     ============================================ */
+  @media (min-width: 768px) {
+    .bcm-adu__hero {
+      padding: 4.5rem 2rem 5rem;
+    }
+
+    .bcm-adu__hero-logo img {
+      height: 66px;
+    }
+
+    .bcm-adu__form-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .bcm-adu__form-value {
+      text-align: left;
+    }
+
+    .bcm-adu__form-features {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .bcm-adu__form-embed {
+      margin: 0;
+      max-width: none;
+    }
+
+    .bcm-adu__video-inner {
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3.5rem;
+    }
+
+    .bcm-adu__dignity-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bcm-adu__models-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bcm-adu__model-img {
+      height: 260px;
+    }
+
+    .bcm-adu__photo-strip {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .bcm-adu__photo-strip-item {
+      height: 220px;
+    }
+
+    .bcm-adu__form-preview {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .bcm-adu__custom-callout {
+      padding: 2.5rem 2.5rem 2.5rem 3rem;
+    }
+
+    .bcm-adu__process-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+    }
+  }
+
+  /* ============================================
+     DESKTOP (1024px)
+     ============================================ */
+  @media (min-width: 1024px) {
+    .bcm-adu__hero {
+      padding: 5.5rem 2rem 6rem;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+    }
+
+    .bcm-adu__form-section {
+      padding: 5.5rem 2rem;
+    }
+
+    .bcm-adu__form-inner {
+      max-width: 1060px;
+    }
+
+    .bcm-adu__video {
+      padding: 6rem 2rem;
+    }
+
+    .bcm-adu__dignity {
+      padding: 6rem 2rem;
+    }
+
+    .bcm-adu__models {
+      padding: 6rem 2rem;
+    }
+
+    .bcm-adu__process {
+      padding: 6rem 2rem;
+    }
+
+    .bcm-adu__final-cta {
+      padding: 6rem 2rem;
+    }
+  }
+</style>
+
+<div class="bcm-adu">
+
+  <!-- HERO -->
+  <section class="bcm-adu__hero">
+    <div class="bcm-adu__hero-inner">
+      <div class="bcm-adu__hero-logo">
+        <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/69cdb37454bce071c5c099cf.png" alt="" loading="eager">
+      </div>
+      <p class="bcm-adu__label">Bradford Construction Management</p>
+      <h1>What if help was just a few steps away?</h1>
+      <p class="bcm-adu__hero-sub">Give your parents the dignity of their own home, and give yourself the peace of mind you deserve. Bradford ADUs are a flexible housing option that keeps loved ones close.</p>
+      <div class="bcm-adu__hero-ctas">
+        <a href="#lookbook-form" class="bcm-adu__cta--gold">Get the Free ADU Lookbook</a>
+        <a href="tel:978-945-9771" class="bcm-adu__cta--ghost">Call 978-945-9771</a>
+      </div>
+      <div class="bcm-adu__hero-stats">
+        <div>
+          <div class="bcm-adu__stat-value">100%</div>
+          <div class="bcm-adu__stat-label">Turnkey</div>
+        </div>
+        <div>
+          <div class="bcm-adu__stat-value">Standard or Custom</div>
+          <div class="bcm-adu__stat-label">Your Property, Your Design</div>
+        </div>
+        <div>
+          <div class="bcm-adu__stat-value">Lifetime Support</div>
+          <div class="bcm-adu__stat-label">Through Bradford Home Services</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="bcm-adu__form-section" id="lookbook-form">
+    <div class="bcm-adu__form-inner">
+      <div class="bcm-adu__form-value">
+        <p class="bcm-adu__label bcm-adu__label--sage">Free Instant Download</p>
+        <h2>Get Your ADU Lookbook</h2>
+        <p>Our comprehensive guide includes everything you need to start planning. Floor plans, 3D renderings, transparent pricing, and financing options - all in one place.</p>
+        <div class="bcm-adu__form-features">
+          <div class="bcm-adu__form-feature">
+            <span class="bcm-adu__form-feature-dot"></span>
+            <span>Detailed floor plans</span>
+          </div>
+          <div class="bcm-adu__form-feature">
+            <span class="bcm-adu__form-feature-dot"></span>
+            <span>3D renderings</span>
+          </div>
+          <div class="bcm-adu__form-feature">
+            <span class="bcm-adu__form-feature-dot"></span>
+            <span>Starting-at pricing</span>
+          </div>
+          <div class="bcm-adu__form-feature">
+            <span class="bcm-adu__form-feature-dot"></span>
+            <span>Financing options</span>
+          </div>
+          <div class="bcm-adu__form-feature">
+            <span class="bcm-adu__form-feature-dot"></span>
+            <span>Customization details</span>
+          </div>
+          <div class="bcm-adu__form-feature">
+            <span class="bcm-adu__form-feature-dot"></span>
+            <span>Construction methods</span>
+          </div>
+        </div>
+        <div class="bcm-adu__form-preview">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/Elm-DBL-Winter-Ready.webp" alt="" width="520" height="140" loading="lazy">
+        </div>
+      </div>
+      <div class="bcm-adu__form-embed">
+        <iframe
+          src="https://link.bradfordhs.com/widget/form/PC0wZKlAVQZKG2iUPToX"
+          style="width:100%;height:100%;border:none;border-radius:3px"
+          id="inline-PC0wZKlAVQZKG2iUPToX"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="ADU Lookbook Download"
+          data-height="374"
+          data-layout-iframe-id="inline-PC0wZKlAVQZKG2iUPToX"
+          data-form-id="PC0wZKlAVQZKG2iUPToX"
+          title="ADU Lookbook Download"
+        ></iframe>
+        <script src="https://link.bradfordhs.com/js/form_embed.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="bcm-adu__video">
+    <div class="bcm-adu__video-inner">
+      <div class="bcm-adu__video-content">
+        <h2>A Message From Our Founder</h2>
+        <p>A Personal Commitment to Your Family's Peace of Mind</p>
+        <div class="bcm-adu__founder">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/Rick-Family-Photo.webp" alt="" width="56" height="56" loading="lazy">
+          <div>
+            <div class="bcm-adu__founder-name">Rick White</div>
+            <div class="bcm-adu__founder-title">Founder, Bradford Construction Management</div>
+          </div>
+        </div>
+      </div>
+      <div class="bcm-adu__video-player" id="rick-video">
+        <img src="https://storage.googleapis.com/msgsndr/disR6gkKnQRDyT0yAbh1/media/685c61cc4669a92db0782516.jpeg" alt="" class="bcm-adu__video-thumb" width="640" height="360" loading="lazy">
+        <div class="bcm-adu__video-play" aria-label="Play video">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" /></svg>
+        </div>
+        <video class="bcm-adu__video-el" controls preload="none">
+          <source src="https://storage.googleapis.com/msgsndr/disR6gkKnQRDyT0yAbh1/media/685e9f23a8f9d3705ede7c99.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIGNITY OF PROXIMITY -->
+  <section class="bcm-adu__dignity">
+    <div class="bcm-adu__dignity-inner">
+      <p class="bcm-adu__label bcm-adu__label--sage">Why Families Choose an ADU</p>
+      <h2>The Solution Isn't a New House. It's a New Way to Live Together.</h2>
+      <p class="bcm-adu__dignity-subtitle">The Perfect Balance of Independence and Security.</p>
+      <p class="bcm-adu__dignity-intro">For years, families have faced an impossible choice: a parent's fierce desire for independence, or a child's desperate need for peace of mind. The traditional options can force a compromise. We call our solution <strong>The Dignity of Proximity.</strong></p>
+
+      <div class="bcm-adu__dignity-cards">
+        <div class="bcm-adu__dignity-card">
+          <div class="bcm-adu__dignity-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h3>Dignity for Them</h3>
+          <p>The freedom to live in their own private, comfortable home, on their own terms, on the property they love.</p>
+        </div>
+        <div class="bcm-adu__dignity-card">
+          <div class="bcm-adu__dignity-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <h3>Proximity for You</h3>
+          <p>The security of knowing they are just a few steps away, ending the constant worry about their safety and wellbeing.</p>
+        </div>
+      </div>
+
+      <p class="bcm-adu__dignity-note">It's not just an ADU. It's a way to keep your family close - also ideal for relatives, guests, or a rental apartment.</p>
+      <a href="#lookbook-form" class="bcm-adu__cta--gold">Download Our Free ADU Lookbook</a>
+    </div>
+  </section>
+
+  <!-- MODELS PREVIEW -->
+  <section class="bcm-adu__models">
+    <div class="bcm-adu__models-header">
+      <p class="bcm-adu__label bcm-adu__label--sage">Bradford ADU Models</p>
+      <h2>Thoughtfully Designed. Fully Customizable.</h2>
+      <p>Our models are starting points - not your only options. Every feature, finish, and layout can be tailored to your exact needs. The lookbook has full floor plans, specs, and transparent pricing.</p>
+    </div>
+
+    <div class="bcm-adu__models-grid">
+      <div class="bcm-adu__model-card">
+        <div class="bcm-adu__model-img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/10/DBL-Rendering-3.webp" alt="" width="500" height="300" loading="lazy">
+        </div>
+        <div class="bcm-adu__model-body">
+          <h3 class="bcm-adu__model-name">The Elm</h3>
+          <p class="bcm-adu__model-desc">Our most versatile single-story design - available in four exterior styles. Designed for accessible living with an efficient, comfortable layout. Available in wood-framed or premium ICF construction.</p>
+          <div class="bcm-adu__model-teaser">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Floor plans and pricing in the lookbook
+          </div>
+        </div>
+      </div>
+      <div class="bcm-adu__model-card">
+        <div class="bcm-adu__model-img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/Maple-The-Guest-Suite.webp" alt="" width="500" height="300" loading="lazy">
+        </div>
+        <div class="bcm-adu__model-body">
+          <h3 class="bcm-adu__model-name">The Maple</h3>
+          <p class="bcm-adu__model-desc">A two-story design with a versatile loft space and an exclusive private rooftop deck. More room for families who need the extra square footage without expanding the footprint.</p>
+          <div class="bcm-adu__model-teaser">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Floor plans and pricing in the lookbook
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Real project photos -->
+    <div class="bcm-adu__photo-strip">
+      <div class="bcm-adu__photo-strip-item">
+        <img src="https://bradfordcm.com/wp-content/uploads/2025/12/ELM-DBL-Interior-Open-Living-Space-scaled.webp" alt="" width="500" height="300" loading="lazy">
+        <div class="bcm-adu__photo-strip-cap">ADU interior - open living space</div>
+      </div>
+      <div class="bcm-adu__photo-strip-item">
+        <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8ac2837e8651e2879d1.jpg" alt="" width="500" height="300" loading="lazy">
+        <div class="bcm-adu__photo-strip-cap">ICF construction - bracing ready for concrete pour</div>
+      </div>
+    </div>
+
+    <!-- Custom build callout -->
+    <div class="bcm-adu__custom-callout">
+      <div class="bcm-adu__custom-icon">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+      </div>
+      <div class="bcm-adu__custom-text">
+        <h3>Going Custom? We Do That Too.</h3>
+        <p>We also build over existing garages, design ADU-and-garage combos, adjust square footage, and create fully custom layouts. Every property is different - tell us your vision.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="bcm-adu__process">
+    <div class="bcm-adu__process-inner">
+      <div class="bcm-adu__process-content">
+        <p class="bcm-adu__label bcm-adu__label--sage">Our Process</p>
+        <h2>The Builder That Won't Ghost You.</h2>
+        <p class="bcm-adu__process-sub">You have enough to worry about. Our transparent, turnkey process was designed to eliminate the stress and uncertainty from your ADU project.</p>
+
+        <div class="bcm-adu__steps">
+          <div class="bcm-adu__step">
+            <div class="bcm-adu__step-num">1</div>
+            <div>
+              <h4>Initial Consultation</h4>
+              <p>A no-pressure call to discuss your family's needs, review the models, and answer your initial questions.</p>
+            </div>
+          </div>
+          <div class="bcm-adu__step">
+            <div class="bcm-adu__step-num">2</div>
+            <div>
+              <h4>Site Assessment & Feasibility</h4>
+              <p>We visit your property to assess the build location, discuss potential site work, and ensure a smooth project.</p>
+            </div>
+          </div>
+          <div class="bcm-adu__step">
+            <div class="bcm-adu__step-num">3</div>
+            <div>
+              <h4>Permitting & Approvals</h4>
+              <p>Our team manages the complex process of submitting construction documents and working with local zoning boards.</p>
+            </div>
+          </div>
+          <div class="bcm-adu__step">
+            <div class="bcm-adu__step-num">4</div>
+            <div>
+              <h4>The Build</h4>
+              <p>We break ground and build your turnkey ADU with daily photo updates and clear communication throughout.</p>
+            </div>
+          </div>
+          <div class="bcm-adu__step">
+            <div class="bcm-adu__step-num">5</div>
+            <div>
+              <h4>Final Walkthrough & Move-In</h4>
+              <p>A final walkthrough ensures every detail is perfect before handing over the keys.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bcm-adu__process-image">
+        <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8b6a8a1309ad96bc914.jpg" alt="" width="540" height="420" loading="lazy">
+        <div class="bcm-adu__process-badge">
+          <h4>Bradford For Life</h4>
+          <p>Through Bradford Home Services, you get ongoing post-build support - seasonal maintenance, small repairs, and warranty follow-through.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="bcm-adu__final-cta">
+    <div class="bcm-adu__final-inner">
+      <p class="bcm-adu__label">Ready to Explore the Possibilities?</p>
+      <h2>Get Your Free ADU Lookbook</h2>
+      <p>Floor plans, 3D renderings, transparent starting-at pricing, financing options, and customization details. Everything you need to start the conversation with your family.</p>
+      <a href="#lookbook-form" class="bcm-adu__cta--gold">Download the Lookbook</a>
+      <div class="bcm-adu__final-contact">
+        <a href="tel:978-945-9771">978-945-9771</a>
+        <a href="mailto:rwhite@bradfordcm.com">rwhite@bradfordcm.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONING NOTE -->
+  <section class="bcm-adu__zoning">
+    <p><strong>A Note on Local Zoning:</strong> The information we provide is based on statewide Massachusetts guidelines for Accessory Dwelling Units. Because every town has its own specific zoning bylaws, your project may require modifications to comply with local regulations. Part of our transparent process is guiding you through these local requirements during our site assessment to ensure a smooth and successful build.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bcm-adu__footer">
+    <img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/69cdb37454bce071c5c099cf.png" alt="" class="bcm-adu__footer-logo" loading="lazy">
+    <div class="bcm-adu__footer-links">
+      <a href="https://bradfordcm.com/">Bradford Construction Website</a>
+    </div>
+    <p class="bcm-adu__footer-copy">&copy; 2026 Bradford Construction Management | Designed by <a href="https://www.amcreativemktg.com/">AM Creative Marketing</a></p>
+    <p class="bcm-adu__footer-disc">An ADU provides flexible housing near family; it does not replace licensed medical, nursing, or assisted-living services.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.bcm-adu__video-play').addEventListener('click', function() {
+      var player = this.closest('.bcm-adu__video-player');
+      player.classList.add('playing');
+      player.querySelector('video').play();
+    });
+  </script>
+
+</div>
