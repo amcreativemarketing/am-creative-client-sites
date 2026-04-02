@@ -1,5 +1,4 @@
 <!-- Plaistow NH Electrician Repairs Spoke Page — Body Content -->
-<!-- Sits between existing hero section and footer in WordPress -->
 <!-- Parent hub: /plaistow-nh-electrician/ -->
 
 <style>
@@ -180,9 +179,14 @@
         .plst-rep .btn { width: 100%; }
         .plst-rep-cta__btns, .plst-rep-final__btns { flex-direction: column; align-items: center; }
     }
+
+    /* H1 Page Title */
+    .plst-rep h1 { font-family: 'Raleway', sans-serif; font-size: clamp(2.25rem, 5vw, 3.25rem); font-weight: 700; line-height: 1.2; color: var(--moore-text); margin-bottom: 1rem; }
 </style>
 
 <div class="plst-rep">
+<h1>Electrical Repairs in Plaistow, NH</h1>
+
 
 <!-- ============================================
      SECTION 2: Local Response Angle
@@ -517,3 +521,4 @@
 <script defer>
 document.querySelectorAll('.plst-rep-faq-item__q').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement,a=i.classList.contains('active');document.querySelectorAll('.plst-rep-faq-item').forEach(function(f){f.classList.remove('active')});if(!a)i.classList.add('active')})});
 </script>
+
