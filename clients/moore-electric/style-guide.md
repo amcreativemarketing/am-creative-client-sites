@@ -327,16 +327,18 @@ section {
 
 **Add this to every page to ensure sections span full viewport width:**
 
+> **Note:** Do NOT use `100vw` for width - it includes the scrollbar width and causes horizontal overflow. Use `100%` instead.
+
 ```css
 /* Elementor Full-Width Overrides */
 .elementor-section.elementor-section-boxed > .elementor-container {
     max-width: 100% !important;
 }
 .elementor-section {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin-left: calc(-50vw + 50%) !important;
-    margin-right: calc(-50vw + 50%) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 .elementor-section-wrap, .elementor-section-wrap > .elementor-section {
     width: 100% !important;
@@ -385,39 +387,9 @@ body.elementor-page, .elementor, .elementor-inner, .elementor-section-wrap {
 
 ---
 
-## Schema Markup (Required)
+## Schema Markup
 
-Every service page should include LocalBusiness + Service schema:
-
-```json
-{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "[Service Name]",
-    "provider": {
-        "@type": "LocalBusiness",
-        "name": "Moore Electric Inc.",
-        "telephone": "+1-603-836-9513",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "21 Wentworth Ave",
-            "addressLocality": "Plaistow",
-            "addressRegion": "NH",
-            "postalCode": "03865"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "9"
-        }
-    },
-    "areaServed": [
-        {"@type": "State", "name": "New Hampshire"},
-        {"@type": "State", "name": "Massachusetts"},
-        {"@type": "State", "name": "Maine"}
-    ]
-}
-```
+**Do NOT include schema markup in page HTML.** All schema (JSON-LD, microdata, LocalBusiness, Service, FAQ, etc.) is generated and injected by OTTO/Search Atlas after deployment. Adding schema to HTML causes duplicate markup conflicts and GSC validation errors.
 
 ---
 
