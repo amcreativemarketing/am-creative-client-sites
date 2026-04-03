@@ -1,0 +1,1693 @@
+<style>
+/* ============================================
+   BCM BATHROOM REMODELING PAGE STYLES
+   Namespace: .bcm-bath-*
+   2026 Brand: #1A1A1A | #C8A24D | #1C2331
+   Fonts: Plus Jakarta Sans (headings), Inter (body)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  /* 2026 Primary Brand Colors */
+  --bcm-navy: #1A1A1A;
+  --bcm-gold: #C8A24D;
+  --bcm-gold-hover: #b89040;
+  --bcm-white: #FFFFFF;
+
+  /* Text Colors */
+  --bcm-dark-slate: #1C2331;
+  --bcm-medium-gray: #64748B;
+
+  /* Background Colors */
+  --bcm-light-gray: #F1F1F1;
+  --bcm-off-white: #FAF9F7;
+
+  /* 2026 Extended Palette */
+  --bcm-deep-maritime: #0F2A45;
+  --bcm-sage: #7A9B7E;
+
+  /* UI Colors */
+  --bcm-border: #E2E5EA;
+  --bcm-shadow: 0 4px 20px rgba(26, 26, 26, 0.08);
+  --bcm-shadow-hover: 0 8px 30px rgba(26, 26, 26, 0.14);
+
+  /* Spacing & Radius */
+  --bcm-radius: 8px;
+  --bcm-radius-lg: 12px;
+  --bcm-radius-pill: 9999px;
+  --bcm-transition: all 0.3s ease;
+}
+
+/* Typography */
+.bcm-bath-section h2,
+.bcm-bath-section h3,
+.bcm-bath-section h4,
+.bcm-bath-h2 {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.bcm-bath-section,
+.bcm-bath-section p,
+.bcm-bath-section li,
+.bcm-bath-section a,
+.bcm-bath-cta {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.bcm-bath-section { padding: 80px 0; }
+.bcm-bath-section--alt { background-color: var(--bcm-light-gray); }
+
+.bcm-bath-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.bcm-bath-section__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.bcm-bath-h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.bcm-bath-intro {
+  font-size: 1.125rem;
+  color: var(--bcm-medium-gray);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Gold rule accent */
+.bcm-bath-gold-rule {
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: var(--bcm-gold);
+  margin: 0 auto 18px;
+  border-radius: 1px;
+}
+
+/* CTA Buttons */
+.bcm-bath-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 36px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-decoration: none;
+  border-radius: var(--bcm-radius-pill);
+  transition: var(--bcm-transition);
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+
+.bcm-bath-cta--primary {
+  background-color: var(--bcm-gold);
+  color: var(--bcm-navy) !important;
+  border: none;
+}
+
+.bcm-bath-cta--primary:hover {
+  background-color: var(--bcm-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(200, 162, 77, 0.3);
+  color: var(--bcm-navy) !important;
+}
+
+.bcm-bath-cta--secondary {
+  background-color: transparent;
+  color: var(--bcm-navy);
+  border: 2px solid var(--bcm-navy);
+}
+
+.bcm-bath-cta--secondary:hover {
+  background-color: var(--bcm-navy);
+  color: var(--bcm-white);
+}
+
+.bcm-bath-cta--ghost {
+  background-color: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.9) !important;
+}
+
+.bcm-bath-cta--ghost:hover {
+  background-color: rgba(255,255,255,0.18);
+  border-color: rgba(200,162,77,0.4);
+  color: #fff !important;
+}
+
+/* ============================================
+   HERO TRUST BAR
+   ============================================ */
+.bcm-bath-hero-trust-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  background: var(--bcm-light-gray);
+  border-bottom: 1px solid var(--bcm-border);
+  padding: 20px 24px;
+}
+
+.bcm-bath-hero-trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3px;
+  padding: 8px 24px;
+  border-left: 2px solid var(--bcm-gold);
+}
+
+.bcm-bath-hero-trust-item:first-child { border-left: none; }
+
+.bcm-bath-hero-trust-item strong {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.bcm-bath-hero-trust-item span {
+  font-size: 0.78rem;
+  color: var(--bcm-medium-gray);
+}
+
+/* ============================================
+   SECTION 1: INTRODUCTION
+   ============================================ */
+.bcm-bath-intro-section { padding: 60px 0 80px; }
+
+.bcm-bath-intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.bcm-bath-intro-image {
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bcm-shadow);
+}
+
+.bcm-bath-intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bcm-bath-intro-content p,
+.bcm-bath-intro-continued p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 24px;
+}
+
+.bcm-bath-intro-content p:last-of-type,
+.bcm-bath-intro-continued p:last-of-type {
+  margin-bottom: 32px;
+}
+
+.bcm-bath-intro-content a,
+.bcm-bath-intro-continued a {
+  color: var(--bcm-deep-maritime);
+  text-decoration: underline;
+  text-decoration-color: rgba(15, 42, 69, 0.3);
+  text-underline-offset: 2px;
+}
+
+.bcm-bath-intro-content a:hover,
+.bcm-bath-intro-continued a:hover {
+  color: var(--bcm-gold);
+  text-decoration-color: var(--bcm-gold);
+}
+
+.bcm-bath-license {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bcm-light-gray);
+  padding: 8px 16px;
+  border-radius: var(--bcm-radius);
+  font-size: 0.88rem;
+  color: var(--bcm-medium-gray);
+  margin-bottom: 16px;
+  border-left: 3px solid var(--bcm-gold);
+}
+
+.bcm-bath-license span {
+  color: var(--bcm-gold);
+  font-weight: 700;
+}
+
+.bcm-bath-intro-cta-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* ============================================
+   SECTION 2: SERVICES GRID
+   ============================================ */
+.bcm-bath-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.bcm-bath-service-card {
+  background: var(--bcm-white);
+  border-radius: var(--bcm-radius-lg);
+  padding: 32px 24px;
+  box-shadow: var(--bcm-shadow);
+  transition: var(--bcm-transition);
+  border: 1px solid var(--bcm-border);
+  border-top: 4px solid var(--bcm-dark-slate);
+  display: flex;
+  flex-direction: column;
+}
+
+.bcm-bath-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bcm-shadow-hover);
+  border-top-color: var(--bcm-gold);
+}
+
+.bcm-bath-service-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 16px;
+}
+
+.bcm-bath-service-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.bcm-bath-service-card li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--bcm-dark-slate);
+  line-height: 1.5;
+}
+
+.bcm-bath-service-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--bcm-gold);
+  font-weight: 700;
+}
+
+.bcm-bath-price-range {
+  background: var(--bcm-deep-maritime);
+  color: var(--bcm-white);
+  padding: 12px 16px;
+  border-radius: var(--bcm-radius);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: auto;
+}
+
+.bcm-bath-disclaimer {
+  background: var(--bcm-off-white);
+  border-left: 4px solid var(--bcm-gold);
+  padding: 20px 24px;
+  margin-top: 32px;
+  border-radius: 0 var(--bcm-radius) var(--bcm-radius) 0;
+}
+
+.bcm-bath-disclaimer p {
+  font-size: 0.9rem;
+  color: var(--bcm-medium-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Bundle Banner */
+.bcm-bath-bundle-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: linear-gradient(135deg, var(--bcm-deep-maritime), #1A1A1A);
+  color: var(--bcm-white);
+  padding: 24px 32px;
+  border-radius: var(--bcm-radius-lg);
+  margin-bottom: 40px;
+}
+
+.bcm-bath-bundle-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  background: rgba(200, 162, 77, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bcm-gold);
+  border: 1px solid rgba(200, 162, 77, 0.25);
+}
+
+.bcm-bath-bundle-content { font-size: 1rem; line-height: 1.6; }
+
+.bcm-bath-bundle-content strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.bcm-bath-bundle-content a {
+  color: var(--bcm-gold);
+  text-decoration: underline;
+}
+
+.bcm-bath-bundle-content a:hover { color: var(--bcm-white); }
+
+.bcm-bath-service-card a {
+  color: var(--bcm-deep-maritime);
+  text-decoration: underline;
+}
+
+.bcm-bath-service-card a:hover { color: var(--bcm-gold); }
+
+/* ============================================
+   SECTION 3: PROCESS STEPS
+   ============================================ */
+.bcm-bath-process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.bcm-bath-process-card {
+  display: flex;
+  gap: 20px;
+  background: var(--bcm-white);
+  padding: 28px;
+  border-radius: var(--bcm-radius-lg);
+  box-shadow: var(--bcm-shadow);
+  transition: var(--bcm-transition);
+  border-left: 4px solid transparent;
+}
+
+.bcm-bath-process-card:hover {
+  box-shadow: var(--bcm-shadow-hover);
+  border-left-color: var(--bcm-gold);
+}
+
+.bcm-bath-process-number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--bcm-dark-slate);
+  color: var(--bcm-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: var(--bcm-transition);
+}
+
+.bcm-bath-process-card:hover .bcm-bath-process-number {
+  background: var(--bcm-gold);
+  color: var(--bcm-navy);
+}
+
+.bcm-bath-process-content h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 10px;
+}
+
+.bcm-bath-process-content p {
+  font-size: 0.93rem;
+  color: var(--bcm-medium-gray);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Visual Break */
+.bcm-bath-visual-break {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.bcm-bath-visual-item {
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bcm-shadow);
+}
+
+.bcm-bath-visual-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.bcm-bath-visual-item:hover img { transform: scale(1.03); }
+
+/* ============================================
+   SECTION 4: WHY CHOOSE BCM
+   ============================================ */
+.bcm-bath-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bcm-bath-value-card {
+  background: var(--bcm-white);
+  padding: 32px;
+  border-radius: var(--bcm-radius-lg);
+  text-align: center;
+  box-shadow: var(--bcm-shadow);
+  transition: var(--bcm-transition);
+  border-bottom: 3px solid transparent;
+}
+
+.bcm-bath-value-card:hover {
+  border-bottom-color: var(--bcm-gold);
+  transform: translateY(-4px);
+  box-shadow: var(--bcm-shadow-hover);
+}
+
+.bcm-bath-value-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--bcm-light-gray);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--bcm-dark-slate);
+  transition: var(--bcm-transition);
+}
+
+.bcm-bath-value-card:hover .bcm-bath-value-icon {
+  background: var(--bcm-gold);
+  color: var(--bcm-navy);
+}
+
+.bcm-bath-value-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 12px;
+}
+
+.bcm-bath-value-card p {
+  font-size: 0.93rem;
+  color: var(--bcm-medium-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.bcm-bath-license-badge {
+  font-size: 0.85rem;
+  color: var(--bcm-dark-slate);
+  line-height: 1.55;
+}
+
+/* ============================================
+   SECTION 5: COST TRANSPARENCY
+   ============================================ */
+.bcm-bath-cost-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.bcm-bath-cost-text p {
+  font-size: 1.0rem;
+  line-height: 1.75;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 20px;
+}
+
+.bcm-bath-cost-table {
+  background: var(--bcm-white);
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bcm-shadow);
+}
+
+.bcm-bath-cost-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bcm-bath-cost-table th {
+  background: var(--bcm-dark-slate);
+  color: var(--bcm-white);
+  padding: 16px;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border-bottom: 3px solid var(--bcm-gold);
+}
+
+.bcm-bath-cost-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--bcm-border);
+  font-size: 0.88rem;
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-bath-cost-table tr:last-child td { border-bottom: none; }
+.bcm-bath-cost-table tr:hover td { background: var(--bcm-light-gray); }
+
+.bcm-bath-cost-factors { margin-top: 32px; }
+
+.bcm-bath-cost-factors h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 16px;
+}
+
+.bcm-bath-cost-factors ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.bcm-bath-cost-factors li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.93rem;
+  color: var(--bcm-medium-gray);
+}
+
+.bcm-bath-cost-factors li::before {
+  content: "•";
+  position: absolute;
+  left: 6px;
+  color: var(--bcm-gold);
+  font-weight: 700;
+}
+
+.bcm-bath-financing-note {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: rgba(200, 162, 77, 0.08);
+  border-radius: var(--bcm-radius);
+  border-left: 4px solid var(--bcm-gold);
+}
+
+.bcm-bath-financing-note p {
+  margin: 0;
+  font-size: 0.93rem;
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-bath-financing-note a {
+  color: var(--bcm-deep-maritime);
+  font-weight: 600;
+}
+
+/* ============================================
+   SECTION 6: PROJECT GALLERY
+   ============================================ */
+.bcm-bath-gallery-subsection { margin-bottom: 48px; }
+
+.bcm-bath-gallery-subsection h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.bcm-bath-ba-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.bcm-bath-ba-item {
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bcm-shadow);
+}
+
+.bcm-bath-ba-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.bcm-bath-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.bcm-bath-gallery-item {
+  border-radius: var(--bcm-radius);
+  overflow: hidden;
+  box-shadow: var(--bcm-shadow);
+  transition: var(--bcm-transition);
+  border: 2px solid transparent;
+}
+
+.bcm-bath-gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--bcm-shadow-hover);
+  border-color: var(--bcm-gold);
+}
+
+.bcm-bath-gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.bcm-bath-gallery-text {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 0.97rem;
+  color: var(--bcm-medium-gray);
+  line-height: 1.7;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bcm-bath-gallery-text a {
+  color: var(--bcm-deep-maritime);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.bcm-bath-gallery-text a:hover { color: var(--bcm-gold); }
+
+/* ============================================
+   SECTION 7: TESTIMONIALS
+   ============================================ */
+.bcm-bath-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bcm-bath-testimonial-card {
+  background: var(--bcm-white);
+  padding: 32px;
+  border-radius: var(--bcm-radius-lg);
+  box-shadow: var(--bcm-shadow);
+  border-top: 3px solid var(--bcm-gold);
+}
+
+.bcm-bath-testimonial-stars {
+  color: var(--bcm-gold);
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.bcm-bath-testimonial-card blockquote {
+  font-size: 0.93rem;
+  line-height: 1.72;
+  color: var(--bcm-dark-slate);
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+
+.bcm-bath-testimonial-author {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--bcm-deep-maritime);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.bcm-bath-testimonial-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+/* ============================================
+   SECTION 8: FAQ
+   ============================================ */
+.bcm-bath-faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bcm-bath-faq-item {
+  background: var(--bcm-white);
+  border-radius: var(--bcm-radius);
+  margin-bottom: 10px;
+  box-shadow: var(--bcm-shadow);
+  overflow: hidden;
+  border-left: 4px solid transparent;
+  transition: var(--bcm-transition);
+}
+
+.bcm-bath-faq-item:hover { border-left-color: var(--bcm-gold); }
+.bcm-bath-faq-item.active { border-left-color: var(--bcm-gold); }
+
+.bcm-bath-faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--bcm-dark-slate);
+  transition: var(--bcm-transition);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.bcm-bath-faq-question:hover { background: var(--bcm-light-gray); }
+
+.bcm-bath-faq-icon {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
+  transition: transform 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.bcm-bath-faq-item.active .bcm-bath-faq-icon {
+  transform: rotate(45deg);
+  color: var(--bcm-gold);
+}
+
+.bcm-bath-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+}
+
+.bcm-bath-faq-item.active .bcm-bath-faq-answer { max-height: 500px; }
+
+.bcm-bath-faq-answer-inner {
+  padding: 0 24px 20px;
+  font-size: 0.93rem;
+  line-height: 1.72;
+  color: var(--bcm-medium-gray);
+}
+
+/* ============================================
+   SECTION 9: SERVICE AREA
+   ============================================ */
+.bcm-bath-area-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.bcm-bath-area-text p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 20px;
+}
+
+.bcm-bath-area-text a {
+  color: var(--bcm-deep-maritime);
+  text-decoration: underline;
+  text-decoration-color: rgba(15,42,69,0.3);
+}
+
+.bcm-bath-area-text a:hover {
+  color: var(--bcm-gold);
+  text-decoration-color: var(--bcm-gold);
+}
+
+.bcm-bath-area-lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.bcm-bath-area-list h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--bcm-deep-maritime);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.bcm-bath-area-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bcm-bath-area-list li {
+  padding: 6px 0;
+  font-size: 0.93rem;
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-bath-area-list a {
+  color: var(--bcm-dark-slate);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bcm-bath-area-list a:hover { color: var(--bcm-gold); }
+
+.bcm-bath-area-sidebar {
+  background: var(--bcm-off-white);
+  padding: 32px;
+  border-radius: var(--bcm-radius-lg);
+  box-shadow: var(--bcm-shadow);
+  text-align: center;
+  border-top: 3px solid var(--bcm-gold);
+}
+
+.bcm-bath-area-sidebar h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 12px;
+}
+
+.bcm-bath-area-sidebar p {
+  font-size: 0.93rem;
+  color: var(--bcm-medium-gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ============================================
+   SECTION 10: FINAL CTA
+   ============================================ */
+.bcm-bath-final-cta {
+  background: linear-gradient(135deg, var(--bcm-deep-maritime) 0%, var(--bcm-navy) 100%);
+  padding: 88px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcm-bath-final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(200,162,77,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.bcm-bath-final-cta .bcm-bath-h2 {
+  color: var(--bcm-white);
+  position: relative;
+}
+
+.bcm-bath-final-cta .bcm-bath-intro {
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.bcm-bath-cta-centered {
+  display: flex;
+  justify-content: center;
+  max-width: 480px;
+  margin: 40px auto 0;
+  position: relative;
+}
+
+.bcm-bath-cta-box {
+  background: var(--bcm-white);
+  padding: 40px;
+  border-radius: var(--bcm-radius-lg);
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.bcm-bath-cta-box h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.bcm-bath-contact-info { margin-bottom: 16px; }
+
+.bcm-bath-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 0.93rem;
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-bath-contact-item svg { color: var(--bcm-dark-slate); flex-shrink: 0; }
+
+.bcm-bath-contact-item a {
+  color: var(--bcm-deep-maritime);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bcm-bath-contact-item a:hover { color: var(--bcm-gold); }
+
+.bcm-bath-hours {
+  font-size: 0.85rem;
+  color: var(--bcm-medium-gray);
+  margin-top: 16px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.bcm-bath-trust-box {
+  background: rgba(255,255,255,0.06);
+  padding: 32px;
+  border-radius: var(--bcm-radius-lg);
+  margin-top: 40px;
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+}
+
+.bcm-bath-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.bcm-bath-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.bcm-bath-trust-check {
+  color: var(--bcm-gold);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .bcm-bath-intro-grid { grid-template-columns: 1fr; gap: 32px; }
+  .bcm-bath-intro-image { order: -1; max-width: 600px; margin: 0 auto; }
+  .bcm-bath-services-grid { grid-template-columns: repeat(2, 1fr); }
+  .bcm-bath-value-grid { grid-template-columns: repeat(2, 1fr); }
+  .bcm-bath-cost-content { grid-template-columns: 1fr; }
+  .bcm-bath-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .bcm-bath-testimonials-grid { grid-template-columns: 1fr; }
+  .bcm-bath-area-content { grid-template-columns: 1fr; }
+  .bcm-bath-trust-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .bcm-bath-section { padding: 60px 0; }
+  .bcm-bath-h2 { font-size: 1.75rem; }
+  .bcm-bath-bundle-banner { flex-direction: column; text-align: center; padding: 24px; }
+  .bcm-bath-bundle-icon { margin: 0 auto; }
+  .bcm-bath-visual-break { grid-template-columns: 1fr; gap: 16px; }
+  .bcm-bath-visual-item img { height: 220px; }
+  .bcm-bath-services-grid { grid-template-columns: 1fr; }
+  .bcm-bath-process-grid { grid-template-columns: 1fr; }
+  .bcm-bath-value-grid { grid-template-columns: 1fr; }
+  .bcm-bath-ba-grid { grid-template-columns: 1fr; }
+  .bcm-bath-gallery-grid { grid-template-columns: 1fr; }
+  .bcm-bath-area-lists { grid-template-columns: 1fr; }
+  .bcm-bath-cost-factors ul { grid-template-columns: 1fr; }
+  .bcm-bath-trust-grid { grid-template-columns: 1fr 1fr; }
+  .bcm-bath-testimonial-cta { flex-direction: column; align-items: center; }
+  .bcm-bath-cta-box { padding: 28px; }
+  .bcm-bath-hero-trust-item { padding: 8px 16px; }
+}
+</style>
+
+<!-- Trust Bar -->
+<section class="bcm-bath-section" style="padding: 0;">
+  <div class="bcm-bath-container">
+    <div class="bcm-bath-hero-trust-bar">
+      <div class="bcm-bath-hero-trust-item">
+        <strong>MA HIC #201908</strong>
+        <span>Licensed &amp; Insured</span>
+      </div>
+      <div class="bcm-bath-hero-trust-item">
+        <strong>10+ Years</strong>
+        <span>Experience</span>
+      </div>
+      <div class="bcm-bath-hero-trust-item">
+        <strong>Daily Updates</strong>
+        <span>Photo Documentation</span>
+      </div>
+      <div class="bcm-bath-hero-trust-item">
+        <strong>Design-Build</strong>
+        <span>Contractor</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Introduction -->
+<section class="bcm-bath-section bcm-bath-intro-section">
+  <div class="bcm-bath-container">
+    <div class="bcm-bath-intro-grid">
+      <div class="bcm-bath-intro-content">
+        <h2 class="bcm-bath-h2">Bathroom Remodeling With Complete Transparency</h2>
+
+        <p>Bradford Construction brings commercial-grade project management to residential bathroom remodeling throughout Haverhill, Newburyport, and the North Shore. As a local <a href="https://bradfordcm.com/">design-build contractor</a>, we handle every aspect of your bathroom renovation - from initial design through final walkthrough and beyond.</p>
+
+        <p>What sets Bradford Construction apart isn't just the quality of our work - it's our commitment to transparency and lifetime support. Every client receives daily photo documentation showing exactly what's happening on their project. No wondering, no worrying, no being left in the dark. Our detailed, itemized proposals mean no surprise costs, and our clear change order process keeps you in control of your budget at every stage.</p>
+      </div>
+
+      <div class="bcm-bath-intro-image">
+        <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-51-1.webp" alt="" loading="lazy">
+      </div>
+    </div>
+
+    <div class="bcm-bath-intro-continued">
+      <p>Unlike contractors who disappear after the final payment, we're here for the long run. Through our partnership with <a href="https://bradfordcm.com/about-us/">Bradford Home Services</a>, you have ongoing support for maintenance and any future needs. It's the Bradford difference: professional home renovation during construction, and lifetime peace of mind after.</p>
+
+      <p>Whether you're updating a bathroom as part of a <a href="https://bradfordcm.com/home-renovations/">whole-home renovation</a>, adding a master suite to your <a href="https://bradfordcm.com/custom-homes/">custom home build</a>, or including accessible bathrooms in an <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADU for aging parents</a>, Bradford Construction delivers the same systematic approach that's earned us the trust of North Shore and Merrimack Valley homeowners. <a href="https://bradfordcm.com/services/">View all of our residential construction services</a> to see the full scope of what we offer.</p>
+
+      <div class="bcm-bath-intro-cta-stack">
+        <div class="bcm-bath-license">
+          <span>✓</span> Licensed (MA HIC #201908), insured, and locally based
+        </div>
+        <a href="https://bradfordcm.com/contact/" class="bcm-bath-cta bcm-bath-cta--primary">Schedule Your Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Services Grid -->
+<section class="bcm-bath-section bcm-bath-section--alt">
+  <div class="bcm-bath-container">
+    <div class="bcm-bath-section__header">
+      <span class="bcm-bath-gold-rule"></span>
+      <h2 class="bcm-bath-h2">Bathroom Remodeling as Part of Your Larger Project</h2>
+      <p class="bcm-bath-intro">Bathroom renovations are most cost-effective when bundled with a larger project - shared mobilization, coordinated trades, one permit process, one team managing everything. Here's how bathroom work typically fits into the projects we deliver.</p>
+    </div>
+
+    <div class="bcm-bath-bundle-banner">
+      <div class="bcm-bath-bundle-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </div>
+      <div class="bcm-bath-bundle-content">
+        <strong>Planning a bigger project?</strong> Most of our bathroom work is completed as part of <a href="https://bradfordcm.com/home-renovations/">whole-home renovations</a>, <a href="https://bradfordcm.com/custom-homes/">custom home builds</a>, or <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADU construction</a>. Bundling saves on mobilization costs and keeps one accountable team managing your entire project. Also remodeling your kitchen? See our <a href="https://bradfordcm.com/kitchen-remodels/">kitchen remodel services</a> - the two trades work well together.
+      </div>
+    </div>
+
+    <div class="bcm-bath-services-grid">
+      <div class="bcm-bath-service-card">
+        <h3>Bathroom in Whole-Home Renovation</h3>
+        <ul>
+          <li>Coordinated with kitchen and living spaces</li>
+          <li>Shared permit and inspection process</li>
+          <li>One team, one timeline, one point of contact</li>
+          <li>Efficient use of trades already on site</li>
+        </ul>
+        <div class="bcm-bath-price-range">Bathroom portion: $25,000–$60,000*</div>
+      </div>
+
+      <div class="bcm-bath-service-card">
+        <h3>Master Suite Addition</h3>
+        <ul>
+          <li>Spa-like bathroom with walk-in shower</li>
+          <li>Double vanity and custom tile work</li>
+          <li>Connected to new bedroom space</li>
+          <li>Works well with <a href="https://bradfordcm.com/home-additions/">home additions</a></li>
+        </ul>
+        <div class="bcm-bath-price-range">Suite bathroom: $35,000–$60,000+*</div>
+      </div>
+
+      <div class="bcm-bath-service-card">
+        <h3>ADU Bathroom Design</h3>
+        <ul>
+          <li>Space-efficient layouts for compact units</li>
+          <li>Accessibility features for aging parents</li>
+          <li>Code-compliant for independent living</li>
+          <li>Part of our <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">turnkey ADU service</a></li>
+        </ul>
+        <div class="bcm-bath-price-range">Included in ADU package*</div>
+      </div>
+
+      <div class="bcm-bath-service-card">
+        <h3>Accessibility &amp; Aging-in-Place</h3>
+        <ul>
+          <li>Zero-threshold showers</li>
+          <li>Grab bars and non-slip flooring</li>
+          <li>ADA-compliant fixtures</li>
+          <li>Ideal with <a href="https://bradfordcm.com/design-build/">design-build</a> approach</li>
+        </ul>
+        <div class="bcm-bath-price-range">Custom pricing based on scope*</div>
+      </div>
+    </div>
+
+    <div class="bcm-bath-disclaimer">
+      <p>*Bathroom costs vary based on scope, finishes, and structural changes. When bathroom work is part of a larger renovation or addition, you benefit from shared mobilization, coordinated scheduling, and a single team managing everything. <strong>All Bradford Construction projects include detailed, transparent proposals</strong> with documented change order processes. Schedule a consultation to discuss how bathroom updates fit into your overall project goals.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="https://bradfordcm.com/contact/" class="bcm-bath-cta bcm-bath-cta--primary">Discuss Your Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Process -->
+<section class="bcm-bath-section">
+  <div class="bcm-bath-container">
+
+    <div class="bcm-bath-visual-break">
+      <div class="bcm-bath-visual-item">
+        <img src="https://bradfordcm.com/wp-content/uploads/2026/01/Split-screen-before-and-after_Pink-Tile_Modern-FInish.jpg" alt="" loading="lazy">
+      </div>
+      <div class="bcm-bath-visual-item">
+        <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-24-1.webp" alt="" loading="lazy">
+      </div>
+    </div>
+
+    <div class="bcm-bath-section__header">
+      <span class="bcm-bath-gold-rule"></span>
+      <h2 class="bcm-bath-h2">Our 6-Step Bathroom Renovation Process</h2>
+      <p class="bcm-bath-intro">At Bradford Construction, you'll know what's happening every single day of your bathroom remodel. Our systematic approach eliminates the communication breakdowns and uncertainty that plague typical residential construction projects.</p>
+    </div>
+
+    <div class="bcm-bath-process-grid">
+      <div class="bcm-bath-process-card">
+        <div class="bcm-bath-process-number">1</div>
+        <div class="bcm-bath-process-content">
+          <h3>Free Consultation &amp; Design Planning</h3>
+          <p>In-home assessment of your existing bathroom. Discussion of your needs, style preferences, and budget. Review of layout options and possibilities. Timeline expectations and project overview. No-obligation proposal.</p>
+        </div>
+      </div>
+
+      <div class="bcm-bath-process-card">
+        <div class="bcm-bath-process-number">2</div>
+        <div class="bcm-bath-process-content">
+          <h3>Custom Design &amp; Material Selection</h3>
+          <p>Detailed design plans tailored to your space. 3D renderings available for complex projects. Fixture and finish selection guidance. Comprehensive scope of work documentation. Transparent, itemized proposal with full cost breakdown.</p>
+        </div>
+      </div>
+
+      <div class="bcm-bath-process-card">
+        <div class="bcm-bath-process-number">3</div>
+        <div class="bcm-bath-process-content">
+          <h3>Permitting &amp; Pre-Construction</h3>
+          <p>We handle all Massachusetts permit applications. Coordinate required inspections. Schedule material delivery and storage. Protect existing spaces during construction. Clear timeline and milestone schedule.</p>
+        </div>
+      </div>
+
+      <div class="bcm-bath-process-card">
+        <div class="bcm-bath-process-number">4</div>
+        <div class="bcm-bath-process-content">
+          <h3>Construction &amp; Daily Documentation</h3>
+          <p><strong>What makes us different:</strong> You receive timestamped photos of your project every single day. No wondering what's happening, no waiting for callbacks, no anxiety about progress. Professional project management means coordinated trades, clean job site protocols, and accountable leadership throughout construction.</p>
+        </div>
+      </div>
+
+      <div class="bcm-bath-process-card">
+        <div class="bcm-bath-process-number">5</div>
+        <div class="bcm-bath-process-content">
+          <h3>Final Details &amp; Quality Check</h3>
+          <p>Thorough punch list completion. Final inspection walkthrough with you. Function testing of all fixtures and features. Detailed care and maintenance instructions. Final cleaning and site restoration.</p>
+        </div>
+      </div>
+
+      <div class="bcm-bath-process-card">
+        <div class="bcm-bath-process-number">6</div>
+        <div class="bcm-bath-process-content">
+          <h3>Post-Project Support Through Bradford Home Services</h3>
+          <p>6-month follow-up guarantee. Lifetime maintenance and support available. Someone to call when you need help. <em>"We never leave - that's the Bradford difference."</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 48px;">
+      <a href="https://bradfordcm.com/contact/" class="bcm-bath-cta bcm-bath-cta--primary">Start Your Bathroom Remodel</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Why Choose BCM -->
+<section class="bcm-bath-section bcm-bath-section--alt">
+  <div class="bcm-bath-container">
+    <div class="bcm-bath-section__header">
+      <span class="bcm-bath-gold-rule"></span>
+      <h2 class="bcm-bath-h2">Why Homeowners Choose Bradford Construction for Bathroom Remodeling</h2>
+      <p class="bcm-bath-intro">Choosing a contractor is about more than price - it's about trust, reliability, and knowing someone will be there if you need them. Here's what sets Bradford Construction apart.</p>
+    </div>
+
+    <div class="bcm-bath-value-grid">
+      <div class="bcm-bath-value-card">
+        <div class="bcm-bath-value-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        </div>
+        <h3>Daily Photo Updates</h3>
+        <p>You receive timestamped photos of your project every single day. See exactly what's happening, track progress in real time, and have peace of mind throughout your bathroom remodel.</p>
+      </div>
+
+      <div class="bcm-bath-value-card">
+        <div class="bcm-bath-value-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <h3>Transparent Pricing</h3>
+        <p>No surprise costs, no hidden fees. Our detailed proposals break down every aspect of your project, and our documented change order process means you approve every cost adjustment in writing before work begins.</p>
+      </div>
+
+      <div class="bcm-bath-value-card">
+        <div class="bcm-bath-value-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        </div>
+        <h3>Commercial-Grade Project Management</h3>
+        <p>We bring the systematic approach from commercial construction to your bathroom renovation. Clear schedules, coordinated trades, professional communication, and accountable leadership from start to finish.</p>
+      </div>
+
+      <div class="bcm-bath-value-card">
+        <div class="bcm-bath-value-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+        </div>
+        <h3>Licensed &amp; Insured</h3>
+        <p class="bcm-bath-license-badge">Massachusetts HIC #201908 | Fully bonded and insured | Professional liability coverage | Worker's compensation for all team members</p>
+      </div>
+
+      <div class="bcm-bath-value-card">
+        <div class="bcm-bath-value-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </div>
+        <h3>Lifetime Support Through Bradford Home Services</h3>
+        <p>The only contractor who never leaves. After your bathroom is complete, you have ongoing access to professional maintenance and support through our sister company - for the life of your home.</p>
+      </div>
+
+      <div class="bcm-bath-value-card">
+        <div class="bcm-bath-value-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <h3>Local North Shore Expertise</h3>
+        <p>Based in Haverhill and serving the entire North Shore and Merrimack Valley. We know local building codes, permit requirements, and the unique characteristics of homes throughout our region.</p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="https://bradfordcm.com/about-us/" class="bcm-bath-cta bcm-bath-cta--secondary">Learn More About Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Cost Transparency -->
+<section class="bcm-bath-section">
+  <div class="bcm-bath-container">
+    <div class="bcm-bath-section__header">
+      <span class="bcm-bath-gold-rule"></span>
+      <h2 class="bcm-bath-h2">Bathroom Remodel Cost in Haverhill MA - What to Expect</h2>
+    </div>
+
+    <div class="bcm-bath-cost-content">
+      <div class="bcm-bath-cost-text">
+        <p>At Bradford Construction, we believe in transparent pricing from day one. Too many homeowners have been burned by contractors who lowball estimates and then pile on surprise costs during construction. That's not how we work.</p>
+
+        <p>Every project starts with a detailed, itemized proposal that breaks down materials, labor, permits, and project management. You'll know exactly what you're investing before any work begins. If you want to upgrade fixtures or add features during construction, our documented change order process ensures you approve every cost adjustment in writing.</p>
+
+        <div class="bcm-bath-cost-factors">
+          <h3>What Affects Your Bathroom Remodel Cost:</h3>
+          <ul>
+            <li>Size and layout of existing bathroom</li>
+            <li>Structural changes (moving plumbing lines, electrical work)</li>
+            <li>Material selections (tile quality, fixture brands, custom vs. stock vanity)</li>
+            <li>Special features (heated floors, steam shower, custom tile work)</li>
+            <li>Massachusetts permit fees (typically $150–$400 for bathroom projects)</li>
+            <li>Age of home and condition of existing systems</li>
+          </ul>
+        </div>
+
+        <div class="bcm-bath-financing-note">
+          <p>Need help with financing? Bradford Construction partners with reputable lenders to offer flexible payment options for qualified homeowners. <a href="https://bradfordcm.com/finance-your-dreams/">Learn more about financing your project</a>.</p>
+        </div>
+      </div>
+
+      <div class="bcm-bath-cost-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Project Type</th>
+              <th>Typical Investment</th>
+              <th>What's Included</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Partial Update</td>
+              <td>$8,000–$15,000</td>
+              <td>New fixtures, paint, flooring, lighting updates</td>
+            </tr>
+            <tr>
+              <td>Full Bathroom Remodel</td>
+              <td>$25,000–$45,000</td>
+              <td>Complete renovation with standard fixtures and finishes</td>
+            </tr>
+            <tr>
+              <td>Master Bathroom Suite</td>
+              <td>$35,000–$60,000</td>
+              <td>Premium finishes, layout modifications, luxury features</td>
+            </tr>
+            <tr>
+              <td>Luxury Custom</td>
+              <td>$60,000+</td>
+              <td>High-end materials, complex design, custom elements</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="https://bradfordcm.com/contact/" class="bcm-bath-cta bcm-bath-cta--primary">Get Your Detailed Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Gallery -->
+<section class="bcm-bath-section bcm-bath-section--alt">
+  <div class="bcm-bath-container">
+    <div class="bcm-bath-section__header">
+      <span class="bcm-bath-gold-rule"></span>
+      <h2 class="bcm-bath-h2">Bathroom Remodeling Gallery - Haverhill &amp; North Shore</h2>
+      <p class="bcm-bath-intro">See the quality and craftsmanship Bradford Construction brings to every bathroom renovation. These recent completions showcase our work across Haverhill, Newburyport, Exeter, and throughout the North Shore region.</p>
+    </div>
+
+    <div class="bcm-bath-gallery-subsection">
+      <h3>Before &amp; After Transformations</h3>
+      <div class="bcm-bath-ba-grid">
+        <div class="bcm-bath-ba-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/01/Split-screen-before-and-after_Pink-Tile_Modern-FInish.jpg" alt="" loading="lazy">
+        </div>
+        <div class="bcm-bath-ba-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/01/Split-Screen-Before-and-After.jpg" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="bcm-bath-gallery-subsection">
+      <h3>Completed Bathroom Remodeling Projects</h3>
+      <div class="bcm-bath-gallery-grid">
+        <div class="bcm-bath-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-51-1.webp" alt="" loading="lazy">
+        </div>
+        <div class="bcm-bath-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-24-1.webp" alt="" loading="lazy">
+        </div>
+        <div class="bcm-bath-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-25-1.webp" alt="" loading="lazy">
+        </div>
+        <div class="bcm-bath-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-26-1.webp" alt="" loading="lazy">
+        </div>
+        <div class="bcm-bath-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/111-Old-Town-Farm-Rd-18.webp" alt="" loading="lazy">
+        </div>
+        <div class="bcm-bath-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/111-Old-Town-Farm-Rd-20.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <p class="bcm-bath-gallery-text">Each bathroom project is unique, but our commitment to quality stays consistent. See more of our completed work - additions, renovations, custom homes, and ADUs - in our <a href="https://bradfordcm.com/projects/">full project portfolio</a>.</p>
+
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="https://bradfordcm.com/contact/" class="bcm-bath-cta bcm-bath-cta--primary">Discuss Your Bathroom Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Testimonials -->
+<section class="bcm-bath-section">
+  <div class="bcm-bath-container">
+    <div class="bcm-bath-section__header">
+      <span class="bcm-bath-gold-rule"></span>
+      <h2 class="bcm-bath-h2">What Our Clients Say About Bradford Construction</h2>
+      <p class="bcm-bath-intro">Don't just take our word for it - hear from homeowners across the North Shore who've experienced the Bradford Construction difference.</p>
+    </div>
+
+    <div class="bcm-bath-testimonials-grid">
+      <div class="bcm-bath-testimonial-card">
+        <div class="bcm-bath-testimonial-stars">★★★★★</div>
+        <blockquote>"Rick and his team did a great job on our home. Communication was solid throughout, we always knew what was happening and when. They showed up when they said they would and communicated everything we expected, and the quality of work is excellent. Would definitely recommend if you're looking for a reliable contractor in the North Shore area."</blockquote>
+        <div class="bcm-bath-testimonial-author">- Jon A.</div>
+      </div>
+
+      <div class="bcm-bath-testimonial-card">
+        <div class="bcm-bath-testimonial-stars">★★★★★</div>
+        <blockquote>"Excellent customer service and quality work throughout project. Highly recommend!"</blockquote>
+        <div class="bcm-bath-testimonial-author">- Michel J.</div>
+      </div>
+
+      <div class="bcm-bath-testimonial-card">
+        <div class="bcm-bath-testimonial-stars">★★★★★</div>
+        <blockquote>"Bradford Construction was phenomenal on our multi-stage, 10-month complete rebuild. Rick and the whole crew surpassed any expectations we had going into the project. Rick was there every step of the way, texting, emailing, calling, and talking us through our options. The final result was jaw-dropping."</blockquote>
+        <div class="bcm-bath-testimonial-author">- Luke R.</div>
+      </div>
+    </div>
+
+    <div class="bcm-bath-testimonial-cta">
+      <a href="https://www.google.com/search?q=Bradford+Construction+Management+LLC+Reviews" class="bcm-bath-cta bcm-bath-cta--secondary" target="_blank" rel="noopener">Read More Reviews</a>
+      <a href="https://bradfordcm.com/contact/" class="bcm-bath-cta bcm-bath-cta--primary">Start Your Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8: FAQ -->
+<section class="bcm-bath-section bcm-bath-section--alt">
+  <div class="bcm-bath-container">
+    <div class="bcm-bath-section__header">
+      <span class="bcm-bath-gold-rule"></span>
+      <h2 class="bcm-bath-h2">Bathroom Remodeling FAQ - Your Questions Answered</h2>
+      <p class="bcm-bath-intro">Planning a bathroom remodel? Here are answers to the questions we hear most often from homeowners in Haverhill, Newburyport, and throughout the North Shore.</p>
+    </div>
+
+    <div class="bcm-bath-faq-list">
+      <div class="bcm-bath-faq-item">
+        <button class="bcm-bath-faq-question" aria-expanded="false">
+          <span>How much does a bathroom remodel cost in Haverhill MA?</span>
+          <span class="bcm-bath-faq-icon">+</span>
+        </button>
+        <div class="bcm-bath-faq-answer">
+          <div class="bcm-bath-faq-answer-inner">
+            Bathroom remodeling costs in Haverhill and the North Shore typically range from $15,000 for a small renovation to $60,000+ for a luxury master suite. The investment depends on the size of your bathroom, material selections, structural changes, and special features. Bradford Construction provides detailed, itemized proposals so you know exactly what to expect before any work begins. Contact us for a free estimate specific to your project.
+          </div>
+        </div>
+      </div>
+
+      <div class="bcm-bath-faq-item">
+        <button class="bcm-bath-faq-question" aria-expanded="false">
+          <span>How long does a bathroom renovation take?</span>
+          <span class="bcm-bath-faq-icon">+</span>
+        </button>
+        <div class="bcm-bath-faq-answer">
+          <div class="bcm-bath-faq-answer-inner">
+            Most bathroom remodels take 4–6 weeks from demolition to completion. Small powder room updates might be completed in 2–3 weeks, while complex master suite renovations can take 8–10 weeks. The timeline depends on scope, material availability, and permit processing. Bradford Construction provides a detailed schedule at the start of your project, and our daily photo documentation keeps you informed throughout.
+          </div>
+        </div>
+      </div>
+
+      <div class="bcm-bath-faq-item">
+        <button class="bcm-bath-faq-question" aria-expanded="false">
+          <span>Do I need permits for bathroom remodeling in Haverhill?</span>
+          <span class="bcm-bath-faq-icon">+</span>
+        </button>
+        <div class="bcm-bath-faq-answer">
+          <div class="bcm-bath-faq-answer-inner">
+            Yes, bathroom remodels in Haverhill and most North Shore communities require building permits when work involves plumbing, electrical, or structural changes. Bradford Construction handles all permit applications and coordinates required inspections as part of our residential construction services. Permit fees in Massachusetts typically range from $150–$400 for bathroom projects.
+          </div>
+        </div>
+      </div>
+
+      <div class="bcm-bath-faq-item">
+        <button class="bcm-bath-faq-question" aria-expanded="false">
+          <span>What happens after my bathroom is complete?</span>
+          <span class="bcm-bath-faq-icon">+</span>
+        </button>
+        <div class="bcm-bath-faq-answer">
+          <div class="bcm-bath-faq-answer-inner">
+            This is where Bradford Construction is truly different. After your final walkthrough, we schedule a 6-month follow-up to ensure everything is performing perfectly. Beyond that, you have lifetime access to professional maintenance and support through Bradford Home Services. Need a fixture adjusted? Notice a minor issue? You have someone to call. We never leave - that's the Bradford difference.
+          </div>
+        </div>
+      </div>
+
+      <div class="bcm-bath-faq-item">
+        <button class="bcm-bath-faq-question" aria-expanded="false">
+          <span>What makes Bradford Construction different from other bathroom contractors?</span>
+          <span class="bcm-bath-faq-icon">+</span>
+        </button>
+        <div class="bcm-bath-faq-answer">
+          <div class="bcm-bath-faq-answer-inner">
+            Three things set Bradford Construction apart: (1) Our daily photo documentation keeps you informed throughout the project. (2) Our transparent, itemized proposals mean no surprise costs or hidden fees. (3) Our partnership with Bradford Home Services provides lifetime support after your bathroom is complete - we're the only contractor who never leaves. Add in commercial-grade project management and local North Shore expertise, and you have a remodeling partner who delivers both quality and peace of mind.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 9: Service Area -->
+<section class="bcm-bath-section">
+  <div class="bcm-bath-container">
+    <div class="bcm-bath-section__header">
+      <span class="bcm-bath-gold-rule"></span>
+      <h2 class="bcm-bath-h2">Bathroom Remodeling Contractor Serving Haverhill MA &amp; Merrimack Valley</h2>
+    </div>
+
+    <div class="bcm-bath-area-content">
+      <div class="bcm-bath-area-text">
+        <p>Bradford Construction provides professional bathroom remodeling services throughout the North Shore and Merrimack Valley region of Massachusetts and Southern New Hampshire. Based in Haverhill, MA, we serve homeowners across our entire service area.</p>
+
+        <p>As a local residential construction company, we're deeply familiar with North Shore and Merrimack Valley building codes, permit requirements, and the unique characteristics of homes in our region - from historic properties requiring specialized care to newer constructions.</p>
+
+        <p>Our proximity means faster response times for initial consultations, efficient project coordination, and quick follow-up support through Bradford Home Services. We're not just your bathroom remodeling contractor during construction - we're your long-term partner for the life of your home.</p>
+
+        <p>Ready to talk through your project? We'd love to <a href="https://bradfordcm.com/contact/">discuss your bathroom remodeling plans</a>. Or explore our work in your area - we've completed projects in <a href="https://bradfordcm.com/haverhill-ma/">Haverhill</a>, <a href="https://bradfordcm.com/newburyport-mass/">Newburyport</a>, <a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a>, and throughout the North Shore.</p>
+
+        <div class="bcm-bath-area-lists">
+          <div class="bcm-bath-area-list">
+            <h3>Primary Service Areas</h3>
+            <ul>
+              <li><a href="https://bradfordcm.com/haverhill-ma/">Haverhill, MA</a></li>
+              <li><a href="https://bradfordcm.com/newburyport-mass/">Newburyport, MA</a></li>
+              <li><a href="https://bradfordcm.com/wakefield-ma/">Wakefield, MA</a></li>
+              <li><a href="https://bradfordcm.com/south-hamilton-ma/">South Hamilton, MA</a></li>
+              <li><a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a></li>
+              <li>Andover, MA</li>
+              <li>North Andover, MA</li>
+              <li>Beverly, MA</li>
+              <li>Amesbury, MA</li>
+            </ul>
+          </div>
+
+          <div class="bcm-bath-area-list">
+            <h3>Extended Service Area</h3>
+            <ul>
+              <li>Groveland</li>
+              <li>Merrimac</li>
+              <li>Georgetown</li>
+              <li>Boxford</li>
+              <li>West Newbury</li>
+              <li>Ipswich</li>
+              <li>Newbury</li>
+              <li>Southern NH communities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bcm-bath-area-sidebar">
+        <h3>Ready to Get Started?</h3>
+        <p>Schedule a free consultation to discuss your bathroom remodeling project with our team.</p>
+        <a href="https://bradfordcm.com/contact/" class="bcm-bath-cta bcm-bath-cta--primary" style="width: 100%;">Schedule Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 10: Final CTA -->
+<section class="bcm-bath-final-cta">
+  <div class="bcm-bath-container">
+    <div class="bcm-bath-section__header">
+      <h2 class="bcm-bath-h2">Ready to Transform Your Bathroom?</h2>
+      <p class="bcm-bath-intro">Free consultation, detailed estimate, no pressure. We respond within 24 hours.</p>
+    </div>
+
+    <div class="bcm-bath-cta-centered">
+      <div class="bcm-bath-cta-box">
+        <h3>Schedule Your Free Consultation</h3>
+        <a href="https://bradfordcm.com/contact/" class="bcm-bath-cta bcm-bath-cta--primary" style="width: 100%; margin-bottom: 16px;">Schedule Free Consultation</a>
+        <p style="text-align: center; color: var(--bcm-medium-gray); font-size: 0.88rem; margin-bottom: 0;">In-home or virtual options available. We respond within 24 hours.</p>
+      </div>
+    </div>
+
+    <div class="bcm-bath-trust-box">
+      <div class="bcm-bath-trust-grid">
+        <div class="bcm-bath-trust-item"><span class="bcm-bath-trust-check">✓</span><span>Licensed MA HIC #201908</span></div>
+        <div class="bcm-bath-trust-item"><span class="bcm-bath-trust-check">✓</span><span>Fully Bonded &amp; Insured</span></div>
+        <div class="bcm-bath-trust-item"><span class="bcm-bath-trust-check">✓</span><span>Free Estimates &amp; Consultations</span></div>
+        <div class="bcm-bath-trust-item"><span class="bcm-bath-trust-check">✓</span><span>Transparent Pricing</span></div>
+        <div class="bcm-bath-trust-item"><span class="bcm-bath-trust-check">✓</span><span>Daily Photo Documentation</span></div>
+        <div class="bcm-bath-trust-item"><span class="bcm-bath-trust-check">✓</span><span>Lifetime Support via BHS</span></div>
+        <div class="bcm-bath-trust-item"><span class="bcm-bath-trust-check">✓</span><span>Serving North Shore &amp; Merrimack Valley</span></div>
+        <div class="bcm-bath-trust-item"><span class="bcm-bath-trust-check">✓</span><span>Financing Available</span></div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 24px; position: relative;">
+      <p style="color: rgba(255,255,255,0.7); font-size: 0.93rem;">Need financing? <a href="https://bradfordcm.com/finance-your-dreams/" style="color: var(--bcm-gold); text-decoration: underline;">Learn about our project financing options</a> to make your bathroom remodel more affordable with flexible payment plans for qualified homeowners.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var faqItems = document.querySelectorAll('.bcm-bath-faq-item');
+  faqItems.forEach(function(item) {
+    var question = item.querySelector('.bcm-bath-faq-question');
+    question.addEventListener('click', function() {
+      var isActive = item.classList.contains('active');
+      faqItems.forEach(function(other) {
+        other.classList.remove('active');
+        other.querySelector('.bcm-bath-faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isActive) {
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+});
+</script>
