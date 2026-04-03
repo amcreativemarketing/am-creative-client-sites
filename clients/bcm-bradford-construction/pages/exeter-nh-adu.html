@@ -1,94 +1,90 @@
 <!--
   BRADFORD CONSTRUCTION MANAGEMENT - EXETER, NH ADU LOCATION PAGE
   URL: /adu-builder-exeter-nh/
-  Updated: 2026-04-01 - 2026 Design System (v2.1)
-  Fonts: Plus Jakarta Sans (headings), Inter (body)
-  Primary Keyword: ADU builder Exeter NH
+  2026 Brand Update Applied
 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-
+/* === BCM Exeter ADU - 2026 Brand === */
 :root {
-  --bcm-black: #1A1A1A;
+  --bcm-navy: #0F2A45;
+  --bcm-navy-deep: #0A1E30;
   --bcm-gold: #C8A24D;
-  --bcm-charcoal: #1C2331;
+  --bcm-gold-hover: #D9B96A;
+  --bcm-gold-soft: rgba(200, 162, 77, 0.10);
+  --bcm-dark-slate: #1C2331;
+  --bcm-medium-gray: #6B7280;
+  --bcm-light-gray: #F1F1F1;
+  --bcm-off-white: #FAF9F7;
   --bcm-white: #FAF9F7;
-  --bcm-maritime: #0F2A45;
-  --bcm-sage: #7A9B7E;
-  --bcm-gray: #F1F1F1;
-  --bcm-gold-hover: #B8923F;
-  --bcm-gold-light: #D4B46A;
-  --bcm-gold-soft: rgba(200, 162, 77, 0.07);
-  --bcm-gold-border: rgba(200, 162, 77, 0.18);
-  --bcm-gold-glow: rgba(200, 162, 77, 0.12);
-  --bcm-text-primary: #1C2331;
-  --bcm-text-secondary: #3A4255;
-  --bcm-text-tertiary: #5C6478;
-  --bcm-text-light: rgba(250, 249, 247, 0.88);
-  --bcm-text-muted: rgba(250, 249, 247, 0.62);
-  --bcm-surface: #F7F7F5;
-  --bcm-surface-raised: #FFFFFF;
-  --bcm-border: #E5E5E2;
-  --bcm-border-subtle: rgba(28, 35, 49, 0.06);
-  --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
-  --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
-  --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
-  --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
-  --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
-  --bcm-radius: 6px;
-  --bcm-radius-md: 10px;
+  --bcm-shadow-sm: 0 1px 3px rgba(28, 35, 49, 0.06), 0 1px 2px rgba(28, 35, 49, 0.03);
+  --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07), 0 2px 6px rgba(28, 35, 49, 0.04);
+  --bcm-shadow-lg: 0 12px 36px rgba(28, 35, 49, 0.09), 0 4px 12px rgba(28, 35, 49, 0.04);
+  --bcm-shadow-gold: 0 4px 16px rgba(200, 162, 77, 0.3);
+  --bcm-radius: 10px;
   --bcm-radius-lg: 14px;
-  --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
-  --bcm-font-body: 'Inter', -apple-system, sans-serif;
-  --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.bcm-exeter { box-sizing: border-box; }
 .bcm-exeter * { box-sizing: border-box; }
 
 .bcm-exeter {
-  font-family: var(--bcm-font-body);
-  color: var(--bcm-text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--bcm-dark-slate);
   line-height: 1.6;
   font-size: 16px;
   width: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.bcm-exeter h1, .bcm-exeter h2, .bcm-exeter h3 {
-  font-family: var(--bcm-font-display);
-  line-height: 1.2;
-  margin: 0;
+/* === TYPOGRAPHY === */
+.bcm-exeter h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  color: var(--bcm-white);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.01em;
 }
 
 .bcm-exeter h2 {
-  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
   font-size: 1.85rem;
-  color: var(--bcm-text-primary);
-  margin-bottom: 16px;
+  line-height: 1.2;
+  color: var(--bcm-dark-slate);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.01em;
 }
 
 .bcm-exeter h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--bcm-text-primary);
-  margin-bottom: 8px;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: var(--bcm-dark-slate);
+  margin: 0 0 10px 0;
 }
 
 .bcm-exeter p {
   margin: 0 0 16px 0;
-  color: var(--bcm-text-primary);
+  color: var(--bcm-dark-slate);
 }
 
 .bcm-exeter a {
-  color: var(--bcm-black);
+  color: var(--bcm-navy);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
-  transition: color 0.2s var(--bcm-ease);
+  transition: color 0.2s ease;
+  font-weight: 600;
 }
 
 .bcm-exeter a:hover:not(.bcm-exeter-cta) {
@@ -101,13 +97,14 @@
   display: block;
 }
 
+/* === LAYOUT === */
 .bcm-exeter-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* HERO */
+/* === HERO === */
 .bcm-exeter-hero {
   position: relative;
   min-height: 520px;
@@ -131,7 +128,7 @@
 .bcm-exeter-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(170deg, rgba(26, 26, 26, 0.85) 0%, rgba(28, 35, 49, 0.75) 50%, rgba(15, 42, 69, 0.78) 100%);
+  background: linear-gradient(170deg, rgba(10, 30, 48, 0.88) 0%, rgba(15, 42, 69, 0.72) 50%, rgba(28, 35, 49, 0.65) 100%);
   z-index: 1;
 }
 
@@ -148,115 +145,238 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(200, 162, 77, 0.12);
-  border: 1px solid rgba(200, 162, 77, 0.25);
-  border-radius: 20px;
+  background: rgba(250, 249, 247, 0.12);
+  border: 1px solid rgba(250, 249, 247, 0.2);
+  border-radius: 9999px;
   padding: 8px 18px;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--bcm-gold);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 20px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
 }
 
-.bcm-exeter-hero__badge svg {
-  width: 14px;
-  height: 14px;
-  stroke: currentColor;
-}
-
-.bcm-exeter-hero h1 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: var(--bcm-white);
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-}
-
-.bcm-exeter-hero p {
-  font-size: 1.1rem;
+.bcm-exeter-hero__content p {
   color: rgba(250, 249, 247, 0.9);
+  font-size: 1.15rem;
+  margin-bottom: 36px;
   line-height: 1.7;
-  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bcm-exeter-hero__ctas {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 14px;
   justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .bcm-exeter-hero__ctas {
-    flex-direction: row;
-  }
+/* === BUTTONS === */
+.bcm-exeter-cta {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 15px 32px;
+  border-radius: 9999px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  min-height: 50px;
+  letter-spacing: 0.01em;
 }
 
-/* TRUST BAR */
+.bcm-exeter-cta:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.bcm-exeter a.bcm-exeter-cta--primary {
+  background: var(--bcm-gold);
+  color: var(--bcm-dark-slate);
+  box-shadow: var(--bcm-shadow-gold);
+}
+
+.bcm-exeter a.bcm-exeter-cta--primary:hover {
+  background: var(--bcm-gold-hover);
+  color: var(--bcm-dark-slate);
+  box-shadow: 0 6px 24px rgba(200, 162, 77, 0.4);
+}
+
+.bcm-exeter a.bcm-exeter-cta--outline {
+  background: rgba(250, 249, 247, 0.12);
+  color: var(--bcm-white);
+  border: 1.5px solid rgba(250, 249, 247, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+.bcm-exeter a.bcm-exeter-cta--outline:hover {
+  background: rgba(250, 249, 247, 0.2);
+  border-color: var(--bcm-gold);
+  color: var(--bcm-gold);
+}
+
+.bcm-exeter a.bcm-exeter-cta--navy {
+  background: var(--bcm-navy);
+  color: var(--bcm-white);
+  border: none;
+  box-shadow: 0 2px 10px rgba(15, 42, 69, 0.2);
+}
+
+.bcm-exeter a.bcm-exeter-cta--navy:hover {
+  background: var(--bcm-navy-deep);
+  color: var(--bcm-white);
+  box-shadow: 0 4px 16px rgba(15, 42, 69, 0.3);
+}
+
+.bcm-exeter a.bcm-exeter-cta--gold {
+  background: var(--bcm-gold);
+  color: var(--bcm-dark-slate);
+  box-shadow: var(--bcm-shadow-gold);
+}
+
+.bcm-exeter a.bcm-exeter-cta--gold:hover {
+  background: var(--bcm-gold-hover);
+  color: var(--bcm-dark-slate);
+  box-shadow: 0 6px 24px rgba(200, 162, 77, 0.4);
+}
+
+/* === TRUST BAR === */
 .bcm-exeter-trust {
-  background: var(--bcm-black);
-  padding: 24px 0;
+  background: var(--bcm-dark-slate);
+  padding: 0;
   position: relative;
-}
-
-.bcm-exeter-trust::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /></filter></defs><rect width="100" height="100" fill="black" filter="url(%23noise)" opacity="0.02"/></svg>');
-  pointer-events: none;
+  z-index: 3;
+  border-top: 2px solid var(--bcm-gold);
 }
 
 .bcm-exeter-trust__inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
-  position: relative;
-  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
 }
 
 .bcm-exeter-trust__item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: rgba(250, 249, 247, 0.7);
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1.4;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 24px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--bcm-white);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 180px;
+}
+
+.bcm-exeter-trust__item + .bcm-exeter-trust__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 25%;
+  bottom: 25%;
+  width: 1px;
+  background: rgba(250, 249, 247, 0.12);
 }
 
 .bcm-exeter-trust__item svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
   stroke: var(--bcm-gold);
-  stroke-width: 1.5;
 }
 
-/* INTRO */
+.bcm-exeter-trust__accent {
+  display: none;
+}
+
+/* === SECTIONS === */
+.bcm-exeter-section {
+  padding: 72px 0;
+  position: relative;
+}
+
+.bcm-exeter-section--alt {
+  background: var(--bcm-light-gray);
+}
+
+.bcm-exeter-section--navy {
+  background: linear-gradient(170deg, var(--bcm-navy) 0%, var(--bcm-navy-deep) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bcm-exeter-section--navy::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(200, 162, 77, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.bcm-exeter-section--navy h2,
+.bcm-exeter-section--navy p,
+.bcm-exeter-section--navy li {
+  color: var(--bcm-white);
+}
+
+.bcm-exeter-section--navy a {
+  color: var(--bcm-gold);
+}
+
+.bcm-exeter-section__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 44px auto;
+}
+
+.bcm-exeter-section__header p {
+  color: var(--bcm-medium-gray);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.bcm-exeter-section__header h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--bcm-gold);
+  margin: 16px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* === INTRO === */
 .bcm-exeter-intro {
   padding: 72px 0 60px 0;
-  background: var(--bcm-white);
 }
 
 .bcm-exeter-intro__header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 .bcm-exeter-intro__header h2::after {
   content: '';
   display: block;
-  width: 48px;
-  height: 3px;
+  width: 40px;
+  height: 2px;
   background: var(--bcm-gold);
-  margin: 16px auto 0;
+  margin: 16px auto 0 auto;
   border-radius: 2px;
 }
 
@@ -265,102 +385,31 @@
   margin: 0 auto;
 }
 
-.bcm-exeter-intro__body p:first-child {
-  font-size: 1.05rem;
-  color: var(--bcm-text-primary);
-  font-weight: 500;
-}
-
 .bcm-exeter-intro__body p {
-  font-size: 1rem;
+  font-size: 1.02rem;
   line-height: 1.75;
-  color: var(--bcm-text-tertiary);
+  color: var(--bcm-medium-gray);
 }
 
-/* SECTION */
-.bcm-exeter-section {
-  padding: 96px 0;
-  background: var(--bcm-white);
+.bcm-exeter-intro__body p:first-child {
+  font-size: 1.08rem;
+  color: var(--bcm-dark-slate);
 }
 
-.bcm-exeter-section--alt {
-  background: var(--bcm-surface);
-}
-
-.bcm-exeter-section--navy {
-  background: linear-gradient(170deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
-  padding: 112px 0;
-  position: relative;
-}
-
-.bcm-exeter-section--navy::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(200, 162, 77, 0.08) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-.bcm-exeter-section__header {
-  text-align: center;
-  margin-bottom: 56px;
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bcm-exeter-section__header h2 {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 16px;
-}
-
-.bcm-exeter-section__header h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 48px;
-  height: 2px;
-  background: var(--bcm-gold);
-  border-radius: 1px;
-}
-
-.bcm-exeter-section--navy .bcm-exeter-section__header h2 {
-  color: var(--bcm-white);
-}
-
-.bcm-exeter-section__header p {
-  font-size: 1rem;
-  color: var(--bcm-text-tertiary);
-  line-height: 1.7;
-}
-
-.bcm-exeter-section--navy .bcm-exeter-section__header p {
-  color: var(--bcm-text-light);
-}
-
-/* GRID: Types */
+/* === ADU TYPE CARDS === */
 .bcm-exeter-types-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-@media (min-width: 1024px) {
-  .bcm-exeter-types-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  gap: 20px;
 }
 
 .bcm-exeter-type-card {
-  background: var(--bcm-white);
+  background: var(--bcm-off-white);
   border-radius: var(--bcm-radius-lg);
   overflow: hidden;
   box-shadow: var(--bcm-shadow-md);
-  border: 1px solid var(--bcm-border);
-  transition: box-shadow 0.3s var(--bcm-ease), transform 0.3s var(--bcm-ease);
+  border: 1px solid rgba(241, 241, 241, 0.8);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
 }
 
 .bcm-exeter-type-card:hover {
@@ -378,51 +427,54 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s var(--bcm-ease);
+  transition: transform 0.6s ease;
 }
 
 .bcm-exeter-type-card:hover .bcm-exeter-type-card__img img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .bcm-exeter-type-card__body {
-  padding: 28px;
+  padding: 24px 24px 28px 24px;
 }
 
 .bcm-exeter-type-card__body h3 {
-  font-size: 1.15rem;
-  margin-bottom: 10px;
+  color: var(--bcm-dark-slate);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
 }
 
 .bcm-exeter-type-card__body p {
-  font-size: 0.95rem;
-  color: var(--bcm-text-tertiary);
+  color: var(--bcm-medium-gray);
+  font-size: 0.93rem;
   margin: 0;
   line-height: 1.65;
 }
 
-/* GRID: Why Bradford */
+.bcm-exeter-types-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* === WHY BRADFORD === */
 .bcm-exeter-why-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-@media (min-width: 1024px) {
-  .bcm-exeter-why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  gap: 16px;
 }
 
 .bcm-exeter-why-card {
-  background: var(--bcm-white);
-  border-radius: var(--bcm-radius-md);
+  background: var(--bcm-off-white);
+  border-radius: var(--bcm-radius);
   padding: 28px;
   box-shadow: var(--bcm-shadow-sm);
-  border: 1px solid var(--bcm-border);
-  transition: box-shadow 0.2s var(--bcm-ease), transform 0.2s var(--bcm-ease);
+  border: 1px solid var(--bcm-light-gray);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   display: flex;
-  gap: 18px;
+  gap: 20px;
   align-items: flex-start;
 }
 
@@ -434,7 +486,7 @@
 .bcm-exeter-why-icon {
   width: 44px;
   height: 44px;
-  background: var(--bcm-black);
+  background: var(--bcm-dark-slate);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -446,39 +498,40 @@
   width: 20px;
   height: 20px;
   stroke: var(--bcm-gold);
-  stroke-width: 1.5;
 }
 
 .bcm-exeter-why-card__body h3 {
-  font-size: 1.05rem;
+  color: var(--bcm-dark-slate);
   margin-bottom: 6px;
+  font-size: 1.05rem;
 }
 
 .bcm-exeter-why-card__body p {
   margin: 0;
+  color: var(--bcm-medium-gray);
   font-size: 0.93rem;
-  color: var(--bcm-text-tertiary);
   line-height: 1.65;
 }
 
-/* PROCESS STEPS */
+/* === PROCESS STEPS === */
 .bcm-exeter-steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 1fr;
   gap: 20px;
   counter-reset: step-counter;
 }
 
 .bcm-exeter-step {
-  background: var(--bcm-white);
+  background: var(--bcm-off-white);
   border-radius: var(--bcm-radius-lg);
-  padding: 32px 24px;
+  padding: 32px 28px;
   text-align: center;
   box-shadow: var(--bcm-shadow-sm);
-  border: 1px solid var(--bcm-border);
+  border: 1px solid var(--bcm-light-gray);
+  border-top: 3px solid var(--bcm-gold);
   position: relative;
   counter-increment: step-counter;
-  transition: box-shadow 0.2s var(--bcm-ease), transform 0.2s var(--bcm-ease);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .bcm-exeter-step:hover {
@@ -488,69 +541,68 @@
 
 .bcm-exeter-step::before {
   content: counter(step-counter);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 48px;
   height: 48px;
-  background: var(--bcm-black);
+  background: var(--bcm-dark-slate);
   color: var(--bcm-gold);
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
   font-size: 1.2rem;
+  line-height: 48px;
   border-radius: 50%;
-  margin: 0 auto 16px;
-  box-shadow: var(--bcm-shadow-md);
+  margin: 0 auto 18px auto;
+  box-shadow: 0 3px 10px rgba(28, 35, 49, 0.2);
 }
 
 .bcm-exeter-step h3 {
   margin-bottom: 8px;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
 }
 
 .bcm-exeter-step p {
   margin: 0;
+  color: var(--bcm-medium-gray);
   font-size: 0.93rem;
-  color: var(--bcm-text-tertiary);
   line-height: 1.65;
 }
 
-/* COST TABLE */
+/* === COST TABLE === */
 .bcm-exeter-cost-table-wrap {
   border-radius: var(--bcm-radius-lg);
   overflow: hidden;
   box-shadow: var(--bcm-shadow-md);
-  border: 1px solid var(--bcm-border);
+  border: 1px solid var(--bcm-light-gray);
 }
 
 .bcm-exeter-cost-table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--bcm-white);
+  background: var(--bcm-off-white);
 }
 
 .bcm-exeter-cost-table thead th {
-  background: var(--bcm-black);
+  background: var(--bcm-dark-slate);
   color: var(--bcm-white);
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
   font-size: 0.9rem;
   padding: 16px 20px;
   text-align: left;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .bcm-exeter-cost-table tbody td {
   padding: 18px 20px;
-  border-bottom: 1px solid var(--bcm-border);
+  border-bottom: 1px solid var(--bcm-light-gray);
   font-size: 0.95rem;
-  color: var(--bcm-text-tertiary);
+  color: var(--bcm-medium-gray);
 }
 
 .bcm-exeter-cost-table tbody td:first-child {
   font-weight: 600;
-  color: var(--bcm-text-primary);
+  color: var(--bcm-dark-slate);
 }
 
 .bcm-exeter-cost-table tbody tr:last-child td {
@@ -558,7 +610,11 @@
 }
 
 .bcm-exeter-cost-table tbody tr:nth-child(even) {
-  background: var(--bcm-surface);
+  background: var(--bcm-light-gray);
+}
+
+.bcm-exeter-cost-table tbody tr {
+  transition: background 0.2s ease;
 }
 
 .bcm-exeter-cost-table tbody tr:hover {
@@ -566,12 +622,12 @@
 }
 
 .bcm-exeter-cost-table .bcm-exeter-price {
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
-  color: var(--bcm-black);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  color: var(--bcm-dark-slate);
 }
 
-/* ZONING ACCORDION */
+/* === ACCORDION === */
 .bcm-exeter-accordion {
   display: flex;
   flex-direction: column;
@@ -581,16 +637,16 @@
 }
 
 .bcm-exeter-accordion-item {
-  background: var(--bcm-white);
+  background: var(--bcm-off-white);
   border-radius: var(--bcm-radius);
   overflow: hidden;
-  border: 1px solid var(--bcm-border);
-  transition: box-shadow 0.2s var(--bcm-ease), border-color 0.2s var(--bcm-ease);
+  border: 1px solid var(--bcm-light-gray);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .bcm-exeter-accordion-item:has(.bcm-exeter-accordion-trigger[aria-expanded="true"]) {
   box-shadow: var(--bcm-shadow-md);
-  border-color: var(--bcm-gold-border);
+  border-color: rgba(15, 42, 69, 0.15);
 }
 
 .bcm-exeter-accordion-trigger {
@@ -599,19 +655,19 @@
   border: none;
   padding: 22px 60px 22px 24px;
   text-align: left;
-  font-family: var(--bcm-font-display);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: var(--bcm-text-primary);
+  color: var(--bcm-dark-slate);
   cursor: pointer;
   position: relative;
   min-height: 44px;
   line-height: 1.4;
-  transition: color 0.2s var(--bcm-ease);
+  transition: color 0.2s ease;
 }
 
 .bcm-exeter-accordion-trigger:hover {
-  color: var(--bcm-black);
+  color: var(--bcm-navy);
 }
 
 .bcm-exeter-accordion-trigger::after {
@@ -621,8 +677,8 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--bcm-black);
+  font-weight: 400;
+  color: var(--bcm-gold);
   width: 30px;
   height: 30px;
   display: flex;
@@ -630,29 +686,29 @@
   justify-content: center;
   border-radius: 50%;
   background: var(--bcm-gold-soft);
-  transition: background 0.2s var(--bcm-ease), color 0.2s var(--bcm-ease);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .bcm-exeter-accordion-trigger[aria-expanded="true"]::after {
   content: '\2212';
-  background: var(--bcm-black);
+  background: var(--bcm-dark-slate);
   color: var(--bcm-gold);
 }
 
 .bcm-exeter-accordion-panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s var(--bcm-ease);
+  transition: max-height 0.35s ease;
 }
 
 .bcm-exeter-accordion-panel__inner {
-  padding: 0 24px 24px;
-  color: var(--bcm-text-tertiary);
+  padding: 0 24px 24px 24px;
+  color: var(--bcm-medium-gray);
   line-height: 1.75;
   font-size: 0.95rem;
 }
 
-/* REVIEWS */
+/* === REVIEWS === */
 .bcm-exeter-reviews {
   display: flex;
   flex-direction: column;
@@ -660,29 +716,28 @@
 }
 
 .bcm-exeter-review {
-  background: var(--bcm-white);
+  background: var(--bcm-off-white);
   border-radius: var(--bcm-radius-lg);
+  padding: 0;
   box-shadow: var(--bcm-shadow-md);
-  border: 1px solid var(--bcm-border);
-  overflow: hidden;
+  border: 1px solid var(--bcm-light-gray);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .bcm-exeter-review__top {
-  background: linear-gradient(135deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
+  background: linear-gradient(135deg, var(--bcm-navy), var(--bcm-navy-deep));
   padding: 20px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
 }
 
 .bcm-exeter-review__stars {
   color: var(--bcm-gold);
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 2px;
-  flex-shrink: 0;
 }
 
 .bcm-exeter-review__author {
@@ -693,19 +748,20 @@
 
 .bcm-exeter-review__body {
   padding: 28px;
+  flex-grow: 1;
 }
 
 .bcm-exeter-review__text {
   font-size: 0.95rem;
   line-height: 1.75;
-  color: var(--bcm-text-primary);
+  color: var(--bcm-dark-slate);
   margin: 0;
   font-style: italic;
   padding-left: 20px;
   border-left: 3px solid var(--bcm-gold);
 }
 
-/* FAQ */
+/* === FAQ === */
 .bcm-exeter-faq-list {
   display: flex;
   flex-direction: column;
@@ -715,16 +771,16 @@
 }
 
 .bcm-exeter-faq-item {
-  background: var(--bcm-white);
+  background: var(--bcm-off-white);
   border-radius: var(--bcm-radius);
   overflow: hidden;
-  border: 1px solid var(--bcm-border);
-  transition: box-shadow 0.2s var(--bcm-ease), border-color 0.2s var(--bcm-ease);
+  border: 1px solid var(--bcm-light-gray);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .bcm-exeter-faq-item:has(.bcm-exeter-faq-question[aria-expanded="true"]) {
   box-shadow: var(--bcm-shadow-md);
-  border-color: var(--bcm-gold-border);
+  border-color: rgba(15, 42, 69, 0.15);
 }
 
 .bcm-exeter-faq-question {
@@ -733,19 +789,19 @@
   border: none;
   padding: 22px 60px 22px 24px;
   text-align: left;
-  font-family: var(--bcm-font-display);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: var(--bcm-text-primary);
+  color: var(--bcm-dark-slate);
   cursor: pointer;
   position: relative;
   min-height: 44px;
   line-height: 1.4;
-  transition: color 0.2s var(--bcm-ease);
+  transition: color 0.2s ease;
 }
 
 .bcm-exeter-faq-question:hover {
-  color: var(--bcm-black);
+  color: var(--bcm-navy);
 }
 
 .bcm-exeter-faq-question::after {
@@ -755,8 +811,8 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--bcm-black);
+  font-weight: 400;
+  color: var(--bcm-gold);
   width: 30px;
   height: 30px;
   display: flex;
@@ -764,165 +820,122 @@
   justify-content: center;
   border-radius: 50%;
   background: var(--bcm-gold-soft);
-  transition: background 0.2s var(--bcm-ease), color 0.2s var(--bcm-ease);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .bcm-exeter-faq-question[aria-expanded="true"]::after {
   content: '\2212';
-  background: var(--bcm-black);
+  background: var(--bcm-dark-slate);
   color: var(--bcm-gold);
 }
 
 .bcm-exeter-faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s var(--bcm-ease);
+  transition: max-height 0.35s ease;
 }
 
 .bcm-exeter-faq-answer__inner {
-  padding: 0 24px 24px;
-  color: var(--bcm-text-tertiary);
+  padding: 0 24px 24px 24px;
+  color: var(--bcm-medium-gray);
   line-height: 1.75;
   font-size: 0.95rem;
 }
 
-/* SERVICE AREA GRID */
+/* === SERVICE AREA === */
 .bcm-exeter-area-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
-  max-width: 720px;
-  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .bcm-exeter-area-pill {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 16px;
-  background: var(--bcm-white);
-  border: 1px solid var(--bcm-border);
-  border-radius: var(--bcm-radius-md);
-  font-size: 0.9rem;
-  color: var(--bcm-text-primary);
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  background: var(--bcm-off-white);
+  border: 1px solid var(--bcm-light-gray);
+  border-radius: 8px;
+  font-size: 0.93rem;
+  color: var(--bcm-dark-slate);
   text-decoration: none;
   font-weight: 600;
-  transition: border-color 0.2s var(--bcm-ease), background 0.2s var(--bcm-ease), box-shadow 0.2s var(--bcm-ease), color 0.2s var(--bcm-ease);
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
   min-height: 44px;
 }
 
 .bcm-exeter-area-pill:hover {
-  border-color: var(--bcm-black);
-  background: var(--bcm-black);
-  color: var(--bcm-white);
+  border-color: var(--bcm-navy);
+  color: var(--bcm-navy);
   box-shadow: var(--bcm-shadow-sm);
 }
 
-/* CTA BUTTONS */
-.bcm-exeter-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 34px;
-  font-family: var(--bcm-font-display);
-  font-size: 1rem;
-  font-weight: 600;
+a.bcm-exeter-area-pill {
   text-decoration: none;
-  border-radius: var(--bcm-radius);
-  border: 2px solid transparent;
-  transition: all 0.2s var(--bcm-ease);
-  cursor: pointer;
-  min-height: 44px;
 }
 
-.bcm-exeter-cta--primary {
-  background: var(--bcm-gold);
-  color: var(--bcm-black);
-}
-
-.bcm-exeter-cta--primary:hover {
-  background: var(--bcm-gold-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--bcm-shadow-gold);
-}
-
-.bcm-exeter-cta--outline {
-  background: transparent;
+a.bcm-exeter-area-pill:hover {
+  background: var(--bcm-navy);
   color: var(--bcm-white);
-  border-color: var(--bcm-white);
 }
 
-.bcm-exeter-cta--outline:hover {
-  background: var(--bcm-white);
-  color: var(--bcm-black);
-  transform: translateY(-2px);
+/* === MAP === */
+.bcm-exeter-map-wrap {
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  margin-top: 32px;
+  box-shadow: var(--bcm-shadow-md);
+  border: 1px solid var(--bcm-light-gray);
 }
 
-.bcm-exeter-cta--gold {
-  background: var(--bcm-gold);
-  color: var(--bcm-black);
+.bcm-exeter-map-wrap iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
 }
 
-.bcm-exeter-cta--gold:hover {
-  background: var(--bcm-gold-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--bcm-shadow-gold);
+/* === FORM === */
+.bcm-exeter-form-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--bcm-off-white);
+  border-radius: var(--bcm-radius-lg);
+  padding: 8px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.bcm-exeter-cta--navy {
-  background: transparent;
-  color: var(--bcm-gold);
-  border-color: var(--bcm-gold);
+.bcm-exeter-form-wrap iframe {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
 }
 
-.bcm-exeter-cta--navy:hover {
-  background: var(--bcm-gold);
-  color: var(--bcm-black);
-  transform: translateY(-2px);
+/* === DESKTOP === */
+@media (min-width: 768px) {
+  .bcm-exeter h1 { font-size: 3rem; }
+  .bcm-exeter h2 { font-size: 2.2rem; }
+  .bcm-exeter-hero { min-height: 580px; }
+  .bcm-exeter-hero__content { padding: 90px 24px; }
+  .bcm-exeter-types-grid { grid-template-columns: repeat(3, 1fr); }
+  .bcm-exeter-types-bottom { flex-direction: row; justify-content: center; }
+  .bcm-exeter-types-bottom .bcm-exeter-type-card { flex: 0 1 calc(33.333% - 10px); }
+  .bcm-exeter-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .bcm-exeter-steps { grid-template-columns: repeat(2, 1fr); }
+  .bcm-exeter-area-grid { grid-template-columns: repeat(3, 1fr); }
+  .bcm-exeter-map-wrap iframe { height: 420px; }
+  .bcm-exeter-trust__item + .bcm-exeter-trust__item::before { top: 30%; bottom: 30%; }
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .bcm-exeter h2 {
-    font-size: 1.5rem;
-  }
-
-  .bcm-exeter-section {
-    padding: 60px 0;
-  }
-
-  .bcm-exeter-section--navy {
-    padding: 72px 0;
-  }
-
-  .bcm-exeter-hero {
-    min-height: 400px;
-  }
-
-  .bcm-exeter-hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .bcm-exeter-hero p {
-    font-size: 1rem;
-  }
-
-  .bcm-exeter-section__header {
-    margin-bottom: 40px;
-  }
-
-  .bcm-exeter-types-grid,
-  .bcm-exeter-why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .bcm-exeter-steps {
-    grid-template-columns: 1fr;
-  }
-
-  .bcm-exeter-area-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media (min-width: 1024px) {
+  .bcm-exeter h1 { font-size: 3.4rem; }
+  .bcm-exeter-section { padding: 88px 0; }
+  .bcm-exeter-intro { padding: 88px 0 72px 0; }
+  .bcm-exeter-why-grid { grid-template-columns: repeat(3, 1fr); }
+  .bcm-exeter-steps { grid-template-columns: repeat(4, 1fr); }
+  .bcm-exeter-area-grid { grid-template-columns: repeat(5, 1fr); }
+  .bcm-exeter-reviews { flex-direction: row; }
+  .bcm-exeter-review { flex: 1; }
 }
 </style>
 
@@ -936,7 +949,7 @@
   <div class="bcm-exeter-hero__overlay"></div>
   <div class="bcm-exeter-hero__content">
     <div class="bcm-exeter-hero__badge">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Rockingham County ADU Experts
     </div>
     <h1>ADU Builder in Exeter, NH</h1>
@@ -952,19 +965,19 @@
 <div class="bcm-exeter-trust">
   <div class="bcm-exeter-trust__inner">
     <div class="bcm-exeter-trust__item">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      NH Licensed & Insured
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      NH Licensed &amp; Insured
     </div>
     <div class="bcm-exeter-trust__item">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       5-Star Reviews
     </div>
     <div class="bcm-exeter-trust__item">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
       Daily Photo Updates
     </div>
     <div class="bcm-exeter-trust__item">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Rockingham County Experts
     </div>
   </div>
@@ -991,6 +1004,7 @@
       <h2>ADU Types We Build in Exeter, NH</h2>
       <p>Every lot is different, and so is every homeowner's situation. We evaluate your property, talk through your goals, and recommend the ADU type that fits your budget, timeline, and how you plan to use the space.</p>
     </div>
+
     <div class="bcm-exeter-types-grid">
       <div class="bcm-exeter-type-card">
         <div class="bcm-exeter-type-card__img">
@@ -1001,6 +1015,7 @@
           <p>A standalone structure on your property, completely separate from the main house. Maximum privacy for both homeowner and occupant. Under HB 577, detached ADUs are now allowed by right statewide - no special permits needed in Exeter.</p>
         </div>
       </div>
+
       <div class="bcm-exeter-type-card">
         <div class="bcm-exeter-type-card__img">
           <img src="https://bradfordcm.com/wp-content/uploads/2026/02/CTG-Connected-Living-render.webp" alt="" width="800" height="450" loading="lazy" decoding="async">
@@ -1010,6 +1025,7 @@
           <p>An addition connected directly to your existing home. Ideal when lot size or budget favor building onto what's already there. We design private entrances, separate living areas, and full kitchens so the space works as a true independent unit.</p>
         </div>
       </div>
+
       <div class="bcm-exeter-type-card">
         <div class="bcm-exeter-type-card__img">
           <img src="https://bradfordcm.com/wp-content/uploads/2026/03/IMG_5996-scaled.jpg" alt="" width="800" height="450" loading="lazy" decoding="async">
@@ -1019,26 +1035,31 @@
           <p>Convert an existing garage or build living space above it. Often the most cost-effective path since the foundation and structure are already in place. NH law now allows conversions of existing structures even if they don't meet current setback requirements.</p>
         </div>
       </div>
+    </div>
+
+    <div class="bcm-exeter-types-bottom">
       <div class="bcm-exeter-type-card">
         <div class="bcm-exeter-type-card__img">
           <img src="https://bradfordcm.com/wp-content/uploads/2026/03/Basement-ADU.jpg" alt="" width="800" height="450" loading="lazy" decoding="async">
         </div>
         <div class="bcm-exeter-type-card__body">
           <h3>Basement Conversion ADUs</h3>
-          <p>Transform an unfinished basement into a fully legal accessory dwelling unit with separate kitchen, bathroom, and living area. Direct egress requirements ensure safety and occupancy compliance. Often the most affordable option.</p>
+          <p>Turn underused basement space into a fully finished accessory dwelling unit. Basement ADUs maximize your existing footprint without changing the exterior of your home. We handle egress requirements, waterproofing, and mechanical systems.</p>
         </div>
       </div>
+
       <div class="bcm-exeter-type-card">
         <div class="bcm-exeter-type-card__img">
           <img src="https://bradfordcm.com/wp-content/uploads/2026/02/Elm-DBL-Winter-Ready.webp" alt="" width="800" height="450" loading="lazy" decoding="async">
         </div>
         <div class="bcm-exeter-type-card__body">
           <h3>Backyard Cottages and Studios</h3>
-          <p>Compact, fully-equipped dwelling units designed for your backyard. Single-occupancy studios up to 400 sq ft, or 1-bedroom cottages. Modern finishes and efficient layouts maximize value in a small footprint.</p>
+          <p>A smaller, purpose-built structure for a home office, guest house, or rental unit. Backyard cottages fit well on Exeter lots where a full detached ADU isn't needed but the homeowner wants flexible, independent space.</p>
         </div>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 40px;">
+
+    <div style="text-align:center; margin-top:36px;">
       <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/" class="bcm-exeter-cta bcm-exeter-cta--navy">Learn More About ADUs</a>
     </div>
   </div>
@@ -1049,39 +1070,40 @@
   <div class="bcm-exeter-container">
     <div class="bcm-exeter-section__header">
       <h2>Why Exeter Homeowners Choose Bradford Construction Management</h2>
-      <p>We bring commercial-grade project management, transparent pricing, and daily documentation to every ADU project on the Seacoast.</p>
+      <p>Most contractors build your project and move on. We built an entire service model around not doing that.</p>
     </div>
+
     <div class="bcm-exeter-why-grid">
       <div class="bcm-exeter-why-card">
         <div class="bcm-exeter-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <div class="bcm-exeter-why-card__body">
           <h3>NH-Licensed General Contractor</h3>
-          <p>Full bonding, insurance, and warranty coverage. Every license and credential verified and current. You build with professionals backed by State of New Hampshire oversight.</p>
+          <p>Fully licensed and insured for residential construction in New Hampshire. MA HIC #201908. Comprehensive general liability and workers' compensation on every project.</p>
         </div>
       </div>
       <div class="bcm-exeter-why-card">
         <div class="bcm-exeter-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
         <div class="bcm-exeter-why-card__body">
           <h3>Rockingham County Permit Expertise</h3>
-          <p>Deep familiarity with Exeter Planning, Zoning, and Building Departments. We navigate the HB 577 ADU law changes and help you understand your rights before submitting any application.</p>
+          <p>We navigate Exeter's zoning board, planning department, and building inspections. One team manages all the paperwork from lot feasibility to certificate of occupancy.</p>
         </div>
       </div>
       <div class="bcm-exeter-why-card">
         <div class="bcm-exeter-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <div class="bcm-exeter-why-card__body">
           <h3>Design-Build Under One Roof</h3>
-          <p>Conceptual drawings through final construction all in-house. No coordination issues with separate architects. Faster permitting and fewer change orders.</p>
+          <p>No juggling separate architects, engineers, and contractors. One accountable team takes your project from concept through design, permitting, construction, and final inspection.</p>
         </div>
       </div>
       <div class="bcm-exeter-why-card">
         <div class="bcm-exeter-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
         <div class="bcm-exeter-why-card__body">
           <h3>Transparent Pricing</h3>
@@ -1090,24 +1112,25 @@
       </div>
       <div class="bcm-exeter-why-card">
         <div class="bcm-exeter-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><path d="M23 12a11 11 0 0 1-22 0 11 11 0 0 1 22 0z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </div>
         <div class="bcm-exeter-why-card__body">
           <h3>Daily Photo Documentation</h3>
-          <p>Every phase photographed and timestamped. You see exactly what's happening on your property, every single day. Full transparency and accountability on the jobsite.</p>
+          <p>Every active jobsite is photographed every day. You see exactly what happened, what's next, and where your money went - without having to ask.</p>
         </div>
       </div>
       <div class="bcm-exeter-why-card">
         <div class="bcm-exeter-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <div class="bcm-exeter-why-card__body">
           <h3>Lifetime Support via BHS</h3>
-          <p>After completion, your ADU is backed by BuilderPro Home Warranty. Builder's warranty for structural and mechanical systems covers you long-term with a direct support line.</p>
+          <p>After the final walkthrough, we don't disappear. Bradford Home Services provides ongoing maintenance, small repairs, and warranty follow-through for the life of your project.</p>
         </div>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 48px;">
+
+    <div style="text-align:center; margin-top:44px;">
       <a href="https://bradfordcm.com/contact/" class="bcm-exeter-cta bcm-exeter-cta--gold">Schedule Your Free Consultation</a>
     </div>
   </div>
@@ -1118,130 +1141,159 @@
   <div class="bcm-exeter-container">
     <div class="bcm-exeter-section__header">
       <h2>How We Build Your Exeter ADU - Step by Step</h2>
-      <p>From initial assessment to move-in day, we manage every detail transparently and professionally.</p>
+      <p>From the first property visit to handing you the keys, here's what working with Bradford looks like.</p>
     </div>
+
     <div class="bcm-exeter-steps">
       <div class="bcm-exeter-step">
         <h3>Free Property Assessment</h3>
-        <p>We visit your property, evaluate site conditions, setbacks, utilities, drainage, and your goals. You get honest guidance about what's possible and an order-of-magnitude cost estimate.</p>
+        <p>We visit your Exeter property to evaluate ADU feasibility - lot size, setbacks, utility connections, and zoning classification. You leave with a clear picture of what's possible and a realistic budget range.</p>
       </div>
       <div class="bcm-exeter-step">
         <h3>Custom Design and Permits</h3>
-        <p>Our in-house design team creates drawings that match your property and budget. We submit everything to Exeter Planning and Building, managing all back-and-forth through occupancy approval.</p>
+        <p>Our team designs your ADU and submits all permit applications to the Town of Exeter. We manage the paperwork, coordinate with the building department, and keep the timeline on track.</p>
       </div>
       <div class="bcm-exeter-step">
         <h3>Licensed Construction</h3>
-        <p>Licensed crew, licensed supervision, full-time project manager, and daily photo documentation. We maintain all safety standards and keep your project on schedule.</p>
+        <p>Our crews build on schedule with daily photo updates and regular progress communication. You'll have access to our project management platform so you always know what's happening on site.</p>
       </div>
       <div class="bcm-exeter-step">
         <h3>Walkthrough and Certificate of Occupancy</h3>
-        <p>Final inspection with you, municipality approval, certificate of occupancy issued, and deed addendum recorded. Your ADU is fully legal and ready for occupancy or rental.</p>
+        <p>We complete all final inspections and walk through the finished unit together before sign-off. Then Bradford Home Services is here for ongoing support.</p>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 48px;">
-      <img src="https://bradfordcm.com/wp-content/uploads/2026/03/BCM-duffy-adu-main-living-space-framing-wide-window-wall-scaled.webp" alt="" width="1100" height="500" loading="lazy" decoding="async" style="width:100%; max-width: 900px; height: auto; border-radius: 14px; box-shadow: 0 4px 20px rgba(28, 35, 49, 0.07);">
+
+    <div style="margin-top:40px; border-radius:var(--bcm-radius-lg); overflow:hidden; box-shadow:var(--bcm-shadow-lg);">
+      <img src="https://bradfordcm.com/wp-content/uploads/2026/03/BCM-duffy-adu-main-living-space-framing-wide-window-wall-scaled.webp" alt="" width="1100" height="500" loading="lazy" decoding="async" style="width:100%; height:auto; object-fit:cover; display:block;">
     </div>
   </div>
 </div>
 
-<!-- PRICING TABLE -->
+<!-- COST -->
 <div class="bcm-exeter-section">
   <div class="bcm-exeter-container">
     <div class="bcm-exeter-section__header">
       <h2>ADU Cost in Exeter, NH - Pricing Ranges</h2>
-      <p>Costs vary by project type, site conditions, and finishes. These ranges reflect typical Exeter projects in 2026.</p>
+      <p>ADU costs depend on the type of unit, size, site conditions, and finish level. Here are typical ranges for Exeter-area projects.</p>
     </div>
+
     <div class="bcm-exeter-cost-table-wrap">
       <table class="bcm-exeter-cost-table">
         <thead>
           <tr>
             <th>ADU Type</th>
-            <th>Typical Range</th>
-            <th>Typical Timeline</th>
+            <th>Typical Cost Range</th>
+            <th>Timeline</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Basement Conversion</td>
-            <td class="bcm-exeter-price">$65,000 - $120,000</td>
-            <td>8-12 weeks</td>
-          </tr>
-          <tr>
             <td>Garage Conversion</td>
-            <td class="bcm-exeter-price">$85,000 - $150,000</td>
-            <td>10-14 weeks</td>
+            <td class="bcm-exeter-price">$75,000 - $130,000+</td>
+            <td>3-5 months</td>
           </tr>
           <tr>
-            <td>Attached Addition (500-600 sq ft)</td>
-            <td class="bcm-exeter-price">$140,000 - $240,000</td>
-            <td>16-20 weeks</td>
+            <td>Attached In-Law Suite</td>
+            <td class="bcm-exeter-price">$120,000 - $220,000+</td>
+            <td>5-8 months</td>
           </tr>
           <tr>
-            <td>Detached Unit (800-1000 sq ft)</td>
-            <td class="bcm-exeter-price">$220,000 - $400,000</td>
-            <td>20-28 weeks</td>
+            <td>Detached ADU (New Build)</td>
+            <td class="bcm-exeter-price">$150,000 - $320,000+</td>
+            <td>6-10 months</td>
           </tr>
           <tr>
-            <td>Custom Cottage (1000-1200 sq ft)</td>
-            <td class="bcm-exeter-price">$320,000+</td>
-            <td>24-32 weeks</td>
+            <td>Basement Conversion</td>
+            <td class="bcm-exeter-price">$65,000 - $120,000+</td>
+            <td>3-5 months</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p style="text-align: center; margin-top: 28px; color: var(--bcm-text-tertiary); font-size: 0.9rem; max-width: 780px; margin-left: auto; margin-right: auto; line-height: 1.7;">Ranges shown are general estimates - actual pricing and timelines vary by project scope, site conditions, and finish level. You'll receive detailed, transparent pricing as part of your initial consultation and project quote. <a href="https://bradfordcm.com/finance-your-dreams/">Learn about financing options</a> including home equity and construction loans, or <a href="https://bradfordcm.com/contact/">contact us</a> for a free estimate tailored to your property.</p>
+
+    <p style="text-align:center; margin-top:28px; color:var(--bcm-medium-gray); font-size:0.9rem; max-width:780px; margin-left:auto; margin-right:auto; line-height:1.7;">Ranges shown are general estimates - actual pricing and timelines vary by project scope, site conditions, and finish level. You'll receive detailed, transparent pricing as part of your initial consultation and project quote. <a href="https://bradfordcm.com/finance-your-dreams/">Learn about financing options</a> including home equity and construction loans, or <a href="https://bradfordcm.com/contact/">contact us</a> for a free estimate tailored to your property.</p>
   </div>
 </div>
 
-<!-- ZONING & PERMITS -->
+<!-- ZONING -->
 <div class="bcm-exeter-section bcm-exeter-section--alt">
   <div class="bcm-exeter-container">
     <div class="bcm-exeter-section__header">
       <h2>Exeter, NH ADU Zoning Rules and Permit Requirements</h2>
-      <p>New Hampshire's HB 577 (effective July 2025) requires municipalities to allow ADUs by right in residential zones. Here's what that means for Exeter homeowners.</p>
+      <p>New Hampshire's ADU laws changed significantly in 2025. Here's what Exeter homeowners need to know before starting a project.</p>
     </div>
+
     <div class="bcm-exeter-accordion">
+
       <div class="bcm-exeter-accordion-item">
-        <button class="bcm-exeter-accordion-trigger" aria-expanded="false">Are ADUs allowed in Exeter as of 2025?</button>
+        <button class="bcm-exeter-accordion-trigger" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var p=this.nextElementSibling; p.style.maxHeight = p.style.maxHeight ? null : p.scrollHeight + 'px';">
+          ADUs Allowed by Right in Exeter
+        </button>
         <div class="bcm-exeter-accordion-panel">
           <div class="bcm-exeter-accordion-panel__inner">
-            <p>Yes. Under HB 577, Exeter must now allow both attached and detached ADUs by right in all residential zones. This law took effect July 1, 2025, and supersedes any prior local restrictions. Both accessory dwelling units are permitted uses - you don't need a conditional use permit, variance, or special exception, just a standard building permit.</p>
+            Under HB 577 (effective July 1, 2025), Exeter must allow one attached or detached accessory dwelling unit by right in every zone that permits single-family homes. No conditional use permits or special exceptions are required - just a standard building permit. This replaced the previous framework that only guaranteed attached ADUs.
           </div>
         </div>
       </div>
+
       <div class="bcm-exeter-accordion-item">
-        <button class="bcm-exeter-accordion-trigger" aria-expanded="false">What size can an ADU be in Exeter?</button>
+        <button class="bcm-exeter-accordion-trigger" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var p=this.nextElementSibling; p.style.maxHeight = p.style.maxHeight ? null : p.scrollHeight + 'px';">
+          Size Requirements
+        </button>
         <div class="bcm-exeter-accordion-panel">
           <div class="bcm-exeter-accordion-panel__inner">
-            <p>HB 577 allows ADUs up to 800 square feet (and up to 1,000 sq ft if attached to the main house). Attached ADUs can be slightly larger. Basement conversions, garage conversions, and detached cottages all fall under this framework. Exeter's zoning also requires minimum lot size and setback standards, but under the new law, an existing non-conforming structure can be converted.</p>
+            Municipalities cannot restrict ADU size to less than 750 square feet. Maximum allowable size is 950 square feet unless Exeter authorizes a larger unit. This applies to total living space including kitchen, bath, and sleeping areas.
           </div>
         </div>
       </div>
+
       <div class="bcm-exeter-accordion-item">
-        <button class="bcm-exeter-accordion-trigger" aria-expanded="false">Do I need special parking for an ADU in Exeter?</button>
+        <button class="bcm-exeter-accordion-trigger" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var p=this.nextElementSibling; p.style.maxHeight = p.style.maxHeight ? null : p.scrollHeight + 'px';">
+          Setbacks and Dimensional Standards
+        </button>
         <div class="bcm-exeter-accordion-panel">
           <div class="bcm-exeter-accordion-panel__inner">
-            <p>Exeter has not mandated additional off-street parking specifically for ADUs. However, you should plan for at least one dedicated parking space on your property. The town reviews each application based on the lot's layout and access. Bradford Construction Management coordinates with Exeter's Planning Department to ensure your design meets current parking expectations.</p>
+            Under the updated law, ADUs follow the same setback, lot size, and dimensional requirements as the primary dwelling. Exeter cannot impose additional restrictions on a property simply because it includes an ADU. This is a significant change from previous rules.
           </div>
         </div>
       </div>
+
       <div class="bcm-exeter-accordion-item">
-        <button class="bcm-exeter-accordion-trigger" aria-expanded="false">How long does Exeter's ADU permitting process take?</button>
+        <button class="bcm-exeter-accordion-trigger" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var p=this.nextElementSibling; p.style.maxHeight = p.style.maxHeight ? null : p.scrollHeight + 'px';">
+          Existing Structure Conversions
+        </button>
         <div class="bcm-exeter-accordion-panel">
           <div class="bcm-exeter-accordion-panel__inner">
-            <p>Typical timeframe is 4-8 weeks from submission to permit issuance, depending on whether the Planning Board or Building Department requires additional review. HB 577 streamlines the process since local control options are more limited. We manage all submissions, question responses, and revisions so you don't have to deal with the paperwork.</p>
+            Existing structures, including detached garages that don't meet current setback or lot coverage requirements, can be converted to ADUs without zoning relief. This opens up options for many older Exeter properties with existing garages or outbuildings.
           </div>
         </div>
       </div>
+
       <div class="bcm-exeter-accordion-item">
-        <button class="bcm-exeter-accordion-trigger" aria-expanded="false">Is a deed addendum required for an ADU in Exeter?</button>
+        <button class="bcm-exeter-accordion-trigger" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var p=this.nextElementSibling; p.style.maxHeight = p.style.maxHeight ? null : p.scrollHeight + 'px';">
+          Owner Occupancy and Rentals
+        </button>
         <div class="bcm-exeter-accordion-panel">
           <div class="bcm-exeter-accordion-panel__inner">
-            <p>Yes. Building permits are required for all ADU construction in Exeter. The ADU use must be recorded by deed addendum at the Registry of Deeds, and the lot cannot be converted to a condominium or separate ownership. Bradford Construction Management manages the full permitting process on behalf of our clients. <a href="https://bradfordcm.com/contact/">Reach out for a free consultation.</a></p>
+            Exeter may require that the property owner live in either the primary dwelling or the ADU, but cannot dictate which unit the owner must occupy. ADUs may be rented as independent dwelling units. Short-term rental rules may be subject to additional local ordinances - confirm with the Town of Exeter before listing on platforms like Airbnb.
           </div>
         </div>
       </div>
+
+      <div class="bcm-exeter-accordion-item">
+        <button class="bcm-exeter-accordion-trigger" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var p=this.nextElementSibling; p.style.maxHeight = p.style.maxHeight ? null : p.scrollHeight + 'px';">
+          Building Permits and Deed Recording
+        </button>
+        <div class="bcm-exeter-accordion-panel">
+          <div class="bcm-exeter-accordion-panel__inner">
+            Building permits are required for all ADU construction in Exeter. The ADU use must be recorded by deed addendum at the Registry of Deeds, and the lot cannot be converted to a condominium or separate ownership. Bradford Construction Management manages the full permitting process on behalf of our clients. <a href="https://bradfordcm.com/contact/">Reach out for a free consultation.</a>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <p style="margin-top:28px; color:var(--bcm-medium-gray); font-size:0.9rem; text-align:center; max-width:700px; margin-left:auto; margin-right:auto;">Exeter may have additional local requirements beyond state minimums. We verify current zoning details with the Town of Exeter before every project.</p>
   </div>
 </div>
 
@@ -1250,38 +1302,41 @@
   <div class="bcm-exeter-container">
     <div class="bcm-exeter-section__header">
       <h2>What Our Clients Say</h2>
-      <p>Real feedback from homeowners who've worked with Bradford Construction Management.</p>
     </div>
+
     <div class="bcm-exeter-reviews">
       <div class="bcm-exeter-review">
         <div class="bcm-exeter-review__top">
-          <div class="bcm-exeter-review__stars">★★★★★</div>
-          <div class="bcm-exeter-review__author">Sarah M., Exeter, NH</div>
+          <div class="bcm-exeter-review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="bcm-exeter-review__author">Luke R.</div>
         </div>
         <div class="bcm-exeter-review__body">
-          <p class="bcm-exeter-review__text">BCM handled every detail from start to finish. The daily photos gave us complete confidence in the work. Professional, transparent, and they delivered exactly what they promised.</p>
+          <p class="bcm-exeter-review__text">Bradford Construction was phenomenal on our multi-stage, 10-month complete rebuild. Rick and the whole crew surpassed any expectations we had going into the project.</p>
         </div>
       </div>
+
       <div class="bcm-exeter-review">
         <div class="bcm-exeter-review__top">
-          <div class="bcm-exeter-review__stars">★★★★★</div>
-          <div class="bcm-exeter-review__author">James P., Stratham, NH</div>
+          <div class="bcm-exeter-review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="bcm-exeter-review__author">Michael J.</div>
         </div>
         <div class="bcm-exeter-review__body">
-          <p class="bcm-exeter-review__text">The permit process seemed daunting, but their team knew Exeter inside and out. No surprises. The final product is beautiful and fully legal.</p>
+          <p class="bcm-exeter-review__text">Excellent customer service and quality work throughout project. Highly recommend!</p>
         </div>
       </div>
+
       <div class="bcm-exeter-review">
         <div class="bcm-exeter-review__top">
-          <div class="bcm-exeter-review__stars">★★★★★</div>
-          <div class="bcm-exeter-review__author">Christine L., Newfields, NH</div>
+          <div class="bcm-exeter-review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="bcm-exeter-review__author">Jon A.</div>
         </div>
         <div class="bcm-exeter-review__body">
-          <p class="bcm-exeter-review__text">We needed an ADU for my aging parents. BCM designed something that feels like a real home, not an afterthought. Great communication throughout.</p>
+          <p class="bcm-exeter-review__text">Rick and his team did a great job on our home. Communication was solid throughout, we always knew what was happening and when. Quality of work is excellent. Would definitely recommend.</p>
         </div>
       </div>
     </div>
-    <p style="text-align: center; margin-top: 28px;"><a href="https://share.google/ap7MVebYR4dZhlNHr" style="color: var(--bcm-black); font-weight: 600;">Read More Reviews on Google</a></p>
+
+    <p style="text-align:center; margin-top:28px;"><a href="https://share.google/ap7MVebYR4dZhlNHr">Read More Reviews on Google</a></p>
   </div>
 </div>
 
@@ -1291,117 +1346,133 @@
     <div class="bcm-exeter-section__header">
       <h2>Frequently Asked Questions - ADUs in Exeter, NH</h2>
     </div>
+
     <div class="bcm-exeter-faq-list">
+
       <div class="bcm-exeter-faq-item">
-        <button class="bcm-exeter-faq-question" aria-expanded="false">How much do ADUs cost in Exeter?</button>
+        <button class="bcm-exeter-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          Is an ADU allowed in Exeter, NH?
+        </button>
         <div class="bcm-exeter-faq-answer">
           <div class="bcm-exeter-faq-answer__inner">
-            <p>ADU costs in Exeter vary based on project scope, site conditions, and finish level. General ranges start around $65,000 for a basement or garage conversion and go upward of $320,000+ for a new detached unit. You'll receive detailed, transparent pricing as part of your initial project quote. <a href="https://bradfordcm.com/contact/">Contact us</a> for a free estimate.</p>
+            Yes. Under New Hampshire's updated ADU law (HB 577, effective July 1, 2025), all municipalities including Exeter must allow one attached or detached ADU by right in residential zones that permit single-family homes. No conditional use permit or special exception is required. Local size and design standards apply.
           </div>
         </div>
       </div>
+
       <div class="bcm-exeter-faq-item">
-        <button class="bcm-exeter-faq-question" aria-expanded="false">Can I rent out an ADU in Exeter?</button>
+        <button class="bcm-exeter-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          How much does it cost to build an ADU in Exeter, NH?
+        </button>
         <div class="bcm-exeter-faq-answer">
           <div class="bcm-exeter-faq-answer__inner">
-            <p>Yes, ADUs are permitted for rental use in Exeter under HB 577. The property must remain under single ownership, but the ADU can be rented to tenants. This is a popular way to add rental income or help offset a mortgage. Many homeowners use this strategy to make aging properties more affordable.</p>
+            ADU costs in Exeter vary based on project scope, site conditions, and finish level. General ranges start around $65,000 for a basement or garage conversion and go upward of $320,000+ for a new detached unit. You'll receive detailed, transparent pricing as part of your initial project quote. <a href="https://bradfordcm.com/contact/">Contact us</a> for a free estimate.
           </div>
         </div>
       </div>
+
       <div class="bcm-exeter-faq-item">
-        <button class="bcm-exeter-faq-question" aria-expanded="false">How long does an ADU project take?</button>
+        <button class="bcm-exeter-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          Do I need a permit for an ADU in Exeter, NH?
+        </button>
         <div class="bcm-exeter-faq-answer">
           <div class="bcm-exeter-faq-answer__inner">
-            <p>Timelines vary: basement conversions typically take 8-12 weeks, garage conversions 10-14 weeks, attached additions 16-20 weeks, and new detached structures 20-28 weeks. Permitting adds 4-8 weeks upfront. Our team provides a project schedule early in the planning phase so you know what to expect.</p>
+            Yes - all ADU construction in Exeter requires building permits from the Town of Exeter Building Department. The good news is that ADUs are now permitted by right, so no special hearings or conditional use processes are needed. Bradford Construction Management manages the complete permit application process for our clients.
           </div>
         </div>
       </div>
+
       <div class="bcm-exeter-faq-item">
-        <button class="bcm-exeter-faq-question" aria-expanded="false">What financing is available for an ADU project?</button>
+        <button class="bcm-exeter-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          What ADU types are allowed in Exeter, NH?
+        </button>
         <div class="bcm-exeter-faq-answer">
           <div class="bcm-exeter-faq-answer__inner">
-            <p>Options include home equity loans, construction loans, and traditional financing. Many homeowners use home equity to fund the project since the ADU adds property value. <a href="https://bradfordcm.com/finance-your-dreams/">We work with lenders and can recommend programs</a> that work well for ADU projects.</p>
+            Exeter permits detached ADUs, attached ADUs, garage conversions, basement conversions, and in-law suite additions. Each type has different design considerations and cost ranges. We evaluate your property and recommend the option that makes the most sense for your lot, budget, and goals.
           </div>
         </div>
       </div>
+
       <div class="bcm-exeter-faq-item">
-        <button class="bcm-exeter-faq-question" aria-expanded="false">Do I need to hire an architect for my ADU design?</button>
+        <button class="bcm-exeter-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          How long does it take to build an ADU in Exeter, NH?
+        </button>
         <div class="bcm-exeter-faq-answer">
           <div class="bcm-exeter-faq-answer__inner">
-            <p>Not with Bradford Construction Management. Our in-house design team creates drawings and handles all the technical details for permitting and construction. This keeps costs down and the process fast. Complex sites or unusual requirements may benefit from a licensed architect, but we can advise you on that during your initial consultation.</p>
+            Timelines vary by project scope. Garage conversions typically take 3 to 5 months from permit approval to completion. New detached ADUs generally run 6 to 10 months. The design and permitting phase adds 2 to 4 months before construction begins. We use commercial-grade project management tools and daily documentation to keep projects on schedule.
           </div>
         </div>
       </div>
+
       <div class="bcm-exeter-faq-item">
-        <button class="bcm-exeter-faq-question" aria-expanded="false">How do I get started with my Exeter ADU?</button>
+        <button class="bcm-exeter-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          Can I rent out my ADU in Exeter, NH?
+        </button>
         <div class="bcm-exeter-faq-answer">
           <div class="bcm-exeter-faq-answer__inner">
-            <p><a href="https://bradfordcm.com/contact/">Contact Bradford Construction Management</a> to schedule your free property assessment. We'll visit your site, evaluate your options, answer your questions, and provide an initial cost estimate. No obligations, no pressure - just professional guidance based on 20+ years of building experience.</p>
+            Yes, ADUs in Exeter may be rented as independent dwelling units. Short-term rental rules (such as Airbnb) may be subject to additional local ordinances. We recommend confirming current short-term rental regulations with the Town of Exeter before listing. Long-term rentals are permitted and represent a strong income opportunity in the Seacoast market.
           </div>
         </div>
       </div>
+
+      <div class="bcm-exeter-faq-item">
+        <button class="bcm-exeter-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          What happens after Bradford finishes building my ADU?
+        </button>
+        <div class="bcm-exeter-faq-answer">
+          <div class="bcm-exeter-faq-answer__inner">
+            Unlike most contractors who disappear after the final payment, Bradford Construction Management provides ongoing support through our sister company, Bradford Home Services. This includes seasonal maintenance, small repairs, warranty follow-through, and system check-ups for the life of your ADU. We're the contractor who never leaves.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
-<!-- SERVICE AREA -->
+<!-- SERVICE AREA + MAP -->
 <div class="bcm-exeter-section">
   <div class="bcm-exeter-container">
     <div class="bcm-exeter-section__header">
       <h2>Serving Exeter and Surrounding Rockingham County Communities</h2>
-      <p>Our service area covers Rockingham and Hillsborough counties in NH, plus the Massachusetts North Shore and Merrimack Valley.</p>
+      <p>Bradford Construction Management builds accessory dwelling units throughout Exeter and the surrounding towns of Rockingham County.</p>
     </div>
+
     <div class="bcm-exeter-area-grid">
-      <div class="bcm-exeter-area-pill">Exeter</div>
-      <div class="bcm-exeter-area-pill">Stratham</div>
-      <div class="bcm-exeter-area-pill">Newfields</div>
-      <div class="bcm-exeter-area-pill">Brentwood</div>
-      <div class="bcm-exeter-area-pill">Kensington</div>
-      <div class="bcm-exeter-area-pill">East Kingston</div>
-      <div class="bcm-exeter-area-pill">Hampton</div>
-      <div class="bcm-exeter-area-pill">Plaistow</div>
-      <div class="bcm-exeter-area-pill">Salem</div>
-      <div class="bcm-exeter-area-pill">Portsmouth</div>
+      <span class="bcm-exeter-area-pill">Exeter, NH</span>
+      <span class="bcm-exeter-area-pill">Stratham, NH</span>
+      <span class="bcm-exeter-area-pill">Newfields, NH</span>
+      <span class="bcm-exeter-area-pill">Brentwood, NH</span>
+      <span class="bcm-exeter-area-pill">Kensington, NH</span>
+      <span class="bcm-exeter-area-pill">East Kingston, NH</span>
+      <span class="bcm-exeter-area-pill">Hampton, NH</span>
+      <span class="bcm-exeter-area-pill">Hampton Falls, NH</span>
+      <span class="bcm-exeter-area-pill">Raymond, NH</span>
+      <span class="bcm-exeter-area-pill">Epping, NH</span>
     </div>
-    <p style="text-align: center; margin-top: 20px;">We also build ADUs in <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/portsmouth-nh/">Portsmouth, NH</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/andover-ma/">Andover, MA</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/newburyport-ma/">Newburyport, MA</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/ipswich-ma/">Ipswich, MA</a>, and across the Merrimack Valley and North Shore. Visit our <a href="https://bradfordcm.com/exeter-nh/">Exeter page</a> for the latest project updates.</p>
+
+    <p style="text-align:center; margin-top:20px;">We also build ADUs in <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/portsmouth-nh/">Portsmouth, NH</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/andover-ma/">Andover, MA</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/newburyport-ma/">Newburyport, MA</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/ipswich-ma/">Ipswich, MA</a>, and across the Merrimack Valley and North Shore. Visit our <a href="https://bradfordcm.com/exeter-nh/">Exeter page</a> for the latest project updates.</p>
+
+    <div class="bcm-exeter-map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93382.14401176262!2d-71.03329373064061!3d42.995291496055096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2ee8b31a6d6f9%3A0x79980c61d8c71831!2sExeter%2C%20NH%2003833!5e0!3m2!1sen!2sus!4v1772750653288!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 </div>
 
-<!-- CTA FINAL -->
+<!-- FINAL CTA + FORM -->
 <div class="bcm-exeter-section bcm-exeter-section--navy">
-  <div class="bcm-exeter-container" style="text-align: center;">
-    <h2 style="color: var(--bcm-white);">Start Your Exeter, NH ADU Project - Get a Free Estimate</h2>
-    <p style="color: var(--bcm-text-light); font-size: 1.1rem; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">Complete the form below or call us directly. We'll schedule your free property assessment and provide a transparent cost estimate for your specific ADU project.</p>
-    <a href="https://bradfordcm.com/contact/" class="bcm-exeter-cta bcm-exeter-cta--primary">Request Your Free Consultation</a>
+  <div class="bcm-exeter-container">
+    <div class="bcm-exeter-section__header">
+      <h2>Start Your Exeter, NH ADU Project - Get a Free Estimate</h2>
+      <p style="color: rgba(250,249,247,0.85);">Ready to add an accessory dwelling unit to your Exeter property? Whether you're exploring the idea or ready to break ground, we'll walk you through every step - from feasibility and design through permitting, construction, and ongoing support. One team, one point of contact, start to finish.</p>
+    </div>
+
+    <div class="bcm-exeter-form-wrap">
+      <iframe src="https://link.bradfordhs.com/widget/form/gjd0vNkXvXFZ1gi5Q51p" style="width:100%;height:1434px;border:none;border-radius:4px" id="inline-gjd0vNkXvXFZ1gi5Q51p" data-form-name="*BCM Website form" title="*BCM Website form"></iframe>
+      <script src="https://link.bradfordhs.com/js/form_embed.js"></script>
+    </div>
+
   </div>
 </div>
 
 </div>
-
-<script>
-document.querySelectorAll('.bcm-exeter-accordion-trigger').forEach(trigger => {
-  trigger.addEventListener('click', () => {
-    const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-    trigger.setAttribute('aria-expanded', !isExpanded);
-    const panel = trigger.nextElementSibling;
-    if (!isExpanded) {
-      panel.style.maxHeight = panel.querySelector('.bcm-exeter-accordion-panel__inner').scrollHeight + 'px';
-    } else {
-      panel.style.maxHeight = '0';
-    }
-  });
-});
-
-document.querySelectorAll('.bcm-exeter-faq-question').forEach(question => {
-  question.addEventListener('click', () => {
-    const isExpanded = question.getAttribute('aria-expanded') === 'true';
-    question.setAttribute('aria-expanded', !isExpanded);
-    const answer = question.nextElementSibling;
-    if (!isExpanded) {
-      answer.style.maxHeight = answer.querySelector('.bcm-exeter-faq-answer__inner').scrollHeight + 'px';
-    } else {
-      answer.style.maxHeight = '0';
-    }
-  });
-});
-</script>
