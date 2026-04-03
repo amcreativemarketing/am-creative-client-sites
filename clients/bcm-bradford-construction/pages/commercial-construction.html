@@ -1,0 +1,824 @@
+<!-- BCM Commercial Construction Page
+     URL: bradfordcm.com/commercial-construction/
+-->
+
+<style>
+:root {
+  --bcm-black:        #1A1A1A;
+  --bcm-gold:         #C8A24D;
+  --bcm-gold-hover:   #B8923F;
+  --bcm-gold-light:   #D4B46A;
+  --bcm-gold-soft:    rgba(200,162,77,0.07);
+  --bcm-gold-border:  rgba(200,162,77,0.18);
+  --bcm-charcoal:     #1C2331;
+  --bcm-white:        #FAF9F7;
+  --bcm-surface:      #F7F7F5;
+  --bcm-border:       #E5E5E2;
+  --bcm-text-primary: #1C2331;
+  --bcm-text-secondary:#3A4255;
+  --bcm-text-tertiary: #5C6478;
+  --bcm-text-light:   rgba(250,249,247,0.88);
+  --bcm-text-muted:   rgba(250,249,247,0.62);
+  --bcm-shadow-xs:    0 1px 2px rgba(28,35,49,0.04);
+  --bcm-shadow-sm:    0 2px 8px rgba(28,35,49,0.05);
+  --bcm-shadow-md:    0 4px 20px rgba(28,35,49,0.07);
+  --bcm-shadow-gold:  0 4px 20px rgba(200,162,77,0.2);
+  --bcm-radius:       6px;
+  --bcm-radius-md:    10px;
+  --bcm-radius-lg:    14px;
+  --bcm-ease:         cubic-bezier(0.25,0.46,0.45,0.94);
+  --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --bcm-font-body:    'Inter', -apple-system, sans-serif;
+}
+
+.bcm-cc * { box-sizing: border-box; margin: 0; padding: 0; }
+.bcm-cc { font-family: var(--bcm-font-body); color: var(--bcm-text-primary); }
+.bcm-cc-container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+.bcm-cc-label {
+  font-family: var(--bcm-font-display); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--bcm-gold);
+  margin-bottom: 14px; display: block;
+}
+.bcm-cc-accent-rule {
+  display: block; width: 40px; height: 2px;
+  background: var(--bcm-gold); border: none; margin: 0 auto 20px;
+}
+.bcm-cc-section-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+.bcm-cc-section-header h2 {
+  font-family: var(--bcm-font-display); font-size: clamp(1.7rem,3.5vw,2.4rem);
+  font-weight: 700; line-height: 1.15; letter-spacing: -0.02em;
+  color: var(--bcm-black); margin-bottom: 16px;
+}
+.bcm-cc-section-header p {
+  font-family: var(--bcm-font-body); font-size: 1.05rem;
+  line-height: 1.7; color: var(--bcm-text-secondary);
+}
+
+.bcm-cc a.bcm-cc-btn--gold {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--bcm-gold); color: var(--bcm-black) !important;
+  font-family: var(--bcm-font-display); font-size: 0.92rem; font-weight: 600;
+  padding: 15px 34px; border-radius: var(--bcm-radius); text-decoration: none;
+  transition: background 0.22s var(--bcm-ease), transform 0.22s var(--bcm-ease), box-shadow 0.22s var(--bcm-ease);
+}
+.bcm-cc a.bcm-cc-btn--gold:hover { background: var(--bcm-gold-hover); transform: translateY(-2px); box-shadow: var(--bcm-shadow-gold); }
+.bcm-cc a.bcm-cc-btn--ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(250,249,247,0.06); border: 1px solid rgba(250,249,247,0.18);
+  color: rgba(250,249,247,0.88) !important; font-family: var(--bcm-font-display);
+  font-size: 0.92rem; font-weight: 600; padding: 15px 34px; border-radius: var(--bcm-radius);
+  text-decoration: none; transition: background 0.22s var(--bcm-ease), border-color 0.22s var(--bcm-ease), transform 0.22s var(--bcm-ease);
+}
+.bcm-cc a.bcm-cc-btn--ghost:hover { background: rgba(250,249,247,0.12); border-color: rgba(250,249,247,0.32); transform: translateY(-2px); }
+.bcm-cc a.bcm-cc-btn--dark {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--bcm-charcoal); color: var(--bcm-white) !important;
+  font-family: var(--bcm-font-display); font-size: 0.92rem; font-weight: 600;
+  padding: 15px 34px; border-radius: var(--bcm-radius); text-decoration: none;
+  transition: background 0.22s var(--bcm-ease), transform 0.22s var(--bcm-ease);
+}
+.bcm-cc a.bcm-cc-btn--dark:hover { background: var(--bcm-black); transform: translateY(-2px); }
+
+/* Hero */
+.bcm-cc-hero {
+  position: relative; min-height: 460px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  background: url('https://bradfordcm.com/wp-content/uploads/2025/08/warehouse-and-office-building-construction-site.webp') center/cover no-repeat;
+}
+.bcm-cc-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(172deg, rgba(26,26,26,0.93) 0%, rgba(26,26,26,0.82) 45%, rgba(28,35,49,0.76) 100%);
+}
+.bcm-cc-hero::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(200,162,77,0.4) 30%, rgba(200,162,77,0.4) 70%, transparent 100%);
+}
+.bcm-cc-hero__inner { position: relative; z-index: 1; max-width: 780px; padding: 60px 24px; }
+.bcm-cc-hero h1 {
+  font-family: var(--bcm-font-display); font-size: clamp(2rem,4.5vw,3rem);
+  font-weight: 700; line-height: 1.12; letter-spacing: -0.025em;
+  color: var(--bcm-white); margin-bottom: 18px;
+}
+.bcm-cc-hero h1 span { color: var(--bcm-gold); }
+.bcm-cc-hero__lead {
+  font-family: var(--bcm-font-body); font-size: 1.05rem; line-height: 1.7;
+  color: var(--bcm-text-light); max-width: 620px; margin: 0 auto 30px;
+}
+.bcm-cc-hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+/* Trust Bar */
+.bcm-cc-trust { background: var(--bcm-black); border-bottom: 1px solid rgba(200,162,77,0.12); padding: 14px 0; }
+.bcm-cc-trust__list { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0; list-style: none; }
+.bcm-cc-trust__list li {
+  font-family: var(--bcm-font-display); font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  color: rgba(250,249,247,0.5); padding: 6px 20px;
+  border-right: 1px solid rgba(250,249,247,0.1);
+}
+.bcm-cc-trust__list li:last-child { border-right: none; }
+
+/* Services */
+.bcm-cc-services { padding: 96px 0; background: var(--bcm-white); }
+.bcm-cc-services__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.bcm-cc-services__grid--bottom { grid-template-columns: repeat(3, 1fr); margin-top: 20px; }
+.bcm-cc-service-card {
+  background: #fff; border: 1px solid var(--bcm-border); border-radius: var(--bcm-radius-lg);
+  padding: 36px 32px; box-shadow: var(--bcm-shadow-xs);
+  transition: box-shadow 0.25s var(--bcm-ease), transform 0.25s var(--bcm-ease), border-color 0.25s var(--bcm-ease);
+}
+.bcm-cc-service-card:hover { box-shadow: var(--bcm-shadow-md); transform: translateY(-3px); border-color: var(--bcm-gold-border); }
+.bcm-cc-service-card__icon {
+  width: 44px; height: 44px; background: var(--bcm-gold-soft); border: 1px solid var(--bcm-gold-border);
+  border-radius: var(--bcm-radius); display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px; transition: background 0.22s var(--bcm-ease);
+}
+.bcm-cc-service-card:hover .bcm-cc-service-card__icon { background: var(--bcm-gold); }
+.bcm-cc-service-card__icon svg { stroke: var(--bcm-gold); transition: stroke 0.22s var(--bcm-ease); }
+.bcm-cc-service-card:hover .bcm-cc-service-card__icon svg { stroke: var(--bcm-black); }
+.bcm-cc-service-card h3 {
+  font-family: var(--bcm-font-display); font-size: clamp(1.05rem,2vw,1.25rem);
+  font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; color: var(--bcm-black); margin-bottom: 12px;
+}
+.bcm-cc-service-card p { font-family: var(--bcm-font-body); font-size: 0.93rem; line-height: 1.65; color: var(--bcm-text-secondary); }
+
+/* Photo Break */
+.bcm-cc-photo-break { width: 100%; height: 380px; overflow: hidden; }
+.bcm-cc-photo-break img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bcm-cc-photo-break--tall { height: 440px; }
+
+/* Comparison Section */
+.bcm-cc-benefit {
+  padding: 96px 0;
+  background: linear-gradient(175deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
+  position: relative; overflow: hidden;
+}
+.bcm-cc-benefit::before {
+  content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px;
+  border-radius: 50%; background: radial-gradient(circle, rgba(200,162,77,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.bcm-cc-benefit__grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: start; }
+.bcm-cc-benefit__text h2 {
+  font-family: var(--bcm-font-display); font-size: clamp(1.7rem,3.5vw,2.4rem);
+  font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--bcm-white); margin-bottom: 18px;
+}
+.bcm-cc-benefit__text p { font-family: var(--bcm-font-body); font-size: 1rem; line-height: 1.72; color: var(--bcm-text-muted); }
+
+.bcm-cc-compare {
+  background: rgba(250,249,247,0.03); border: 1px solid rgba(200,162,77,0.15);
+  border-radius: var(--bcm-radius-lg); overflow: hidden;
+}
+.bcm-cc-compare__header {
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr;
+  background: rgba(200,162,77,0.08); border-bottom: 1px solid rgba(200,162,77,0.15); padding: 16px 24px;
+}
+.bcm-cc-compare__header-cell {
+  font-family: var(--bcm-font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.bcm-cc-compare__header-cell:first-child { color: rgba(250,249,247,0.4); }
+.bcm-cc-compare__header-cell:nth-child(2) { color: var(--bcm-gold); text-align: center; }
+.bcm-cc-compare__header-cell:nth-child(3) { color: rgba(250,249,247,0.3); text-align: center; }
+
+.bcm-cc-compare__row {
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr;
+  padding: 15px 24px; border-bottom: 1px solid rgba(250,249,247,0.05); align-items: center;
+  transition: background 0.18s var(--bcm-ease);
+}
+.bcm-cc-compare__row:last-child { border-bottom: none; }
+.bcm-cc-compare__row:hover { background: rgba(200,162,77,0.04); }
+.bcm-cc-compare__feature { font-family: var(--bcm-font-body); font-size: 0.88rem; font-weight: 500; color: var(--bcm-text-light); line-height: 1.35; }
+.bcm-cc-compare__cell { text-align: center; }
+
+.bcm-cc-compare__yes {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(200,162,77,0.15); border: 1px solid rgba(200,162,77,0.3);
+}
+.bcm-cc-compare__yes svg { stroke: var(--bcm-gold); }
+.bcm-cc-compare__no {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(250,249,247,0.04); border: 1px solid rgba(250,249,247,0.1);
+}
+.bcm-cc-compare__no svg { stroke: rgba(250,249,247,0.25); }
+.bcm-cc-compare__partial {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(250,249,247,0.04); border: 1px solid rgba(250,249,247,0.12);
+}
+.bcm-cc-compare__partial svg { stroke: rgba(250,249,247,0.35); }
+
+/* Why BCM */
+.bcm-cc-why { padding: 96px 0; background: var(--bcm-surface); }
+.bcm-cc-why__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.bcm-cc-why-card {
+  background: #fff; border: 1px solid var(--bcm-border); border-radius: var(--bcm-radius-lg);
+  padding: 36px 32px; box-shadow: var(--bcm-shadow-xs);
+  transition: box-shadow 0.25s var(--bcm-ease), transform 0.25s var(--bcm-ease), border-color 0.25s var(--bcm-ease);
+}
+.bcm-cc-why-card:hover { box-shadow: var(--bcm-shadow-md); transform: translateY(-3px); border-color: var(--bcm-gold-border); }
+.bcm-cc-why-card__icon {
+  width: 44px; height: 44px; background: var(--bcm-gold-soft); border: 1px solid var(--bcm-gold-border);
+  border-radius: var(--bcm-radius); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+}
+.bcm-cc-why-card h3 { font-family: var(--bcm-font-display); font-size: 1.05rem; font-weight: 600; color: var(--bcm-black); margin-bottom: 10px; }
+.bcm-cc-why-card p { font-family: var(--bcm-font-body); font-size: 0.93rem; line-height: 1.65; color: var(--bcm-text-secondary); }
+
+/* Industries */
+.bcm-cc-industries { padding: 96px 0; background: var(--bcm-white); }
+.bcm-cc-industries__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.bcm-cc-industry-pill {
+  border: 1px solid var(--bcm-border); border-radius: var(--bcm-radius-md);
+  padding: 22px 20px; text-align: center;
+  transition: border-color 0.22s var(--bcm-ease), box-shadow 0.22s var(--bcm-ease), transform 0.22s var(--bcm-ease);
+}
+.bcm-cc-industry-pill:hover { border-color: var(--bcm-gold-border); box-shadow: var(--bcm-shadow-sm); transform: translateY(-2px); }
+.bcm-cc-industry-pill svg { stroke: var(--bcm-gold); display: block; margin: 0 auto 10px; }
+.bcm-cc-industry-pill span { display: block; font-family: var(--bcm-font-display); font-size: 0.88rem; font-weight: 600; color: var(--bcm-text-primary); line-height: 1.3; }
+
+/* Process */
+.bcm-cc-process { padding: 96px 0; background: var(--bcm-surface); }
+.bcm-cc-process__steps {
+  border: 1px solid var(--bcm-border); border-radius: var(--bcm-radius-lg);
+  overflow: hidden; display: grid; grid-template-columns: repeat(5, 1fr);
+  background: var(--bcm-border); gap: 1px;
+}
+.bcm-cc-step { background: #fff; padding: 32px 24px; transition: background 0.22s var(--bcm-ease); }
+.bcm-cc-step:hover { background: var(--bcm-gold-soft); }
+.bcm-cc-step:hover .bcm-cc-step__num { background: var(--bcm-gold); color: var(--bcm-black); border-color: var(--bcm-gold); }
+.bcm-cc-step__num {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1.5px solid var(--bcm-gold-border); color: var(--bcm-gold);
+  font-family: var(--bcm-font-display); font-size: 0.8rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+  transition: background 0.22s var(--bcm-ease), color 0.22s var(--bcm-ease), border-color 0.22s var(--bcm-ease);
+}
+.bcm-cc-step h3 { font-family: var(--bcm-font-display); font-size: 0.95rem; font-weight: 600; color: var(--bcm-black); margin-bottom: 10px; line-height: 1.25; }
+.bcm-cc-step p { font-family: var(--bcm-font-body); font-size: 0.85rem; line-height: 1.6; color: var(--bcm-text-tertiary); }
+
+/* Service Area */
+.bcm-cc-area {
+  padding: 96px 0;
+  background: linear-gradient(175deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
+  position: relative; overflow: hidden;
+}
+.bcm-cc-area::before {
+  content: ''; position: absolute; bottom: -150px; left: -100px; width: 500px; height: 500px;
+  border-radius: 50%; background: radial-gradient(circle, rgba(200,162,77,0.04) 0%, transparent 70%); pointer-events: none;
+}
+.bcm-cc-area__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.bcm-cc-area__text h2 {
+  font-family: var(--bcm-font-display); font-size: clamp(1.7rem,3.5vw,2.4rem);
+  font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--bcm-white); margin-bottom: 16px;
+}
+.bcm-cc-area__text p { font-family: var(--bcm-font-body); font-size: 1rem; line-height: 1.72; color: var(--bcm-text-muted); margin-bottom: 32px; }
+.bcm-cc-area__regions { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.bcm-cc-area__region { background: rgba(250,249,247,0.04); border: 1px solid rgba(200,162,77,0.14); border-radius: var(--bcm-radius-md); padding: 24px; }
+.bcm-cc-area__region h4 { font-family: var(--bcm-font-display); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bcm-gold); margin-bottom: 12px; }
+.bcm-cc-area__region ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.bcm-cc-area__region ul li { font-family: var(--bcm-font-body); font-size: 0.88rem; color: var(--bcm-text-light); display: flex; align-items: center; gap: 8px; }
+.bcm-cc-area__region ul li::before { content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background: var(--bcm-gold); flex-shrink: 0; }
+
+/* FAQ */
+.bcm-cc-faq { padding: 96px 0; background: var(--bcm-surface); }
+.bcm-cc-faq__list { max-width: 780px; margin: 0 auto; }
+.bcm-cc-faq__item { border-bottom: 1px solid var(--bcm-border); }
+.bcm-cc-faq__item input[type="checkbox"] { display: none; }
+.bcm-cc-faq__toggle { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; cursor: pointer; gap: 20px; }
+.bcm-cc-faq__question { font-family: var(--bcm-font-display); font-size: 1rem; font-weight: 600; color: var(--bcm-text-primary); line-height: 1.4; transition: color 0.2s; }
+.bcm-cc-faq__item input:checked + .bcm-cc-faq__toggle .bcm-cc-faq__question { color: var(--bcm-gold-hover); }
+.bcm-cc-faq__indicator {
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  background: var(--bcm-gold-soft); border: 1px solid var(--bcm-gold-border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--bcm-font-display); font-size: 1.2rem; font-weight: 300;
+  color: var(--bcm-charcoal); transition: background 0.2s, color 0.2s, transform 0.25s;
+}
+.bcm-cc-faq__item input:checked + .bcm-cc-faq__toggle .bcm-cc-faq__indicator { background: var(--bcm-charcoal); color: var(--bcm-gold); transform: rotate(45deg); }
+.bcm-cc-faq__answer { max-height: 0; overflow: hidden; transition: max-height 0.35s var(--bcm-ease); }
+.bcm-cc-faq__answer p { font-family: var(--bcm-font-body); font-size: 0.93rem; line-height: 1.7; color: var(--bcm-text-secondary); padding: 0 48px 24px 0; }
+.bcm-cc-faq__item input:checked ~ .bcm-cc-faq__answer { max-height: 400px; }
+
+/* Contact */
+.bcm-cc-contact { padding: 96px 0; background: var(--bcm-white); }
+.bcm-cc-contact__grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start; }
+.bcm-cc-contact__info h2 { font-family: var(--bcm-font-display); font-size: clamp(1.5rem,2.8vw,2rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; color: var(--bcm-black); margin-bottom: 16px; }
+.bcm-cc-contact__info > p { font-family: var(--bcm-font-body); font-size: 0.97rem; line-height: 1.7; color: var(--bcm-text-secondary); margin-bottom: 32px; }
+.bcm-cc-contact__details { display: flex; flex-direction: column; gap: 16px; }
+.bcm-cc-contact__detail { display: flex; align-items: flex-start; gap: 14px; }
+.bcm-cc-contact__detail-icon { width: 40px; height: 40px; background: var(--bcm-gold-soft); border: 1px solid var(--bcm-gold-border); border-radius: var(--bcm-radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.bcm-cc-contact__detail-text span { display: block; font-family: var(--bcm-font-display); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bcm-text-tertiary); margin-bottom: 3px; }
+.bcm-cc-contact__detail-text a,
+.bcm-cc-contact__detail-text p { font-family: var(--bcm-font-body); font-size: 0.95rem; font-weight: 500; color: var(--bcm-text-primary); text-decoration: none; margin: 0; }
+.bcm-cc-contact__detail-text a:hover { color: var(--bcm-gold); }
+.bcm-cc-contact__form-wrap { background: #fff; border: 1px solid var(--bcm-border); border-radius: var(--bcm-radius-lg); padding: 40px; box-shadow: var(--bcm-shadow-sm); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bcm-cc-services__grid,
+  .bcm-cc-benefit__grid,
+  .bcm-cc-area__grid,
+  .bcm-cc-contact__grid { grid-template-columns: 1fr; gap: 40px; }
+  .bcm-cc-services__grid--bottom { grid-template-columns: 1fr 1fr; }
+  .bcm-cc-process__steps { grid-template-columns: repeat(3, 1fr); }
+  .bcm-cc-industries__grid { grid-template-columns: repeat(2, 1fr); }
+  .bcm-cc-why__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .bcm-cc-services__grid,
+  .bcm-cc-services__grid--bottom { grid-template-columns: 1fr; }
+  .bcm-cc-process__steps { grid-template-columns: 1fr 1fr; }
+  .bcm-cc-area__regions { grid-template-columns: 1fr; }
+  .bcm-cc-industries__grid { grid-template-columns: 1fr 1fr; }
+  .bcm-cc-trust__list li { padding: 6px 12px; font-size: 0.65rem; }
+  .bcm-cc-contact__form-wrap { padding: 28px 20px; }
+  .bcm-cc-photo-break { height: 240px; }
+  .bcm-cc-photo-break--tall { height: 280px; }
+}
+@media (max-width: 520px) {
+  .bcm-cc-process__steps { grid-template-columns: 1fr; }
+  .bcm-cc-industries__grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="bcm-cc">
+
+  <!-- Hero -->
+  <section class="bcm-cc-hero">
+    <div class="bcm-cc-hero__inner">
+      <span class="bcm-cc-label">Commercial Construction</span>
+      <h1>Commercial General Contractor<br>Serving <span>North Shore, MA</span></h1>
+      <p class="bcm-cc-hero__lead">Bradford Construction Management delivers ground-up commercial builds, office renovations, tenant improvements, and commercial remodeling throughout the North Shore and Merrimack Valley with commercial-grade project management standards applied to every project.</p>
+      <div class="bcm-cc-hero__ctas">
+        <a href="https://bradfordcm.com/contact/" class="bcm-cc-btn--gold">Request a Commercial Estimate</a>
+        <a href="https://bradfordcm.com/projects/" class="bcm-cc-btn--ghost">View Our Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="bcm-cc-trust">
+    <div class="bcm-cc-container">
+      <ul class="bcm-cc-trust__list">
+        <li>Licensed &amp; Insured</li>
+        <li>MA HIC #201908</li>
+        <li>10+ Years Experience</li>
+        <li>Commercial-Grade Project Management</li>
+        <li>Transparent Pricing</li>
+        <li>North Shore &amp; Merrimack Valley</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="bcm-cc-services">
+    <div class="bcm-cc-container">
+      <div class="bcm-cc-section-header">
+        <span class="bcm-cc-label">What We Build</span>
+        <hr class="bcm-cc-accent-rule">
+        <h2>Commercial Construction Services</h2>
+        <p>Bradford CM offers a full range of commercial general contracting and construction management services for businesses, property owners, and developers across Massachusetts.</p>
+      </div>
+
+      <div class="bcm-cc-services__grid">
+        <div class="bcm-cc-service-card">
+          <div class="bcm-cc-service-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <h3>Commercial Ground-Up Construction</h3>
+          <p>From site work coordination and permitting through foundation, structural, MEP, and finish work, we deliver complete new commercial builds with construction management oversight at every phase.</p>
+        </div>
+        <div class="bcm-cc-service-card">
+          <div class="bcm-cc-service-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3>Commercial Renovation &amp; Remodeling</h3>
+          <p>Retail, restaurant, professional office, and light industrial facilities. We plan renovations around your operations, minimizing disruption so your business keeps running while we work.</p>
+        </div>
+      </div>
+
+      <div class="bcm-cc-services__grid bcm-cc-services__grid--bottom">
+        <div class="bcm-cc-service-card">
+          <div class="bcm-cc-service-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3>Office Renovation &amp; Tenant Improvement</h3>
+          <p>Office build-outs, tenant improvements, space reconfiguration, and full office renovations. Whether you're a landlord preparing a suite or a business planning a move, we deliver turn-key results on time.</p>
+        </div>
+        <div class="bcm-cc-service-card">
+          <div class="bcm-cc-service-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <h3>Commercial Construction Management</h3>
+          <p>Bradford acts as your owner's representative throughout the project, managing subcontractors, budgets, and schedules while maintaining quality control with more transparency than a traditional GC model.</p>
+        </div>
+        <div class="bcm-cc-service-card">
+          <div class="bcm-cc-service-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/>
+              <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+            </svg>
+          </div>
+          <h3>Pre-Construction &amp; Estimating</h3>
+          <p>Feasibility analysis, schematic estimates, value engineering, subcontractor bidding, and permitting support before a shovel hits the ground. Bradford helps you plan right so the build goes right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Break 1 -->
+  <div class="bcm-cc-photo-break">
+    <img src="https://bradfordcm.com/wp-content/uploads/2025/08/construction-site-3.webp" alt="" loading="lazy" width="1440" height="380">
+  </div>
+
+  <!-- Comparison Chart -->
+  <section class="bcm-cc-benefit">
+    <div class="bcm-cc-container">
+      <div class="bcm-cc-benefit__grid">
+        <div class="bcm-cc-benefit__text">
+          <span class="bcm-cc-label">Why Bradford CM</span>
+          <h2>The Commercial Contractor Built on a Different Standard</h2>
+          <p>Most commercial contractors optimize for speed and margin. Bradford CM optimizes for your outcome. That means proactive communication, documented decisions, and accountability at every phase, not just at punch list.</p>
+        </div>
+        <div class="bcm-cc-compare">
+          <div class="bcm-cc-compare__header">
+            <div class="bcm-cc-compare__header-cell">Feature</div>
+            <div class="bcm-cc-compare__header-cell">Bradford CM</div>
+            <div class="bcm-cc-compare__header-cell">Typical GC</div>
+          </div>
+          <div class="bcm-cc-compare__row">
+            <div class="bcm-cc-compare__feature">Pre-Construction Planning</div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__yes"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__no"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></div>
+          </div>
+          <div class="bcm-cc-compare__row">
+            <div class="bcm-cc-compare__feature">Open-Book Budget Reporting</div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__yes"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__no"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></div>
+          </div>
+          <div class="bcm-cc-compare__row">
+            <div class="bcm-cc-compare__feature">Dedicated Owner's Representative</div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__yes"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__no"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></div>
+          </div>
+          <div class="bcm-cc-compare__row">
+            <div class="bcm-cc-compare__feature">Full Permitting Management</div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__yes"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__partial"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div>
+          </div>
+          <div class="bcm-cc-compare__row">
+            <div class="bcm-cc-compare__feature">Value Engineering Included</div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__yes"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__no"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></div>
+          </div>
+          <div class="bcm-cc-compare__row">
+            <div class="bcm-cc-compare__feature">Regular Progress Documentation</div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__yes"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__partial"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div>
+          </div>
+          <div class="bcm-cc-compare__row">
+            <div class="bcm-cc-compare__feature">Formal Closeout with As-Builts</div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__yes"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
+            <div class="bcm-cc-compare__cell"><span class="bcm-cc-compare__no"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose BCM -->
+  <section class="bcm-cc-why">
+    <div class="bcm-cc-container">
+      <div class="bcm-cc-section-header">
+        <span class="bcm-cc-label">Our Differentiators</span>
+        <hr class="bcm-cc-accent-rule">
+        <h2>Why Choose Bradford as Your Commercial Contractor</h2>
+        <p>Choosing the right commercial contractor is one of the most important decisions you will make for your project. Here is what sets Bradford CM apart.</p>
+      </div>
+      <div class="bcm-cc-why__grid">
+        <div class="bcm-cc-why-card">
+          <div class="bcm-cc-why-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <h3>Construction Management Expertise</h3>
+          <p>Bradford does not just build. Our construction management approach means your project has an experienced advocate overseeing every phase, from subcontractor selection to final inspections.</p>
+        </div>
+        <div class="bcm-cc-why-card">
+          <div class="bcm-cc-why-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Licensed, Insured &amp; Code-Compliant</h3>
+          <p>Bradford CM is fully licensed and insured in Massachusetts (MA HIC #201908). We manage all permitting and inspections to ensure full compliance with local and state commercial building codes.</p>
+        </div>
+        <div class="bcm-cc-why-card">
+          <div class="bcm-cc-why-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h3>Transparent Estimating &amp; Budget Control</h3>
+          <p>We provide detailed preconstruction estimates and maintain open-book communication throughout the project. No surprise change orders, just clear documentation at every milestone.</p>
+        </div>
+        <div class="bcm-cc-why-card">
+          <div class="bcm-cc-why-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3>Local Knowledge, Regional Reach</h3>
+          <p>Based in Haverhill, MA, we have deep relationships with local subcontractors, suppliers, and municipal permitting offices across the North Shore, meaning faster turnarounds and stronger accountability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="bcm-cc-industries">
+    <div class="bcm-cc-container">
+      <div class="bcm-cc-section-header">
+        <span class="bcm-cc-label">Project Types</span>
+        <hr class="bcm-cc-accent-rule">
+        <h2>Commercial Projects We Build &amp; Renovate</h2>
+        <p>Bradford CM has experience across a range of commercial project types and industries. Whether you are building new or improving an existing space, our team brings the right expertise.</p>
+      </div>
+      <div class="bcm-cc-industries__grid">
+        <div class="bcm-cc-industry-pill">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span>Office Buildings &amp; Corporate Interiors</span>
+        </div>
+        <div class="bcm-cc-industry-pill">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <span>Retail &amp; Restaurant Fit-Outs</span>
+        </div>
+        <div class="bcm-cc-industry-pill">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/></svg>
+          <span>Warehouse &amp; Light Industrial</span>
+        </div>
+        <div class="bcm-cc-industry-pill">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <span>Medical &amp; Professional Office</span>
+        </div>
+        <div class="bcm-cc-industry-pill">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span>Educational &amp; Institutional</span>
+        </div>
+        <div class="bcm-cc-industry-pill">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          <span>Tenant Improvements &amp; Build-Outs</span>
+        </div>
+        <div class="bcm-cc-industry-pill">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <span>Mixed-Use Development</span>
+        </div>
+        <div class="bcm-cc-industry-pill">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Historic Commercial Renovations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="bcm-cc-process">
+    <div class="bcm-cc-container">
+      <div class="bcm-cc-section-header">
+        <span class="bcm-cc-label">How It Works</span>
+        <hr class="bcm-cc-accent-rule">
+        <h2>Our Commercial Construction Process</h2>
+        <p>Every Bradford CM commercial project follows a structured, transparent process designed to protect your investment and deliver results on time and on budget.</p>
+      </div>
+      <div class="bcm-cc-process__steps">
+        <div class="bcm-cc-step">
+          <div class="bcm-cc-step__num">01</div>
+          <h3>Discovery &amp; Scope</h3>
+          <p>We meet to understand your goals, timeline, and budget, reviewing existing plans and identifying site challenges before any work begins.</p>
+        </div>
+        <div class="bcm-cc-step">
+          <div class="bcm-cc-step__num">02</div>
+          <h3>Pre-Construction Planning</h3>
+          <p>Detailed project plan with cost estimates, schedules, subcontractor requirements, and permit applications. Value engineering offered where applicable.</p>
+        </div>
+        <div class="bcm-cc-step">
+          <div class="bcm-cc-step__num">03</div>
+          <h3>Permitting &amp; Approvals</h3>
+          <p>Bradford manages the full permitting process with local municipalities, ensuring your project is approved and code-compliant before breaking ground.</p>
+        </div>
+        <div class="bcm-cc-step">
+          <div class="bcm-cc-step__num">04</div>
+          <h3>Construction &amp; Oversight</h3>
+          <p>We manage all subcontractors, materials procurement, inspections, and daily site operations with regular progress updates at every stage.</p>
+        </div>
+        <div class="bcm-cc-step">
+          <div class="bcm-cc-step__num">05</div>
+          <h3>Walkthrough &amp; Closeout</h3>
+          <p>Thorough final inspection, complete punch list, and full documentation handoff including warranties and as-built records before we hand over the keys.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Break 2 -->
+  <div class="bcm-cc-photo-break bcm-cc-photo-break--tall">
+    <img src="https://bradfordcm.com/wp-content/uploads/2025/08/construction-site-with-crane.webp" alt="" loading="lazy" width="1440" height="440">
+  </div>
+
+  <!-- Service Area -->
+  <section class="bcm-cc-area">
+    <div class="bcm-cc-container">
+      <div class="bcm-cc-area__grid">
+        <div class="bcm-cc-area__text">
+          <span class="bcm-cc-label">Where We Work</span>
+          <h2>Serving Commercial Clients Across North Shore Massachusetts</h2>
+          <p>Bradford Construction Management serves commercial clients throughout the North Shore and Merrimack Valley. We are a local team with a regional reach, bringing the same quality standards to every project regardless of size or location.</p>
+          <div style="margin-top:32px;">
+            <a href="https://bradfordcm.com/contact/" class="bcm-cc-btn--gold">Start Your Commercial Project</a>
+          </div>
+        </div>
+        <div class="bcm-cc-area__regions">
+          <div class="bcm-cc-area__region">
+            <h4>North Shore MA</h4>
+            <ul>
+              <li>Haverhill (HQ)</li>
+              <li>Newburyport</li>
+              <li>Andover</li>
+              <li>Amesbury</li>
+              <li>Georgetown</li>
+              <li>Ipswich</li>
+            </ul>
+          </div>
+          <div class="bcm-cc-area__region">
+            <h4>Merrimack Valley</h4>
+            <ul>
+              <li>Lawrence</li>
+              <li>Methuen</li>
+              <li>North Andover</li>
+              <li>Groveland</li>
+              <li>West Newbury</li>
+              <li>Merrimac</li>
+            </ul>
+          </div>
+          <div class="bcm-cc-area__region" style="grid-column:1/-1;">
+            <h4>Southern NH</h4>
+            <ul style="flex-direction:row; flex-wrap:wrap; gap:12px;">
+              <li>Exeter</li>
+              <li>Salem</li>
+              <li>Plaistow</li>
+              <li>Surrounding Communities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcm-cc-faq">
+    <div class="bcm-cc-container">
+      <div class="bcm-cc-section-header">
+        <span class="bcm-cc-label">Common Questions</span>
+        <hr class="bcm-cc-accent-rule">
+        <h2>Frequently Asked Questions About Commercial Construction</h2>
+      </div>
+      <div class="bcm-cc-faq__list">
+        <div class="bcm-cc-faq__item">
+          <input type="checkbox" id="bcm-faq-1">
+          <label class="bcm-cc-faq__toggle" for="bcm-faq-1">
+            <span class="bcm-cc-faq__question">What is a commercial general contractor?</span>
+            <span class="bcm-cc-faq__indicator">+</span>
+          </label>
+          <div class="bcm-cc-faq__answer">
+            <p>A commercial general contractor oversees all aspects of a commercial construction or renovation project, including subcontractor management, permitting, scheduling, and quality control. Bradford CM operates as both a commercial general contractor and a construction management firm, giving clients more accountability and transparency throughout the process.</p>
+          </div>
+        </div>
+        <div class="bcm-cc-faq__item">
+          <input type="checkbox" id="bcm-faq-2">
+          <label class="bcm-cc-faq__toggle" for="bcm-faq-2">
+            <span class="bcm-cc-faq__question">What is the difference between a general contractor and a construction manager?</span>
+            <span class="bcm-cc-faq__indicator">+</span>
+          </label>
+          <div class="bcm-cc-faq__answer">
+            <p>A general contractor typically bids and builds. A construction manager acts as the owner's advocate throughout the process, providing more transparency, open-book budgeting, and proactive planning. Bradford CM combines both approaches: we deliver the project and represent your interests at every decision point.</p>
+          </div>
+        </div>
+        <div class="bcm-cc-faq__item">
+          <input type="checkbox" id="bcm-faq-3">
+          <label class="bcm-cc-faq__toggle" for="bcm-faq-3">
+            <span class="bcm-cc-faq__question">What types of commercial projects does Bradford CM handle?</span>
+            <span class="bcm-cc-faq__indicator">+</span>
+          </label>
+          <div class="bcm-cc-faq__answer">
+            <p>We handle a wide range of commercial projects including office renovations, tenant improvements, retail fit-outs, light industrial builds, medical office construction, warehouse improvements, mixed-use development, and ground-up commercial construction throughout the North Shore and Merrimack Valley.</p>
+          </div>
+        </div>
+        <div class="bcm-cc-faq__item">
+          <input type="checkbox" id="bcm-faq-4">
+          <label class="bcm-cc-faq__toggle" for="bcm-faq-4">
+            <span class="bcm-cc-faq__question">Are you licensed for commercial construction in Massachusetts?</span>
+            <span class="bcm-cc-faq__indicator">+</span>
+          </label>
+          <div class="bcm-cc-faq__answer">
+            <p>Yes. Bradford Construction Management is fully licensed and insured in Massachusetts (MA HIC #201908) and complies with all state and local building code requirements. We manage all permitting and inspections as part of our commercial general contracting services.</p>
+          </div>
+        </div>
+        <div class="bcm-cc-faq__item">
+          <input type="checkbox" id="bcm-faq-6">
+          <label class="bcm-cc-faq__toggle" for="bcm-faq-6">
+            <span class="bcm-cc-faq__question">Do you handle commercial permits?</span>
+            <span class="bcm-cc-faq__indicator">+</span>
+          </label>
+          <div class="bcm-cc-faq__answer">
+            <p>Yes. Bradford CM manages all permitting as part of our commercial general contracting services, coordinating directly with local building departments to keep your project on schedule and fully code-compliant from day one.</p>
+          </div>
+        </div>
+        <div class="bcm-cc-faq__item">
+          <input type="checkbox" id="bcm-faq-7">
+          <label class="bcm-cc-faq__toggle" for="bcm-faq-7">
+            <span class="bcm-cc-faq__question">How do I get a quote for my commercial project?</span>
+            <span class="bcm-cc-faq__indicator">+</span>
+          </label>
+          <div class="bcm-cc-faq__answer">
+            <p>Fill out our contact form below or call us at <a href="tel:9789459771">978-945-9771</a>. We will schedule an initial consultation to understand your project scope and provide a detailed preliminary estimate with no pressure and no obligation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="bcm-cc-contact">
+    <div class="bcm-cc-container">
+      <div class="bcm-cc-contact__grid">
+        <div class="bcm-cc-contact__info">
+          <span class="bcm-cc-label">Get In Touch</span>
+          <h2>Start Your Commercial Construction Project with Bradford CM</h2>
+          <p>Whether you are planning a new commercial build, a full office renovation, or a tenant improvement project, our team is ready to help. Fill out the form and we will be in touch within one business day.</p>
+          <div class="bcm-cc-contact__details">
+            <div class="bcm-cc-contact__detail">
+              <div class="bcm-cc-contact__detail-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.09-1.09a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/>
+                </svg>
+              </div>
+              <div class="bcm-cc-contact__detail-text">
+                <span>Phone</span>
+                <a href="tel:9789459771">978-945-9771</a>
+              </div>
+            </div>
+            <div class="bcm-cc-contact__detail">
+              <div class="bcm-cc-contact__detail-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="bcm-cc-contact__detail-text">
+                <span>Office</span>
+                <p>145 S Main St, Haverhill, MA 01835</p>
+              </div>
+            </div>
+            <div class="bcm-cc-contact__detail">
+              <div class="bcm-cc-contact__detail-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+              </div>
+              <div class="bcm-cc-contact__detail-text">
+                <span>Response Time</span>
+                <p>Within 1 business day</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:32px; display:flex; flex-wrap:wrap; gap:10px;">
+            <a href="https://bradfordcm.com/services/" class="bcm-cc-btn--dark" style="font-size:0.85rem; padding:12px 20px;">All Services</a>
+            <a href="https://bradfordcm.com/about-us/" class="bcm-cc-btn--dark" style="font-size:0.85rem; padding:12px 20px;">About Bradford CM</a>
+            <a href="https://bradfordcm.com/design-build/" class="bcm-cc-btn--dark" style="font-size:0.85rem; padding:12px 20px;">Design-Build</a>
+            <a href="https://bradfordcm.com/residential-construction/" class="bcm-cc-btn--dark" style="font-size:0.85rem; padding:12px 20px;">Residential Construction</a>
+          </div>
+        </div>
+        <div class="bcm-cc-contact__form-wrap">
+          <iframe
+            src="https://link.bradfordhs.com/widget/form/gjd0vNkXvXFZ1gi5Q51p"
+            style="width:100%;height:1434px;border:none;border-radius:4px"
+            id="inline-gjd0vNkXvXFZ1gi5Q51p"
+            data-form-name="*BCM Website form"
+            title="*BCM Website form">
+          </iframe>
+          <script src="https://link.bradfordhs.com/js/form_embed.js"></script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
