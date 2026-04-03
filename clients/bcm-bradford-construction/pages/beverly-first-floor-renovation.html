@@ -1,402 +1,626 @@
-<!-- BCM Beverly First Floor Renovation - Project Page - 2026 Brand -->
+<!--
+  BCM Project Page: Beverly First Floor Renovation
+  URL: /projects/beverly-first-floor-renovation/
+  2026 Brand Update Applied
+-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
-  :root {
-    --bcm-black:      #1A1A1A;
-    --bcm-gold:       #C8A24D;
-    --bcm-gold-light: #D9B96A;
-    --bcm-charcoal:   #1C2331;
-    --bcm-maritime:   #0F2A45;
-    --bcm-off-white:  #FAF9F7;
-    --bcm-gray:       #F1F1F1;
-    --bcm-muted:      #6B7280;
-    --bcm-body-text:  #3D3D3D;
-    --font-heading:   'Plus Jakarta Sans', sans-serif;
-    --font-body:      'Inter', sans-serif;
-    --radius:         10px;
-    --radius-lg:      16px;
-    --shadow:         0 2px 16px rgba(26,26,26,.08);
-    --shadow-lg:      0 8px 40px rgba(26,26,26,.14);
-  }
+:root {
+  --bcm-navy:        #0F2A45;
+  --bcm-navy-deep:   #0A1E30;
+  --bcm-dark-slate:  #1C2331;
+  --bcm-gold:        #C8A24D;
+  --bcm-gold-hover:  #D9B96A;
+  --bcm-medium-gray: #6B7280;
+  --bcm-light-gray:  #F1F1F1;
+  --bcm-off-white:   #FAF9F7;
+  --bcm-white:       #FAF9F7;
+  --bcm-border:      #E5E5E2;
+  --font-heading:    'Plus Jakarta Sans', sans-serif;
+  --font-body:       'Inter', sans-serif;
+  --section-padding: clamp(4rem, 8vw, 7rem);
+  --container-max:   1200px;
+  --container-narrow: 800px;
+}
 
-  .bcm-bev * { box-sizing: border-box; margin: 0; padding: 0; }
+.bcm-project-page * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  .bcm-bev {
-    font-family: var(--font-body);
-    color: var(--bcm-body-text);
-    background: var(--bcm-off-white);
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    line-height: 1.6;
-  }
+.bcm-project-page {
+  font-family: var(--font-body);
+  color: var(--bcm-dark-slate);
+  line-height: 1.6;
+  font-size: 16px;
+  background: var(--bcm-white);
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+}
 
-  .bcm-bev img { display: block; width: 100%; }
-  .bcm-bev a { transition: color .2s; }
+.bcm-project-page img { max-width: 100%; height: auto; display: block; }
 
-  /* CONTAINER */
-  .bcm-bev-wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-  .bcm-bev-wrap--narrow { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+/* INFO BAR */
+.bcm-project-info-bar {
+  background: var(--bcm-dark-slate);
+  border-top: 2px solid var(--bcm-gold);
+  padding: 0 2rem;
+}
 
-  /* EYEBROW */
-  .bcm-bev-eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-family: var(--font-heading); font-size: 11px; font-weight: 700;
-    letter-spacing: .16em; text-transform: uppercase; color: var(--bcm-gold);
-    margin-bottom: 14px;
-  }
-  .bcm-bev-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--bcm-gold); }
+.bcm-project-info-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  min-height: 60px;
+}
 
-  /* HERO */
-  .bcm-bev-hero {
-    background: var(--bcm-black);
-    padding: 80px 24px 72px;
-    position: relative;
-    overflow: hidden;
-  }
-  .bcm-bev-hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 70% at 100% 0%, rgba(200,162,77,.1) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  .bcm-bev-hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
-  .bcm-bev-hero h1 {
-    font-family: var(--font-heading); font-size: clamp(32px, 5.5vw, 62px);
-    font-weight: 800; line-height: 1.08; letter-spacing: .01em;
-    color: var(--bcm-off-white); margin-bottom: 18px;
-  }
-  .bcm-bev-hero h1 em { color: var(--bcm-gold); font-style: normal; }
-  .bcm-bev-hero-sub {
-    font-size: clamp(15px, 1.8vw, 18px); color: rgba(250,249,247,.7);
-    line-height: 1.65; max-width: 560px; margin-bottom: 40px;
-  }
-  .bcm-bev-hero-meta {
-    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px;
-  }
-  .bcm-bev-tag {
-    font-family: var(--font-heading); font-size: 11px; font-weight: 700;
-    letter-spacing: .1em; text-transform: uppercase;
-    padding: 6px 14px; border-radius: 100px;
-    border: 1px solid rgba(200,162,77,.35); color: var(--bcm-gold);
-    text-decoration: none;
-  }
-  .bcm-bev-tag:hover { background: rgba(200,162,77,.1); color: var(--bcm-gold); }
-  .bcm-bev-hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.bcm-project-info-bar__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(200, 162, 77, 0.12);
+  border: 1px solid rgba(200, 162, 77, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bcm-white);
+}
 
-  /* BUTTONS */
-  .bcm-bev-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-family: var(--font-heading); font-size: 14px; font-weight: 600;
-    padding: 13px 26px; border-radius: 100px;
-    text-decoration: none; transition: all .22s; min-height: 48px;
-    white-space: nowrap;
-  }
-  .bcm-bev-btn--gold { background: var(--bcm-gold); color: var(--bcm-black); }
-  .bcm-bev-btn--gold:hover { background: var(--bcm-gold-light); color: var(--bcm-black); transform: translateY(-1px); }
-  .bcm-bev-btn--ghost {
-    background: transparent; color: var(--bcm-off-white);
-    border: 1.5px solid rgba(250,249,247,.35);
-  }
-  .bcm-bev-btn--ghost:hover { border-color: var(--bcm-gold); color: var(--bcm-gold); }
+.bcm-project-info-bar__badge svg { width: 14px; height: 14px; fill: var(--bcm-gold); }
 
-  /* SECTION */
-  .bcm-bev-section { padding: 80px 24px; }
-  .bcm-bev-section--dark { background: var(--bcm-charcoal); }
-  .bcm-bev-section--maritime { background: var(--bcm-maritime); }
-  .bcm-bev-section--gray { background: var(--bcm-gray); }
-  .bcm-bev-section--black { background: var(--bcm-black); }
+.bcm-project-info-bar__details { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 
-  .bcm-bev-h2 {
-    font-family: var(--font-heading); font-size: clamp(24px, 3.5vw, 38px);
-    font-weight: 800; letter-spacing: .01em; color: var(--bcm-charcoal);
-    margin-bottom: 16px; line-height: 1.15;
-  }
-  .bcm-bev-h2--light { color: var(--bcm-off-white); }
-  .bcm-bev-lead { font-size: 17px; line-height: 1.75; color: var(--bcm-muted); margin-bottom: 40px; }
+.bcm-project-info-bar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  color: rgba(250, 249, 247, 0.85);
+  font-weight: 500;
+}
 
-  /* CHALLENGE SECTION */
-  .bcm-bev-challenge-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
-    border-radius: var(--radius-lg); overflow: hidden;
-    margin-top: 40px;
-  }
-  .bcm-bev-challenge-card { position: relative; background: var(--bcm-black); }
-  .bcm-bev-challenge-card img {
-    width: 100%; aspect-ratio: 4/3; object-fit: cover; opacity: .65;
-    transition: opacity .3s;
-  }
-  .bcm-bev-challenge-card:hover img { opacity: .5; }
-  .bcm-bev-challenge-caption {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    padding: 32px 20px 20px;
-    background: linear-gradient(to top, rgba(26,26,26,.92) 0%, transparent 100%);
-  }
-  .bcm-bev-challenge-label {
-    font-family: var(--font-heading); font-size: 10px; font-weight: 700;
-    letter-spacing: .14em; text-transform: uppercase; color: var(--bcm-gold);
-    display: block; margin-bottom: 6px;
-  }
-  .bcm-bev-challenge-quote {
-    font-size: 14px; line-height: 1.6; color: rgba(250,249,247,.88);
-    font-style: italic;
-  }
+.bcm-project-info-bar__item svg { width: 16px; height: 16px; color: var(--bcm-gold); opacity: 0.9; }
 
-  /* VISION / DESIGN SECTION */
-  .bcm-bev-plans-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
-    margin-top: 40px;
-  }
-  .bcm-bev-plan-card {
-    border-radius: var(--radius); overflow: hidden;
-    box-shadow: var(--shadow);
-  }
-  .bcm-bev-plan-card img { aspect-ratio: 4/3; object-fit: cover; }
-  .bcm-bev-plan-label {
-    padding: 10px 14px; background: var(--bcm-off-white);
-    font-family: var(--font-heading); font-size: 12px; font-weight: 700;
-    letter-spacing: .06em; text-transform: uppercase; color: var(--bcm-charcoal);
-    text-align: center;
-  }
+.bcm-project-info-bar__divider { width: 4px; height: 4px; background: rgba(250, 249, 247, 0.25); border-radius: 50%; }
 
-  .bcm-bev-design-badge {
-    display: inline-flex; align-items: center; gap: 12px;
-    background: rgba(200,162,77,.1); border: 1px solid rgba(200,162,77,.25);
-    border-radius: var(--radius); padding: 16px 20px; margin-top: 32px;
-  }
-  .bcm-bev-design-badge-icon {
-    width: 36px; height: 36px; border-radius: 8px;
-    background: var(--bcm-gold); display: flex; align-items: center;
-    justify-content: center; flex-shrink: 0;
-  }
-  .bcm-bev-design-badge-icon svg { width: 18px; height: 18px; stroke: var(--bcm-black); fill: none; stroke-width: 2; }
-  .bcm-bev-design-badge p { font-size: 14px; color: var(--bcm-charcoal); line-height: 1.5; margin: 0; }
-  .bcm-bev-design-badge strong { font-family: var(--font-heading); font-weight: 700; display: block; margin-bottom: 2px; }
+@media (max-width: 768px) {
+  .bcm-project-info-bar { padding: 16px 24px; }
+  .bcm-project-info-bar__inner { flex-direction: column; gap: 1rem; }
+  .bcm-project-info-bar__details { flex-direction: column; align-items: center; gap: 0.5rem; }
+  .bcm-project-info-bar__divider { display: none; }
+}
 
-  /* VIDEO */
-  .bcm-bev-video-wrap {
-    border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);
-    margin-top: 40px; background: var(--bcm-black);
-    position: relative;
-  }
-  .bcm-bev-video-wrap video { width: 100%; display: block; }
-  .bcm-bev-video-caption {
-    padding: 14px 20px; background: var(--bcm-charcoal);
-    font-size: 13px; color: rgba(250,249,247,.6);
-    text-align: center; font-style: italic;
-  }
+/* SECTIONS */
+.bcm-project-section { padding: var(--section-padding) 2rem; }
+.bcm-project-section--alt { background: var(--bcm-off-white); }
+.bcm-project-section--navy { background: var(--bcm-navy); color: var(--bcm-white); }
+.bcm-project-container { max-width: var(--container-max); margin: 0 auto; }
+.bcm-project-container--narrow { max-width: var(--container-narrow); }
 
-  /* BEFORE AFTER */
-  .bcm-bev-ba-grid {
-    display: grid; gap: 32px; margin-top: 40px;
-  }
-  .bcm-bev-ba-row {
-    display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px;
-    align-items: center;
-  }
-  .bcm-bev-ba-img { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-  .bcm-bev-ba-img img { aspect-ratio: 4/3; object-fit: cover; }
-  .bcm-bev-ba-arrow {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: var(--bcm-gold); display: flex; align-items: center;
-    justify-content: center; flex-shrink: 0;
-    font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--bcm-black);
-  }
-  .bcm-bev-ba-label {
-    font-family: var(--font-heading); font-size: 11px; font-weight: 700;
-    letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px;
-  }
-  .bcm-bev-ba-label--before { color: var(--bcm-muted); }
-  .bcm-bev-ba-label--after { color: var(--bcm-gold); text-align: right; }
+/* SECTION HEADERS */
+.bcm-project-section__header { text-align: center; margin-bottom: 3rem; }
 
-  /* GALLERY */
-  .bcm-bev-gallery-tabs {
-    display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 24px;
-  }
-  .bcm-bev-gallery-tab input { display: none; }
-  .bcm-bev-gallery-tab label {
-    font-family: var(--font-heading); font-size: 13px; font-weight: 600;
-    padding: 8px 18px; border-radius: 100px;
-    border: 1.5px solid rgba(26,26,26,.12); background: var(--bcm-off-white);
-    color: var(--bcm-muted); cursor: pointer; transition: all .2s;
-    letter-spacing: .02em;
-  }
-  .bcm-bev-gallery-tab input:checked + label {
-    background: var(--bcm-charcoal); color: var(--bcm-off-white); border-color: var(--bcm-charcoal);
-  }
-  .bcm-bev-gallery-tab label:hover { border-color: var(--bcm-gold); color: var(--bcm-charcoal); }
+.bcm-project-section__eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bcm-gold);
+  margin-bottom: 0.75rem;
+  display: block;
+}
 
-  /* Simple gallery grid - all tabs show (WordPress will handle JS filtering) */
-  .bcm-bev-gallery-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
-  }
-  .bcm-bev-gallery-item {
-    border-radius: 6px; overflow: hidden; aspect-ratio: 4/3;
-    position: relative;
-  }
-  .bcm-bev-gallery-item img {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform .4s ease;
-  }
-  .bcm-bev-gallery-item:hover img { transform: scale(1.04); }
-  .bcm-bev-gallery-item--tall { grid-row: span 2; aspect-ratio: auto; }
+.bcm-project-section__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--bcm-dark-slate);
+  letter-spacing: 0.01em;
+}
 
-  /* CRAFTSMANSHIP */
-  .bcm-bev-craft-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-    margin-top: 40px;
-  }
-  .bcm-bev-craft-card {
-    background: rgba(250,249,247,.06); border: 1px solid rgba(200,162,77,.18);
-    border-radius: var(--radius-lg); overflow: hidden;
-    transition: border-color .22s;
-  }
-  .bcm-bev-craft-card:hover { border-color: var(--bcm-gold); }
-  .bcm-bev-craft-card img { aspect-ratio: 16/9; object-fit: cover; }
-  .bcm-bev-craft-body { padding: 24px; }
-  .bcm-bev-craft-body h3 {
-    font-family: var(--font-heading); font-size: 18px; font-weight: 700;
-    color: var(--bcm-gold); margin-bottom: 10px; letter-spacing: .01em;
-  }
-  .bcm-bev-craft-body p { font-size: 15px; line-height: 1.7; color: rgba(250,249,247,.72); margin: 0; }
-  .bcm-bev-craft-quote { font-style: italic; color: rgba(250,249,247,.5); font-size: 13px; margin-top: 10px !important; }
+.bcm-project-section--navy .bcm-project-section__title { color: var(--bcm-white); }
 
-  /* TESTIMONIAL */
-  .bcm-bev-testimonial {
-    border-left: 3px solid var(--bcm-gold); padding: 28px 32px;
-    background: rgba(200,162,77,.06); border-radius: 0 var(--radius) var(--radius) 0;
-    margin: 48px 0 0;
-  }
-  .bcm-bev-testimonial blockquote {
-    font-family: var(--font-heading); font-size: clamp(18px, 2.5vw, 24px);
-    font-weight: 600; color: var(--bcm-off-white); line-height: 1.5;
-    font-style: italic; margin-bottom: 16px;
-  }
-  .bcm-bev-testimonial-attr {
-    font-size: 14px; color: var(--bcm-gold); font-family: var(--font-heading);
-    font-weight: 700; letter-spacing: .06em;
-  }
+.bcm-project-section__subtitle { font-size: 1.1rem; color: var(--bcm-medium-gray); max-width: 600px; margin: 1rem auto 0; }
 
-  /* PROJECT META */
-  .bcm-bev-meta {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
-    margin-top: 40px;
-  }
-  .bcm-bev-meta-item {
-    background: rgba(250,249,247,.06); border: 1px solid rgba(200,162,77,.15);
-    border-radius: var(--radius); padding: 18px 20px;
-  }
-  .bcm-bev-meta-label {
-    font-family: var(--font-heading); font-size: 10px; font-weight: 700;
-    letter-spacing: .14em; text-transform: uppercase; color: var(--bcm-gold);
-    margin-bottom: 6px; display: block;
-  }
-  .bcm-bev-meta-value {
-    font-size: 15px; font-weight: 500; color: var(--bcm-off-white); line-height: 1.4;
-  }
-  .bcm-bev-meta-value a {
-    color: var(--bcm-off-white); text-decoration: underline; text-underline-offset: 3px;
-  }
-  .bcm-bev-meta-value a:hover { color: var(--bcm-gold); }
+/* CHALLENGE CARDS */
+.bcm-challenge-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 
-  /* FINAL CTA */
-  .bcm-bev-cta {
-    background: var(--bcm-charcoal); padding: 80px 24px; text-align: center;
-    position: relative; overflow: hidden;
-  }
-  .bcm-bev-cta::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,162,77,.07) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .bcm-bev-cta-inner { max-width: 580px; margin: 0 auto; position: relative; z-index: 1; }
-  .bcm-bev-cta h2 {
-    font-family: var(--font-heading); font-size: clamp(26px, 3.8vw, 40px);
-    font-weight: 800; color: var(--bcm-off-white); letter-spacing: .01em;
-    margin-bottom: 14px; line-height: 1.15;
-  }
-  .bcm-bev-cta p { font-size: 16px; color: rgba(250,249,247,.65); margin-bottom: 36px; }
-  .bcm-bev-cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .bcm-bev-cta-note { font-size: 13px; color: rgba(250,249,247,.35); margin-top: 20px; letter-spacing: .04em; font-family: var(--font-heading); font-weight: 600; text-transform: uppercase; }
+@media (max-width: 768px) { .bcm-challenge-grid { grid-template-columns: 1fr; } }
 
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    .bcm-bev-section { padding: 56px 20px; }
-    .bcm-bev-hero { padding: 64px 20px 56px; }
-    .bcm-bev-challenge-grid { grid-template-columns: 1fr; }
-    .bcm-bev-plans-grid { grid-template-columns: 1fr; }
-    .bcm-bev-ba-row { grid-template-columns: 1fr; }
-    .bcm-bev-ba-arrow { display: none; }
-    .bcm-bev-ba-label--after { text-align: left; }
-    .bcm-bev-gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .bcm-bev-gallery-item--tall { grid-row: span 1; aspect-ratio: 4/3; }
-    .bcm-bev-craft-grid { grid-template-columns: 1fr; }
-    .bcm-bev-meta { grid-template-columns: 1fr; }
+.bcm-challenge-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bcm-white);
+  box-shadow: 0 4px 20px rgba(28, 35, 49, 0.08);
+  border-top: 3px solid rgba(200, 162, 77, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bcm-challenge-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(28, 35, 49, 0.12); }
+
+.bcm-challenge-card__image { aspect-ratio: 4/3; overflow: hidden; }
+
+.bcm-challenge-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(15%) contrast(0.95);
+  transition: transform 0.4s ease;
+}
+
+.bcm-challenge-card:hover .bcm-challenge-card__image img { transform: scale(1.03); }
+
+.bcm-challenge-card__content { padding: 1.25rem 1.5rem 1.5rem; }
+
+.bcm-challenge-card__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bcm-gold);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.bcm-challenge-card__quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--bcm-dark-slate);
+  line-height: 1.5;
+  padding-left: 1rem;
+  border-left: 3px solid var(--bcm-gold);
+}
+
+/* VISION */
+.bcm-vision-layout { display: block; }
+.bcm-vision-content { max-width: 900px; margin: 0 auto; }
+.bcm-vision-story { max-width: 700px; margin: 0 auto 3rem; text-align: center; }
+.bcm-vision-story p { color: var(--bcm-medium-gray); margin-bottom: 1.5rem; }
+
+.bcm-vision-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--bcm-white);
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  border: 1px solid var(--bcm-border);
+  border-left: 3px solid var(--bcm-gold);
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bcm-vision-highlight__icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(200, 162, 77, 0.12);
+  border: 1px solid rgba(200, 162, 77, 0.25);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bcm-vision-highlight__icon svg { width: 20px; height: 20px; fill: var(--bcm-gold); }
+
+.bcm-vision-highlight__text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  color: var(--bcm-dark-slate);
+  letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+.bcm-vision-highlight__text span { font-size: 0.875rem; color: var(--bcm-medium-gray); }
+
+.bcm-vision-plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+.bcm-vision-plan {
+  background: var(--bcm-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(28, 35, 49, 0.06);
+  border: 1px solid var(--bcm-border);
+  transition: transform 0.2s ease;
+}
+
+.bcm-vision-plan:hover { transform: scale(1.02); }
+
+.bcm-vision-plan img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  background: var(--bcm-light-gray);
+  padding: 1rem;
+}
+
+.bcm-vision-plan__label {
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--bcm-dark-slate);
+  background: var(--bcm-white);
+  border-top: 1px solid var(--bcm-border);
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) { .bcm-vision-plans { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; } }
+
+/* VIDEO */
+.bcm-video-showcase { max-width: 900px; margin: 0 auto; }
+
+.bcm-video-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(28, 35, 49, 0.15);
+  background: var(--bcm-dark-slate);
+}
+
+.bcm-video-wrapper video { width: 100%; height: auto; display: block; }
+
+.bcm-video-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--bcm-white);
+  border-radius: 8px;
+  border: 1px solid var(--bcm-border);
+}
+
+.bcm-video-caption__icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--bcm-dark-slate);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bcm-video-caption__icon svg { width: 14px; height: 14px; fill: var(--bcm-gold); }
+.bcm-video-caption__text { font-size: 0.9rem; color: var(--bcm-medium-gray); }
+.bcm-video-caption__text strong { color: var(--bcm-dark-slate); font-weight: 700; }
+
+@media (max-width: 768px) {
+  .bcm-video-wrapper { border-radius: 12px; }
+  .bcm-video-caption { flex-direction: column; text-align: center; gap: 0.5rem; }
+}
+
+/* BEFORE/AFTER */
+.bcm-comparison-grid { display: grid; gap: 2rem; }
+.bcm-comparison-item { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: stretch; }
+
+@media (max-width: 600px) { .bcm-comparison-item { grid-template-columns: 1fr; } }
+
+.bcm-comparison-side { position: relative; border-radius: 12px; overflow: hidden; }
+
+.bcm-comparison-side img { width: 100%; height: 100%; object-fit: cover; min-height: 250px; }
+.bcm-comparison-side--before img { filter: sepia(20%) contrast(0.9); }
+
+.bcm-comparison-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bcm-comparison-side--before .bcm-comparison-label { background: rgba(0,0,0,0.7); color: var(--bcm-white); }
+.bcm-comparison-side--after .bcm-comparison-label { background: var(--bcm-gold); color: var(--bcm-dark-slate); }
+.bcm-comparison-arrow { display: none; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--bcm-gold); font-weight: 700; }
+
+@media (min-width: 601px) {
+  .bcm-comparison-arrow {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: var(--bcm-white);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(28, 35, 49, 0.15);
+    z-index: 10;
   }
-  @media (min-width: 1024px) {
-    .bcm-bev-challenge-grid { grid-template-columns: repeat(2, 1fr); }
-    .bcm-bev-gallery-grid { grid-template-columns: repeat(4, 1fr); }
-  }
+  .bcm-comparison-item { position: relative; }
+}
+
+/* GALLERY */
+.bcm-gallery-tabs { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+
+.bcm-gallery-tab {
+  padding: 0.6rem 1.25rem;
+  border: 1.5px solid var(--bcm-border);
+  border-radius: 100px;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--bcm-medium-gray);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bcm-gallery-tab:hover { border-color: var(--bcm-dark-slate); color: var(--bcm-dark-slate); }
+.bcm-gallery-tab.active { background: var(--bcm-dark-slate); border-color: var(--bcm-dark-slate); color: var(--bcm-white); }
+
+.bcm-gallery-grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bcm-gallery-grid::-webkit-scrollbar { height: 8px; }
+.bcm-gallery-grid::-webkit-scrollbar-track { background: var(--bcm-light-gray); border-radius: 4px; }
+.bcm-gallery-grid::-webkit-scrollbar-thumb { background: var(--bcm-medium-gray); border-radius: 4px; }
+.bcm-gallery-grid::-webkit-scrollbar-thumb:hover { background: var(--bcm-dark-slate); }
+
+.bcm-gallery-item { flex: 0 0 auto; width: 350px; border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease; scroll-snap-align: start; }
+.bcm-gallery-item:hover { transform: scale(1.02); }
+.bcm-gallery-item img { width: 100%; height: 280px; object-fit: cover; }
+.bcm-gallery-item--tall { width: 280px; }
+.bcm-gallery-item--tall img { height: 350px; }
+.bcm-gallery-item--wide { width: 500px; }
+.bcm-gallery-item--wide img { height: 280px; }
+
+/* DETAILS */
+.bcm-details-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+@media (max-width: 768px) { .bcm-details-grid { grid-template-columns: 1fr; gap: 1.25rem; } }
+
+.bcm-detail-card {
+  background: var(--bcm-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(28, 35, 49, 0.06);
+  border: 1px solid var(--bcm-border);
+  transition: transform 0.3s ease;
+}
+
+.bcm-detail-card:hover { transform: translateY(-4px); }
+.bcm-detail-card__image { aspect-ratio: 16/10; overflow: hidden; }
+.bcm-detail-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.bcm-detail-card:hover .bcm-detail-card__image img { transform: scale(1.05); }
+.bcm-detail-card__content { padding: 1.25rem 1.5rem 1.5rem; }
+
+.bcm-detail-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--bcm-dark-slate);
+  letter-spacing: 0.01em;
+}
+
+.bcm-detail-card__text { font-size: 0.9rem; color: var(--bcm-medium-gray); line-height: 1.5; }
+
+.bcm-detail-card__quote {
+  font-style: italic;
+  color: var(--bcm-gold);
+  font-weight: 600;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--bcm-border);
+  font-size: 0.875rem;
+}
+
+/* SUBTLE LINKS */
+.bcm-project-page a.bcm-subtle-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--bcm-border);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.bcm-project-page a.bcm-subtle-link:hover { color: var(--bcm-gold); border-bottom-color: var(--bcm-gold); }
+
+.bcm-vision-highlight a.bcm-subtle-link { color: var(--bcm-dark-slate); border-bottom-color: rgba(28, 35, 49, 0.25); font-weight: 700; }
+.bcm-vision-highlight a.bcm-subtle-link:hover { color: var(--bcm-gold); border-bottom-color: var(--bcm-gold); }
+
+/* TESTIMONIAL */
+.bcm-testimonial { text-align: center; max-width: 800px; margin: 0 auto; }
+.bcm-testimonial__icon { width: 60px; height: 60px; margin: 0 auto 2rem; opacity: 0.25; }
+
+.bcm-testimonial__quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bcm-white);
+  margin-bottom: 2rem;
+  letter-spacing: 0.01em;
+}
+
+.bcm-testimonial__secondary { font-size: 1.1rem; opacity: 0.85; margin-bottom: 2rem; font-style: italic; }
+.bcm-testimonial__attribution { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+.bcm-testimonial__divider { width: 40px; height: 2px; background: var(--bcm-gold); }
+.bcm-testimonial__name { font-weight: 700; font-size: 0.9rem; letter-spacing: 0.01em; }
+.bcm-testimonial__detail { font-size: 0.85rem; opacity: 0.7; }
+
+/* SPECS */
+.bcm-specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--bcm-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(28, 35, 49, 0.06);
+  border: 1px solid var(--bcm-border);
+}
+
+.bcm-spec { text-align: center; padding: 1rem; }
+
+.bcm-spec__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bcm-gold);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.bcm-spec__value { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--bcm-dark-slate); letter-spacing: 0.01em; }
+
+/* CTA */
+.bcm-cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--bcm-navy) 0%, var(--bcm-navy-deep) 100%);
+  border-radius: 16px;
+  margin: 0 2rem;
+}
+
+.bcm-cta h2, .bcm-cta__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--bcm-white) !important;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.bcm-cta p, .bcm-cta__text { color: rgba(250, 249, 247, 0.88) !important; margin-bottom: 2rem; font-size: 1.05rem; }
+.bcm-cta a, .bcm-cta .bcm-btn--outline { color: var(--bcm-white) !important; }
+.bcm-cta__buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.bcm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  min-height: 50px;
+  letter-spacing: 0.01em;
+}
+
+.bcm-btn--primary { background: var(--bcm-gold); color: var(--bcm-dark-slate); }
+.bcm-btn--primary:hover { background: var(--bcm-gold-hover); color: var(--bcm-dark-slate) !important; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200, 162, 77, 0.35); text-decoration: none; }
+
+.bcm-btn--outline { background: transparent; color: var(--bcm-white); border: 1.5px solid rgba(250, 249, 247, 0.35); }
+.bcm-btn--outline:hover { border-color: var(--bcm-white); background: rgba(250, 249, 247, 0.1); color: var(--bcm-white) !important; text-decoration: none; }
+
+@media (max-width: 768px) {
+  .bcm-project-section { padding: 3rem 1.5rem; }
+  .bcm-cta { margin: 0 1rem; padding: 3rem 1.5rem; }
+  .bcm-gallery-item { width: 280px; }
+  .bcm-gallery-item--wide { width: 350px; }
+}
+
+@media (max-width: 480px) {
+  .bcm-gallery-item { width: 260px; }
+  .bcm-gallery-item--wide { width: 300px; }
+}
 </style>
 
-<div class="bcm-bev">
+<div class="bcm-project-page">
 
-  <!-- HERO -->
-  <section class="bcm-bev-hero">
-    <div class="bcm-bev-hero-inner">
-      <span class="bcm-bev-eyebrow">Featured Project — Beverly, MA</span>
-      <h1>From Closed Off<br>to <em>Wide Open</em></h1>
-      <p class="bcm-bev-hero-sub">Beverly, MA First Floor Renovation — Kitchen, Dining, Stairs, Bath. Designed entirely in-house by Bradford Construction Management.</p>
-      <div class="bcm-bev-hero-meta">
-        <span class="bcm-bev-tag">Beverly, MA</span>
-        <a href="https://bradfordcm.com/home-renovations/" class="bcm-bev-tag">First Floor Renovation</a>
-        <a href="https://bradfordcm.com/kitchen-remodels/" class="bcm-bev-tag">Kitchen</a>
-        <a href="https://bradfordcm.com/bathroom-remodels/" class="bcm-bev-tag">Bath</a>
-        <a href="https://bradfordcm.com/design-build/" class="bcm-bev-tag">Design-Build</a>
-      </div>
-      <div class="bcm-bev-hero-ctas">
-        <a href="https://bradfordcm.com/projects/" class="bcm-bev-btn bcm-bev-btn--gold">See More Projects</a>
-        <a href="https://bradfordcm.com/contact/" class="bcm-bev-btn bcm-bev-btn--ghost">Start Your Project</a>
+  <!-- INFO BAR -->
+  <section class="bcm-project-info-bar">
+    <div class="bcm-project-container">
+      <div class="bcm-project-info-bar__inner">
+        <div class="bcm-project-info-bar__badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Featured Project
+        </div>
+        <div class="bcm-project-info-bar__details">
+          <span class="bcm-project-info-bar__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Beverly, MA
+          </span>
+          <span class="bcm-project-info-bar__divider"></span>
+          <span class="bcm-project-info-bar__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            First Floor Renovation
+          </span>
+          <span class="bcm-project-info-bar__divider"></span>
+          <span class="bcm-project-info-bar__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            Kitchen, Dining, Stairs, Bath
+          </span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- THE CHALLENGE -->
-  <section class="bcm-bev-section bcm-bev-section--dark">
-    <div class="bcm-bev-wrap">
-      <span class="bcm-bev-eyebrow">The Challenge</span>
-      <h2 class="bcm-bev-h2 bcm-bev-h2--light">11 Years of "Making It Work"</h2>
-      <p class="bcm-bev-lead" style="color:rgba(250,249,247,.65);">After more than a decade in their home, this Beverly family was ready to fix the layout that had frustrated them since day one.</p>
+  <section class="bcm-project-section">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">The Challenge</p>
+        <h2 class="bcm-project-section__title">11 Years of "Making It Work"</h2>
+        <p class="bcm-project-section__subtitle">After more than a decade in their home, this Beverly family was ready to fix the layout that had frustrated them since day one.</p>
+      </div>
 
-      <div class="bcm-bev-challenge-grid">
-        <div class="bcm-bev-challenge-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-before-kitchen-aisle.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
-          <div class="bcm-bev-challenge-caption">
-            <span class="bcm-bev-challenge-label">The Kitchen</span>
-            <p class="bcm-bev-challenge-quote">"You couldn't open the oven at the same time as the fridge. They would smash into each other. It was unbelievable."</p>
+      <div class="bcm-challenge-grid">
+        <div class="bcm-challenge-card">
+          <div class="bcm-challenge-card__image"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/IMG_4569-scaled.jpg" alt=""></div>
+          <div class="bcm-challenge-card__content">
+            <span class="bcm-challenge-card__label">The Kitchen</span>
+            <p class="bcm-challenge-card__quote">"You couldn't open the oven at the same time as the fridge. They would smash into each other. It was unbelievable."</p>
           </div>
         </div>
-        <div class="bcm-bev-challenge-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-before-wall.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
-          <div class="bcm-bev-challenge-caption">
-            <span class="bcm-bev-challenge-label">The Wall</span>
-            <p class="bcm-bev-challenge-quote">"There was a huge wall that blocked off the whole kitchen. I'd be cooking and my husband couldn't see me. I'd have to peek my head around the corner."</p>
+        <div class="bcm-challenge-card">
+          <div class="bcm-challenge-card__image"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/IMG_5064-scaled.jpg" alt=""></div>
+          <div class="bcm-challenge-card__content">
+            <span class="bcm-challenge-card__label">The Wall</span>
+            <p class="bcm-challenge-card__quote">"There was a huge wall that blocked off the whole kitchen. I'd be cooking and my husband couldn't see me. I'd have to peek my head around the corner."</p>
           </div>
         </div>
-        <div class="bcm-bev-challenge-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-before-dining.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
-          <div class="bcm-bev-challenge-caption">
-            <span class="bcm-bev-challenge-label">The Dining Room</span>
-            <p class="bcm-bev-challenge-quote">"Once you sat down, you were there for the night. If someone needed to leave, everyone had to get up."</p>
+        <div class="bcm-challenge-card">
+          <div class="bcm-challenge-card__image"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/IMG_5062-scaled.jpg" alt=""></div>
+          <div class="bcm-challenge-card__content">
+            <span class="bcm-challenge-card__label">The Dining Room</span>
+            <p class="bcm-challenge-card__quote">"Once you sat down, you were there for the night. If someone needed to leave, everyone had to get up."</p>
           </div>
         </div>
-        <div class="bcm-bev-challenge-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-before-staircase.webp" alt="" width="600" height="450" loading="lazy" decoding="async">
-          <div class="bcm-bev-challenge-caption">
-            <span class="bcm-bev-challenge-label">The Staircase</span>
-            <p class="bcm-bev-challenge-quote">"All the light from the skylight didn't go anywhere. There were walls blocking everything."</p>
+        <div class="bcm-challenge-card">
+          <div class="bcm-challenge-card__image"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/IMG_5065-scaled.jpg" alt=""></div>
+          <div class="bcm-challenge-card__content">
+            <span class="bcm-challenge-card__label">The Staircase</span>
+            <p class="bcm-challenge-card__quote">"All the light from the skylight didn't go anywhere. There were walls blocking everything."</p>
           </div>
         </div>
       </div>
@@ -404,288 +628,264 @@
   </section>
 
   <!-- THE VISION -->
-  <section class="bcm-bev-section">
-    <div class="bcm-bev-wrap">
-      <span class="bcm-bev-eyebrow">The Vision</span>
-      <h2 class="bcm-bev-h2">Designed Entirely In-House</h2>
-      <p class="bcm-bev-lead">This wasn't a project that needed to be sent out. Our team designed every detail, from the floor plan reconfiguration to Rick's hand-drawn staircase plans. The challenge: removing a load-bearing wall while rerouting all the plumbing that ran through it. The solution required walls positioned specifically to accommodate pipes from upstairs, turning an engineering problem into a design opportunity.</p>
-
-      <div class="bcm-bev-design-badge">
-        <div class="bcm-bev-design-badge-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <p>
-          <strong><a href="https://bradfordcm.com/design-build/" style="color:var(--bcm-charcoal);text-decoration:none;">Design-Build Advantage</a></strong>
-          When design and construction are under one roof, problems become opportunities. No back-and-forth between architects and builders - just solutions. <a href="https://bradfordcm.com/services/" style="color:var(--bcm-charcoal);font-weight:600;text-decoration:underline;text-underline-offset:3px;">See all our services.</a>
-        </p>
+  <section class="bcm-project-section bcm-project-section--alt">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">The Vision</p>
+        <h2 class="bcm-project-section__title">Designed Entirely In-House</h2>
+        <p class="bcm-project-section__subtitle">This wasn't a project that needed to be sent out. <a href="https://bradfordcm.com/about-us/" class="bcm-subtle-link">Our team</a> designed every detail, from the floor plan reconfiguration to Rick's hand-drawn staircase plans.</p>
       </div>
 
-      <div class="bcm-bev-plans-grid">
-        <div class="bcm-bev-plan-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-floor-plan-existing.webp" alt="" width="400" height="300" loading="lazy" decoding="async">
-          <div class="bcm-bev-plan-label">Existing Layout</div>
+      <div class="bcm-vision-content">
+        <div class="bcm-vision-story">
+          <p>The challenge: removing a load-bearing wall while rerouting all the plumbing that ran through it. The solution required walls positioned specifically to accommodate pipes from upstairs, turning an engineering problem into a design opportunity.</p>
+          <div class="bcm-vision-highlight">
+            <div class="bcm-vision-highlight__icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="bcm-vision-highlight__text">
+              <a href="https://bradfordcm.com/design-build/" class="bcm-subtle-link"><strong>Design-Build Advantage</strong></a>
+              <span>When design and construction are under one roof, problems become opportunities. No back-and-forth between architects and builders, just solutions.</span>
+            </div>
+          </div>
         </div>
-        <div class="bcm-bev-plan-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-floor-plan-demo.webp" alt="" width="400" height="300" loading="lazy" decoding="async">
-          <div class="bcm-bev-plan-label">Demo Plan</div>
-        </div>
-        <div class="bcm-bev-plan-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-floor-plan-new.webp" alt="" width="400" height="300" loading="lazy" decoding="async">
-          <div class="bcm-bev-plan-label">New Layout</div>
+        <div class="bcm-vision-plans">
+          <div class="bcm-vision-plan">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/12/Existing-layout-rendering.png" alt="">
+            <p class="bcm-vision-plan__label">Existing Layout</p>
+          </div>
+          <div class="bcm-vision-plan">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/12/Demo-plan-rendering.png" alt="">
+            <p class="bcm-vision-plan__label">Demo Plan</p>
+          </div>
+          <div class="bcm-vision-plan">
+            <img src="https://bradfordcm.com/wp-content/uploads/2025/12/First-floor-layout-rendering.png" alt="">
+            <p class="bcm-vision-plan__label">New Layout</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- VIDEO -->
-  <section class="bcm-bev-section bcm-bev-section--gray">
-    <div class="bcm-bev-wrap">
-      <span class="bcm-bev-eyebrow">Watch the Build</span>
-      <h2 class="bcm-bev-h2">The Full Transformation</h2>
-      <p class="bcm-bev-lead">See how this Beverly home evolved from cramped and closed-off to open and light-filled.</p>
-      <div class="bcm-bev-video-wrap">
-        <video controls preload="none" style="max-height:600px;">
-          <source src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-renovation-walkthrough.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="bcm-bev-video-caption">Before, During &amp; After — An animated walkthrough of the entire renovation process</div>
+  <section class="bcm-project-section">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">Watch the Build</p>
+        <h2 class="bcm-project-section__title">The Full Transformation</h2>
+        <p class="bcm-project-section__subtitle">See how this Beverly home evolved from cramped and closed-off to open and light-filled.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- BEFORE & AFTER -->
-  <section class="bcm-bev-section">
-    <div class="bcm-bev-wrap">
-      <span class="bcm-bev-eyebrow">The Transformation</span>
-      <h2 class="bcm-bev-h2">Before &amp; After</h2>
-
-      <div class="bcm-bev-ba-grid">
-        <div class="bcm-bev-ba-row">
-          <div>
-            <div class="bcm-bev-ba-label bcm-bev-ba-label--before">Before</div>
-            <div class="bcm-bev-ba-img">
-              <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-before-kitchen-wall.webp" alt="" width="500" height="375" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="bcm-bev-ba-arrow">→</div>
-          <div>
-            <div class="bcm-bev-ba-label bcm-bev-ba-label--after">After</div>
-            <div class="bcm-bev-ba-img">
-              <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-after-kitchen-open.webp" alt="" width="500" height="375" loading="lazy" decoding="async">
-            </div>
-          </div>
+      <div class="bcm-video-showcase">
+        <div class="bcm-video-wrapper">
+          <video controls playsinline preload="metadata" poster="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-33-1.webp">
+            <source src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Ancient-Rubbly-Way-Reveal-Video.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
         </div>
-
-        <div class="bcm-bev-ba-row">
-          <div>
-            <div class="bcm-bev-ba-label bcm-bev-ba-label--before">Before</div>
-            <div class="bcm-bev-ba-img">
-              <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-before-staircase-closed.webp" alt="" width="500" height="375" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="bcm-bev-ba-arrow">→</div>
-          <div>
-            <div class="bcm-bev-ba-label bcm-bev-ba-label--after">After</div>
-            <div class="bcm-bev-ba-img">
-              <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-after-staircase-open.webp" alt="" width="500" height="375" loading="lazy" decoding="async">
-            </div>
-          </div>
-        </div>
-
-        <div class="bcm-bev-ba-row">
-          <div>
-            <div class="bcm-bev-ba-label bcm-bev-ba-label--before">Before</div>
-            <div class="bcm-bev-ba-img">
-              <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-before-kitchen-narrow.webp" alt="" width="500" height="375" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="bcm-bev-ba-arrow">→</div>
-          <div>
-            <div class="bcm-bev-ba-label bcm-bev-ba-label--after">After</div>
-            <div class="bcm-bev-ba-img">
-              <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-after-kitchen-spacious.webp" alt="" width="500" height="375" loading="lazy" decoding="async">
-            </div>
-          </div>
+        <div class="bcm-video-caption">
+          <div class="bcm-video-caption__icon"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+          <p class="bcm-video-caption__text"><strong>Before, During &amp; After</strong> &mdash; An animated walkthrough of the entire renovation process</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PHOTO GALLERY -->
-  <section class="bcm-bev-section bcm-bev-section--gray">
-    <div class="bcm-bev-wrap">
-      <span class="bcm-bev-eyebrow">The Result</span>
-      <h2 class="bcm-bev-h2">The Finished Space</h2>
-
-      <div class="bcm-bev-gallery-tabs">
-        <label class="bcm-bev-gallery-tab" style="border:none;padding:0;">
-          <span style="font-family:var(--font-heading);font-size:13px;font-weight:600;color:var(--bcm-muted);padding:8px 0;display:inline-block;">View All Photos</span>
-        </label>
+  <!-- BEFORE/AFTER -->
+  <section class="bcm-project-section bcm-project-section--alt">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">The Transformation</p>
+        <h2 class="bcm-project-section__title">Before &amp; After</h2>
       </div>
-
-      <div class="bcm-bev-gallery-grid">
-        <div class="bcm-bev-gallery-item bcm-bev-gallery-item--tall">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-kitchen-island-sink-window.webp" alt="" width="480" height="720" loading="lazy" decoding="async">
+      <div class="bcm-comparison-grid">
+        <div class="bcm-comparison-item">
+          <div class="bcm-comparison-side bcm-comparison-side--before"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/IMG_5064-scaled.jpg" alt=""><span class="bcm-comparison-label">Before</span></div>
+          <div class="bcm-comparison-arrow">&rarr;</div>
+          <div class="bcm-comparison-side bcm-comparison-side--after"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-32-1.webp" alt=""><span class="bcm-comparison-label">After</span></div>
         </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-kitchen-tin-ceiling-wide.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
+        <div class="bcm-comparison-item">
+          <div class="bcm-comparison-side bcm-comparison-side--before"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/IMG_5065-scaled.jpg" alt=""><span class="bcm-comparison-label">Before</span></div>
+          <div class="bcm-comparison-arrow">&rarr;</div>
+          <div class="bcm-comparison-side bcm-comparison-side--after"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-17-1.webp" alt=""><span class="bcm-comparison-label">After</span></div>
         </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-tin-ceiling-detail.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-kitchen-aisle-stove-sink.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-island-dining-view.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-dining-from-kitchen.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-kitchen-island-lower.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-kitchen-counters-wide.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-viking-cooktop-fridge.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-quartz-countertop-close.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-kitchen-laundry-aisle.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-entry-view-open-concept.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-ceiling-tin-wood-transition.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-primary-sink-fixtures.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-dining-chandelier.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-reclaimed-glass-chandelier-close.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-staircase-full-open.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-staircase-primary-right.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-staircase-looking-up.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-staircase-skylight-windows.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-bathroom-glass-shower.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-bev-gallery-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-hallway-cabinets.webp" alt="" width="480" height="360" loading="lazy" decoding="async">
+        <div class="bcm-comparison-item">
+          <div class="bcm-comparison-side bcm-comparison-side--before"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/IMG_4569-scaled.jpg" alt=""><span class="bcm-comparison-label">Before</span></div>
+          <div class="bcm-comparison-arrow">&rarr;</div>
+          <div class="bcm-comparison-side bcm-comparison-side--after"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-65-1.webp" alt=""><span class="bcm-comparison-label">After</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CRAFTSMANSHIP -->
-  <section class="bcm-bev-section bcm-bev-section--dark">
-    <div class="bcm-bev-wrap">
-      <span class="bcm-bev-eyebrow">Craftsmanship</span>
-      <h2 class="bcm-bev-h2 bcm-bev-h2--light">Signature Details</h2>
-      <p class="bcm-bev-lead" style="color:rgba(250,249,247,.65);">Premium materials and thoughtful design choices that make this space truly special.</p>
-
-      <div class="bcm-bev-craft-grid">
-        <div class="bcm-bev-craft-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-tin-ceiling-install.webp" alt="" width="600" height="338" loading="lazy" decoding="async">
-          <div class="bcm-bev-craft-body">
-            <h3>Tin Ceiling</h3>
-            <p>A stunning focal point that adds character and warmth to the open kitchen space.</p>
-            <p class="bcm-bev-craft-quote">"First one we ever did. Now it's our favorite." — Rick</p>
-          </div>
-        </div>
-        <div class="bcm-bev-craft-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-calcutta-quartz.webp" alt="" width="600" height="338" loading="lazy" decoding="async">
-          <div class="bcm-bev-craft-body">
-            <h3>Calcutta Vermont Quartz</h3>
-            <p>Premium countertops throughout with subtle veining that catches the natural light from the newly opened space.</p>
-          </div>
-        </div>
-        <div class="bcm-bev-craft-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-reclaimed-glass-chandelier-install.webp" alt="" width="600" height="338" loading="lazy" decoding="async">
-          <div class="bcm-bev-craft-body">
-            <h3>Reclaimed Glass Chandelier</h3>
-            <p>Recycled glass, boiled down and formed into elegant strips. A sustainable statement piece that commands attention over the dining table.</p>
-          </div>
-        </div>
-        <div class="bcm-bev-craft-card">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/beverly-white-oak-floors.webp" alt="" width="600" height="338" loading="lazy" decoding="async">
-          <div class="bcm-bev-craft-body">
-            <h3>White Oak Floors</h3>
-            <p>Water-based poly finish chosen specifically because it won't yellow over time, keeping the natural white oak tone beautiful for decades to come.</p>
-          </div>
-        </div>
+  <!-- GALLERY -->
+  <section class="bcm-project-section">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">The Result</p>
+        <h2 class="bcm-project-section__title">The Finished Space</h2>
       </div>
-
-      <div class="bcm-bev-testimonial">
-        <blockquote>"I didn't know what it was going to look like, really, but now that we have it, I wouldn't trade it for the world. Now I can cook and actually see my guests."</blockquote>
-        <span class="bcm-bev-testimonial-attr">Kimberly — Beverly, MA &middot; 11 Years in the Home</span>
+      <div class="bcm-gallery-tabs">
+        <button class="bcm-gallery-tab active" data-gallery="all">All Photos</button>
+        <button class="bcm-gallery-tab" data-gallery="kitchen">Kitchen</button>
+        <button class="bcm-gallery-tab" data-gallery="dining">Dining</button>
+        <button class="bcm-gallery-tab" data-gallery="stairs">Staircase</button>
+        <button class="bcm-gallery-tab" data-gallery="bath">Bath</button>
       </div>
-    </div>
-  </section>
-
-  <!-- PROJECT META -->
-  <section class="bcm-bev-section bcm-bev-section--maritime">
-    <div class="bcm-bev-wrap">
-      <span class="bcm-bev-eyebrow">Project Details</span>
-      <h2 class="bcm-bev-h2 bcm-bev-h2--light">About This Project</h2>
-
-      <div class="bcm-bev-meta">
-        <div class="bcm-bev-meta-item">
-          <span class="bcm-bev-meta-label">Location</span>
-          <span class="bcm-bev-meta-value">Beverly, MA</span>
-        </div>
-        <div class="bcm-bev-meta-item">
-          <span class="bcm-bev-meta-label">Project Type</span>
-          <span class="bcm-bev-meta-value"><a href="https://bradfordcm.com/home-renovations/">First Floor Renovation</a></span>
-        </div>
-        <div class="bcm-bev-meta-item">
-          <span class="bcm-bev-meta-label">Scope</span>
-          <span class="bcm-bev-meta-value"><a href="https://bradfordcm.com/kitchen-remodels/">Kitchen</a>, Dining, Stairs, <a href="https://bradfordcm.com/bathroom-remodels/">Bath</a></span>
-        </div>
-        <div class="bcm-bev-meta-item">
-          <span class="bcm-bev-meta-label">Design</span>
-          <span class="bcm-bev-meta-value"><a href="https://bradfordcm.com/design-build/">In-House by BCM Design-Build</a></span>
-        </div>
-        <div class="bcm-bev-meta-item">
-          <span class="bcm-bev-meta-label">Key Features</span>
-          <span class="bcm-bev-meta-value">Open Concept, Tin Ceiling, Skylights, White Oak</span>
-        </div>
-        <div class="bcm-bev-meta-item">
-          <span class="bcm-bev-meta-label">Services Used</span>
-          <span class="bcm-bev-meta-value"><a href="https://bradfordcm.com/services/">Full Design-Build Package</a></span>
-        </div>
+      <div class="bcm-gallery-grid">
+        <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-33-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-35-1.webp" alt=""></div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-10-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-65-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-57-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-56-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-50-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-48-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-43-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-41-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-38-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-31-1.jpg" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-30-1.webp" alt=""></div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-29-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="kitchen"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-5-1.webp" alt=""></div>
+        <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="dining"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-34-1.webp" alt=""></div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="dining"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-45-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="dining"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-46-1.webp" alt=""></div>
+        <div class="bcm-gallery-item bcm-gallery-item--wide" data-category="stairs"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-16-1.webp" alt=""></div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="stairs"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-17-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="stairs"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-20-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="stairs"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-19-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="stairs"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-14-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="stairs"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-12-1.webp" alt=""></div>
+        <div class="bcm-gallery-item" data-category="bath"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-51-1.webp" alt=""></div>
+        <div class="bcm-gallery-item bcm-gallery-item--tall" data-category="bath"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-54-1.webp" alt=""></div>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="bcm-bev-cta">
-    <div class="bcm-bev-cta-inner">
-      <h2>Ready to Transform Your Space?</h2>
-      <p>Free consultation, detailed estimate, no high-pressure sales. One team from design through build.</p>
-      <div class="bcm-bev-cta-actions">
-        <a href="https://bradfordcm.com/contact/" class="bcm-bev-btn bcm-bev-btn--gold">Start Your Project</a>
-        <a href="https://bradfordcm.com/projects/" class="bcm-bev-btn bcm-bev-btn--ghost">See More Projects</a>
+  <!-- SIGNATURE DETAILS -->
+  <section class="bcm-project-section bcm-project-section--alt">
+    <div class="bcm-project-container">
+      <div class="bcm-project-section__header">
+        <p class="bcm-project-section__eyebrow">Craftsmanship</p>
+        <h2 class="bcm-project-section__title">Signature Details</h2>
+        <p class="bcm-project-section__subtitle">Premium materials and thoughtful design choices that make this space truly special.</p>
       </div>
-      <p class="bcm-bev-cta-note">MA HIC #201908 &nbsp;&middot;&nbsp; Licensed &amp; Insured &nbsp;&middot;&nbsp; 10+ Years</p>
+      <div class="bcm-details-grid">
+        <div class="bcm-detail-card">
+          <div class="bcm-detail-card__image"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-10-1.webp" alt=""></div>
+          <div class="bcm-detail-card__content">
+            <h3 class="bcm-detail-card__title">Tin Ceiling</h3>
+            <p class="bcm-detail-card__text">A stunning focal point that adds character and warmth to the open kitchen space.</p>
+            <p class="bcm-detail-card__quote">"First one we ever did. Now it's our favorite." &mdash; Rick</p>
+          </div>
+        </div>
+        <div class="bcm-detail-card">
+          <div class="bcm-detail-card__image"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-41-1.webp" alt=""></div>
+          <div class="bcm-detail-card__content">
+            <h3 class="bcm-detail-card__title">Calcutta Vermont Quartz</h3>
+            <p class="bcm-detail-card__text">Premium countertops throughout with subtle veining that catches the natural light from the newly opened space.</p>
+          </div>
+        </div>
+        <div class="bcm-detail-card">
+          <div class="bcm-detail-card__image"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-46-1.webp" alt=""></div>
+          <div class="bcm-detail-card__content">
+            <h3 class="bcm-detail-card__title">Reclaimed Glass Chandelier</h3>
+            <p class="bcm-detail-card__text">Recycled glass, boiled down and formed into elegant strips. A sustainable statement piece that commands attention over the dining table.</p>
+          </div>
+        </div>
+        <div class="bcm-detail-card">
+          <div class="bcm-detail-card__image"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-35-1.webp" alt=""></div>
+          <div class="bcm-detail-card__content">
+            <h3 class="bcm-detail-card__title">White Oak Floors</h3>
+            <p class="bcm-detail-card__text">Water-based poly finish chosen specifically because it won't yellow over time, keeping the natural white oak tone beautiful for decades to come.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="bcm-project-section bcm-project-section--navy">
+    <div class="bcm-project-container bcm-project-container--narrow">
+      <div class="bcm-testimonial">
+        <svg class="bcm-testimonial__icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+        </svg>
+        <blockquote class="bcm-testimonial__quote">"I didn't know what it was going to look like, really, but now that we have it, I wouldn't trade it for the world."</blockquote>
+        <p class="bcm-testimonial__secondary">"Now I can cook and actually see my guests."</p>
+        <div class="bcm-testimonial__attribution">
+          <span class="bcm-testimonial__divider"></span>
+          <div>
+            <p class="bcm-testimonial__name">Kimberly</p>
+            <p class="bcm-testimonial__detail">Beverly, MA &middot; 11 Years in the Home</p>
+          </div>
+          <span class="bcm-testimonial__divider"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT SPECS -->
+  <section class="bcm-project-section bcm-project-section--alt">
+    <div class="bcm-project-container bcm-project-container--narrow">
+      <div class="bcm-specs">
+        <div class="bcm-spec">
+          <span class="bcm-spec__label">Location</span>
+          <p class="bcm-spec__value">Beverly, MA</p>
+        </div>
+        <div class="bcm-spec">
+          <span class="bcm-spec__label">Project Type</span>
+          <p class="bcm-spec__value"><a href="https://bradfordcm.com/home-renovations/" class="bcm-subtle-link">First Floor Renovation</a></p>
+        </div>
+        <div class="bcm-spec">
+          <span class="bcm-spec__label">Scope</span>
+          <p class="bcm-spec__value">Kitchen, Dining, Stairs, Bath</p>
+        </div>
+        <div class="bcm-spec">
+          <span class="bcm-spec__label">Design</span>
+          <p class="bcm-spec__value">In-House by BCM</p>
+        </div>
+        <div class="bcm-spec">
+          <span class="bcm-spec__label">Key Features</span>
+          <p class="bcm-spec__value">Open Concept, Tin Ceiling, Skylights</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bcm-project-section">
+    <div class="bcm-project-container bcm-project-container--narrow">
+      <div class="bcm-cta">
+        <h2 class="bcm-cta__title">Ready to Transform Your Space?</h2>
+        <p class="bcm-cta__text">Free consultation &bull; Detailed estimate &bull; No high-pressure sales</p>
+        <div class="bcm-cta__buttons">
+          <a href="https://bradfordcm.com/contact/" class="bcm-btn bcm-btn--primary">
+            Start Your Project
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="https://bradfordcm.com/projects/" class="bcm-btn bcm-btn--outline">See More Projects</a>
+        </div>
+      </div>
     </div>
   </section>
 
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.bcm-gallery-tab');
+  const items = document.querySelectorAll('.bcm-gallery-item');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      const filter = this.dataset.gallery;
+      tabs.forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      items.forEach(item => {
+        item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
+      });
+    });
+  });
+});
+</script>
