@@ -1,98 +1,93 @@
-<!--
-  BRADFORD CONSTRUCTION MANAGEMENT - PORTSMOUTH, NH ADU LOCATION PAGE
-  URL: /adu-builder-portsmouth-nh/
-  Updated: 2026-04-01 - 2026 Design System (v2.1)
-  Fonts: Plus Jakarta Sans (headings), Inter (body)
-  Primary Keyword: ADU builder Portsmouth NH
--->
+<!-- BCM Portsmouth ADU Page - 2026 Brand Update -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-
+/* === BCM Portsmouth ADU - 2026 Brand === */
 :root {
-  --bcm-black: #1A1A1A;
-  --bcm-gold: #C8A24D;
-  --bcm-charcoal: #1C2331;
-  --bcm-white: #FAF9F7;
-  --bcm-maritime: #0F2A45;
-  --bcm-sage: #7A9B7E;
-  --bcm-gray: #F1F1F1;
-  --bcm-gold-hover: #B8923F;
-  --bcm-gold-light: #D4B46A;
-  --bcm-gold-soft: rgba(200, 162, 77, 0.07);
-  --bcm-gold-border: rgba(200, 162, 77, 0.18);
-  --bcm-gold-glow: rgba(200, 162, 77, 0.12);
-  --bcm-text-primary: #1C2331;
-  --bcm-text-secondary: #3A4255;
-  --bcm-text-tertiary: #5C6478;
-  --bcm-text-light: rgba(250, 249, 247, 0.88);
-  --bcm-text-muted: rgba(250, 249, 247, 0.62);
-  --bcm-surface: #F7F7F5;
-  --bcm-surface-raised: #FFFFFF;
-  --bcm-border: #E5E5E2;
-  --bcm-border-subtle: rgba(28, 35, 49, 0.06);
-  --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
-  --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
-  --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
-  --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
-  --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
-  --bcm-radius: 6px;
-  --bcm-radius-md: 10px;
-  --bcm-radius-lg: 14px;
-  --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
-  --bcm-font-body: 'Inter', -apple-system, sans-serif;
-  --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --bcm-navy:        #0F2A45;
+  --bcm-navy-deep:   #0A1E30;
+  --bcm-navy-90:     rgba(15, 42, 69, 0.9);
+  --bcm-gold:        #C8A24D;
+  --bcm-gold-hover:  #D9B96A;
+  --bcm-gold-soft:   rgba(200, 162, 77, 0.10);
+  --bcm-gold-glow:   rgba(200, 162, 77, 0.25);
+  --bcm-dark-slate:  #1C2331;
+  --bcm-medium-gray: #6B7280;
+  --bcm-light-gray:  #F1F1F1;
+  --bcm-off-white:   #FAF9F7;
+  --bcm-white:       #FAF9F7;
+  --bcm-shadow-sm:   0 1px 3px rgba(28, 35, 49, 0.06), 0 1px 2px rgba(28, 35, 49, 0.03);
+  --bcm-shadow-md:   0 4px 20px rgba(28, 35, 49, 0.07), 0 2px 6px rgba(28, 35, 49, 0.04);
+  --bcm-shadow-lg:   0 12px 36px rgba(28, 35, 49, 0.09), 0 4px 12px rgba(28, 35, 49, 0.04);
+  --bcm-shadow-gold: 0 4px 16px rgba(200, 162, 77, 0.3);
+  --bcm-radius:      10px;
+  --bcm-radius-lg:   14px;
 }
 
-.bcm-portsmouth { box-sizing: border-box; }
 .bcm-portsmouth * { box-sizing: border-box; }
 
 .bcm-portsmouth {
-  font-family: var(--bcm-font-body);
-  color: var(--bcm-text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--bcm-dark-slate);
   line-height: 1.6;
   font-size: 16px;
   width: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.bcm-portsmouth h1, .bcm-portsmouth h2, .bcm-portsmouth h3 {
-  font-family: var(--bcm-font-display);
-  line-height: 1.2;
-  margin: 0;
+/* === TYPOGRAPHY === */
+.bcm-portsmouth h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  color: var(--bcm-white);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.01em;
 }
 
 .bcm-portsmouth h2 {
-  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
   font-size: 1.85rem;
-  color: var(--bcm-text-primary);
-  margin-bottom: 16px;
+  line-height: 1.2;
+  color: var(--bcm-dark-slate);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.01em;
 }
 
 .bcm-portsmouth h3 {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--bcm-text-primary);
-  margin-bottom: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: var(--bcm-dark-slate);
+  margin: 0 0 10px 0;
+  letter-spacing: 0.01em;
 }
 
 .bcm-portsmouth p {
   margin: 0 0 16px 0;
-  color: var(--bcm-text-primary);
+  color: var(--bcm-dark-slate);
 }
 
 .bcm-portsmouth a {
-  color: var(--bcm-black);
+  color: var(--bcm-dark-slate);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
-  transition: color 0.2s var(--bcm-ease);
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 .bcm-portsmouth a:hover:not(.bcm-portsmouth-cta) {
-  color: var(--bcm-gold-hover);
+  color: var(--bcm-gold);
 }
 
 .bcm-portsmouth img {
@@ -101,13 +96,26 @@
   display: block;
 }
 
+.bcm-portsmouth-lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--bcm-medium-gray);
+}
+
+/* === LAYOUT === */
 .bcm-portsmouth-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* HERO */
+.bcm-portsmouth-container--narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* === HERO === */
 .bcm-portsmouth-hero {
   position: relative;
   min-height: 520px;
@@ -131,7 +139,7 @@
 .bcm-portsmouth-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(170deg, rgba(26, 26, 26, 0.85) 0%, rgba(28, 35, 49, 0.75) 50%, rgba(15, 42, 69, 0.78) 100%);
+  background: linear-gradient(170deg, rgba(10, 30, 48, 0.88) 0%, rgba(15, 42, 69, 0.72) 50%, rgba(28, 35, 49, 0.65) 100%);
   z-index: 1;
 }
 
@@ -148,115 +156,263 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(200, 162, 77, 0.12);
-  border: 1px solid rgba(200, 162, 77, 0.25);
-  border-radius: 20px;
+  background: rgba(250, 249, 247, 0.12);
+  border: 1px solid rgba(250, 249, 247, 0.2);
+  border-radius: 9999px;
   padding: 8px 18px;
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 700;
   color: var(--bcm-gold);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 20px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
 }
 
-.bcm-portsmouth-hero__badge svg {
-  width: 14px;
-  height: 14px;
-  stroke: currentColor;
-}
-
-.bcm-portsmouth-hero h1 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: var(--bcm-white);
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-}
-
-.bcm-portsmouth-hero p {
-  font-size: 1.1rem;
-  color: rgba(250, 249, 247, 0.9);
+.bcm-portsmouth-hero__content p {
+  color: rgba(250, 249, 247, 0.88);
+  font-size: 1.15rem;
+  margin-bottom: 36px;
   line-height: 1.7;
-  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bcm-portsmouth-hero__ctas {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 14px;
   justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .bcm-portsmouth-hero__ctas {
-    flex-direction: row;
-  }
+/* === BUTTONS === */
+.bcm-portsmouth-cta {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 15px 32px;
+  border-radius: 9999px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  min-height: 50px;
+  letter-spacing: 0.01em;
+  border: none;
 }
 
-/* TRUST BAR */
+.bcm-portsmouth-cta:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+/* Primary gold - charcoal text, always readable */
+.bcm-portsmouth a.bcm-portsmouth-cta--primary {
+  background: var(--bcm-gold);
+  color: var(--bcm-dark-slate);
+  box-shadow: var(--bcm-shadow-gold);
+}
+
+.bcm-portsmouth a.bcm-portsmouth-cta--primary:hover {
+  background: var(--bcm-gold-hover);
+  color: var(--bcm-dark-slate);
+  box-shadow: 0 6px 24px rgba(200, 162, 77, 0.4);
+}
+
+/* Outline - ghost for hero dark backgrounds, white text always visible */
+.bcm-portsmouth a.bcm-portsmouth-cta--outline {
+  background: rgba(250, 249, 247, 0.12);
+  color: var(--bcm-white);
+  border: 1.5px solid rgba(250, 249, 247, 0.5);
+  backdrop-filter: blur(6px);
+}
+
+.bcm-portsmouth a.bcm-portsmouth-cta--outline:hover {
+  background: rgba(250, 249, 247, 0.22);
+  color: var(--bcm-gold);
+  border-color: var(--bcm-gold);
+}
+
+/* Navy outline - solid charcoal for light section backgrounds */
+.bcm-portsmouth a.bcm-portsmouth-cta--navy-outline {
+  background: var(--bcm-dark-slate);
+  color: var(--bcm-white);
+  border: 1.5px solid var(--bcm-dark-slate);
+}
+
+.bcm-portsmouth a.bcm-portsmouth-cta--navy-outline:hover {
+  background: var(--bcm-navy);
+  border-color: var(--bcm-navy);
+  color: var(--bcm-white);
+}
+
+/* Gold CTA - for section bottoms */
+.bcm-portsmouth a.bcm-portsmouth-cta--gold {
+  background: var(--bcm-gold);
+  color: var(--bcm-dark-slate);
+  box-shadow: var(--bcm-shadow-gold);
+}
+
+.bcm-portsmouth a.bcm-portsmouth-cta--gold:hover {
+  background: var(--bcm-gold-hover);
+  color: var(--bcm-dark-slate);
+  box-shadow: 0 6px 24px rgba(200, 162, 77, 0.4);
+}
+
+/* White outline - for navy CTA sections */
+.bcm-portsmouth a.bcm-portsmouth-cta--white-outline {
+  background: rgba(250, 249, 247, 0.12);
+  color: var(--bcm-white);
+  border: 1.5px solid rgba(250, 249, 247, 0.5);
+}
+
+.bcm-portsmouth a.bcm-portsmouth-cta--white-outline:hover {
+  background: rgba(250, 249, 247, 0.22);
+  color: var(--bcm-gold);
+  border-color: var(--bcm-gold);
+}
+
+/* === TRUST BAR === */
 .bcm-portsmouth-trust {
-  background: var(--bcm-black);
-  padding: 24px 0;
+  background: var(--bcm-dark-slate);
+  padding: 0;
   position: relative;
-}
-
-.bcm-portsmouth-trust::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /></filter></defs><rect width="100" height="100" fill="black" filter="url(%23noise)" opacity="0.02"/></svg>');
-  pointer-events: none;
+  z-index: 3;
+  border-top: 2px solid var(--bcm-gold);
 }
 
 .bcm-portsmouth-trust__inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
-  position: relative;
-  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
 }
 
-.bcm-portsmouth-trust__item {
+.bcm-portsmouth-trust__badge {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: rgba(250, 249, 247, 0.7);
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1.4;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 24px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--bcm-white);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 180px;
 }
 
-.bcm-portsmouth-trust__item svg {
-  width: 20px;
-  height: 20px;
+.bcm-portsmouth-trust__badge + .bcm-portsmouth-trust__badge::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 25%;
+  bottom: 25%;
+  width: 1px;
+  background: rgba(250, 249, 247, 0.12);
+}
+
+.bcm-portsmouth-trust__badge svg {
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
-  stroke: var(--bcm-gold);
-  stroke-width: 1.5;
 }
 
-/* INTRO */
+.bcm-portsmouth-trust__accent { display: none; }
+
+/* === SECTIONS === */
+.bcm-portsmouth-section {
+  padding: 72px 0;
+  position: relative;
+}
+
+.bcm-portsmouth-section--alt {
+  background: var(--bcm-light-gray);
+}
+
+.bcm-portsmouth-section--navy {
+  background: linear-gradient(170deg, var(--bcm-navy) 0%, var(--bcm-navy-deep) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bcm-portsmouth-section--navy::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(200, 162, 77, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.bcm-portsmouth-section--navy::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(250, 249, 247, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.bcm-portsmouth-section--navy h2,
+.bcm-portsmouth-section--navy p,
+.bcm-portsmouth-section--navy li {
+  color: var(--bcm-white);
+}
+
+.bcm-portsmouth-section--navy a {
+  color: var(--bcm-gold);
+}
+
+.bcm-portsmouth-section__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 44px auto;
+}
+
+.bcm-portsmouth-section__header p {
+  color: var(--bcm-medium-gray);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.bcm-portsmouth-section__header h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--bcm-gold);
+  margin: 16px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* === INTRO === */
 .bcm-portsmouth-intro {
   padding: 72px 0 60px 0;
-  background: var(--bcm-white);
 }
 
 .bcm-portsmouth-intro__header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 .bcm-portsmouth-intro__header h2::after {
   content: '';
   display: block;
-  width: 48px;
-  height: 3px;
+  width: 40px;
+  height: 2px;
   background: var(--bcm-gold);
-  margin: 16px auto 0;
+  margin: 16px auto 0 auto;
   border-radius: 2px;
 }
 
@@ -265,178 +421,102 @@
   margin: 0 auto;
 }
 
-.bcm-portsmouth-intro__body p:first-child {
-  font-size: 1.05rem;
-  color: var(--bcm-text-primary);
-  font-weight: 500;
-}
-
 .bcm-portsmouth-intro__body p {
-  font-size: 1rem;
+  font-size: 1.02rem;
   line-height: 1.75;
-  color: var(--bcm-text-tertiary);
+  color: var(--bcm-medium-gray);
 }
 
-/* SECTION */
-.bcm-portsmouth-section {
-  padding: 96px 0;
-  background: var(--bcm-white);
+.bcm-portsmouth-intro__body p:first-child {
+  font-size: 1.08rem;
+  color: var(--bcm-dark-slate);
 }
 
-.bcm-portsmouth-section--alt {
-  background: var(--bcm-surface);
+/* === ZIGZAG (ADU TYPES) === */
+.bcm-portsmouth-zigzag {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
-.bcm-portsmouth-section--navy {
-  background: linear-gradient(170deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
-  padding: 112px 0;
-  position: relative;
-}
-
-.bcm-portsmouth-section--navy::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 80% 50%, rgba(200, 162, 77, 0.08) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-.bcm-portsmouth-section__header {
-  text-align: center;
-  margin-bottom: 56px;
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bcm-portsmouth-section__header h2 {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 16px;
-}
-
-.bcm-portsmouth-section__header h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 48px;
-  height: 2px;
-  background: var(--bcm-gold);
-  border-radius: 1px;
-}
-
-.bcm-portsmouth-section--navy .bcm-portsmouth-section__header h2 {
-  color: var(--bcm-white);
-}
-
-.bcm-portsmouth-section__header p {
-  font-size: 1rem;
-  color: var(--bcm-text-tertiary);
-  line-height: 1.7;
-}
-
-.bcm-portsmouth-section--navy .bcm-portsmouth-section__header p {
-  color: var(--bcm-text-light);
-}
-
-/* GRID: Types */
-.bcm-portsmouth-types-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-@media (min-width: 1024px) {
-  .bcm-portsmouth-types-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.bcm-portsmouth-type-card {
+.bcm-portsmouth-zigzag__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   background: var(--bcm-white);
   border-radius: var(--bcm-radius-lg);
   overflow: hidden;
   box-shadow: var(--bcm-shadow-md);
-  border: 1px solid var(--bcm-border);
-  transition: box-shadow 0.3s var(--bcm-ease), transform 0.3s var(--bcm-ease);
+  border: 1px solid rgba(241, 241, 241, 0.8);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
 }
 
-.bcm-portsmouth-type-card:hover {
+.bcm-portsmouth-zigzag__item:hover {
   box-shadow: var(--bcm-shadow-lg);
   transform: translateY(-3px);
 }
 
-.bcm-portsmouth-type-card__img {
+.bcm-portsmouth-zigzag__img {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/10;
   overflow: hidden;
 }
 
-.bcm-portsmouth-type-card__img img {
+.bcm-portsmouth-zigzag__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s var(--bcm-ease);
+  transition: transform 0.6s ease;
 }
 
-.bcm-portsmouth-type-card:hover .bcm-portsmouth-type-card__img img {
-  transform: scale(1.03);
+.bcm-portsmouth-zigzag__item:hover .bcm-portsmouth-zigzag__img img {
+  transform: scale(1.04);
 }
 
-.bcm-portsmouth-type-card__body {
+.bcm-portsmouth-zigzag__text {
   padding: 28px;
 }
 
-.bcm-portsmouth-type-card__body h3 {
-  font-size: 1.15rem;
-  margin-bottom: 10px;
+.bcm-portsmouth-zigzag__text h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: var(--bcm-dark-slate);
 }
 
-.bcm-portsmouth-type-card__body p {
-  font-size: 0.95rem;
-  color: var(--bcm-text-tertiary);
-  margin: 0;
-  line-height: 1.65;
+.bcm-portsmouth-zigzag__text p {
+  color: var(--bcm-medium-gray);
+  line-height: 1.7;
 }
 
-/* GRID: Why Bradford */
-.bcm-portsmouth-why-grid {
+/* === PROOF CARDS === */
+.bcm-portsmouth-proof-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 16px;
 }
 
-@media (min-width: 1024px) {
-  .bcm-portsmouth-why-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.bcm-portsmouth-why-card {
+.bcm-portsmouth-proof-card {
   background: var(--bcm-white);
-  border-radius: var(--bcm-radius-md);
+  border-radius: var(--bcm-radius);
   padding: 28px;
   box-shadow: var(--bcm-shadow-sm);
-  border: 1px solid var(--bcm-border);
-  transition: box-shadow 0.2s var(--bcm-ease), transform 0.2s var(--bcm-ease);
+  border: 1px solid var(--bcm-light-gray);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  text-align: center;
+  gap: 20px;
+  align-items: flex-start;
 }
 
-.bcm-portsmouth-why-card:hover {
+.bcm-portsmouth-proof-card:hover {
   box-shadow: var(--bcm-shadow-md);
   transform: translateY(-2px);
 }
 
-.bcm-portsmouth-why-icon {
+.bcm-portsmouth-proof-icon {
   width: 44px;
   height: 44px;
-  background: var(--bcm-black);
+  background: rgba(200, 162, 77, 0.12);
+  border: 1px solid rgba(200, 162, 77, 0.25);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -444,276 +524,268 @@
   flex-shrink: 0;
 }
 
-.bcm-portsmouth-why-icon svg {
+.bcm-portsmouth-proof-icon svg {
   width: 20px;
   height: 20px;
   stroke: var(--bcm-gold);
-  stroke-width: 1.5;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.bcm-portsmouth-why-card__body h3 {
+.bcm-portsmouth-proof-card__body h3 {
+  color: var(--bcm-gold);
+  margin-bottom: 6px;
   font-size: 1.05rem;
-  margin: 0;
 }
 
-.bcm-portsmouth-why-card__body p {
+.bcm-portsmouth-proof-card__body p {
   margin: 0;
+  color: var(--bcm-medium-gray);
   font-size: 0.93rem;
-  color: var(--bcm-text-tertiary);
   line-height: 1.65;
 }
 
-/* PROCESS STEPS */
-.bcm-portsmouth-steps {
+/* === TWO-COLUMN SPLIT === */
+.bcm-portsmouth-split {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.bcm-portsmouth-split__text { flex: 1; }
+
+.bcm-portsmouth-split__text h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--bcm-gold);
+  margin: 16px 0 0 0;
+  border-radius: 2px;
+}
+
+.bcm-portsmouth-split__img {
+  flex: 1;
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bcm-shadow-lg);
+}
+
+.bcm-portsmouth-split__img img {
+  width: 100%;
+  border-radius: var(--bcm-radius-lg);
+}
+
+/* === TIMELINE === */
+.bcm-portsmouth-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 52px;
+}
+
+.bcm-portsmouth-timeline::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--bcm-gold), var(--bcm-navy));
+  border-radius: 2px;
+}
+
+.bcm-portsmouth-timeline__step {
+  position: relative;
+  padding: 0 0 40px 0;
+}
+
+.bcm-portsmouth-timeline__step:last-child { padding-bottom: 0; }
+
+.bcm-portsmouth-timeline__num {
+  position: absolute;
+  left: -52px;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  background: var(--bcm-dark-slate);
+  color: var(--bcm-gold);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(28, 35, 49, 0.2);
+  z-index: 1;
+  border: 3px solid var(--bcm-light-gray);
+}
+
+.bcm-portsmouth-timeline__step h3 {
+  margin-bottom: 6px;
+  font-size: 1.08rem;
+  color: var(--bcm-dark-slate);
+}
+
+.bcm-portsmouth-timeline__step p {
+  margin: 0;
+  color: var(--bcm-medium-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* === COST CARDS === */
+.bcm-portsmouth-cost-cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  counter-reset: step-counter;
+  align-items: stretch;
 }
 
-@media (min-width: 1024px) {
-  .bcm-portsmouth-steps {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.bcm-portsmouth-step {
+.bcm-portsmouth-cost-card {
   background: var(--bcm-white);
   border-radius: var(--bcm-radius-lg);
-  padding: 32px 24px;
+  padding: 32px 28px 28px;
   text-align: center;
   box-shadow: var(--bcm-shadow-sm);
-  border: 1px solid var(--bcm-border);
+  border: 1px solid var(--bcm-light-gray);
+  border-top: 3px solid var(--bcm-gold);
   position: relative;
-  counter-increment: step-counter;
-  transition: box-shadow 0.2s var(--bcm-ease), transform 0.2s var(--bcm-ease);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.bcm-portsmouth-step:hover {
-  box-shadow: var(--bcm-shadow-md);
-  transform: translateY(-2px);
+.bcm-portsmouth-cost-card:hover {
+  box-shadow: var(--bcm-shadow-lg);
+  transform: translateY(-3px);
 }
 
-.bcm-portsmouth-step::before {
-  content: counter(step-counter);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: var(--bcm-black);
+.bcm-portsmouth-cost-card h3 {
+  color: var(--bcm-dark-slate);
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+}
+
+.bcm-portsmouth-price {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
   color: var(--bcm-gold);
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  margin: 0 auto 16px;
-  box-shadow: var(--bcm-shadow-md);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
 }
 
-.bcm-portsmouth-step h3 {
-  margin-bottom: 8px;
-  font-size: 1.05rem;
-}
-
-.bcm-portsmouth-step p {
+.bcm-portsmouth-cost-card p {
+  color: var(--bcm-medium-gray);
+  font-size: 0.9rem;
   margin: 0;
-  font-size: 0.93rem;
-  color: var(--bcm-text-tertiary);
   line-height: 1.65;
 }
 
-/* COST TABLE */
-.bcm-portsmouth-cost-table-wrap {
-  border-radius: var(--bcm-radius-lg);
-  overflow: hidden;
-  box-shadow: var(--bcm-shadow-md);
-  border: 1px solid var(--bcm-border);
-}
-
-.bcm-portsmouth-cost-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--bcm-white);
-}
-
-.bcm-portsmouth-cost-table thead th {
-  background: var(--bcm-black);
-  color: var(--bcm-white);
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding: 16px 20px;
-  text-align: left;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.bcm-portsmouth-cost-table tbody td {
-  padding: 18px 20px;
-  border-bottom: 1px solid var(--bcm-border);
-  font-size: 0.95rem;
-  color: var(--bcm-text-tertiary);
-}
-
-.bcm-portsmouth-cost-table tbody td:first-child {
-  font-weight: 600;
-  color: var(--bcm-text-primary);
-}
-
-.bcm-portsmouth-cost-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.bcm-portsmouth-cost-table tbody tr:nth-child(even) {
-  background: var(--bcm-surface);
-}
-
-.bcm-portsmouth-cost-table tbody tr:hover {
-  background: var(--bcm-gold-soft);
-}
-
-.bcm-portsmouth-cost-table .bcm-portsmouth-price {
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
-  color: var(--bcm-black);
-}
-
-/* ZONING ACCORDION */
-.bcm-portsmouth-accordion {
+/* === ZONING LIST === */
+.bcm-portsmouth-zoning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  max-width: 820px;
-  margin: 0 auto;
+  gap: 12px;
 }
 
-.bcm-portsmouth-accordion-item {
+.bcm-portsmouth-zoning-list li {
   background: var(--bcm-white);
+  padding: 22px 28px;
   border-radius: var(--bcm-radius);
-  overflow: hidden;
-  border: 1px solid var(--bcm-border);
-  transition: box-shadow 0.2s var(--bcm-ease), border-color 0.2s var(--bcm-ease);
-}
-
-.bcm-portsmouth-accordion-item:has(.bcm-portsmouth-accordion-trigger[aria-expanded="true"]) {
-  box-shadow: var(--bcm-shadow-md);
-  border-color: var(--bcm-gold-border);
-}
-
-.bcm-portsmouth-accordion-trigger {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 22px 60px 22px 24px;
-  text-align: left;
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--bcm-text-primary);
-  cursor: pointer;
-  position: relative;
-  min-height: 44px;
-  line-height: 1.4;
-  transition: color 0.2s var(--bcm-ease);
-}
-
-.bcm-portsmouth-accordion-trigger:hover {
-  color: var(--bcm-black);
-}
-
-.bcm-portsmouth-accordion-trigger::after {
-  content: '+';
-  position: absolute;
-  right: 22px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--bcm-black);
-  width: 30px;
-  height: 30px;
+  border: 1px solid var(--bcm-light-gray);
+  box-shadow: var(--bcm-shadow-sm);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--bcm-gold-soft);
-  transition: background 0.2s var(--bcm-ease), color 0.2s var(--bcm-ease);
+  gap: 16px;
+  align-items: flex-start;
 }
 
-.bcm-portsmouth-accordion-trigger[aria-expanded="true"]::after {
-  content: '\2212';
-  background: var(--bcm-black);
-  color: var(--bcm-gold);
+.bcm-portsmouth-zoning-marker {
+  width: 3px;
+  flex-shrink: 0;
+  align-self: stretch;
+  background: var(--bcm-gold);
+  border-radius: 3px;
+  margin: 2px 0;
 }
 
-.bcm-portsmouth-accordion-panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s var(--bcm-ease);
+.bcm-portsmouth-zoning-list li strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--bcm-dark-slate);
+  font-size: 1.02rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
 }
 
-.bcm-portsmouth-accordion-panel__inner {
-  padding: 0 24px 24px;
-  color: var(--bcm-text-tertiary);
-  line-height: 1.75;
-  font-size: 0.95rem;
+.bcm-portsmouth-zoning-list li span {
+  color: var(--bcm-medium-gray);
+  font-size: 0.93rem;
+  line-height: 1.65;
 }
 
-/* REVIEWS */
+/* === REVIEWS === */
 .bcm-portsmouth-reviews {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.bcm-portsmouth-review {
+.bcm-portsmouth-review-card {
   background: var(--bcm-white);
   border-radius: var(--bcm-radius-lg);
+  padding: 0;
   box-shadow: var(--bcm-shadow-md);
-  border: 1px solid var(--bcm-border);
-  overflow: hidden;
+  border: 1px solid var(--bcm-light-gray);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
-.bcm-portsmouth-review__top {
-  background: linear-gradient(135deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
+.bcm-portsmouth-review-card__top {
+  background: linear-gradient(135deg, var(--bcm-navy), var(--bcm-navy-deep));
   padding: 20px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
 }
 
-.bcm-portsmouth-review__stars {
+.bcm-portsmouth-review-stars {
   color: var(--bcm-gold);
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 2px;
-  flex-shrink: 0;
 }
 
-.bcm-portsmouth-review__author {
-  font-weight: 600;
+.bcm-portsmouth-review-author {
+  font-weight: 700;
   color: var(--bcm-white);
   font-size: 0.95rem;
 }
 
-.bcm-portsmouth-review__body {
+.bcm-portsmouth-review-card__body {
   padding: 28px;
+  flex-grow: 1;
 }
 
-.bcm-portsmouth-review__text {
+.bcm-portsmouth-review-text {
   font-size: 0.95rem;
   line-height: 1.75;
-  color: var(--bcm-text-primary);
+  color: var(--bcm-dark-slate);
   margin: 0;
   font-style: italic;
   padding-left: 20px;
   border-left: 3px solid var(--bcm-gold);
 }
 
-/* FAQ */
+/* === FAQ === */
 .bcm-portsmouth-faq-list {
   display: flex;
   flex-direction: column;
@@ -726,13 +798,13 @@
   background: var(--bcm-white);
   border-radius: var(--bcm-radius);
   overflow: hidden;
-  border: 1px solid var(--bcm-border);
-  transition: box-shadow 0.2s var(--bcm-ease), border-color 0.2s var(--bcm-ease);
+  border: 1px solid var(--bcm-light-gray);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .bcm-portsmouth-faq-item:has(.bcm-portsmouth-faq-question[aria-expanded="true"]) {
   box-shadow: var(--bcm-shadow-md);
-  border-color: var(--bcm-gold-border);
+  border-color: rgba(200, 162, 77, 0.25);
 }
 
 .bcm-portsmouth-faq-question {
@@ -741,19 +813,19 @@
   border: none;
   padding: 22px 60px 22px 24px;
   text-align: left;
-  font-family: var(--bcm-font-display);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: var(--bcm-text-primary);
+  color: var(--bcm-dark-slate);
   cursor: pointer;
   position: relative;
   min-height: 44px;
   line-height: 1.4;
-  transition: color 0.2s var(--bcm-ease);
+  transition: color 0.2s ease;
 }
 
 .bcm-portsmouth-faq-question:hover {
-  color: var(--bcm-black);
+  color: var(--bcm-gold);
 }
 
 .bcm-portsmouth-faq-question::after {
@@ -763,8 +835,8 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--bcm-black);
+  font-weight: 400;
+  color: var(--bcm-gold);
   width: 30px;
   height: 30px;
   display: flex;
@@ -772,162 +844,126 @@
   justify-content: center;
   border-radius: 50%;
   background: var(--bcm-gold-soft);
-  transition: background 0.2s var(--bcm-ease), color 0.2s var(--bcm-ease);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .bcm-portsmouth-faq-question[aria-expanded="true"]::after {
   content: '\2212';
-  background: var(--bcm-black);
+  background: var(--bcm-dark-slate);
   color: var(--bcm-gold);
 }
 
 .bcm-portsmouth-faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s var(--bcm-ease);
+  transition: max-height 0.35s ease;
 }
 
-.bcm-portsmouth-faq-answer__inner {
-  padding: 0 24px 24px;
-  color: var(--bcm-text-tertiary);
+.bcm-portsmouth-faq-answer-inner {
+  padding: 0 24px 24px 24px;
+  color: var(--bcm-medium-gray);
   line-height: 1.75;
   font-size: 0.95rem;
 }
 
-/* SERVICE AREA GRID */
+/* === SERVICE AREA === */
 .bcm-portsmouth-area-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
-  max-width: 720px;
-  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .bcm-portsmouth-area-pill {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 16px;
+  text-align: center;
+  padding: 14px 16px;
   background: var(--bcm-white);
-  border: 1px solid var(--bcm-border);
-  border-radius: var(--bcm-radius-md);
-  font-size: 0.9rem;
-  color: var(--bcm-text-primary);
+  border: 1px solid var(--bcm-light-gray);
+  border-radius: 8px;
+  font-size: 0.93rem;
+  color: var(--bcm-dark-slate);
   text-decoration: none;
   font-weight: 600;
-  transition: border-color 0.2s var(--bcm-ease), background 0.2s var(--bcm-ease), box-shadow 0.2s var(--bcm-ease), color 0.2s var(--bcm-ease);
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
   min-height: 44px;
 }
 
 .bcm-portsmouth-area-pill:hover {
-  border-color: var(--bcm-black);
-  background: var(--bcm-black);
-  color: var(--bcm-white);
+  border-color: var(--bcm-dark-slate);
+  color: var(--bcm-dark-slate);
   box-shadow: var(--bcm-shadow-sm);
 }
 
-/* CTA BUTTONS */
-.bcm-portsmouth-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 34px;
-  font-family: var(--bcm-font-display);
-  font-size: 1rem;
-  font-weight: 600;
+a.bcm-portsmouth-area-pill {
   text-decoration: none;
-  border-radius: var(--bcm-radius);
-  border: 2px solid transparent;
-  transition: all 0.2s var(--bcm-ease);
-  cursor: pointer;
-  min-height: 44px;
 }
 
-.bcm-portsmouth-cta--primary {
-  background: var(--bcm-gold);
-  color: var(--bcm-black);
-}
-
-.bcm-portsmouth-cta--primary:hover {
-  background: var(--bcm-gold-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--bcm-shadow-gold);
-}
-
-.bcm-portsmouth-cta--outline {
-  background: transparent;
+a.bcm-portsmouth-area-pill:hover {
+  background: var(--bcm-dark-slate);
   color: var(--bcm-white);
-  border-color: var(--bcm-white);
+  border-color: var(--bcm-dark-slate);
 }
 
-.bcm-portsmouth-cta--outline:hover {
+/* === MAP === */
+.bcm-portsmouth-map-wrap {
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  margin-top: 32px;
+  box-shadow: var(--bcm-shadow-md);
+  border: 1px solid var(--bcm-light-gray);
+}
+
+.bcm-portsmouth-map-wrap iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+
+/* === FORM === */
+.bcm-portsmouth-form-wrap {
+  max-width: 700px;
+  margin: 0 auto;
   background: var(--bcm-white);
-  color: var(--bcm-black);
-  transform: translateY(-2px);
+  border-radius: var(--bcm-radius-lg);
+  padding: 8px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.bcm-portsmouth-cta--gold {
-  background: var(--bcm-gold);
-  color: var(--bcm-black);
+.bcm-portsmouth-form-wrap iframe {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
 }
 
-.bcm-portsmouth-cta--gold:hover {
-  background: var(--bcm-gold-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--bcm-shadow-gold);
+/* === DESKTOP === */
+@media (min-width: 768px) {
+  .bcm-portsmouth h1 { font-size: 3rem; }
+  .bcm-portsmouth h2 { font-size: 2.2rem; }
+  .bcm-portsmouth-hero { min-height: 580px; }
+  .bcm-portsmouth-hero__content { padding: 90px 24px; }
+  .bcm-portsmouth-split { flex-direction: row; gap: 48px; }
+  .bcm-portsmouth-zigzag__item { flex-direction: row; }
+  .bcm-portsmouth-zigzag__item:nth-child(even) { flex-direction: row-reverse; }
+  .bcm-portsmouth-zigzag__img { width: 45%; flex-shrink: 0; aspect-ratio: auto; }
+  .bcm-portsmouth-zigzag__text { display: flex; flex-direction: column; justify-content: center; padding: 36px 40px; }
+  .bcm-portsmouth-proof-grid { grid-template-columns: repeat(2, 1fr); }
+  .bcm-portsmouth-cost-cards { grid-template-columns: repeat(3, 1fr); }
+  .bcm-portsmouth-area-grid { grid-template-columns: repeat(3, 1fr); }
+  .bcm-portsmouth-map-wrap iframe { height: 420px; }
+  .bcm-portsmouth-trust__badge + .bcm-portsmouth-trust__badge::before { top: 30%; bottom: 30%; }
 }
 
-.bcm-portsmouth-cta--navy {
-  background: transparent;
-  color: var(--bcm-gold);
-  border-color: var(--bcm-gold);
-}
-
-.bcm-portsmouth-cta--navy:hover {
-  background: var(--bcm-gold);
-  color: var(--bcm-black);
-  transform: translateY(-2px);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .bcm-portsmouth h2 {
-    font-size: 1.5rem;
-  }
-
-  .bcm-portsmouth-section {
-    padding: 60px 0;
-  }
-
-  .bcm-portsmouth-section--navy {
-    padding: 72px 0;
-  }
-
-  .bcm-portsmouth-hero {
-    min-height: 400px;
-  }
-
-  .bcm-portsmouth-hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .bcm-portsmouth-hero p {
-    font-size: 1rem;
-  }
-
-  .bcm-portsmouth-section__header {
-    margin-bottom: 40px;
-  }
-
-  .bcm-portsmouth-types-grid,
-  .bcm-portsmouth-why-grid,
-  .bcm-portsmouth-steps {
-    grid-template-columns: 1fr;
-  }
-
-  .bcm-portsmouth-area-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media (min-width: 1024px) {
+  .bcm-portsmouth h1 { font-size: 3.4rem; }
+  .bcm-portsmouth-section { padding: 88px 0; }
+  .bcm-portsmouth-intro { padding: 88px 0 72px 0; }
+  .bcm-portsmouth-area-grid { grid-template-columns: repeat(5, 1fr); }
+  .bcm-portsmouth-proof-grid { grid-template-columns: repeat(3, 1fr); }
+  .bcm-portsmouth-reviews { flex-direction: row; }
+  .bcm-portsmouth-review-card { flex: 1; }
 }
 </style>
 
@@ -936,18 +972,18 @@
 <!-- HERO -->
 <div class="bcm-portsmouth-hero">
   <div class="bcm-portsmouth-hero__bg">
-    <img src="https://bradfordcm.com/wp-content/uploads/2026/03/bchill-adu-rendering-exterior-front-left-angle-02.png" alt="" width="1600" height="900" loading="eager">
+    <img src="https://bradfordcm.com/wp-content/uploads/2026/03/bchill-adu-rendering-exterior-front-angle-01.png" alt="" width="1600" height="900" loading="eager">
   </div>
   <div class="bcm-portsmouth-hero__overlay"></div>
   <div class="bcm-portsmouth-hero__content">
     <div class="bcm-portsmouth-hero__badge">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Seacoast ADU Experts
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Licensed NH &amp; MA Contractor
     </div>
     <h1>ADU Builder in Portsmouth, NH</h1>
-    <p>Accessory Dwelling Units Designed and Built for Portsmouth Homeowners - Premium In-Law Suites, Garage Conversions, and Modern ADUs</p>
+    <p>Custom Accessory Dwelling Units Built for Portsmouth Homeowners - From Design to Final Inspection</p>
     <div class="bcm-portsmouth-hero__ctas">
-      <a href="https://bradfordcm.com/contact/" class="bcm-portsmouth-cta bcm-portsmouth-cta--primary">Get a Free ADU Estimate</a>
+      <a href="https://bradfordcm.com/contact/" class="bcm-portsmouth-cta bcm-portsmouth-cta--primary">Request a Free ADU Consultation</a>
       <a href="https://bradfordcm.com/projects/" class="bcm-portsmouth-cta bcm-portsmouth-cta--outline">View Our Projects</a>
     </div>
   </div>
@@ -956,21 +992,25 @@
 <!-- TRUST BAR -->
 <div class="bcm-portsmouth-trust">
   <div class="bcm-portsmouth-trust__inner">
-    <div class="bcm-portsmouth-trust__item">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      NH Licensed & Insured
+    <div class="bcm-portsmouth-trust__badge">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Licensed &amp; Insured
     </div>
-    <div class="bcm-portsmouth-trust__item">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    <div class="bcm-portsmouth-trust__badge">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       5-Star Reviews
     </div>
-    <div class="bcm-portsmouth-trust__item">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+    <div class="bcm-portsmouth-trust__badge">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
       Daily Photo Updates
     </div>
-    <div class="bcm-portsmouth-trust__item">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Seacoast Experts
+    <div class="bcm-portsmouth-trust__badge">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Lifetime BHS Support
+    </div>
+    <div class="bcm-portsmouth-trust__badge">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--bcm-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      MA HIC #201908
     </div>
   </div>
 </div>
@@ -979,240 +1019,267 @@
 <div class="bcm-portsmouth-intro">
   <div class="bcm-portsmouth-container">
     <div class="bcm-portsmouth-intro__header">
-      <h2>Accessory Dwelling Unit Construction in Portsmouth, NH</h2>
+      <h2>ADU Construction Services in Portsmouth, NH</h2>
     </div>
-    <div class="bcm-portsymouth-intro__body">
-      <p>Portsmouth represents the heart of the Seacoast - vibrant waterfront community, historic charm, thriving local economy, and some of the region's most desirable neighborhoods. Living here comes with high property values and limited single-family home availability. Accessory dwelling units have become a smart solution for Portsmouth homeowners looking to add value, house family members, or generate rental income while staying in the neighborhood they love.</p>
-      <p>Under New Hampshire's HB 577 (effective July 2025), Portsmouth must allow both attached and detached ADUs by right in residential zones. Bradford Construction Management specializes in Seacoast ADU projects, managing everything from design and permitting through final occupancy certificate, with daily photo documentation and transparent pricing every step of the way.</p>
-      <p>We serve Portsmouth homeowners and surrounding communities including Newcastle, Durham, Lee, Madbury, and the greater Seacoast region.</p>
+    <div class="bcm-portsmouth-intro__body">
+      <p>Portsmouth's housing market is one of the most competitive on the Seacoast. Between rising property values, limited inventory, and a growing need for multi-generational living arrangements, homeowners are looking for smarter ways to use the land they already own. An accessory dwelling unit puts that space to work - whether it's rental income, a private suite for aging parents, or a dedicated home office that isn't crammed into a spare bedroom.</p>
+      <p>Under New Hampshire's updated ADU statute (HB 577, effective July 2025), Portsmouth must now allow both attached and detached ADUs by right in every residential zone. That means no conditional use permits, no special exceptions - just a standard building permit and the right team to get it built. Bradford Construction Management is a licensed <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADU contractor</a> serving Portsmouth, NH and the greater Seacoast region, delivering every project with commercial-grade project management and daily jobsite documentation.</p>
+      <p>We serve homeowners throughout Portsmouth, Newington, Rye, New Castle, Greenland, and the Kittery/York, ME border market.</p>
     </div>
   </div>
 </div>
 
-<!-- WHY BRADFORD (MOVED TO EARLY POSITION - LAYOUT VARIATION) -->
+<!-- ADU TYPES -->
 <div class="bcm-portsmouth-section bcm-portsmouth-section--alt">
+  <div class="bcm-portsmouth-container">
+    <div class="bcm-portsmouth-section__header">
+      <h2>Types of ADUs We Build in Portsmouth</h2>
+      <p>Every property is different. We'll walk your lot, review your goals, and recommend the ADU type that makes the most sense for your budget, timeline, and how you plan to use the space. Here's what we build.</p>
+    </div>
+
+    <div class="bcm-portsmouth-zigzag">
+
+      <div class="bcm-portsmouth-zigzag__item">
+        <div class="bcm-portsmouth-zigzag__img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/bchill-adu-rendering-exterior-with-main-house-03.png" alt="" width="800" height="500" loading="lazy" decoding="async">
+        </div>
+        <div class="bcm-portsmouth-zigzag__text">
+          <h3>Detached Accessory Dwelling Units</h3>
+          <p>A standalone structure on your property - completely separate from the main house. Detached ADUs offer the most privacy for both the homeowner and the occupant. Popular in Portsmouth for rental income and multi-generational living. Under HB 577, detached units are now allowed by right statewide.</p>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/" class="bcm-portsmouth-cta bcm-portsmouth-cta--navy-outline" style="align-self:flex-start; margin-top:12px;">Learn More About ADUs</a>
+        </div>
+      </div>
+
+      <div class="bcm-portsmouth-zigzag__item">
+        <div class="bcm-portsmouth-zigzag__img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/Rendering-2.png" alt="" width="800" height="500" loading="lazy" decoding="async">
+        </div>
+        <div class="bcm-portsmouth-zigzag__text">
+          <h3>Attached ADUs and In-Law Suites</h3>
+          <p>An addition that connects directly to your existing home. Attached ADUs are ideal when lot constraints or budget favor building onto what's already there. We design private entrances, separate living areas, and full kitchens and bathrooms so the space functions as a true independent unit - not just a remodeled room.</p>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/" class="bcm-portsmouth-cta bcm-portsmouth-cta--navy-outline" style="align-self:flex-start; margin-top:12px;">Explore ADU Options</a>
+        </div>
+      </div>
+
+      <div class="bcm-portsmouth-zigzag__item">
+        <div class="bcm-portsmouth-zigzag__img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/IMG_5996-scaled.jpg" alt="" width="800" height="500" loading="lazy" decoding="async">
+        </div>
+        <div class="bcm-portsmouth-zigzag__text">
+          <h3>Garage Conversions and Above-Garage ADUs</h3>
+          <p>Convert an existing garage or build living space above it. This is often the most cost-effective path to an ADU because the foundation and structure already exist. Under NH law, existing structures - including garages that don't meet current setback requirements - can be converted to ADUs without zoning relief.</p>
+          <a href="https://bradfordcm.com/projects/" class="bcm-portsmouth-cta bcm-portsmouth-cta--navy-outline" style="align-self:flex-start; margin-top:12px;">See Our Project Gallery</a>
+        </div>
+      </div>
+
+      <div class="bcm-portsmouth-zigzag__item">
+        <div class="bcm-portsmouth-zigzag__img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/Basement-ADU-Stone-Wall.jpg" alt="" width="800" height="500" loading="lazy" decoding="async">
+        </div>
+        <div class="bcm-portsmouth-zigzag__text">
+          <h3>Basement and Lower-Level ADUs</h3>
+          <p>Transform underused basement space into a fully finished accessory dwelling unit. Basement ADUs maximize your existing footprint without changing the exterior of your home. We handle egress requirements, waterproofing, mechanical systems, and all the detail work that separates a legal, livable unit from a basic finish-out.</p>
+          <a href="https://bradfordcm.com/contact/" class="bcm-portsmouth-cta bcm-portsmouth-cta--navy-outline" style="align-self:flex-start; margin-top:12px;">Discuss Your Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- WHY BRADFORD -->
+<div class="bcm-portsmouth-section">
   <div class="bcm-portsmouth-container">
     <div class="bcm-portsmouth-section__header">
       <h2>Why Portsmouth Homeowners Choose Bradford Construction Management</h2>
-      <p>Seacoast-focused expertise with commercial-grade project management and transparent pricing.</p>
+      <p>Most contractors build your project and move on. We built an entire service model around not doing that.</p>
     </div>
-    <div class="bcm-portsmouth-why-grid">
-      <div class="bcm-portsmouth-why-card">
-        <div class="bcm-portsmouth-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+
+    <div class="bcm-portsmouth-proof-grid">
+      <div class="bcm-portsmouth-proof-card">
+        <div class="bcm-portsmouth-proof-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </div>
-        <div class="bcm-portsmouth-why-card__body">
-          <h3>NH-Licensed General Contractor</h3>
-          <p>Full bonding, insurance, and warranty coverage with verified credentials backed by State of New Hampshire oversight.</p>
-        </div>
-      </div>
-      <div class="bcm-portsmouth-why-card">
-        <div class="bcm-portsmouth-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <div class="bcm-portsmouth-why-card__body">
-          <h3>Portsmouth Permit Expertise</h3>
-          <p>Deep familiarity with Rockingham County permitting, Portsmouth Planning Board, and HB 577 ADU law requirements.</p>
+        <div class="bcm-portsmouth-proof-card__body">
+          <h3>Daily Photo Documentation</h3>
+          <p>Every active jobsite is photographed every day. You see exactly what happened, what's next, and where your money went - without having to ask.</p>
         </div>
       </div>
-      <div class="bcm-portsmouth-why-card">
-        <div class="bcm-portsmouth-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+      <div class="bcm-portsmouth-proof-card">
+        <div class="bcm-portsmouth-proof-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         </div>
-        <div class="bcm-portsmouth-why-card__body">
-          <h3>Design-Build in One Place</h3>
-          <p>Concept through construction under one roof. Fast turnarounds, fewer coordination headaches, fewer change orders.</p>
+        <div class="bcm-portsmouth-proof-card__body">
+          <h3>Commercial-Grade Project Management</h3>
+          <p>Our leadership team managed large-scale commercial projects before applying that same discipline to residential work. Clear scopes, reliable schedules, and organized communication from start to finish.</p>
         </div>
       </div>
-      <div class="bcm-portsmouth-why-card">
-        <div class="bcm-portsmouth-why-icon">
+      <div class="bcm-portsmouth-proof-card">
+        <div class="bcm-portsmouth-proof-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
-        <div class="bcm-portsmouth-why-card__body">
+        <div class="bcm-portsmouth-proof-card__body">
           <h3>Transparent Pricing</h3>
-          <p>Detailed scope and clear pricing upfront. Every line item reviewed. <a href="https://bradfordcm.com/finance-your-dreams/">Financing options available.</a></p>
+          <p>You get a detailed scope and clear pricing before work begins. We walk through every line item so there are no surprises. Change orders are documented and approved before anything changes. <a href="https://bradfordcm.com/finance-your-dreams/">Explore financing options</a> to see how we help homeowners plan their investment.</p>
         </div>
       </div>
-      <div class="bcm-portsmouth-why-card">
-        <div class="bcm-portsmouth-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><path d="M23 12a11 11 0 0 1-22 0 11 11 0 0 1 22 0z"/></svg>
+      <div class="bcm-portsmouth-proof-card">
+        <div class="bcm-portsmouth-proof-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
-        <div class="bcm-portsmouth-why-card__body">
-          <h3>Daily Photo Documentation</h3>
-          <p>Every phase photographed and timestamped. Complete transparency and accountability on the jobsite.</p>
+        <div class="bcm-portsmouth-proof-card__body">
+          <h3>Lifetime Support Through Bradford Home Services</h3>
+          <p>After the final walkthrough, we don't disappear. Our sister company, Bradford Home Services, provides ongoing maintenance, small repairs, and warranty follow-through for the life of your project. Zero abandoned clients.</p>
         </div>
       </div>
-      <div class="bcm-portsmouth-why-card">
-        <div class="bcm-portsmouth-why-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <div class="bcm-portsmouth-proof-card">
+        <div class="bcm-portsmouth-proof-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
-        <div class="bcm-portsmouth-why-card__body">
-          <h3>Lifetime Support via BHS</h3>
-          <p>After completion, your ADU is backed by BuilderPro Home Warranty for structural and mechanical systems.</p>
+        <div class="bcm-portsmouth-proof-card__body">
+          <h3>NH ADU Permit Navigation</h3>
+          <p>We handle Portsmouth zoning requirements, building permits, and inspections. From lot feasibility to certificate of occupancy, one team manages the paperwork so you don't have to.</p>
         </div>
+      </div>
+      <div class="bcm-portsmouth-proof-card">
+        <div class="bcm-portsmouth-proof-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="bcm-portsmouth-proof-card__body">
+          <h3>Design-Build Under One Roof</h3>
+          <p>No juggling separate architects, engineers, and contractors. One accountable team takes your project from initial concept through design, permitting, construction, and final inspection.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:44px;">
+      <a href="https://bradfordcm.com/contact/" class="bcm-portsmouth-cta bcm-portsmouth-cta--gold">Schedule Your Free Consultation</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS TIMELINE -->
+<div class="bcm-portsmouth-section bcm-portsmouth-section--alt">
+  <div class="bcm-portsmouth-container">
+    <div class="bcm-portsmouth-split">
+      <div class="bcm-portsmouth-split__text">
+        <h2>How Our Portsmouth ADU Process Works</h2>
+        <p style="color:var(--bcm-medium-gray); margin-bottom:36px; line-height:1.7;">From the first site visit to handing you the keys, here's what working with Bradford looks like.</p>
+
+        <div class="bcm-portsmouth-timeline">
+          <div class="bcm-portsmouth-timeline__step">
+            <div class="bcm-portsmouth-timeline__num">1</div>
+            <h3>Free Site Consultation</h3>
+            <p>We visit your Portsmouth property to evaluate ADU feasibility - lot size, setbacks, utilities, and your goals. You'll leave with a clear picture of what's possible and a realistic budget range.</p>
+          </div>
+          <div class="bcm-portsmouth-timeline__step">
+            <div class="bcm-portsmouth-timeline__num">2</div>
+            <h3>Design and Permitting</h3>
+            <p>Our team prepares plans tailored to your property and handles the full Portsmouth building permit process. We manage the paperwork, coordinate with the city, and keep the timeline on track.</p>
+          </div>
+          <div class="bcm-portsmouth-timeline__step">
+            <div class="bcm-portsmouth-timeline__num">3</div>
+            <h3>Construction</h3>
+            <p>Licensed crews build your ADU on schedule with daily photo updates. You'll have access to our project management platform so you always know what's happening on site - no chasing down your contractor for answers.</p>
+          </div>
+          <div class="bcm-portsmouth-timeline__step">
+            <div class="bcm-portsmouth-timeline__num">4</div>
+            <h3>Final Inspection and Handover</h3>
+            <p>We walk through the completed unit together before final sign-off. After that, Bradford Home Services is here for ongoing maintenance, repairs, and warranty support.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bcm-portsmouth-split__img" style="align-self:center;">
+        <img src="https://bradfordcm.com/wp-content/uploads/2026/03/BCM-duffy-adu-main-living-space-framing-wide-window-wall-scaled.webp" alt="" width="800" height="600" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
 </div>
 
-<!-- ADU TYPES (3-COLUMN GRID - VARIATION FROM EXETER) -->
+<!-- COST -->
 <div class="bcm-portsmouth-section">
   <div class="bcm-portsmouth-container">
     <div class="bcm-portsmouth-section__header">
-      <h2>ADU Types We Build in Portsmouth</h2>
-      <p>Every property and homeowner situation is unique. We evaluate your lot, discuss your goals, and recommend the ADU type that works best for your circumstances.</p>
+      <h2>ADU Cost in Portsmouth, NH - What to Expect</h2>
+      <p>ADU costs depend on the type of unit, size, site conditions, and your finish level. Here are typical ranges for Portsmouth-area projects. Every project is unique - <a href="https://bradfordcm.com/contact/">contact us</a> for a free, no-obligation estimate specific to your property.</p>
     </div>
-    <div class="bcm-portsmouth-types-grid">
-      <div class="bcm-portsmouth-type-card">
-        <div class="bcm-portsmouth-type-card__img">
-          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/bchill-adu-rendering-exterior-with-main-house-03.png" alt="" width="800" height="450" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-portsmouth-type-card__body">
-          <h3>Detached Accessory Dwelling Units</h3>
-          <p>A standalone structure on your property, completely separate from the main house. Maximum privacy and independence. Now allowed by right under HB 577.</p>
-        </div>
+
+    <div class="bcm-portsmouth-cost-cards">
+      <div class="bcm-portsmouth-cost-card">
+        <h3>Garage Conversion</h3>
+        <div class="bcm-portsmouth-price">$100,000 - $250,000+</div>
+        <p>Converting an existing garage or building above it. The most budget-friendly option since the foundation and structure are already in place.</p>
       </div>
-      <div class="bcm-portsmouth-type-card">
-        <div class="bcm-portsmouth-type-card__img">
-          <img src="https://bradfordcm.com/wp-content/uploads/2026/02/CTG-Connected-Living-render.webp" alt="" width="800" height="450" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-portsmouth-type-card__body">
-          <h3>Attached ADUs and In-Law Suites</h3>
-          <p>An addition connected to your existing home with private entrance, separate living area, and full kitchen. Ideal for aging parents or adult children nearby.</p>
-        </div>
+      <div class="bcm-portsmouth-cost-card">
+        <h3>Attached In-Law Suite</h3>
+        <div class="bcm-portsmouth-price">$150,000 - $300,000+</div>
+        <p>A self-contained addition connected to your main home. Ideal for multi-generational living with shared access to the primary structure.</p>
       </div>
-      <div class="bcm-portsmouth-type-card">
-        <div class="bcm-portsmouth-type-card__img">
-          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/IMG_5996-scaled.jpg" alt="" width="800" height="450" loading="lazy" decoding="async">
-        </div>
-        <div class="bcm-portsmouth-type-card__body">
-          <h3>Garage-to-ADU Conversions</h3>
-          <p>Convert an existing garage or build living space above it. Cost-effective since foundation and structure are already in place. NH law allows conversions even if setbacks don't match current code.</p>
-        </div>
+      <div class="bcm-portsmouth-cost-card">
+        <h3>Detached ADU (New Build)</h3>
+        <div class="bcm-portsmouth-price">$230,000 - $350,000+</div>
+        <p>A fully independent, standalone structure. Maximum privacy and flexibility. Strong ROI in Portsmouth's competitive rental market.</p>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 40px;">
-      <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/" class="bcm-portsmouth-cta bcm-portsmouth-cta--navy">Learn More About ADU Options</a>
-    </div>
+
+    <p style="text-align:center; margin-top:32px; color:var(--bcm-medium-gray); font-size:0.9rem; max-width:780px; margin-left:auto; margin-right:auto; line-height:1.7;">Portsmouth's Seacoast location and rental demand make ADUs a strong return-on-investment opportunity. <a href="https://bradfordcm.com/finance-your-dreams/">Learn about financing options</a> including home equity and construction loans. Pricing varies by project scope, finishes, and site conditions. We provide transparent pricing with a detailed scope so you know exactly what your investment covers.</p>
   </div>
 </div>
 
-<!-- PROCESS -->
+<!-- ZONING -->
 <div class="bcm-portsmouth-section bcm-portsmouth-section--alt">
   <div class="bcm-portsmouth-container">
     <div class="bcm-portsmouth-section__header">
-      <h2>How We Build Your Portsmouth ADU - Step by Step</h2>
-      <p>From initial consultation through occupancy certificate, we manage every detail professionally and transparently.</p>
+      <h2>Portsmouth, NH ADU Zoning and Permit Requirements</h2>
+      <p>New Hampshire's ADU laws changed significantly in 2025 with the passage of HB 577. Here's what Portsmouth homeowners need to know before starting an ADU project.</p>
     </div>
-    <div class="bcm-portsmouth-steps">
-      <div class="bcm-portsmouth-step">
-        <h3>Free Property Assessment</h3>
-        <p>We visit your property, evaluate site conditions, utilities, setbacks, drainage, and your goals. You get honest guidance about what's possible and an initial cost estimate.</p>
-      </div>
-      <div class="bcm-portsmouth-step">
-        <h3>Custom Design and Permits</h3>
-        <p>Our in-house design team creates permittable drawings. We submit to Portsmouth Planning and Building, managing all questions and revisions through occupancy approval.</p>
-      </div>
-      <div class="bcm-portsmouth-step">
-        <h3>Licensed Construction</h3>
-        <p>Licensed crew and supervision with full-time project manager and daily photo documentation. We maintain all safety standards and keep your project on schedule.</p>
-      </div>
-      <div class="bcm-portsmouth-step">
-        <h3>Walkthrough and Certificate of Occupancy</h3>
-        <p>Final inspection with you, municipality approval, occupancy certificate issued, and deed addendum recorded. Your ADU is fully legal and ready.</p>
-      </div>
-    </div>
-    <div style="text-align: center; margin-top: 48px;">
-      <img src="https://bradfordcm.com/wp-content/uploads/2026/03/BCM-duffy-adu-main-living-space-framing-wide-window-wall-scaled.webp" alt="" width="1100" height="500" loading="lazy" decoding="async" style="width:100%; max-width: 900px; height: auto; border-radius: 14px; box-shadow: 0 4px 20px rgba(28, 35, 49, 0.07);">
-    </div>
-  </div>
-</div>
 
-<!-- PRICING TABLE -->
-<div class="bcm-portsmouth-section">
-  <div class="bcm-portsmouth-container">
-    <div class="bcm-portsmouth-section__header">
-      <h2>ADU Cost in Portsmouth, NH - Pricing Ranges</h2>
-      <p>Costs vary by project type, site conditions, and finishes. These ranges reflect typical Portsmouth projects in 2026.</p>
-    </div>
-    <div class="bcm-portsmouth-cost-table-wrap">
-      <table class="bcm-portsmouth-cost-table">
-        <thead>
-          <tr>
-            <th>ADU Type</th>
-            <th>Typical Range</th>
-            <th>Typical Timeline</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Garage Conversion</td>
-            <td class="bcm-portsmouth-price">$90,000 - $160,000</td>
-            <td>10-14 weeks</td>
-          </tr>
-          <tr>
-            <td>Attached Addition (500-600 sq ft)</td>
-            <td class="bcm-portsmouth-price">$150,000 - $260,000</td>
-            <td>16-20 weeks</td>
-          </tr>
-          <tr>
-            <td>Detached Unit (800-1000 sq ft)</td>
-            <td class="bcm-portsmouth-price">$240,000 - $420,000</td>
-            <td>20-28 weeks</td>
-          </tr>
-          <tr>
-            <td>Premium Cottage (1000-1200 sq ft)</td>
-            <td class="bcm-portsmouth-price">$350,000+</td>
-            <td>24-32 weeks</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="text-align: center; margin-top: 28px; color: var(--bcm-text-tertiary); font-size: 0.9rem; max-width: 780px; margin-left: auto; margin-right: auto; line-height: 1.7;">Ranges are general estimates - actual pricing and timelines vary by project scope, site conditions, and finish level. You'll receive detailed, transparent pricing as part of your initial consultation. <a href="https://bradfordcm.com/finance-your-dreams/">Learn about financing options</a> or <a href="https://bradfordcm.com/contact/">contact us</a> for a free estimate.</p>
-  </div>
-</div>
+    <ul class="bcm-portsmouth-zoning-list">
+      <li>
+        <div class="bcm-portsmouth-zoning-marker"></div>
+        <div>
+          <strong>ADUs Allowed by Right</strong>
+          <span>Under HB 577 (effective July 1, 2025), Portsmouth must allow one attached or detached accessory dwelling unit by right in every zone that permits single-family homes. No conditional use permits or special exceptions are required - just a standard building permit.</span>
+        </div>
+      </li>
+      <li>
+        <div class="bcm-portsmouth-zoning-marker"></div>
+        <div>
+          <strong>Size Requirements</strong>
+          <span>Municipalities cannot restrict ADU size to less than 750 square feet. Maximum allowable size is 950 square feet unless Portsmouth authorizes a larger unit. This applies to total living space including kitchen, bath, and sleeping areas.</span>
+        </div>
+      </li>
+      <li>
+        <div class="bcm-portsmouth-zoning-marker"></div>
+        <div>
+          <strong>Setbacks and Dimensional Standards</strong>
+          <span>ADUs follow the same setback, lot size, and dimensional requirements as the primary dwelling. Portsmouth cannot impose additional restrictions on a property simply because it includes an ADU.</span>
+        </div>
+      </li>
+      <li>
+        <div class="bcm-portsmouth-zoning-marker"></div>
+        <div>
+          <strong>Existing Structure Conversions</strong>
+          <span>Existing structures, including detached garages that don't meet current setback or lot coverage requirements, can be converted to ADUs without zoning relief. This opens up options for many older Portsmouth properties.</span>
+        </div>
+      </li>
+      <li>
+        <div class="bcm-portsmouth-zoning-marker"></div>
+        <div>
+          <strong>Owner Occupancy</strong>
+          <span>Portsmouth may require that the property owner live in either the primary dwelling or the ADU, but cannot dictate which unit the owner must occupy.</span>
+        </div>
+      </li>
+      <li>
+        <div class="bcm-portsmouth-zoning-marker"></div>
+        <div>
+          <strong>Building Permits and Inspections</strong>
+          <span>Building permits are required for all ADU construction in Portsmouth. Bradford Construction Management manages the full permitting process on behalf of our clients - from application through final inspection and certificate of occupancy.</span>
+        </div>
+      </li>
+    </ul>
 
-<!-- ZONING & PERMITS -->
-<div class="bcm-portsmouth-section bcm-portsmouth-section--alt">
-  <div class="bcm-portsmouth-container">
-    <div class="bcm-portsmouth-section__header">
-      <h2>Portsmouth, NH ADU Zoning Rules and Permits</h2>
-      <p>New Hampshire's HB 577 requires municipalities to allow ADUs by right. Here's what that means for Portsmouth homeowners.</p>
-    </div>
-    <div class="bcm-portsmouth-accordion">
-      <div class="bcm-portsmouth-accordion-item">
-        <button class="bcm-portsmouth-accordion-trigger" aria-expanded="false">Are ADUs allowed in Portsmouth now?</button>
-        <div class="bcm-portsmouth-accordion-panel">
-          <div class="bcm-portsmouth-accordion-panel__inner">
-            <p>Yes. Under HB 577 (effective July 2025), Portsmouth must allow both attached and detached ADUs by right in all residential zones. This is a permitted use - you don't need variances, conditional use permits, or special exceptions, just a standard building permit.</p>
-          </div>
-        </div>
-      </div>
-      <div class="bcm-portsmouth-accordion-item">
-        <button class="bcm-portsmouth-accordion-trigger" aria-expanded="false">What size can an ADU be in Portsmouth?</button>
-        <div class="bcm-portsymouth-accordion-panel">
-          <div class="bcm-portsymouth-accordion-panel__inner">
-            <p>HB 577 allows ADUs up to 800 square feet (or 1,000 sq ft if attached to the main house). Basement conversions, garage conversions, and detached cottages all qualify. Portsmouth's zoning requires minimum lot size and setbacks, but under HB 577, existing non-conforming structures can be converted.</p>
-          </div>
-        </div>
-      </div>
-      <div class="bcm-portsmouth-accordion-item">
-        <button class="bcm-portsmouth-accordion-trigger" aria-expanded="false">How long does Portsmouth permitting take?</button>
-        <div class="bcm-portsymouth-accordion-panel">
-          <div class="bcm-portsymouth-accordion-panel__inner">
-            <p>Typical timeframe is 4-8 weeks from submission to permit issuance. HB 577 streamlines the process. We manage all submissions, questions, and revisions so you don't have to deal with the paperwork.</p>
-          </div>
-        </div>
-      </div>
-      <div class="bcm-portsmouth-accordion-item">
-        <button class="bcm-portsmouth-accordion-trigger" aria-expanded="false">Is a deed addendum required?</button>
-        <div class="bcm-portsymouth-accordion-panel">
-          <div class="bcm-portsymouth-accordion-panel__inner">
-            <p>Yes. The ADU use must be recorded by deed addendum at the Registry of Deeds. The lot cannot be converted to a condominium or separate ownership. <a href="https://bradfordcm.com/contact/">Contact us</a> and we'll manage the full process.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p style="margin-top:28px; color:var(--bcm-medium-gray); font-size:0.9rem; text-align:center; max-width:700px; margin-left:auto; margin-right:auto;">Portsmouth may have additional local requirements beyond state minimums. We verify current zoning details with the City of Portsmouth before every project. Have questions about what's allowed on your lot? <a href="https://bradfordcm.com/contact/">Reach out for a free consultation.</a></p>
   </div>
 </div>
 
@@ -1221,158 +1288,166 @@
   <div class="bcm-portsmouth-container">
     <div class="bcm-portsmouth-section__header">
       <h2>What Our Clients Say</h2>
-      <p>Real feedback from Seacoast homeowners who've built ADUs with Bradford Construction Management.</p>
     </div>
+
     <div class="bcm-portsmouth-reviews">
-      <div class="bcm-portsmouth-review">
-        <div class="bcm-portsmouth-review__top">
-          <div class="bcm-portsmouth-review__stars">★★★★★</div>
-          <div class="bcm-portsmouth-review__author">Michael R., Portsmouth, NH</div>
+      <div class="bcm-portsmouth-review-card">
+        <div class="bcm-portsmouth-review-card__top">
+          <div class="bcm-portsmouth-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="bcm-portsmouth-review-author">Luke R.</div>
         </div>
-        <div class="bcm-portsmouth-review__body">
-          <p class="bcm-portsmouth-review__text">BCM built an ADU for my aging mother. Professional from start to finish. They knew Portsmouth and the permitting process inside and out. Highly recommend.</p>
-        </div>
-      </div>
-      <div class="bcm-portsymouth-review">
-        <div class="bcm-portsymouth-review__top">
-          <div class="bcm-portsymouth-review__stars">★★★★★</div>
-          <div class="bcm-portsymouth-review__author">Jennifer S., Newcastle, NH</div>
-        </div>
-        <div class="bcm-portsymouth-review__body">
-          <p class="bcm-portsymouth-review__text">The daily photos and transparent pricing made us feel completely confident in the work. They delivered quality and on schedule.</p>
+        <div class="bcm-portsmouth-review-card__body">
+          <p class="bcm-portsmouth-review-text">Bradford Construction was phenomenal on our multi-stage, 10-month complete rebuild. Rick and the whole crew surpassed any expectations we had going into the project.</p>
         </div>
       </div>
-      <div class="bcm-portsymouth-review">
-        <div class="bcm-portsymouth-review__top">
-          <div class="bcm-portsymouth-review__stars">★★★★★</div>
-          <div class="bcm-portsymouth-review__author">Robert T., Durham, NH</div>
+
+      <div class="bcm-portsmouth-review-card">
+        <div class="bcm-portsmouth-review-card__top">
+          <div class="bcm-portsmouth-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="bcm-portsmouth-review-author">Michael J.</div>
         </div>
-        <div class="bcm-portsymouth-review__body">
-          <p class="bcm-portsymouth-review__text">Great design, professional execution, and excellent communication. Our ADU adds real value and feels like a true second home.</p>
+        <div class="bcm-portsmouth-review-card__body">
+          <p class="bcm-portsmouth-review-text">Excellent customer service and quality work throughout project. Highly recommend!</p>
+        </div>
+      </div>
+
+      <div class="bcm-portsmouth-review-card">
+        <div class="bcm-portsmouth-review-card__top">
+          <div class="bcm-portsmouth-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="bcm-portsmouth-review-author">Jon A.</div>
+        </div>
+        <div class="bcm-portsmouth-review-card__body">
+          <p class="bcm-portsmouth-review-text">Rick and his team did a great job on our home. Communication was solid throughout, we always knew what was happening and when. Quality of work is excellent. Would definitely recommend.</p>
         </div>
       </div>
     </div>
-    <p style="text-align: center; margin-top: 28px;"><a href="https://share.google/ap7MVebYR4dZhlNHr" style="color: var(--bcm-black); font-weight: 600;">Read More Reviews on Google</a></p>
+
+    <p style="text-align:center; margin-top:28px;"><a href="https://share.google/ap7MVebYR4dZhlNHr">Read More Reviews on Google</a></p>
   </div>
 </div>
 
 <!-- FAQ -->
 <div class="bcm-portsmouth-section bcm-portsmouth-section--alt">
-  <div class="bcm-portsymouth-container">
-    <div class="bcm-portsouth-section__header">
+  <div class="bcm-portsmouth-container">
+    <div class="bcm-portsmouth-section__header">
       <h2>Frequently Asked Questions - ADUs in Portsmouth, NH</h2>
     </div>
+
     <div class="bcm-portsmouth-faq-list">
+
       <div class="bcm-portsmouth-faq-item">
-        <button class="bcm-portsmouth-faq-question" aria-expanded="false">How much do ADUs cost in Portsmouth?</button>
+        <button class="bcm-portsmouth-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          Is an ADU allowed in Portsmouth, NH?
+        </button>
         <div class="bcm-portsmouth-faq-answer">
-          <div class="bcm-portsmouth-faq-answer__inner">
-            <p>Costs vary based on project type, site conditions, and finishes. Garage conversions start around $90,000. Detached units range from $240,000 to $420,000+. You'll receive detailed pricing as part of your initial quote. <a href="https://bradfordcm.com/contact/">Contact us</a> for a free estimate.</p>
+          <div class="bcm-portsmouth-faq-answer-inner">
+            Yes. Under New Hampshire's updated ADU law (HB 577, effective July 1, 2025), all municipalities including Portsmouth must allow one attached or detached ADU by right in residential zones that permit single-family homes. No conditional use permit or special exception is required. Specific size limits and dimensional standards apply, but Portsmouth cannot impose more restrictive requirements on a property with an ADU than on a single-family home without one.
           </div>
         </div>
       </div>
+
       <div class="bcm-portsmouth-faq-item">
-        <button class="bcm-portsmouth-faq-question" aria-expanded="false">Can I rent out an ADU in Portsmouth?</button>
+        <button class="bcm-portsmouth-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          How much does an ADU cost in Portsmouth, NH?
+        </button>
         <div class="bcm-portsmouth-faq-answer">
-          <div class="bcm-portsouth-faq-answer__inner">
-            <p>Yes. ADUs are permitted for rental use under HB 577. The property must stay under single ownership, but you can rent the ADU to tenants. Many Portsmouth homeowners use this to add rental income or help offset mortgage costs.</p>
+          <div class="bcm-portsmouth-faq-answer-inner">
+            ADU costs in Portsmouth typically range from $80,000 for a garage conversion to $350,000+ for a new detached unit, depending on size, finishes, and site conditions. Factors that affect cost include foundation requirements, utility connections, interior finishes, and permitting. Bradford Construction Management provides transparent pricing with a detailed scope so you know exactly what your investment covers. <a href="https://bradfordcm.com/contact/">Contact us</a> for a free project estimate.
           </div>
         </div>
       </div>
-      <div class="bcm-portsouth-faq-item">
-        <button class="bcm-portsouth-faq-question" aria-expanded="false">How long does an ADU project take?</button>
-        <div class="bcm-portsouts-faq-answer">
-          <div class="bcm-portsouth-faq-answer__inner">
-            <p>Timelines vary: garage conversions 10-14 weeks, attached additions 16-20 weeks, detached units 20-28 weeks. Add 4-8 weeks for permitting. We provide a detailed schedule early in planning.</p>
-          </div>
-        </div>
-      </div>
+
       <div class="bcm-portsmouth-faq-item">
-        <button class="bcm-portsmouth-faq-question" aria-expanded="false">What financing is available?</button>
-        <div class="bcm-portsouth-faq-answer">
-          <div class="bcm-portsouth-faq-answer__inner">
-            <p>Options include home equity loans, construction loans, and traditional financing. <a href="https://bradfordcm.com/finance-your-dreams/">We work with lenders and can recommend programs</a> that work well for ADU projects.</p>
+        <button class="bcm-portsmouth-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          Do I need a permit to build an ADU in Portsmouth?
+        </button>
+        <div class="bcm-portsmouth-faq-answer">
+          <div class="bcm-portsmouth-faq-answer-inner">
+            Yes - building permits are required for all ADU construction in Portsmouth, NH. The good news is that ADUs are now permitted by right, which means no special hearings or conditional use processes. Bradford Construction Management manages the full permitting process on behalf of our clients, from application through inspections and certificate of occupancy.
           </div>
         </div>
       </div>
+
       <div class="bcm-portsmouth-faq-item">
-        <button class="bcm-portsmouth-faq-question" aria-expanded="false">Do I need an architect?</button>
-        <div class="bcm-portsouth-faq-answer">
-          <div class="bcm-portsouth-faq-answer__inner">
-            <p>Not with Bradford Construction Management. Our in-house design team handles all drawings and technical details for permitting and construction. This keeps costs down and the process fast.</p>
+        <button class="bcm-portsmouth-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          How long does it take to build an ADU in Portsmouth?
+        </button>
+        <div class="bcm-portsmouth-faq-answer">
+          <div class="bcm-portsmouth-faq-answer-inner">
+            Timelines vary by ADU type and complexity. Garage conversions typically take 3 to 5 months from permit approval to completion. Detached ADUs generally run 6 to 10 months. The design and permitting phase adds 2 to 4 months before construction begins. We use commercial-grade project management tools and daily photo documentation to keep your project on track and on schedule.
           </div>
         </div>
       </div>
+
       <div class="bcm-portsmouth-faq-item">
-        <button class="bcm-portsouth-faq-question" aria-expanded="false">How do I get started?</button>
-        <div class="bcm-portsouth-faq-answer">
-          <div class="bcm-portsouth-faq-answer__inner">
-            <p><a href="https://bradfordcm.com/contact/">Contact Bradford Construction Management</a> to schedule your free property assessment. We'll evaluate your options, answer questions, and provide an initial cost estimate. No obligations.</p>
+        <button class="bcm-portsmouth-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          What is the maximum size of an ADU in New Hampshire?
+        </button>
+        <div class="bcm-portsmouth-faq-answer">
+          <div class="bcm-portsmouth-faq-answer-inner">
+            Under HB 577, municipalities cannot restrict ADU size to less than 750 square feet. The maximum allowable size is 950 square feet unless the municipality authorizes a larger unit. Portsmouth may have additional local provisions, and we verify current size allowances with the city before every project.
           </div>
         </div>
       </div>
+
+      <div class="bcm-portsmouth-faq-item">
+        <button class="bcm-portsmouth-faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); var a=this.nextElementSibling; a.style.maxHeight = a.style.maxHeight ? null : a.scrollHeight + 'px';">
+          What happens after Bradford finishes building my ADU?
+        </button>
+        <div class="bcm-portsmouth-faq-answer">
+          <div class="bcm-portsmouth-faq-answer-inner">
+            Unlike most contractors who disappear after the final payment, Bradford Construction Management provides ongoing support through our sister company, Bradford Home Services. This includes seasonal maintenance, small repairs, warranty follow-through, and system check-ups for the life of your ADU. We're the contractor who never leaves.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
-<!-- SERVICE AREA -->
+<!-- SERVICE AREA + MAP -->
 <div class="bcm-portsmouth-section">
   <div class="bcm-portsmouth-container">
     <div class="bcm-portsmouth-section__header">
-      <h2>Serving Portsmouth and Surrounding Seacoast Communities</h2>
-      <p>Our service area covers Rockingham County, NH plus the Massachusetts North Shore and Merrimack Valley.</p>
+      <h2>Serving Portsmouth and the Seacoast NH Region</h2>
+      <p>Bradford Construction Management builds accessory dwelling units throughout Portsmouth and nearby Seacoast communities. We also serve homeowners across the <a href="https://bradfordcm.com/portsmouth-nh/">greater Portsmouth area</a> and beyond.</p>
     </div>
+
     <div class="bcm-portsmouth-area-grid">
-      <div class="bcm-portsmouth-area-pill">Portsmouth</div>
-      <div class="bcm-portsmouth-area-pill">Newcastle</div>
-      <div class="bcm-portsmouth-area-pill">Durham</div>
-      <div class="bcm-portsmouth-area-pill">Lee</div>
-      <div class="bcm-portsymouth-area-pill">Madbury</div>
-      <div class="bcm-portsmouth-area-pill">Exeter</div>
-      <div class="bcm-portsmouth-area-pill">Stratham</div>
-      <div class="bcm-portsouth-area-pill">Hampton</div>
-      <div class="bcm-portsouth-area-pill">Rye</div>
-      <div class="bcm-portsuth-area-pill">Greenland</div>
+      <span class="bcm-portsmouth-area-pill">Portsmouth, NH</span>
+      <span class="bcm-portsmouth-area-pill">Rye, NH</span>
+      <span class="bcm-portsmouth-area-pill">New Castle, NH</span>
+      <span class="bcm-portsmouth-area-pill">Newington, NH</span>
+      <span class="bcm-portsmouth-area-pill">Greenland, NH</span>
+      <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/exeter-nh/" class="bcm-portsmouth-area-pill">Exeter, NH</a>
+      <span class="bcm-portsmouth-area-pill">Stratham, NH</span>
+      <span class="bcm-portsmouth-area-pill">Hampton, NH</span>
+      <span class="bcm-portsmouth-area-pill">North Hampton, NH</span>
+      <span class="bcm-portsmouth-area-pill">Kittery, ME</span>
     </div>
-    <p style="text-align: center; margin-top: 20px;">We also build ADUs in <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/exeter-nh/">Exeter, NH</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/andover-ma/">Andover, MA</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/newburyport-ma/">Newburyport, MA</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/ipswich-ma/">Ipswich, MA</a>, and throughout the North Shore and Merrimack Valley.</p>
+
+    <p style="text-align:center; margin-top:20px;">We also build ADUs in <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/andover-ma/">Andover, MA</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/newburyport-ma/">Newburyport, MA</a>, <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/ipswich-ma/">Ipswich, MA</a>, and across the Merrimack Valley and North Shore.</p>
+
+    <div class="bcm-portsmouth-map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93289.0184948993!2d-70.85793467727756!3d43.056539841696306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2bf754ad4a429%3A0x654bb469483c4ece!2sPortsmouth%2C%20NH%2003801!5e0!3m2!1sen!2sus!4v1772742552236!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 </div>
 
-<!-- CTA FINAL -->
+<!-- FINAL CTA -->
 <div class="bcm-portsmouth-section bcm-portsmouth-section--navy">
-  <div class="bcm-portsmouth-container" style="text-align: center;">
-    <h2 style="color: var(--bcm-white);">Start Your Portsmouth, NH ADU Project - Get a Free Estimate</h2>
-    <p style="color: var(--bcm-text-light); font-size: 1.1rem; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">Schedule your free property assessment and get a transparent cost estimate for your specific ADU project.</p>
-    <a href="https://bradfordcm.com/contact/" class="bcm-portsmouth-cta bcm-portsmouth-cta--primary">Request Your Free Consultation</a>
+  <div class="bcm-portsmouth-container">
+    <div class="bcm-portsmouth-section__header">
+      <h2>Start Your Portsmouth ADU Project Today</h2>
+      <p style="color: rgba(250,249,247,0.85);">Ready to add an accessory dwelling unit to your Portsmouth property? Whether you're exploring the idea or ready to break ground, we'll walk you through every step - from feasibility and design through permitting, construction, and ongoing support. One team, one point of contact, zero abandoned clients.</p>
+    </div>
+
+    <div class="bcm-portsmouth-form-wrap">
+      <iframe src="https://link.bradfordhs.com/widget/form/gjd0vNkXvXFZ1gi5Q51p" style="width:100%;height:1434px;border:none;border-radius:4px" id="inline-gjd0vNkXvXFZ1gi5Q51p" data-form-name="*BCM Website form" title="*BCM Website form"></iframe>
+      <script src="https://link.bradfordhs.com/js/form_embed.js"></script>
+    </div>
+
   </div>
 </div>
 
 </div>
-
-<script>
-document.querySelectorAll('.bcm-portsmouth-accordion-trigger').forEach(trigger => {
-  trigger.addEventListener('click', () => {
-    const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-    trigger.setAttribute('aria-expanded', !isExpanded);
-    const panel = trigger.nextElementSibling;
-    if (!isExpanded) {
-      panel.style.maxHeight = panel.querySelector('.bcm-portsmouth-accordion-panel__inner').scrollHeight + 'px';
-    } else {
-      panel.style.maxHeight = '0';
-    }
-  });
-});
-
-document.querySelectorAll('.bcm-portsouth-faq-question').forEach(question => {
-  question.addEventListener('click', () => {
-    const isExpanded = question.getAttribute('aria-expanded') === 'true';
-    question.setAttribute('aria-expanded', !isExpanded);
-    const answer = question.nextElementSibling;
-    if (!isExpanded) {
-      answer.style.maxHeight = answer.querySelector('.bcm-portsouth-faq-answer__inner').scrollHeight + 'px';
-    } else {
-      answer.style.maxHeight = '0';
-    }
-  });
-});
-</script>
