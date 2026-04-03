@@ -33,10 +33,16 @@
 .bcm-ipswich-cta{display:inline-flex;align-items:center;padding:14px 28px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:600;text-decoration:none;border-radius:9999px;transition:var(--bcm-transition);cursor:pointer;border:none;min-height:50px}
 .bcm-ipswich-cta--primary{background-color:var(--bcm-gold);color:var(--bcm-dark-slate)}
 .bcm-ipswich-cta--primary:hover{background-color:var(--bcm-gold-hover);color:var(--bcm-dark-slate);transform:translateY(-1px);box-shadow:0 6px 20px rgba(200,162,77,0.3);text-decoration:none}
-.bcm-ipswich-cta--outline{background-color:transparent;color:var(--bcm-dark-slate);border:1.5px solid var(--bcm-dark-slate)}
-.bcm-ipswich-cta--outline:hover{background-color:var(--bcm-dark-slate);color:var(--bcm-white);transform:translateY(-1px);text-decoration:none}
-.bcm-ipswich-cta--white{background-color:transparent;color:var(--bcm-white);border:1.5px solid rgba(250,249,247,0.45)}
-.bcm-ipswich-cta--white:hover{background-color:rgba(250,249,247,0.12);border-color:var(--bcm-gold);color:var(--bcm-gold);transform:translateY(-1px);text-decoration:none}
+/* Outline = solid charcoal - always readable on any background */
+.bcm-ipswich-cta--outline{background-color:var(--bcm-dark-slate);color:var(--bcm-white);border:1.5px solid var(--bcm-dark-slate)}
+.bcm-ipswich-cta--outline:hover{background-color:var(--bcm-navy);color:var(--bcm-white);border-color:var(--bcm-navy);transform:translateY(-1px);text-decoration:none}
+/* White = ghost for dark sections - white text always readable */
+.bcm-ipswich-cta--white{background-color:transparent;color:var(--bcm-white);border:1.5px solid rgba(250,249,247,0.55)}
+.bcm-ipswich-cta--white:hover{background-color:rgba(250,249,247,0.15);border-color:var(--bcm-gold);color:var(--bcm-gold);transform:translateY(-1px);text-decoration:none}
+/* Navy section - all button types explicitly white text */
+.bcm-ipswich-section--navy .bcm-ipswich-cta--outline{background-color:rgba(250,249,247,0.12);color:var(--bcm-white);border-color:rgba(250,249,247,0.45)}
+.bcm-ipswich-section--navy .bcm-ipswich-cta--outline:hover{background-color:rgba(250,249,247,0.22);color:var(--bcm-gold);border-color:var(--bcm-gold);transform:translateY(-1px)}
+.bcm-ipswich-section--navy .bcm-ipswich-cta--primary:hover{box-shadow:0 6px 24px rgba(200,162,77,0.4)}
 .bcm-ipswich-two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .bcm-ipswich-img{width:100%;border-radius:var(--bcm-radius-lg);box-shadow:var(--bcm-shadow)}
 .bcm-ipswich-card{background:var(--bcm-white);border-radius:var(--bcm-radius-lg);padding:32px;box-shadow:var(--bcm-shadow);transition:var(--bcm-transition)}
