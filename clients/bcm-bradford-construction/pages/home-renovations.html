@@ -1,1235 +1,1034 @@
-<!-- BCM Home Renovations Service Page - Place below WordPress hero -->
-<!-- Hero should have H1: "Home Renovation Contractor Serving Massachusetts & New Hampshire" -->
-<!-- Hero should have H2: "Transform your home with a team that documents every step and supports you for life" -->
+<!-- BCM Home Renovations Page - 2026 Brand Update Applied -->
+<!-- Place below WordPress hero -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* 2026 BCM Design System */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-
-:root {
-  --bcm-black: #1A1A1A;
-  --bcm-gold: #C8A24D;
-  --bcm-charcoal: #1C2331;
-  --bcm-white: #FAF9F7;
-  --bcm-maritime: #0F2A45;
-  --bcm-sage: #7A9B7E;
-  --bcm-gray: #F1F1F1;
-  --bcm-gold-hover: #B8923F;
-  --bcm-gold-light: #D4B46A;
-  --bcm-gold-soft: rgba(200, 162, 77, 0.07);
-  --bcm-gold-border: rgba(200, 162, 77, 0.18);
-  --bcm-gold-glow: rgba(200, 162, 77, 0.12);
-  --bcm-text-primary: #1C2331;
-  --bcm-text-secondary: #3A4255;
-  --bcm-text-tertiary: #5C6478;
-  --bcm-text-light: rgba(250, 249, 247, 0.88);
-  --bcm-text-muted: rgba(250, 249, 247, 0.62);
-  --bcm-surface: #F7F7F5;
-  --bcm-surface-raised: #FFFFFF;
-  --bcm-border: #E5E5E2;
-  --bcm-border-subtle: rgba(28, 35, 49, 0.06);
-  --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
-  --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
-  --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
-  --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
-  --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
-  --bcm-radius: 6px;
-  --bcm-radius-md: 10px;
-  --bcm-radius-lg: 14px;
-  --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
-  --bcm-font-body: 'Inter', -apple-system, sans-serif;
-  --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
 /* WordPress Full-Width Override */
-.bcm-reno-page {
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  position: relative;
-  overflow-x: hidden;
+.bcm-renovations-wrapper {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  position: relative !important;
+  overflow-x: hidden !important;
 }
 
-.bcm-reno-page * {
-  box-sizing: border-box;
-}
+.bcm-renovations-wrapper * { box-sizing: border-box; }
 
-.bcm-reno-page {
-  font-family: var(--bcm-font-body);
-  color: var(--bcm-text-primary);
+.bcm-renovations-wrapper {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1C2331;
   line-height: 1.6;
-}
-
-/* Container & Sections */
-.bcm-reno-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 clamp(1.25rem, 5vw, 2rem);
-}
-
-.bcm-reno-section {
-  padding: clamp(4.5rem, 10vw, 7rem) clamp(1.25rem, 5vw, 2rem);
-}
-
-.bcm-reno-section-light {
-  background: var(--bcm-white);
-}
-
-.bcm-reno-section-surface {
-  background: var(--bcm-surface);
-}
-
-.bcm-reno-section-dark {
-  background: linear-gradient(170deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.bcm-reno-section-dark::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  pointer-events: none;
-  opacity: 0.5;
-  z-index: 0;
-}
-
-.bcm-reno-section-dark > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Typography */
-.bcm-reno-h2 {
-  font-family: var(--bcm-font-display);
-  font-weight: 700;
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
-  line-height: 1.2;
-  color: var(--bcm-text-primary);
-  margin: 0 0 1rem 0;
-}
-
-.bcm-reno-section-dark .bcm-reno-h2 {
-  color: var(--bcm-white);
-}
-
-.bcm-reno-h3 {
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.3;
-  color: var(--bcm-text-primary);
-  margin: 0 0 0.5rem 0;
-}
-
-.bcm-reno-label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--bcm-gold);
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.bcm-reno-label::before {
-  content: '';
-  width: 20px;
-  height: 1px;
-  background: var(--bcm-gold);
-}
-
-.bcm-reno-label::after {
-  content: '';
-  width: 20px;
-  height: 1px;
-  background: var(--bcm-gold);
-}
-
-.bcm-reno-lead {
-  font-size: clamp(1rem, 2vw, 1.0625rem);
-  color: var(--bcm-text-secondary);
-  line-height: 1.7;
-}
-
-.bcm-reno-section-dark .bcm-reno-lead {
-  color: var(--bcm-text-muted);
-}
-
-/* Buttons */
-.bcm-reno-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.9375rem 2.125rem;
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
-  font-size: 0.9375rem;
-  text-decoration: none;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s var(--bcm-ease);
-  min-height: 44px;
-}
-
-.bcm-reno-btn:hover {
-  transform: translateY(-2px);
-}
-
-.bcm-reno-btn-primary {
-  background: var(--bcm-gold);
-  color: var(--bcm-black);
-}
-
-.bcm-reno-btn-primary:hover {
-  background: var(--bcm-gold-hover);
-  box-shadow: var(--bcm-shadow-gold);
 }
 
 /* Trust Bar */
-.bcm-reno-trust-bar {
-  background: var(--bcm-white);
-  border-bottom: 1px solid var(--bcm-border);
-  padding: 1rem 1.5rem;
+.bcm-renovations-trust-bar {
+  background: #1C2331;
+  border-top: 2px solid #C8A24D;
+  padding: 0 24px;
 }
 
-.bcm-reno-trust-items {
+.bcm-renovations-trust-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 1rem 2.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  gap: 0;
 }
 
-.bcm-reno-trust-item {
+.bcm-renovations-trust-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 600;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #FAF9F7;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--bcm-text-secondary);
-  white-space: nowrap;
+  padding: 16px 22px;
+  position: relative;
 }
 
-.bcm-reno-trust-icon {
-  width: 16px;
-  height: 16px;
-  color: var(--bcm-gold);
+.bcm-renovations-trust-item + .bcm-renovations-trust-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 25%;
+  bottom: 25%;
+  width: 1px;
+  background: rgba(250, 249, 247, 0.12);
+}
+
+.bcm-renovations-trust-item svg {
+  width: 18px;
+  height: 18px;
+  color: #C8A24D;
   flex-shrink: 0;
 }
 
-/* Difference Section */
-.bcm-reno-difference-header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 2.5rem;
+/* Section Base */
+.bcm-renovations-section { padding: 80px 24px; }
+.bcm-renovations-section-inner { max-width: 1200px; margin: 0 auto; }
+
+/* Typography */
+.bcm-renovations-eyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #C8A24D;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+  display: block;
 }
 
-.bcm-reno-difference-grid {
+.bcm-renovations-section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1C2331;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.bcm-renovations-section-subtitle {
+  font-size: 1.1rem;
+  color: #6B7280;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* Buttons */
+.bcm-renovations-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background: #C8A24D;
+  color: #1C2331;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 30px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+  min-height: 50px;
+  letter-spacing: 0.01em;
+}
+
+.bcm-renovations-btn-primary:hover {
+  background: #D9B96A;
+  color: #1C2331;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(200, 162, 77, 0.3);
+  text-decoration: none;
+}
+
+.bcm-renovations-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: #1C2331;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 13px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: 1.5px solid #1C2331;
+  cursor: pointer;
+  min-height: 50px;
+  letter-spacing: 0.01em;
+}
+
+.bcm-renovations-btn-secondary:hover {
+  background: #1C2331;
+  color: #FAF9F7;
+  text-decoration: none;
+}
+
+/* Bradford Difference Section */
+.bcm-renovations-difference { background: #FAF9F7; }
+
+.bcm-renovations-difference-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 32px;
+  margin-top: 48px;
 }
 
-.bcm-reno-difference-card {
-  background: var(--bcm-surface);
-  border-radius: var(--bcm-radius-md);
-  padding: 2rem;
-  border: 1px solid var(--bcm-border);
-  transition: all 0.2s var(--bcm-ease);
+.bcm-renovations-difference-card {
+  background: #FAF9F7;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #E5E5E2;
+  border-top: 3px solid #C8A24D;
+  transition: all 0.3s ease;
 }
 
-.bcm-reno-difference-card:hover {
-  box-shadow: var(--bcm-shadow-md);
-  border-color: var(--bcm-gold-border);
+.bcm-renovations-difference-card:hover {
+  box-shadow: 0 8px 24px rgba(28, 35, 49, 0.08);
   transform: translateY(-3px);
 }
 
-.bcm-reno-difference-icon {
+.bcm-renovations-difference-icon {
   width: 48px;
   height: 48px;
-  background: var(--bcm-gold-soft);
-  border: 1px solid var(--bcm-gold-border);
-  border-radius: var(--bcm-radius-md);
+  background: rgba(200, 162, 77, 0.12);
+  border: 1px solid rgba(200, 162, 77, 0.25);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
-.bcm-reno-difference-icon svg {
+.bcm-renovations-difference-icon svg {
   width: 24px;
   height: 24px;
-  color: var(--bcm-gold);
-  stroke-width: 1.5;
+  color: #C8A24D;
 }
 
-.bcm-reno-difference-card h3 {
-  font-family: var(--bcm-font-display);
-  font-size: 1.0625rem;
-  font-weight: 600;
-  color: var(--bcm-text-primary);
-  margin-bottom: 0.75rem;
+.bcm-renovations-difference-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #C8A24D;
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
 }
 
-.bcm-reno-difference-card p {
-  color: var(--bcm-text-secondary);
-  font-size: 0.9375rem;
-  line-height: 1.6;
+.bcm-renovations-difference-card p {
+  color: #6B7280;
+  font-size: 1rem;
+  line-height: 1.7;
   margin: 0;
 }
 
 /* Services Section */
-.bcm-reno-services-header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 2.5rem;
-}
+.bcm-renovations-services { background: #F1F1F1; }
 
-.bcm-reno-services-grid {
+.bcm-renovations-services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 24px;
+  margin-top: 48px;
 }
 
-.bcm-reno-service-card {
-  background: var(--bcm-surface-raised);
-  border-radius: var(--bcm-radius-md);
-  padding: 1.75rem;
-  border: 1px solid var(--bcm-border);
-  transition: all 0.2s var(--bcm-ease);
+.bcm-renovations-service-card {
+  background: #FAF9F7;
+  border-radius: 12px;
+  padding: 28px;
+  border: 1px solid #E5E5E2;
+  border-top: 3px solid #C8A24D;
+  transition: all 0.3s ease;
 }
 
-.bcm-reno-service-card:hover {
-  box-shadow: var(--bcm-shadow-md);
-  border-color: var(--bcm-gold-border);
-  transform: translateY(-3px);
+.bcm-renovations-service-card:hover {
+  box-shadow: 0 8px 24px rgba(28, 35, 49, 0.08);
+  transform: translateY(-2px);
 }
 
-.bcm-reno-service-card h3 {
-  font-family: var(--bcm-font-display);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--bcm-text-primary);
-  margin-bottom: 0.75rem;
+.bcm-renovations-service-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1C2331;
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
 }
 
-.bcm-reno-service-card h3 a {
-  color: var(--bcm-gold);
+.bcm-renovations-service-card h3 a {
+  color: #C8A24D;
   text-decoration: none;
-  transition: color 0.2s var(--bcm-ease);
+  font-weight: 700;
+  transition: color 0.25s ease;
 }
 
-.bcm-reno-service-card h3 a:hover {
-  color: var(--bcm-gold-hover);
+.bcm-renovations-service-card h3 a:hover {
+  color: #D9B96A;
   text-decoration: underline;
 }
 
-.bcm-reno-service-card p {
-  color: var(--bcm-text-secondary);
-  font-size: 0.875rem;
-  line-height: 1.6;
+.bcm-renovations-service-card p {
+  color: #6B7280;
+  font-size: 0.95rem;
+  line-height: 1.7;
   margin: 0;
 }
 
-/* Gallery Section */
-.bcm-reno-gallery-header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 2.5rem;
-}
-
-.bcm-reno-gallery {
+/* Gallery */
+.bcm-renovations-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 24px;
+  margin-top: 48px;
 }
 
-.bcm-reno-gallery-item {
+.bcm-renovations-gallery-item {
   position: relative;
-  border-radius: var(--bcm-radius-md);
+  border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 4/3;
 }
 
-.bcm-reno-gallery-item img {
+.bcm-renovations-gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s var(--bcm-ease);
+  transition: transform 0.4s ease;
 }
 
-.bcm-reno-gallery-item:hover img {
-  transform: scale(1.05);
-}
+.bcm-renovations-gallery-item:hover img { transform: scale(1.05); }
 
-.bcm-reno-gallery-overlay {
+.bcm-renovations-gallery-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(26, 26, 26, 0.9), transparent);
-  padding: 1.5rem 1rem 1rem;
-  display: flex;
-  align-items: flex-end;
-  color: var(--bcm-white);
-  font-weight: 600;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(10, 30, 48, 0.9), transparent);
+  padding: 24px 16px 16px;
+  color: #FAF9F7;
+  font-weight: 700;
   font-size: 0.95rem;
-  text-decoration: none;
-  transition: background 0.2s var(--bcm-ease);
+  letter-spacing: 0.01em;
 }
 
-.bcm-reno-gallery-overlay:hover {
-  background: linear-gradient(to top, rgba(26, 26, 26, 1), transparent);
+a.bcm-renovations-gallery-overlay {
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+a.bcm-renovations-gallery-overlay:hover {
+  background: linear-gradient(to top, rgba(15, 42, 69, 1), transparent);
 }
 
 /* Process Section */
-.bcm-reno-process-header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 2.5rem;
-}
+.bcm-renovations-process { background: #FAF9F7; }
 
-.bcm-reno-process-grid {
+.bcm-renovations-process-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 32px;
+  margin-top: 48px;
 }
 
-.bcm-reno-process-step {
+.bcm-renovations-process-step {
   text-align: center;
+  padding: 24px;
+  border-radius: 12px;
+  border-top: 3px solid #C8A24D;
+  background: #FAF9F7;
+  border: 1px solid #E5E5E2;
+  border-top: 3px solid #C8A24D;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.bcm-reno-process-number {
-  width: 44px;
-  height: 44px;
-  background: transparent;
-  border: 2px solid var(--bcm-gold);
+.bcm-renovations-process-step:hover {
+  box-shadow: 0 6px 20px rgba(28, 35, 49, 0.07);
+  transform: translateY(-2px);
+}
+
+.bcm-renovations-step-number {
+  width: 48px;
+  height: 48px;
+  background: #1C2331;
+  color: #C8A24D;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
-  font-family: var(--bcm-font-display);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
-  font-size: 1rem;
-  color: var(--bcm-gold);
+  font-size: 1.2rem;
+  margin: 0 auto 16px;
+  box-shadow: 0 3px 10px rgba(200, 162, 77, 0.2);
 }
 
-.bcm-reno-process-step h3 {
-  font-family: var(--bcm-font-display);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--bcm-text-primary);
-  margin-bottom: 0.5rem;
+.bcm-renovations-process-step h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1C2331;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
 }
 
-.bcm-reno-process-step p {
-  color: var(--bcm-text-secondary);
-  font-size: 0.875rem;
+.bcm-renovations-process-step p {
+  color: #6B7280;
+  font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
 }
 
 /* Comparison Table */
-.bcm-reno-comparison-header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 2.5rem;
-}
+.bcm-renovations-comparison { background: #F1F1F1; }
 
-.bcm-reno-table-wrapper {
-  margin-top: 2.5rem;
-  overflow-x: auto;
-}
+.bcm-renovations-table-wrapper { margin-top: 48px; overflow-x: auto; }
 
-.bcm-reno-table {
+.bcm-renovations-table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--bcm-surface-raised);
-  border-radius: var(--bcm-radius-md);
+  background: #FAF9F7;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: var(--bcm-shadow-md);
+  box-shadow: 0 4px 16px rgba(28, 35, 49, 0.07);
 }
 
-.bcm-reno-table th {
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
-  padding: 1.25rem 1.5rem;
-  text-align: left;
-  font-size: 0.9375rem;
-}
-
-.bcm-reno-table th:first-child {
-  background: var(--bcm-surface);
-  color: var(--bcm-text-secondary);
-}
-
-.bcm-reno-table th:nth-child(2) {
-  background: var(--bcm-gold);
-  color: var(--bcm-black);
+.bcm-renovations-table th {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
+  padding: 20px 24px;
+  text-align: left;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.bcm-reno-table th:nth-child(3) {
-  background: var(--bcm-surface);
-  color: var(--bcm-text-secondary);
+.bcm-renovations-table th:first-child { background: #F1F1F1; color: #6B7280; }
+.bcm-renovations-table th:nth-child(2) { background: #1C2331; color: #FAF9F7; }
+.bcm-renovations-table th:nth-child(3) { background: #E5E5E2; color: #6B7280; }
+
+.bcm-renovations-table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid #E5E5E2;
+  font-size: 0.95rem;
 }
 
-.bcm-reno-table td {
-  padding: 1.125rem 1.5rem;
-  border-bottom: 1px solid var(--bcm-border);
-  font-size: 0.9375rem;
-}
-
-.bcm-reno-table tr:last-child td {
-  border-bottom: none;
-}
-
-.bcm-reno-table td:first-child {
-  font-weight: 600;
-  color: var(--bcm-text-primary);
-}
-
-.bcm-reno-table td:nth-child(2) {
-  color: var(--bcm-gold);
-  font-weight: 600;
-}
-
-.bcm-reno-table td:nth-child(3) {
-  color: var(--bcm-text-secondary);
-}
-
-.bcm-reno-check {
-  color: var(--bcm-sage);
-  font-weight: 600;
-}
+.bcm-renovations-table tr:last-child td { border-bottom: none; }
+.bcm-renovations-table td:first-child { font-weight: 600; color: #1C2331; }
+.bcm-renovations-table td:nth-child(2) { color: #0F2A45; font-weight: 600; }
+.bcm-renovations-table td:nth-child(3) { color: #6B7280; }
+.bcm-renovations-check { color: #C8A24D; font-weight: 700; font-size: 1.1rem; }
 
 /* Service Areas */
-.bcm-reno-areas-header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 2.5rem;
-}
+.bcm-renovations-areas { background: #FAF9F7; }
 
-.bcm-reno-areas-grid {
+.bcm-renovations-areas-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 48px;
+  margin-top: 48px;
 }
 
-.bcm-reno-areas-column h3 {
-  font-family: var(--bcm-font-display);
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--bcm-text-primary);
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--bcm-gold);
-  display: inline-block;
+.bcm-renovations-areas-column h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #1C2331;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #C8A24D;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
-.bcm-reno-areas-list {
+.bcm-renovations-areas-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+  gap: 12px;
 }
 
-.bcm-reno-area-tag {
-  background: var(--bcm-surface);
-  padding: 0.875rem 1.125rem;
-  border-radius: var(--bcm-radius);
+.bcm-renovations-area-tag {
+  background: #F1F1F1;
+  padding: 14px 18px;
+  border-radius: 8px;
   text-align: center;
-  color: var(--bcm-text-primary);
-  font-weight: 500;
-  font-size: 0.9375rem;
-  transition: all 0.2s var(--bcm-ease);
-}
-
-.bcm-reno-area-tag:hover {
-  background: var(--bcm-gold);
-  color: var(--bcm-black);
-}
-
-.bcm-reno-area-tag-linked {
-  background: var(--bcm-surface);
-  padding: 0.875rem 1.125rem;
-  border-radius: var(--bcm-radius);
-  text-align: center;
-  color: var(--bcm-gold);
+  color: #1C2331;
   font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.bcm-renovations-area-tag:hover { background: #1C2331; color: #FAF9F7; }
+
+.bcm-renovations-area-tag-linked {
+  background: #F1F1F1;
+  padding: 14px 18px;
+  border-radius: 8px;
+  text-align: center;
+  color: #1C2331;
+  font-weight: 700;
   text-decoration: none;
-  border: 1px solid var(--bcm-gold-border);
+  border: 1.5px solid #C8A24D;
   display: block;
-  transition: all 0.2s var(--bcm-ease);
+  transition: all 0.25s ease;
 }
 
-.bcm-reno-area-tag-linked:hover {
-  background: var(--bcm-gold);
-  color: var(--bcm-black);
-  border-color: var(--bcm-gold);
+.bcm-renovations-area-tag-linked:hover {
+  background: #1C2331;
+  color: #FAF9F7;
+  border-color: #1C2331;
+  text-decoration: none;
 }
+
+.bcm-renovations-areas-text { color: #6B7280; line-height: 1.9; font-size: 1rem; }
+.bcm-renovations-areas-text a { color: #C8A24D; font-weight: 600; text-decoration: none; }
+.bcm-renovations-areas-text a:hover { text-decoration: underline; }
 
 /* FAQ Section */
-.bcm-reno-faq-header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 2.5rem;
-}
+.bcm-renovations-faq { background: #F1F1F1; }
 
-.bcm-reno-faq-list {
-  max-width: 900px;
-  margin: 0 auto;
-}
+.bcm-renovations-faq-list { max-width: 900px; margin: 48px auto 0; }
 
-.bcm-reno-faq-item {
-  background: var(--bcm-surface-raised);
-  border-radius: var(--bcm-radius-md);
-  margin-bottom: 1rem;
-  border: 1px solid var(--bcm-border);
+.bcm-renovations-faq-item {
+  background: #FAF9F7;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #E5E5E2;
   overflow: hidden;
-  transition: all 0.2s var(--bcm-ease);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.bcm-reno-faq-item:hover {
-  box-shadow: var(--bcm-shadow-sm);
-  border-color: var(--bcm-gold-border);
+.bcm-renovations-faq-item.active {
+  box-shadow: 0 4px 16px rgba(28, 35, 49, 0.07);
+  border-color: rgba(200, 162, 77, 0.3);
 }
 
-.bcm-reno-faq-question {
+.bcm-renovations-faq-question {
   width: 100%;
-  padding: 1.25rem;
+  padding: 24px;
   background: none;
   border: none;
   text-align: left;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  font-family: var(--bcm-font-display);
-  font-size: 1rem;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
   font-weight: 600;
-  color: var(--bcm-text-primary);
-  transition: color 0.15s var(--bcm-ease);
+  color: #1C2331;
+  transition: color 0.25s ease;
+  letter-spacing: 0.01em;
 }
 
-.bcm-reno-faq-question:hover {
-  color: var(--bcm-gold);
-}
+.bcm-renovations-faq-question:hover { color: #C8A24D; }
 
-.bcm-reno-faq-icon {
-  width: 20px;
-  height: 20px;
-  color: var(--bcm-gold);
-  transition: transform 0.3s var(--bcm-ease);
+.bcm-renovations-faq-icon {
+  width: 24px;
+  height: 24px;
+  color: #C8A24D;
+  transition: transform 0.3s ease;
   flex-shrink: 0;
-  margin-top: 2px;
-  stroke-width: 2;
+  margin-left: 16px;
 }
 
-.bcm-reno-faq-item.active .bcm-reno-faq-icon {
-  transform: rotate(180deg);
-}
+.bcm-renovations-faq-item.active .bcm-renovations-faq-icon { transform: rotate(180deg); }
 
-.bcm-reno-faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s var(--bcm-ease);
-}
+.bcm-renovations-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.bcm-renovations-faq-item.active .bcm-renovations-faq-answer { max-height: 500px; }
 
-.bcm-reno-faq-item.active .bcm-reno-faq-answer {
-  max-height: 400px;
-}
-
-.bcm-reno-faq-answer p {
-  padding: 0 1.25rem 1.25rem;
-  color: var(--bcm-text-secondary);
-  line-height: 1.7;
-  margin: 0;
-  font-size: 0.9375rem;
-}
+.bcm-renovations-faq-answer p { padding: 0 24px 24px; color: #6B7280; line-height: 1.7; margin: 0; }
+.bcm-renovations-faq-answer a { color: #C8A24D; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 
 /* CTA Banner */
-.bcm-reno-cta-banner {
-  background: linear-gradient(170deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
-  padding: clamp(3rem, 8vw, 4rem) clamp(1.25rem, 5vw, 2rem);
+.bcm-renovations-cta-banner {
+  background: linear-gradient(135deg, #0F2A45 0%, #0A1E30 100%);
+  padding: 64px 24px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
 }
 
-.bcm-reno-cta-banner::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 80%;
-  background: var(--bcm-gold);
+.bcm-renovations-cta-banner h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FAF9F7;
+  margin-bottom: 16px;
+  letter-spacing: 0.01em;
 }
 
-.bcm-reno-cta-banner .bcm-reno-h2 {
-  color: var(--bcm-white);
-  margin-bottom: 0.625rem;
-}
-
-.bcm-reno-cta-banner p {
-  color: var(--bcm-text-muted);
-  font-size: 1rem;
-  margin: 0 0 1.75rem 0;
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
+.bcm-renovations-cta-banner p {
+  color: rgba(250, 249, 247, 0.85);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
 }
 
 /* Form Section */
-.bcm-reno-form-section {
-  background: var(--bcm-surface);
-  padding: clamp(4rem, 10vw, 5rem) clamp(1.25rem, 5vw, 2rem);
-}
+.bcm-renovations-form-section { background: #FAF9F7; padding: 80px 24px; }
 
-.bcm-reno-form-wrapper {
-  max-width: 720px;
-  margin: 0 auto;
+.bcm-renovations-form-section-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+.bcm-renovations-form-container { margin-top: 40px; }
+
+/* Credentials Footer */
+.bcm-renovations-credentials {
+  background: #F1F1F1;
+  padding: 28px 24px;
   text-align: center;
+  border-top: 1px solid #E5E5E2;
 }
 
-.bcm-reno-form-wrapper .bcm-reno-lead {
-  margin-bottom: 2rem;
-}
+.bcm-renovations-credentials p { color: #6B7280; font-size: 0.9rem; margin: 0; font-weight: 500; }
 
-.bcm-reno-form-container {
-  background: var(--bcm-surface-raised);
-  border-radius: var(--bcm-radius-md);
-  padding: 1.5rem;
-  border: 1px solid var(--bcm-border);
-}
-
-.bcm-reno-credentials {
-  background: var(--bcm-surface);
-  padding: 2rem 1.5rem;
-  text-align: center;
-  border-top: 1px solid var(--bcm-border);
-}
-
-.bcm-reno-credentials p {
-  color: var(--bcm-text-secondary);
-  font-size: 0.875rem;
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* Responsive */
+/* Mobile Responsive */
 @media (max-width: 1024px) {
-  .bcm-reno-difference-grid,
-  .bcm-reno-services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .bcm-reno-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .bcm-reno-process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .bcm-reno-areas-grid {
-    grid-template-columns: 1fr;
-  }
+  .bcm-renovations-difference-grid,
+  .bcm-renovations-services-grid { grid-template-columns: 1fr; }
+  .bcm-renovations-gallery { grid-template-columns: repeat(2, 1fr); }
+  .bcm-renovations-process-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .bcm-reno-section {
-    padding: clamp(3rem, 8vw, 4rem) clamp(1.25rem, 5vw, 2rem);
-  }
-
-  .bcm-reno-trust-items {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .bcm-reno-trust-item {
-    font-size: 0.65rem;
-  }
-
-  .bcm-reno-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .bcm-reno-process-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .bcm-reno-table {
-    font-size: 0.85rem;
-  }
-
-  .bcm-reno-table th,
-  .bcm-reno-table td {
-    padding: 0.75rem 1rem;
-  }
-
-  .bcm-reno-areas-list {
-    grid-template-columns: 1fr;
-  }
+  .bcm-renovations-section { padding: 60px 20px; }
+  .bcm-renovations-section-title { font-size: 1.75rem; }
+  .bcm-renovations-trust-bar-inner { gap: 0; }
+  .bcm-renovations-trust-item { font-size: 0.75rem; padding: 14px 16px; }
+  .bcm-renovations-gallery { grid-template-columns: 1fr; }
+  .bcm-renovations-process-grid { grid-template-columns: 1fr; gap: 24px; }
+  .bcm-renovations-areas-grid { grid-template-columns: 1fr; gap: 32px; }
+  .bcm-renovations-table { font-size: 0.85rem; }
+  .bcm-renovations-table th, .bcm-renovations-table td { padding: 14px 16px; }
+  .bcm-renovations-cta-banner { padding: 48px 20px; }
+  .bcm-renovations-cta-banner h2 { font-size: 1.5rem; }
 }
 
 @media (max-width: 480px) {
-  .bcm-reno-label {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .bcm-reno-label::before,
-  .bcm-reno-label::after {
-    width: 0;
-    display: none;
-  }
-
-  .bcm-reno-difference-grid,
-  .bcm-reno-services-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .bcm-reno-gallery {
-    grid-template-columns: 1fr;
-  }
+  .bcm-renovations-trust-bar-inner { flex-direction: column; }
+  .bcm-renovations-trust-item + .bcm-renovations-trust-item::before { display: none; }
+  .bcm-renovations-areas-list { grid-template-columns: 1fr; }
 }
 </style>
 
-<div class="bcm-reno-page">
+<div class="bcm-renovations-wrapper">
 
   <!-- Trust Bar -->
-  <div class="bcm-reno-trust-bar">
-    <div class="bcm-reno-trust-items">
-      <div class="bcm-reno-trust-item">
-        <svg class="bcm-reno-trust-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+  <div class="bcm-renovations-trust-bar">
+    <div class="bcm-renovations-trust-bar-inner">
+      <div class="bcm-renovations-trust-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
-        <span>Licensed & Insured</span>
+        Licensed &amp; Insured
       </div>
-      <div class="bcm-reno-trust-item">
-        <svg class="bcm-reno-trust-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+      <div class="bcm-renovations-trust-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
-        <span>MA HIC #201908</span>
+        10+ Years Experience
       </div>
-      <div class="bcm-reno-trust-item">
-        <svg class="bcm-reno-trust-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0118.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+      <div class="bcm-renovations-trust-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
-        <span>Daily Photo Updates</span>
+        Daily Photo Updates
       </div>
-      <div class="bcm-reno-trust-item">
-        <svg class="bcm-reno-trust-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+      <div class="bcm-renovations-trust-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
-        <span>Lifetime Support</span>
+        Lifetime Support via BHS
       </div>
     </div>
   </div>
 
-  <!-- Bradford Difference Section -->
-  <section class="bcm-reno-section bcm-reno-section-light">
-    <div class="bcm-reno-container">
-      <div class="bcm-reno-difference-header">
-        <span class="bcm-reno-label">The Bradford Difference</span>
-        <h2 class="bcm-reno-h2">Why Bradford Stands Apart</h2>
-        <p class="bcm-reno-lead">We combine construction expertise with the transparency and accountability that traditional contractors often lack.</p>
+  <!-- The Bradford Difference -->
+  <section class="bcm-renovations-section bcm-renovations-difference">
+    <div class="bcm-renovations-section-inner">
+      <div style="text-align: center;">
+        <span class="bcm-renovations-eyebrow">The Bradford Difference</span>
+        <h2 class="bcm-renovations-section-title">Why Homeowners Choose Us for Renovations</h2>
+        <p class="bcm-renovations-section-subtitle" style="margin: 0 auto;"><a href="https://bradfordcm.com/" style="color:#C8A24D;font-weight:600;">Bradford Construction Management</a> brings commercial-grade project management to residential renovations, with lifetime support through <a href="https://bradfordcm.com/about-us/" style="color:#C8A24D;font-weight:600;">Bradford Home Services</a>. See all our <a href="https://bradfordcm.com/services/" style="color:#C8A24D;font-weight:600;">construction services</a>.</p>
       </div>
-      <div class="bcm-reno-difference-grid">
-        <div class="bcm-reno-difference-card">
-          <div class="bcm-reno-difference-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0118.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+
+      <div class="bcm-renovations-difference-grid">
+        <div class="bcm-renovations-difference-card">
+          <div class="bcm-renovations-difference-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
           <h3>Daily Photo Documentation</h3>
-          <p>Every active day, you receive timestamped photos with clear descriptions of completed work, scheduled tasks, and any decisions needed. No more wondering what's happening on your job site.</p>
+          <p>Receive timestamped photos every single day showing exactly what happened on your project. No more wondering what's going on while you're at work.</p>
         </div>
-        <div class="bcm-reno-difference-card">
-          <div class="bcm-reno-difference-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+
+        <div class="bcm-renovations-difference-card">
+          <div class="bcm-renovations-difference-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
           </div>
-          <h3>Fixed-Price Contracts</h3>
-          <p>Clear pricing with defined scope and transparent change order process. You know the cost upfront. Any changes require your approval before work begins—no surprise bills.</p>
+          <h3>Lifetime Support Through BHS</h3>
+          <p>We're the only builder with a dedicated service division. <a href="https://bradfordcm.com/about-us/" style="color:#C8A24D;font-weight:600;">Bradford Home Services</a> maintains your renovation for the long haul, so you're never left without support.</p>
         </div>
-        <div class="bcm-reno-difference-card">
-          <div class="bcm-reno-difference-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+
+        <div class="bcm-renovations-difference-card">
+          <div class="bcm-renovations-difference-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
           </div>
-          <h3>One Consistent Team</h3>
-          <p>The same project manager guides your renovation from start to finish. No handoffs to new people. You build a relationship with the team that understands your vision.</p>
+          <h3>Pricing Transparency</h3>
+          <p>Detailed scopes and clear contracts before work begins. When changes arise, we document them immediately with cost implications before proceeding. <a href="https://bradfordcm.com/finance-your-dreams/" style="color:#C8A24D;font-weight:600;">Explore financing options.</a></p>
         </div>
-        <div class="bcm-reno-difference-card">
-          <div class="bcm-reno-difference-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+
+        <div class="bcm-renovations-difference-card">
+          <div class="bcm-renovations-difference-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
           </div>
-          <h3>Bradford For Life</h3>
-          <p>After completion, Bradford Home Services (BHS) provides ongoing maintenance and seasonal check-ups. The team that built your renovation continues to support it.</p>
+          <h3>Design-Build Integration</h3>
+          <p>One team from concept to completion. No finger-pointing between architect and contractor - just clear communication and accountability throughout. <a href="https://bradfordcm.com/design-build/" style="color:#C8A24D;font-weight:600;">Learn about design-build.</a></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="bcm-reno-section bcm-reno-section-surface">
-    <div class="bcm-reno-container">
-      <div class="bcm-reno-services-header">
-        <span class="bcm-reno-label">What We Do</span>
-        <h2 class="bcm-reno-h2">Renovation Services</h2>
-        <p class="bcm-reno-lead">From targeted upgrades to complete transformations, we handle renovation work at every scope.</p>
+  <!-- Renovation Services -->
+  <section class="bcm-renovations-section bcm-renovations-services">
+    <div class="bcm-renovations-section-inner">
+      <div style="text-align: center;">
+        <span class="bcm-renovations-eyebrow">Renovation Services</span>
+        <h2 class="bcm-renovations-section-title">Types of Renovations We Specialize In</h2>
+        <p class="bcm-renovations-section-subtitle" style="margin: 0 auto;">From kitchens to whole home transformations, we bring expert planning and execution to every project. <a href="https://bradfordcm.com/projects/" style="color:#C8A24D;font-weight:600;">View completed projects.</a></p>
       </div>
-      <div class="bcm-reno-services-grid">
-        <div class="bcm-reno-service-card">
-          <h3><a href="https://bradfordcm.com/home-renovations/">Whole-Home Renovations</a></h3>
-          <p>Complete gut-and-rebuild projects that transform your home's layout, systems, and finishes from the ground up.</p>
+
+      <div class="bcm-renovations-services-grid">
+        <div class="bcm-renovations-service-card">
+          <h3>Whole Home Renovation</h3>
+          <p>Complete transformations that modernize every space while preserving your home's character. Ideal for older North Shore homes needing comprehensive updates to systems, layout, and finishes.</p>
         </div>
-        <div class="bcm-reno-service-card">
-          <h3>Kitchen Renovations</h3>
-          <p>Modern kitchens with updated appliances, custom cabinetry, and efficient workflow. Often included in larger home renovation projects.</p>
+
+        <div class="bcm-renovations-service-card">
+          <h3><a href="https://bradfordcm.com/kitchen-remodels/">Kitchen Renovation</a></h3>
+          <p>Create the heart of your home with custom cabinetry, quality countertops, and efficient layouts. We handle everything from design through electrical, plumbing, and finish work.</p>
         </div>
-        <div class="bcm-reno-service-card">
-          <h3>Bathroom Renovations</h3>
-          <p>Updated bathrooms with modern fixtures, improved plumbing and electrical, accessible design, and quality finishes.</p>
+
+        <div class="bcm-renovations-service-card">
+          <h3><a href="https://bradfordcm.com/bathroom-remodels/">Bathroom Renovation</a></h3>
+          <p>Transform outdated bathrooms into functional, beautiful spaces. Modern fixtures, custom tile work, proper ventilation, and smart storage solutions for bathrooms of any size.</p>
         </div>
-        <div class="bcm-reno-service-card">
+
+        <div class="bcm-renovations-service-card">
           <h3>Basement Finishing</h3>
-          <p>Convert unused basement space into finished rooms—recreation areas, home offices, guest bedrooms, or storage with modern systems.</p>
+          <p>Turn unused basement space into functional living areas. Family rooms, home offices, guest suites, or entertainment spaces with proper moisture control and egress compliance.</p>
         </div>
-        <div class="bcm-reno-service-card">
-          <h3>Historic Home Renovation</h3>
-          <p>Sensitive updates to older homes that preserve historic character while adding modern conveniences and safety systems.</p>
-        </div>
-        <div class="bcm-reno-service-card">
-          <h3>Open Floor Plan Conversion</h3>
-          <p>Remove walls and create open-concept living spaces. We handle structural engineering, permitting, and proper support systems.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Gallery Section -->
-  <section class="bcm-reno-section bcm-reno-section-light">
-    <div class="bcm-reno-container">
-      <div class="bcm-reno-gallery-header">
-        <span class="bcm-reno-label">Before & After</span>
-        <h2 class="bcm-reno-h2">Renovation Projects</h2>
-        <p class="bcm-reno-lead">See the transformations we've created for homeowners throughout the region.</p>
+        <div class="bcm-renovations-service-card">
+          <h3>Historic Home Renovation</h3>
+          <p>Preserve the charm of your historic property while adding modern conveniences. We understand period architecture and work within preservation guidelines when required.</p>
+        </div>
+
+        <div class="bcm-renovations-service-card">
+          <h3>Open Floor Plan Conversion</h3>
+          <p>Create flowing, modern living spaces by removing walls and reconfiguring layouts. We handle structural engineering to ensure safety and code compliance.</p>
+        </div>
       </div>
-      <div class="bcm-reno-gallery">
-        <a href="https://bradfordcm.com/projects/beverly-first-floor-renovation/" class="bcm-reno-gallery-item">
-          <img src="" alt="">
-          <span class="bcm-reno-gallery-overlay">Beverly First Floor Renovation</span>
-        </a>
-        <a href="https://bradfordcm.com/projects/newburyport-kitchen-renovation/" class="bcm-reno-gallery-item">
-          <img src="" alt="">
-          <span class="bcm-reno-gallery-overlay">Newburyport Kitchen Renovation</span>
-        </a>
-        <a href="https://bradfordcm.com/projects/andover-whole-home-renovation/" class="bcm-reno-gallery-item">
-          <img src="" alt="">
-          <span class="bcm-reno-gallery-overlay">Andover Whole-Home Renovation</span>
-        </a>
+
+      <!-- Also Build Section -->
+      <div style="margin-top:40px; padding:28px 32px; background:#FAF9F7; border-radius:12px; border:1px solid #E5E5E2; border-left:3px solid #C8A24D;">
+        <p style="margin:0 0 8px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#1C2331;font-size:1rem;letter-spacing:0.01em;">We Also Build</p>
+        <p style="margin:0;color:#6B7280;font-size:0.95rem;line-height:1.7;">Looking beyond renovations? We handle <a href="https://bradfordcm.com/home-additions/">home additions</a>, <a href="https://bradfordcm.com/custom-homes/">custom homes</a>, and <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADU / accessory dwelling units</a> with the same commercial-grade approach.</p>
+      </div>
+
+      <!-- Gallery -->
+      <div class="bcm-renovations-gallery">
+        <div class="bcm-renovations-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-1-1.jpg" alt="">
+          <div class="bcm-renovations-gallery-overlay">Kitchen Renovation</div>
+        </div>
+        <div class="bcm-renovations-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-24-1.jpg" alt="">
+          <a href="https://bradfordcm.com/bathroom-remodels/" class="bcm-renovations-gallery-overlay">Bathroom Renovation</a>
+        </div>
+        <div class="bcm-renovations-gallery-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-10-1.jpg" alt="">
+          <div class="bcm-renovations-gallery-overlay">Custom Built-Ins</div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="https://bradfordcm.com/contact/" class="bcm-renovations-btn-primary">Discuss Your Renovation</a>
       </div>
     </div>
   </section>
 
   <!-- Process Section -->
-  <section class="bcm-reno-section bcm-reno-section-surface">
-    <div class="bcm-reno-container">
-      <div class="bcm-reno-process-header">
-        <span class="bcm-reno-label">How We Work</span>
-        <h2 class="bcm-reno-h2">The Renovation Process</h2>
-        <p class="bcm-reno-lead">From initial consultation through completion and beyond.</p>
+  <section class="bcm-renovations-section bcm-renovations-process">
+    <div class="bcm-renovations-section-inner">
+      <div style="text-align: center;">
+        <span class="bcm-renovations-eyebrow">Our Process</span>
+        <h2 class="bcm-renovations-section-title">How Your Renovation Comes Together</h2>
+        <p class="bcm-renovations-section-subtitle" style="margin: 0 auto;">A clear, structured approach from initial conversation through project completion and beyond.</p>
       </div>
-      <div class="bcm-reno-process-grid">
-        <div class="bcm-reno-process-step">
-          <div class="bcm-reno-process-number">1</div>
-          <h3>Discovery Consultation</h3>
-          <p>Free consultation to understand your goals, timeline, and budget. We assess the scope of work needed.</p>
+
+      <div class="bcm-renovations-process-grid">
+        <div class="bcm-renovations-process-step">
+          <div class="bcm-renovations-step-number">1</div>
+          <h3>Discovery Call</h3>
+          <p>We discuss your vision, goals, and budget to determine if we're the right fit for your project.</p>
         </div>
-        <div class="bcm-reno-process-step">
-          <div class="bcm-reno-process-number">2</div>
-          <h3>Detailed Estimate</h3>
-          <p>Site assessment, measurements, and a comprehensive fixed-price estimate with complete scope definition.</p>
+        <div class="bcm-renovations-process-step">
+          <div class="bcm-renovations-step-number">2</div>
+          <h3>Site Assessment</h3>
+          <p>We evaluate your space, identify challenges, and begin developing solutions tailored to your home.</p>
         </div>
-        <div class="bcm-reno-process-step">
-          <div class="bcm-reno-process-number">3</div>
-          <h3>Design & Permitting</h3>
-          <p>Plans developed with your input. We handle all permit applications, inspections, and municipal coordination.</p>
+        <div class="bcm-renovations-process-step">
+          <div class="bcm-renovations-step-number">3</div>
+          <h3>Design &amp; Planning</h3>
+          <p>Our <a href="https://bradfordcm.com/design-build/" style="color:#C8A24D;font-weight:600;">design-build team</a> creates detailed plans, selects materials, and provides comprehensive scope and pricing.</p>
         </div>
-        <div class="bcm-reno-process-step">
-          <div class="bcm-reno-process-number">4</div>
+        <div class="bcm-renovations-process-step">
+          <div class="bcm-renovations-step-number">4</div>
+          <h3>Permits &amp; Prep</h3>
+          <p>We handle permit applications and coordinate inspections while preparing for construction.</p>
+        </div>
+        <div class="bcm-renovations-process-step">
+          <div class="bcm-renovations-step-number">5</div>
           <h3>Construction</h3>
-          <p>Daily photo updates, clear communication, and professional project management throughout your renovation.</p>
+          <p>Build phase with daily photo documentation, regular updates, and proactive communication throughout.</p>
         </div>
-        <div class="bcm-reno-process-step">
-          <div class="bcm-reno-process-number">5</div>
-          <h3>Quality Walkthrough</h3>
-          <p>Final inspection and walkthrough to ensure all work meets your expectations and codes compliance.</p>
-        </div>
-        <div class="bcm-reno-process-step">
-          <div class="bcm-reno-process-number">6</div>
-          <h3>Ongoing Support</h3>
-          <p>Warranty coverage and access to Bradford Home Services for maintenance and seasonal support.</p>
+        <div class="bcm-renovations-process-step">
+          <div class="bcm-renovations-step-number">6</div>
+          <h3>Completion &amp; Support</h3>
+          <p>Final walkthrough, punch list completion, and transition to ongoing support through Bradford Home Services.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Comparison Section -->
-  <section class="bcm-reno-section bcm-reno-section-light">
-    <div class="bcm-reno-container">
-      <div class="bcm-reno-comparison-header">
-        <span class="bcm-reno-label">Bradford vs. Traditional</span>
-        <h2 class="bcm-reno-h2">What Sets Us Apart</h2>
-        <p class="bcm-reno-lead">How our approach protects you and delivers better results.</p>
+  <!-- Comparison Table -->
+  <section class="bcm-renovations-section bcm-renovations-comparison">
+    <div class="bcm-renovations-section-inner">
+      <div style="text-align: center;">
+        <span class="bcm-renovations-eyebrow">Compare Your Options</span>
+        <h2 class="bcm-renovations-section-title">Bradford Construction vs. Industry Standard</h2>
+        <p class="bcm-renovations-section-subtitle" style="margin: 0 auto;">See how our approach differs from what you may have experienced before.</p>
       </div>
-      <div class="bcm-reno-table-wrapper">
-        <table class="bcm-reno-table">
+
+      <div class="bcm-renovations-table-wrapper">
+        <table class="bcm-renovations-table">
           <thead>
             <tr>
               <th>Feature</th>
-              <th>Bradford</th>
-              <th>Traditional Contractors</th>
+              <th>Bradford Construction</th>
+              <th>Industry Standard</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Daily Photo Documentation</td>
-              <td><span class="bcm-reno-check">✓</span></td>
-              <td>Rarely</td>
+              <td>Project Updates</td>
+              <td><span class="bcm-renovations-check">✓</span> Daily photo documentation</td>
+              <td>Varies by contractor</td>
             </tr>
             <tr>
-              <td>Fixed-Price Contracts</td>
-              <td><span class="bcm-reno-check">✓</span></td>
-              <td>Sometimes</td>
+              <td>Post-Completion Support</td>
+              <td><span class="bcm-renovations-check">✓</span> Lifetime through BHS</td>
+              <td>Limited warranty period</td>
             </tr>
             <tr>
-              <td>One Point of Contact</td>
-              <td><span class="bcm-reno-check">✓</span></td>
-              <td>Often multiple</td>
+              <td>Project Management</td>
+              <td><span class="bcm-renovations-check">✓</span> Commercial-grade systems</td>
+              <td>Varies by contractor</td>
             </tr>
             <tr>
-              <td>Permit Handling Included</td>
-              <td><span class="bcm-reno-check">✓</span></td>
-              <td>Sometimes extra</td>
+              <td>Design + Build</td>
+              <td><span class="bcm-renovations-check">✓</span> Single point of accountability</td>
+              <td>Often separate teams</td>
             </tr>
             <tr>
-              <td>Post-Project Support</td>
-              <td><span class="bcm-reno-check">✓</span></td>
-              <td>Usually unavailable</td>
+              <td>Pricing Transparency</td>
+              <td><span class="bcm-renovations-check">✓</span> Detailed scope upfront</td>
+              <td>Varies by contractor</td>
             </tr>
             <tr>
-              <td>Commercial-Grade PM</td>
-              <td><span class="bcm-reno-check">✓</span></td>
-              <td>Minimal</td>
+              <td>Change Order Process</td>
+              <td><span class="bcm-renovations-check">✓</span> Documented before work</td>
+              <td>Varies by contractor</td>
+            </tr>
+            <tr>
+              <td>Permit Management</td>
+              <td><span class="bcm-renovations-check">✓</span> Handled completely</td>
+              <td>Often homeowner responsibility</td>
+            </tr>
+            <tr>
+              <td>Communication Style</td>
+              <td><span class="bcm-renovations-check">✓</span> Proactive updates</td>
+              <td>Varies by contractor</td>
             </tr>
           </tbody>
         </table>
       </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="https://bradfordcm.com/contact/" class="bcm-renovations-btn-primary">Schedule Your Consultation</a>
+      </div>
     </div>
   </section>
 
-  <!-- Service Areas Section -->
-  <section class="bcm-reno-section bcm-reno-section-surface">
-    <div class="bcm-reno-container">
-      <div class="bcm-reno-areas-header">
-        <span class="bcm-reno-label">Service Areas</span>
-        <h2 class="bcm-reno-h2">Where We Work</h2>
-        <p class="bcm-reno-lead">Serving Eastern Massachusetts and Southern New Hampshire.</p>
+  <!-- Service Areas -->
+  <section class="bcm-renovations-section bcm-renovations-areas">
+    <div class="bcm-renovations-section-inner">
+      <div style="text-align: center;">
+        <span class="bcm-renovations-eyebrow">Service Areas</span>
+        <h2 class="bcm-renovations-section-title">Home Renovation Contractor Serving Massachusetts &amp; New Hampshire</h2>
+        <p class="bcm-renovations-section-subtitle" style="margin: 0 auto;">Bradford Construction Management provides professional renovation services throughout the North Shore, Merrimack Valley, and Southern New Hampshire.</p>
       </div>
-      <div class="bcm-reno-areas-grid">
-        <div>
+
+      <div class="bcm-renovations-areas-grid">
+        <div class="bcm-renovations-areas-column">
           <h3>Massachusetts</h3>
-          <div class="bcm-reno-areas-list">
-            <a href="https://bradfordcm.com/haverhill-ma/" class="bcm-reno-area-tag-linked">Haverhill (HQ)</a>
-            <a href="https://bradfordcm.com/newburyport-mass/" class="bcm-reno-area-tag-linked">Newburyport</a>
-            <span class="bcm-reno-area-tag">Amesbury</span>
-            <span class="bcm-reno-area-tag">Andover</span>
-            <span class="bcm-reno-area-tag">North Andover</span>
-            <span class="bcm-reno-area-tag">Beverly</span>
-            <span class="bcm-reno-area-tag">Ipswich</span>
-            <span class="bcm-reno-area-tag">Georgetown</span>
-            <span class="bcm-reno-area-tag">Groveland</span>
-            <span class="bcm-reno-area-tag">Boxford</span>
-            <span class="bcm-reno-area-tag">West Newbury</span>
-            <span class="bcm-reno-area-tag">Merrimac</span>
+          <div class="bcm-renovations-areas-list">
+            <a href="https://bradfordcm.com/haverhill-ma/" class="bcm-renovations-area-tag-linked">Haverhill</a>
+            <a href="https://bradfordcm.com/newburyport-mass/" class="bcm-renovations-area-tag-linked">Newburyport</a>
+            <span class="bcm-renovations-area-tag">Amesbury</span>
+            <span class="bcm-renovations-area-tag">Andover</span>
+            <span class="bcm-renovations-area-tag">North Andover</span>
+            <span class="bcm-renovations-area-tag">Beverly</span>
           </div>
         </div>
-        <div>
-          <h3>New Hampshire</h3>
-          <div class="bcm-reno-areas-list">
-            <a href="https://bradfordcm.com/exeter-nh/" class="bcm-reno-area-tag-linked">Exeter</a>
-            <span class="bcm-reno-area-tag">Salem</span>
-            <span class="bcm-reno-area-tag">Plaistow</span>
-            <span class="bcm-reno-area-tag">Surrounding areas</span>
-          </div>
+
+        <div class="bcm-renovations-areas-column">
+          <h3>New Hampshire &amp; Additional Areas</h3>
+          <p class="bcm-renovations-areas-text">We also serve <a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a>, Salem NH, Plaistow, and surrounding Southern New Hampshire communities, plus Newbury, Boxford, Georgetown, Groveland, West Newbury, Merrimac, and Ipswich in Massachusetts. <a href="https://bradfordcm.com/contact/">Contact us</a> to confirm service availability in your area.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ Section -->
-  <section class="bcm-reno-section bcm-reno-section-light">
-    <div class="bcm-reno-container">
-      <div class="bcm-reno-faq-header">
-        <span class="bcm-reno-label">FAQ</span>
-        <h2 class="bcm-reno-h2">Common Questions</h2>
+  <section class="bcm-renovations-section bcm-renovations-faq">
+    <div class="bcm-renovations-section-inner">
+      <div style="text-align: center;">
+        <span class="bcm-renovations-eyebrow">Common Questions</span>
+        <h2 class="bcm-renovations-section-title">Home Renovation FAQs</h2>
+        <p class="bcm-renovations-section-subtitle" style="margin: 0 auto;">Answers to questions we hear most often from homeowners considering renovation projects.</p>
       </div>
-      <div class="bcm-reno-faq-list">
-        <div class="bcm-reno-faq-item">
-          <button class="bcm-reno-faq-question">
+
+      <div class="bcm-renovations-faq-list">
+
+        <div class="bcm-renovations-faq-item">
+          <button class="bcm-renovations-faq-question">
             How much does a whole home renovation cost?
-            <svg class="bcm-reno-faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+            <svg class="bcm-renovations-faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="bcm-reno-faq-answer">
-            <p>Whole home renovation costs vary significantly based on scope, finishes, and structural changes. Projects typically range from $150,000 to $500,000+ depending on home size and complexity. We provide detailed estimates after assessing your specific goals and property conditions.</p>
+          <div class="bcm-renovations-faq-answer">
+            <p>Whole home renovation costs vary significantly based on scope, finishes, and structural changes. Projects typically range from $150,000 to $500,000+ depending on home size and complexity. We provide detailed estimates after assessing your specific goals and property conditions. <a href="https://bradfordcm.com/finance-your-dreams/">Explore financing options</a> to plan your investment.</p>
           </div>
         </div>
-        <div class="bcm-reno-faq-item">
-          <button class="bcm-reno-faq-question">
+
+        <div class="bcm-renovations-faq-item">
+          <button class="bcm-renovations-faq-question">
             Can I live in my home during a renovation?
-            <svg class="bcm-reno-faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+            <svg class="bcm-renovations-faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="bcm-reno-faq-answer">
-            <p>It depends on the scope. Kitchen and bathroom renovations often allow you to stay with some inconvenience. Whole home renovations typically require temporary relocation for safety and efficiency. We'll discuss livability options during your consultation and help you plan accordingly.</p>
+          <div class="bcm-renovations-faq-answer">
+            <p>It depends on the scope. <a href="https://bradfordcm.com/kitchen-remodels/">Kitchen</a> and <a href="https://bradfordcm.com/bathroom-remodels/">bathroom renovations</a> often allow you to stay with some inconvenience. Whole home renovations typically require temporary relocation for safety and efficiency. We'll discuss livability options during your consultation and help you plan accordingly.</p>
           </div>
         </div>
-        <div class="bcm-reno-faq-item">
-          <button class="bcm-reno-faq-question">
+
+        <div class="bcm-renovations-faq-item">
+          <button class="bcm-renovations-faq-question">
             How long does a typical home renovation take?
-            <svg class="bcm-reno-faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+            <svg class="bcm-renovations-faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="bcm-reno-faq-answer">
+          <div class="bcm-renovations-faq-answer">
             <p>Timeline varies by project scope. Kitchen renovations typically take 8-12 weeks, bathroom renovations 4-8 weeks, and whole home renovations can take 4-8 months or longer. We provide realistic timelines upfront and keep you informed of progress through daily photo documentation.</p>
           </div>
         </div>
-        <div class="bcm-reno-faq-item">
-          <button class="bcm-reno-faq-question">
+
+        <div class="bcm-renovations-faq-item">
+          <button class="bcm-renovations-faq-question">
             What is design-build and why does it matter for renovations?
-            <svg class="bcm-reno-faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+            <svg class="bcm-renovations-faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="bcm-reno-faq-answer">
-            <p>Design-build means one team handles both design and construction. This eliminates finger-pointing between architects and contractors, streamlines communication, and typically results in faster completion and fewer surprises. You have a single point of accountability throughout your project.</p>
+          <div class="bcm-renovations-faq-answer">
+            <p><a href="https://bradfordcm.com/design-build/">Design-build</a> means one team handles both design and construction. This eliminates finger-pointing between architects and contractors, streamlines communication, and typically results in faster completion and fewer surprises. You have a single point of accountability throughout your project.</p>
           </div>
         </div>
-        <div class="bcm-reno-faq-item">
-          <button class="bcm-reno-faq-question">
+
+        <div class="bcm-renovations-faq-item">
+          <button class="bcm-renovations-faq-question">
             Do I need permits for home renovation work?
-            <svg class="bcm-reno-faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+            <svg class="bcm-renovations-faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="bcm-reno-faq-answer">
+          <div class="bcm-renovations-faq-answer">
             <p>Most renovation work requires permits, especially for structural changes, electrical, plumbing, and HVAC modifications. We handle all permit applications and coordinate inspections as part of our service, ensuring your project meets local building codes.</p>
           </div>
         </div>
-        <div class="bcm-reno-faq-item">
-          <button class="bcm-reno-faq-question">
+
+        <div class="bcm-renovations-faq-item">
+          <button class="bcm-renovations-faq-question">
             What happens after my renovation is complete?
-            <svg class="bcm-reno-faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+            <svg class="bcm-renovations-faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="bcm-reno-faq-answer">
-            <p>Unlike most contractors, we don't disappear after final payment. Through Bradford Home Services (BHS), you have access to ongoing maintenance, seasonal check-ups, and priority service. The team that built your renovation continues to support it for the long term.</p>
+          <div class="bcm-renovations-faq-answer">
+            <p>Unlike most contractors, we don't disappear after final payment. Through Bradford Home Services (BHS), you have access to ongoing maintenance, seasonal check-ups, and priority service. The team that built your renovation continues to support it for the long term. <a href="https://bradfordcm.com/about-us/">Learn more about Bradford Home Services.</a></p>
           </div>
         </div>
-        <div class="bcm-reno-faq-item">
-          <button class="bcm-reno-faq-question">
+
+        <div class="bcm-renovations-faq-item">
+          <button class="bcm-renovations-faq-question">
             Can you work with my existing architect or designer?
-            <svg class="bcm-reno-faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+            <svg class="bcm-renovations-faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="bcm-reno-faq-answer">
-            <p>Yes, we can execute plans from your architect or designer. However, our design-build approach often provides better coordination and cost control. We're happy to discuss which approach makes the most sense for your specific project.</p>
+          <div class="bcm-renovations-faq-answer">
+            <p>Yes, we can execute plans from your architect or designer. However, our <a href="https://bradfordcm.com/design-build/">design-build approach</a> often provides better coordination and cost control. We're happy to discuss which approach makes the most sense for your specific project.</p>
           </div>
         </div>
-        <div class="bcm-reno-faq-item">
-          <button class="bcm-reno-faq-question">
+
+        <div class="bcm-renovations-faq-item">
+          <button class="bcm-renovations-faq-question">
             How do you handle unexpected issues during renovation?
-            <svg class="bcm-reno-faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+            <svg class="bcm-renovations-faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="bcm-reno-faq-answer">
+          <div class="bcm-renovations-faq-answer">
             <p>Older homes often reveal surprises once walls open up. We document everything with daily photos, communicate immediately when issues arise, and present solutions with clear cost implications before proceeding. No surprise bills at the end.</p>
           </div>
         </div>
-        <div class="bcm-reno-faq-item">
-          <button class="bcm-reno-faq-question">
+
+        <div class="bcm-renovations-faq-item">
+          <button class="bcm-renovations-faq-question">
             Do you renovate historic homes?
-            <svg class="bcm-reno-faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+            <svg class="bcm-renovations-faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="bcm-reno-faq-answer">
-            <p>Yes, we have experience with historic North Shore properties. We understand period architecture, work within preservation guidelines when required, and know how to add modern conveniences while respecting your home's character and history.</p>
+          <div class="bcm-renovations-faq-answer">
+            <p>Yes, we have experience with historic North Shore properties. We understand period architecture, work within preservation guidelines when required, and know how to add modern conveniences while respecting your home's character and history. <a href="https://bradfordcm.com/projects/">View our project gallery.</a></p>
           </div>
         </div>
-        <div class="bcm-reno-faq-item">
-          <button class="bcm-reno-faq-question">
+
+        <div class="bcm-renovations-faq-item">
+          <button class="bcm-renovations-faq-question">
             Is Bradford Construction Management licensed and insured?
-            <svg class="bcm-reno-faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+            <svg class="bcm-renovations-faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="bcm-reno-faq-answer">
+          <div class="bcm-renovations-faq-answer">
             <p>Yes. We hold Massachusetts Home Improvement Contractor registration #201908 and carry comprehensive general liability and workers' compensation insurance. You can verify our license through the Massachusetts Office of Consumer Affairs.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- CTA Banner -->
-  <section class="bcm-reno-cta-banner">
-    <div class="bcm-reno-container">
-      <h2 class="bcm-reno-h2">Ready to Transform Your Home?</h2>
-      <p>Schedule a free consultation. We'll discuss your renovation goals and provide a detailed estimate.</p>
-      <a href="#bcm-reno-form" class="bcm-reno-btn bcm-reno-btn-primary">Schedule Your Consultation</a>
+  <div class="bcm-renovations-cta-banner">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2>Ready to Transform Your Home?</h2>
+      <p>Let's discuss your renovation vision. We'll assess your space, review your goals, and provide honest guidance on bringing your project to life.</p>
+      <a href="https://bradfordcm.com/contact/" class="bcm-renovations-btn-primary">Start Your Renovation Conversation</a>
     </div>
-  </section>
+  </div>
 
   <!-- Form Section -->
-  <section class="bcm-reno-form-section" id="bcm-reno-form">
-    <div class="bcm-reno-form-wrapper">
-      <h2 class="bcm-reno-h2">Start Your Renovation</h2>
-      <p class="bcm-reno-lead">Tell us about your project. We'll reach out within one business day with a free consultation offer.</p>
-      <div class="bcm-reno-form-container">
+  <section class="bcm-renovations-form-section" id="consultation">
+    <div class="bcm-renovations-form-section-inner">
+      <span class="bcm-renovations-eyebrow">Get Started</span>
+      <h2 class="bcm-renovations-section-title">Schedule Your Consultation</h2>
+      <p class="bcm-renovations-section-subtitle" style="margin: 0 auto;">Tell us about your renovation project and we'll be in touch to discuss next steps.</p>
+
+      <div class="bcm-renovations-form-container">
         <iframe
           src="https://link.bradfordhs.com/widget/form/gjd0vNkXvXFZ1gi5Q51p"
-          style="width:100%;height:1434px;border:none;border-radius:6px;"
+          style="width:100%;height:1434px;border:none;border-radius:4px"
           id="inline-gjd0vNkXvXFZ1gi5Q51p"
           data-form-name="*BCM Website form"
           title="*BCM Website form">
@@ -1237,31 +1036,26 @@
         <script src="https://link.bradfordhs.com/js/form_embed.js"></script>
       </div>
     </div>
-    <div class="bcm-reno-credentials">
-      <p>Bradford Construction Management | HIC #201908 | Fully Insured | Free Estimates | Family-Owned Since 2001</p>
-    </div>
   </section>
+
+  <!-- Credentials Footer -->
+  <div class="bcm-renovations-credentials">
+    <p>Licensed &amp; Insured &middot; MA HIC #201908 &middot; 10+ Years Experience &middot; Serving MA &amp; NH</p>
+  </div>
 
 </div>
 
-<!-- FAQ Accordion Handler -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const faqItems = document.querySelectorAll('.bcm-reno-faq-item');
+  const faqItems = document.querySelectorAll('.bcm-renovations-faq-item');
 
   faqItems.forEach(item => {
-    const question = item.querySelector('.bcm-reno-faq-question');
+    const question = item.querySelector('.bcm-renovations-faq-question');
 
-    question.addEventListener('click', function() {
+    question.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
-
-      faqItems.forEach(otherItem => {
-        otherItem.classList.remove('active');
-      });
-
-      if (!isActive) {
-        item.classList.add('active');
-      }
+      faqItems.forEach(i => i.classList.remove('active'));
+      if (!isActive) { item.classList.add('active'); }
     });
   });
 });
