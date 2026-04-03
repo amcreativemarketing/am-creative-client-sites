@@ -1,0 +1,1093 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ============================================================
+   BCM RESIDENTIAL CONSTRUCTION PAGE
+   Namespace: .bcm-rc-*
+   2026 Brand System
+   ============================================================ */
+
+:root {
+  --bcm-black:     #1A1A1A;
+  --bcm-gold:      #C8A24D;
+  --bcm-gold-hover:#B8923F;
+  --bcm-gold-light:#D4B46A;
+  --bcm-gold-soft: rgba(200,162,77,0.07);
+  --bcm-gold-border:rgba(200,162,77,0.18);
+  --bcm-gold-glow: rgba(200,162,77,0.12);
+  --bcm-charcoal:  #1C2331;
+  --bcm-maritime:  #0F2A45;
+  --bcm-white:     #FAF9F7;
+  --bcm-surface:   #F7F7F5;
+  --bcm-gray:      #F1F1F1;
+  --bcm-border:    #E5E5E2;
+  --bcm-text-1:    #1C2331;
+  --bcm-text-2:    #3A4255;
+  --bcm-text-3:    #5C6478;
+  --bcm-text-lt:   rgba(250,249,247,0.88);
+  --bcm-text-muted:rgba(250,249,247,0.62);
+  --bcm-shadow-xs: 0 1px 2px rgba(28,35,49,0.04);
+  --bcm-shadow-sm: 0 2px 8px rgba(28,35,49,0.05);
+  --bcm-shadow-md: 0 4px 20px rgba(28,35,49,0.07);
+  --bcm-shadow-lg: 0 8px 40px rgba(28,35,49,0.09);
+  --bcm-radius:    6px;
+  --bcm-radius-md: 10px;
+  --bcm-radius-lg: 14px;
+  --bcm-ease:      cubic-bezier(0.25,0.46,0.45,0.94);
+  --bcm-font-d:    'Plus Jakarta Sans',-apple-system,sans-serif;
+  --bcm-font-b:    'Inter',-apple-system,sans-serif;
+}
+
+.bcm-rc {
+  width:100vw;
+  max-width:100vw;
+  margin-left:calc(-50vw + 50%);
+  position:relative;
+  font-family:var(--bcm-font-b);
+  color:var(--bcm-text-1);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+.bcm-rc *, .bcm-rc *::before, .bcm-rc *::after { box-sizing:border-box; }
+.bcm-rc h1,.bcm-rc h2,.bcm-rc h3,.bcm-rc h4 {
+  font-family:var(--bcm-font-d);
+  font-weight:700;
+  line-height:1.15;
+  letter-spacing:-0.02em;
+  margin:0 0 16px;
+}
+.bcm-rc h1 { font-size:clamp(2.2rem,5vw,3.4rem); letter-spacing:-0.025em; }
+.bcm-rc h2 { font-size:clamp(1.7rem,3.5vw,2.4rem); }
+.bcm-rc h3 { font-size:clamp(1.15rem,2vw,1.4rem); letter-spacing:-0.01em; }
+.bcm-rc p { margin:0 0 16px; }
+.bcm-rc p:last-child { margin-bottom:0; }
+
+.bcm-rc-inner { max-width:1160px; margin:0 auto; padding:0 24px; }
+@media(min-width:640px) { .bcm-rc-inner { padding:0 40px; } }
+@media(min-width:1024px){ .bcm-rc-inner { padding:0 48px; } }
+
+/* Section padding */
+.bcm-rc-section { padding:88px 0; }
+.bcm-rc-section--sm { padding:64px 0; }
+@media(max-width:767px) { .bcm-rc-section { padding:64px 0; } .bcm-rc-section--sm { padding:48px 0; } }
+
+/* Section header */
+.bcm-rc-section-hd { text-align:center; max-width:660px; margin:0 auto 56px; }
+.bcm-rc-label {
+  display:inline-flex; align-items:center; gap:10px;
+  color:var(--bcm-gold); font-family:var(--bcm-font-d);
+  font-size:0.72rem; font-weight:600; letter-spacing:0.1em;
+  text-transform:uppercase; margin-bottom:14px;
+}
+.bcm-rc-label::before,.bcm-rc-label::after {
+  content:''; display:block; width:24px; height:1.5px; background:var(--bcm-gold); opacity:0.6;
+}
+.bcm-rc-lead { font-size:1.05rem; color:var(--bcm-text-2); line-height:1.72; }
+
+/* Accent rule */
+.bcm-rc-rule {
+  display:block; width:40px; height:2px;
+  background:var(--bcm-gold); margin:0 auto 18px; border-radius:1px;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.bcm-rc-hero {
+  position:relative;
+  min-height:clamp(580px,75vh,760px);
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+  background:#1A1A1A;
+  padding:80px 0 72px;
+}
+.bcm-rc-hero-img {
+  position:absolute; inset:0;
+  background-image:url('https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-rear-completed-addition-deck-scaled.webp');
+  background-size:cover; background-position:center 35%;
+  opacity:0.68;
+}
+.bcm-rc-hero::before {
+  content:''; position:absolute; inset:0; z-index:1;
+  background:
+    linear-gradient(180deg, rgba(26,26,26,0.55) 0%, rgba(26,26,26,0.28) 40%, rgba(26,26,26,0.60) 100%),
+    radial-gradient(ellipse 120% 100% at 50% 50%, transparent 30%, rgba(26,26,26,0.45) 100%);
+}
+.bcm-rc-hero::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:4px; z-index:3;
+  background:linear-gradient(90deg, transparent 0%, var(--bcm-gold) 25%, var(--bcm-gold) 75%, transparent 100%);
+  opacity:0.55;
+}
+.bcm-rc-hero-content {
+  position:relative; z-index:2;
+  max-width:800px; padding:0 24px;
+  margin:0 auto; text-align:center;
+}
+@media(min-width:640px) { .bcm-rc-hero-content { padding:0 40px; } }
+.bcm-rc-hero-label {
+  display:inline-flex; align-items:center; gap:10px;
+  color:var(--bcm-gold); font-family:var(--bcm-font-d);
+  font-size:0.72rem; font-weight:600; letter-spacing:0.1em;
+  text-transform:uppercase; margin-bottom:20px;
+  justify-content:center;
+}
+.bcm-rc-hero-label::before,.bcm-rc-hero-label::after {
+  content:''; display:block; width:24px; height:1.5px; background:var(--bcm-gold);
+}
+.bcm-rc-hero h1 { color:var(--bcm-white); margin-bottom:20px; }
+.bcm-rc-hero-sub {
+  font-size:1.05rem; color:var(--bcm-text-lt);
+  line-height:1.75; max-width:640px; margin:0 auto 36px;
+}
+.bcm-rc-hero-actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:center; }
+
+/* Buttons */
+.bcm-rc a.bcm-rc-btn--gold {
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--bcm-gold); color:var(--bcm-black) !important;
+  font-family:var(--bcm-font-d); font-weight:600; font-size:0.92rem;
+  padding:15px 34px; border-radius:var(--bcm-radius);
+  text-decoration:none !important; transition:all 0.25s var(--bcm-ease);
+}
+.bcm-rc a.bcm-rc-btn--gold:hover { background:var(--bcm-gold-hover); transform:translateY(-2px); box-shadow:0 4px 20px rgba(200,162,77,0.3); color:var(--bcm-black) !important; }
+
+.bcm-rc a.bcm-rc-btn--ghost {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(250,249,247,0.06); border:1px solid rgba(250,249,247,0.18);
+  color:var(--bcm-text-lt) !important;
+  font-family:var(--bcm-font-d); font-weight:600; font-size:0.92rem;
+  padding:14px 32px; border-radius:var(--bcm-radius);
+  text-decoration:none !important; transition:all 0.25s var(--bcm-ease);
+}
+.bcm-rc a.bcm-rc-btn--ghost:hover { background:rgba(250,249,247,0.12); border-color:rgba(250,249,247,0.32); color:var(--bcm-white) !important; }
+
+.bcm-rc a.bcm-rc-btn--dark {
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--bcm-charcoal); color:var(--bcm-white) !important;
+  font-family:var(--bcm-font-d); font-weight:600; font-size:0.92rem;
+  padding:15px 34px; border-radius:var(--bcm-radius);
+  text-decoration:none !important; transition:all 0.25s var(--bcm-ease);
+}
+.bcm-rc a.bcm-rc-btn--dark:hover { background:var(--bcm-black); transform:translateY(-2px); color:var(--bcm-white) !important; }
+
+.bcm-rc a.bcm-rc-btn--outline {
+  display:inline-flex; align-items:center;
+  background:transparent; border:1.5px solid var(--bcm-border);
+  color:var(--bcm-charcoal) !important;
+  font-family:var(--bcm-font-d); font-weight:600; font-size:0.9rem;
+  padding:13px 28px; border-radius:var(--bcm-radius);
+  text-decoration:none !important; transition:all 0.25s var(--bcm-ease);
+}
+.bcm-rc a.bcm-rc-btn--outline:hover { border-color:var(--bcm-gold); color:var(--bcm-text-1) !important; transform:translateY(-2px); }
+
+/* ============================================================
+   TRUST BAR
+   ============================================================ */
+.bcm-rc-trust {
+  background:var(--bcm-black);
+  border-bottom:1px solid rgba(200,162,77,0.12);
+  padding:18px 0;
+}
+.bcm-rc-trust-inner {
+  max-width:1160px; margin:0 auto; padding:0 24px;
+  display:flex; flex-wrap:wrap; justify-content:center;
+  align-items:center; gap:6px 0;
+}
+.bcm-rc-trust-item {
+  display:flex; align-items:center; gap:8px;
+  color:rgba(250,249,247,0.5);
+  font-family:var(--bcm-font-d); font-size:0.7rem;
+  font-weight:500; letter-spacing:0.07em; text-transform:uppercase;
+  padding:6px 24px;
+  border-left:1px solid rgba(250,249,247,0.1);
+}
+.bcm-rc-trust-item:first-child { border-left:none; }
+.bcm-rc-trust-item strong { color:var(--bcm-gold); }
+
+/* ============================================================
+   SERVICES GRID
+   ============================================================ */
+.bcm-rc-services { background:var(--bcm-white); }
+.bcm-rc-services-grid {
+  display:grid; grid-template-columns:1fr; gap:2px;
+  background:var(--bcm-border);
+  border-radius:var(--bcm-radius-lg);
+  overflow:hidden;
+}
+@media(min-width:640px) { .bcm-rc-services-grid { grid-template-columns:repeat(2,1fr); } }
+
+.bcm-rc-service-card {
+  background:var(--bcm-white);
+  padding:40px 36px;
+  transition:all 0.3s var(--bcm-ease);
+  border-top:3px solid transparent;
+  border-left:none;
+  text-decoration:none !important;
+  color:inherit;
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+.bcm-rc-service-card:hover {
+  background:var(--bcm-surface);
+  border-top-color:var(--bcm-gold);
+  transform:translateY(-4px);
+  box-shadow:var(--bcm-shadow-md);
+}
+.bcm-rc-service-icon {
+  width:44px; height:44px;
+  background:var(--bcm-gold-soft);
+  border:1px solid var(--bcm-gold-border);
+  border-radius:var(--bcm-radius);
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:18px;
+  transition:all 0.25s var(--bcm-ease);
+  color:var(--bcm-gold);
+}
+.bcm-rc-service-card:hover .bcm-rc-service-icon {
+  background:var(--bcm-gold); border-color:var(--bcm-gold); color:var(--bcm-black);
+}
+.bcm-rc-service-card h3 { font-size:1.15rem; color:var(--bcm-text-1); margin-bottom:10px; }
+.bcm-rc-service-card p { font-size:0.93rem; color:var(--bcm-text-3); line-height:1.65; }
+.bcm-rc-service-card .bcm-rc-card-link {
+  display:inline-flex; align-items:center; gap:5px;
+  color:var(--bcm-gold); font-size:0.85rem; font-weight:600;
+  font-family:var(--bcm-font-d); margin-top:14px;
+  transition:gap 0.2s;
+}
+.bcm-rc-service-card:hover .bcm-rc-card-link { gap:9px; }
+
+/* ============================================================
+   PHOTO STRIP
+   ============================================================ */
+.bcm-rc-photo-strip {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:6px;
+  background:var(--bcm-border);
+  border-radius:var(--bcm-radius-lg);
+  overflow:hidden;
+}
+@media(max-width:639px) { .bcm-rc-photo-strip { grid-template-columns:1fr; } }
+@media(min-width:640px) and (max-width:899px) { .bcm-rc-photo-strip { grid-template-columns:repeat(2,1fr); } }
+
+.bcm-rc-photo-item {
+  position:relative; overflow:hidden;
+  aspect-ratio:4/3;
+}
+.bcm-rc-photo-item img {
+  width:100%; height:100%; object-fit:cover;
+  object-position:center;
+  display:block;
+  transition:transform 0.5s var(--bcm-ease);
+}
+.bcm-rc-photo-item:hover img { transform:scale(1.05); }
+.bcm-rc-photo-caption {
+  position:absolute; bottom:0; left:0; right:0;
+  background:linear-gradient(transparent, rgba(26,26,26,0.88));
+  padding:28px 16px 14px;
+  color:var(--bcm-white); font-size:0.78rem;
+  font-family:var(--bcm-font-d); font-weight:600;
+  letter-spacing:0.04em; text-transform:uppercase;
+  opacity:0; transform:translateY(4px);
+  transition:all 0.3s var(--bcm-ease);
+}
+.bcm-rc-photo-item:hover .bcm-rc-photo-caption { opacity:1; transform:translateY(0); }
+
+/* ============================================================
+   BENEFIT GRAPH / COMPARISON
+   ============================================================ */
+.bcm-rc-benefits { background:var(--bcm-charcoal); position:relative; overflow:hidden; }
+.bcm-rc-benefits::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 0%, var(--bcm-gold-glow) 0%, transparent 60%);
+  pointer-events:none;
+}
+.bcm-rc-benefits-grid {
+  display:grid; grid-template-columns:1fr;
+  gap:48px; align-items:start;
+}
+@media(min-width:900px) { .bcm-rc-benefits-grid { grid-template-columns:1fr 1fr; gap:80px; } }
+
+/* Left: value props */
+.bcm-rc-value-list { display:flex; flex-direction:column; gap:24px; }
+.bcm-rc-value-item {
+  display:flex; gap:18px; align-items:flex-start;
+  background:rgba(250,249,247,0.03);
+  border:1px solid rgba(250,249,247,0.07);
+  border-radius:var(--bcm-radius-md);
+  padding:24px 24px;
+  transition:background 0.25s var(--bcm-ease);
+}
+.bcm-rc-value-item:hover { background:rgba(250,249,247,0.06); }
+.bcm-rc-value-num {
+  flex-shrink:0;
+  width:36px; height:36px;
+  border:1.5px solid var(--bcm-gold-border);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--bcm-gold); font-family:var(--bcm-font-d);
+  font-size:0.78rem; font-weight:700;
+  transition:all 0.25s var(--bcm-ease);
+}
+.bcm-rc-value-item:hover .bcm-rc-value-num { background:var(--bcm-gold); border-color:var(--bcm-gold); color:var(--bcm-black); }
+.bcm-rc-value-body h4 {
+  font-size:1rem; color:var(--bcm-white); margin-bottom:6px;
+}
+.bcm-rc-value-body p { font-size:0.9rem; color:var(--bcm-text-muted); line-height:1.65; }
+
+/* Right: benefit bar chart */
+.bcm-rc-chart { padding:32px; background:rgba(250,249,247,0.04); border-radius:var(--bcm-radius-lg); border:1px solid rgba(250,249,247,0.06); }
+.bcm-rc-chart-title { font-family:var(--bcm-font-d); font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--bcm-gold); margin-bottom:28px; }
+.bcm-rc-chart-legend {
+  display:flex; gap:20px; margin-bottom:24px; flex-wrap:wrap;
+}
+.bcm-rc-legend-item { display:flex; align-items:center; gap:7px; font-size:0.78rem; color:var(--bcm-text-muted); font-family:var(--bcm-font-d); }
+.bcm-rc-legend-dot { width:10px; height:10px; border-radius:2px; flex-shrink:0; }
+.bcm-rc-chart-rows { display:flex; flex-direction:column; gap:18px; }
+.bcm-rc-chart-row {}
+.bcm-rc-chart-label { font-size:0.78rem; color:rgba(250,249,247,0.7); margin-bottom:7px; font-family:var(--bcm-font-d); }
+.bcm-rc-chart-bars { display:flex; flex-direction:column; gap:5px; }
+.bcm-rc-bar-wrap { display:flex; align-items:center; gap:10px; }
+.bcm-rc-bar-track {
+  flex:1; height:9px; background:rgba(250,249,247,0.06);
+  border-radius:4px; overflow:hidden;
+}
+.bcm-rc-bar-fill {
+  height:100%; border-radius:4px;
+  transition:width 0.8s var(--bcm-ease);
+}
+.bcm-rc-bar-fill--gold { background:linear-gradient(90deg, var(--bcm-gold) 0%, var(--bcm-gold-light) 100%); }
+.bcm-rc-bar-fill--muted { background:rgba(250,249,247,0.15); }
+.bcm-rc-bar-pct { font-size:0.72rem; color:var(--bcm-text-muted); min-width:30px; text-align:right; font-family:var(--bcm-font-d); }
+.bcm-rc-bar-pct--gold { color:var(--bcm-gold-light); }
+
+/* ============================================================
+   PROCESS STEPS
+   ============================================================ */
+.bcm-rc-process { background:var(--bcm-surface); }
+.bcm-rc-process-grid {
+  display:grid;
+  grid-template-columns:1fr;
+  border:1px solid var(--bcm-border);
+  border-radius:var(--bcm-radius-lg);
+  overflow:hidden;
+  background:var(--bcm-border);
+  gap:1px;
+}
+@media(min-width:640px) { .bcm-rc-process-grid { grid-template-columns:repeat(2,1fr); } }
+@media(min-width:1024px){ .bcm-rc-process-grid { grid-template-columns:repeat(3,1fr); } }
+
+.bcm-rc-step {
+  background:var(--bcm-white); padding:36px 28px;
+  transition:background 0.25s var(--bcm-ease);
+  text-align:center;
+}
+.bcm-rc-step:hover { background:var(--bcm-gold-soft); }
+.bcm-rc-step-num {
+  font-family:var(--bcm-font-d); font-size:2rem; font-weight:700;
+  color:var(--bcm-gold-border); margin:0 auto 14px;
+  line-height:1; letter-spacing:-0.03em;
+}
+.bcm-rc-step h3 { font-size:1rem; color:var(--bcm-text-1); margin-bottom:10px; }
+.bcm-rc-step p { font-size:0.88rem; color:var(--bcm-text-3); line-height:1.65; }
+.bcm-rc-step:hover .bcm-rc-step-num { color:var(--bcm-gold); }
+
+/* ============================================================
+   SPLIT TESTIMONIAL
+   ============================================================ */
+.bcm-rc-testimonial { background:var(--bcm-white); }
+.bcm-rc-testimonial-inner {
+  display:grid; grid-template-columns:1fr;
+  gap:48px; align-items:center;
+}
+@media(min-width:768px) { .bcm-rc-testimonial-inner { grid-template-columns:1fr 1fr; gap:64px; } }
+
+.bcm-rc-testimonial-img {
+  border-radius:var(--bcm-radius-lg); overflow:hidden;
+  aspect-ratio:4/3; position:relative;
+  box-shadow:var(--bcm-shadow-lg);
+}
+.bcm-rc-testimonial-img img {
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+.bcm-rc-testimonial-img::after {
+  content:''; position:absolute;
+  bottom:0; left:0; width:80px; height:3px;
+  background:var(--bcm-gold);
+}
+.bcm-rc-quote-stars { color:var(--bcm-gold); font-size:1rem; letter-spacing:2px; margin-bottom:16px; }
+.bcm-rc-quote {
+  font-size:1.05rem; line-height:1.78; color:var(--bcm-text-1);
+  font-style:italic; margin-bottom:20px;
+  padding:20px 24px; border-left:3px solid var(--bcm-gold);
+  background:var(--bcm-surface); border-radius:0 var(--bcm-radius-md) var(--bcm-radius-md) 0;
+}
+.bcm-rc-quote-author { font-family:var(--bcm-font-d); font-size:0.88rem; font-weight:700; color:var(--bcm-maritime); }
+
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+.bcm-rc-faq { background:var(--bcm-surface); }
+.bcm-rc-faq-list { max-width:820px; margin:0 auto; }
+.bcm-rc-faq-item {
+  background:var(--bcm-white);
+  border:1px solid var(--bcm-border);
+  border-radius:var(--bcm-radius-md);
+  margin-bottom:10px;
+  overflow:hidden;
+  border-left:3px solid transparent;
+  transition:border-left-color 0.25s var(--bcm-ease);
+}
+.bcm-rc-faq-item:hover,.bcm-rc-faq-item.open { border-left-color:var(--bcm-gold); }
+.bcm-rc-faq-q {
+  width:100%; background:none; border:none;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 24px; cursor:pointer; text-align:left;
+  font-family:var(--bcm-font-d); font-size:0.97rem;
+  font-weight:600; color:var(--bcm-text-1);
+  transition:color 0.2s;
+}
+.bcm-rc-faq-item.open .bcm-rc-faq-q { color:var(--bcm-gold-hover); }
+.bcm-rc-faq-icon {
+  flex-shrink:0; width:30px; height:30px;
+  background:var(--bcm-gold-soft); border:1px solid var(--bcm-gold-border);
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  color:var(--bcm-charcoal); font-size:1rem; font-weight:600;
+  transition:all 0.3s var(--bcm-ease); margin-left:16px;
+}
+.bcm-rc-faq-item.open .bcm-rc-faq-icon {
+  background:var(--bcm-charcoal); border-color:var(--bcm-charcoal);
+  color:var(--bcm-gold); transform:rotate(45deg);
+}
+.bcm-rc-faq-a {
+  max-height:0; overflow:hidden;
+  transition:max-height 0.35s var(--bcm-ease);
+}
+.bcm-rc-faq-item.open .bcm-rc-faq-a { max-height:400px; }
+.bcm-rc-faq-a-inner {
+  padding:0 24px 20px;
+  font-size:0.93rem; color:var(--bcm-text-3); line-height:1.72;
+}
+.bcm-rc-faq-a-inner a { color:var(--bcm-maritime); text-decoration:underline; text-decoration-color:rgba(15,42,69,0.3); }
+.bcm-rc-faq-a-inner a:hover { color:var(--bcm-gold); }
+
+/* ============================================================
+   CTA BAND
+   ============================================================ */
+.bcm-rc-cta-band {
+  background:linear-gradient(135deg, var(--bcm-black) 0%, var(--bcm-charcoal) 100%);
+  padding:72px 0; position:relative; overflow:hidden;
+}
+.bcm-rc-cta-band::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 60% 60% at 50% 50%, var(--bcm-gold-glow) 0%, transparent 65%);
+  pointer-events:none;
+}
+.bcm-rc-cta-band::after {
+  content:''; position:absolute; left:0; top:0; bottom:0; width:4px;
+  background:linear-gradient(180deg, transparent, var(--bcm-gold), transparent);
+  opacity:0.6;
+}
+.bcm-rc-cta-inner {
+  position:relative; max-width:1160px; margin:0 auto; padding:0 24px;
+  display:flex; flex-wrap:wrap; gap:32px;
+  justify-content:space-between; align-items:center;
+}
+.bcm-rc-cta-text h2 { color:var(--bcm-white); font-size:clamp(1.5rem,3vw,2rem); margin-bottom:8px; }
+.bcm-rc-cta-text p { color:var(--bcm-text-muted); font-size:0.97rem; }
+.bcm-rc-cta-actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+
+/* ============================================================
+   FORM SECTION
+   ============================================================ */
+.bcm-rc-form-section { background:var(--bcm-white); }
+.bcm-rc-form-wrap { background:var(--bcm-surface); border-radius:var(--bcm-radius-lg); padding:40px; box-shadow:var(--bcm-shadow-md); }
+
+/* ============================================================
+   SERVICE AREA
+   ============================================================ */
+.bcm-rc-area { background:var(--bcm-white); }
+.bcm-rc-area-grid {
+  display:grid; grid-template-columns:1fr;
+  gap:48px; align-items:start;
+}
+@media(min-width:768px) { .bcm-rc-area-grid { grid-template-columns:1.4fr 1fr; gap:64px; } }
+.bcm-rc-area-text p { font-size:0.97rem; color:var(--bcm-text-2); line-height:1.75; margin-bottom:20px; }
+.bcm-rc-area-text a { color:var(--bcm-maritime); text-decoration:underline; text-decoration-color:rgba(15,42,69,0.3); }
+.bcm-rc-area-text a:hover { color:var(--bcm-gold); }
+.bcm-rc-area-tags {
+  display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; justify-content:flex-start;
+}
+.bcm-rc-area-tag {
+  padding:8px 18px; background:var(--bcm-surface);
+  border:1px solid var(--bcm-border); border-radius:var(--bcm-radius);
+  font-size:0.85rem; font-family:var(--bcm-font-d); font-weight:500;
+  color:var(--bcm-text-1); text-decoration:none;
+  transition:all 0.2s var(--bcm-ease);
+}
+a.bcm-rc-area-tag:hover { border-color:var(--bcm-gold); color:var(--bcm-text-1); }
+.bcm-rc-area-sidebar {
+  background:var(--bcm-charcoal); border-radius:var(--bcm-radius-lg);
+  padding:36px; border-top:3px solid var(--bcm-gold);
+  text-align:center;
+}
+.bcm-rc-area-sidebar h3 { color:var(--bcm-white); font-size:1.1rem; margin-bottom:10px; }
+.bcm-rc-area-sidebar p { color:var(--bcm-text-muted); font-size:0.92rem; line-height:1.65; margin-bottom:24px; }
+
+/* ============================================================
+   INTERNAL LINKS FOOTER
+   ============================================================ */
+.bcm-rc-links-footer { background:var(--bcm-surface); border-top:1px solid var(--bcm-border); padding:52px 0; }
+.bcm-rc-links-grid { display:grid; grid-template-columns:1fr; gap:32px; }
+@media(min-width:640px) { .bcm-rc-links-grid { grid-template-columns:repeat(2,1fr); } }
+@media(min-width:1024px){ .bcm-rc-links-grid { grid-template-columns:repeat(4,1fr); } }
+.bcm-rc-links-col h4 {
+  font-size:0.7rem; font-weight:700; text-transform:uppercase;
+  letter-spacing:0.1em; color:var(--bcm-text-3); margin-bottom:14px;
+}
+.bcm-rc-links-col ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:9px; }
+.bcm-rc-links-col li a {
+  font-size:0.9rem; font-weight:500; color:var(--bcm-text-1);
+  text-decoration:none; display:inline-flex; align-items:center; gap:6px;
+  transition:color 0.2s;
+}
+.bcm-rc-links-col li a::before {
+  content:''; width:4px; height:4px; border-radius:50%;
+  background:var(--bcm-gold); opacity:0.5; flex-shrink:0; transition:opacity 0.2s;
+}
+.bcm-rc-links-col li a:hover { color:var(--bcm-gold); }
+.bcm-rc-links-col li a:hover::before { opacity:1; }
+
+/* Responsive helpers */
+@media(max-width:639px) {
+  .bcm-rc-hero-actions { justify-content:center; }
+  .bcm-rc-cta-inner { flex-direction:column; text-align:center; }
+  .bcm-rc-cta-actions { justify-content:center; }
+}
+</style>
+
+<div class="bcm-rc">
+
+  <!-- HERO -->
+  <section class="bcm-rc-hero">
+    <div class="bcm-rc-hero-img"></div>
+    <div class="bcm-rc-hero-content">
+      <div class="bcm-rc-hero-label">Residential Construction</div>
+      <h1>Residential Construction Services in Haverhill, MA &amp; the North Shore</h1>
+      <p class="bcm-rc-hero-sub">A design-build contractor serving the North Shore and Merrimack Valley. From custom home builds to whole-home renovations and additions - every project managed with commercial-grade rigor, daily photo documentation, and transparent pricing from groundbreaking to final walkthrough.</p>
+      <div class="bcm-rc-hero-actions">
+        <a href="https://bradfordcm.com/contact/" class="bcm-rc-btn--gold">Get a Free Consultation</a>
+        <a href="https://bradfordcm.com/projects/" class="bcm-rc-btn--ghost">View Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="bcm-rc-trust">
+    <div class="bcm-rc-trust-inner">
+      <div class="bcm-rc-trust-item"><strong>MA HIC #201908</strong>&nbsp;Licensed &amp; Insured</div>
+      <div class="bcm-rc-trust-item"><strong>10+</strong>&nbsp;Years Experience</div>
+      <div class="bcm-rc-trust-item"><strong>Daily</strong>&nbsp;Photo Documentation</div>
+      <div class="bcm-rc-trust-item"><strong>Design-Build</strong>&nbsp;Contractor</div>
+      <div class="bcm-rc-trust-item"><strong>0</strong>&nbsp;Abandoned Clients</div>
+    </div>
+  </div>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="bcm-rc-section bcm-rc-services">
+    <div class="bcm-rc-inner">
+      <div class="bcm-rc-section-hd">
+        <div class="bcm-rc-label">Our Services</div>
+        <h2>Our Residential Construction Services</h2>
+        <p class="bcm-rc-lead">Whether you're building from the ground up or transforming an existing space, Bradford Construction provides full-service residential construction tailored to your vision. Every project is managed with the same commercial-grade rigor - clear scope, reliable schedule, daily documentation.</p>
+      </div>
+
+      <div class="bcm-rc-services-grid">
+
+        <a href="https://bradfordcm.com/custom-homes/" class="bcm-rc-service-card">
+          <div class="bcm-rc-service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Custom Home Building</h3>
+          <p>We manage the entire custom home construction process - design coordination, permitting, subcontractor management, and quality oversight from foundation to finish. Whether you're working from existing plans or starting fresh, Bradford delivers the home you've envisioned, built to the standard it deserves.</p>
+          <span class="bcm-rc-card-link">Explore Custom Homes &rarr;</span>
+        </a>
+
+        <a href="https://bradfordcm.com/home-additions/" class="bcm-rc-service-card">
+          <div class="bcm-rc-service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg>
+          </div>
+          <h3>Home Additions</h3>
+          <p>Room additions, second-story additions, garage conversions, ADUs - we handle every type of residential expansion with seamless integration into your existing structure. One accountable team manages design, permits, and construction so nothing falls through the cracks.</p>
+          <span class="bcm-rc-card-link">Explore Home Additions &rarr;</span>
+        </a>
+
+        <a href="https://bradfordcm.com/home-renovations/" class="bcm-rc-service-card">
+          <div class="bcm-rc-service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <h3>Whole-Home Renovations</h3>
+          <p>Kitchens, bathrooms, structural changes, full interior remodels - our construction management model keeps complex, multi-trade renovations on track. Transparent pricing, documented change orders, and daily photo updates mean you always know exactly what's happening.</p>
+          <span class="bcm-rc-card-link">Explore Home Renovations &rarr;</span>
+        </a>
+
+        <a href="https://bradfordcm.com/design-build/" class="bcm-rc-service-card">
+          <div class="bcm-rc-service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h3>Construction Management for Residential Projects</h3>
+          <p>Bradford acts as your project advocate - coordinating trades, managing schedules, overseeing quality, and communicating progress at every phase. This commercial approach to residential construction is our core differentiator: professional oversight that keeps your project protected.</p>
+          <span class="bcm-rc-card-link">Explore Design-Build &rarr;</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO STRIP (in-progress + completed) -->
+  <section style="background:var(--bcm-surface); padding:48px 0;">
+    <div class="bcm-rc-inner">
+      <div class="bcm-rc-photo-strip">
+        <div class="bcm-rc-photo-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-rear-exterior-zip-sheathing-full-scaled.webp" alt="" width="560" height="420" loading="lazy">
+          <div class="bcm-rc-photo-caption">Construction in Progress</div>
+        </div>
+        <div class="bcm-rc-photo-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/bchill-adu-block-build-photo-raw-02-scaled.jpeg" alt="" width="560" height="420" loading="lazy">
+          <div class="bcm-rc-photo-caption">ADU Block Build</div>
+        </div>
+        <div class="bcm-rc-photo-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/06_Deck-Composite-Marsh-View.webp" alt="" width="560" height="420" loading="lazy">
+          <div class="bcm-rc-photo-caption">Completed Composite Deck</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE BCM + BENEFIT CHART -->
+  <section class="bcm-rc-section bcm-rc-benefits">
+    <div class="bcm-rc-inner" style="position:relative;">
+      <div class="bcm-rc-section-hd" style="margin-bottom:56px;">
+        <div class="bcm-rc-label">Why Choose Bradford CM</div>
+        <h2 style="color:var(--bcm-white);">Why Homeowners Choose Bradford Construction Management</h2>
+        <p class="bcm-rc-lead" style="color:var(--bcm-text-muted);">When you're investing in your home, you deserve a residential construction company that treats your project with the same rigor as a commercial build. Here's what separates Bradford from a typical residential contractor.</p>
+      </div>
+
+      <div class="bcm-rc-benefits-grid">
+
+        <!-- Value points -->
+        <div class="bcm-rc-value-list">
+          <div class="bcm-rc-value-item">
+            <div class="bcm-rc-value-num">01</div>
+            <div class="bcm-rc-value-body">
+              <h4>Construction Management Approach</h4>
+              <p>Unlike traditional residential contractors, Bradford brings a formal construction management process to every project. Detailed scheduling, proactive communication, and accountability at every phase - the kind of oversight that's standard on commercial jobs but rare in residential.</p>
+            </div>
+          </div>
+          <div class="bcm-rc-value-item">
+            <div class="bcm-rc-value-num">02</div>
+            <div class="bcm-rc-value-body">
+              <h4>Licensed, Insured &amp; Experienced</h4>
+              <p>Bradford CM is fully licensed (MA HIC #201908) and insured in Massachusetts. With 10+ years of residential construction experience across the North Shore, we know local codes, permitting processes, and the trusted subcontractor networks that keep projects moving.</p>
+            </div>
+          </div>
+          <div class="bcm-rc-value-item">
+            <div class="bcm-rc-value-num">03</div>
+            <div class="bcm-rc-value-body">
+              <h4>Transparent Pricing - No Surprises</h4>
+              <p>Detailed estimates upfront. Every change goes through a documented change-order process before any work proceeds. You approve costs in writing - no surprise invoices, no verbal agreements that drift over time.</p>
+            </div>
+          </div>
+          <div class="bcm-rc-value-item">
+            <div class="bcm-rc-value-num">04</div>
+            <div class="bcm-rc-value-body">
+              <h4>Client-Centered Results</h4>
+              <p>Your vision drives every decision. From initial planning through the final walkthrough, Bradford delivers the custom home or renovation you envisioned - backed by daily photo documentation so you're never left guessing what's happening on site.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefit bar chart -->
+        <div class="bcm-rc-chart">
+          <div class="bcm-rc-chart-title">Bradford vs. Industry Average</div>
+          <div class="bcm-rc-chart-legend">
+            <div class="bcm-rc-legend-item"><div class="bcm-rc-legend-dot" style="background:var(--bcm-gold);"></div>Bradford CM</div>
+            <div class="bcm-rc-legend-item"><div class="bcm-rc-legend-dot" style="background:rgba(250,249,247,0.15);"></div>Industry Average</div>
+          </div>
+          <div class="bcm-rc-chart-rows">
+
+            <div class="bcm-rc-chart-row">
+              <div class="bcm-rc-chart-label">Client Communication Frequency</div>
+              <div class="bcm-rc-chart-bars">
+                <div class="bcm-rc-bar-wrap">
+                  <div class="bcm-rc-bar-track"><div class="bcm-rc-bar-fill bcm-rc-bar-fill--gold" style="width:100%;"></div></div>
+                  <span class="bcm-rc-bar-pct bcm-rc-bar-pct--gold">Daily</span>
+                </div>
+                <div class="bcm-rc-bar-wrap">
+                  <div class="bcm-rc-bar-track"><div class="bcm-rc-bar-fill bcm-rc-bar-fill--muted" style="width:22%;"></div></div>
+                  <span class="bcm-rc-bar-pct">Weekly</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bcm-rc-chart-row">
+              <div class="bcm-rc-chart-label">Project Documentation</div>
+              <div class="bcm-rc-chart-bars">
+                <div class="bcm-rc-bar-wrap">
+                  <div class="bcm-rc-bar-track"><div class="bcm-rc-bar-fill bcm-rc-bar-fill--gold" style="width:100%;"></div></div>
+                  <span class="bcm-rc-bar-pct bcm-rc-bar-pct--gold">100%</span>
+                </div>
+                <div class="bcm-rc-bar-wrap">
+                  <div class="bcm-rc-bar-track"><div class="bcm-rc-bar-fill bcm-rc-bar-fill--muted" style="width:28%;"></div></div>
+                  <span class="bcm-rc-bar-pct">28%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bcm-rc-chart-row">
+              <div class="bcm-rc-chart-label">Pricing Transparency</div>
+              <div class="bcm-rc-chart-bars">
+                <div class="bcm-rc-bar-wrap">
+                  <div class="bcm-rc-bar-track"><div class="bcm-rc-bar-fill bcm-rc-bar-fill--gold" style="width:100%;"></div></div>
+                  <span class="bcm-rc-bar-pct bcm-rc-bar-pct--gold">Full</span>
+                </div>
+                <div class="bcm-rc-bar-wrap">
+                  <div class="bcm-rc-bar-track"><div class="bcm-rc-bar-fill bcm-rc-bar-fill--muted" style="width:40%;"></div></div>
+                  <span class="bcm-rc-bar-pct">Partial</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bcm-rc-chart-row">
+              <div class="bcm-rc-chart-label">Post-Project Support</div>
+              <div class="bcm-rc-chart-bars">
+                <div class="bcm-rc-bar-wrap">
+                  <div class="bcm-rc-bar-track"><div class="bcm-rc-bar-fill bcm-rc-bar-fill--gold" style="width:100%;"></div></div>
+                  <span class="bcm-rc-bar-pct bcm-rc-bar-pct--gold">Lifetime</span>
+                </div>
+                <div class="bcm-rc-bar-wrap">
+                  <div class="bcm-rc-bar-track"><div class="bcm-rc-bar-fill bcm-rc-bar-fill--muted" style="width:15%;"></div></div>
+                  <span class="bcm-rc-bar-pct">None</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bcm-rc-chart-row">
+              <div class="bcm-rc-chart-label">Schedule Adherence</div>
+              <div class="bcm-rc-chart-bars">
+                <div class="bcm-rc-bar-wrap">
+                  <div class="bcm-rc-bar-track"><div class="bcm-rc-bar-fill bcm-rc-bar-fill--gold" style="width:92%;"></div></div>
+                  <span class="bcm-rc-bar-pct bcm-rc-bar-pct--gold">92%</span>
+                </div>
+                <div class="bcm-rc-bar-wrap">
+                  <div class="bcm-rc-bar-track"><div class="bcm-rc-bar-fill bcm-rc-bar-fill--muted" style="width:52%;"></div></div>
+                  <span class="bcm-rc-bar-pct">52%</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:56px;">
+        <a href="https://bradfordcm.com/about-us/" class="bcm-rc-btn--ghost">Learn About Our Approach</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS STEPS -->
+  <section class="bcm-rc-section bcm-rc-process">
+    <div class="bcm-rc-inner">
+      <div class="bcm-rc-section-hd">
+        <div class="bcm-rc-label">How It Works</div>
+        <h2>How We Manage Your Residential Construction Project</h2>
+        <p class="bcm-rc-lead">From feasibility to final walkthrough, every Bradford project follows the same proven process - the one that eliminates communication gaps and keeps homeowners in control.</p>
+      </div>
+
+      <div class="bcm-rc-process-grid">
+        <div class="bcm-rc-step">
+          <div class="bcm-rc-step-num">01</div>
+          <h3>Consultation &amp; Feasibility</h3>
+          <p>We discuss your goals, assess your property and budget, and give you honest feedback on scope and timeline. No pressure - just clear answers so you can make an informed decision.</p>
+        </div>
+        <div class="bcm-rc-step">
+          <div class="bcm-rc-step-num">02</div>
+          <h3>Design &amp; Engineering</h3>
+          <p>Our <a href="https://bradfordcm.com/design-build/" style="color:var(--bcm-maritime);text-decoration:underline;">design-build approach</a> keeps architectural planning and construction under one team. Fewer handoffs, faster decisions, one accountable point of contact.</p>
+        </div>
+        <div class="bcm-rc-step">
+          <div class="bcm-rc-step-num">03</div>
+          <h3>Transparent Proposal</h3>
+          <p>You receive a detailed, itemized proposal before any work begins. Every cost is broken down. Every change during construction requires your written approval before we proceed.</p>
+        </div>
+        <div class="bcm-rc-step">
+          <div class="bcm-rc-step-num">04</div>
+          <h3>Permitting &amp; Pre-Construction</h3>
+          <p>We handle all permit applications, building department interactions, and inspections. You stay informed at every step, but we manage the paperwork and the process.</p>
+        </div>
+        <div class="bcm-rc-step">
+          <div class="bcm-rc-step-num">05</div>
+          <h3>Construction &amp; Daily Documentation</h3>
+          <p>Timestamped photos delivered to you every single day. Clear milestones, coordinated trades, clean site protocols. You always know what happened on your project - no wondering.</p>
+        </div>
+        <div class="bcm-rc-step">
+          <div class="bcm-rc-step-num">06</div>
+          <h3>Lifetime Support</h3>
+          <p>After the final walkthrough, Bradford Home Services keeps us in your corner for maintenance, warranty follow-through, and ongoing support. We're the contractor who never leaves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO / SOCIAL PROOF -->
+  <section class="bcm-rc-section bcm-rc-testimonial">
+    <div class="bcm-rc-inner">
+      <div class="bcm-rc-section-hd">
+        <div class="bcm-rc-label">Our Work</div>
+        <h2>Residential Construction Work Across the North Shore</h2>
+        <p class="bcm-rc-lead">Recent completed projects across Haverhill, West Newbury, Wakefield, and throughout Eastern MA - each delivered with daily documentation and ongoing post-project support.</p>
+      </div>
+
+      <!-- Completed photo pair -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; border-radius:var(--bcm-radius-lg); overflow:hidden; margin-bottom:56px; background:var(--bcm-border); max-width:960px; margin-left:auto; margin-right:auto;">
+        <div class="bcm-rc-photo-item" style="aspect-ratio:3/2;">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/18_Staircase-From-Living-Room.webp" alt="" width="560" height="374" loading="lazy">
+          <div class="bcm-rc-photo-caption">Completed Custom Staircase</div>
+        </div>
+        <div class="bcm-rc-photo-item" style="aspect-ratio:3/2;">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/17_Laundry-Room-Stacked-Units.webp" alt="" width="560" height="374" loading="lazy">
+          <div class="bcm-rc-photo-caption">Completed Laundry Room</div>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="bcm-rc-testimonial-inner">
+        <div class="bcm-rc-testimonial-img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/03/06_Deck-Composite-Marsh-View.webp" alt="" width="600" height="450" loading="lazy">
+        </div>
+        <div>
+          <div class="bcm-rc-quote-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="bcm-rc-quote">"Bradford Construction was phenomenal on our multi-stage, 10-month complete rebuild. Rick was there every step of the way - texting, emailing, calling, and talking us through our options. The final result was jaw-dropping."</p>
+          <div class="bcm-rc-quote-author">Luke R. &mdash; Verified Google Review</div>
+          <div style="margin-top:28px;">
+            <a href="https://bradfordcm.com/projects/" class="bcm-rc-btn--outline">View All Projects</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="bcm-rc-section bcm-rc-area" style="background:var(--bcm-gray);">
+    <div class="bcm-rc-inner">
+      <div class="bcm-rc-section-hd">
+        <div class="bcm-rc-label">Service Area</div>
+        <h2>Residential Construction Across the North Shore, MA</h2>
+      </div>
+
+      <div class="bcm-rc-area-grid">
+        <div class="bcm-rc-area-text">
+          <p>Bradford CM proudly serves homeowners throughout Haverhill, Newburyport, Andover, Beverly, and surrounding communities across the North Shore and Merrimack Valley. Whether you're building a <a href="https://bradfordcm.com/custom-homes/">custom home</a> in the suburbs, adding a <a href="https://bradfordcm.com/home-additions/">second story</a>, or pursuing a <a href="https://bradfordcm.com/home-renovations/">whole-home renovation</a>, our team is local, responsive, and ready.</p>
+          <p>As a <a href="https://bradfordcm.com/">Haverhill-based design-build contractor</a>, we know North Shore building codes, local permit timelines, and the trusted subcontractor networks that keep residential projects moving. From initial consultation through final walkthrough, you work with a team that understands your region - not a crew dispatched from hours away.</p>
+          <div class="bcm-rc-area-tags">
+            <a href="https://bradfordcm.com/haverhill-ma/" class="bcm-rc-area-tag">Haverhill, MA</a>
+            <a href="https://bradfordcm.com/newburyport-mass/" class="bcm-rc-area-tag">Newburyport, MA</a>
+            <a href="https://bradfordcm.com/south-hamilton-ma/" class="bcm-rc-area-tag">South Hamilton, MA</a>
+            <a href="https://bradfordcm.com/wakefield-ma/" class="bcm-rc-area-tag">Wakefield, MA</a>
+            <a href="https://bradfordcm.com/exeter-nh/" class="bcm-rc-area-tag">Exeter, NH</a>
+            <span class="bcm-rc-area-tag">Andover, MA</span>
+            <span class="bcm-rc-area-tag">Beverly, MA</span>
+            <span class="bcm-rc-area-tag">North Andover, MA</span>
+            <span class="bcm-rc-area-tag">Amesbury, MA</span>
+            <span class="bcm-rc-area-tag">West Newbury, MA</span>
+          </div>
+        </div>
+        <div class="bcm-rc-area-sidebar">
+          <h3>Start Your Project</h3>
+          <p>Free consultation, detailed estimate, no pressure. We respond within 24 hours.</p>
+          <a href="https://bradfordcm.com/contact/" class="bcm-rc-btn--gold" style="width:100%; justify-content:center; display:flex;">Schedule a Consultation</a>
+          <p style="margin-top:14px; font-size:0.82rem; color:rgba(250,249,247,0.4);">MA HIC #201908 &middot; Licensed &amp; Insured</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcm-rc-section bcm-rc-faq">
+    <div class="bcm-rc-inner">
+      <div class="bcm-rc-section-hd">
+        <div class="bcm-rc-label">Common Questions</div>
+        <h2>Frequently Asked Questions About Our Residential Construction Services</h2>
+      </div>
+
+      <div class="bcm-rc-faq-list">
+
+        <div class="bcm-rc-faq-item">
+          <button class="bcm-rc-faq-q" aria-expanded="false">
+            <span>What residential construction services does Bradford CM offer?</span>
+            <span class="bcm-rc-faq-icon">+</span>
+          </button>
+          <div class="bcm-rc-faq-a">
+            <div class="bcm-rc-faq-a-inner">Bradford Construction Management offers custom home building, home additions, whole-home renovations, and construction management services for residential projects across Haverhill, MA and the North Shore. Every project is managed under a single contract with one accountable team from design through completion.</div>
+          </div>
+        </div>
+
+        <div class="bcm-rc-faq-item">
+          <button class="bcm-rc-faq-q" aria-expanded="false">
+            <span>Is Bradford CM licensed and insured in Massachusetts?</span>
+            <span class="bcm-rc-faq-icon">+</span>
+          </button>
+          <div class="bcm-rc-faq-a">
+            <div class="bcm-rc-faq-a-inner">Yes. Bradford CM holds Massachusetts Home Improvement Contractor registration #201908 and carries comprehensive general liability and workers' compensation insurance - meeting all local building code and permit requirements for residential construction throughout the North Shore and Merrimack Valley.</div>
+          </div>
+        </div>
+
+        <div class="bcm-rc-faq-item">
+          <button class="bcm-rc-faq-q" aria-expanded="false">
+            <span>What areas does Bradford CM serve?</span>
+            <span class="bcm-rc-faq-icon">+</span>
+          </button>
+          <div class="bcm-rc-faq-a">
+            <div class="bcm-rc-faq-a-inner">We serve homeowners throughout <a href="https://bradfordcm.com/haverhill-ma/">Haverhill</a>, <a href="https://bradfordcm.com/newburyport-mass/">Newburyport</a>, Andover, Beverly, North Andover, Amesbury, and the broader North Shore and Merrimack Valley region. We also serve Southern NH communities including <a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a>. Contact us to confirm availability in your area.</div>
+          </div>
+        </div>
+
+        <div class="bcm-rc-faq-item">
+          <button class="bcm-rc-faq-q" aria-expanded="false">
+            <span>What is residential construction management?</span>
+            <span class="bcm-rc-faq-icon">+</span>
+          </button>
+          <div class="bcm-rc-faq-a">
+            <div class="bcm-rc-faq-a-inner">Residential construction management means Bradford CM acts as your project advocate - coordinating subcontractors, managing timelines, overseeing quality, and communicating progress so you can stay focused on your life while we handle the complexity. It's the commercial-grade approach applied to your home.</div>
+          </div>
+        </div>
+
+        <div class="bcm-rc-faq-item">
+          <button class="bcm-rc-faq-q" aria-expanded="false">
+            <span>How do I get a quote for my residential construction project?</span>
+            <span class="bcm-rc-faq-icon">+</span>
+          </button>
+          <div class="bcm-rc-faq-a">
+            <div class="bcm-rc-faq-a-inner"><a href="https://bradfordcm.com/contact/">Contact our team</a> through the form below or call us directly at 978-945-9771. We'll schedule a consultation to understand your project scope and provide a detailed, itemized estimate - so you know exactly what you're investing before any work begins.</div>
+          </div>
+        </div>
+
+        <div class="bcm-rc-faq-item">
+          <button class="bcm-rc-faq-q" aria-expanded="false">
+            <span>How long does a residential construction project take?</span>
+            <span class="bcm-rc-faq-icon">+</span>
+          </button>
+          <div class="bcm-rc-faq-a">
+            <div class="bcm-rc-faq-a-inner">Timelines vary by scope. A custom home typically takes 8-18 months from permitting to completion. Additions and renovations can range from a few weeks to several months depending on complexity. We provide a detailed project schedule at the start of every engagement, and our daily photo documentation keeps you informed of progress throughout.</div>
+          </div>
+        </div>
+
+        <div class="bcm-rc-faq-item">
+          <button class="bcm-rc-faq-q" aria-expanded="false">
+            <span>Can Bradford CM work with my architect or designer?</span>
+            <span class="bcm-rc-faq-icon">+</span>
+          </button>
+          <div class="bcm-rc-faq-a">
+            <div class="bcm-rc-faq-a-inner">Absolutely. We regularly collaborate with architects, interior designers, and engineers. If you have existing plans, we can review them and provide a construction estimate. Our <a href="https://bradfordcm.com/design-build/">design-build model</a> handles everything in-house, but we're happy to integrate with your existing team.</div>
+          </div>
+        </div>
+
+        <div class="bcm-rc-faq-item">
+          <button class="bcm-rc-faq-q" aria-expanded="false">
+            <span>Does Bradford CM handle permits?</span>
+            <span class="bcm-rc-faq-icon">+</span>
+          </button>
+          <div class="bcm-rc-faq-a">
+            <div class="bcm-rc-faq-a-inner">Yes. We manage the permitting process as part of our construction management services - working directly with local municipalities, submitting plans, coordinating inspections, and ensuring all work is fully permitted and code-compliant. You stay informed at every stage, but we handle the paperwork.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="bcm-rc-section bcm-rc-form-section">
+    <div class="bcm-rc-inner">
+      <div class="bcm-rc-section-hd">
+        <div class="bcm-rc-label">Get Started</div>
+        <h2>Schedule Your Free Consultation</h2>
+        <p class="bcm-rc-lead">Tell us about your project. No pressure - just honest assessment and clear answers from a team that's been doing this for over a decade.</p>
+      </div>
+      <div class="bcm-rc-form-wrap" style="max-width:700px; margin:0 auto;">
+        <iframe
+          src="https://link.bradfordhs.com/widget/form/gjd0vNkXvXFZ1gi5Q51p"
+          style="width:100%;height:1434px;border:none;border-radius:4px"
+          id="inline-gjd0vNkXvXFZ1gi5Q51p"
+          data-form-name="*BCM Website form"
+          title="*BCM Website form">
+        </iframe>
+        <script src="https://link.bradfordhs.com/js/form_embed.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERNAL LINKS FOOTER -->
+  <nav class="bcm-rc-links-footer" aria-label="Related pages">
+    <div class="bcm-rc-inner">
+      <div class="bcm-rc-links-grid">
+        <div class="bcm-rc-links-col">
+          <h4>Bradford Construction</h4>
+          <ul>
+            <li><a href="https://bradfordcm.com/">Homepage</a></li>
+            <li><a href="https://bradfordcm.com/services/">All Services</a></li>
+            <li><a href="https://bradfordcm.com/about-us/">About Us</a></li>
+            <li><a href="https://bradfordcm.com/projects/">Project Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="bcm-rc-links-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="https://bradfordcm.com/custom-homes/">Custom Homes</a></li>
+            <li><a href="https://bradfordcm.com/home-additions/">Home Additions</a></li>
+            <li><a href="https://bradfordcm.com/home-renovations/">Home Renovations</a></li>
+            <li><a href="https://bradfordcm.com/design-build/">Design-Build</a></li>
+          </ul>
+        </div>
+        <div class="bcm-rc-links-col">
+          <h4>Areas We Serve</h4>
+          <ul>
+            <li><a href="https://bradfordcm.com/haverhill-ma/">Haverhill, MA</a></li>
+            <li><a href="https://bradfordcm.com/newburyport-mass/">Newburyport, MA</a></li>
+            <li><a href="https://bradfordcm.com/south-hamilton-ma/">South Hamilton, MA</a></li>
+            <li><a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a></li>
+          </ul>
+        </div>
+        <div class="bcm-rc-links-col">
+          <h4>Get Started</h4>
+          <ul>
+            <li><a href="https://bradfordcm.com/contact/">Free Consultation</a></li>
+            <li><a href="tel:9789459771">978-945-9771</a></li>
+            <li><a href="https://bradfordcm.com/finance-your-dreams/">Financing Options</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.bcm-rc-faq-item').forEach(function(item) {
+    item.querySelector('.bcm-rc-faq-q').addEventListener('click', function() {
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.bcm-rc-faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.bcm-rc-faq-q').setAttribute('aria-expanded','false');
+      });
+      if (!open) {
+        item.classList.add('open');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+});
+</script>
