@@ -1,0 +1,783 @@
+<style>
+  .bcm-additions-wrapper {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+  }
+
+  .bcm-additions-wrapper h2,
+  .bcm-additions-wrapper h3,
+  .bcm-additions-wrapper h4 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .bcm-additions-wrapper p,
+  .bcm-additions-wrapper li,
+  .bcm-additions-wrapper td,
+  .bcm-additions-wrapper label,
+  .bcm-additions-wrapper span {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+  }
+
+  /* 2026 Brand Colors */
+  .bcm-additions-section-light  { background: #FAF9F7; }
+  .bcm-additions-section-white  { background: #FFFFFF; }
+  .bcm-additions-section-navy   { background: linear-gradient(135deg, #0F2A45, #1A1A1A); }
+
+  .bcm-additions-text-navy  { color: #1A1A1A; }
+  .bcm-additions-text-slate { color: #1C2331; }
+  .bcm-additions-text-muted { color: #64748B; }
+
+  .bcm-additions-gold        { color: #C8A24D; }
+  .bcm-additions-border-gold { border-color: #C8A24D; }
+  .bcm-additions-bg-gold     { background: #C8A24D; }
+
+  /* Cards */
+  .bcm-additions-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(26, 26, 26, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .bcm-additions-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(26, 26, 26, 0.12);
+  }
+
+  /* Buttons */
+  .bcm-additions-btn-primary {
+    display: inline-block;
+    background: #C8A24D;
+    color: #1A1A1A;
+    padding: 18px 40px;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  .bcm-additions-btn-primary:hover {
+    background: #b89040;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(200, 162, 77, 0.35);
+  }
+
+  .bcm-additions-btn-secondary {
+    display: inline-block;
+    background: #1C2331;
+    color: #FFFFFF !important;
+    padding: 18px 40px;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+  }
+  .bcm-additions-btn-secondary:hover {
+    background: #0F2A45;
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+  }
+
+  /* Trust Icons */
+  .bcm-additions-trust-icon {
+    width: 48px;
+    height: 48px;
+    background: #1C2331;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .bcm-additions-trust-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #C8A24D;
+  }
+
+  /* FAQ Accordion */
+  .bcm-additions-faq-item {
+    background: #FFFFFF;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 10px rgba(26, 26, 26, 0.06);
+    overflow: hidden;
+  }
+  .bcm-additions-faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1C2331;
+    transition: color 0.3s ease;
+  }
+  .bcm-additions-faq-question:hover { color: #0F2A45; }
+  .bcm-additions-faq-toggle {
+    width: 32px;
+    height: 32px;
+    background: #1C2331;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+  .bcm-additions-faq-toggle svg {
+    width: 14px;
+    height: 14px;
+    fill: #FFFFFF;
+    transition: transform 0.3s ease;
+  }
+  .bcm-additions-faq-item.active .bcm-additions-faq-toggle {
+    background: #C8A24D;
+    transform: rotate(180deg);
+  }
+  .bcm-additions-faq-item.active .bcm-additions-faq-toggle svg { fill: #1A1A1A; }
+  .bcm-additions-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+  }
+  .bcm-additions-faq-item.active .bcm-additions-faq-answer {
+    max-height: 500px;
+    padding: 0 28px 24px;
+  }
+  .bcm-additions-faq-answer p {
+    color: #64748B;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* Gallery */
+  .bcm-additions-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(26, 26, 26, 0.10);
+  }
+  .bcm-additions-gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .bcm-additions-gallery-item:hover img { transform: scale(1.05); }
+  .bcm-additions-gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(15, 42, 69, 0.9));
+    padding: 40px 20px 20px;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .bcm-additions-grid-2 { grid-template-columns: 1fr !important; }
+    .bcm-additions-grid-3 { grid-template-columns: 1fr !important; }
+    .bcm-additions-grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+    .bcm-additions-process-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 480px) {
+    .bcm-additions-grid-4 { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+
+<div class="bcm-additions-wrapper">
+
+<!-- SECTION: Trust Bar -->
+<section class="bcm-additions-section-light" style="padding: 50px 20px;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;" class="bcm-additions-grid-4">
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div class="bcm-additions-trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; color: #1C2331; font-size: 1rem;">Licensed &amp; Insured</div>
+          <div style="color: #64748B; font-size: 0.9rem;">MA HIC #201908</div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div class="bcm-additions-trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; color: #1C2331; font-size: 1rem;">10+ Years</div>
+          <div style="color: #64748B; font-size: 0.9rem;">Professional Experience</div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div class="bcm-additions-trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; color: #1C2331; font-size: 1rem;">Daily Updates</div>
+          <div style="color: #64748B; font-size: 0.9rem;">Photo Documentation</div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div class="bcm-additions-trust-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; color: #1C2331; font-size: 1rem;">Lifetime Support</div>
+          <div style="color: #64748B; font-size: 0.9rem;">Bradford Home Services</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: The Bradford Difference -->
+<section class="bcm-additions-section-white" style="padding: 80px 20px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+
+    <div style="text-align: center; margin-bottom: 60px;">
+      <p style="color: #C8A24D; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Why Choose Us</p>
+      <h2 style="font-size: 2.25rem; color: #1C2331; margin-bottom: 16px;">The Bradford Difference</h2>
+      <p style="color: #64748B; font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.7;">Most contractors disappear after the final payment. We don't. Here's what makes our <a href="https://bradfordcm.com/design-build/" style="color: #0F2A45; font-weight: 600; text-decoration: underline;">design-build approach</a> to home additions different. <a href="https://bradfordcm.com/about-us/" style="color: #0F2A45; font-weight: 600; text-decoration: underline;">Learn more about us</a>.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 950px; margin: 0 auto;" class="bcm-additions-grid-2">
+
+      <div class="bcm-additions-card" style="padding: 35px; border-top: 4px solid #C8A24D;">
+        <h3 style="color: #1C2331; font-size: 1.3rem; margin-bottom: 14px;">Daily Photo Documentation</h3>
+        <p style="color: #64748B; line-height: 1.8; font-size: 1rem; margin: 0;">Every day, you receive timestamped photos showing progress on your addition. No guessing what's happening on site - complete transparency from foundation to final walkthrough.</p>
+      </div>
+
+      <div class="bcm-additions-card" style="padding: 35px; border-top: 4px solid #C8A24D;">
+        <h3 style="color: #1C2331; font-size: 1.3rem; margin-bottom: 14px;">Commercial-Grade Project Management</h3>
+        <p style="color: #64748B; line-height: 1.8; font-size: 1rem; margin: 0;">We bring professional project management from $500M+ commercial builds to your home. Clear schedules, documented milestones, and accountable execution every step of the way.</p>
+      </div>
+
+      <div class="bcm-additions-card" style="padding: 35px; border-top: 4px solid #C8A24D;">
+        <h3 style="color: #1C2331; font-size: 1.3rem; margin-bottom: 14px;">Transparent Pricing</h3>
+        <p style="color: #64748B; line-height: 1.8; font-size: 1rem; margin: 0;">We provide detailed scopes with clear pricing upfront. Any changes during construction go through a documented change-order process - you approve costs in writing before we proceed.</p>
+      </div>
+
+      <div class="bcm-additions-card" style="padding: 35px; border-top: 4px solid #C8A24D;">
+        <h3 style="color: #1C2331; font-size: 1.3rem; margin-bottom: 14px;">Lifetime Support</h3>
+        <p style="color: #64748B; line-height: 1.8; font-size: 1rem; margin: 0;">Through Bradford Home Services, we provide ongoing maintenance and support after your addition is complete. We don't disappear - we're here for the long term.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: Home Addition Services -->
+<section class="bcm-additions-section-light" style="padding: 80px 20px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+
+    <div style="text-align: center; margin-bottom: 60px;">
+      <p style="color: #C8A24D; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Our Services</p>
+      <h2 style="font-size: 2.25rem; color: #1C2331; margin-bottom: 16px;">Home Addition Services We Provide</h2>
+      <p style="color: #64748B; font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.7;">From second-story additions to garage expansions and in-law suites, we handle every aspect of your project - design, permitting, structural engineering, and construction. View our <a href="https://bradfordcm.com/services/" style="color: #0F2A45; font-weight: 600; text-decoration: underline;">full range of services</a>.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px; margin-bottom: 60px;" class="bcm-additions-grid-2">
+
+      <!-- Left Column -->
+      <div>
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-size: 1.35rem; color: #1C2331; margin-bottom: 12px; padding-left: 18px; border-left: 4px solid #C8A24D;">Second-Story Additions</h3>
+          <p style="color: #64748B; line-height: 1.8; font-size: 1rem;">Add bedrooms, bathrooms, or dedicated office space by building up instead of out. We handle structural analysis, foundation reinforcement, and seamless integration with your existing roof and exterior.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-size: 1.35rem; color: #1C2331; margin-bottom: 12px; padding-left: 18px; border-left: 4px solid #C8A24D;">Garage Additions &amp; Conversions</h3>
+          <p style="color: #64748B; line-height: 1.8; font-size: 1rem;">Expand your garage for additional vehicles or storage, or convert existing garage space into livable square footage with proper insulation, HVAC, and electrical.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-size: 1.35rem; color: #1C2331; margin-bottom: 12px; padding-left: 18px; border-left: 4px solid #C8A24D;">In-Law Suites &amp; ADUs</h3>
+          <p style="color: #64748B; line-height: 1.8; font-size: 1rem;">Create accessible, comfortable living spaces for aging parents or adult children. We navigate <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/" style="color: #0F2A45; text-decoration: none; font-weight: 600;">Massachusetts ADU regulations</a>, accessibility requirements, and utility connections.</p>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div>
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-size: 1.35rem; color: #1C2331; margin-bottom: 12px; padding-left: 18px; border-left: 4px solid #C8A24D;">Bump-Outs &amp; Room Extensions</h3>
+          <p style="color: #64748B; line-height: 1.8; font-size: 1rem;">Expand kitchens, dining rooms, or living areas without the cost of a full addition. Bump-outs provide strategic square footage gains with minimal disruption.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-size: 1.35rem; color: #1C2331; margin-bottom: 12px; padding-left: 18px; border-left: 4px solid #C8A24D;">Whole-Home Additions</h3>
+          <p style="color: #64748B; line-height: 1.8; font-size: 1rem;">Major expansions that transform your home's footprint and functionality. Comprehensive planning includes structural engineering, mechanical system upgrades, and aesthetic integration. Often combined with a <a href="https://bradfordcm.com/home-renovations/" style="color: #0F2A45; text-decoration: none; font-weight: 600;">whole-home renovation</a>.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+          <h3 style="font-size: 1.35rem; color: #1C2331; margin-bottom: 12px; padding-left: 18px; border-left: 4px solid #C8A24D;">Sunrooms &amp; Four-Season Rooms</h3>
+          <p style="color: #64748B; line-height: 1.8; font-size: 1rem;">Light-filled additions with proper insulation, heating, and foundation work. Designed for year-round use in New England's changing seasons.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Related Services callout -->
+    <div style="background: #FFFFFF; border-radius: 12px; padding: 28px 32px; margin-bottom: 40px; border-left: 4px solid #C8A24D; box-shadow: 0 4px 20px rgba(26,26,26,0.07);">
+      <p style="color: #1C2331; font-weight: 600; margin-bottom: 10px; font-family: 'Plus Jakarta Sans', sans-serif;">Planning more than an addition?</p>
+      <p style="color: #64748B; font-size: 0.95rem; margin: 0; line-height: 1.7;">We also deliver <a href="https://bradfordcm.com/custom-homes/" style="color: #0F2A45; font-weight: 600; text-decoration: underline;">custom home builds</a>, <a href="https://bradfordcm.com/kitchen-remodels/" style="color: #0F2A45; font-weight: 600; text-decoration: underline;">kitchen remodels</a>, and <a href="https://bradfordcm.com/bathroom-remodels/" style="color: #0F2A45; font-weight: 600; text-decoration: underline;">bathroom remodels</a> - often as part of the same project. One team, one timeline, one point of contact.</p>
+    </div>
+
+    <!-- Gallery -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 50px;" class="bcm-additions-grid-3">
+      <div class="bcm-additions-gallery-item">
+        <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6072-scaled.jpeg" alt="">
+        <div class="bcm-additions-gallery-caption">Garage Addition</div>
+      </div>
+      <div class="bcm-additions-gallery-item">
+        <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-13.jpg" alt="">
+        <div class="bcm-additions-gallery-caption">Living Room Addition</div>
+      </div>
+      <div class="bcm-additions-gallery-item">
+        <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8400.jpeg" alt="">
+        <div class="bcm-additions-gallery-caption">Porch Addition</div>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="#consultation" class="bcm-additions-btn-primary">Discuss Your Addition Project</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION: Our Process -->
+<section class="bcm-additions-section-white" style="padding: 80px 20px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+
+    <div style="text-align: center; margin-bottom: 60px;">
+      <p style="color: #C8A24D; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Our Process</p>
+      <h2 style="font-size: 2.25rem; color: #1C2331; margin-bottom: 16px;">How We Build Your Addition</h2>
+      <p style="color: #64748B; font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.7;">From feasibility to final walkthrough, here's how we manage your home addition project with professional systems and clear communication.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;" class="bcm-additions-process-grid">
+
+      <div style="background: #FAF9F7; padding: 35px; border-left: 5px solid #C8A24D; border-radius: 8px;">
+        <div style="font-size: 2.5rem; color: #C8A24D; font-weight: 700; margin-bottom: 12px; line-height: 1; font-family: 'Plus Jakarta Sans', sans-serif;">01</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: #1C2331;">Consultation &amp; Feasibility</h3>
+        <p style="color: #64748B; line-height: 1.8; font-size: 0.95rem; margin: 0;">We discuss your goals, assess your property's structure and zoning, and provide realistic budget ranges. No pressure, just honest assessment.</p>
+      </div>
+
+      <div style="background: #FAF9F7; padding: 35px; border-left: 5px solid #C8A24D; border-radius: 8px;">
+        <div style="font-size: 2.5rem; color: #C8A24D; font-weight: 700; margin-bottom: 12px; line-height: 1; font-family: 'Plus Jakarta Sans', sans-serif;">02</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: #1C2331;">Design &amp; Engineering</h3>
+        <p style="color: #64748B; line-height: 1.8; font-size: 0.95rem; margin: 0;">Our <a href="https://bradfordcm.com/design-build/" style="color: #0F2A45; font-weight: 600; text-decoration: none;">design-build approach</a> means one team handles architectural plans, structural engineering, and material selections. Fewer handoffs, faster decisions.</p>
+      </div>
+
+      <div style="background: #FAF9F7; padding: 35px; border-left: 5px solid #C8A24D; border-radius: 8px;">
+        <div style="font-size: 2.5rem; color: #C8A24D; font-weight: 700; margin-bottom: 12px; line-height: 1; font-family: 'Plus Jakarta Sans', sans-serif;">03</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: #1C2331;">Permitting &amp; Approvals</h3>
+        <p style="color: #64748B; line-height: 1.8; font-size: 0.95rem; margin: 0;">We manage all permit applications, building department interactions, and inspections. You stay informed, but we handle the bureaucracy.</p>
+      </div>
+
+      <div style="background: #FAF9F7; padding: 35px; border-left: 5px solid #C8A24D; border-radius: 8px;">
+        <div style="font-size: 2.5rem; color: #C8A24D; font-weight: 700; margin-bottom: 12px; line-height: 1; font-family: 'Plus Jakarta Sans', sans-serif;">04</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: #1C2331;">Construction &amp; Daily Updates</h3>
+        <p style="color: #64748B; line-height: 1.8; font-size: 0.95rem; margin: 0;">Foundation, framing, mechanical, finishes - every day you receive photo updates showing progress. Clear schedules keep everyone accountable.</p>
+      </div>
+
+      <div style="background: #FAF9F7; padding: 35px; border-left: 5px solid #C8A24D; border-radius: 8px;">
+        <div style="font-size: 2.5rem; color: #C8A24D; font-weight: 700; margin-bottom: 12px; line-height: 1; font-family: 'Plus Jakarta Sans', sans-serif;">05</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: #1C2331;">Final Walkthrough &amp; Handoff</h3>
+        <p style="color: #64748B; line-height: 1.8; font-size: 0.95rem; margin: 0;">We conduct a detailed walkthrough, document punch list items, and ensure you're 100% satisfied before final payment.</p>
+      </div>
+
+      <div style="background: #FAF9F7; padding: 35px; border-left: 5px solid #C8A24D; border-radius: 8px;">
+        <div style="font-size: 2.5rem; color: #C8A24D; font-weight: 700; margin-bottom: 12px; line-height: 1; font-family: 'Plus Jakarta Sans', sans-serif;">06</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: #1C2331;">Ongoing Support</h3>
+        <p style="color: #64748B; line-height: 1.8; font-size: 0.95rem; margin: 0;">Unlike other contractors, we don't disappear. Bradford Home Services provides seasonal maintenance, warranty follow-through, and ongoing support.</p>
+      </div>
+
+    </div>
+
+    <!-- Progress Photos -->
+    <div style="margin-top: 60px;">
+      <h3 style="text-align: center; font-size: 1.6rem; margin-bottom: 40px; color: #1C2331;">See Our Process in Action</h3>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" class="bcm-additions-grid-3">
+        <div class="bcm-additions-gallery-item" style="border: 3px solid #C8A24D;">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_1579-scaled.jpeg" alt="">
+          <div class="bcm-additions-gallery-caption">Foundation &amp; Framing</div>
+        </div>
+        <div class="bcm-additions-gallery-item" style="border: 3px solid #C8A24D;">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/11/Screenshot-2025-11-27-at-6.42.20-PM.png" alt="">
+          <div class="bcm-additions-gallery-caption">Exterior Progress</div>
+        </div>
+        <div class="bcm-additions-gallery-item" style="border: 3px solid #C8A24D;">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7737.jpeg" alt="">
+          <div class="bcm-additions-gallery-caption">Framing Complete</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION: Comparison -->
+<section class="bcm-additions-section-light" style="padding: 80px 20px;">
+  <div style="max-width: 1000px; margin: 0 auto;">
+
+    <div style="text-align: center; margin-bottom: 60px;">
+      <p style="color: #C8A24D; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">The Difference</p>
+      <h2 style="font-size: 2.25rem; color: #1C2331; margin-bottom: 16px;">Bradford vs. Industry Standard</h2>
+      <p style="color: #64748B; font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.7;">Here's what sets our approach to home additions apart from what you might experience elsewhere.</p>
+    </div>
+
+    <div style="overflow-x: auto; box-shadow: 0 5px 25px rgba(26, 26, 26, 0.08); border-radius: 12px;">
+      <table style="width: 100%; border-collapse: collapse; background: white; min-width: 650px;">
+        <thead>
+          <tr>
+            <th style="padding: 22px; text-align: left; font-size: 1rem; background: #1C2331; color: white; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif;">Feature</th>
+            <th style="padding: 22px; text-align: center; font-size: 1rem; background: #C8A24D; color: #1A1A1A; font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif;">Bradford Construction</th>
+            <th style="padding: 22px; text-align: center; font-size: 1rem; background: #1C2331; color: white; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif;">Industry Standard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #E2E8F0;">
+            <td style="padding: 20px 22px; font-weight: 600; color: #1C2331;">Daily Project Updates</td>
+            <td style="padding: 20px 22px; text-align: center; color: #059669; font-weight: 700; font-size: 1.5rem; background: #FDFCF8;">&#10003;</td>
+            <td style="padding: 20px 22px; text-align: center; color: #64748B; font-size: 0.95rem;">Varies by contractor</td>
+          </tr>
+          <tr style="background: #FAFAFA; border-bottom: 1px solid #E2E8F0;">
+            <td style="padding: 20px 22px; font-weight: 600; color: #1C2331;">Pricing Transparency</td>
+            <td style="padding: 20px 22px; text-align: center; color: #059669; font-size: 0.95rem; font-weight: 600; background: #FDFCF8;">Clear scope with documented change orders</td>
+            <td style="padding: 20px 22px; text-align: center; color: #64748B; font-size: 0.95rem;">Varies by contractor</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #E2E8F0;">
+            <td style="padding: 20px 22px; font-weight: 600; color: #1C2331;">Project Management Software</td>
+            <td style="padding: 20px 22px; text-align: center; color: #059669; font-weight: 700; font-size: 1.5rem; background: #FDFCF8;">&#10003;</td>
+            <td style="padding: 20px 22px; text-align: center; color: #64748B; font-size: 0.95rem;">Varies by contractor</td>
+          </tr>
+          <tr style="background: #FAFAFA; border-bottom: 1px solid #E2E8F0;">
+            <td style="padding: 20px 22px; font-weight: 600; color: #1C2331;">Ongoing Maintenance</td>
+            <td style="padding: 20px 22px; text-align: center; color: #059669; font-size: 0.95rem; font-weight: 600; background: #FDFCF8;">Bradford Home Services available</td>
+            <td style="padding: 20px 22px; text-align: center; color: #64748B; font-size: 0.95rem;">Varies by contractor</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #E2E8F0;">
+            <td style="padding: 20px 22px; font-weight: 600; color: #1C2331;">Design-Build Integration</td>
+            <td style="padding: 20px 22px; text-align: center; color: #059669; font-weight: 700; font-size: 1.5rem; background: #FDFCF8;">&#10003;</td>
+            <td style="padding: 20px 22px; text-align: center; color: #64748B; font-size: 0.95rem;">Often separate architect &amp; builder</td>
+          </tr>
+          <tr style="background: #FAFAFA; border-bottom: 1px solid #E2E8F0;">
+            <td style="padding: 20px 22px; font-weight: 600; color: #1C2331;">Commercial-Grade Scheduling</td>
+            <td style="padding: 20px 22px; text-align: center; color: #059669; font-weight: 700; font-size: 1.5rem; background: #FDFCF8;">&#10003;</td>
+            <td style="padding: 20px 22px; text-align: center; color: #64748B; font-size: 0.95rem;">Varies by contractor</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #E2E8F0;">
+            <td style="padding: 20px 22px; font-weight: 600; color: #1C2331;">Licensed &amp; Insured</td>
+            <td style="padding: 20px 22px; text-align: center; color: #059669; font-size: 0.95rem; font-weight: 600; background: #FDFCF8;">MA HIC #201908</td>
+            <td style="padding: 20px 22px; text-align: center; color: #059669; font-weight: 700; font-size: 1.5rem;">&#10003;</td>
+          </tr>
+          <tr style="background: #FAFAFA;">
+            <td style="padding: 20px 22px; font-weight: 600; color: #1C2331;">Documented Change-Order Process</td>
+            <td style="padding: 20px 22px; text-align: center; color: #059669; font-weight: 700; font-size: 1.5rem; background: #FDFCF8;">&#10003;</td>
+            <td style="padding: 20px 22px; text-align: center; color: #64748B; font-size: 0.95rem;">Varies by contractor</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+      <p style="font-size: 1.15rem; color: #1C2331; margin-bottom: 12px; font-weight: 600;">Ready to experience the Bradford difference?</p>
+      <p style="color: #64748B; font-size: 0.95rem; margin-bottom: 24px;">Need help with financing? <a href="https://bradfordcm.com/finance-your-dreams/" style="color: #0F2A45; font-weight: 600; text-decoration: underline;">Learn about our flexible payment options</a> for qualified homeowners.</p>
+      <a href="#consultation" class="bcm-additions-btn-primary">Schedule Your Consultation</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION: Service Area -->
+<section class="bcm-additions-section-white" style="padding: 80px 20px;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+
+    <div style="text-align: center; margin-bottom: 50px;">
+      <p style="color: #C8A24D; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Service Area</p>
+      <h2 style="font-size: 2.25rem; color: #1C2331; margin-bottom: 16px;">Home Addition Contractor Serving Massachusetts &amp; New Hampshire</h2>
+      <p style="color: #64748B; font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.7;"><a href="https://bradfordcm.com/" style="color: #0F2A45; font-weight: 600; text-decoration: underline;">Bradford Construction Management</a> provides professional home addition services throughout the North Shore, Merrimack Valley, and Southern New Hampshire.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 50px;" class="bcm-additions-grid-2">
+
+      <div>
+        <h3 style="font-size: 1.25rem; color: #1C2331; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #C8A24D;">Massachusetts</h3>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+          <a href="https://bradfordcm.com/haverhill-ma/" style="background: #FAF9F7; padding: 14px 18px; border-radius: 8px; text-align: center; color: #0F2A45; font-weight: 600; text-decoration: none; border: 2px solid #C8A24D; transition: all 0.3s;">Haverhill</a>
+          <a href="https://bradfordcm.com/newburyport-mass/" style="background: #FAF9F7; padding: 14px 18px; border-radius: 8px; text-align: center; color: #0F2A45; font-weight: 600; text-decoration: none; border: 2px solid #C8A24D; transition: all 0.3s;">Newburyport</a>
+          <span style="background: #FAF9F7; padding: 14px 18px; border-radius: 8px; text-align: center; color: #1C2331; font-weight: 500;">Amesbury</span>
+          <span style="background: #FAF9F7; padding: 14px 18px; border-radius: 8px; text-align: center; color: #1C2331; font-weight: 500;">Andover</span>
+          <span style="background: #FAF9F7; padding: 14px 18px; border-radius: 8px; text-align: center; color: #1C2331; font-weight: 500;">North Andover</span>
+          <span style="background: #FAF9F7; padding: 14px 18px; border-radius: 8px; text-align: center; color: #1C2331; font-weight: 500;">Beverly</span>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size: 1.25rem; color: #1C2331; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #C8A24D;">New Hampshire &amp; Additional Areas</h3>
+        <p style="color: #64748B; line-height: 1.9; font-size: 1rem;">We also serve <a href="https://bradfordcm.com/exeter-nh/" style="color: #0F2A45; font-weight: 600; text-decoration: none;">Exeter</a>, Salem NH, Plaistow, and surrounding Southern New Hampshire communities, plus Newbury, Boxford, Georgetown, Groveland, West Newbury, Merrimac, and Ipswich in Massachusetts. <a href="https://bradfordcm.com/contact/" style="color: #0F2A45; text-decoration: none; font-weight: 600;">Contact us</a> to confirm service availability in your area.</p>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; border-top: 2px solid #C8A24D; padding-top: 40px;">
+      <p style="font-size: 1.15rem; margin-bottom: 12px; font-weight: 600; color: #1C2331;">Bradford Construction Management</p>
+      <p style="font-size: 1rem; color: #64748B; margin-bottom: 8px;">145 S Main St, Haverhill, MA 01835</p>
+      <p style="font-size: 1.1rem;">
+        Call: <a href="tel:978-945-9771" style="color: #0F2A45; text-decoration: none; font-weight: 700; font-size: 1.25rem;">978-945-9771</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION: FAQ -->
+<section class="bcm-additions-section-light" style="padding: 80px 20px;">
+  <div style="max-width: 850px; margin: 0 auto;">
+
+    <div style="text-align: center; margin-bottom: 60px;">
+      <p style="color: #C8A24D; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Common Questions</p>
+      <h2 style="font-size: 2.25rem; color: #1C2331; margin-bottom: 16px;">Home Addition FAQs</h2>
+      <p style="color: #64748B; font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.7;">Common questions about home additions, permitting, timelines, and costs in Massachusetts.</p>
+    </div>
+
+    <div class="bcm-additions-faq-item">
+      <button class="bcm-additions-faq-question">
+        <span>How much does a home addition cost in Massachusetts?</span>
+        <div class="bcm-additions-faq-toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+      </button>
+      <div class="bcm-additions-faq-answer">
+        <p>Home addition costs in Massachusetts typically range from $200 to $500+ per square foot depending on the scope, complexity, and finishes. A standard 400-square-foot addition might range from $80,000 to $200,000. Second-story additions, structural complexities, and high-end finishes increase costs. We provide detailed, transparent estimates during the consultation phase so you understand the full investment before committing.</p>
+      </div>
+    </div>
+
+    <div class="bcm-additions-faq-item">
+      <button class="bcm-additions-faq-question">
+        <span>Do I need a permit for a home addition?</span>
+        <div class="bcm-additions-faq-toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+      </button>
+      <div class="bcm-additions-faq-answer">
+        <p>Yes, all home additions require building permits. This includes zoning approval, building permits for structural work, and inspections for electrical, plumbing, and mechanical systems. We manage the entire permitting process including applications, plan submissions, and coordinating inspections so you don't have to navigate local building departments.</p>
+      </div>
+    </div>
+
+    <div class="bcm-additions-faq-item">
+      <button class="bcm-additions-faq-question">
+        <span>How long does a home addition take from start to finish?</span>
+        <div class="bcm-additions-faq-toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+      </button>
+      <div class="bcm-additions-faq-answer">
+        <p>Project timelines vary based on size, scope, and complexity. During your consultation, we'll assess your specific project and provide a realistic timeline. Our commercial-grade project management systems help us maintain schedules and keep you informed of progress through daily documentation.</p>
+      </div>
+    </div>
+
+    <div class="bcm-additions-faq-item">
+      <button class="bcm-additions-faq-question">
+        <span>Can I stay in my home during the addition construction?</span>
+        <div class="bcm-additions-faq-toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+      </button>
+      <div class="bcm-additions-faq-answer">
+        <p>Most homeowners stay in their homes during addition construction. We create temporary barriers, maintain safe access paths, and schedule noisy work during reasonable hours. For major whole-home additions or second-story projects, there may be brief periods where utilities are interrupted, but we plan these carefully and provide advance notice. Our daily updates keep you informed of any upcoming disruptions.</p>
+      </div>
+    </div>
+
+    <div class="bcm-additions-faq-item">
+      <button class="bcm-additions-faq-question">
+        <span>What's the difference between design-build and hiring separate contractors?</span>
+        <div class="bcm-additions-faq-toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+      </button>
+      <div class="bcm-additions-faq-answer">
+        <p>Design-build means one team handles architectural design, engineering, and construction under a single contract. This eliminates the finger-pointing and miscommunication that happens when architects and builders work separately. Changes are faster, decisions are clearer, and you have one accountable partner from concept through completion. Traditional approaches require managing multiple contracts, coordinating between different companies, and navigating conflicts when design and construction don't align.</p>
+      </div>
+    </div>
+
+    <div class="bcm-additions-faq-item">
+      <button class="bcm-additions-faq-question">
+        <span>Will my addition match the existing home's style?</span>
+        <div class="bcm-additions-faq-toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+      </button>
+      <div class="bcm-additions-faq-answer">
+        <p>Yes. We design additions to integrate seamlessly with your home's existing architecture, rooflines, siding, and windows. This includes matching materials, trim details, and proportions so the addition looks original to the house. Our design team evaluates your home's character during the consultation phase and creates plans that enhance - not clash with - the existing structure.</p>
+      </div>
+    </div>
+
+    <div class="bcm-additions-faq-item">
+      <button class="bcm-additions-faq-question">
+        <span>What happens after the addition is complete?</span>
+        <div class="bcm-additions-faq-toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+      </button>
+      <div class="bcm-additions-faq-answer">
+        <p>Unlike typical contractors who disappear after final payment, we provide ongoing support through Bradford Home Services. This includes warranty follow-through, seasonal maintenance, and access to our team for any issues that arise. Because we already know your home, you're not starting over with a stranger when something needs attention.</p>
+      </div>
+    </div>
+
+    <div class="bcm-additions-faq-item">
+      <button class="bcm-additions-faq-question">
+        <span>Do you handle structural engineering for additions?</span>
+        <div class="bcm-additions-faq-toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+      </button>
+      <div class="bcm-additions-faq-answer">
+        <p>Yes. All our addition projects include professional structural engineering to ensure safety and code compliance. This covers foundation analysis, load-bearing calculations, beam sizing, and integration with existing framing. For second-story additions, we evaluate whether your current foundation can support the additional weight or if reinforcement is needed. Structural plans are submitted with permit applications and verified through building inspections.</p>
+      </div>
+    </div>
+
+    <div class="bcm-additions-faq-item">
+      <button class="bcm-additions-faq-question">
+        <span>How do you handle changes or upgrades during construction?</span>
+        <div class="bcm-additions-faq-toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+      </button>
+      <div class="bcm-additions-faq-answer">
+        <p>All changes go through a documented change-order process. If you want to upgrade materials, modify layouts, or add features during construction, we provide a written change order with the cost impact and timeline adjustment before proceeding. This prevents surprise bills and keeps the budget transparent. You approve every change in writing before we execute it.</p>
+      </div>
+    </div>
+
+    <div class="bcm-additions-faq-item">
+      <button class="bcm-additions-faq-question">
+        <span>What sets Bradford Construction Management apart from other contractors?</span>
+        <div class="bcm-additions-faq-toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
+      </button>
+      <div class="bcm-additions-faq-answer">
+        <p>Three things: daily photo documentation so you always know what's happening, commercial-grade project management that brings professional systems to residential work, and lifetime support through Bradford Home Services after the project is complete. We're Massachusetts HIC licensed (#201908), fully insured, and committed to transparent pricing with documented change orders.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION: CTA Banner -->
+<section class="bcm-additions-section-navy" style="padding: 70px 20px;">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2rem; color: #FFFFFF; margin-bottom: 16px;">Ready to Discuss Your Home Addition?</h2>
+    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); margin-bottom: 30px; line-height: 1.7;">Let's talk about your goals and create a plan that works for your home and budget.</p>
+    <a href="#consultation" class="bcm-additions-btn-primary" style="margin-right: 15px;">Schedule Your Consultation</a>
+    <p style="margin-top: 20px; font-size: 1rem; color: rgba(255,255,255,0.85);">
+      Or call <a href="tel:978-945-9771" style="color: #C8A24D; font-weight: 700; text-decoration: none; font-size: 1.15rem;">978-945-9771</a>
+    </p>
+  </div>
+</section>
+
+<!-- SECTION: Consultation Form -->
+<section id="consultation" class="bcm-additions-section-white" style="padding: 80px 20px;">
+  <div style="max-width: 700px; margin: 0 auto;">
+
+    <div style="text-align: center; margin-bottom: 40px;">
+      <p style="color: #C8A24D; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Get Started</p>
+      <h2 style="font-size: 2.25rem; color: #1C2331; margin-bottom: 16px;">Schedule Your Free Consultation</h2>
+      <p style="color: #64748B; font-size: 1.1rem; line-height: 1.7;">Tell us about your project. No pressure, just honest assessment and clear answers.</p>
+    </div>
+
+    <div style="background: #FAF9F7; padding: 40px; border-radius: 12px; box-shadow: 0 5px 25px rgba(26, 26, 26, 0.08);">
+      <iframe
+        src="https://link.bradfordhs.com/widget/form/gjd0vNkXvXFZ1gi5Q51p"
+        style="width:100%;height:1434px;border:none;border-radius:4px"
+        id="inline-gjd0vNkXvXFZ1gi5Q51p"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="*BCM Website form"
+        data-height="1434"
+        data-layout-iframe-id="inline-gjd0vNkXvXFZ1gi5Q51p"
+        data-form-id="gjd0vNkXvXFZ1gi5Q51p"
+        title="*BCM Website form"
+      ></iframe>
+      <script src="https://link.bradfordhs.com/js/form_embed.js"></script>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION: Final Gallery -->
+<section class="bcm-additions-section-light" style="padding: 80px 20px;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+
+    <div style="text-align: center; margin-bottom: 60px;">
+      <p style="color: #C8A24D; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Our Work</p>
+      <h2 style="font-size: 2.25rem; color: #1C2331; margin-bottom: 16px;">Quality You Can See</h2>
+      <p style="color: #64748B; font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.7;">From foundation to finish, we document every step and deliver results that last. See the full scope of our work in our <a href="https://bradfordcm.com/projects/" style="color: #0F2A45; font-weight: 600; text-decoration: underline;">project portfolio</a>.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" class="bcm-additions-grid-3">
+      <div class="bcm-additions-gallery-item">
+        <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-11.jpg" alt="">
+        <div class="bcm-additions-gallery-caption">Kitchen Renovation</div>
+      </div>
+      <div class="bcm-additions-gallery-item">
+        <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-13.jpg" alt="">
+        <div class="bcm-additions-gallery-caption">Living Room Addition</div>
+      </div>
+      <div class="bcm-additions-gallery-item">
+        <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8400.jpeg" alt="">
+        <div class="bcm-additions-gallery-caption">Porch Addition</div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+      <p style="font-size: 1.15rem; color: #1C2331; margin-bottom: 24px; font-weight: 600;">Let's build your addition the right way.</p>
+      <a href="#consultation" class="bcm-additions-btn-secondary" style="color: #FFFFFF !important;">Get Started Today</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION: Credentials Footer -->
+<section class="bcm-additions-section-white" style="padding: 40px 20px; border-top: 1px solid #E2E8F0;">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <p style="color: #64748B; font-size: 0.95rem; line-height: 1.8;">
+      <a href="https://bradfordcm.com/" style="color: #0F2A45; font-weight: 600; text-decoration: none;">Bradford Construction Management</a> is a licensed Massachusetts Home Improvement Contractor (HIC #201908). We carry comprehensive general liability and workers' compensation insurance for your protection.
+    </p>
+  </div>
+</section>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.bcm-additions-faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.bcm-additions-faq-question');
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      faqItems.forEach(i => i.classList.remove('active'));
+      if (!isActive) { item.classList.add('active'); }
+    });
+  });
+});
+</script>
