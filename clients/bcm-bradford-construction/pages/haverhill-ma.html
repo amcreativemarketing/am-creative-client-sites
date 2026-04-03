@@ -487,19 +487,6 @@
   }
   .bcm-hav .area-nearby a { color: var(--bcm-charcoal); }
 
-  /* ==================== LOCATION ==================== */
-  .bcm-hav .location-card {
-    background: var(--bcm-off-white);
-    border-radius: var(--radius-lg);
-    padding: 40px;
-    border: 1px solid rgba(200,162,77,.2);
-    box-shadow: var(--shadow-card);
-    max-width: 600px;
-    margin: 32px auto 0;
-    text-align: center;
-  }
-  .bcm-hav .location-card p { color: var(--bcm-body-text); font-size: 15px; }
-
   /* ==================== FINAL CTA ==================== */
   .bcm-hav .final-cta {
     background: var(--bcm-charcoal);
@@ -536,6 +523,18 @@
     font-family: var(--font-heading);
     text-transform: uppercase;
   }
+
+  /* ---- CENTERED SECTIONS ---- */
+  .bcm-hav .bcm-centered { text-align: center; }
+  .bcm-hav .bcm-centered .bcm-h2 { margin-left: auto; margin-right: auto; }
+  .bcm-hav .bcm-centered .bcm-eyebrow { justify-content: center; }
+  .bcm-hav .bcm-centered .bcm-eyebrow::before { display: none; }
+  .bcm-hav .bcm-centered p { margin-left: auto; margin-right: auto; }
+  .bcm-hav .bcm-centered .services-grid { text-align: left; }
+  .bcm-hav .bcm-centered .gallery-grid { text-align: left; }
+  .bcm-hav .bcm-centered .area-grid { text-align: left; }
+  .bcm-hav .bcm-centered .table-wrap { text-align: left; }
+  .bcm-hav .bcm-centered .faq-list { text-align: left; }
 
   /* ==================== RESPONSIVE ==================== */
   @media (max-width: 900px) {
@@ -610,7 +609,7 @@
 
   <!-- INTRO -->
   <section class="intro-section">
-    <div class="intro-inner">
+    <div class="intro-inner bcm-centered">
       <span class="bcm-eyebrow">Professional Construction in Haverhill</span>
       <h2 class="bcm-h2">Your Local Design-Build Team</h2>
       <p>Bradford Construction Management serves homeowners throughout Haverhill and the greater Merrimack Valley with commercial-grade project management and lifetime support. Whether you're planning a <a href="https://bradfordcm.com/home-additions/">home addition</a> near downtown, building an <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADU</a> in Bradford, or renovating in Ward Hill, we deliver professional results with daily photo documentation.</p>
@@ -621,7 +620,7 @@
 
   <!-- SERVICES -->
   <section class="bcm-section bcm-section-gray">
-    <div class="bcm-container">
+    <div class="bcm-container bcm-centered">
       <span class="bcm-eyebrow">Our Services</span>
       <h2 class="bcm-h2">Home Addition, ADU &amp; Custom Home Services in Haverhill</h2>
 
@@ -691,7 +690,7 @@
 
   <!-- PROJECT GALLERY -->
   <section class="bcm-section">
-    <div class="bcm-container">
+    <div class="bcm-container bcm-centered">
       <span class="bcm-eyebrow">Our Work</span>
       <h2 class="bcm-h2">Recent Projects Near Haverhill</h2>
       <p style="max-width:600px;color:var(--bcm-muted);">Quality craftsmanship and attention to detail that sets Bradford Construction Management apart.</p>
@@ -731,7 +730,7 @@
 
   <!-- COMPARISON TABLE -->
   <section class="bcm-section bcm-section-dark">
-    <div class="bcm-container">
+    <div class="bcm-container bcm-centered">
       <span class="bcm-eyebrow">The Bradford Difference</span>
       <h2 class="bcm-h2 bcm-h2-light">Why Choose Bradford Construction Management?</h2>
       <p style="color:rgba(250,249,247,.65);max-width:640px;margin-bottom:0;">See how our commercial-grade approach and lifetime support partnership sets us apart from typical contractors.</p>
@@ -793,7 +792,7 @@
 
   <!-- FAQ -->
   <section class="bcm-section bcm-section-maritime">
-    <div class="bcm-container">
+    <div class="bcm-container bcm-centered">
       <span class="bcm-eyebrow">Common Questions</span>
       <h2 class="bcm-h2 bcm-h2-light">Frequently Asked Questions About Construction in Haverhill</h2>
 
@@ -909,7 +908,7 @@
 
   <!-- SERVICE AREA -->
   <section class="bcm-section bcm-section-gray">
-    <div class="bcm-container">
+    <div class="bcm-container bcm-centered">
       <span class="bcm-eyebrow">Service Area</span>
       <h2 class="bcm-h2">Serving All of Haverhill &amp; Surrounding Communities</h2>
 
@@ -933,24 +932,6 @@
           <h3 class="bcm-h3" style="margin-bottom:20px;">Nearby Communities</h3>
           <p class="area-nearby">Our Haverhill-based team regularly completes projects throughout the Merrimack Valley and North Shore. We serve Groveland, West Newbury, Merrimac, Georgetown, Boxford, North Andover, Andover, Methuen, Lawrence, Amesbury, <a href="https://bradfordcm.com/newburyport-mass/">Newburyport</a>, <a href="https://bradfordcm.com/south-hamilton-ma/">South Hamilton</a>, <a href="https://bradfordcm.com/wakefield-ma/">Wakefield</a>, and <a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a>.</p>
           <p class="area-nearby" style="margin-top:16px;">Our central location means quick response times and deep familiarity with local building departments and regulations across the region. <a href="https://bradfordcm.com/services/">View all our services</a> or <a href="https://bradfordcm.com/contact/">contact us</a> to confirm service in your area.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LOCATION -->
-  <section class="bcm-section">
-    <div class="bcm-container" style="text-align:center;">
-      <span class="bcm-eyebrow bcm-eyebrow-center">Our Location</span>
-      <h2 class="bcm-h2">Find Us in Haverhill, MA</h2>
-      <p style="max-width:560px;margin:0 auto 8px;color:var(--bcm-muted);">Located at 145 South Main Street in Haverhill, we're centrally positioned to serve all neighborhoods throughout the city and surrounding communities.</p>
-
-      <div class="location-card">
-        <p style="font-family:var(--font-heading);font-size:17px;font-weight:700;color:var(--bcm-charcoal);margin-bottom:8px;">Bradford Construction Management</p>
-        <p>145 South Main Street<br>Haverhill, MA 01835</p>
-        <p style="margin-top:12px;"><a href="tel:9789459771" style="font-family:var(--font-heading);font-size:16px;font-weight:700;color:var(--bcm-charcoal);text-decoration:none;">978-945-9771</a></p>
-        <div style="margin-top:24px;">
-          <a href="https://bradfordcm.com/contact/" class="bcm-btn-primary">Get Directions &amp; Contact Us</a>
         </div>
       </div>
     </div>
