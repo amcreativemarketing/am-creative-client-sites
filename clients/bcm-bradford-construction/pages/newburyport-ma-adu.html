@@ -1,0 +1,1098 @@
+<!-- BCM Newburyport ADU Page - 2026 Brand -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bcm-black: #1A1A1A;
+  --bcm-gold: #C8A24D;
+  --bcm-charcoal: #1C2331;
+  --bcm-white: #FAF9F7;
+  --bcm-maritime: #0F2A45;
+  --bcm-gray: #F1F1F1;
+  --bcm-gold-hover: #D9B96A;
+  --bcm-gold-light: #D4B46A;
+  --bcm-gold-soft: rgba(200, 162, 77, 0.07);
+  --bcm-gold-border: rgba(200, 162, 77, 0.18);
+  --bcm-gold-glow: rgba(200, 162, 77, 0.12);
+  --bcm-text-primary: #1C2331;
+  --bcm-text-secondary: #3A4255;
+  --bcm-text-tertiary: #5C6478;
+  --bcm-text-light: rgba(250, 249, 247, 0.88);
+  --bcm-text-muted: rgba(250, 249, 247, 0.62);
+  --bcm-surface: #F7F7F5;
+  --bcm-surface-raised: #FAFAF8;
+  --bcm-border: #E5E5E2;
+  --bcm-border-subtle: rgba(28, 35, 49, 0.06);
+  --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
+  --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
+  --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
+  --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
+  --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
+  --bcm-radius: 6px;
+  --bcm-radius-md: 10px;
+  --bcm-radius-lg: 14px;
+  --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --bcm-font-body: 'Inter', -apple-system, sans-serif;
+  --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bcm-newburyport * { box-sizing: border-box; margin: 0; padding: 0; }
+
+.bcm-newburyport {
+  font-family: var(--bcm-font-body);
+  color: var(--bcm-text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+  background: var(--bcm-white);
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+}
+
+.bcm-newburyport img { max-width: 100%; height: auto; display: block; }
+
+.bcm-newburyport a { color: var(--bcm-charcoal); text-decoration: none; font-weight: 600; }
+.bcm-newburyport a:hover { color: var(--bcm-gold); text-decoration: underline; }
+
+/* === HERO === */
+.bcm-newburyport-hero {
+  position: relative;
+  height: 600px;
+  background: linear-gradient(135deg, var(--bcm-maritime) 0%, var(--bcm-charcoal) 100%);
+  background-image: url('https://bradfordcm.com/wp-content/uploads/2026/02/Elm-DBL-Winter-Ready.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--bcm-white);
+  overflow: hidden;
+}
+
+.bcm-newburyport-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10, 30, 48, 0.82) 0%, rgba(28, 35, 49, 0.68) 100%);
+  z-index: 1;
+}
+
+.bcm-newburyport-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.bcm-newburyport-hero h1 {
+  font-family: var(--bcm-font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: var(--bcm-white);
+  letter-spacing: 0.01em;
+}
+
+.bcm-newburyport-hero h2 {
+  font-family: var(--bcm-font-display);
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(250, 249, 247, 0.88);
+  margin-bottom: 2rem;
+  letter-spacing: 0.01em;
+}
+
+/* === CTA BUTTONS === */
+.bcm-newburyport-btn-wrap {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bcm-newburyport-btn-wrap--dual { gap: 1.25rem; }
+
+.bcm-newburyport-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  font-family: var(--bcm-font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 9999px;
+  transition: all 0.25s var(--bcm-ease);
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-align: center;
+  min-height: 50px;
+  letter-spacing: 0.01em;
+}
+
+.bcm-newburyport-btn:hover { text-decoration: none; transform: translateY(-1px); }
+
+/* PRIMARY - gold bg, always dark text, works on any background */
+.bcm-newburyport-btn--primary {
+  background-color: var(--bcm-gold);
+  color: var(--bcm-charcoal);
+  border-color: var(--bcm-gold);
+}
+.bcm-newburyport-btn--primary:hover {
+  background-color: var(--bcm-gold-hover);
+  border-color: var(--bcm-gold-hover);
+  color: var(--bcm-charcoal);
+  box-shadow: 0 6px 20px rgba(200, 162, 77, 0.35);
+}
+
+/* OUTLINE-LIGHT - ghost for dark hero backgrounds, white text always visible */
+.bcm-newburyport-btn--outline-light {
+  background: rgba(250, 249, 247, 0.12);
+  color: var(--bcm-white);
+  border-color: rgba(250, 249, 247, 0.55);
+}
+.bcm-newburyport-btn--outline-light:hover {
+  background: rgba(250, 249, 247, 0.22);
+  color: var(--bcm-gold);
+  border-color: var(--bcm-gold);
+}
+
+/* OUTLINE - solid charcoal, white text, universal readability */
+.bcm-newburyport-btn--outline {
+  background-color: var(--bcm-charcoal);
+  color: var(--bcm-white);
+  border-color: var(--bcm-charcoal);
+}
+.bcm-newburyport-btn--outline:hover {
+  background-color: var(--bcm-maritime);
+  border-color: var(--bcm-maritime);
+  color: var(--bcm-white);
+}
+
+/* OUTLINE on dark navy sections - ghost with white text */
+.bcm-newburyport-section--navy .bcm-newburyport-btn--outline {
+  background: rgba(250, 249, 247, 0.12);
+  color: var(--bcm-white);
+  border-color: rgba(250, 249, 247, 0.45);
+}
+.bcm-newburyport-section--navy .bcm-newburyport-btn--outline:hover {
+  background: rgba(250, 249, 247, 0.22);
+  color: var(--bcm-gold);
+  border-color: var(--bcm-gold);
+}
+
+/* === TRUST BAR === */
+.bcm-newburyport-trust-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: var(--bcm-white);
+  max-width: 1400px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--bcm-border);
+}
+
+.bcm-newburyport-trust-item { text-align: center; padding: 0 1rem; }
+
+.bcm-newburyport-trust-item__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  color: var(--bcm-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bcm-newburyport-trust-item__icon svg { width: 100%; height: 100%; fill: currentColor; }
+
+.bcm-newburyport-trust-item h4 {
+  font-family: var(--bcm-font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--bcm-text-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.bcm-newburyport-trust-item p { font-size: 0.9rem; color: var(--bcm-text-tertiary); line-height: 1.5; }
+
+/* === SECTIONS === */
+.bcm-newburyport-section { padding: 4rem 2rem; position: relative; }
+.bcm-newburyport-section--alt { background: var(--bcm-gray); }
+.bcm-newburyport-section--navy { background: var(--bcm-black); color: var(--bcm-white); }
+
+.bcm-newburyport-container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+.bcm-newburyport-container--narrow { max-width: 900px; }
+
+/* === SECTION HEADERS === */
+.bcm-newburyport-section__header { text-align: center; margin-bottom: 3rem; position: relative; }
+
+.bcm-newburyport-section__header::before {
+  content: '';
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--bcm-gold);
+}
+
+.bcm-newburyport-section__eyebrow {
+  font-family: var(--bcm-font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bcm-gold);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.bcm-newburyport-section h2 {
+  font-family: var(--bcm-font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--bcm-text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.bcm-newburyport-section--navy h2 { color: var(--bcm-white); }
+
+.bcm-newburyport-section__subtitle {
+  font-size: 1.05rem;
+  color: var(--bcm-text-tertiary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.bcm-newburyport-section--navy .bcm-newburyport-section__subtitle { color: var(--bcm-text-light); }
+
+/* === TWO COLUMN === */
+.bcm-newburyport-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.bcm-newburyport-two-col__content h2 { margin-top: 0; }
+.bcm-newburyport-two-col__content p { margin-bottom: 1.5rem; color: var(--bcm-text-secondary); line-height: 1.8; }
+.bcm-newburyport-two-col__content a { color: var(--bcm-gold); font-weight: 600; }
+.bcm-newburyport-two-col__content a:hover { color: var(--bcm-gold-hover); text-decoration: underline; }
+.bcm-newburyport-two-col__image img { border-radius: var(--bcm-radius-lg); box-shadow: var(--bcm-shadow-lg); width: 100%; }
+
+/* === BENEFITS GRID === */
+.bcm-newburyport-benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 2rem; }
+
+.bcm-newburyport-benefit-card {
+  background: var(--bcm-surface-raised);
+  padding: 1.5rem;
+  border-radius: var(--bcm-radius-lg);
+  border-top: 3px solid var(--bcm-gold);
+  box-shadow: var(--bcm-shadow-sm);
+}
+
+.bcm-newburyport-benefit-card h4 {
+  font-family: var(--bcm-font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--bcm-text-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.bcm-newburyport-benefit-card p { font-size: 0.95rem; color: var(--bcm-text-tertiary); line-height: 1.6; }
+.bcm-newburyport-benefit-card a { color: var(--bcm-gold); font-weight: 600; }
+
+/* === TYPES GRID === */
+.bcm-newburyport-types-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+.bcm-newburyport-type-card {
+  background: var(--bcm-surface-raised);
+  border-radius: var(--bcm-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bcm-shadow-md);
+  transition: all 0.3s var(--bcm-ease);
+}
+
+.bcm-newburyport-type-card:hover { transform: translateY(-4px); box-shadow: var(--bcm-shadow-lg); }
+.bcm-newburyport-type-card img { width: 100%; height: 240px; object-fit: cover; }
+.bcm-newburyport-type-card__content { padding: 1.5rem; }
+
+.bcm-newburyport-type-card h3 {
+  font-family: var(--bcm-font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bcm-text-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.bcm-newburyport-type-card p { font-size: 0.95rem; color: var(--bcm-text-tertiary); line-height: 1.6; }
+.bcm-newburyport-type-card a { color: var(--bcm-gold); font-weight: 600; }
+
+/* === PROCESS === */
+.bcm-newburyport-process { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+
+.bcm-newburyport-step {
+  background: var(--bcm-surface-raised);
+  padding: 1.5rem;
+  border-radius: var(--bcm-radius-lg);
+  text-align: center;
+  border: 1px solid var(--bcm-border);
+  border-top: 3px solid var(--bcm-gold);
+  transition: box-shadow 0.3s var(--bcm-ease), transform 0.3s var(--bcm-ease);
+}
+
+.bcm-newburyport-step:hover { box-shadow: var(--bcm-shadow-md); transform: translateY(-2px); }
+
+.bcm-newburyport-step__number {
+  font-family: var(--bcm-font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--bcm-charcoal);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--bcm-gold);
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 3px 10px rgba(200, 162, 77, 0.3);
+}
+
+.bcm-newburyport-step h3 {
+  font-family: var(--bcm-font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--bcm-text-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.bcm-newburyport-step p { font-size: 0.9rem; color: var(--bcm-text-tertiary); line-height: 1.6; }
+.bcm-newburyport-step a { color: var(--bcm-gold); font-weight: 600; }
+
+/* === ZONING === */
+.bcm-newburyport-intro {
+  background: var(--bcm-surface-raised);
+  padding: 1.5rem;
+  border-radius: var(--bcm-radius-lg);
+  border-left: 4px solid var(--bcm-gold);
+  margin-bottom: 2rem;
+  box-shadow: var(--bcm-shadow-sm);
+}
+
+.bcm-newburyport-intro p { margin-bottom: 1rem; color: var(--bcm-text-secondary); line-height: 1.8; }
+
+.bcm-newburyport-zoning-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.bcm-newburyport-zoning-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--bcm-text-secondary);
+  line-height: 1.6;
+}
+
+.bcm-newburyport-zoning-list li::before { content: '✓'; position: absolute; left: 0; color: var(--bcm-gold); font-weight: 700; }
+
+/* === INFO BOX === */
+.bcm-newburyport-info-box {
+  background: var(--bcm-gold-soft);
+  padding: 2rem;
+  border-radius: var(--bcm-radius-lg);
+  border: 1px solid var(--bcm-gold-border);
+}
+
+.bcm-newburyport-info-box h4 {
+  font-family: var(--bcm-font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bcm-text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.bcm-newburyport-info-box p { color: var(--bcm-text-secondary); line-height: 1.8; margin-bottom: 1rem; }
+.bcm-newburyport-info-box p:last-child { margin-bottom: 0; }
+.bcm-newburyport-info-box a { color: var(--bcm-gold); font-weight: 600; }
+.bcm-newburyport-info-box a:hover { color: var(--bcm-gold-hover); text-decoration: underline; }
+
+/* === COST GRID === */
+.bcm-newburyport-cost-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem; }
+
+.bcm-newburyport-cost-card {
+  background: var(--bcm-surface-raised);
+  padding: 2rem;
+  border-radius: var(--bcm-radius-lg);
+  border-top: 3px solid var(--bcm-gold);
+  box-shadow: var(--bcm-shadow-sm);
+}
+
+.bcm-newburyport-cost-card h4 {
+  font-family: var(--bcm-font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bcm-text-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.bcm-newburyport-cost-range {
+  font-family: var(--bcm-font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--bcm-gold);
+  margin-bottom: 0.75rem;
+}
+
+.bcm-newburyport-cost-card p { font-size: 0.95rem; color: var(--bcm-text-tertiary); line-height: 1.6; }
+
+/* === COMPARISON TABLE === */
+.bcm-newburyport-comparison { overflow-x: auto; margin-bottom: 2rem; border-radius: var(--bcm-radius-lg); box-shadow: var(--bcm-shadow-md); }
+
+.bcm-newburyport-comparison table { width: 100%; border-collapse: collapse; background: var(--bcm-surface-raised); border-radius: var(--bcm-radius-lg); overflow: hidden; }
+
+.bcm-newburyport-comparison th, .bcm-newburyport-comparison td { padding: 1.25rem; text-align: left; border-bottom: 1px solid var(--bcm-border); }
+
+.bcm-newburyport-comparison th {
+  background: var(--bcm-charcoal);
+  color: var(--bcm-white);
+  font-family: var(--bcm-font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.bcm-newburyport-comparison td:first-child { font-weight: 600; color: var(--bcm-text-primary); }
+.bcm-newburyport-comparison .bcm-highlight { background: var(--bcm-gold-soft); color: var(--bcm-text-primary); }
+.bcm-newburyport-comparison .check { color: var(--bcm-gold); font-weight: 700; }
+
+/* === REVIEWS === */
+.bcm-newburyport-reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+.bcm-newburyport-review {
+  background: var(--bcm-surface-raised);
+  padding: 1.5rem;
+  border-radius: var(--bcm-radius-lg);
+  border-top: 3px solid var(--bcm-gold);
+  box-shadow: var(--bcm-shadow-sm);
+}
+
+.bcm-newburyport-review__stars { font-size: 1.2rem; color: var(--bcm-gold); margin-bottom: 1rem; letter-spacing: 0.25rem; }
+
+.bcm-newburyport-review blockquote {
+  font-size: 0.95rem;
+  color: var(--bcm-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-style: italic;
+  border-left: 3px solid var(--bcm-gold);
+  padding-left: 1rem;
+}
+
+.bcm-newburyport-review__author { font-family: var(--bcm-font-display); font-weight: 700; color: var(--bcm-text-primary); font-size: 0.95rem; }
+.bcm-newburyport-review__source { font-size: 0.85rem; color: var(--bcm-text-tertiary); }
+
+/* === FAQ === */
+.bcm-newburyport-faq-list { display: grid; gap: 1rem; max-width: 900px; margin: 0 auto; }
+
+.bcm-newburyport-faq-item {
+  background: var(--bcm-surface-raised);
+  border-radius: var(--bcm-radius-lg);
+  border: 1px solid var(--bcm-border);
+  overflow: hidden;
+  transition: box-shadow 0.2s var(--bcm-ease), border-color 0.2s var(--bcm-ease);
+}
+
+.bcm-newburyport-faq-item[aria-expanded="true"] { box-shadow: var(--bcm-shadow-md); border-color: rgba(200, 162, 77, 0.25); }
+
+.bcm-newburyport-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s var(--bcm-ease);
+}
+
+.bcm-newburyport-faq-question:hover { background: var(--bcm-gold-soft); }
+
+.bcm-newburyport-faq-question h4 {
+  font-family: var(--bcm-font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--bcm-text-primary);
+  text-align: left;
+  flex: 1;
+}
+
+.bcm-newburyport-faq-toggle {
+  font-size: 1.3rem;
+  color: var(--bcm-gold);
+  font-weight: 400;
+  transition: transform 0.3s var(--bcm-ease);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.bcm-newburyport-faq-item[aria-expanded="true"] .bcm-newburyport-faq-toggle { transform: rotate(45deg); }
+
+.bcm-newburyport-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s var(--bcm-ease); }
+.bcm-newburyport-faq-item[aria-expanded="true"] .bcm-newburyport-faq-answer { max-height: 1000px; }
+
+.bcm-newburyport-faq-answer-content { padding: 0 1.5rem 1.5rem; color: var(--bcm-text-secondary); line-height: 1.8; }
+
+/* === SERVICE AREAS === */
+.bcm-newburyport-neighborhoods { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+
+.bcm-newburyport-neighborhoods li {
+  padding: 0.75rem 1rem;
+  background: var(--bcm-surface-raised);
+  border-radius: var(--bcm-radius);
+  border-left: 3px solid var(--bcm-gold);
+  color: var(--bcm-text-secondary);
+  font-size: 0.95rem;
+}
+
+.bcm-newburyport-neighborhoods a { color: var(--bcm-gold); font-weight: 600; }
+.bcm-newburyport-neighborhoods a:hover { color: var(--bcm-gold-hover); text-decoration: underline; }
+
+/* === MAP === */
+.bcm-newburyport-map-wrap { position: relative; overflow: hidden; border-radius: var(--bcm-radius-lg); box-shadow: var(--bcm-shadow-lg); }
+.bcm-newburyport-map-wrap iframe { width: 100% !important; display: block; }
+
+/* === FINAL CTA === */
+.bcm-newburyport-final-cta { text-align: center; padding: 2rem; position: relative; }
+.bcm-newburyport-final-cta h2 { margin-bottom: 1.5rem; }
+
+.bcm-newburyport-final-cta > p {
+  font-size: 1.1rem;
+  color: var(--bcm-text-light);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+
+.bcm-newburyport-credentials { margin-top: 2rem; font-size: 0.9rem; color: var(--bcm-text-muted); line-height: 1.6; }
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .bcm-newburyport-benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .bcm-newburyport-types-grid { grid-template-columns: repeat(2, 1fr); }
+  .bcm-newburyport-process { grid-template-columns: repeat(3, 1fr); }
+  .bcm-newburyport-cost-grid { grid-template-columns: 1fr; }
+  .bcm-newburyport-reviews { grid-template-columns: repeat(2, 1fr); }
+  .bcm-newburyport-two-col { grid-template-columns: 1fr; gap: 2rem; }
+  .bcm-newburyport-zoning-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .bcm-newburyport { font-size: 15px; }
+  .bcm-newburyport-hero { height: 420px; background-attachment: scroll; }
+  .bcm-newburyport-hero h1 { font-size: 1.6rem; }
+  .bcm-newburyport-hero h2 { font-size: 1rem; }
+  .bcm-newburyport-section { padding: 2.5rem 1rem; }
+  .bcm-newburyport-section__header::before { display: none; }
+  .bcm-newburyport-section h2 { font-size: 1.5rem; }
+  .bcm-newburyport-btn-wrap { flex-direction: column; align-items: center; }
+  .bcm-newburyport-btn { width: 100%; max-width: 340px; }
+  .bcm-newburyport-trust-bar { grid-template-columns: 1fr; gap: 1.5rem; }
+  .bcm-newburyport-benefits-grid { grid-template-columns: 1fr; }
+  .bcm-newburyport-types-grid { grid-template-columns: 1fr; }
+  .bcm-newburyport-process { grid-template-columns: 1fr; }
+  .bcm-newburyport-reviews { grid-template-columns: 1fr; }
+  .bcm-newburyport-neighborhoods { grid-template-columns: 1fr; }
+  .bcm-newburyport-comparison th, .bcm-newburyport-comparison td { padding: 0.75rem; font-size: 0.85rem; }
+}
+</style>
+
+<div class="bcm-newburyport">
+
+  <!-- Hero -->
+  <section class="bcm-newburyport-hero">
+    <div class="bcm-newburyport-hero__content">
+      <h1>Expert ADU Builders in Newburyport, Massachusetts</h1>
+      <h2>Custom Accessory Dwelling Units with Daily Documentation and Lifetime Support</h2>
+      <div class="bcm-newburyport-btn-wrap bcm-newburyport-btn-wrap--dual">
+        <a href="https://bradfordcm.com/contact/" class="bcm-newburyport-btn bcm-newburyport-btn--primary">Get Your Free ADU Consultation</a>
+        <a href="tel:+19789459771" class="bcm-newburyport-btn bcm-newburyport-btn--outline-light">Call 978-945-9771</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="bcm-newburyport-trust-bar">
+    <div class="bcm-newburyport-trust-item">
+      <div class="bcm-newburyport-trust-item__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <h4>Daily Documentation</h4>
+      <p>Photo updates every single day of your ADU build</p>
+    </div>
+    <div class="bcm-newburyport-trust-item">
+      <div class="bcm-newburyport-trust-item__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+      </div>
+      <h4>Transparent Pricing</h4>
+      <p>Clear scopes, no surprise costs</p>
+    </div>
+    <div class="bcm-newburyport-trust-item">
+      <div class="bcm-newburyport-trust-item__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+      </div>
+      <h4>Full-Service Design-Build</h4>
+      <p>One team from design through move-in day</p>
+    </div>
+    <div class="bcm-newburyport-trust-item">
+      <div class="bcm-newburyport-trust-item__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      </div>
+      <h4>Lifetime Support</h4>
+      <p>Bradford Home Services maintains what we build</p>
+    </div>
+  </div>
+
+  <!-- Introduction -->
+  <section class="bcm-newburyport-section">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-two-col">
+        <div class="bcm-newburyport-two-col__content">
+          <p class="bcm-newburyport-section__eyebrow">ADU Construction in Newburyport</p>
+          <h2>Building Accessory Dwelling Units in Newburyport, MA</h2>
+          <p>Thinking about adding an accessory dwelling unit to your Newburyport property? Whether you want to create rental income, keep aging parents close, or add a private home office, Bradford Construction Management designs and builds custom ADUs that meet Newburyport's zoning requirements and add real value to your property.</p>
+          <p>As experienced <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADU contractors</a> serving Newburyport and the greater North Shore, we handle every aspect of your project. From initial design and permitting through final construction and inspection, one accountable team manages the entire process so you don't have to coordinate between designers, engineers, and builders.</p>
+          <p>Every ADU we build is customized to your property, your family, and your goals. There are no cookie-cutter plans here.</p>
+        </div>
+        <div class="bcm-newburyport-two-col__image">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/01/collage-of-different-types-of-accessory-dwelling-units-detached-attached-and-conversions-8fc30509-d56e-4558-a6a3-1b66b20fae43.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Build an ADU -->
+  <section class="bcm-newburyport-section bcm-newburyport-section--alt">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-section__header">
+        <p class="bcm-newburyport-section__eyebrow">Why Newburyport Homeowners Are Building ADUs</p>
+        <h2>Why Build an ADU in Newburyport?</h2>
+        <p class="bcm-newburyport-section__subtitle">Newburyport's strong real estate market, walkable downtown, and proximity to beaches make it one of the best communities on the North Shore for accessory dwelling unit investment.</p>
+      </div>
+      <div class="bcm-newburyport-benefits-grid">
+        <div class="bcm-newburyport-benefit-card">
+          <h4>Generate Rental Income</h4>
+          <p>Newburyport's rental demand stays strong year-round thanks to its downtown businesses, beaches, and cultural attractions. Many homeowners see meaningful ROI within 7 to 10 years, with the ADU also adding 20-30% to overall property value. Learn more in our guide to <a href="https://bradfordcm.com/massachusetts-adu-ideas-boosting-your-rental-income/">Massachusetts ADU ideas for boosting your rental income</a>.</p>
+        </div>
+        <div class="bcm-newburyport-benefit-card">
+          <h4>Multi-Generational Living</h4>
+          <p>Keep family close while everyone maintains their independence. ADUs are a practical solution for aging parents, adult children, or extended family who want their own space - close enough to help, private enough to live.</p>
+        </div>
+        <div class="bcm-newburyport-benefit-card">
+          <h4>Home Office or Studio</h4>
+          <p>Create a dedicated workspace that's truly separate from your main home. A detached or attached ADU gives remote workers, artists, and professionals a real boundary between work and family life.</p>
+        </div>
+        <div class="bcm-newburyport-benefit-card">
+          <h4>Increase Property Value</h4>
+          <p>ADUs typically add 20-30% to your home's assessed value, making them one of the strongest property investments available in Newburyport's competitive real estate market.</p>
+        </div>
+      </div>
+      <div class="bcm-newburyport-btn-wrap">
+        <a href="https://bradfordcm.com/contact/" class="bcm-newburyport-btn bcm-newburyport-btn--primary">Get Your Free ADU Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types of ADUs -->
+  <section class="bcm-newburyport-section">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-section__header">
+        <p class="bcm-newburyport-section__eyebrow">Custom ADU Designs</p>
+        <h2>Types of ADUs We Build in Newburyport</h2>
+        <p class="bcm-newburyport-section__subtitle">Every ADU we've designed has been modified to fit the homeowner's property, style, and needs. These are starting points, not limitations.</p>
+      </div>
+      <div class="bcm-newburyport-types-grid">
+        <div class="bcm-newburyport-type-card">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/02/CTG-Connected-Living-render.webp" alt="">
+          <div class="bcm-newburyport-type-card__content">
+            <h3>Detached ADUs</h3>
+            <p>Stand-alone structures built separately from your home. Options include backyard cottages, modern studio layouts, and two-bedroom detached units with their own entrance and utilities.</p>
+          </div>
+        </div>
+        <div class="bcm-newburyport-type-card">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/12/Elm-FLT-Work-From-Home.webp" alt="">
+          <div class="bcm-newburyport-type-card__content">
+            <h3>Attached ADUs</h3>
+            <p>Connected to your existing home for convenience. We build <a href="https://bradfordcm.com/home-additions/">home additions</a> with separate entrances, above-garage apartments, breezeway connections, and basement conversions.</p>
+          </div>
+        </div>
+        <div class="bcm-newburyport-type-card">
+          <img src="https://bradfordcm.com/wp-content/uploads/2026/02/Garage-conversion.jpg" alt="">
+          <div class="bcm-newburyport-type-card__content">
+            <h3>Garage Conversions</h3>
+            <p>Transform your existing garage into comfortable living space. Garage-to-ADU conversions are often the most cost-effective path and maintain your property's curb appeal while adding functional square footage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="bcm-newburyport-section bcm-newburyport-section--alt">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-section__header">
+        <p class="bcm-newburyport-section__eyebrow">Our Process</p>
+        <h2>Our ADU Construction Process in Newburyport</h2>
+        <p class="bcm-newburyport-section__subtitle">One accountable team handles everything. You get daily photo updates at every stage so you always know exactly what's happening.</p>
+      </div>
+      <div class="bcm-newburyport-process">
+        <div class="bcm-newburyport-step">
+          <div class="bcm-newburyport-step__number">1</div>
+          <h3>Free Consultation and Site Assessment</h3>
+          <p>We visit your Newburyport property to discuss your vision, assess feasibility, and review zoning considerations specific to your lot and neighborhood.</p>
+        </div>
+        <div class="bcm-newburyport-step">
+          <div class="bcm-newburyport-step__number">2</div>
+          <h3>Custom Design and Planning</h3>
+          <p>Our <a href="https://bradfordcm.com/design-build/">design-build team</a> creates ADU plans tailored to your needs, property layout, and budget.</p>
+        </div>
+        <div class="bcm-newburyport-step">
+          <div class="bcm-newburyport-step__number">3</div>
+          <h3>Permitting and Approvals</h3>
+          <p>We handle all permitting with the City of Newburyport, including building permits, zoning variance applications when needed, and Conservation Commission reviews where applicable.</p>
+        </div>
+        <div class="bcm-newburyport-step">
+          <div class="bcm-newburyport-step__number">4</div>
+          <h3>Construction with Daily Documentation</h3>
+          <p>Our team builds your ADU with commercial-grade project management. You receive timestamped photo updates every day, clear milestone tracking, and proactive communication throughout.</p>
+        </div>
+        <div class="bcm-newburyport-step">
+          <div class="bcm-newburyport-step__number">5</div>
+          <h3>Final Inspection and Lifetime Support</h3>
+          <p>We ensure all inspections pass before handing over the keys. Through <a href="https://bradfordcm.com/about-us/">Bradford Home Services</a>, you get ongoing maintenance, seasonal check-ins, and warranty support for the life of your ADU.</p>
+        </div>
+      </div>
+      <div class="bcm-newburyport-btn-wrap">
+        <a href="https://bradfordcm.com/contact/" class="bcm-newburyport-btn bcm-newburyport-btn--primary">Start Your ADU Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zoning -->
+  <section class="bcm-newburyport-section">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-section__header">
+        <p class="bcm-newburyport-section__eyebrow">Newburyport ADU Regulations</p>
+        <h2>Newburyport ADU Zoning and Regulations</h2>
+        <p class="bcm-newburyport-section__subtitle">Building an ADU in Newburyport requires understanding local zoning bylaws. Here's what you need to know.</p>
+      </div>
+      <div class="bcm-newburyport-intro">
+        <p>Newburyport has its own zoning requirements for accessory dwelling units, and the rules vary by neighborhood and lot characteristics. Key considerations include:</p>
+        <ul class="bcm-newburyport-zoning-list">
+          <li><strong>Lot size requirements</strong> - Minimum lot size may be required depending on your zoning district</li>
+          <li><strong>Setback requirements</strong> - Distance from property lines and existing structures</li>
+          <li><strong>Size limitations</strong> - Maximum square footage relative to your primary dwelling</li>
+          <li><strong>Parking requirements</strong> - Additional parking may be needed based on your zone</li>
+          <li><strong>Owner occupancy</strong> - Some zones require owner occupancy of either the main home or the ADU</li>
+          <li><strong>Design standards</strong> - Architectural compatibility with your existing home and neighborhood</li>
+        </ul>
+      </div>
+      <div class="bcm-newburyport-info-box">
+        <h4>We Handle the Permitting</h4>
+        <p>Bradford Construction Management has direct experience navigating Newburyport's zoning process. We review your property's specific requirements during the initial consultation and manage all regulatory submissions on your behalf. Zoning regulations vary by neighborhood, so the best first step is a free site assessment. For a broader look at statewide ADU rules, read our <a href="https://bradfordcm.com/adu-regulations-permits-in-massachusetts-complete-2026-guide/">complete guide to ADU regulations and permits in Massachusetts</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Bradford -->
+  <section class="bcm-newburyport-section bcm-newburyport-section--alt">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-section__header">
+        <p class="bcm-newburyport-section__eyebrow">The Bradford Difference</p>
+        <h2>Why Choose Bradford Construction Management?</h2>
+        <p class="bcm-newburyport-section__subtitle">Professional project management, honest communication, and a team that doesn't disappear after the final walkthrough.</p>
+      </div>
+      <div class="bcm-newburyport-comparison">
+        <table>
+          <thead>
+            <tr>
+              <th>What Matters</th>
+              <th class="bcm-highlight">Bradford Construction</th>
+              <th>Typical Contractor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Daily Photo Updates</strong></td>
+              <td class="bcm-highlight"><span class="check">&#10003;</span> Every project, every day, timestamped</td>
+              <td>Occasional photos if you ask</td>
+            </tr>
+            <tr>
+              <td><strong>Project Management</strong></td>
+              <td class="bcm-highlight"><span class="check">&#10003;</span> Commercial-grade tools and processes</td>
+              <td>Varies widely</td>
+            </tr>
+            <tr>
+              <td><strong>Pricing</strong></td>
+              <td class="bcm-highlight"><span class="check">&#10003;</span> Transparent pricing, documented change orders</td>
+              <td>Estimates that shift during the build</td>
+            </tr>
+            <tr>
+              <td><strong>Post-Completion Support</strong></td>
+              <td class="bcm-highlight"><span class="check">&#10003;</span> Lifetime maintenance through Bradford Home Services</td>
+              <td>Limited warranty, then you're on your own</td>
+            </tr>
+            <tr>
+              <td><strong>Design-Build</strong></td>
+              <td class="bcm-highlight"><span class="check">&#10003;</span> One team from concept to keys</td>
+              <td>Separate designers and builders to coordinate</td>
+            </tr>
+            <tr>
+              <td><strong>Communication</strong></td>
+              <td class="bcm-highlight"><span class="check">&#10003;</span> Proactive daily updates and project portal</td>
+              <td>"We'll call you when there's something to report"</td>
+            </tr>
+            <tr>
+              <td><strong>After the Build</strong></td>
+              <td class="bcm-highlight"><span class="check">&#10003;</span> Bradford Home Services for life</td>
+              <td>Find a new contractor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="bcm-newburyport-btn-wrap">
+        <a href="https://bradfordcm.com/contact/" class="bcm-newburyport-btn bcm-newburyport-btn--primary">Experience the Bradford Difference</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost -->
+  <section class="bcm-newburyport-section">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-section__header">
+        <p class="bcm-newburyport-section__eyebrow">ADU Investment</p>
+        <h2>Cost of Building an ADU in Newburyport, MA</h2>
+        <p class="bcm-newburyport-section__subtitle">ADU construction costs in Newburyport typically range from $150,000 to $400,000+ depending on scope and design choices.</p>
+      </div>
+      <div class="bcm-newburyport-cost-grid">
+        <div class="bcm-newburyport-cost-card">
+          <h4>Garage Conversion</h4>
+          <div class="bcm-newburyport-cost-range">$150,000 - $250,000</div>
+          <p>Converting existing structure, utilities, insulation, finishes, and separate entrance</p>
+        </div>
+        <div class="bcm-newburyport-cost-card">
+          <h4>Detached Studio (500-600 SF)</h4>
+          <div class="bcm-newburyport-cost-range">$200,000 - $325,000</div>
+          <p>New foundation, utilities, single-story construction with modern finishes</p>
+        </div>
+        <div class="bcm-newburyport-cost-card">
+          <h4>Two-Bedroom Detached</h4>
+          <div class="bcm-newburyport-cost-range">$275,000 - $400,000+</div>
+          <p>Larger footprint, two-story option, full kitchen, multiple bedrooms, custom design</p>
+        </div>
+        <div class="bcm-newburyport-cost-card">
+          <h4>Attached Addition ADU</h4>
+          <div class="bcm-newburyport-cost-range">$175,000 - $350,000</div>
+          <p>Connected to main home, separate entrance, shared or independent utilities</p>
+        </div>
+      </div>
+      <div class="bcm-newburyport-info-box" style="margin-top: 2rem;">
+        <h4>Transparent Pricing from Day One</h4>
+        <p>We believe you deserve to know what your investment covers before construction starts. Bradford Construction provides transparent pricing with clear scopes - no hidden fees, no last-minute surprises. If anything changes during the build, you'll see a documented change order with full cost breakdown before any additional work happens. For a deeper breakdown, see our <a href="https://bradfordcm.com/complete-guide-to-adu-construction-in-massachusetts-costs-regulations-benefits/">complete guide to ADU construction costs, regulations, and benefits in Massachusetts</a>.</p>
+        <p><strong>Ready for a realistic estimate?</strong> <a href="https://bradfordcm.com/contact/">Contact us for a free consultation</a> and detailed quote specific to your Newburyport property.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bcm-newburyport-section bcm-newburyport-section--alt">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-section__header">
+        <p class="bcm-newburyport-section__eyebrow">Client Reviews</p>
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="bcm-newburyport-reviews">
+        <div class="bcm-newburyport-review">
+          <div class="bcm-newburyport-review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Rick and his team did a great job on our home. Communication was solid throughout, we always knew what was happening and when. They showed up when they said they would and communicated everything we expected, and the quality of work is excellent."</blockquote>
+          <div class="bcm-newburyport-review__author">Jon A.</div>
+          <div class="bcm-newburyport-review__source">Google Review</div>
+        </div>
+        <div class="bcm-newburyport-review">
+          <div class="bcm-newburyport-review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Bradford Construction was phenomenal on our multi-stage, 10-month complete rebuild. Due to a burst pipe in an upstairs sink, most of our home was flooded and had to be completely rebuilt from the studs-up. Rick and the whole crew surpassed any expectations we had going into the project."</blockquote>
+          <div class="bcm-newburyport-review__author">Luke R.</div>
+          <div class="bcm-newburyport-review__source">Google Review</div>
+        </div>
+        <div class="bcm-newburyport-review">
+          <div class="bcm-newburyport-review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Excellent customer service and quality work throughout project. Highly recommend!"</blockquote>
+          <div class="bcm-newburyport-review__author">Michael J.</div>
+          <div class="bcm-newburyport-review__source">Google Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bcm-newburyport-section">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-section__header">
+        <p class="bcm-newburyport-section__eyebrow">Common Questions</p>
+        <h2>Frequently Asked Questions About ADUs in Newburyport</h2>
+      </div>
+      <div class="bcm-newburyport-faq-list">
+
+        <div class="bcm-newburyport-faq-item" aria-expanded="false">
+          <div class="bcm-newburyport-faq-question">
+            <h4>Do I need a permit to build an ADU in Newburyport?</h4>
+            <span class="bcm-newburyport-faq-toggle">+</span>
+          </div>
+          <div class="bcm-newburyport-faq-answer">
+            <div class="bcm-newburyport-faq-answer-content">
+              Yes, all ADU construction in Newburyport requires building permits and must comply with local zoning bylaws. The permitting process typically takes 2 to 4 months depending on your project's complexity and whether a zoning variance is needed. We handle all permit applications, submissions, and follow-up with the city on your behalf.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-newburyport-faq-item" aria-expanded="false">
+          <div class="bcm-newburyport-faq-question">
+            <h4>How long does it take to build an ADU in Newburyport?</h4>
+            <span class="bcm-newburyport-faq-toggle">+</span>
+          </div>
+          <div class="bcm-newburyport-faq-answer">
+            <div class="bcm-newburyport-faq-answer-content">
+              From initial consultation to completion, most ADU projects take 8 to 14 months. That includes design (1-2 months), permitting (2-4 months), and construction (4-8 months). Timeline varies based on project complexity, seasonal conditions, and permitting. We provide a detailed schedule with milestones during planning, and you'll see daily photo updates throughout construction.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-newburyport-faq-item" aria-expanded="false">
+          <div class="bcm-newburyport-faq-question">
+            <h4>Can I rent out my ADU in Newburyport?</h4>
+            <span class="bcm-newburyport-faq-toggle">+</span>
+          </div>
+          <div class="bcm-newburyport-faq-answer">
+            <div class="bcm-newburyport-faq-answer-content">
+              Rental regulations vary by zoning district in Newburyport. Some zones allow long-term rentals while short-term rentals may have different requirements. We review your property's specific zoning during the initial consultation and can advise on rental eligibility, helping you plan an ADU that meets both your personal goals and any rental requirements.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-newburyport-faq-item" aria-expanded="false">
+          <div class="bcm-newburyport-faq-question">
+            <h4>Will an ADU affect my property taxes?</h4>
+            <span class="bcm-newburyport-faq-toggle">+</span>
+          </div>
+          <div class="bcm-newburyport-faq-answer">
+            <div class="bcm-newburyport-faq-answer-content">
+              Adding an ADU will likely increase your property's assessed value and therefore your property taxes. However, many homeowners find that rental income or the added flexibility more than offsets the tax increase. ADUs typically add 20-30% to overall property value, which makes them a strong long-term investment regardless of whether you rent the unit.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-newburyport-faq-item" aria-expanded="false">
+          <div class="bcm-newburyport-faq-question">
+            <h4>What's the difference between an ADU and a tiny house?</h4>
+            <span class="bcm-newburyport-faq-toggle">+</span>
+          </div>
+          <div class="bcm-newburyport-faq-answer">
+            <div class="bcm-newburyport-faq-answer-content">
+              An ADU is a permanent structure built on your property's foundation, connected to utilities, and subject to full building codes. It's a legal dwelling unit that adds real property value. Tiny houses are typically on wheels or temporary foundations and may face different zoning restrictions. ADUs built by Bradford Construction are permanent, code-compliant structures designed to last decades with proper maintenance through Bradford Home Services.
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-newburyport-faq-item" aria-expanded="false">
+          <div class="bcm-newburyport-faq-question">
+            <h4>What happens after my ADU is completed?</h4>
+            <span class="bcm-newburyport-faq-toggle">+</span>
+          </div>
+          <div class="bcm-newburyport-faq-answer">
+            <div class="bcm-newburyport-faq-answer-content">
+              This is where Bradford Construction is different from every other ADU builder. After the final walkthrough, we don't disappear. Through our sister company Bradford Home Services, you get ongoing maintenance, seasonal check-ins, warranty support, and a team to call whenever something needs attention. We build it right, document it daily, and support it for the long run.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="bcm-newburyport-section bcm-newburyport-section--alt">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-section__header">
+        <p class="bcm-newburyport-section__eyebrow">Service Area</p>
+        <h2>Serving Newburyport and Surrounding Communities</h2>
+      </div>
+      <div class="bcm-newburyport-container bcm-newburyport-container--narrow">
+        <p style="font-size: 0.95rem; color: var(--bcm-text-tertiary); text-align: center; margin-bottom: 1.5rem;">While we specialize in ADU construction in Newburyport, we also build throughout Essex County and Southern New Hampshire.</p>
+        <ul class="bcm-newburyport-neighborhoods">
+          <li><a href="https://bradfordcm.com/newburyport-mass/">Newburyport</a></li>
+          <li>Newbury</li>
+          <li>West Newbury</li>
+          <li>Amesbury</li>
+          <li>Salisbury</li>
+          <li>Merrimac</li>
+          <li>Georgetown</li>
+          <li>Rowley</li>
+          <li>Ipswich</li>
+          <li>Beverly</li>
+          <li><a href="https://bradfordcm.com/haverhill-ma/">Haverhill</a></li>
+          <li><a href="https://bradfordcm.com/exeter-nh/">Exeter, NH</a></li>
+        </ul>
+        <p style="font-size: 0.9rem; color: var(--bcm-text-tertiary); text-align: center; margin-top: 1.5rem;">Don't see your town? <a href="https://bradfordcm.com/contact/">Contact us</a> - we evaluate projects throughout the North Shore and Southern NH.</p>
+      </div>
+      <div class="bcm-newburyport-map-wrap" style="max-width: 900px; margin: 2rem auto 0;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93656.63881790714!2d-70.95548324055397!3d42.8143469597212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2e109acaea8db%3A0x5508797887c45490!2sNewburyport%2C%20MA!5e0!3m2!1sen!2sus!4v1770395872575!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bcm-newburyport-section bcm-newburyport-section--navy">
+    <div class="bcm-newburyport-container">
+      <div class="bcm-newburyport-final-cta">
+        <p class="bcm-newburyport-section__eyebrow">Ready to Get Started?</p>
+        <h2>Start Your Newburyport ADU Project</h2>
+        <p>Schedule a free consultation to discuss your ADU project. We'll visit your Newburyport property, review zoning requirements, and give you a clear picture of what's possible, what it'll cost, and how long it takes. No pressure, no obligations.</p>
+        <div class="bcm-newburyport-btn-wrap bcm-newburyport-btn-wrap--dual">
+          <a href="https://bradfordcm.com/contact/" class="bcm-newburyport-btn bcm-newburyport-btn--primary">Schedule Your Free Consultation</a>
+          <a href="tel:+19789459771" class="bcm-newburyport-btn bcm-newburyport-btn--outline">Call 978-945-9771</a>
+        </div>
+        <div class="bcm-newburyport-credentials">
+          Licensed &amp; Insured &middot; MA HIC #201908<br>
+          Proudly serving Newburyport, the North Shore, and Southern New Hampshire
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+document.querySelectorAll('.bcm-newburyport-faq-item').forEach(item => {
+  item.querySelector('.bcm-newburyport-faq-question').addEventListener('click', function() {
+    const isExpanded = item.getAttribute('aria-expanded') === 'true';
+    item.setAttribute('aria-expanded', !isExpanded);
+  });
+});
+</script>
