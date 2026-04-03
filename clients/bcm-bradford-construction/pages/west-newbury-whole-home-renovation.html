@@ -81,32 +81,22 @@
 .bcm-ct-room-header h3{font-size:1.15rem;margin-bottom:8px}
 .bcm-ct-room-header p{color:var(--bcm-text-secondary);font-size:0.93rem;margin:0;line-height:1.6}
 
-/* Uniform photo grid - all images same size, no --wide exceptions */
+/* Uniform photo grid - flexbox so orphan photos center automatically */
 .bcm-ct-room-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
   gap:8px;
-  border-radius:var(--bcm-radius-lg);
-  overflow:hidden;
 }
-.bcm-ct-room-img{overflow:hidden;aspect-ratio:4/3;display:block}
+.bcm-ct-room-img{
+  flex:0 0 calc(50% - 4px);
+  overflow:hidden;
+  aspect-ratio:4/3;
+  display:block;
+  border-radius:var(--bcm-radius);
+}
 .bcm-ct-room-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;display:block}
 .bcm-ct-room-img:hover img{transform:scale(1.04)}
-
-/* Remove wide/tall overrides - all cells uniform */
-.bcm-ct-room-img--wide{grid-column:unset;aspect-ratio:4/3}
-.bcm-ct-room-img--tall{grid-row:unset;aspect-ratio:4/3}
-
-/* Special: single-image rooms - center the lone image */
-.bcm-ct-room-grid--solo{
-  grid-template-columns:repeat(2,1fr);
-  max-width:680px;
-  margin:0 auto;
-}
-.bcm-ct-room-grid--solo .bcm-ct-room-img{
-  grid-column:1 / -1;
-  max-width:100%;
-}
 
 /* CSS lightbox */
 .bcm-ct-lb{position:fixed;inset:0;z-index:99999;background:rgba(14,18,25,0.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;visibility:hidden;transition:opacity 0.3s ease,visibility 0.3s ease}
@@ -142,14 +132,14 @@
   .bcm-ct-hero h1{font-size:2.9rem}
   .bcm-ct-section{padding:88px 40px}
   .bcm-ct-split{grid-template-columns:1fr 1fr;gap:56px}
-  .bcm-ct-room-grid{grid-template-columns:repeat(3,1fr)}
+  .bcm-ct-room-img{flex:0 0 calc(33.333% - 6px)}
   .bcm-ct-approach{grid-template-columns:repeat(2,1fr)}
   .bcm-ct-links{grid-template-columns:repeat(3,1fr)}
 }
 @media(min-width:1024px){
   .bcm-ct-hero{min-height:620px} .bcm-ct-hero h1{font-size:3.2rem}
   .bcm-ct-section{padding:100px 40px}
-  .bcm-ct-room-grid{grid-template-columns:repeat(4,1fr)}
+  .bcm-ct-room-img{flex:0 0 calc(25% - 6px)}
   .bcm-ct-approach{grid-template-columns:repeat(4,1fr)}
 }
 </style>
@@ -314,7 +304,7 @@
           <h3>Upper Deck</h3>
           <p>This didn't exist before the renovation. Built on sleepers over a flat roof with a drainage system underneath, it's accessible right off the primary bedroom. The homeowners weren't sure we'd be able to pull it off - it ended up being their favorite part of the whole project.</p>
         </div>
-        <div class="bcm-ct-room-grid bcm-ct-room-grid--solo">
+        <div class="bcm-ct-room-grid">
           <a href="#ct-lb20" class="bcm-ct-room-img"><img src="https://bradfordcm.com/wp-content/uploads/2026/03/08_Deck-Side-Angle-With-Entry.jpg" alt="" width="800" height="450" loading="lazy"></a>
         </div>
       </div>
