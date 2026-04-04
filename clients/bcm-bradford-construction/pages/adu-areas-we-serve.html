@@ -1,273 +1,130 @@
-<!--
-  BCM ADU Areas We Serve Block
-  2026 Brand Identity Redesign
-  Self-contained HTML/CSS for the main ADU hub page.
-  Drop into Elementor HTML widget.
-  Brand: Black #1A1A1A, Gold #C8A24D, Maritime #0F2A45, Light Gray #F1F1F1
-  Fonts: Plus Jakarta Sans (headings), Inter (body)
-
-  TO UPDATE: Uncomment or add <a> links in the appropriate region group.
-  URL pattern: /aduaccessory-dwelling-unit/[city]-[state]/
-
-  LINKING RULES:
-  - This block links DOWN from the hub to location pages
-  - Each location page links BACK here + to 2-3 nearby siblings
-  - See Notion "Location Service Page Cross-Linking Strategy" for full guide
--->
-
+<!-- BCM ADU Areas We Serve Block - 2026 Brand -->
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap');
-
-  /* === BCM Areas We Serve - ADU Hub === */
-  :root {
-  /* Primary Palette */
-  --bcm-black: #1A1A1A;
-  --bcm-gold: #C8A24D;
-  --bcm-charcoal: #1C2331;
-  --bcm-white: #FAF9F7;
-
-  /* Secondary Palette */
-  --bcm-maritime: #0F2A45;
-  --bcm-sage: #7A9B7E;
-  --bcm-gray: #F1F1F1;
-
-  /* Gold System */
-  --bcm-gold-hover: #B8923F;
-  --bcm-gold-light: #D4B46A;
-  --bcm-gold-soft: rgba(200, 162, 77, 0.07);
-  --bcm-gold-border: rgba(200, 162, 77, 0.18);
-  --bcm-gold-glow: rgba(200, 162, 77, 0.12);
-
-  /* Text Hierarchy */
-  --bcm-text-primary: #1C2331;
-  --bcm-text-secondary: #3A4255;
-  --bcm-text-tertiary: #5C6478;
-  --bcm-text-light: rgba(250, 249, 247, 0.88);
-  --bcm-text-muted: rgba(250, 249, 247, 0.62);
-
-  /* Surfaces */
-  --bcm-surface: #F7F7F5;
-  --bcm-surface-raised: #FFFFFF;
-  --bcm-border: #E5E5E2;
-  --bcm-border-subtle: rgba(28, 35, 49, 0.06);
-
-  /* Shadows */
-  --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
-  --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
-  --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
-  --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
-  --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
-
-  /* Radii */
-  --bcm-radius: 6px;
-  --bcm-radius-md: 10px;
-  --bcm-radius-lg: 14px;
-
-  /* Typography */
-  --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
-  --bcm-font-body: 'Inter', -apple-system, sans-serif;
-
-  /* Transitions */
-  --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
   .bcm-adu-areas {
     width: 100vw;
     max-width: 100vw;
     margin-left: calc(-50vw + 50%);
     position: relative;
-    background: var(--bcm-gray);
+    background: #F1F1F1;
     padding: 80px 20px;
+    font-family: 'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
-  .bcm-adu-areas,
-  .bcm-adu-areas p,
-  .bcm-adu-areas a,
-  .bcm-adu-areas span {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  }
+  .bcm-adu-areas * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  .bcm-adu-areas h2,
-  .bcm-adu-areas h3 {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  .bcm-adu-areas h2, .bcm-adu-areas h3 {
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
     line-height: 1.2;
   }
 
-  .bcm-adu-areas-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
+  .bcm-adu-areas-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  .bcm-adu-areas__label {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: #C8A24D; font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700; font-size: 11px; text-transform: uppercase;
+    letter-spacing: .16em; margin-bottom: 14px; justify-content: center;
   }
 
-  /* Section Header - matches Andover pattern */
-  .bcm-adu-areas__header {
-    text-align: center;
-    margin-bottom: 48px;
-  }
+  .bcm-adu-areas__label::before { content: ''; display: block; width: 24px; height: 1px; background: #C8A24D; }
+
+  .bcm-adu-areas__header { text-align: center; margin-bottom: 48px; }
 
   .bcm-adu-areas__title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: var(--bcm-text-primary);
-    margin: 0 0 16px 0;
-    line-height: 1.2;
+    font-size: 2.2rem; font-weight: 700; color: #1C2331;
+    margin: 0 0 12px; line-height: 1.2;
   }
 
   .bcm-adu-areas__subtitle {
-    font-size: 1.125rem;
-    color: var(--bcm-text-tertiary);
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.7;
+    font-size: 1.05rem; color: #6B7280;
+    max-width: 680px; margin: 0 auto; line-height: 1.7;
   }
 
-  /* Region Grid */
   .bcm-areas-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
   }
 
-  /* Region Cards - matches benefit-card pattern */
   .bcm-area-group {
-    background: var(--bcm-white);
-    border-radius: var(--bcm-radius-lg);
-    padding: 32px;
-    box-shadow: var(--bcm-shadow);
-    transition: var(--bcm-transition);
-    border-top: 4px solid var(--bcm-gold);
+    background: #FAF9F7; border-radius: 14px; padding: 32px;
+    box-shadow: 0 2px 12px rgba(26,26,26,0.04);
+    border: 1px solid #E5E5E2;
+    transition: box-shadow 0.22s, transform 0.22s;
   }
 
   .bcm-area-group:hover {
-    box-shadow: var(--bcm-shadow-hover);
-    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(26,26,26,0.08);
+    transform: translateY(-2px);
   }
 
   .bcm-area-group h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--bcm-text-primary);
-    margin: 0 0 6px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 1.15rem; font-weight: 700; color: #1C2331;
+    margin: 0 0 6px; display: flex; align-items: center; gap: 10px;
   }
 
-  .bcm-region-icon {
-    font-size: 1.1rem;
-    display: inline-block;
+  .bcm-area-group h3 .region-icon {
+    width: 28px; height: 28px; background: rgba(200,162,77,0.12);
+    border-radius: 6px; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
   }
 
-  .bcm-region-desc {
-    font-size: 0.875rem;
-    color: var(--bcm-text-tertiary);
-    margin: 0 0 20px 0;
-    line-height: 1.5;
+  .bcm-area-group h3 .region-icon svg {
+    width: 14px; height: 14px; stroke: #C8A24D; fill: none;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
   }
 
-  /* City Link Pills - matches service-pill pattern */
-  .bcm-area-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+  .bcm-region-desc { font-size: 13px; color: #6B7280; margin: 0 0 18px; line-height: 1.5; }
+
+  .bcm-area-links { display: flex; flex-wrap: wrap; gap: 10px; }
 
   .bcm-area-links a {
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--bcm-surface);
-    color: var(--bcm-black);
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border: 2px solid var(--bcm-gray);
-    transition: all 0.3s var(--bcm-ease);
+    display: inline-block; padding: 10px 20px;
+    background: white; color: #1C2331;
+    text-decoration: none; border-radius: 9999px;
+    font-size: 14px; font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border: 1.5px solid #E5E5E2;
+    transition: border-color 0.22s, background 0.22s, transform 0.2s;
   }
 
   .bcm-area-links a:hover {
-    background: var(--bcm-black);
-    color: var(--bcm-white);
-    border-color: var(--bcm-black);
-    transform: translateY(-2px);
-    box-shadow: var(--bcm-shadow-hover);
-  }
-
-  /* Placeholder for pages not yet built */
-  .bcm-area-links a.bcm-coming-soon {
-    background: var(--bcm-gray);
-    color: var(--bcm-text-tertiary);
-    border-color: var(--bcm-border);
-    cursor: default;
-    pointer-events: none;
-    font-style: italic;
+    border-color: #C8A24D; background: rgba(200,162,77,0.06);
+    transform: translateY(-1px);
   }
 
   .bcm-areas-coming-text {
-    font-size: 0.9rem;
-    color: var(--bcm-text-tertiary);
-    font-style: italic;
-    padding: 10px 0 0;
+    font-size: 14px; color: #6B7280; font-style: italic; padding: 10px 0 0;
   }
 
-  /* Bottom CTA */
-  .bcm-areas-footer {
-    text-align: center;
-    margin-top: 48px;
-  }
+  .bcm-areas-footer { text-align: center; margin-top: 40px; }
 
   .bcm-areas-footer p {
-    font-size: 1rem;
-    color: var(--bcm-text-tertiary);
-    margin: 0 0 20px 0;
-    line-height: 1.6;
+    font-size: 15px; color: #6B7280; margin: 0 0 20px; line-height: 1.6;
   }
 
   .bcm-areas-cta {
-    display: inline-block;
-    padding: 16px 32px;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 20px;
-    transition: all 0.3s var(--bcm-ease);
-    cursor: pointer;
-    border: none;
-    background-color: var(--bcm-gold);
-    color: var(--bcm-text-primary);
+    display: inline-flex; align-items: center;
+    padding: 15px 32px; background: #C8A24D; color: #1A1A1A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px; font-weight: 600;
+    text-decoration: none; border-radius: 9999px;
+    transition: background 0.22s, transform 0.2s;
+    min-height: 50px;
   }
 
   .bcm-areas-cta:hover {
-    background-color: var(--bcm-gold-hover);
-    transform: translateY(-2px);
-    box-shadow: var(--bcm-shadow-gold);
+    background: #D9B96A; transform: translateY(-1px);
   }
 
-  /* Responsive */
   @media (max-width: 1024px) {
-    .bcm-areas-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    .bcm-areas-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 768px) {
-    .bcm-adu-areas {
-      padding: 60px 20px;
-    }
-
-    .bcm-adu-areas__title {
-      font-size: 1.875rem;
-    }
-
-    .bcm-areas-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    .bcm-area-group {
-      padding: 24px;
-    }
+    .bcm-adu-areas { padding: 56px 20px; }
+    .bcm-adu-areas__title { font-size: 1.7rem; }
+    .bcm-areas-grid { grid-template-columns: 1fr; gap: 20px; }
+    .bcm-area-group { padding: 24px; }
   }
 </style>
 
@@ -275,63 +132,51 @@
   <div class="bcm-adu-areas-inner">
 
     <div class="bcm-adu-areas__header">
-      <h2 class="bcm-adu-areas__title">ADU Construction Across the North Shore &amp; Beyond</h2>
-      <p class="bcm-adu-areas__subtitle">Bradford Construction designs and builds custom accessory dwelling units throughout Eastern Massachusetts and Southern New Hampshire. Select your town for local ADU details.</p>
+      <span class="bcm-adu-areas__label">Service Areas</span>
+      <h2 class="bcm-adu-areas__title">ADU Construction Across Eastern MA, NH, and ME</h2>
+      <p class="bcm-adu-areas__subtitle">Bradford Construction designs and builds custom accessory dwelling units throughout Eastern Massachusetts, New Hampshire, and Maine. Select your town for local ADU details.</p>
     </div>
 
     <div class="bcm-areas-grid">
 
       <!-- REGION 1: North Shore -->
       <div class="bcm-area-group">
-        <h3><span class="bcm-region-icon">&#128205;</span> North Shore</h3>
+        <h3><span class="region-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> North Shore</h3>
         <p class="bcm-region-desc">Essex County coastal communities</p>
         <div class="bcm-area-links">
-          <a href="/aduaccessory-dwelling-unit/newburyport-ma/">Newburyport</a>
-          <a href="/aduaccessory-dwelling-unit/ipswich-ma/">Ipswich</a>
-          <!-- ADD NEW NORTH SHORE CITIES HERE
-          <a href="/aduaccessory-dwelling-unit/georgetown-ma/">Georgetown</a>
-          <a href="/aduaccessory-dwelling-unit/salisbury-ma/">Salisbury</a>
-          <a href="/aduaccessory-dwelling-unit/rowley-ma/">Rowley</a>
-          <a href="/aduaccessory-dwelling-unit/essex-ma/">Essex</a>
-          <a href="/aduaccessory-dwelling-unit/gloucester-ma/">Gloucester</a>
-          <a href="/aduaccessory-dwelling-unit/rockport-ma/">Rockport</a>
-          <a href="/aduaccessory-dwelling-unit/beverly-ma/">Beverly</a>
-          <a href="/aduaccessory-dwelling-unit/boxford-ma/">Boxford</a>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/newburyport-ma/">Newburyport</a>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/ipswich-ma/">Ipswich</a>
+          <!-- Uncomment as pages are built:
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/georgetown-ma/">Georgetown</a>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/beverly-ma/">Beverly</a>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/essex-ma/">Essex</a>
           -->
         </div>
       </div>
 
       <!-- REGION 2: Merrimack Valley -->
       <div class="bcm-area-group">
-        <h3><span class="bcm-region-icon">&#128205;</span> Merrimack Valley</h3>
-        <p class="bcm-region-desc">Greater Haverhill &amp; surrounding towns</p>
+        <h3><span class="region-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> Merrimack Valley</h3>
+        <p class="bcm-region-desc">Greater <a href="https://bradfordcm.com/haverhill-ma/" style="color: #1C2331; font-weight: 600;">Haverhill</a> and surrounding towns</p>
         <div class="bcm-area-links">
-          <a href="/aduaccessory-dwelling-unit/andover-ma/">Andover</a>
-          <!-- ADD NEW MERRIMACK VALLEY CITIES HERE
-          <a href="/aduaccessory-dwelling-unit/haverhill-ma/">Haverhill</a>
-          <a href="/aduaccessory-dwelling-unit/north-andover-ma/">North Andover</a>
-          <a href="/aduaccessory-dwelling-unit/methuen-ma/">Methuen</a>
-          <a href="/aduaccessory-dwelling-unit/amesbury-ma/">Amesbury</a>
-          <a href="/aduaccessory-dwelling-unit/lawrence-ma/">Lawrence</a>
-          <a href="/aduaccessory-dwelling-unit/groveland-ma/">Groveland</a>
-          <a href="/aduaccessory-dwelling-unit/west-newbury-ma/">West Newbury</a>
-          <a href="/aduaccessory-dwelling-unit/merrimac-ma/">Merrimac</a>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/andover-ma/">Andover</a>
+          <!-- Uncomment as pages are built:
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/haverhill-ma/">Haverhill</a>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/north-andover-ma/">North Andover</a>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/methuen-ma/">Methuen</a>
           -->
         </div>
       </div>
 
-      <!-- REGION 3: Southern New Hampshire -->
+      <!-- REGION 3: New Hampshire and Maine -->
       <div class="bcm-area-group">
-        <h3><span class="bcm-region-icon">&#128205;</span> Southern New Hampshire</h3>
-        <p class="bcm-region-desc">Rockingham &amp; Hillsborough counties</p>
+        <h3><span class="region-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> New Hampshire and Maine</h3>
+        <p class="bcm-region-desc">Seacoast, Rockingham, and Southern Maine</p>
         <div class="bcm-area-links">
-          <!-- ADD NH CITIES AS PAGES ARE BUILT
-          <a href="/aduaccessory-dwelling-unit/salem-nh/">Salem</a>
-          <a href="/aduaccessory-dwelling-unit/plaistow-nh/">Plaistow</a>
-          <a href="/aduaccessory-dwelling-unit/londonderry-nh/">Londonderry</a>
-          <a href="/aduaccessory-dwelling-unit/windham-nh/">Windham</a>
-          <a href="/aduaccessory-dwelling-unit/hampstead-nh/">Hampstead</a>
-          <a href="/aduaccessory-dwelling-unit/exeter-nh/">Exeter</a>
+          <!-- Uncomment as pages are built:
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/exeter-nh/">Exeter</a>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/salem-nh/">Salem</a>
+          <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/plaistow-nh/">Plaistow</a>
           -->
           <span class="bcm-areas-coming-text">Location pages coming soon</span>
         </div>
@@ -340,10 +185,9 @@
     </div>
 
     <div class="bcm-areas-footer">
-      <p>Don't see your town? We likely serve your area.</p>
-      <a href="/contact/" class="bcm-areas-cta">Ask About Your Property</a>
+      <p>Do not see your town? We likely serve your area.</p>
+      <a href="https://bradfordcm.com/contact/" class="bcm-areas-cta">Ask About Your Property</a>
     </div>
 
   </div>
 </section>
-
