@@ -113,6 +113,17 @@ body {
 4. **Virtual Design** - Remote design service for clients who can't visit
 5. **Multi-Unit Cabinets** - Builder/contractor projects
 
+### Services NOT Offered
+
+Seacoast Cabinet **does not** offer the following services. Do not reference these in any content, pages, FAQs, or schema markup:
+
+- **Cabinet refacing** - No door/drawer front replacement on existing boxes
+- **Cabinet refinishing** - No painting, staining, or resurfacing of existing cabinets
+- **Cabinet painting** - No spray or brush painting services
+- **Cabinet repair** - No structural repairs to existing cabinetry
+
+Seacoast Cabinet specializes exclusively in **new cabinet design, supply, and installation**. When homeowners ask about refacing, the appropriate response is to discuss budget-friendly new cabinet options (Mantra, Homecrest) rather than refacing services.
+
 ---
 
 ## Internal Link Destinations
@@ -232,4 +243,5 @@ When embedding custom HTML in Divi:
 
 ---
 
-*Last updated: January 2026*
+*Last updated: April 2026*
+
