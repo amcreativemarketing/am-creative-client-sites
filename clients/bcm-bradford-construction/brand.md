@@ -186,7 +186,39 @@ Architectural luxury. The goal is a page that looks like it was designed by a hu
 - Let photography and content do the heavy lifting. The design supports, not competes.
 - Fewer visual effects, more precision in spacing and type.
 - Every hover state, shadow, and accent should feel earned - not decorative.
-- 6px border-radius on buttons (not pill) reads more premium for this brand.
+
+### Page Intent Tiers
+
+Not every page serves the same purpose. The design system adapts to three intent tiers. Colors, type, and brand identity stay consistent across all tiers - what changes is layout ambition, headline strategy, and visual weight.
+
+**Tier 1: Brand + CRO (campaign destinations, money pages)**
+Examples: Custom Homes, ADU landing page, Projects hub
+- Visual-first: split-panel heroes, project showcases, large photography
+- H1 is benefit-driven ("Your Custom Home, Built by One Team") - keep primary keyword but lead with value proposition, not geographic targeting
+- Pill button radius (9999px) for a warmer, more approachable CTA feel
+- Project spotlights, stats bars, and social proof positioned early (above fold or first scroll)
+- SEO foundations still present: keyword-rich H2s and H3s deeper in page, FAQ section, internal links, location references in body copy
+- These pages receive paid traffic. First impression is everything.
+
+**Tier 2: Balanced (root service pages, about, process pages)**
+Examples: Design-Build, Home Additions, Home Renovations, About Us
+- Equal weight between visual appeal and SEO structure
+- H1 can include location if it reads naturally ("Home Additions in the North Shore and Merrimack Valley")
+- 6px button radius for a more structured, editorial feel
+- Two-column image/text sections, process grids, comparison content
+- Stronger internal linking to hub and spoke pages
+- FAQ section with SEO-targeted questions
+
+**Tier 3: SEO + Local (spoke pages, location pages, blog content)**
+Examples: Andover MA ADU, Exeter NH Custom Home, Newburyport ADU, blog posts
+- SEO-first: keyword-targeted H1 ("Custom Home Builder in Exeter NH"), question-based H2/H3s
+- 6px button radius
+- Content depth and topical coverage prioritized over visual drama
+- Layout variations across pages to avoid duplicate content signals (see Location Page Differentiation)
+- Still brand-consistent in color, type, and tone - just structured for organic ranking
+- FAQ sections with long-tail question targeting
+
+**How to choose:** If the page will receive ad traffic or is a primary sales page, it is Tier 1. If it is a root service page or core site page, Tier 2. If it targets a specific location or long-tail keyword cluster, Tier 3.
 
 ### Live Component Reference
 
@@ -264,6 +296,11 @@ Preview: https://amcreativemarketing.github.io/am-creative-client-sites/clients/
 
 ### Buttons
 
+**Border-radius rules:**
+- Tier 1 (Brand + CRO) pages: pill radius (9999px) for a warmer, approachable CTA feel
+- Tier 2 and 3 pages: 6px radius for a structured, editorial feel
+- Never mix pill and 6px radius buttons on the same page
+
 **Primary (Gold):**
 - Background: `--bcm-gold` (#C8A24D), text: `--bcm-black` (#1A1A1A)
 - Border-radius: 6px (not pill)
@@ -292,12 +329,25 @@ Preview: https://amcreativemarketing.github.io/am-creative-client-sites/clients/
 
 ### Hero Treatment
 
+**Standard Hero (Tier 2 and 3 pages):**
 - Background image with warm black/charcoal overlay (no blue shift)
 - Optional location/service label above H1: gold text, uppercase, 0.72rem, letter-spacing 0.1em, with leading gold rule (24px wide, 1.5px)
 - Labels are contextual: use on service and location pages (e.g., "Custom Homes", "Andover, MA"). Omit on homepage.
 - Subtitle: 88% white opacity, max-width 520px
 - Gold accent line at bottom: 3px, gradient left-to-right, 40% opacity
 - Min-height: 520px mobile, 580px tablet, 640px desktop
+
+**Split-Panel Hero (Tier 1 pages):**
+- CSS Grid: 2 columns on desktop (content | image), stacks on mobile (content above, image below)
+- Content side: `--bcm-black` background, generous padding (80px 48px 80px 64px), vertically centered
+- Image side: full-bleed photo with gradient overlay fading toward content side
+- Gradient direction: 270deg (transparent 60% to black 100%) when image is right; 90deg when image is left
+- Mobile gradient shifts to vertical (0deg or 180deg depending on stack order)
+- Gold eyebrow label with flanking line above H1
+- H1 can use `<span>` for gold accent on key phrase
+- Pill CTAs (9999px radius) in hero area
+- Stats bar below CTAs: flex row with gold divider border-top, gold stat numbers, muted uppercase labels
+- Min-height: 85vh desktop, auto on mobile with 50vh min-height on image side
 
 ### Trust Bar
 
@@ -366,6 +416,42 @@ Unified card approach with 1px dividers:
 - Gold corner accent on image: 80px wide, 3px height at bottom-left
 - Support for `--reverse` modifier to flip image/text sides
 
+### Project Showcase (Tier 1 pages)
+
+Featured project spotlights with multi-image grids. Use on campaign destination pages where visual proof matters more than content depth.
+- Grid: content side (project info) + image side (multi-image grid with 1 main + 2 secondary)
+- Main image: 16:10 aspect ratio, full width of image grid, 12px radius
+- Secondary images: 4:3 aspect ratio, side by side below main, 10px radius, 10px gap
+- Project location label: gold, uppercase, 11px, 0.12em letter-spacing
+- Project tags: gold-tinted background pills (not emoji), Plus Jakarta Sans 600, 12px
+- Alternate layout direction between projects using `reverse` modifier
+- Separator between projects: 1px border at 8% opacity with 64px padding
+- Link to full project spotlight page with outline button
+
+### Difference Cards (Horizontal)
+
+Alternative to the vertical Why BCM cards for use in feature/differentiator sections.
+- 2-column grid on desktop, 1 column on mobile
+- Each card: white background, 14px radius, 32px 28px padding, subtle border and shadow
+- Layout: 44x44px icon box (left) + text content (right), flex with 18px gap
+- Icon boxes use SVG stroke icons in gold on gold-soft background - never emoji
+- Hover: increased shadow, translateY(-2px)
+- Best for 4-6 items. Use when items need brief descriptions rather than just titles.
+
+### Inline CTA Band (Dark)
+
+Mid-page conversion prompt between content sections.
+- Background: charcoal-to-black gradient (135deg)
+- Centered text (Plus Jakarta Sans 500, 1.15rem, white) + gold pill CTA below
+- Padding: 48px vertical
+- Keep copy conversational and short - one line plus one button
+
+### Testimonial Layouts
+
+**Standard grid:** 1-column stack with gold left border on each card.
+
+**Featured layout (Tier 1 pages):** 2-column grid with one card spanning full width (`featured` modifier, grid-column: 1 / -1). Use the strongest review as the featured card. Cards use 14px radius, 32px padding, 3px gold left border.
+
 ### Location Page Differentiation
 
 Vary layout structures across location pages to avoid duplicate content signals. The design system (colors, type, shadows, buttons) stays consistent - component arrangements change per page.
@@ -384,9 +470,24 @@ Vary layout structures across location pages to avoid duplicate content signals.
 - **Existing pages:** Migrate when next touched for content or SEO updates. Swap the `:root` variable block and update class names as needed. Do not mix old and new palettes on the same page.
 - **Font loading:** No changes needed - Plus Jakarta Sans and Inter remain the only web fonts.
 
-### Pricing Disclaimer Standard
+### Pricing Language for Marketing
 
-All pricing sections must include: "Ranges shown are general estimates - actual pricing and timelines vary by project scope, site conditions, and finish level. You'll receive detailed, transparent pricing as part of your initial consultation and project quote."
+BCM uses "transparent pricing" as the umbrella term across all marketing. Pricing model details (how a specific project is billed) are handled during sales conversations and project kickoffs - not on the website or in ad creative.
+
+**Approved marketing language:**
+- "Transparent pricing" - primary term, always acceptable
+- "Every cost is documented before it happens"
+- "No hidden fees, no surprise invoices"
+- "Changes are documented and approved in writing before they happen"
+- Pricing presented as "starts at" with ranges when numbers are used
+
+**Avoid in marketing copy:**
+- "Fixed-price" - too absolute, may not apply to every project type
+- Specific billing model terminology (this is a sales conversation, not a web page topic)
+- Any language that implies the client will know the exact total cost to the dollar before construction begins
+
+**Pricing disclaimer for pages that include numbers:**
+"Ranges shown are general estimates - actual pricing and timelines vary by project scope, site conditions, and finish level. You'll receive detailed, transparent pricing as part of your initial consultation and project quote."
 
 ---
 
