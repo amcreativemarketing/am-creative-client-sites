@@ -1,0 +1,738 @@
+<!-- BCM ADU Service Page - 2026 Brand / Tier 1 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bcm-black: #1A1A1A;
+    --bcm-gold: #C8A24D;
+    --bcm-gold-light: #D9B96A;
+    --bcm-charcoal: #1C2331;
+    --bcm-maritime: #0F2A45;
+    --bcm-off-white: #FAF9F7;
+    --bcm-gray: #F1F1F1;
+    --bcm-surface: #F7F7F5;
+    --bcm-muted: #6B7280;
+    --bcm-body-text: #3D3D3D;
+    --bcm-border: #E5E5E2;
+    --bcm-gold-soft: rgba(200,162,77,0.07);
+    --bcm-gold-border: rgba(200,162,77,0.18);
+  }
+
+  .bcm-adu-page {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    color: var(--bcm-body-text);
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+    background: var(--bcm-off-white);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .bcm-adu-page * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .bcm-adu-page h1, .bcm-adu-page h2, .bcm-adu-page h3, .bcm-adu-page h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .bcm-adu-page h2 { font-size: 2.2rem; color: var(--bcm-charcoal); margin-bottom: 16px; }
+  .bcm-adu-page h3 { font-size: 1.3rem; color: var(--bcm-charcoal); margin-bottom: 12px; }
+  .bcm-adu-page p { margin-bottom: 16px; color: var(--bcm-body-text); }
+
+  .bcm-adu-page a { color: var(--bcm-charcoal); text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+  .bcm-adu-page a:hover { color: var(--bcm-gold); }
+
+  .bcm-adu-page .section-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--bcm-gold); font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700; font-size: 11px; text-transform: uppercase;
+    letter-spacing: .16em; margin-bottom: 14px;
+  }
+  .bcm-adu-page .section-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--bcm-gold); }
+
+  .bcm-adu-page .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .bcm-adu-page .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* Buttons */
+  .bcm-adu-page .btn-primary {
+    display: inline-flex; align-items: center;
+    background: var(--bcm-gold); color: var(--bcm-black);
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 15px;
+    padding: 15px 32px; border-radius: 9999px; text-decoration: none;
+    transition: background 0.22s, transform 0.2s; min-height: 50px;
+  }
+  .bcm-adu-page .btn-primary:hover { background: var(--bcm-gold-light); color: var(--bcm-black); transform: translateY(-1px); text-decoration: none; }
+
+  .bcm-adu-page .btn-secondary {
+    display: inline-flex; align-items: center;
+    background: transparent; color: var(--bcm-off-white);
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 15px;
+    padding: 14px 32px; border-radius: 9999px;
+    border: 1.5px solid rgba(250,249,247,0.35); text-decoration: none;
+    transition: border-color 0.22s, color 0.22s, background 0.22s; min-height: 50px;
+  }
+  .bcm-adu-page .btn-secondary:hover { border-color: var(--bcm-gold); color: var(--bcm-gold); background: rgba(200,162,77,0.08); text-decoration: none; }
+
+  .bcm-adu-page .btn-outline {
+    display: inline-flex; align-items: center;
+    background: transparent; color: var(--bcm-charcoal);
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 15px;
+    padding: 14px 32px; border-radius: 9999px;
+    border: 1.5px solid var(--bcm-charcoal); text-decoration: none;
+    transition: border-color 0.22s, color 0.22s, background 0.22s; min-height: 50px;
+  }
+  .bcm-adu-page .btn-outline:hover { border-color: var(--bcm-gold); color: var(--bcm-black); background: rgba(200,162,77,0.1); text-decoration: none; }
+
+  /* ==================== HERO ==================== */
+  .bcm-adu-page .hero {
+    position: relative; min-height: 85vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    background: var(--bcm-black); overflow: hidden;
+  }
+  .bcm-adu-page .hero-content {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 48px 80px 64px; position: relative; z-index: 2;
+  }
+  .bcm-adu-page .hero-eyebrow {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--bcm-gold);
+    margin-bottom: 28px; display: flex; align-items: center; gap: 14px;
+  }
+  .bcm-adu-page .hero-eyebrow::before { content: ''; width: 40px; height: 1px; background: var(--bcm-gold); }
+  .bcm-adu-page .hero h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 3.2rem; font-weight: 800;
+    color: var(--bcm-off-white); line-height: 1.1; margin-bottom: 24px; letter-spacing: -.01em;
+  }
+  .bcm-adu-page .hero h1 span { color: var(--bcm-gold); }
+  .bcm-adu-page .hero-body { color: rgba(250,249,247,0.7); font-size: 1.05rem; line-height: 1.8; margin-bottom: 40px; max-width: 480px; }
+  .bcm-adu-page .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 56px; }
+  .bcm-adu-page .hero-stats {
+    display: flex; gap: 40px; padding-top: 32px;
+    border-top: 1px solid rgba(200,162,77,0.2);
+  }
+  .bcm-adu-page .hero-stat-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 800; color: var(--bcm-gold); line-height: 1; margin-bottom: 4px; }
+  .bcm-adu-page .hero-stat-label { font-size: 12px; color: rgba(250,249,247,0.5); text-transform: uppercase; letter-spacing: .1em; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; }
+
+  .bcm-adu-page .hero-image { position: relative; overflow: hidden; }
+  .bcm-adu-page .hero-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center; display: block; }
+  .bcm-adu-page .hero-image::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(270deg, transparent 60%, var(--bcm-black) 100%);
+    pointer-events: none;
+  }
+
+  /* ==================== TRUST BAR ==================== */
+  .bcm-adu-page .trust-bar { background: var(--bcm-black); padding: 20px 24px; text-align: center; border-top: 2px solid var(--bcm-gold); }
+  .bcm-adu-page .trust-bar-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap; }
+  .bcm-adu-page .trust-item { color: var(--bcm-off-white); font-size: 13px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+  .bcm-adu-page .trust-item .ti { color: var(--bcm-gold); font-size: 14px; }
+
+  /* ==================== SECTIONS ==================== */
+  .bcm-adu-page .section { padding: 80px 24px; }
+  .bcm-adu-page .section.bg-surface { background: var(--bcm-surface); }
+  .bcm-adu-page .section.bg-gray { background: var(--bcm-gray); }
+  .bcm-adu-page .section.bg-dark { background: linear-gradient(170deg, var(--bcm-charcoal) 0%, var(--bcm-black) 100%); }
+  .bcm-adu-page .section-header { text-align: center; margin-bottom: 48px; }
+  .bcm-adu-page .section-header .section-label { justify-content: center; }
+  .bcm-adu-page .section-header p.sub { color: var(--bcm-muted); font-size: 1.05rem; max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+  /* ==================== USE CASES ==================== */
+  .bcm-adu-page .use-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+  .bcm-adu-page .use-card {
+    background: white; border-radius: 14px; overflow: hidden;
+    border: 1px solid var(--bcm-border); transition: box-shadow 0.22s, transform 0.22s;
+  }
+  .bcm-adu-page .use-card:hover { box-shadow: 0 8px 32px rgba(26,26,26,0.08); transform: translateY(-3px); }
+  .bcm-adu-page .use-card-img { aspect-ratio: 16/10; overflow: hidden; }
+  .bcm-adu-page .use-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+  .bcm-adu-page .use-card:hover .use-card-img img { transform: scale(1.04); }
+  .bcm-adu-page .use-card-body { padding: 24px; }
+  .bcm-adu-page .use-card-body h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .bcm-adu-page .use-card-body p { font-size: 14px; color: var(--bcm-muted); line-height: 1.65; margin: 0; }
+
+  /* ==================== INLINE CTA ==================== */
+  .bcm-adu-page .inline-cta { background: linear-gradient(135deg, var(--bcm-charcoal) 0%, var(--bcm-black) 100%); padding: 48px 24px; text-align: center; }
+  .bcm-adu-page .inline-cta p { color: var(--bcm-off-white); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 500; margin-bottom: 20px; }
+
+  /* ==================== MODELS ==================== */
+  .bcm-adu-page .model-card {
+    background: white; border-radius: 14px; overflow: hidden;
+    box-shadow: 0 4px 20px rgba(26,26,26,0.06); margin-bottom: 40px;
+    border: 1px solid var(--bcm-border);
+  }
+  .bcm-adu-page .model-card:last-child { margin-bottom: 0; }
+  .bcm-adu-page .model-header { display: grid; grid-template-columns: 1.2fr 1fr; gap: 0; }
+  .bcm-adu-page .model-gallery { background: var(--bcm-charcoal); }
+  .bcm-adu-page .model-main-img { aspect-ratio: 16/10; overflow: hidden; }
+  .bcm-adu-page .model-main-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bcm-adu-page .model-thumbs { display: flex; gap: 6px; padding: 10px; background: var(--bcm-black); }
+  .bcm-adu-page .model-thumb { flex: 1; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; opacity: 0.65; transition: opacity 0.2s; }
+  .bcm-adu-page .model-thumb:first-child { opacity: 1; }
+  .bcm-adu-page .model-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bcm-adu-page .model-info { padding: 36px; display: flex; flex-direction: column; justify-content: center; background: var(--bcm-surface); }
+  .bcm-adu-page .model-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--bcm-gold); color: var(--bcm-black);
+    padding: 5px 14px; border-radius: 20px; font-size: 11px; font-weight: 700;
+    letter-spacing: .05em; text-transform: uppercase; margin-bottom: 14px; width: fit-content;
+  }
+  .bcm-adu-page .model-info h3 { font-size: 1.8rem; margin-bottom: 6px; }
+  .bcm-adu-page .model-tagline { font-size: 15px; color: var(--bcm-muted); margin-bottom: 20px; }
+  .bcm-adu-page .model-specs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
+  .bcm-adu-page .model-spec { background: white; padding: 14px; border-radius: 8px; }
+  .bcm-adu-page .model-spec-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--bcm-muted); margin-bottom: 2px; }
+  .bcm-adu-page .model-spec-value { font-size: 1rem; font-weight: 700; color: var(--bcm-charcoal); font-family: 'Plus Jakarta Sans', sans-serif; }
+  .bcm-adu-page .model-price { margin-bottom: 8px; }
+  .bcm-adu-page .model-price-label { font-size: 13px; color: var(--bcm-muted); }
+  .bcm-adu-page .model-price-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--bcm-charcoal); }
+  .bcm-adu-page .model-note { font-size: 13px; color: var(--bcm-muted); font-style: italic; margin: 0; }
+  .bcm-adu-page .model-floorplans { padding: 32px 36px; border-top: 1px solid var(--bcm-border); }
+  .bcm-adu-page .model-floorplans h4 { font-size: 1rem; margin-bottom: 16px; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .bcm-adu-page .fp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .bcm-adu-page .fp-item { background: var(--bcm-surface); border-radius: 10px; padding: 20px; text-align: center; }
+  .bcm-adu-page .fp-item img { max-width: 100%; height: auto; margin-bottom: 10px; }
+  .bcm-adu-page .fp-item p { font-size: 13px; color: var(--bcm-muted); margin: 0; }
+
+  /* ==================== ICF BUILD SECTION ==================== */
+  .bcm-adu-page .build-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 1100px; margin: 0 auto; }
+  .bcm-adu-page .build-photo { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; }
+  .bcm-adu-page .build-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bcm-adu-page .build-photo .build-cap {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(26,26,26,0.85));
+    padding: 24px 16px 14px; color: var(--bcm-off-white);
+    font-size: 12px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
+  }
+
+  /* ==================== DIFFERENCE CARDS ==================== */
+  .bcm-adu-page .diff-grid { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .bcm-adu-page .diff-card {
+    background: white; border-radius: 14px; padding: 32px 28px;
+    border: 1px solid rgba(26,26,26,0.06); box-shadow: 0 2px 12px rgba(26,26,26,0.04);
+    display: flex; gap: 18px; align-items: flex-start; transition: box-shadow 0.22s, transform 0.22s;
+  }
+  .bcm-adu-page .diff-card:hover { box-shadow: 0 6px 24px rgba(26,26,26,0.08); transform: translateY(-2px); }
+  .bcm-adu-page .diff-icon {
+    flex-shrink: 0; width: 44px; height: 44px;
+    background: rgba(200,162,77,0.12); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .bcm-adu-page .diff-icon svg { width: 22px; height: 22px; stroke: var(--bcm-gold); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .bcm-adu-page .diff-card h3 { font-size: 16px; margin-bottom: 6px; }
+  .bcm-adu-page .diff-card p { font-size: 14px; color: var(--bcm-muted); line-height: 1.65; margin: 0; }
+
+  /* ==================== COMPARISON ==================== */
+  .bcm-adu-page .compare-grid { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .bcm-adu-page .compare-card { background: white; border-radius: 14px; padding: 36px; box-shadow: 0 2px 16px rgba(26,26,26,0.05); }
+  .bcm-adu-page .compare-card h3 { font-size: 1.3rem; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+  .bcm-adu-page .compare-card h3 .cc-icon { width: 32px; height: 32px; background: rgba(200,162,77,0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .bcm-adu-page .compare-card h3 .cc-icon svg { width: 18px; height: 18px; stroke: var(--bcm-gold); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .bcm-adu-page .compare-sub { font-size: 14px; color: var(--bcm-muted); margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--bcm-border); }
+  .bcm-adu-page .compare-list { list-style: none; padding: 0; margin: 0; }
+  .bcm-adu-page .compare-list li { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--bcm-gray); font-size: 14px; color: var(--bcm-body-text); line-height: 1.5; }
+  .bcm-adu-page .compare-list li:last-child { border-bottom: none; }
+  .bcm-adu-page .compare-list li::before { content: "✓"; color: var(--bcm-gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  /* ==================== FOUNDER ==================== */
+  .bcm-adu-page .founder-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: center; }
+  .bcm-adu-page .founder-img img { width: 100%; border-radius: 14px; display: block; }
+  .bcm-adu-page .founder-content blockquote { font-size: 1rem; line-height: 1.8; color: var(--bcm-body-text); margin: 0 0 28px; padding: 0; border: none; }
+  .bcm-adu-page .founder-content blockquote p { margin-bottom: 16px; }
+  .bcm-adu-page .founder-name { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--bcm-charcoal); }
+  .bcm-adu-page .founder-title { font-size: 13px; color: var(--bcm-muted); }
+
+  /* ==================== PRICING ==================== */
+  .bcm-adu-page .pricing-cards { max-width: 960px; margin: 0 auto 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .bcm-adu-page .pricing-card {
+    background: white; border-radius: 14px; padding: 36px 32px;
+    box-shadow: 0 4px 20px rgba(26,26,26,0.05); border-top: 3px solid var(--bcm-gold);
+  }
+  .bcm-adu-page .pricing-card h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.4rem; margin-bottom: 6px; color: var(--bcm-charcoal); }
+  .bcm-adu-page .pricing-card .pc-sub { font-size: 14px; color: var(--bcm-muted); margin-bottom: 20px; }
+  .bcm-adu-page .pricing-card .pc-price { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--bcm-charcoal); line-height: 1; margin-bottom: 4px; }
+  .bcm-adu-page .pricing-card .pc-from { font-size: 13px; color: var(--bcm-muted); margin-bottom: 16px; }
+  .bcm-adu-page .pricing-card .pc-alt { font-size: 14px; color: var(--bcm-muted); margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--bcm-border); }
+  .bcm-adu-page .pricing-inc { list-style: none; padding: 0; margin: 0; }
+  .bcm-adu-page .pricing-inc li { display: flex; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--bcm-body-text); line-height: 1.5; }
+  .bcm-adu-page .pricing-inc li::before { content: "✓"; color: var(--bcm-gold); font-weight: 700; flex-shrink: 0; }
+  .bcm-adu-page .pricing-note { max-width: 700px; margin: 0 auto; text-align: center; font-size: 14px; color: var(--bcm-muted); line-height: 1.7; font-style: italic; }
+
+  /* ==================== FAQ (CSS-only) ==================== */
+  .bcm-adu-page .faq-section { max-width: 900px; margin: 0 auto; padding: 72px 24px; }
+  .bcm-adu-page .faq-section h2 { text-align: center; margin-bottom: 32px; }
+  .bcm-adu-page .faq-item { border-bottom: 1px solid var(--bcm-gray); }
+  .bcm-adu-page .faq-toggle { display: none; }
+  .bcm-adu-page .faq-label {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 17px;
+    color: var(--bcm-charcoal); cursor: pointer; display: flex;
+    justify-content: space-between; align-items: center; gap: 16px;
+    padding: 20px 0; -webkit-tap-highlight-color: transparent;
+  }
+  .bcm-adu-page .faq-label::after { content: '+'; font-size: 22px; color: var(--bcm-gold); flex-shrink: 0; transition: transform 0.3s; font-weight: 400; line-height: 1; }
+  .bcm-adu-page .faq-toggle:checked + .faq-label::after { transform: rotate(45deg); }
+  .bcm-adu-page .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; color: var(--bcm-muted); line-height: 1.75; font-size: 15px; }
+  .bcm-adu-page .faq-toggle:checked ~ .faq-answer { max-height: 600px; padding-bottom: 20px; }
+  .bcm-adu-page .faq-answer p { color: var(--bcm-muted); }
+
+  /* ==================== FINAL CTA ==================== */
+  .bcm-adu-page .final-cta {
+    background: linear-gradient(170deg, var(--bcm-charcoal) 0%, var(--bcm-black) 100%);
+    padding: 80px 24px; text-align: center; color: var(--bcm-off-white); position: relative; overflow: hidden;
+  }
+  .bcm-adu-page .final-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,162,77,0.07) 0%, transparent 70%); pointer-events: none; }
+  .bcm-adu-page .final-cta h2 { color: var(--bcm-off-white); font-size: 2.4rem; margin-bottom: 16px; position: relative; }
+  .bcm-adu-page .final-cta p { color: rgba(250,249,247,0.8); max-width: 600px; margin: 0 auto 32px; font-size: 1.05rem; line-height: 1.7; position: relative; }
+  .bcm-adu-page .final-cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; margin-bottom: 28px; }
+  .bcm-adu-page .contact-info { font-size: 13px; color: rgba(250,249,247,0.5); margin: 0; position: relative; }
+  .bcm-adu-page .contact-info a { color: rgba(250,249,247,0.6); text-decoration: none; font-weight: 400; }
+  .bcm-adu-page .contact-info a:hover { color: var(--bcm-gold); }
+
+  /* ==================== DISCLAIMER ==================== */
+  .bcm-adu-page .disclaimer { background: var(--bcm-gray); padding: 28px 24px; text-align: center; }
+  .bcm-adu-page .disclaimer p { font-size: 12px; color: var(--bcm-muted); max-width: 800px; margin: 0 auto; line-height: 1.7; }
+
+  /* ==================== RESPONSIVE ==================== */
+  @media (max-width: 1024px) {
+    .bcm-adu-page .hero { grid-template-columns: 1fr; min-height: auto; }
+    .bcm-adu-page .hero-image { min-height: 50vh; }
+    .bcm-adu-page .hero-image::after { background: linear-gradient(0deg, transparent 50%, var(--bcm-black) 100%); }
+    .bcm-adu-page .hero-content { padding: 48px 32px 56px; }
+    .bcm-adu-page .hero h1 { font-size: 2.6rem; }
+    .bcm-adu-page .use-grid { grid-template-columns: repeat(2, 1fr); }
+    .bcm-adu-page .model-header { grid-template-columns: 1fr; }
+    .bcm-adu-page .compare-grid { grid-template-columns: 1fr; }
+    .bcm-adu-page .founder-grid { grid-template-columns: 1fr; gap: 40px; }
+    .bcm-adu-page .pricing-cards { grid-template-columns: 1fr; }
+    .bcm-adu-page .build-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .bcm-adu-page .hero h1 { font-size: 2rem; }
+    .bcm-adu-page .hero-content { padding: 36px 20px 48px; }
+    .bcm-adu-page .hero-stats { flex-wrap: wrap; gap: 20px; }
+    .bcm-adu-page h2 { font-size: 1.7rem; }
+    .bcm-adu-page .section { padding: 56px 20px; }
+    .bcm-adu-page .use-grid { grid-template-columns: 1fr; }
+    .bcm-adu-page .diff-grid { grid-template-columns: 1fr; }
+    .bcm-adu-page .model-info { padding: 28px 24px; }
+    .bcm-adu-page .model-specs { grid-template-columns: 1fr; }
+    .bcm-adu-page .trust-bar-inner { gap: 16px; }
+    .bcm-adu-page .trust-item { font-size: 11px; }
+    .bcm-adu-page .final-cta h2 { font-size: 1.8rem; }
+    .bcm-adu-page .btn-secondary { color: var(--bcm-off-white); }
+    .bcm-adu-page .build-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="bcm-adu-page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Accessory Dwelling Units</span>
+      <h1>ADUs Built for <span>Real Life</span></h1>
+      <p class="hero-body">Custom accessory dwelling units for the North Shore, Eastern Massachusetts, New Hampshire, and Maine. Professional project management during construction. Lifetime support after.</p>
+      <div class="hero-ctas">
+        <a href="https://bradfordcm.com/contact/" class="btn-primary">Schedule Your Free Consultation</a>
+        <a href="https://adu.bradfordcm.com/adu-lookbook" class="btn-secondary">Download Free Lookbook</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">From $217K</div>
+          <div class="hero-stat-label">Turnkey Starting Price</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">Lifetime</div>
+          <div class="hero-stat-label">Support via BHS</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://bradfordcm.com/wp-content/uploads/2025/12/ELM-OHG-Moms-Place-Next-Door.webp" alt="" width="1200" height="800">
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <span class="trust-item"><span class="ti">&#9733;</span> Licensed and Insured - MA HIC #201908</span>
+      <span class="trust-item"><span class="ti">&#9733;</span> North Shore MA, NH, and ME</span>
+      <span class="trust-item"><span class="ti">&#9733;</span> Transparent Pricing</span>
+      <span class="trust-item"><span class="ti">&#9733;</span> Lifetime Support via BHS</span>
+    </div>
+  </div>
+
+  <!-- USE CASES -->
+  <section class="section bg-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Built for Your Life</span>
+        <h2>One ADU, Endless Possibilities</h2>
+        <p class="sub">Whether you are creating space for family, generating income, or building your dream workspace, Bradford ADUs adapt to your vision.</p>
+      </div>
+      <div class="use-grid">
+        <div class="use-card">
+          <div class="use-card-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/ELM-OHG-Moms-Place-Next-Door.webp" alt="" width="500" height="312" loading="lazy" decoding="async"></div>
+          <div class="use-card-body"><h3>Keep Family Close</h3><p>A private home for aging parents - close enough to help, private enough to thrive. An alternative to assisted living that keeps families together.</p></div>
+        </div>
+        <div class="use-card">
+          <div class="use-card-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/Maple-The-Guest-Suite.webp" alt="" width="500" height="312" loading="lazy" decoding="async"></div>
+          <div class="use-card-body"><h3>Generate Rental Income</h3><p>A fully-equipped guest suite that pays for itself through short or long-term rental. Separate entrance and utilities make hosting simple.</p></div>
+        </div>
+        <div class="use-card">
+          <div class="use-card-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/Elm-FLT-Work-From-Home.webp" alt="" width="500" height="312" loading="lazy" decoding="async"></div>
+          <div class="use-card-body"><h3>Separate Work From Life</h3><p>A dedicated workspace steps from your door - no commute, no distractions. Perfect for remote professionals, artists, or creative studios.</p></div>
+        </div>
+        <div class="use-card">
+          <div class="use-card-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/ELM-OHG-mountains.webp" alt="" width="500" height="312" loading="lazy" decoding="async"></div>
+          <div class="use-card-body"><h3>Expand Your Property</h3><p>Add living space to your vacation home or lake house in New Hampshire. Double your hosting capacity without doubling your footprint.</p></div>
+        </div>
+        <div class="use-card">
+          <div class="use-card-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/CTG-Connected-Living-render.webp" alt="" width="500" height="312" loading="lazy" decoding="async"></div>
+          <div class="use-card-body"><h3>Multi-Generational Living</h3><p>Adult children, extended family, or boomerang kids - everyone gets their own space while staying connected. Together, but independent.</p></div>
+        </div>
+        <div class="use-card">
+          <div class="use-card-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/Elm-DBL-Winter-Ready.webp" alt="" width="500" height="312" loading="lazy" decoding="async"></div>
+          <div class="use-card-body"><h3>Guest Quarters</h3><p>A comfortable retreat for visitors that beats the pull-out couch. Give guests their own private space while keeping your home to yourself.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKBOOK CTA -->
+  <div class="inline-cta">
+    <p>Our free ADU Lookbook includes detailed floor plans, exterior styles, and transparent pricing for every configuration.</p>
+    <a href="https://adu.bradfordcm.com/adu-lookbook" class="btn-primary">Download Free Lookbook</a>
+  </div>
+
+  <!-- MODELS -->
+  <section class="section" id="models">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our ADU Models</span>
+        <h2>Starting Points for Your Custom Design</h2>
+        <p class="sub">Two proven designs that can be tailored to your exact needs. Every feature, finish, and layout can be customized.</p>
+      </div>
+
+      <!-- Elm -->
+      <div class="model-card">
+        <div class="model-header">
+          <div class="model-gallery">
+            <div class="model-main-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/10/DBL-Rendering-3.webp" alt="" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="model-thumbs">
+              <div class="model-thumb"><img src="https://bradfordcm.com/wp-content/uploads/2025/10/DBL-Rendering-3.webp" alt="" width="200" height="150" loading="lazy" decoding="async"></div>
+              <div class="model-thumb"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/ELM-DBL-Interior-Open-Living-Space-scaled.webp" alt="" width="200" height="150" loading="lazy" decoding="async"></div>
+              <div class="model-thumb"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/Elm-DBL-Accessible-Bathroom-render-scaled.webp" alt="" width="200" height="150" loading="lazy" decoding="async"></div>
+            </div>
+          </div>
+          <div class="model-info">
+            <span class="model-badge">Most Popular</span>
+            <h3>The Elm</h3>
+            <p class="model-tagline">Our most versatile single-story design, available in four exterior styles</p>
+            <div class="model-specs">
+              <div class="model-spec"><p class="model-spec-label">Square Footage</p><p class="model-spec-value">514 - 600 SF</p></div>
+              <div class="model-spec"><p class="model-spec-label">Bedrooms</p><p class="model-spec-value">1 Bedroom</p></div>
+              <div class="model-spec"><p class="model-spec-label">Bathrooms</p><p class="model-spec-value">1 Full Bath</p></div>
+              <div class="model-spec"><p class="model-spec-label">Footprint</p><p class="model-spec-value">32' x 19'</p></div>
+            </div>
+            <div class="model-price">
+              <p class="model-price-label">Wood-Framed from</p>
+              <p class="model-price-value">$217,000</p>
+            </div>
+            <p class="model-note">ICF option from $252,000. Turnkey price includes permits, electrical, plumbing, and professional finishes.</p>
+          </div>
+        </div>
+        <div class="model-floorplans">
+          <h4>Floor Plans</h4>
+          <div class="fp-grid">
+            <div class="fp-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/10/Elm-floor-plan-1-sloped-roof.webp" alt="" width="400" height="400" loading="lazy" decoding="async"><p>Main Level - Open concept living, kitchen, bedroom, and full bath</p></div>
+            <div class="fp-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/10/Elm-Model-2nd-floor-floorplan.webp" alt="" width="400" height="400" loading="lazy" decoding="async"><p>Optional Loft - Additional 150+ SF for storage, office, or guests</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maple -->
+      <div class="model-card">
+        <div class="model-header">
+          <div class="model-gallery">
+            <div class="model-main-img"><img src="https://bradfordcm.com/wp-content/uploads/2025/10/Maple-model-render.webp" alt="" width="800" height="500" loading="lazy" decoding="async"></div>
+            <div class="model-thumbs">
+              <div class="model-thumb"><img src="https://bradfordcm.com/wp-content/uploads/2025/10/Maple-model-render.webp" alt="" width="200" height="150" loading="lazy" decoding="async"></div>
+              <div class="model-thumb"><img src="https://bradfordcm.com/wp-content/uploads/2025/12/Maple-The-Guest-Suite.webp" alt="" width="200" height="150" loading="lazy" decoding="async"></div>
+            </div>
+          </div>
+          <div class="model-info">
+            <span class="model-badge">Maximum Space</span>
+            <h3>The Maple</h3>
+            <p class="model-tagline">Two-story design with rooftop deck, ideal for smaller lots</p>
+            <div class="model-specs">
+              <div class="model-spec"><p class="model-spec-label">Square Footage</p><p class="model-spec-value">726 SF Total</p></div>
+              <div class="model-spec"><p class="model-spec-label">Bedrooms</p><p class="model-spec-value">1 BR + Flex Loft</p></div>
+              <div class="model-spec"><p class="model-spec-label">Bathrooms</p><p class="model-spec-value">1 Full Bath</p></div>
+              <div class="model-spec"><p class="model-spec-label">Special Feature</p><p class="model-spec-value">Rooftop Deck</p></div>
+            </div>
+            <div class="model-price">
+              <p class="model-price-label">Wood-Framed from</p>
+              <p class="model-price-value">$280,000</p>
+            </div>
+            <p class="model-note">ICF option from $320,000. Turnkey price includes permits, electrical, plumbing, and professional finishes.</p>
+          </div>
+        </div>
+        <div class="model-floorplans">
+          <h4>Floor Plans</h4>
+          <div class="fp-grid">
+            <div class="fp-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/10/Maple-1st-floor-floorplan.webp" alt="" width="400" height="400" loading="lazy" decoding="async"><p>First Floor - Living room, full kitchen, bedroom, and full bath</p></div>
+            <div class="fp-item"><img src="https://bradfordcm.com/wp-content/uploads/2025/10/Maple-2nd-floor-floorplan.webp" alt="" width="400" height="400" loading="lazy" decoding="async"><p>Second Floor - Flex space with private rooftop deck access</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEHIND THE BUILD - ICF PHOTOS -->
+  <section class="section bg-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Behind the Build</span>
+        <h2>How We Build Your ADU</h2>
+        <p class="sub">Real photos from an active Bradford ICF build. Our insulated concrete form construction creates an energy-efficient, structurally superior ADU - typically completed in about one month from groundbreaking.</p>
+      </div>
+      <div class="build-grid">
+        <div class="build-photo"><img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8b6e9512d1c52ae3a29.jpg" alt="" width="500" height="375" loading="lazy" decoding="async"><div class="build-cap">Aerial view - foundation and ICF wall layout</div></div>
+        <div class="build-photo"><img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8b684bc3817527c66bf.jpg" alt="" width="500" height="375" loading="lazy" decoding="async"><div class="build-cap">Setting ICF blocks into position</div></div>
+        <div class="build-photo"><img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8b65dfd508cb0c6f269.jpg" alt="" width="500" height="375" loading="lazy" decoding="async"><div class="build-cap">Measuring for rebar placement</div></div>
+        <div class="build-photo"><img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8b6a8a1309ad96bc914.jpg" alt="" width="500" height="375" loading="lazy" decoding="async"><div class="build-cap">Crew lifting ICF block into place</div></div>
+        <div class="build-photo"><img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8ac2837e8651e2879d1.jpg" alt="" width="500" height="375" loading="lazy" decoding="async"><div class="build-cap">Bracing system ready for concrete pour</div></div>
+        <div class="build-photo"><img src="https://assets.cdn.filesafe.space/disR6gkKnQRDyT0yAbh1/media/699db8ac2d8479594861edf9.jpg" alt="" width="500" height="375" loading="lazy" decoding="async"><div class="build-cap">Concrete being pumped into wall cavity</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BRADFORD DIFFERENCE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The Bradford Difference</span>
+        <h2>Your Partner Before, During, and After</h2>
+        <p class="sub">We eliminate the stress and uncertainty from construction - and we are still here when it is done.</p>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-card">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div><h3>Transparent Pricing</h3><p>Every cost is documented before it happens. You see exactly what you are paying for - no hidden fees, no surprise invoices at the end.</p></div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+          <div><h3>Daily Photo Updates</h3><p>See exactly what happened on your job site every single day. No more wondering, no more chasing down your builder for answers.</p></div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div><h3>Fast ICF Build Time</h3><p>Our ICF construction system allows us to build your ADU in about one month from groundbreaking. See progress with daily photo documentation.</p></div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div><h3>True Turnkey</h3><p>Move-in ready with professional finishes, fixtures, and appliances. We coordinate permits and inspections so you do not have to chase paperwork.</p></div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div><h3>One Accountable Team</h3><p>From <a href="https://bradfordcm.com/design-build/">design through build</a>, one team manages every detail. No handoffs, no miscommunication between separate contractors.</p></div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><h3>Bradford For Life</h3><p>Through Bradford Home Services, you have a permanent support team for maintenance, repairs, and warranty work - for as long as you own your home.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON: ADU vs ADDITION -->
+  <section class="section bg-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Making the Right Choice</span>
+        <h2>Is an ADU Right for You?</h2>
+        <p class="sub">ADUs are not for every situation. Here is how to know if one makes sense for your property and goals.</p>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h3><span class="cc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Accessory Dwelling Unit</h3>
+          <p class="compare-sub">Separate, self-contained living space</p>
+          <ul class="compare-list">
+            <li>Best for creating independent living space with rental potential</li>
+            <li>Fully separate entrance, kitchen, bathroom, and often utilities</li>
+            <li>Often faster permitting under new MA and NH ADU laws</li>
+            <li>Adds a flexible income-producing asset to your property</li>
+            <li>Maximum privacy for occupants and homeowners</li>
+            <li>ICF build time: approximately 1 month once permitted</li>
+          </ul>
+        </div>
+        <div class="compare-card">
+          <h3><span class="cc-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span> Home Addition</h3>
+          <p class="compare-sub">Expanding your existing home</p>
+          <ul class="compare-list">
+            <li>Best for adding bedrooms, living space, or expanding your kitchen</li>
+            <li>Integrates with your existing home's systems and flow</li>
+            <li>Standard building permit process through your municipality</li>
+            <li>Increases your primary home's total square footage and value</li>
+            <li>Shared living for guests or family who want to be part of the household</li>
+            <li>Timeline varies based on scope and complexity</li>
+          </ul>
+          <p style="margin-top: 16px; font-size: 14px;">Learn about our <a href="https://bradfordcm.com/home-additions/">addition services</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="section">
+    <div class="container">
+      <div class="founder-grid">
+        <div class="founder-img">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/09/Rick-Family-Photo.webp" alt="" width="500" height="500" loading="lazy" decoding="async">
+        </div>
+        <div class="founder-content">
+          <span class="section-label">A Message From Our Founder</span>
+          <h2>Why I Started Bradford's ADU Program</h2>
+          <blockquote>
+            <p>If you are reading this, you are thinking about adding something meaningful to your property - whether that is a place for aging parents to stay close, a guest suite that earns its keep, a workspace that is truly separate from home, or simply more flexibility for whatever life brings next.</p>
+            <p>I started Bradford's ADU program because I saw too many families facing impossible choices - and too many homeowners getting burned by contractors who disappeared after the deposit cleared.</p>
+            <p>We do things differently. Every project gets daily documentation and professional project management. And through Bradford Home Services, we are still here for you years after the last nail is driven.</p>
+          </blockquote>
+          <p class="founder-name">Rick White</p>
+          <p class="founder-title">Founder, Bradford Construction Management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section bg-surface" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Transparent Pricing</span>
+        <h2>Your Investment</h2>
+        <p class="sub">Clear pricing with no hidden costs. Every Bradford ADU is turnkey - what you see is what you get.</p>
+      </div>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h4>The Elm</h4>
+          <p class="pc-sub">Single-story, 514-600 SF</p>
+          <p class="pc-from">Wood-Framed from</p>
+          <p class="pc-price">$217,000</p>
+          <p class="pc-alt">ICF Option from $252,000</p>
+          <ul class="pricing-inc">
+            <li>Complete architectural plans and engineering</li>
+            <li>Permit coordination and management</li>
+            <li>Site preparation and foundation</li>
+            <li>Full construction with professional finishes</li>
+            <li>Electrical, plumbing, and HVAC systems</li>
+            <li>Kitchen appliances and fixtures</li>
+            <li>1-year warranty plus BHS support</li>
+          </ul>
+        </div>
+        <div class="pricing-card">
+          <h4>The Maple</h4>
+          <p class="pc-sub">Two-story with roof deck, 726 SF</p>
+          <p class="pc-from">Wood-Framed from</p>
+          <p class="pc-price">$280,000</p>
+          <p class="pc-alt">ICF Option from $320,000</p>
+          <ul class="pricing-inc">
+            <li>Complete architectural plans and engineering</li>
+            <li>Permit coordination and management</li>
+            <li>Site preparation and foundation</li>
+            <li>Full two-story construction with rooftop deck</li>
+            <li>Electrical, plumbing, and HVAC systems</li>
+            <li>Kitchen appliances and fixtures</li>
+            <li>1-year warranty plus BHS support</li>
+          </ul>
+        </div>
+      </div>
+      <p class="pricing-note">Every property is unique. Site-specific costs (utility connections, permitting fees, septic) are quoted separately after our initial site assessment so you have a complete picture before we begin. <a href="https://bradfordcm.com/finance-your-dreams/">Financing options</a> may be available depending on your situation.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <h2>ADU Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="adu-faq-1">
+      <label class="faq-label" for="adu-faq-1">How much does an ADU cost in Massachusetts?</label>
+      <div class="faq-answer"><p>Bradford ADUs start from $217,000 for our single-story Elm model (514-600 SF, wood-framed) and from $280,000 for our two-story Maple (726 SF, wood-framed). ICF construction is available for enhanced durability and energy efficiency. Final pricing depends on site conditions, customizations, and finishes. These are turnkey prices including permits, electrical, plumbing, and professional finishes.</p></div>
+    </div>
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="adu-faq-2">
+      <label class="faq-label" for="adu-faq-2">How long does it take to build an ADU?</label>
+      <div class="faq-answer"><p>Once permits are approved and site preparation is complete, ICF construction typically takes about one month. Wood-framed construction may take longer depending on project scope. The full process from initial consultation to move-in ready is usually 4-6 months, with permitting being the most variable factor.</p></div>
+    </div>
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="adu-faq-3">
+      <label class="faq-label" for="adu-faq-3">Do I need a permit to build an ADU?</label>
+      <div class="faq-answer"><p>Yes, ADUs require building permits in Massachusetts, New Hampshire, and Maine. Recent state laws have made ADU permitting easier in most communities. Bradford handles all permitting as part of our turnkey service.</p></div>
+    </div>
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="adu-faq-4">
+      <label class="faq-label" for="adu-faq-4">Can I rent out my ADU?</label>
+      <div class="faq-answer"><p>In most communities, yes. ADUs can be used for long-term rentals, and some towns allow short-term rentals. Rental regulations vary by municipality. Bradford ADUs are designed with separate entrances and utilities, making them ideal for rental use.</p></div>
+    </div>
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="adu-faq-5">
+      <label class="faq-label" for="adu-faq-5">What is the difference between an ADU and a home addition?</label>
+      <div class="faq-answer"><p>An ADU is a separate, self-contained living unit with its own entrance, kitchen, and bathroom. A <a href="https://bradfordcm.com/home-additions/">home addition</a> expands your existing house. ADUs offer more privacy and rental potential, while additions increase your primary home's square footage. We build both.</p></div>
+    </div>
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="adu-faq-6">
+      <label class="faq-label" for="adu-faq-6">Can Bradford customize the ADU for my property?</label>
+      <div class="faq-answer"><p>Absolutely. Our models are starting points. Every Bradford ADU is customized to fit your property, needs, and preferences. We offer different configurations (detached, connected, above garage, attached), multiple exterior styles, layout modifications, and finish selections.</p></div>
+    </div>
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="adu-faq-7">
+      <label class="faq-label" for="adu-faq-7">Does Bradford build ADUs in New Hampshire?</label>
+      <div class="faq-answer"><p>Yes. Bradford Construction is licensed and insured in Massachusetts and New Hampshire. We work throughout the North Shore, Merrimack Valley, and <a href="https://bradfordcm.com/exeter-nh/">Seacoast NH</a> regions.</p></div>
+    </div>
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="adu-faq-8">
+      <label class="faq-label" for="adu-faq-8">What happens after my ADU is built?</label>
+      <div class="faq-answer"><p>Unlike most contractors, we do not disappear. Through Bradford Home Services (BHS), you have a permanent team for maintenance, repairs, and warranty work for as long as you own your home. This "Bradford For Life" approach means you are never left wondering who to call.</p></div>
+    </div>
+  </section>
+
+  <!-- RELATED SERVICES -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container-narrow" style="text-align: center;">
+      <span class="section-label" style="justify-content: center;">Related Services</span>
+      <h2>Explore More From Bradford Construction</h2>
+      <p style="margin-top: 12px; font-size: 15px;">
+        <a href="https://bradfordcm.com/custom-homes/" style="margin: 0 10px 8px; display: inline-block;">Custom Homes</a> &middot;
+        <a href="https://bradfordcm.com/home-additions/" style="margin: 0 10px 8px; display: inline-block;">Home Additions</a> &middot;
+        <a href="https://bradfordcm.com/home-renovations/" style="margin: 0 10px 8px; display: inline-block;">Home Renovations</a> &middot;
+        <a href="https://bradfordcm.com/design-build/" style="margin: 0 10px 8px; display: inline-block;">Design-Build Services</a> &middot;
+        <a href="https://bradfordcm.com/projects/" style="margin: 0 10px 8px; display: inline-block;">View Projects</a> &middot;
+        <a href="https://bradfordcm.com/finance-your-dreams/" style="margin: 0 10px 8px; display: inline-block;">Finance Your Project</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <h2>Ready to Explore Your Options?</h2>
+    <p>The best next step is a free consultation to discuss your property, your goals, and whether an ADU makes sense for your situation. Or download our complete lookbook with detailed floor plans and pricing.</p>
+    <div class="final-cta-actions">
+      <a href="https://bradfordcm.com/contact/" class="btn-primary">Schedule Your Free Consultation</a>
+      <a href="https://adu.bradfordcm.com/adu-lookbook" class="btn-secondary">Download Free Lookbook</a>
+    </div>
+    <p class="contact-info">Bradford Construction Management &middot; 145 S Main St, Haverhill, MA 01835 &middot; <a href="tel:9789459771">978-945-9771</a></p>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="disclaimer">
+    <p>Bradford ADUs are residential structures intended for independent living. They do not replace professional medical, nursing, or assisted-living services. If medical care is a consideration, please consult with healthcare professionals about your specific needs. ADUs can serve aging parents, adult children, guests, home offices, or generate rental income depending on local zoning regulations.</p>
+  </section>
+
+</div>
