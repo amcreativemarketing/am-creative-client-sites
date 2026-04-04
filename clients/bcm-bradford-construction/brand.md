@@ -507,8 +507,15 @@ BCM uses "transparent pricing" as the umbrella term across all marketing. Pricin
 | Field | Value |
 | --- | --- |
 | **Phone** | 978-945-9771 |
-| **Address** | 145 S Main St, Haverhill, MA 01835 |
 | **Website** | https://bradfordcm.com |
+
+**Note:** BCM is relocating from Haverhill, MA to Plaistow, NH. Do not hardcode the physical address into page HTML. The address is managed in the WordPress theme footer and Google Business Profile. If a page naturally needs a location reference (e.g., a location service page), use the city/state in body copy without the street address.
+
+### NAP Placement Rules
+
+- **Phone:** Include in final CTA sections as a click-to-call link. Always use 978-945-9771.
+- **Address:** Do not include on service pages, landing pages, or campaign pages. The footer handles this site-wide. Only include on location-specific pages (e.g., Haverhill MA hub) where the physical presence is contextually relevant, and even then use city/state only until the new address is confirmed.
+- **Business name:** "Bradford Construction Management" in CTA footers is fine. Keep it simple - no address appended.
 
 ### Standard Copy for Credentials
 
