@@ -1,876 +1,1460 @@
+<!-- PROJECTS HUB - /projects/
+     Updated: April 2026
+     Mini Spotlights: Essex ADU, Wakefield Custom Home
+     Social: Instagram @bradfordconstructionllc | Facebook /bradfordconstructionLLC
+-->
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 :root {
-  --bcm-black: #1A1A1A;
-  --bcm-gold: #C8A24D;
-  --bcm-charcoal: #1C2331;
-  --bcm-white: #FAF9F7;
-  --bcm-maritime: #0F2A45;
-  --bcm-sage: #7A9B7E;
-  --bcm-gray: #F1F1F1;
-  --bcm-gold-hover: #B8923F;
-  --bcm-gold-light: #D4B46A;
-  --bcm-gold-soft: rgba(200, 162, 77, 0.07);
-  --bcm-gold-border: rgba(200, 162, 77, 0.18);
-  --bcm-gold-glow: rgba(200, 162, 77, 0.12);
-  --bcm-text-primary: #1C2331;
-  --bcm-text-secondary: #3A4255;
-  --bcm-text-tertiary: #5C6478;
-  --bcm-text-light: rgba(250, 249, 247, 0.88);
-  --bcm-text-muted: rgba(250, 249, 247, 0.62);
-  --bcm-surface: #F7F7F5;
-  --bcm-surface-raised: #FFFFFF;
-  --bcm-border: #E5E5E2;
-  --bcm-border-subtle: rgba(28, 35, 49, 0.06);
-  --bcm-shadow-xs: 0 1px 2px rgba(28, 35, 49, 0.04);
-  --bcm-shadow-sm: 0 2px 8px rgba(28, 35, 49, 0.05);
-  --bcm-shadow-md: 0 4px 20px rgba(28, 35, 49, 0.07);
-  --bcm-shadow-lg: 0 8px 40px rgba(28, 35, 49, 0.09);
-  --bcm-shadow-gold: 0 4px 20px rgba(200, 162, 77, 0.2);
-  --bcm-radius: 6px;
-  --bcm-radius-md: 10px;
-  --bcm-radius-lg: 14px;
-  --bcm-font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
-  --bcm-font-body: 'Inter', -apple-system, sans-serif;
-  --bcm-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --bcm-deep:#14181f;
+  --bcm-charcoal:#1c2129;
+  --bcm-slate:#2a3140;
+  --bcm-warm-gold:#c9a96e;
+  --bcm-gold-light:#dbc291;
+  --bcm-gold-soft:rgba(201,169,110,0.08);
+  --bcm-gold-border:rgba(201,169,110,0.20);
+  --bcm-text-primary:#1f2328;
+  --bcm-text-secondary:#3d4655;
+  --bcm-text-tertiary:#5a6475;
+  --bcm-border:#e4e7ed;
+  --bcm-surface:#f5f7fa;
+  --bcm-white:#ffffff;
+  --bcm-shadow-sm:0 1px 3px rgba(0,0,0,0.05);
+  --bcm-shadow-md:0 4px 20px rgba(0,0,0,0.07);
+  --bcm-shadow-lg:0 10px 40px rgba(0,0,0,0.10);
+  --bcm-radius:8px;
+  --bcm-radius-lg:14px;
+  --bcm-radius-xl:20px;
 }
 
+/* ============================================
+   RESET & BASE
+   ============================================ */
 .bcm-projects {
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  position: relative;
-  font-family: var(--bcm-font-body);
-  color: var(--bcm-text-primary);
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-.bcm-projects *, .bcm-projects *::before, .bcm-projects *::after {
-  box-sizing: border-box;
-}
-
-.bcm-projects h1, .bcm-projects h2, .bcm-projects h3 {
-  font-family: var(--bcm-font-display);
-  font-weight: 600;
-  line-height: 1.18;
-  margin: 0 0 16px;
-  letter-spacing: -0.02em;
-}
-
-.bcm-projects h1 {
-  font-size: 2rem;
-}
-
-.bcm-projects h2 {
-  font-size: 1.6rem;
-}
-
-.bcm-projects h3 {
-  font-size: 1.1rem;
-  letter-spacing: -0.01em;
-}
-
-.bcm-projects p {
-  margin: 0 0 16px;
-}
-
-.bcm-projects a:not([class*="bcm-projects-cta"]):not(.bcm-projects-card-link):not(.bcm-projects-social-link) {
-  color: var(--bcm-gold);
-  text-decoration-color: rgba(201, 169, 110, 0.35);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  transition: color 0.2s var(--bcm-ease);
-}
-
-.bcm-projects a:not([class*="bcm-projects-cta"]):not(.bcm-projects-card-link):not(.bcm-projects-social-link):hover {
-  color: var(--bcm-gold-hover);
-}
-
-.bcm-projects-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.bcm-projects-hero {
-  background: var(--bcm-black);
-  padding: 80px 24px 72px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.bcm-projects-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(200, 162, 77, 0.05) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.bcm-projects-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.bcm-projects-hero h1 {
-  color: var(--bcm-white);
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
-.bcm-projects-hero-sub {
-  color: rgba(250, 249, 247, 0.78);
-  font-size: 1.05rem;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
-
-.bcm-projects-stat-bar {
-  background: var(--bcm-charcoal);
-  border-bottom: 1px solid rgba(200, 162, 77, 0.12);
-  padding: 20px 24px;
-  text-align: center;
-}
-
-.bcm-projects-stat-bar p {
-  margin: 0;
-  color: rgba(250, 249, 247, 0.55);
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.bcm-projects-stat-bar strong {
-  color: var(--bcm-gold);
-  font-weight: 700;
-}
-
-.bcm-projects-section {
-  padding: 72px 24px;
-}
-
-.bcm-projects-section--tinted {
-  background: var(--bcm-surface);
-}
-
-.bcm-projects-section--dark {
-  background: var(--bcm-black);
-}
-
-.bcm-projects-section-header {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 48px;
-}
-
-.bcm-projects-gold-rule {
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: var(--bcm-gold);
-  margin: 0 auto 20px;
-  border-radius: 1px;
-}
-
-.bcm-projects-section--dark h2 {
-  color: var(--bcm-white);
-}
-
-.bcm-projects-section--dark p {
-  color: rgba(250, 249, 247, 0.8);
-}
-
-.bcm-projects-lead {
-  font-size: 1.04rem;
-  color: var(--bcm-text-secondary);
-  line-height: 1.7;
-}
-
-.bcm-projects-cta--gold {
-  display: inline-flex;
-  align-items: center;
-  background: var(--bcm-gold);
-  color: var(--bcm-black) !important;
-  font-family: var(--bcm-font-body);
-  font-weight: 600;
-  font-size: 0.92rem;
-  padding: 15px 34px;
-  border-radius: var(--bcm-radius);
-  text-decoration: none !important;
-  transition: all 0.25s var(--bcm-ease);
-  min-height: 50px;
-  border: none;
-  cursor: pointer;
-}
-
-.bcm-projects-cta--gold:hover {
-  background: var(--bcm-gold-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--bcm-shadow-gold);
-  color: var(--bcm-black) !important;
-}
-
-.bcm-projects-cta--ghost {
-  display: inline-flex;
-  align-items: center;
-  background: rgba(250, 249, 247, 0.06);
-  border: 1px solid rgba(250, 249, 247, 0.18);
-  color: rgba(250, 249, 247, 0.9) !important;
-  font-family: var(--bcm-font-body);
-  font-weight: 500;
-  font-size: 0.92rem;
-  padding: 14px 30px;
-  border-radius: var(--bcm-radius);
-  text-decoration: none !important;
-  transition: all 0.25s var(--bcm-ease);
-  min-height: 50px;
-}
-
-.bcm-projects-cta--ghost:hover {
-  background: rgba(250, 249, 247, 0.12);
-  border-color: rgba(250, 249, 247, 0.3);
-  color: var(--bcm-white) !important;
-}
-
-.bcm-projects-cta--dark {
-  display: inline-flex;
-  align-items: center;
-  background: var(--bcm-charcoal);
-  color: var(--bcm-white) !important;
-  font-family: var(--bcm-font-body);
-  font-weight: 600;
-  font-size: 0.92rem;
-  padding: 15px 34px;
-  border-radius: var(--bcm-radius);
-  text-decoration: none !important;
-  transition: all 0.25s var(--bcm-ease);
-  min-height: 50px;
-  border: none;
-}
-
-.bcm-projects-cta--dark:hover {
-  background: var(--bcm-black);
-  transform: translateY(-2px);
-  color: var(--bcm-white) !important;
-}
-
-.bcm-projects-featured {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-.bcm-projects-card-link {
-  display: block;
-  text-decoration: none !important;
-  color: inherit !important;
-  border-radius: var(--bcm-radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--bcm-border);
-  background: var(--bcm-surface-raised);
-  transition: all 0.35s var(--bcm-ease);
-}
-
-.bcm-projects-card-link:hover {
-  box-shadow: var(--bcm-shadow-lg);
-  transform: translateY(-4px);
-  border-color: var(--bcm-gold-border);
-}
-
-.bcm-projects-card-img {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16 / 10;
-}
-
-.bcm-projects-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s var(--bcm-ease);
-  display: block;
-}
-
-.bcm-projects-card-link:hover .bcm-projects-card-img img {
-  transform: scale(1.04);
-}
-
-.bcm-projects-card-tag {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: rgba(28, 35, 49, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: var(--bcm-gold);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: var(--bcm-radius);
-}
-
-.bcm-projects-card-body {
-  padding: 24px 28px;
-}
-
-.bcm-projects-card-body h3 {
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-  color: var(--bcm-text-primary);
-}
-
-.bcm-projects-card-body p {
-  color: var(--bcm-text-secondary);
-  font-size: 0.93rem;
-  margin: 0;
-  line-height: 1.55;
-}
-
-.bcm-projects-card-arrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--bcm-gold);
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-top: 12px;
-  transition: gap 0.2s var(--bcm-ease);
-}
-
-.bcm-projects-card-link:hover .bcm-projects-card-arrow {
-  gap: 10px;
-}
-
-.bcm-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  border-radius: var(--bcm-radius-lg);
-  overflow: hidden;
-}
-
-.bcm-projects-grid-item {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-}
-
-.bcm-projects-grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s var(--bcm-ease);
-  display: block;
-}
-
-.bcm-projects-grid-item:hover img {
-  transform: scale(1.04);
-}
-
-.bcm-projects-grid-label {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  background: rgba(28, 35, 49, 0.8);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: rgba(250, 249, 247, 0.85);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: var(--bcm-radius);
-}
-
-.bcm-projects-grid-item--wide {
-  grid-column: span 2;
-  aspect-ratio: 21 / 9;
-}
-
-.bcm-projects-video-feature {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.bcm-projects-video-embed {
-  border-radius: var(--bcm-radius-lg);
-  overflow: hidden;
-  background: var(--bcm-charcoal);
-  aspect-ratio: 9 / 16;
-  max-width: 360px;
-  margin: 0 auto;
-  box-shadow: var(--bcm-shadow-lg);
-}
-
-.bcm-projects-video-embed iframe,
-.bcm-projects-video-embed video {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.bcm-projects-video-text h2 {
-  color: var(--bcm-white);
-}
-
-.bcm-projects-video-text p {
-  color: rgba(250, 249, 247, 0.75);
-  font-size: 0.96rem;
-  line-height: 1.65;
-}
-
-.bcm-projects-video-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.bcm-projects-video-meta-item {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--bcm-gold);
-  padding: 6px 14px;
-  border: 1px solid var(--bcm-gold-border);
-  border-radius: var(--bcm-radius);
-}
-
-.bcm-projects-social-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  margin-top: 32px;
-}
-
-.bcm-projects-social-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(250, 249, 247, 0.05);
-  border: 1px solid rgba(250, 249, 247, 0.1);
-  color: rgba(250, 249, 247, 0.8) !important;
-  font-family: var(--bcm-font-body);
-  font-weight: 600;
-  font-size: 0.85rem;
-  padding: 12px 24px;
-  border-radius: var(--bcm-radius);
-  text-decoration: none !important;
-  transition: all 0.25s var(--bcm-ease);
-}
-
-.bcm-projects-social-link:hover {
-  background: rgba(250, 249, 247, 0.1);
-  border-color: rgba(200, 162, 77, 0.2);
-  color: var(--bcm-white) !important;
-}
-
-.bcm-projects-approach {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.bcm-projects-approach-card {
-  background: var(--bcm-surface-raised);
-  border: 1px solid var(--bcm-border);
-  border-radius: var(--bcm-radius);
-  padding: 28px 24px;
-  text-align: center;
-  transition: all 0.3s var(--bcm-ease);
-}
-
-.bcm-projects-approach-card:hover {
-  border-color: var(--bcm-gold-border);
-  box-shadow: var(--bcm-shadow-md);
-  transform: translateY(-2px);
-}
-
-.bcm-projects-approach-card h3 {
-  font-size: 0.95rem;
-  margin-bottom: 6px;
-}
-
-.bcm-projects-approach-card p {
-  color: var(--bcm-text-secondary);
-  font-size: 0.88rem;
-  margin: 0;
-  line-height: 1.55;
-}
-
-.bcm-projects-cta-band {
-  background: var(--bcm-black);
-  padding: 72px 24px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  border-left: 4px solid var(--bcm-gold);
-}
-
-.bcm-projects-cta-band::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, rgba(200, 162, 77, 0.04) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.bcm-projects-cta-band h2 {
-  color: var(--bcm-white);
-  font-size: 1.7rem;
-  margin-bottom: 12px;
-  position: relative;
-  z-index: 1;
-}
-
-.bcm-projects-cta-band p {
-  color: rgba(250, 249, 247, 0.75);
-  font-size: 1rem;
-  max-width: 520px;
-  margin: 0 auto 36px;
-  position: relative;
-  z-index: 1;
-}
-
-.bcm-projects-cta-band > div {
-  position: relative;
-  z-index: 1;
-}
-
-.bcm-projects-links {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  padding-top: 48px;
-  border-top: 1px solid var(--bcm-border);
-}
-
-.bcm-projects-links h3 {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--bcm-text-tertiary);
-  margin-bottom: 14px;
-}
-
-.bcm-projects-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 20px;
-}
-
-.bcm-projects-links li a {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--bcm-text-primary) !important;
-  text-decoration: none !important;
-  transition: color 0.2s var(--bcm-ease);
-}
-
-.bcm-projects-links li a:hover {
-  color: var(--bcm-gold) !important;
-}
-
-@media (min-width: 768px) {
-  .bcm-projects h1 {
-    font-size: 2.8rem;
-  }
-
-  .bcm-projects h2 {
-    font-size: 1.9rem;
-  }
-
-  .bcm-projects-hero {
-    padding: 100px 40px 88px;
-  }
-
-  .bcm-projects-hero h1 {
-    font-size: 3rem;
-  }
-
-  .bcm-projects-section {
-    padding: 88px 40px;
-  }
-
-  .bcm-projects-featured {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .bcm-projects-featured .bcm-projects-card-link:first-child {
-    grid-column: span 2;
-  }
-
-  .bcm-projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .bcm-projects-video-feature {
-    grid-template-columns: 360px 1fr;
-    gap: 56px;
-  }
-
-  .bcm-projects-video-embed {
-    margin: 0;
-  }
-
-  .bcm-projects-approach {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .bcm-projects-links {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .bcm-projects-hero h1 {
-    font-size: 3.2rem;
-  }
-
-  .bcm-projects-section {
-    padding: 112px 40px;
-  }
-
-  .bcm-projects-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .bcm-projects-approach {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  width:100vw;
+  max-width:100vw;
+  margin-left:calc(-50vw + 50%);
+  position:relative;
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  color:var(--bcm-text-primary);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+.bcm-projects *,
+.bcm-projects *::before,
+.bcm-projects *::after { box-sizing:border-box; }
+
+.bcm-projects h1,
+.bcm-projects h2,
+.bcm-projects h3,
+.bcm-projects h4 {
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:700;
+  line-height:1.15;
+  margin:0 0 16px;
+  letter-spacing:-0.025em;
+}
+.bcm-projects h1 { font-size:2rem; }
+.bcm-projects h2 { font-size:1.65rem; }
+.bcm-projects h3 { font-size:1.1rem; letter-spacing:-0.015em; }
+.bcm-projects p  { margin:0 0 16px; }
+.bcm-projects p:last-child { margin-bottom:0; }
+
+.bcm-projects a:not([class]) {
+  color:var(--bcm-warm-gold);
+  text-decoration-color:rgba(201,169,110,0.35);
+  text-underline-offset:3px;
+  text-decoration-thickness:1px;
+  transition:color 0.2s;
+}
+.bcm-projects a:not([class]):hover { color:#b8943f; }
+
+.bcm-pj-inner {
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 20px;
+}
+@media(min-width:640px) { .bcm-pj-inner { padding:0 32px; } }
+@media(min-width:1024px) { .bcm-pj-inner { padding:0 48px; } }
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+.bcm-pj-breadcrumb {
+  background:var(--bcm-charcoal);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  padding:12px 0;
+}
+.bcm-pj-breadcrumb-inner {
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px 0;
+}
+@media(min-width:640px) { .bcm-pj-breadcrumb-inner { padding:0 32px; } }
+.bcm-pj-breadcrumb-inner a {
+  color:rgba(255,255,255,0.5);
+  font-size:0.78rem;
+  font-weight:500;
+  text-decoration:none;
+  transition:color 0.2s;
+  white-space:nowrap;
+}
+.bcm-pj-breadcrumb-inner a:hover { color:var(--bcm-warm-gold); }
+.bcm-pj-breadcrumb-sep {
+  color:rgba(255,255,255,0.2);
+  font-size:0.78rem;
+  margin:0 8px;
+  user-select:none;
+}
+.bcm-pj-breadcrumb-current {
+  color:rgba(255,255,255,0.85);
+  font-size:0.78rem;
+  font-weight:600;
+  white-space:nowrap;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.bcm-pj-hero {
+  background:var(--bcm-deep);
+  padding:76px 20px 72px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.bcm-pj-hero::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(201,169,110,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(201,169,110,0.04) 0%, transparent 55%);
+  pointer-events:none;
+}
+.bcm-pj-hero::after {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:1px;
+  background:linear-gradient(to right, transparent, rgba(201,169,110,0.25), transparent);
+}
+.bcm-pj-hero-content {
+  position:relative;
+  z-index:2;
+  max-width:720px;
+  margin:0 auto;
+}
+.bcm-pj-hero-eyebrow {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--bcm-warm-gold);
+  font-size:0.72rem;
+  font-weight:700;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+.bcm-pj-hero-eyebrow::before,
+.bcm-pj-hero-eyebrow::after {
+  content:'';
+  display:block;
+  width:28px;
+  height:1px;
+  background:var(--bcm-warm-gold);
+  opacity:0.5;
+}
+.bcm-pj-hero h1 {
+  color:var(--bcm-white);
+  font-size:2.3rem;
+  font-weight:800;
+  margin-bottom:20px;
+  line-height:1.1;
+}
+.bcm-pj-hero-sub {
+  color:rgba(255,255,255,0.72);
+  font-size:1.02rem;
+  line-height:1.72;
+  max-width:620px;
+  margin:0 auto 32px;
+}
+.bcm-pj-hero-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
+}
+
+/* ============================================
+   TRUST STRIP
+   ============================================ */
+.bcm-pj-trust {
+  background:var(--bcm-charcoal);
+  border-bottom:1px solid rgba(201,169,110,0.12);
+  padding:18px 20px;
+}
+.bcm-pj-trust-inner {
+  max-width:1120px;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:8px 32px;
+}
+.bcm-pj-trust-item {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:rgba(255,255,255,0.5);
+  font-size:0.8rem;
+  font-weight:500;
+  white-space:nowrap;
+}
+.bcm-pj-trust-dot {
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:var(--bcm-warm-gold);
+  flex-shrink:0;
+}
+.bcm-pj-trust-item strong { color:var(--bcm-warm-gold); font-weight:700; }
+
+/* ============================================
+   SECTION SCAFFOLDING
+   ============================================ */
+.bcm-pj-section { padding:76px 20px; }
+.bcm-pj-section--tinted { background:var(--bcm-surface); }
+.bcm-pj-section--dark { background:var(--bcm-deep); }
+@media(min-width:768px) { .bcm-pj-section { padding:96px 20px; } }
+
+.bcm-pj-section-header {
+  text-align:center;
+  max-width:620px;
+  margin:0 auto 52px;
+}
+.bcm-pj-section-header h2 { margin-bottom:14px; }
+
+.bcm-pj-gold-rule {
+  display:block;
+  width:36px;
+  height:2px;
+  background:var(--bcm-warm-gold);
+  margin:0 auto 18px;
+  border-radius:1px;
+}
+.bcm-pj-section--dark h2 { color:var(--bcm-white); }
+.bcm-pj-section--dark p  { color:rgba(255,255,255,0.75); }
+
+.bcm-pj-lead {
+  font-size:1.02rem;
+  color:var(--bcm-text-secondary);
+  line-height:1.72;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.bcm-projects a.bcm-pj-cta--gold {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--bcm-warm-gold);
+  color:var(--bcm-deep) !important;
+  font-family:'Inter',sans-serif;
+  font-weight:700;
+  font-size:0.9rem;
+  padding:14px 30px;
+  border-radius:6px;
+  text-decoration:none !important;
+  transition:all 0.25s ease;
+  min-height:50px;
+  letter-spacing:0.01em;
+}
+.bcm-projects a.bcm-pj-cta--gold:hover {
+  background:#b8943f;
+  transform:translateY(-1px);
+  box-shadow:0 6px 20px rgba(201,169,110,0.28);
+}
+.bcm-projects a.bcm-pj-cta--ghost {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.16);
+  color:rgba(255,255,255,0.88) !important;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  font-size:0.9rem;
+  padding:13px 28px;
+  border-radius:6px;
+  text-decoration:none !important;
+  transition:all 0.25s ease;
+  min-height:50px;
+}
+.bcm-projects a.bcm-pj-cta--ghost:hover {
+  background:rgba(255,255,255,0.11);
+  border-color:rgba(201,169,110,0.3);
+  color:var(--bcm-white) !important;
+}
+.bcm-projects a.bcm-pj-cta--outline {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:transparent;
+  border:1.5px solid var(--bcm-warm-gold);
+  color:var(--bcm-warm-gold) !important;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  font-size:0.88rem;
+  padding:12px 26px;
+  border-radius:6px;
+  text-decoration:none !important;
+  transition:all 0.25s ease;
+  min-height:48px;
+}
+.bcm-projects a.bcm-pj-cta--outline:hover {
+  background:var(--bcm-warm-gold);
+  color:var(--bcm-deep) !important;
+}
+
+/* ============================================
+   FEATURED PROJECTS
+   ============================================ */
+.bcm-pj-featured {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+.bcm-pj-card-link {
+  display:block;
+  text-decoration:none !important;
+  color:inherit !important;
+  border-radius:var(--bcm-radius-lg);
+  overflow:hidden;
+  border:1px solid var(--bcm-border);
+  background:var(--bcm-white);
+  transition:all 0.35s ease;
+}
+.bcm-pj-card-link:hover {
+  box-shadow:var(--bcm-shadow-lg);
+  transform:translateY(-4px);
+  border-color:var(--bcm-gold-border);
+}
+.bcm-pj-card-img {
+  position:relative;
+  overflow:hidden;
+  aspect-ratio:16/10;
+}
+.bcm-pj-card-img img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform 0.6s ease;
+  display:block;
+}
+.bcm-pj-card-link:hover .bcm-pj-card-img img { transform:scale(1.05); }
+.bcm-pj-card-tag {
+  position:absolute;
+  top:16px;
+  left:16px;
+  background:rgba(20,24,31,0.88);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  color:var(--bcm-warm-gold);
+  font-size:0.7rem;
+  font-weight:700;
+  letter-spacing:0.07em;
+  text-transform:uppercase;
+  padding:6px 13px;
+  border-radius:4px;
+  border:1px solid rgba(201,169,110,0.2);
+}
+.bcm-pj-card-body {
+  padding:24px 28px 28px;
+  border-top:1px solid var(--bcm-border);
+}
+.bcm-pj-card-body h3 {
+  font-size:1.12rem;
+  margin-bottom:8px;
+  color:var(--bcm-text-primary);
+}
+.bcm-pj-card-body p {
+  color:var(--bcm-text-secondary);
+  font-size:0.92rem;
+  line-height:1.6;
+  margin:0 0 14px;
+}
+.bcm-pj-card-arrow {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--bcm-warm-gold);
+  font-size:0.84rem;
+  font-weight:700;
+  transition:gap 0.2s;
+  letter-spacing:0.01em;
+}
+.bcm-pj-card-link:hover .bcm-pj-card-arrow { gap:10px; }
+
+/* ============================================
+   MID-SECTION CTA BAND
+   ============================================ */
+.bcm-pj-mid-cta {
+  background:var(--bcm-surface);
+  border-top:1px solid var(--bcm-border);
+  border-bottom:1px solid var(--bcm-border);
+  padding:40px 20px;
+  text-align:center;
+}
+.bcm-pj-mid-cta p {
+  color:var(--bcm-text-secondary);
+  font-size:0.96rem;
+  margin-bottom:20px;
+}
+
+/* ============================================
+   MINI SPOTLIGHT
+   ============================================ */
+.bcm-pj-spotlight {
+  border-top:1px solid var(--bcm-border);
+}
+.bcm-pj-spotlight-hero {
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--bcm-radius-lg);
+  aspect-ratio:21/9;
+  max-height:440px;
+  margin-bottom:0;
+}
+.bcm-pj-spotlight-hero img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+.bcm-pj-spotlight-hero-overlay {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:36px 28px 28px;
+  background:linear-gradient(to top, rgba(20,24,31,0.92) 0%, rgba(20,24,31,0.5) 65%, transparent 100%);
+  text-align:center;
+}
+.bcm-pj-spotlight-hero-overlay h2 {
+  color:var(--bcm-white);
+  margin-bottom:4px;
+  font-size:1.55rem;
+}
+.bcm-pj-spotlight-hero-overlay p {
+  color:rgba(255,255,255,0.65);
+  font-size:0.86rem;
+  margin:0;
+}
+
+.bcm-pj-spotlight-intro {
+  max-width:800px;
+  margin:0 auto;
+  padding:40px 0 8px;
+  text-align:center;
+}
+.bcm-pj-spotlight-intro p {
+  font-size:0.97rem;
+  color:var(--bcm-text-secondary);
+  line-height:1.75;
+}
+
+/* TIMELINE */
+.bcm-pj-timeline { padding:36px 0 0; }
+.bcm-pj-phase { margin-bottom:44px; position:relative; }
+.bcm-pj-phase:last-child { margin-bottom:0; }
+
+.bcm-pj-phase-header {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:20px;
+  justify-content:center;
+}
+.bcm-pj-phase-dot {
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--bcm-warm-gold);
+  flex-shrink:0;
+  box-shadow:0 0 0 3px var(--bcm-gold-soft);
+}
+.bcm-pj-phase-label {
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:0.7rem;
+  font-weight:700;
+  letter-spacing:0.09em;
+  text-transform:uppercase;
+  color:var(--bcm-warm-gold);
+}
+
+/* Photo grids - centered */
+.bcm-pj-phase-photos {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+  border-radius:var(--bcm-radius);
+  overflow:hidden;
+  margin:0 auto;
+}
+/* 2-photo grids: constrain width so they don't stretch full-page */
+.bcm-pj-phase-photos--pair {
+  grid-template-columns:repeat(2,1fr);
+  max-width:720px;
+}
+.bcm-pj-phase-photos--trio { grid-template-columns:repeat(3,1fr); }
+.bcm-pj-phase-photos--quad { grid-template-columns:repeat(2,1fr); }
+.bcm-pj-phase-photo {
+  position:relative;
+  overflow:hidden;
+  border-radius:6px;
+  aspect-ratio:4/3;
+}
+.bcm-pj-phase-photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  transition:transform 0.5s ease;
+}
+.bcm-pj-phase-photo:hover img { transform:scale(1.05); }
+.bcm-pj-phase-photo--wide {
+  grid-column:span 2;
+  aspect-ratio:16/9;
+}
+
+/* Spotlight video pair */
+.bcm-pj-spotlight-videos {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  max-width:480px;
+  margin:0 auto;
+  padding:12px 0 0;
+}
+.bcm-pj-spotlight-video-wrap {
+  position:relative;
+  border-radius:var(--bcm-radius-lg);
+  overflow:hidden;
+  background:var(--bcm-charcoal);
+  aspect-ratio:9/16;
+  max-height:440px;
+}
+.bcm-pj-spotlight-video-wrap video {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.bcm-pj-spotlight-video-caption {
+  text-align:center;
+  margin-top:16px;
+  padding:0 8px;
+}
+.bcm-pj-spotlight-video-caption p {
+  font-size:0.8rem;
+  color:var(--bcm-text-tertiary);
+  margin:0;
+}
+
+/* ============================================
+   HOVER-REVEAL GRID
+   ============================================ */
+.bcm-pj-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+  border-radius:var(--bcm-radius-lg);
+  overflow:hidden;
+}
+.bcm-pj-grid-item {
+  position:relative;
+  overflow:hidden;
+  aspect-ratio:4/3;
+}
+.bcm-pj-grid-item img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform 0.5s ease;
+  display:block;
+}
+.bcm-pj-grid-item:hover img { transform:scale(1.05); }
+.bcm-pj-grid-item--wide {
+  grid-column:span 2;
+  aspect-ratio:21/9;
+}
+.bcm-pj-grid-label {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background:linear-gradient(to top, rgba(20,24,31,0.88) 0%, transparent 100%);
+  padding:32px 14px 14px;
+  opacity:0;
+  transform:translateY(6px);
+  transition:opacity 0.3s ease, transform 0.3s ease;
+}
+.bcm-pj-grid-label a,
+.bcm-pj-grid-label span {
+  display:block;
+  color:rgba(255,255,255,0.92);
+  font-size:0.72rem;
+  font-weight:600;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.bcm-pj-grid-item:hover .bcm-pj-grid-label {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ============================================
+   VIDEO FEATURE
+   ============================================ */
+.bcm-pj-video-feature {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:44px;
+  align-items:center;
+}
+.bcm-pj-video-embed {
+  border-radius:var(--bcm-radius-lg);
+  overflow:hidden;
+  background:var(--bcm-charcoal);
+  aspect-ratio:9/16;
+  max-width:340px;
+  margin:0 auto;
+  box-shadow:var(--bcm-shadow-lg);
+}
+.bcm-pj-video-embed video {
+  width:100%;
+  height:100%;
+  border:none;
+  display:block;
+  object-fit:cover;
+}
+.bcm-pj-video-text h2 { color:var(--bcm-white); }
+.bcm-pj-video-text p  { color:rgba(255,255,255,0.72); font-size:0.95rem; line-height:1.68; }
+.bcm-pj-video-meta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+.bcm-pj-video-meta-item {
+  font-size:0.75rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  color:var(--bcm-warm-gold);
+  padding:6px 14px;
+  border:1px solid var(--bcm-gold-border);
+  border-radius:4px;
+  background:var(--bcm-gold-soft);
+}
+
+/* SOCIAL STRIP */
+.bcm-pj-social-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  margin-top:32px;
+}
+.bcm-pj-social-link {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  color:rgba(255,255,255,0.8) !important;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  font-size:0.84rem;
+  padding:11px 22px;
+  border-radius:6px;
+  text-decoration:none !important;
+  transition:all 0.25s ease;
+}
+.bcm-pj-social-link:hover {
+  background:rgba(255,255,255,0.1);
+  border-color:rgba(201,169,110,0.25);
+  color:var(--bcm-white) !important;
+}
+
+/* ============================================
+   APPROACH CARDS
+   ============================================ */
+.bcm-pj-approach {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+.bcm-pj-approach-card {
+  background:var(--bcm-white);
+  border:1px solid var(--bcm-border);
+  border-radius:var(--bcm-radius-lg);
+  padding:28px 26px;
+  text-align:center;
+  transition:all 0.3s ease;
+  position:relative;
+  overflow:hidden;
+}
+.bcm-pj-approach-card::before {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:2px;
+  background:linear-gradient(to right, var(--bcm-warm-gold), var(--bcm-gold-light));
+  opacity:0;
+  transition:opacity 0.3s;
+}
+.bcm-pj-approach-card:hover {
+  border-color:var(--bcm-gold-border);
+  box-shadow:var(--bcm-shadow-md);
+  transform:translateY(-3px);
+}
+.bcm-pj-approach-card:hover::before { opacity:1; }
+.bcm-pj-approach-icon {
+  font-size:1.5rem;
+  margin-bottom:14px;
+  display:block;
+}
+.bcm-pj-approach-card h3 {
+  font-size:0.95rem;
+  margin-bottom:8px;
+  color:var(--bcm-text-primary);
+}
+.bcm-pj-approach-card p {
+  color:var(--bcm-text-secondary);
+  font-size:0.87rem;
+  line-height:1.6;
+  margin:0;
+}
+
+/* ============================================
+   FINANCING BAND
+   ============================================ */
+.bcm-pj-financing {
+  background:var(--bcm-gold-soft);
+  border:1px solid var(--bcm-gold-border);
+  border-radius:var(--bcm-radius-lg);
+  padding:32px 28px;
+  margin:0 auto;
+  max-width:760px;
+  text-align:center;
+}
+.bcm-pj-financing h3 {
+  font-size:1.08rem;
+  color:var(--bcm-text-primary);
+  margin-bottom:10px;
+}
+.bcm-pj-financing p {
+  color:var(--bcm-text-secondary);
+  font-size:0.92rem;
+  margin-bottom:20px;
+  line-height:1.65;
+}
+
+/* ============================================
+   FINAL CTA BAND
+   ============================================ */
+.bcm-pj-cta-band {
+  background:var(--bcm-deep);
+  padding:88px 20px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.bcm-pj-cta-band::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,169,110,0.05) 0%, transparent 60%);
+  pointer-events:none;
+}
+.bcm-pj-cta-band h2 {
+  color:var(--bcm-white);
+  font-size:1.8rem;
+  margin-bottom:14px;
+  position:relative;
+}
+.bcm-pj-cta-band p {
+  color:rgba(255,255,255,0.7);
+  font-size:1rem;
+  max-width:520px;
+  margin:0 auto 36px;
+  line-height:1.7;
+  position:relative;
+}
+.bcm-pj-cta-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  justify-content:center;
+  position:relative;
+}
+
+/* ============================================
+   INTERNAL LINKS FOOTER
+   ============================================ */
+.bcm-pj-links {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:36px;
+  padding-top:52px;
+  border-top:1px solid var(--bcm-border);
+}
+.bcm-pj-links h3 {
+  font-size:0.68rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:var(--bcm-text-tertiary);
+  margin-bottom:16px;
+}
+.bcm-pj-links ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.bcm-pj-links li a {
+  font-size:0.9rem;
+  font-weight:500;
+  color:var(--bcm-text-primary) !important;
+  text-decoration:none !important;
+  transition:color 0.2s;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.bcm-pj-links li a::before {
+  content:'';
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--bcm-warm-gold);
+  opacity:0.5;
+  flex-shrink:0;
+  transition:opacity 0.2s;
+}
+.bcm-pj-links li a:hover { color:var(--bcm-warm-gold) !important; }
+.bcm-pj-links li a:hover::before { opacity:1; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media(max-width:479px) {
+  .bcm-pj-spotlight-videos { grid-template-columns:1fr; max-width:260px; }
+}
+
+@media(min-width:640px) {
+  .bcm-pj-hero { padding:92px 32px 80px; }
+  .bcm-pj-hero h1 { font-size:2.8rem; }
+  .bcm-pj-phase-photos--trio { grid-template-columns:repeat(3,1fr); }
+  .bcm-pj-phase-photos--quad { grid-template-columns:repeat(4,1fr); }
+  .bcm-pj-spotlight-videos { max-width:520px; }
+}
+
+@media(min-width:768px) {
+  .bcm-projects h1 { font-size:3rem; }
+  .bcm-projects h2 { font-size:2rem; }
+  .bcm-pj-hero h1 { font-size:3.2rem; }
+  .bcm-pj-featured { grid-template-columns:1fr 1fr; }
+  .bcm-pj-featured .bcm-pj-card-link:first-child { grid-column:span 2; }
+  .bcm-pj-grid { grid-template-columns:repeat(3,1fr); }
+  .bcm-pj-approach { grid-template-columns:repeat(2,1fr); }
+  .bcm-pj-links { grid-template-columns:repeat(3,1fr); gap:24px; }
+  .bcm-pj-spotlight-hero { aspect-ratio:21/9; }
+  .bcm-pj-spotlight-hero-overlay h2 { font-size:2.1rem; }
+  .bcm-pj-spotlight-video-wrap { max-height:500px; }
+}
+
+@media(min-width:1024px) {
+  .bcm-pj-hero h1 { font-size:3.5rem; }
+  .bcm-pj-grid { grid-template-columns:repeat(4,1fr); }
+  .bcm-pj-approach { grid-template-columns:repeat(4,1fr); }
+  .bcm-pj-video-feature { grid-template-columns:320px 1fr; gap:60px; }
+  .bcm-pj-video-embed { margin:0; }
+  .bcm-pj-phase-photos--quad { grid-template-columns:repeat(4,1fr); }
+  .bcm-pj-links { grid-template-columns:repeat(4,1fr); }
 }
 </style>
 
 <div class="bcm-projects">
 
-  <section class="bcm-projects-hero">
-    <div class="bcm-projects-hero-content">
+  <!-- BREADCRUMB -->
+  <nav class="bcm-pj-breadcrumb" aria-label="Breadcrumb">
+    <div class="bcm-pj-breadcrumb-inner">
+      <a href="https://bradfordcm.com/">Bradford Construction</a>
+      <span class="bcm-pj-breadcrumb-sep">/</span>
+      <a href="https://bradfordcm.com/services/">Services</a>
+      <span class="bcm-pj-breadcrumb-sep">/</span>
+      <a href="https://bradfordcm.com/residential-construction/">Residential Construction</a>
+      <span class="bcm-pj-breadcrumb-sep">/</span>
+      <span class="bcm-pj-breadcrumb-current">Projects</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="bcm-pj-hero">
+    <div class="bcm-pj-hero-content">
+      <div class="bcm-pj-hero-eyebrow">Our Work</div>
       <h1>Residential Construction Projects</h1>
-      <p class="bcm-projects-hero-sub">Additions, renovations, ADUs, and custom homes across the North Shore, Merrimack Valley, and Southern New Hampshire. Every project gets daily documentation, in-house design, and lifetime support through Bradford Home Services.</p>
+      <p class="bcm-pj-hero-sub">Additions, renovations, ADUs, and custom homes across the North Shore, Merrimack Valley, and Southern New Hampshire. Every project gets daily documentation, in-house design, and lifetime support through Bradford Home Services.</p>
+      <div class="bcm-pj-hero-actions">
+        <a href="https://bradfordcm.com/contact/" class="bcm-pj-cta--gold">Start a Conversation</a>
+        <a href="tel:9789459771" class="bcm-pj-cta--ghost">978-945-9771</a>
+      </div>
     </div>
   </section>
 
-  <div class="bcm-projects-stat-bar">
-    <p><strong>100+</strong> residential projects completed &middot; Licensed &amp; Insured &middot; MA HIC #201908</p>
+  <!-- TRUST STRIP -->
+  <div class="bcm-pj-trust">
+    <div class="bcm-pj-trust-inner">
+      <div class="bcm-pj-trust-item">
+        <span class="bcm-pj-trust-dot"></span>
+        <span><strong>10+</strong> Years Experience</span>
+      </div>
+      <div class="bcm-pj-trust-item">
+        <span class="bcm-pj-trust-dot"></span>
+        <span><strong>0</strong> Abandoned Clients</span>
+      </div>
+      <div class="bcm-pj-trust-item">
+        <span class="bcm-pj-trust-dot"></span>
+        <span><strong>Daily</strong> Photo Documentation</span>
+      </div>
+      <div class="bcm-pj-trust-item">
+        <span class="bcm-pj-trust-dot"></span>
+        <span>MA HIC <strong>#201908</strong></span>
+      </div>
+    </div>
   </div>
 
-  <section class="bcm-projects-section">
-    <div class="bcm-projects-inner">
-      <div class="bcm-projects-section-header">
-        <span class="bcm-projects-gold-rule"></span>
+  <!-- ========================================
+       FEATURED PROJECTS
+       ======================================== -->
+  <section class="bcm-pj-section">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-section-header">
+        <span class="bcm-pj-gold-rule"></span>
         <h2>Featured Projects</h2>
-        <p class="bcm-projects-lead">Full project walkthroughs with before-and-after documentation, design process, and the story behind each build.</p>
+        <p class="bcm-pj-lead">Full project walkthroughs with before-and-after documentation, design process, and the story behind each build.</p>
       </div>
 
-      <div class="bcm-projects-featured">
-        <a href="https://bradfordcm.com/projects/beverly-first-floor-renovation/" class="bcm-projects-card-link">
-          <div class="bcm-projects-card-img">
+      <div class="bcm-pj-featured">
+        <!-- Beverly - updated URL -->
+        <a href="https://bradfordcm.com/beverly-ma-first-floor-rebuild/" class="bcm-pj-card-link">
+          <div class="bcm-pj-card-img">
             <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-33-1.webp" alt="" width="800" height="500" loading="eager">
-            <div class="bcm-projects-card-tag">First Floor Renovation</div>
+            <div class="bcm-pj-card-tag">First Floor Renovation</div>
           </div>
-          <div class="bcm-projects-card-body">
+          <div class="bcm-pj-card-body">
             <h3>Beverly, MA - From Closed Off to Wide Open</h3>
             <p>A complete first-floor transformation - load-bearing wall removal, in-house design, tin ceilings, and a reimagined staircase. Designed entirely by our team, no outside architect needed.</p>
-            <div class="bcm-projects-card-arrow">View Full Project &rarr;</div>
+            <div class="bcm-pj-card-arrow">View Full Project &rarr;</div>
           </div>
         </a>
 
-        <a href="https://bradfordcm.com/projects/west-newbury-whole-home-renovation/" class="bcm-projects-card-link">
-          <div class="bcm-projects-card-img">
+        <a href="https://bradfordcm.com/projects/west-newbury-whole-home-renovation/" class="bcm-pj-card-link">
+          <div class="bcm-pj-card-img">
             <img src="https://bradfordcm.com/wp-content/uploads/2026/03/14_Kitchen-Wide-Blue-Cabinets.jpg" alt="" width="800" height="500" loading="lazy">
-            <div class="bcm-projects-card-tag">Whole-Home Renovation</div>
+            <div class="bcm-pj-card-tag">Whole-Home Renovation</div>
           </div>
-          <div class="bcm-projects-card-body">
+          <div class="bcm-pj-card-body">
             <h3>West Newbury, MA - Cottage Structural Rebuild</h3>
             <p>Called for a dormer, found no foundation. Rebuilt the entire structure from inside without removing exterior walls - flood zone compliant, aging-in-place ready.</p>
-            <div class="bcm-projects-card-arrow">View Full Project &rarr;</div>
+            <div class="bcm-pj-card-arrow">View Full Project &rarr;</div>
           </div>
         </a>
 
-        <a href="https://bradfordcm.com/projects/exeter-nh-custom-home/" class="bcm-projects-card-link">
-          <div class="bcm-projects-card-img">
+        <a href="https://bradfordcm.com/projects/exeter-nh-custom-home/" class="bcm-pj-card-link">
+          <div class="bcm-pj-card-img">
             <img src="https://bradfordcm.com/wp-content/uploads/2025/09/111-Old-Town-Farm-Rd-31-1-1024x683.webp" alt="" width="800" height="500" loading="lazy">
-            <div class="bcm-projects-card-tag">Custom Home Build</div>
+            <div class="bcm-pj-card-tag">Custom Home Build</div>
           </div>
-          <div class="bcm-projects-card-body">
+          <div class="bcm-pj-card-body">
             <h3>Exeter, NH - Ground-Up Custom Home</h3>
             <p>From an online plan that wouldn't pass codes to a fully engineered solution. ICF foundation, open-concept living, and systems built for decades of New England weather.</p>
-            <div class="bcm-projects-card-arrow">View Full Project &rarr;</div>
+            <div class="bcm-pj-card-arrow">View Full Project &rarr;</div>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="bcm-projects-section bcm-projects-section--tinted" style="padding-top: 48px; padding-bottom: 48px;">
-    <div class="bcm-projects-inner" style="text-align: center;">
-      <p style="color: var(--bcm-text-secondary); font-size: 1rem; margin-bottom: 20px;">Have something similar in mind?</p>
-      <a href="https://bradfordcm.com/contact/" class="bcm-projects-cta--gold">Start a Conversation</a>
+  <!-- MID CTA -->
+  <div class="bcm-pj-mid-cta">
+    <div class="bcm-pj-inner">
+      <p>Have something similar in mind? Let's talk through what's possible.</p>
+      <a href="https://bradfordcm.com/contact/" class="bcm-pj-cta--gold">Start a Conversation</a>
+    </div>
+  </div>
+
+  <!-- ========================================
+       MINI SPOTLIGHT: ESSEX ADU
+       ======================================== -->
+  <section class="bcm-pj-section bcm-pj-spotlight">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-spotlight-hero">
+        <img src="https://bradfordcm.com/wp-content/uploads/2026/04/belcher-st-adu-exterior-white-siding-windows-1-2.png" alt="" width="1100" height="470" loading="lazy">
+        <div class="bcm-pj-spotlight-hero-overlay">
+          <h2>ADU Build - Essex, MA</h2>
+          <p>Accessory Dwelling Unit &middot; New Construction</p>
+        </div>
+      </div>
+
+      <div class="bcm-pj-spotlight-intro">
+        <p>An accessory dwelling unit built from the ground up on a residential property in Essex, MA. The ADU features a mix of cedar shake and white clapboard siding with a standing-seam-style composite deck and post railing. Inside, the open kitchen pairs white shaker cabinetry with marble backsplash and a natural wood range hood over quartz countertops. Custom tile work runs through the entryway, walk-in shower with bench seating, and a bathroom anchored by a freestanding soaking tub beneath an arched window.</p>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="bcm-pj-timeline">
+
+        <div class="bcm-pj-phase">
+          <div class="bcm-pj-phase-header">
+            <span class="bcm-pj-phase-dot"></span>
+            <span class="bcm-pj-phase-label">Framing &amp; Structure</span>
+          </div>
+          <div class="bcm-pj-phase-photos bcm-pj-phase-photos--pair">
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-framing-crew-installing-ceiling-joists-1.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-interior-wall-framing-construction-1.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-pj-phase">
+          <div class="bcm-pj-phase-header">
+            <span class="bcm-pj-phase-dot"></span>
+            <span class="bcm-pj-phase-label">Completed Exterior</span>
+          </div>
+          <div class="bcm-pj-phase-photos bcm-pj-phase-photos--trio">
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-cedar-shake-gable-siding-1.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-white-front-entry-door-transom-1.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-composite-deck-railing-posts-1.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-pj-phase">
+          <div class="bcm-pj-phase-header">
+            <span class="bcm-pj-phase-dot"></span>
+            <span class="bcm-pj-phase-label">Interior Finishes</span>
+          </div>
+          <div class="bcm-pj-phase-photos bcm-pj-phase-photos--quad">
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-black-white-checkered-tile-entryway-1.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-kitchen-white-cabinets-marble-backsplash-1.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-bathroom-soaking-tub-arched-window-1.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-shower-tile-installation-with-bench-1.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-pj-phase">
+          <div class="bcm-pj-phase-header">
+            <span class="bcm-pj-phase-dot"></span>
+            <span class="bcm-pj-phase-label">Walkthrough</span>
+          </div>
+          <div class="bcm-pj-spotlight-videos">
+            <div class="bcm-pj-spotlight-video-wrap">
+              <video playsinline controls preload="metadata" poster="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-kitchen-white-cabinets-marble-backsplash-1.webp">
+                <source src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-walkthrough-video-2-1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="bcm-pj-spotlight-video-wrap">
+              <video playsinline controls preload="metadata" poster="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-bathroom-soaking-tub-arched-window-1.webp">
+                <source src="https://bradfordcm.com/wp-content/uploads/2026/03/belcher-st-adu-walkthrough-video-3-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="bcm-pj-spotlight-video-caption">
+            <p>On-site walkthrough footage showing the finished interior and exterior details.</p>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
     </div>
   </section>
 
-  <section class="bcm-projects-section">
-    <div class="bcm-projects-inner">
-      <div class="bcm-projects-section-header">
-        <span class="bcm-projects-gold-rule"></span>
+  <!-- ========================================
+       MINI SPOTLIGHT: WAKEFIELD CUSTOM HOME
+       ======================================== -->
+  <section class="bcm-pj-section bcm-pj-section--tinted bcm-pj-spotlight">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-spotlight-hero">
+        <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-completed-exterior-blue-siding-front.webp" alt="" width="1100" height="470" loading="lazy">
+        <div class="bcm-pj-spotlight-hero-overlay">
+          <h2>Custom Home Build - Wakefield, MA</h2>
+          <p>Full Rebuild &middot; Addition &middot; Custom Interior</p>
+        </div>
+      </div>
+
+      <div class="bcm-pj-spotlight-intro">
+        <p>A complete custom home build in Wakefield, MA that took the existing structure from demolition through a fully finished, move-in-ready home. The scope included a new foundation, second-floor addition, full roof system with engineered trusses, and ZIP sheathing throughout. The completed exterior features blue clapboard siding with a rear deck addition. Inside, hardwood floors run throughout, anchored by a custom staircase with oak railing and pendant lighting. The kitchen showcases a hexagon-tile backsplash, while the primary bath includes a skylight shower. Built-in storage, a shiplap mudroom, and a dedicated shelving system round out the finished spaces.</p>
+      </div>
+
+      <div class="bcm-pj-timeline">
+
+        <div class="bcm-pj-phase">
+          <div class="bcm-pj-phase-header">
+            <span class="bcm-pj-phase-dot"></span>
+            <span class="bcm-pj-phase-label">Before</span>
+          </div>
+          <div style="max-width:360px;margin:0 auto;">
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-rear-exterior-before-renovation.webp" alt="" width="360" height="270" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-pj-phase">
+          <div class="bcm-pj-phase-header">
+            <span class="bcm-pj-phase-dot"></span>
+            <span class="bcm-pj-phase-label">Demolition &amp; Framing</span>
+          </div>
+          <div class="bcm-pj-phase-photos bcm-pj-phase-photos--trio">
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-front-siding-demolition.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-foundation-floor-framing-scaled.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-addition-wall-framing-scaled.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-pj-phase">
+          <div class="bcm-pj-phase-header">
+            <span class="bcm-pj-phase-dot"></span>
+            <span class="bcm-pj-phase-label">Structure</span>
+          </div>
+          <div class="bcm-pj-phase-photos bcm-pj-phase-photos--trio">
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-front-zip-sheathing-second-floor-scaled.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-front-roof-trusses-wide-view-scaled.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-rear-exterior-zip-sheathing-full-scaled.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-pj-phase">
+          <div class="bcm-pj-phase-header">
+            <span class="bcm-pj-phase-dot"></span>
+            <span class="bcm-pj-phase-label">Siding &amp; Exterior Progress</span>
+          </div>
+          <div class="bcm-pj-phase-photos bcm-pj-phase-photos--trio">
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-side-exterior-gray-siding-progress-scaled.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-front-siding-installation-progress-scaled.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-front-completed-with-trailer.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-pj-phase">
+          <div class="bcm-pj-phase-header">
+            <span class="bcm-pj-phase-dot"></span>
+            <span class="bcm-pj-phase-label">Completed Exterior</span>
+          </div>
+          <div class="bcm-pj-phase-photos bcm-pj-phase-photos--trio">
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-completed-exterior-driveway-view.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-completed-exterior-blue-siding-front.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-rear-completed-addition-deck-scaled.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="bcm-pj-phase">
+          <div class="bcm-pj-phase-header">
+            <span class="bcm-pj-phase-dot"></span>
+            <span class="bcm-pj-phase-label">Interior Finishes</span>
+          </div>
+          <div class="bcm-pj-phase-photos bcm-pj-phase-photos--quad">
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-hardwood-floor-installation.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-staircase-hardwood-white-railing.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-stairwell-pendant-light-oak-railing.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-kitchen-cooktop-hexagon-backsplash.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-bathroom-vanity-skylight-shower.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-mudroom-bench-shiplap-cubbies.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-built-in-shelving-living-room.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+            <div class="bcm-pj-phase-photo">
+              <img src="https://bradfordcm.com/wp-content/uploads/2026/03/madison-ave-custom-home-staircase-construction-drywall.webp" alt="" width="600" height="450" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </section>
+
+  <!-- MID CTA 2 -->
+  <section class="bcm-pj-section bcm-pj-section--dark" style="padding-top:52px;padding-bottom:52px;">
+    <div class="bcm-pj-inner" style="text-align:center;">
+      <p style="color:rgba(255,255,255,0.65);font-size:1rem;margin-bottom:24px;">Planning an ADU, addition, or custom home? We'd like to hear about it.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+        <a href="https://bradfordcm.com/contact/" class="bcm-pj-cta--gold">Get a Free Consultation</a>
+        <a href="tel:9789459771" class="bcm-pj-cta--ghost">978-945-9771</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       MORE WORK - hover-reveal grid
+       ======================================== -->
+  <section class="bcm-pj-section">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-section-header">
+        <span class="bcm-pj-gold-rule"></span>
         <h2>More of Our Work</h2>
-        <p class="bcm-projects-lead">Recent work across project types - kitchens, bathrooms, exteriors, porches, structural, and more. Updated regularly as new builds wrap up.</p>
+        <p class="bcm-pj-lead">Recent work across project types - kitchens, bathrooms, exteriors, porches, structural, and more. Updated as new builds wrap up.</p>
       </div>
 
-      <div class="bcm-projects-grid">
-        <div class="bcm-projects-grid-item bcm-projects-grid-item--wide">
+      <div class="bcm-pj-grid">
+        <div class="bcm-pj-grid-item bcm-pj-grid-item--wide">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-35-1.webp" alt="" width="800" height="340" loading="lazy">
-          <div class="bcm-projects-grid-label">Kitchen Remodel - Beverly, MA</div>
+          <div class="bcm-pj-grid-label">
+            <a href="https://bradfordcm.com/beverly-ma-first-floor-rebuild/">Kitchen Remodel - Beverly, MA</a>
+          </div>
         </div>
-        <div class="bcm-projects-grid-item">
+        <div class="bcm-pj-grid-item">
           <img src="https://bradfordcm.com/wp-content/uploads/2026/03/06_Deck-Composite-Marsh-View.jpg" alt="" width="600" height="450" loading="lazy">
-          <div class="bcm-projects-grid-label">Composite Deck - West Newbury</div>
+          <div class="bcm-pj-grid-label"><span>Composite Deck - West Newbury</span></div>
         </div>
-        <div class="bcm-projects-grid-item">
+        <div class="bcm-pj-grid-item">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_8400.webp" alt="" width="600" height="450" loading="lazy">
-          <div class="bcm-projects-grid-label">Farmer's Porch - Essex, MA</div>
+          <div class="bcm-pj-grid-label">
+            <a href="https://bradfordcm.com/essex-ma-farmers-porch/">Farmer's Porch - Essex, MA</a>
+          </div>
         </div>
-        <div class="bcm-projects-grid-item">
+        <div class="bcm-pj-grid-item">
           <img src="https://bradfordcm.com/wp-content/uploads/2026/03/37_Bathroom1-Full-Shower-Vanity.jpg" alt="" width="600" height="450" loading="lazy">
-          <div class="bcm-projects-grid-label">Bathroom Renovation - West Newbury</div>
+          <div class="bcm-pj-grid-label"><span>Bathroom Renovation - West Newbury</span></div>
         </div>
-        <div class="bcm-projects-grid-item">
+        <div class="bcm-pj-grid-item">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-17-1.webp" alt="" width="600" height="450" loading="lazy">
-          <div class="bcm-projects-grid-label">Custom Staircase - Beverly, MA</div>
+          <div class="bcm-pj-grid-label">
+            <a href="https://bradfordcm.com/beverly-ma-first-floor-rebuild/">Custom Staircase - Beverly, MA</a>
+          </div>
         </div>
-        <div class="bcm-projects-grid-item">
+        <div class="bcm-pj-grid-item">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_6072-scaled.webp" alt="" width="600" height="450" loading="lazy">
-          <div class="bcm-projects-grid-label">Home Addition - Hamilton, MA</div>
+          <div class="bcm-pj-grid-label"><span>Home Addition - Hamilton, MA</span></div>
         </div>
-        <div class="bcm-projects-grid-item">
+        <div class="bcm-pj-grid-item">
           <img src="https://bradfordcm.com/wp-content/uploads/2026/03/09_Screened-Porch-Bistro-Table.jpg" alt="" width="600" height="450" loading="lazy">
-          <div class="bcm-projects-grid-label">Screened Porch - West Newbury</div>
+          <div class="bcm-pj-grid-label"><span>Screened Porch - West Newbury</span></div>
         </div>
-        <div class="bcm-projects-grid-item">
+        <div class="bcm-pj-grid-item">
           <img src="https://bradfordcm.com/wp-content/uploads/2026/03/30_Bedroom1-Corner-Windows-MiniSplit.jpg" alt="" width="600" height="450" loading="lazy">
-          <div class="bcm-projects-grid-label">Bedroom - West Newbury</div>
+          <div class="bcm-pj-grid-label"><span>Bedroom Addition - West Newbury</span></div>
         </div>
-        <div class="bcm-projects-grid-item">
+        <div class="bcm-pj-grid-item">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/12/16-Anchient-Rubbly-Way-web-46-1.webp" alt="" width="600" height="450" loading="lazy">
-          <div class="bcm-projects-grid-label">Dining Room - Beverly, MA</div>
+          <div class="bcm-pj-grid-label">
+            <a href="https://bradfordcm.com/beverly-ma-first-floor-rebuild/">Dining Room - Beverly, MA</a>
+          </div>
         </div>
-        <div class="bcm-projects-grid-item">
+        <div class="bcm-pj-grid-item">
           <img src="https://bradfordcm.com/wp-content/uploads/2025/08/80AD6489-0577-4624-853D-C50E6EF2CDDD.webp" alt="" width="600" height="450" loading="lazy">
-          <div class="bcm-projects-grid-label">Exterior - Wakefield, MA</div>
+          <div class="bcm-pj-grid-label"><span>Exterior Rebuild - Wakefield, MA</span></div>
         </div>
-        <div class="bcm-projects-grid-item">
+        <div class="bcm-pj-grid-item">
           <img src="https://bradfordcm.com/wp-content/uploads/2026/03/20_Staircase-Full-View-With-Landing.jpg" alt="" width="600" height="450" loading="lazy">
-          <div class="bcm-projects-grid-label">Staircase Build - West Newbury</div>
+          <div class="bcm-pj-grid-label"><span>Staircase Build - West Newbury</span></div>
         </div>
-        <div class="bcm-projects-grid-item">
-          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7411-scaled.webp" alt="" width="600" height="450" loading="lazy" style="object-position: bottom;">
-          <div class="bcm-projects-grid-label">Foundation Work - Hamilton, MA</div>
+        <div class="bcm-pj-grid-item">
+          <img src="https://bradfordcm.com/wp-content/uploads/2025/08/IMG_7411-scaled.webp" alt="" width="600" height="450" loading="lazy" style="object-position:bottom;">
+          <div class="bcm-pj-grid-label"><span>Foundation Work - Hamilton, MA</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="bcm-projects-section bcm-projects-section--dark">
-    <div class="bcm-projects-inner">
-      <div class="bcm-projects-video-feature">
-        <div class="bcm-projects-video-embed">
-          <video playsinline controls preload="metadata" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+  <!-- VIDEO FEATURE + SOCIAL -->
+  <section class="bcm-pj-section bcm-pj-section--dark">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-video-feature">
+        <div class="bcm-pj-video-embed">
+          <video playsinline controls preload="metadata" style="border-radius:inherit;">
             <source src="https://bradfordcm.com/wp-content/uploads/2026/03/ICF-Block-Short-from-Intro-Video.webm" type="video/webm">
           </video>
         </div>
-        <div class="bcm-projects-video-text">
-          <span class="bcm-projects-gold-rule" style="margin: 0 0 20px;"></span>
+        <div class="bcm-pj-video-text">
+          <span class="bcm-pj-gold-rule" style="margin:0 0 20px;"></span>
           <h2>From the Job Site</h2>
           <p>Rick breaks down how ICF (insulated concrete form) construction works and why we use it for ADU and custom home foundations. Filmed on-site at a current ADU project in North Andover, MA.</p>
-          <p style="color: rgba(250, 249, 247, 0.6); font-size: 0.9rem;">ICF foundations provide superior insulation, structural strength, and moisture resistance compared to traditional poured concrete - key advantages for New England construction where freeze-thaw cycles and energy efficiency matter.</p>
-          <div class="bcm-projects-video-meta">
-            <span class="bcm-projects-video-meta-item">ADU Project</span>
-            <span class="bcm-projects-video-meta-item">North Andover, MA</span>
-            <span class="bcm-projects-video-meta-item">ICF Construction</span>
+          <p style="color:rgba(255,255,255,0.55);font-size:0.88rem;line-height:1.65;">ICF foundations provide superior insulation, structural strength, and moisture resistance compared to traditional poured concrete - key advantages for New England construction where freeze-thaw cycles and energy efficiency matter.</p>
+          <div class="bcm-pj-video-meta">
+            <span class="bcm-pj-video-meta-item">ADU Project</span>
+            <span class="bcm-pj-video-meta-item">North Andover, MA</span>
+            <span class="bcm-pj-video-meta-item">ICF Construction</span>
+          </div>
+          <div style="margin-top:28px;">
+            <a href="https://bradfordcm.com/aduaccessory-dwelling-unit/" class="bcm-pj-cta--outline">Learn About Our ADU Work</a>
           </div>
         </div>
       </div>
 
-      <div style="text-align: center; margin-top: 56px;">
-        <p style="color: rgba(250, 249, 247, 0.5); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px;">Follow Along for Real-Time Build Updates</p>
-        <div class="bcm-projects-social-row">
-          <a href="https://www.instagram.com/bradfordconstructionllc/" class="bcm-projects-social-link" rel="noopener" target="_blank">Instagram @bradfordconstructionllc</a>
-          <a href="https://www.facebook.com/bradfordconstructionLLC" class="bcm-projects-social-link" rel="noopener" target="_blank">Facebook</a>
+      <div style="text-align:center;margin-top:60px;padding-top:48px;border-top:1px solid rgba(255,255,255,0.07);">
+        <p style="color:rgba(255,255,255,0.45);font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;margin-bottom:18px;">Follow Along for Real-Time Build Updates</p>
+        <div class="bcm-pj-social-row">
+          <a href="https://www.instagram.com/bradfordconstructionllc/" class="bcm-pj-social-link" rel="noopener" target="_blank">Instagram @bradfordconstructionllc</a>
+          <a href="https://www.facebook.com/bradfordconstructionLLC" class="bcm-pj-social-link" rel="noopener" target="_blank">Facebook</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="bcm-projects-section bcm-projects-section--tinted">
-    <div class="bcm-projects-inner">
-      <div class="bcm-projects-section-header">
-        <span class="bcm-projects-gold-rule"></span>
+  <!-- WHAT EVERY PROJECT GETS -->
+  <section class="bcm-pj-section bcm-pj-section--tinted">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-section-header">
+        <span class="bcm-pj-gold-rule"></span>
         <h2>What Every Project Gets</h2>
-        <p class="bcm-projects-lead">The same process and standards whether it's a porch build or a ground-up custom home.</p>
+        <p class="bcm-pj-lead">The same process and standards whether it's a porch or a ground-up custom home.</p>
       </div>
-      <div class="bcm-projects-approach">
-        <div class="bcm-projects-approach-card">
+      <div class="bcm-pj-approach">
+        <div class="bcm-pj-approach-card">
+          <span class="bcm-pj-approach-icon">&#9632;</span>
           <h3>One Accountable Team</h3>
-          <p>Design, permitting, and construction under one roof. No finger-pointing between architects, engineers, and builders.</p>
+          <p><a href="https://bradfordcm.com/design-build/">Design, permitting, and construction</a> under one roof. No finger-pointing between architects, engineers, and builders.</p>
         </div>
-        <div class="bcm-projects-approach-card">
+        <div class="bcm-pj-approach-card">
+          <span class="bcm-pj-approach-icon">&#9632;</span>
           <h3>Daily Photo Updates</h3>
           <p>You see exactly what happened on your project every single day through your dedicated project portal.</p>
         </div>
-        <div class="bcm-projects-approach-card">
+        <div class="bcm-pj-approach-card">
+          <span class="bcm-pj-approach-icon">&#9632;</span>
           <h3>Transparent Pricing</h3>
           <p>Detailed scope of work with documented change orders. You approve every cost before we proceed.</p>
         </div>
-        <div class="bcm-projects-approach-card">
+        <div class="bcm-pj-approach-card">
+          <span class="bcm-pj-approach-icon">&#9632;</span>
           <h3>Lifetime Support</h3>
-          <p>Through <a href="https://bradfordcm.com/about-us/">Bradford Home Services</a>, every project includes ongoing maintenance, seasonal check-ins, and warranty support.</p>
+          <p>Every project includes ongoing maintenance, seasonal check-ins, and warranty follow-through - long after the final walkthrough.</p>
+        </div>
+      </div>
+
+      <!-- Financing callout -->
+      <div style="margin-top:48px;">
+        <div class="bcm-pj-financing">
+          <h3>Financing Available for Qualified Projects</h3>
+          <p>Larger renovations and additions don't have to wait. We work with homeowners on financing options that make sense - so the project you need can start on the timeline that works for you.</p>
+          <a href="https://bradfordcm.com/finance-your-dreams/" class="bcm-pj-cta--outline">See Financing Options</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="bcm-projects-cta-band">
-    <div class="bcm-projects-inner">
+  <!-- FINAL CTA -->
+  <section class="bcm-pj-cta-band">
+    <div class="bcm-pj-inner">
       <h2>Ready to Talk About Your Project?</h2>
-      <p>Free consultation, detailed estimate, no high-pressure sales. We respond within 24 hours.</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
-        <a href="https://bradfordcm.com/contact/" class="bcm-projects-cta--gold">Start the Conversation</a>
-        <a href="tel:9789459771" class="bcm-projects-cta--ghost">978-945-9771</a>
+      <p>Free consultation, detailed estimate, no pressure. We respond within 24 hours.</p>
+      <div class="bcm-pj-cta-actions">
+        <a href="https://bradfordcm.com/contact/" class="bcm-pj-cta--gold">Start the Conversation</a>
+        <a href="tel:9789459771" class="bcm-pj-cta--ghost">978-945-9771</a>
       </div>
     </div>
   </section>
 
-  <section class="bcm-projects-section" style="padding-top: 56px; padding-bottom: 56px;">
-    <div class="bcm-projects-inner">
-      <div class="bcm-projects-links">
+  <!-- INTERNAL LINKS -->
+  <section class="bcm-pj-section" style="padding-top:60px;padding-bottom:60px;">
+    <div class="bcm-pj-inner">
+      <div class="bcm-pj-links">
         <div>
           <h3>Our Services</h3>
           <ul>
             <li><a href="https://bradfordcm.com/home-additions/">Home Additions</a></li>
             <li><a href="https://bradfordcm.com/home-renovations/">Home Renovations</a></li>
-            <li><a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADUs</a></li>
-            <li><a href="https://bradfordcm.com/custom-homes/">Custom Homes</a></li>
+            <li><a href="https://bradfordcm.com/aduaccessory-dwelling-unit/">ADU Construction</a></li>
             <li><a href="https://bradfordcm.com/kitchen-remodels/">Kitchen Remodels</a></li>
             <li><a href="https://bradfordcm.com/bathroom-remodels/">Bathroom Remodels</a></li>
             <li><a href="https://bradfordcm.com/design-build/">Design-Build</a></li>
+            <li><a href="https://bradfordcm.com/services/">All Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Project Work</h3>
+          <ul>
+            <li><a href="https://bradfordcm.com/beverly-ma-first-floor-rebuild/">Beverly First Floor Rebuild</a></li>
+            <li><a href="https://bradfordcm.com/essex-ma-farmers-porch/">Essex Farmer's Porch</a></li>
+            <li><a href="https://bradfordcm.com/residential-construction/">Residential Construction</a></li>
+            <li><a href="https://bradfordcm.com/finance-your-dreams/">Financing Options</a></li>
           </ul>
         </div>
         <div>
@@ -885,11 +1469,10 @@
           </ul>
         </div>
         <div>
-          <h3>About Bradford Construction</h3>
+          <h3>Get Started</h3>
           <ul>
-            <li><a href="https://bradfordcm.com/about-us/">About Us</a></li>
+            <li><a href="https://bradfordcm.com/about-us/">About Bradford Construction</a></li>
             <li><a href="https://bradfordcm.com/benefits-of-design-build/">Why Design-Build</a></li>
-            <li><a href="https://bradfordcm.com/finance-your-dreams/">Financing Options</a></li>
             <li><a href="https://bradfordcm.com/contact/">Contact Us</a></li>
           </ul>
         </div>
